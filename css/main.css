@@ -318,10 +318,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: #F5F7FB;
     p {
         font-size: 0.875rem;
-        text-align: center;
-        margin: 0 auto;
     }
 }
