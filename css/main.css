@@ -138,7 +138,7 @@ header {
     scroll-margin-top: 124px;
 }
 .logo-lab {
-    height: 124px;}
+    height: 80px;}
 .logo-amnh {
     height: 32px;}
 .container-menu-content {
@@ -154,7 +154,7 @@ header {
     font-weight: bold;
     position: sticky;
     top: 0;
-    padding: 224px 32px 20px;
+    padding: 180px 32px 20px;
     width: 300px;
     height: 100vh;
     overflow-y: auto;
@@ -212,7 +212,7 @@ header {
     }
 }
 main {
-    padding: 224px 0;
+    padding: 180px 0;
     background-color: white;
     display: flex;
     justify-content: center;
