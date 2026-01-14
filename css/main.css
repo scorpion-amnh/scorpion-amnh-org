@@ -4,23 +4,23 @@ body {
     min-height: 100vh;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1rem;
-    color: #242424;
+    color: #222222;
     background-color: white;
     margin: 0;
     padding: 0;
 }
 a {
-    color: #078071;
+    color: #097A9A;
     text-decoration: none;
 }
 a:hover {
     text-decoration: underline;
 }
 a:visited {
-    color: #078071;
+    color: #097A9A;
 }
 a:active {
-    color: #078071;
+    color: #097A9A;
 }
 h1, h2 {
     font-family: Georgia, Times, serif;
@@ -28,17 +28,17 @@ h1, h2 {
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     a {
-        color: #242424;
+        color: #222222;
         text-decoration: none;
     }
     a:hover {
         text-decoration: underline;
     }
     a:visited {
-        color: #242424;
+        color: #222222;
     }
     a:active {
-        color: #242424;
+        color: #222222;
     }
 }
 h1 {
@@ -167,21 +167,21 @@ header {
         a {
             padding-left: 12px;
             font-size: 1.125rem;
-            color: #078071;
+            color: #B35833;
             text-decoration: none;
         }
         a:hover {
-            border-left: 3px solid #078071;
+            border-left: 3px solid #B35833;
             margin-left: -3px;
         }
         a:visited {
-            color: #078071;
+            color: #B35833;
         }
         a:active {
-            color: #078071;
+            color: #B35833;
         }
         a.active {
-            border-left: 3px solid #078071;
+            border-left: 3px solid #B35833;
             margin-left: -3px;
         }
         ul li {
@@ -195,7 +195,7 @@ header {
                 text-decoration: none;
             }
             a:hover {
-                border-left: 3px solid #078071;
+                border-left: 3px solid #B35833;
                 margin-left: -3px;
             }
             a:visited {
@@ -205,7 +205,7 @@ header {
                 color: #242424;
             }
             a.active {
-                border-left: 3px solid #078071;
+                border-left: 3px solid #B35833;
                 margin-left: -3px;
             }
         }  
@@ -314,7 +314,10 @@ main {
 footer {
     background-color: #222222;
     margin-top: 96px;
-    padding: 48px 0;
+    padding: 48px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: white;
     p {
         font-size: 0.875rem;
