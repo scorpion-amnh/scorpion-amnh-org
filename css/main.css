@@ -151,7 +151,7 @@ header {
     font-weight: bold;
     position: sticky;
     top: 0;
-    padding: 224px 32px 0;
+    padding: 224px 32px 20px;
     width: 300px;
     height: 100vh;
     overflow-y: auto;
