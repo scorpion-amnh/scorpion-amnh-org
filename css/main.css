@@ -4,7 +4,7 @@ body {
     min-height: 100vh;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1rem;
-    color: #222222;
+    color: #1a1919;
     background-color: white;
     margin: 0;
     padding: 0;
@@ -28,17 +28,17 @@ h1, h2 {
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     a {
-        color: #222222;
+        color: #1a1919;
         text-decoration: none;
     }
     a:hover {
         text-decoration: underline;
     }
     a:visited {
-        color: #222222;
+        color: #1a1919;
     }
     a:active {
-        color: #222222;
+        color: #1a1919;
     }
 }
 h1 {
@@ -115,7 +115,7 @@ hr {
     margin: 1.25rem 0;
 }
 header {
-    background-color: #222222;
+    background-color: #1a1919;
     padding: 24px 48px;
     display: flex;
     justify-content: space-between;
@@ -312,7 +312,7 @@ main {
     }
 }
 footer {
-    background-color: #222222;
+    background-color: #1a1919;
     margin-top: 96px;
     padding: 48px 48px;
     display: flex;
