@@ -47,7 +47,7 @@ export default function RootLayout({
               <a href="/research" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">Research</a>
               <a href="#" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">People</a>
               <a href="#" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">Facilities</a>
-              <a href="#" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">Collections</a>
+              <a href="/collections" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">Collections</a>
               <a href="#" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">Publications</a>
             </nav>
             <button className="lg:hidden text-gray-300">
