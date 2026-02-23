@@ -28,8 +28,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-full overflow-x-hidden`}
       >
-        <header className="sticky top-0 z-50 w-full border-b border-gray-700 bg-gray-900">
-          <div className="mx-auto max-w-7xl">
+        <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-700 bg-gray-900">
+          <div className="mx-auto max-w-7xl w-full">
             <div className="flex w-full items-center justify-between pl-6 pr-4 md:pl-8 md:pr-8 xl:pl-10 xl:pr-10 gap-6 py-4 xl:py-6">
             <div className="flex-1 min-w-0 max-w-[400px]">
               <Image
@@ -58,7 +58,9 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        {children}
+        <div className="pt-24 xl:pt-28">
+          {children}
+        </div>
         <footer className="bg-gray-900 text-white p-8">
           <div className="mx-auto max-w-7xl flex items-center justify-between">
             <p className="text-sm">&copy; Copyright Lorenzo Prendini 2026. All Rights Reserved.</p>
