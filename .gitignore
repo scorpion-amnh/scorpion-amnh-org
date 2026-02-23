@@ -41,4 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 # Ignore the old site backup
-_old_site_backup/
+_plain-html-css-site
