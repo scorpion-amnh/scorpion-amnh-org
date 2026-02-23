@@ -27,7 +27,31 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="sticky top-0 backdrop-blur bg-white bg-opacity-80 p-4 shadow-md">
+          <div className="container mx-auto flex justify-between items-center">
+            <div className="text-lg font-bold">Logo</div>
+            <nav className="hidden md:flex space-x-4">
+              <a href="#" className="hover:text-blue-500">Home</a>
+              <a href="#" className="hover:text-blue-500">Arachnids</a>
+              <a href="#" className="hover:text-blue-500">Research</a>
+              <a href="#" className="hover:text-blue-500">People</a>
+              <a href="#" className="hover:text-blue-500">Facilities</a>
+              <a href="#" className="hover:text-blue-500">Collections</a>
+              <a href="#" className="hover:text-blue-500">Publications</a>
+            </nav>
+            <div className="md:hidden">
+              <button className="focus:outline-none">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
         {children}
+        <footer className="bg-gray-800 text-white text-center p-4 mt-4">
+          <p>&copy; 2026 Your Company. All rights reserved.</p>
+        </footer>
       </body>
     </html>
   );
