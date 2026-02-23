@@ -82,7 +82,16 @@ export function Header() {
             >
               Collections
             </Link>
-            <a href="#" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">Publications</a>
+            <Link 
+              href="/publications" 
+              className={`text-sm xl:text-base font-medium transition-colors ${
+                isActive('/publications')
+                  ? 'text-white border-b-2 border-blue-500 pb-1'
+                  : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              Publications
+            </Link>
           </nav>
           <button className="lg:hidden text-gray-300">
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
