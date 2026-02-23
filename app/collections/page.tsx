@@ -2,17 +2,65 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Collections() {
+  const [activeSection, setActiveSection] = useState('general-information');
+
+  const sections = [
+    { id: 'general-information', label: 'General Information', subsections: [
+      { id: 'personnel', label: 'Personnel' },
+      { id: 'use-of-collections', label: 'Use of Collections' },
+      { id: 'loan-requests', label: 'Loan Requests' },
+      { id: 'visiting-scientists', label: 'Visiting Scientists' },
+    ]},
+    { id: 'specimens', label: 'Specimens', subsections: [
+      { id: 'scorpions', label: 'Scorpions' },
+      { id: 'curation', label: 'Curation of Collections' },
+      { id: 'collecting', label: 'Collecting' },
+      { id: 'legal-documentation', label: 'Legal Documentation' },
+    ]},
+    { id: 'tissue-samples', label: 'Tissue Samples', subsections: [
+      { id: 'the-collection', label: 'The Collection' },
+      { id: 'preparing-tissue', label: 'Preparing Tissue Samples' },
+    ]},
+  ];
+
   return (
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">
         <div className="mb-12">
-          <h1 className="text-5xl font-bold mb-8 text-gray-900">Collections</h1>
-          <p className="text-xl text-gray-700 mb-12">Arachnid and Myriapod collections at the American Museum of Natural History</p>
+          {/* Main Content */}
+          <div>
+              <h1 className="text-5xl font-bold mb-8 text-gray-900">Collections</h1>
+              <p className="text-xl text-gray-700 mb-8">Arachnid and Myriapod collections at the American Museum of Natural History</p>
 
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900">Personnel</h2>
+              {/* Secondary Navigation */}
+              <nav className="mb-8 border-b border-gray-200">
+                <div className="flex gap-8">
+                  {sections.map((section) => (
+                    <button
+                      key={section.id}
+                      onClick={() => setActiveSection(section.id)}
+                      className={`pb-4 font-medium transition-colors border-b-2 ${
+                        activeSection === section.id
+                          ? 'border-blue-600 text-blue-600'
+                          : 'border-transparent text-gray-700 hover:text-gray-900'
+                      }`}
+                    >
+                      {section.label}
+                    </button>
+                  ))}
+                </div>
+              </nav>
+
+              {/* Tab Content */}
+              {activeSection === 'general-information' && (
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold mb-6 text-gray-900">General Information</h2>
+
+                <div className="mb-8">
+                  <h3 className="text-xl font-bold mb-4 text-gray-900">Personnel</h3>
             <p className="text-lg leading-8 text-gray-700 mb-4">
               In 2002, <a href="https://www.amnh.org/research/staff-directory/lorenzo-prendini" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Lorenzo Prendini</a> was hired to curate the Arachnid (non-spider) and Myriapod Collections in the <a href="https://research.amnh.org/invertzoo" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Division of Invertebrate Zoology</a> at the American Museum of Natural History. The following arachnid orders fall under his jurisdiction: Acari (mites and ticks), Amblypygi (whip spiders), Opiliones (harvestmen), Palpigradi (palpigrades), Pseudoscorpiones (false scorpions), Schizomida (schizomids), Scorpiones (scorpions), Solifugae (solifuges, solpugids or camel-spiders), Uropygi (vinegaroons or whip scorpions).
             </p>
@@ -43,22 +91,22 @@ export default function Collections() {
             </div>
           </div>
 
-          <div className="mb-8 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900">Use of Collections</h2>
+          <div className="mb-8 border-t pt-8" id="use-of-collections">
+            <h3 className="text-xl font-bold mb-4 text-gray-900">Use of Collections</h3>
             <p className="text-lg leading-8 text-gray-700 mb-6">
               Incoming and outgoing loans of specimens from the Arachnid and Myriapod Collections are a weekly occurrence, while visits to the collections occur less frequently, averaging once a month. Queries regarding visits, loan requests, specimen donations, and the preservation of tissue samples for molecular analysis should be addressed to <a href="https://www.amnh.org/research/staff-directory/lorenzo-prendini" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Lorenzo Prendini</a>. Anyone interested in the particular protocols used for the preservation and management of the AMNH Arachnid and Myriapod Collections should contact <a href="/people/staff" className="text-blue-600 hover:text-blue-800 underline">Pio Colmenares</a>. Donors should refer to the Division of Invertebrate Zoology <a href="https://www.amnh.org/research/invertebrate-zoology/policies/specimen-collecting-deposition" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">instructions for depositing material.</a> Those interested in management of natural history collections should consult the website for the <a href="http://www.spnhc.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Society for the Preservation of Natural History Collections</a> (SPNHC).
             </p>
           </div>
 
-          <div className="mb-8 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900">Loan Requests</h2>
+          <div className="mb-8 border-t pt-8" id="loan-requests">
+            <h3 className="text-xl font-bold mb-4 text-gray-900">Loan Requests</h3>
             <p className="text-lg leading-8 text-gray-700 mb-6">
               If you would like to apply for a loan, please complete the following form so we can consider your request: <a href="https://forms.gle/JsH1bysFeFucUyJb6" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">AMNH Arachnida and Myriapoda Loan Request Form</a>
             </p>
           </div>
 
-          <div className="mb-8 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900">Visiting Scientists</h2>
+          <div className="mb-8 border-t pt-8" id="visiting-scientists">
+            <h3 className="text-xl font-bold mb-4 text-gray-900">Visiting Scientists</h3>
             <p className="text-lg leading-8 text-gray-700 mb-4">
               There are limited funding sources available to support scientists interested in visiting the collections to study material:
             </p>
@@ -74,9 +122,12 @@ export default function Collections() {
               className="w-full h-auto rounded-lg"
             />
           </div>
+              </div>
+              )}
 
-          <div className="mb-8 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900">Specimen Collections</h2>
+          {activeSection === 'specimens' && (
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">Specimens</h2>
             <p className="text-lg leading-8 text-gray-700 mb-6">
               The AMNH contains the second-largest collection of scorpions, and the largest collection of minor arachnid orders, in North America. The myriapod collections are also among the largest in North America. The collections include a worldwide representation of arachnid and myriapod taxa, with a strong emphasis on material from North America and elsewhere in the New World. The majority of specimens are preserved in ethanol, although large collections of slide-mounted Acari and pseudoscorpions are also represented.
             </p>
@@ -97,7 +148,7 @@ export default function Collections() {
               />
             </div>
 
-            <h3 className="text-xl font-bold mb-4 text-gray-900">Scorpions</h3>
+            <h3 className="text-xl font-bold mb-4 text-gray-900" id="scorpions">Scorpions</h3>
             <p className="text-lg leading-8 text-gray-700 mb-4">
               Historically, scorpions comprise the second largest component of the AMNH Arachnid and Myriapod Collections, after spiders. Currently comprising over 30,000 specimen-lots, including several hundred type specimens, the AMNH has the fourth-largest scorpion collection in the world, including a vast array of New and Old World taxa. Particular strengths of the collections are in New World, and especially North American, and southern African families. In addition, there are reasonable holdings of taxa from North and South America, Europe, the Middle East, Southeast Asia, Australia and Oceania. Continuing fieldwork by Prendini and his research group has vastly expanded the AMNH holdings of scorpions, minor arachnid orders and myriapods. Collectively, the ca. 20,000 specimens obtained by Prendini and his research group since 2002 has more than doubled Museum holdings of amblypygids, schizomids, solifuges, and uropygids, and increased Museum holdings of scorpions by more than a third.
             </p>
@@ -115,7 +166,7 @@ export default function Collections() {
               className="w-full h-auto rounded-lg mb-8"
             />
 
-            <h3 className="text-xl font-bold mb-4 text-gray-900">Curation of Collections</h3>
+            <h3 className="text-xl font-bold mb-4 text-gray-900" id="curation">Curation of Collections</h3>
             <p className="text-lg leading-8 text-gray-700 mb-6">
               In May 2002, the Arachnid and Myriapod Collections were transferred from offices in the former Department of Entomology into a new facility within the AMNH, the Natural Sciences building (NSB). In the NSB, specimens are stored in state-of-the-art cabinetry and a climate-controlled environment to ensure their longevity. A long-term plan to upgrade these collections began in 2004. All old, unstandardized bottles and vials, many with bakelite closures or rubber stoppers, were replaced by new glass jars of standardized volumes with polyethylene closures and polypropylene-foam liners. Significant progress has been made but there are still large parts of the collection to be done. After the rebottling process is completed, the entire collection will be databased and catalogued by volunteers, who will also print out new labels for every specimen or specimen-lot.
             </p>
@@ -142,7 +193,7 @@ export default function Collections() {
               </figure>
             </div>
 
-            <h3 className="text-xl font-bold mb-4 text-gray-900">Collecting</h3>
+            <h3 className="text-xl font-bold mb-4 text-gray-900" id="collecting">Collecting</h3>
             <p className="text-lg leading-8 text-gray-700 mb-6">
               Several (5-20) adult specimens per target taxon should be collected from the same population (locality), if possible. At least one specimen is required for DNA isolation; fewer specimens are required for large species, more for small species. One or more additional specimens are required for future archiving in the <a href="https://www.amnh.org/our-research/sackler-institute-for-comparative-genomics/facilities/amcc" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Ambrose Monell Cryo-Collection</a>. At least two specimens (an adult male and female) are required as morphological vouchers, to be deposited in the AMNH Arachnid and Myriapod Collection. When adults are common, these should always be collected preferentially but, when they are not, subadults or juveniles will suffice for DNA isolation provided that the collector is confident that they are conspecific with the adults (which may then be preserved for morphological study). If possible, intact adult specimens from the same population (locality) as the specimens used for tissue samples should be collected as vouchers.
             </p>
@@ -163,7 +214,7 @@ export default function Collections() {
               />
             </div>
 
-            <h3 className="text-xl font-bold mb-4 text-gray-900">Legal Documentation</h3>
+            <h3 className="text-xl font-bold mb-4 text-gray-900" id="legal-documentation">Legal Documentation</h3>
             <div className="mb-6">
               <h4 className="font-bold text-gray-900 mb-2">AMNH Specimen Transfer Form</h4>
               <p className="text-lg leading-8 text-gray-700">
@@ -192,9 +243,11 @@ export default function Collections() {
               </p>
             </div>
           </div>
+          )}
 
-          <div className="mb-8 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900">Tissue Collections</h2>
+          {activeSection === 'tissue-samples' && (
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">Tissue Samples</h2>
             <p className="text-lg leading-8 text-gray-700 mb-6">
               As part of our research on the molecular systematics of scorpions, a synoptic collection of scorpion tissues, comprising ca. 2000 tissue samples and associated vouchers (nearly a quarter of all described scorpion species and half of all described genera) has accumulated through fieldwork and donations or exchanges with colleagues around the world.
             </p>
@@ -211,7 +264,7 @@ export default function Collections() {
               className="w-full h-auto rounded-lg mb-8"
             />
 
-            <h3 className="text-xl font-bold mb-4 text-gray-900">Preparing Tissue Samples</h3>
+            <h3 className="text-xl font-bold mb-4 text-gray-900" id="preparing-tissue">Preparing Tissue Samples</h3>
             
             <h4 className="font-bold text-gray-900 mb-2">Tissue samples</h4>
             <p className="text-lg leading-8 text-gray-700 mb-4">
@@ -248,8 +301,10 @@ export default function Collections() {
               All specimens and tissue samples must be authoritatively identified, preferably to species (if possible) and sexed, with indication whether or not the specimen is adult. If available, the species identification (including authority and date) and sex, as well as the name of the individual responsible for the identification may appear on a separate label in the vial with the specimen/tissue sample. Provenance data and identifications appearing on labels may also be sent to the AMNH in a spreadsheet.
             </p>
           </div>
+          )}
         </div>
       </div>
+    </div>
     </div>
   );
 }
