@@ -59,8 +59,18 @@ export default function RootLayout({
           </div>
         </header>
         {children}
-        <footer className="bg-gray-900 text-white text-center p-4 mt-4">
-          <p className="text-sm">&copy; 2026 Your Company. All rights reserved.</p>
+        <footer className="bg-gray-900 text-white p-8">
+          <div className="mx-auto max-w-7xl flex items-center justify-between">
+            <p className="text-sm">&copy; Copyright Lorenzo Prendini 2026. All Rights Reserved.</p>
+            <a href="https://www.amnh.org" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/images/amnh-logo-white.svg"
+                alt="Logo: American Museum of Natural History"
+                width={150}
+                height={50}
+              />
+            </a>
+          </div>
         </footer>
       </body>
     </html>
