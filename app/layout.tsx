@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,17 +28,23 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="sticky top-0 backdrop-blur bg-white bg-opacity-80 p-4 shadow-md">
+        <header className="sticky top-0 backdrop-blur bg-gray-900 p-4 shadow-md">
           <div className="container mx-auto flex justify-between items-center">
-            <div className="text-lg font-bold">Logo</div>
+            <Image
+              src="/images/logo-color-on-dark.svg"
+              alt="Arachnology at AMNH Logo"
+              width={400}
+              height={267}
+              priority
+            />
             <nav className="hidden md:flex space-x-4">
-              <a href="#" className="hover:text-blue-500">Home</a>
-              <a href="#" className="hover:text-blue-500">Arachnids</a>
-              <a href="#" className="hover:text-blue-500">Research</a>
-              <a href="#" className="hover:text-blue-500">People</a>
-              <a href="#" className="hover:text-blue-500">Facilities</a>
-              <a href="#" className="hover:text-blue-500">Collections</a>
-              <a href="#" className="hover:text-blue-500">Publications</a>
+              <a href="#" className="text-white hover:text-blue-300">Home</a>
+              <a href="#" className="text-white hover:text-blue-300">Arachnids</a>
+              <a href="#" className="text-white hover:text-blue-300">Research</a>
+              <a href="#" className="text-white hover:text-blue-300">People</a>
+              <a href="#" className="text-white hover:text-blue-300">Facilities</a>
+              <a href="#" className="text-white hover:text-blue-300">Collections</a>
+              <a href="#" className="text-white hover:text-blue-300">Publications</a>
             </nav>
             <div className="md:hidden">
               <button className="focus:outline-none">
@@ -49,8 +56,8 @@ export default function RootLayout({
           </div>
         </header>
         {children}
-        <footer className="bg-gray-800 text-white text-center p-4 mt-4">
-          <p>&copy; 2026 Your Company. All rights reserved.</p>
+        <footer className="bg-gray-900 text-white text-center p-4 mt-4">
+          <p className="text-sm">&copy; 2026 Your Company. All rights reserved.</p>
         </footer>
       </body>
     </html>
