@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import leica from "../_plain-html-css-site/images/leica.jpg";
+
 
 export default function Home() {
   return (
@@ -10,8 +10,8 @@ export default function Home() {
         <p className="text-lg text-center mb-4">This is a modern, mobile-responsive landing page built with Next.js and Tailwind CSS.</p>
         <Image
           className="dark:invert"
-          src={leica}
-          alt="Leica microscope"
+          src="/images/00050.jpg"
+          alt="Scorpion"
           width={800}
           height={533}
           priority
