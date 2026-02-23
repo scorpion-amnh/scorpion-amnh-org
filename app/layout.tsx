@@ -42,8 +42,8 @@ export default function RootLayout({
               />
             </div>
             <nav className="hidden lg:flex lg:items-center lg:gap-6">
-              <a href="#" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">Home</a>
-              <a href="#" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">Arachnids</a>
+              <a href="/" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">Home</a>
+              <a href="/arachnids" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">Arachnids</a>
               <a href="#" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">Research</a>
               <a href="#" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">People</a>
               <a href="#" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">Facilities</a>
