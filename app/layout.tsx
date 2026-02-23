@@ -24,35 +24,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="w-full overflow-x-hidden">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full overflow-x-hidden`}
       >
-        <header className="sticky top-0 backdrop-blur bg-gray-900 p-4 shadow-md">
-          <div className="container mx-auto flex justify-between items-center">
+        <header className="sticky top-0 z-50 w-full border-b border-gray-700 bg-gray-900">
+          <div className="flex h-16 w-full items-center justify-between px-4">
             <Image
               src="/images/logo-color-on-dark.svg"
               alt="Arachnology at AMNH Logo"
-              width={400}
-              height={267}
+              width={120}
+              height={40}
               priority
             />
-            <nav className="hidden md:flex space-x-4">
-              <a href="#" className="text-white hover:text-blue-300">Home</a>
-              <a href="#" className="text-white hover:text-blue-300">Arachnids</a>
-              <a href="#" className="text-white hover:text-blue-300">Research</a>
-              <a href="#" className="text-white hover:text-blue-300">People</a>
-              <a href="#" className="text-white hover:text-blue-300">Facilities</a>
-              <a href="#" className="text-white hover:text-blue-300">Collections</a>
-              <a href="#" className="text-white hover:text-blue-300">Publications</a>
+            <nav className="hidden md:flex md:items-center md:gap-6">
+              <a href="#" className="text-sm font-medium text-gray-300 hover:text-white">Home</a>
+              <a href="#" className="text-sm font-medium text-gray-300 hover:text-white">Arachnids</a>
+              <a href="#" className="text-sm font-medium text-gray-300 hover:text-white">Research</a>
+              <a href="#" className="text-sm font-medium text-gray-300 hover:text-white">People</a>
+              <a href="#" className="text-sm font-medium text-gray-300 hover:text-white">Facilities</a>
+              <a href="#" className="text-sm font-medium text-gray-300 hover:text-white">Collections</a>
+              <a href="#" className="text-sm font-medium text-gray-300 hover:text-white">Publications</a>
             </nav>
-            <div className="md:hidden">
-              <button className="focus:outline-none">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-              </button>
-            </div>
+            <button className="md:hidden text-gray-300">
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
           </div>
         </header>
         {children}
