@@ -26,10 +26,8 @@ jobs:
       - name: Deploy via SFTP
         uses: pressidium/lftp-mirror-action@v1
         with:
-          host: ${{ secrets.SFTP_HOST }}
-          port: 22
+          host: ${{ secrets.SFTP_SERVER }}
           user: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          local-dir: ./out/
-          remote-dir: /home/isadoracolmenares/scorpion-amnh.org/
-          reverse: true
+          pass: ${{ secrets.SFTP_PASSWORD }}
+          localDir: ./out/
+          remoteDir: /home/isadoracolmenares/scorpion-amnh.org/
