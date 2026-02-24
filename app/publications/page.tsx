@@ -7,6 +7,62 @@ export default function Publications() {
         <h1 className="text-5xl font-bold mb-12 text-gray-900">Scientific Publications</h1>
 
         <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-gray-900">2024</h2>
+          <div className="space-y-4">
+            <p>
+              Blasco-Arostegui &amp; <b>Prendini, L.</b> 2024.{' '}
+              <a
+                href="/documents/Blasco-Arostegui%20%26%20Prendini%202024.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                PDF
+              </a>
+            </p>
+            <p>
+              Cazzaniga &amp; <b>Prendini, L.</b> 2024.{' '}
+              <a
+                href="/documents/Cazzaniga%20%26%20Prendini%202024.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                PDF
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-gray-900">2020</h2>
+          <div className="space-y-4">
+            <p>
+              <b>Prendini, L.</b> 2020a.{' '}
+              <a
+                href="/documents/Prendini%202020a.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                PDF
+              </a>
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2020d.{' '}
+              <a
+                href="/documents/Prendini%202020d.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                PDF
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6 text-gray-900">2019</h2>
           <div className="space-y-4">
             <p>
@@ -1133,6 +1189,17 @@ export default function Publications() {
           <h2 className="text-2xl font-bold mb-6 text-gray-900">2008</h2>
           <div className="space-y-4">
             <p>
+              Cushing, P.E. et al. 2008.{' '}
+              <a
+                href="/documents/Cushing%20et%20al.%202008.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                PDF
+              </a>
+            </p>
+            <p>
               Dunlop, J.A., Tetlie, O.E. and <b>Prendini, L.</b> 2008. Reinterpretation of the Silurian scorpion <i>Proscorpius
               osborni</i> (Whitfield): Integrating data from Palaeozoic and Recent scorpions. <b>Palaeontology</b> 51(2):
               303-320.{' '}
@@ -1582,6 +1649,17 @@ export default function Publications() {
               185-259.{' '}
               <a
                 href="https://research.amnh.org/users/lorenzo/PDF/Prendini.2003.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                PDF
+              </a>
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2003.{' '}
+              <a
+                href="/documents/Prendini%202003.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
