@@ -43,7 +43,7 @@ export default function Arachnids() {
             
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-8">
               {randomImages.slice(0, 20).map((image, index) => (
-                <div key={index} className="aspect-square overflow-hidden rounded-lg bg-gray-100">
+                <div key={index} className="aspect-square overflow-hidden rounded-sm bg-gray-100">
                   <Image
                     src={`/images/${image}`}
                     alt={`Gallery image ${index + 1}`}
@@ -67,14 +67,14 @@ export default function Arachnids() {
                 alt="Fossil scorpion"
                 width={300}
                 height={300}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
               <Image
                 src="/images/fossil2.jpg"
                 alt="Fossil scorpion"
                 width={300}
                 height={300}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
             </div>
           </div>
@@ -90,14 +90,14 @@ export default function Arachnids() {
                 alt="Venom drop coming out of the aculeus"
                 width={300}
                 height={300}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
               <Image
                 src="/images/redtelson.jpg"
                 alt="Red telson"
                 width={300}
                 height={300}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function Arachnids() {
                 alt="Approximate world distribution of scorpions"
                 width={600}
                 height={400}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function Arachnids() {
                   alt="Scorpion predating on another scorpion species"
                   width={300}
                   height={300}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-sm"
                 />
                 <figcaption className="text-sm text-gray-600 mt-2">Scorpion predating on another scorpion species</figcaption>
               </figure>
@@ -140,7 +140,7 @@ export default function Arachnids() {
                   alt="Mites on a scorpion"
                   width={300}
                   height={300}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-sm"
                 />
                 <figcaption className="text-sm text-gray-600 mt-2">Mites on a scorpion</figcaption>
               </figure>
@@ -158,14 +158,14 @@ export default function Arachnids() {
                 alt="Scorpion with offspring"
                 width={300}
                 height={300}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
               <Image
                 src="/images/scorpionbabies2.jpg"
                 alt="Scorpion with offspring"
                 width={300}
                 height={300}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
             </div>
             <div className="grid grid-cols-2 gap-4 mb-8">
@@ -175,7 +175,7 @@ export default function Arachnids() {
                   alt="Scorpion spermatophore"
                   width={300}
                   height={300}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-sm"
                 />
                 <figcaption className="text-sm text-gray-600 mt-2">Scorpion spermatophore</figcaption>
               </figure>
@@ -185,7 +185,7 @@ export default function Arachnids() {
                   alt="Scorpion capsule"
                   width={300}
                   height={300}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-sm"
                 />
                 <figcaption className="text-sm text-gray-600 mt-2">Scorpion capsule</figcaption>
               </figure>
@@ -204,7 +204,7 @@ export default function Arachnids() {
                   alt="Coastal habitat, CA, USA"
                   width={600}
                   height={400}
-                  className="w-full h-auto rounded-lg inline-block"
+                  className="w-full h-auto rounded-sm inline-block"
                 />
                 <figcaption className="text-sm text-gray-600 mt-2">Coastal habitat, CA, USA</figcaption>
               </figure>
@@ -222,7 +222,7 @@ export default function Arachnids() {
                 alt="Drop in publications"
                 width={600}
                 height={400}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
             </div>
           </div>
