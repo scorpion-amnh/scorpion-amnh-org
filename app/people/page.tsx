@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function People() {
   const [activeSection, setActiveSection] = useState('lab-evolution');
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const sections = [
     { id: 'lab-evolution', label: 'Lab Evolution' },
@@ -19,6 +20,14 @@ export default function People() {
     { id: 'visiting-students', label: 'Visiting Students' },
   ];
 
+  useEffect(() => {
+    if (contentRef.current) {
+      const headerHeight = 96; // Approximate header height in pixels
+      const yOffset = contentRef.current.offsetTop - headerHeight;
+      window.scrollTo({ top: yOffset, behavior: 'smooth' });
+    }
+  }, [activeSection]);
+
   return (
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">
@@ -31,29 +40,31 @@ export default function People() {
         </p>
 
         {/* Grid Layout with Sidebar Navigation */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 relative">
           {/* Sidebar Navigation */}
-          <nav className="lg:col-span-1">
-            <ul className="space-y-2 lg:sticky lg:top-32">
-              {sections.map((section) => (
-                <li key={section.id}>
-                  <button
-                    onClick={() => setActiveSection(section.id)}
-                    className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${
-                      activeSection === section.id
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    {section.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <div className="lg:col-span-1">
+            <nav className="sticky top-32 xl:top-36 z-40">
+              <ul className="space-y-2">
+                {sections.map((section) => (
+                  <li key={section.id}>
+                    <button
+                      onClick={() => setActiveSection(section.id)}
+                      className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${
+                        activeSection === section.id
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      {section.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
 
           {/* Content Area */}
-          <div className="lg:col-span-3">
+          <div ref={contentRef} className="lg:col-span-3">
         {activeSection === 'lab-evolution' && (
         <div>
           {/* Fall 2019 */}
