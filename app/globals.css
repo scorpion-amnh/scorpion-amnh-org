@@ -25,3 +25,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+ul,
+ol {
+  list-style-position: outside;
+  padding-left: 1.1em;
+}
+
+li {
+  padding-left: 0.1em;
+}
