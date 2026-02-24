@@ -66,7 +66,7 @@ export default function People() {
               alt="Fall 2019 Arachnology Lab at AMNH. Left to Right: George Tsinias, Jairo Moreno, Lorenzo Prendini, Stephanie Loria, Valentin Ehrernthal, Eleanor Goetz, Pio Colmenares, Miryam Trujillo, Ricardo Botero-Trujillo."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: George Tsinias, Jairo Moreno, Lorenzo Prendini, Stephanie Loria, 
@@ -85,7 +85,7 @@ export default function People() {
               alt="July 2019 Arachnology Lab at AMNH. Left to Right: Elena Babicz, Andria Santos da Silva, Stephanie Loria, Pio Colmenares, Colby Sain, Lorenzo Prendini, Jairo Andres Moreno, Ricardo Botero-Trujillo."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: Elena Babicz, Andria Santos da Silva, Stephanie Loria, Pio Colmenares, 
@@ -104,7 +104,7 @@ export default function People() {
               alt="August 2018 Arachnology Lab at AMNH. Left to Right: Stephanie Loria, Max Roppo, Lorenzo Prendini, Diogo Casellato, Lou Sorkin, Pio Colmenares, Deborah Chin, Victoria Long, Jayson Slovak."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: Stephanie Loria, Max Roppo, Lorenzo Prendini, Diogo Casellato, Lou Sorkin, 
@@ -123,7 +123,7 @@ export default function People() {
               alt="September 2017 Arachnology Lab at AMNH. Left to Right: Pio Colmenares, Ivan Magalhães, Lorenzo Prendini, Tebogo Lebwada, Lou Sorkin, Gerardo Contreras, Rodrigo Monjaraz-Ruedas."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: Pio Colmenares, Ivan Magalhães, Lorenzo Prendini, Tebogo Lebwada, 
@@ -142,7 +142,7 @@ export default function People() {
               alt="August 2017 Arachnology Lab at AMNH. Left to Right: Stephanie Loria, Lorenzo Prendini, Pio Colmenares, Jayson Slovak, Deborah Chin."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: Stephanie Loria, Lorenzo Prendini, Pio Colmenares, Jayson Slovak, Deborah Chin.
@@ -160,7 +160,7 @@ export default function People() {
               alt="August 2015 Arachnology Lab at AMNH. Left to Right: Lorenzo Prendini, Gustavo Miranda, Debbie Alwill, Diogo Casellato (back), Stephanie Loria, Bastian-Jesper Klüßmann-Fricke (back), Michelle Locke, Chelsea Silva, Billy Conlan."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: Lorenzo Prendini, Gustavo Miranda, Debbie Alwill, Diogo Casellato (back), 
@@ -179,7 +179,7 @@ export default function People() {
               alt="January 2015 Arachnology Lab at AMNH. Left to Right: Michelle Locke, Lorenzo Prendini, Stephanie Loria."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: Michelle Locke, Lorenzo Prendini, Stephanie Loria.
@@ -197,7 +197,7 @@ export default function People() {
               alt="August 2013 Arachnology Lab at AMNH. Left to Right: Pam Horsely, Stephanie Loria, Lorenzo Prendini, Massimiliano Roppo, Muhammad Tahir."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: Pam Horsely, Stephanie Loria, Lorenzo Prendini, Massimiliano Roppo, Muhammad Tahir.
@@ -215,7 +215,7 @@ export default function People() {
               alt="August 2011 Arachnology Lab at AMNH. Left to Right: Stephanie Loria, Adam Getzler, Ofelia Delgado, Edmundo Gonzalez, Carlos Santibanez, Lorenzo Prendini, Randy Mercurio."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: Stephanie Loria, Adam Getzler, Ofelia Delgado, Edmundo Gonzalez, 
@@ -234,7 +234,7 @@ export default function People() {
               alt="2006 Arachnology Lab at AMNH Left to Right: (Back Row) Jeremy Huff, Erich Volschenk, Lionel Monod, Edmundo Gonzalez, (Front Row) Randy Mercurio, Camilo Mattoni, Lauren Esposito, Monica Mosier, Ofelia Delgado, Valerio Vignoli, Lorenzo Prendini."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: (Back Row) Jeremy Huff, Erich Volschenk, Lionel Monod, Edmundo Gonzalez, 
@@ -254,7 +254,7 @@ export default function People() {
               alt="2007 Scorpion Biologists ICA Left to Right: (Back Row) Carsten Kamenz, Mingsheng Zhu, Edmundo Gonzalez, Roger Farley, Erich Volschenk, Lauren Esposito, Camilo Mattoni, (Front Row) Jason Dunlop, Jeremy Huff, Warren Savary, Ricardo Pinto-da-Rocha, Oscar Francke, Lorenzo Prendini."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: (Back Row) Carsten Kamenz, Mingsheng Zhu, Edmundo Gonzalez, Roger Farley, 
@@ -274,7 +274,7 @@ export default function People() {
               alt="October 2007 BSI Solifugae Meeting at DMNS. Left to Right: Kristie Reddick (TAMU), Bob Wharton (TAMU), Warren Savary (CAS), Aaron Spriggs (DMNS), Tharina Bird (NMNW/CSU), Paula Cushing (DMNS), Lorenzo Prendini (AMNH), Sasha Gromov (IZAK), Jack Brookhart (DMNS)."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: Kristie Reddick (TAMU), Bob Wharton (TAMU), Warren Savary (CAS), Aaron Spriggs (DMNS), 
@@ -294,7 +294,7 @@ export default function People() {
               alt="December 2008 AToL Morphology Scoring Party at Smithsonian USNM. Left to Right: Petra Sierwald (FMNH), Jonathan Coddington (USNM), Lorenzo Prendini (AMNH), Gustavo Hormiga (GWU), Charles Griswold (CAS)."
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: Petra Sierwald (FMNH), Jonathan Coddington (USNM), Lorenzo Prendini (AMNH), 
@@ -383,7 +383,7 @@ export default function People() {
                     alt="Lorenzo Prendini"
                     width={500}
                     height={750}
-                    className="w-full h-auto rounded-lg shadow-md"
+                    className="w-full h-auto rounded-lg"
                   />
                 </figure>
               </div>
@@ -406,7 +406,7 @@ export default function People() {
                   alt="Pío A. Colmenares"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -446,7 +446,7 @@ export default function People() {
                   alt="Steve Thurston"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -460,7 +460,7 @@ export default function People() {
                   alt="Illustration of Amblypygi by Steve Thurston"
                   width={400}
                   height={300}
-                  className="mt-4 rounded-lg shadow-md"
+                  className="mt-4 rounded-lg"
                 />
               </div>
             </div>
@@ -475,7 +475,7 @@ export default function People() {
                   alt="Louis Sorkin"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -497,7 +497,7 @@ export default function People() {
                   alt="Vladimir Ovtsharenko"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -526,7 +526,7 @@ export default function People() {
                   alt="Boris Zakharov"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -559,7 +559,7 @@ export default function People() {
                   alt="Eleanor Goetz"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -582,7 +582,7 @@ export default function People() {
                   alt="Michelle Locke"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -605,7 +605,7 @@ export default function People() {
                   alt="Pamela Horsley"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -628,7 +628,7 @@ export default function People() {
                   alt="Ofelia Delgado"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -651,7 +651,7 @@ export default function People() {
                   alt="Jeremy Huff"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -689,7 +689,7 @@ export default function People() {
                       alt={person.name}
                       width={400}
                       height={533}
-                      className="w-full h-auto rounded-lg shadow-md"
+                      className="w-full h-auto rounded-lg"
                     />
                   </div>
                   <div className="md:col-span-3">
@@ -715,7 +715,7 @@ export default function People() {
                     alt="Randy Mercurio"
                     width={400}
                     height={533}
-                    className="w-full h-auto rounded-lg shadow-md"
+                    className="w-full h-auto rounded-lg"
                   />
                 </div>
                 <div className="md:col-span-3">
@@ -746,7 +746,7 @@ export default function People() {
                   alt="Ricardo Botero-Trujillo"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -772,7 +772,7 @@ export default function People() {
                   alt="Frederic Schramm"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -798,7 +798,7 @@ export default function People() {
                   alt="Stephanie F. Loria"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -824,7 +824,7 @@ export default function People() {
                   alt="Muhammad Tahir"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -850,7 +850,7 @@ export default function People() {
                   alt="Carsten Kamenz"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -873,7 +873,7 @@ export default function People() {
                   alt="José Antonio Ochoa"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -896,7 +896,7 @@ export default function People() {
                   alt="Dana Price"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -919,7 +919,7 @@ export default function People() {
                   alt="Camilo I. Mattoni"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -942,7 +942,7 @@ export default function People() {
                   alt="Erich S. Volschenk"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -974,7 +974,7 @@ export default function People() {
                   alt="Jayson Slovak"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -997,7 +997,7 @@ export default function People() {
                   alt="Stephanie F. Loria"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1020,7 +1020,7 @@ export default function People() {
                   alt="Tharina Bird"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1043,7 +1043,7 @@ export default function People() {
                   alt="Lionel Monod"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1066,7 +1066,7 @@ export default function People() {
                   alt="Edmundo González Santillan"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1089,7 +1089,7 @@ export default function People() {
                   alt="Lauren A. Esposito"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1143,7 +1143,7 @@ export default function People() {
                         alt={person.name}
                         width={400}
                         height={533}
-                        className="w-full h-auto rounded-lg shadow-md"
+                        className="w-full h-auto rounded-lg"
                       />
                     ) : (
                       <div className="w-full aspect-[3/4] bg-gray-200 rounded-lg" />
@@ -1178,7 +1178,7 @@ export default function People() {
                   alt="Hritwik Paul"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1216,7 +1216,7 @@ export default function People() {
                   alt="Cherie Qu"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1238,7 +1238,7 @@ export default function People() {
                   alt="Azmi Anamika"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1324,7 +1324,7 @@ export default function People() {
                   alt="Geeta Sharma"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1346,7 +1346,7 @@ export default function People() {
                   alt="Sophia Castro"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1368,7 +1368,7 @@ export default function People() {
                   alt="Tamar Cohen"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1390,7 +1390,7 @@ export default function People() {
                   alt="Chelsea Silva"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1412,7 +1412,7 @@ export default function People() {
                   alt="Billy Conlan"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1434,7 +1434,7 @@ export default function People() {
                   alt="Sasha Reiter and Eleanor Goetz"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
                 <p className="text-sm text-gray-600 mt-2 italic">Sasha Reiter and Eleanor Goetz</p>
               </div>
@@ -1457,7 +1457,7 @@ export default function People() {
                   alt="Sasha Reiter and Eleanor Goetz"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
                 <p className="text-sm text-gray-600 mt-2 italic">Sasha Reiter and Eleanor Goetz</p>
               </div>
@@ -1480,7 +1480,7 @@ export default function People() {
                   alt="Adam Getzler"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1518,7 +1518,7 @@ export default function People() {
                   alt="Jianhua Lin and Qiao Rong Huang"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
                 <p className="text-sm text-gray-600 mt-2 italic">Qiao Rong Huang and Jianhua Lin</p>
               </div>
@@ -1541,7 +1541,7 @@ export default function People() {
                   alt="Jianhua Lin and Qiao Rong Huang"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
                 <p className="text-sm text-gray-600 mt-2 italic">Qiao Rong Huang and Jianhua Lin</p>
               </div>
@@ -1564,7 +1564,7 @@ export default function People() {
                   alt="Melanie Ng"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1586,7 +1586,7 @@ export default function People() {
                   alt="Connie Cai"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1608,7 +1608,7 @@ export default function People() {
                   alt="Bernard Laszczower"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1630,7 +1630,7 @@ export default function People() {
                   alt="Boitumelo 'Tumi' McCallum"
                   width={400}
                   height={533}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-3">
@@ -1663,7 +1663,7 @@ export default function People() {
                   alt="Victoria Long"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -1685,7 +1685,7 @@ export default function People() {
                   alt="George Tsinias"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -1707,7 +1707,7 @@ export default function People() {
                   alt="Christian Liriano"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -1731,7 +1731,7 @@ export default function People() {
                   alt="Gerbi Carreon"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -1753,7 +1753,7 @@ export default function People() {
                   alt="Debbie Alwill"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -1775,7 +1775,7 @@ export default function People() {
                   alt="Jasmine Alim"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -1813,7 +1813,7 @@ export default function People() {
                   alt="Reginald Christiaan"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -1851,7 +1851,7 @@ export default function People() {
                   alt="Howard W. Fiedler"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -1873,7 +1873,7 @@ export default function People() {
                   alt="Stefan Foord"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -1927,7 +1927,7 @@ export default function People() {
                   alt="Patrick Gildenhuys"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -1949,7 +1949,7 @@ export default function People() {
                   alt="Charles Haddad"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -1987,7 +1987,7 @@ export default function People() {
                   alt="Siegfried Huber"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2009,7 +2009,7 @@ export default function People() {
                   alt="Jeremy Huff"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2047,7 +2047,7 @@ export default function People() {
                   alt="Simone Longe"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2085,7 +2085,7 @@ export default function People() {
                   alt="Warren Savary"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2107,7 +2107,7 @@ export default function People() {
                   alt="Rick West"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2180,7 +2180,7 @@ export default function People() {
                   alt="Ofelia Delgado"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2202,7 +2202,7 @@ export default function People() {
                   alt="David Desoeur"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2240,7 +2240,7 @@ export default function People() {
                   alt="Ian Engelbrecht"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2294,7 +2294,7 @@ export default function People() {
                   alt="Ilsa Kaim"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2316,7 +2316,7 @@ export default function People() {
                   alt="Sergios-Orestis Kolokotronis"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2338,7 +2338,7 @@ export default function People() {
                   alt="Sulata Maity"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2360,7 +2360,7 @@ export default function People() {
                   alt="Kari McWest"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2385,7 +2385,7 @@ export default function People() {
                   alt="Randy Mercurio"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2487,7 +2487,7 @@ export default function People() {
                   alt="Zach Valois"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2509,7 +2509,7 @@ export default function People() {
                   alt="John Visser"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2556,7 +2556,7 @@ export default function People() {
                   alt="Jairo A. Moreno-González"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2579,7 +2579,7 @@ export default function People() {
                   alt="Andria de Paula Santos da Silva"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2602,7 +2602,7 @@ export default function People() {
                   alt="Catalina Romero"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2625,7 +2625,7 @@ export default function People() {
                   alt="Miguel Medrano"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2648,7 +2648,7 @@ export default function People() {
                   alt="Jahnavi Joshi"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2671,7 +2671,7 @@ export default function People() {
                   alt="Aaron Goodman"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2694,7 +2694,7 @@ export default function People() {
                   alt="Stephan Schaffrath"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2717,7 +2717,7 @@ export default function People() {
                   alt="Carlos Albeto Martinez Muñoz"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2740,7 +2740,7 @@ export default function People() {
                   alt="Callum Mclean"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2763,7 +2763,7 @@ export default function People() {
                   alt="Shlomo Cain"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2786,7 +2786,7 @@ export default function People() {
                   alt="Ivan Magalhaes"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2809,7 +2809,7 @@ export default function People() {
                   alt="Gerardo Contreras"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2832,7 +2832,7 @@ export default function People() {
                   alt="Rodrigo Monjáraz Ruedas"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2855,7 +2855,7 @@ export default function People() {
                   alt="Tebogo Ledwaba"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2878,7 +2878,7 @@ export default function People() {
                   alt="Jesus Alberto Cruz-López"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2901,7 +2901,7 @@ export default function People() {
                   alt="Ricardo Botero-Trujillo"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2924,7 +2924,7 @@ export default function People() {
                   alt="Dulce Flor Piedra"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2946,7 +2946,7 @@ export default function People() {
                   alt="Francisco Salgueiro Sepulveda"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2969,7 +2969,7 @@ export default function People() {
                   alt="Diego Barrales"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -2992,7 +2992,7 @@ export default function People() {
                   alt="Samuel Mwangi"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3015,7 +3015,7 @@ export default function People() {
                   alt="Bastian-Jesper Klußmann-Fricke"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3038,7 +3038,7 @@ export default function People() {
                   alt="Gustavo Silva de Miranda"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3078,7 +3078,7 @@ export default function People() {
                   alt="Daniela Ramírez"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3101,7 +3101,7 @@ export default function People() {
                   alt="Carlos Santibañez-López"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3124,7 +3124,7 @@ export default function People() {
                   alt="Rene Barba"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3164,7 +3164,7 @@ export default function People() {
                   alt="Humberto Yoji Yamaguti"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3204,7 +3204,7 @@ export default function People() {
                   alt="Jesus Alfonso Ballesteros Chavez"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3227,7 +3227,7 @@ export default function People() {
                   alt="Fabio Akashi Hernandes"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3250,7 +3250,7 @@ export default function People() {
                   alt="Andrés Ojanguren-Affilastro"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3273,7 +3273,7 @@ export default function People() {
                   alt="Alexander V. Gromov"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3296,7 +3296,7 @@ export default function People() {
                   alt="Carsten Kamenz"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3319,7 +3319,7 @@ export default function People() {
                   alt="Valerio Vignoli"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3342,7 +3342,7 @@ export default function People() {
                   alt="Christian Wirkner"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3365,7 +3365,7 @@ export default function People() {
                   alt="Christina Bisulca"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3388,7 +3388,7 @@ export default function People() {
                   alt="Amazonas Chagas, Jr."
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
@@ -3411,7 +3411,7 @@ export default function People() {
                   alt="Lionel Monod"
                   width={300}
                   height={400}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="md:col-span-4">
