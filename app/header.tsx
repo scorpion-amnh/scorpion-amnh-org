@@ -92,6 +92,16 @@ export function Header() {
               Collections
             </Link>
             <Link 
+              href="/fieldwork" 
+              className={`text-sm xl:text-base font-medium transition-colors ${
+                isActive('/fieldwork')
+                  ? 'text-white border-b-2 border-blue-500 pb-1'
+                  : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              Fieldwork
+            </Link>
+            <Link 
               href="/publications" 
               className={`text-sm xl:text-base font-medium transition-colors ${
                 isActive('/publications')
