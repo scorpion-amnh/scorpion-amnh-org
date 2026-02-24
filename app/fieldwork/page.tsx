@@ -4,39 +4,39 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const fieldworkImages = [
-  "DSCN7139.jpg",
-  "DSCN1182.jpg",
-  "IMG_2488.jpg",
-  "IMG_0237.jpg",
-  "Malawi443.jpg",
-  "IMG_2261.jpg",
-  "IMG_0823.jpg",
-  "DSCF5506.jpg",
-  "Mozambique041.jpg",
-  "DSCN0023.jpg",
-  "DSCN0494.jpg",
-  "D.mexicanus.ElMoral.jpg",
-  "IMG_0684.jpg",
-  "DSCN6382.jpg",
-  "IMG_2478.jpg",
-  "Edmund%20blacklightingZimapan.jpg",
-  "DSCN0089.jpg",
-  "Jose.and.Camillo.jpg",
-  "DSCN2068.jpg",
-  "DSCN0020.jpg",
-  "LitterWPark.jpg",
-  "DSCN0188.jpg",
-  "DSCN1207.jpg",
-  "IMG_2559.jpg",
-  "DSCN0255.jpg",
-  "IMG_0487.jpg",
-  "DSCN0039.jpg",
-  "DSCN0092.jpg",
-  "Jeremy-Valerio_Senegal.jpg",
-];
+  { src: "DSCN7139.jpg", orientation: "portrait" },
+  { src: "DSCN1182.jpg", orientation: "landscape" },
+  { src: "IMG_2488.jpg", orientation: "portrait" },
+  { src: "IMG_0237.jpg", orientation: "landscape" },
+  { src: "Malawi443.jpg", orientation: "landscape" },
+  { src: "IMG_2261.jpg", orientation: "landscape" },
+  { src: "IMG_0823.jpg", orientation: "landscape" },
+  { src: "DSCF5506.jpg", orientation: "landscape" },
+  { src: "Mozambique041.jpg", orientation: "landscape" },
+  { src: "DSCN0023.jpg", orientation: "landscape" },
+  { src: "DSCN0494.jpg", orientation: "portrait" },
+  { src: "D.mexicanus.ElMoral.jpg", orientation: "landscape" },
+  { src: "IMG_0684.jpg", orientation: "landscape" },
+  { src: "DSCN6382.jpg", orientation: "portrait" },
+  { src: "IMG_2478.jpg", orientation: "landscape" },
+  { src: "Edmund%20blacklightingZimapan.jpg", orientation: "portrait" },
+  { src: "DSCN0089.jpg", orientation: "portrait" },
+  { src: "Jose.and.Camillo.jpg", orientation: "landscape" },
+  { src: "DSCN2068.jpg", orientation: "portrait" },
+  { src: "DSCN0020.jpg", orientation: "landscape" },
+  { src: "LitterWPark.jpg", orientation: "landscape" },
+  { src: "DSCN0188.jpg", orientation: "landscape" },
+  { src: "DSCN1207.jpg", orientation: "landscape" },
+  { src: "IMG_2559.jpg", orientation: "landscape" },
+  { src: "DSCN0255.jpg", orientation: "landscape" },
+  { src: "IMG_0487.jpg", orientation: "landscape" },
+  { src: "DSCN0039.jpg", orientation: "landscape" },
+  { src: "DSCN0092.jpg", orientation: "landscape" },
+  { src: "Jeremy-Valerio_Senegal.jpg", orientation: "landscape" },
+] as const;
 
 export default function Fieldwork() {
-  const [shuffledImages, setShuffledImages] = useState<string[]>([]);
+  const [shuffledImages, setShuffledImages] = useState([...fieldworkImages]);
 
   useEffect(() => {
     const shuffled = [...fieldworkImages].sort(() => Math.random() - 0.5);
@@ -53,19 +53,27 @@ export default function Fieldwork() {
           collections trips of many other researchers and students.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-8">
+        <div className="columns-2 sm:columns-3 md:columns-4 gap-4 mb-8 [column-fill:_balance]">
           {shuffledImages.map((image, index) => (
             <div
-              key={`${image}-${index}`}
-              className="aspect-square overflow-hidden rounded-lg bg-gray-100"
+              key={`${image.src}-${index}`}
+              className="mb-4 break-inside-avoid"
             >
-              <Image
-                src={`/images/${image}`}
-                alt={`Fieldwork image ${index + 1}`}
-                width={200}
-                height={200}
-                className="w-full h-full object-cover"
-              />
+              <div
+                className={`overflow-hidden rounded-sm bg-gray-100 ${
+                  image.orientation === "portrait"
+                    ? "aspect-[3/4]"
+                    : "aspect-[4/3]"
+                }`}
+              >
+                <Image
+                  src={`/images/${image.src}`}
+                  alt={`Fieldwork image ${index + 1}`}
+                  width={image.orientation === "portrait" ? 300 : 400}
+                  height={image.orientation === "portrait" ? 400 : 300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           ))}
         </div>
