@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 const brandColors = {
-  white: "#FFFFFF",
-  black: "#231F20",
   "gray-00": "#F4F7FC",
   "gray-10": "#E1E2E5",
   "gray-20": "#C7C8CA",
