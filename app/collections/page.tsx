@@ -67,7 +67,7 @@ export default function Collections() {
                   alt="Collections personnel"
                   width={300}
                   height={300}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-sm"
                 />
                 <figcaption className="text-sm text-gray-600 mt-2">Louis Sorkin and Randy Mercurio in the collections</figcaption>
               </figure>
@@ -76,7 +76,7 @@ export default function Collections() {
                 alt='Wall signage that says "AMNH CAN #97 ARANEAE FAMILY LINYPHIIDAE"'
                 width={300}
                 height={300}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function Collections() {
               alt="NSB wet lab"
               width={600}
               height={400}
-              className="w-full h-auto rounded-lg"
+              className="w-full h-auto rounded-sm"
             />
           </div>
               </div>
@@ -127,14 +127,14 @@ export default function Collections() {
                 alt="Starr Natural Sciences Building (NSB) collections"
                 width={400}
                 height={400}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
               <Image
                 src="/images/collections_edmundo.jpg"
                 alt="Edmundo González Santillan searching the collections"
                 width={400}
                 height={400}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
             </div>
 
@@ -153,7 +153,7 @@ export default function Collections() {
               alt="Collection storage bottles containing scorpions"
               width={600}
               height={400}
-              className="w-full h-auto rounded-lg mb-8"
+              className="w-full h-auto rounded-sm mb-8"
             />
 
             <h3 className="text-xl font-bold mb-4 text-gray-900" id="curation">Curation of Collections</h3>
@@ -167,7 +167,7 @@ export default function Collections() {
                   alt="Refrigerator with trays of collection bottles in former storage facility"
                   width={400}
                   height={400}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-sm"
                 />
                 <figcaption className="text-sm text-gray-600 mt-2">Former storage facility</figcaption>
               </figure>
@@ -177,7 +177,7 @@ export default function Collections() {
                   alt="Refrigerator with trays of collection bottles in new storage facility"
                   width={400}
                   height={400}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-sm"
                 />
                 <figcaption className="text-sm text-gray-600 mt-2">New storage facility</figcaption>
               </figure>
@@ -193,14 +193,14 @@ export default function Collections() {
                 alt="Randy Mercurio and a colleague using a UV light to look for scorpions in the field"
                 width={400}
                 height={400}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
               <Image
                 src="/images/sorting.jpg"
                 alt="Lorenzo Prendini and a colleague sorting scorpions in the field"
                 width={400}
                 height={400}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-sm"
               />
             </div>
 
@@ -251,7 +251,7 @@ export default function Collections() {
               alt="Collection storage bottles containing scorpions and labels"
               width={600}
               height={400}
-              className="w-full h-auto rounded-lg mb-8"
+              className="w-full h-auto rounded-sm mb-8"
             />
 
             <h3 className="text-xl font-bold mb-4 text-gray-900" id="preparing-tissue">Preparing Tissue Samples</h3>
@@ -268,7 +268,7 @@ export default function Collections() {
               alt="Lorenzo Prendini in the field, fixing scorpions via injection"
               width={600}
               height={400}
-              className="w-full h-auto rounded-lg mb-8"
+              className="w-full h-auto rounded-sm mb-8"
             />
 
             <h4 className="font-bold text-gray-900 mb-2">Vouchers</h4>
@@ -280,7 +280,7 @@ export default function Collections() {
               alt="Vials of scorpions with a label on each lid"
               width={600}
               height={400}
-              className="w-full h-auto rounded-lg mb-8"
+              className="w-full h-auto rounded-sm mb-8"
             />
 
             <h4 className="font-bold text-gray-900 mb-2">Documentation and archiving</h4>
