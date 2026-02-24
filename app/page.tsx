@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const galleryImages = [
+const galleryImages: Array<{ src: string; orientation: "landscape" | "portrait" }> = [
   { src: "00050.jpg", orientation: "landscape" },
   { src: "00101.jpg", orientation: "landscape" },
   { src: "00240.jpg", orientation: "landscape" },
@@ -55,10 +55,12 @@ const galleryImages = [
   { src: "Solipugid1.jpg", orientation: "landscape" },
   { src: "Opisthacanthus.jpg", orientation: "landscape" },
   { src: "pectines.jpg", orientation: "landscape" },
-] as const;
+] ;
+
+type GalleryImage = (typeof galleryImages)[number];
 
 export default function Home() {
-  const [randomImages, setRandomImages] = useState([...galleryImages]);
+  const [randomImages, setRandomImages] = useState<GalleryImage[]>([...galleryImages]);
 
   useEffect(() => {
     const shuffled = [...galleryImages].sort(() => Math.random() - 0.5);
@@ -79,52 +81,72 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Image Gallery */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 grid-flow-dense auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[110px] lg:auto-rows-[130px]">
-          {randomImages.map((image, index) => {
-            const isFeatured =
-              index === 0 || (index + 1) % 14 === 0;
-            const sizeClass = isFeatured
-              ? "col-span-2 row-span-2"
-              : image.orientation === "portrait"
-                ? "col-span-1 row-span-3"
-                : "col-span-1 row-span-1";
-
-            return (
-              <div
-                key={`${image.src}-${index}`}
-                className={`overflow-hidden rounded-sm bg-gray-100 ${sizeClass}`}
-              >
-                <Image
-                  src={`/images/${image.src}`}
-                  alt={`Gallery image ${index + 1}`}
-                  width={isFeatured ? 800 : 400}
-                  height={isFeatured ? 600 : 300}
-                  className="w-full h-full object-cover"
-                />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Collections Section */}
+          <div className="lg:col-span-1">
+            <h4 className="text-2xl font-bold mb-6 text-gray-900">Collections</h4>
+            
+            <div className="grid gap-6 mb-6">
+              <div>
+                <h6 className="text-lg font-semibold mb-3 text-gray-900">Arachnids</h6>
+                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                  <li>Acari (mites and ticks)</li>
+                  <li>Amblypygi (whip spiders)</li>
+                  <li>Araneae (spiders)</li>
+                  <li>Opiliones (harvestmen)</li>
+                  <li>Palpigradi (palpigrades)</li>
+                  <li>Pseudoscorpiones (false scorpions)</li>
+                  <li>Ricinulei (hooded tick-spiders or ricinuleids)</li>
+                  <li>Schizomida (schizomids)</li>
+                  <li>Scorpiones (scorpions)</li>
+                  <li>Solifugae (solifuges, solpugids or camel-spiders)</li>
+                  <li>Uropygi (vinegaroons or whip scorpions)</li>
+                </ul>
               </div>
-            );
-          })}
-        </div>
-
-        {/* Collections Section */}
-        <div className="mb-12 pt-8">
-          <h4 className="text-2xl font-bold mb-6 text-gray-900">Collections</h4>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-6">
-            <div>
-              <h6 className="text-lg font-semibold mb-3 text-gray-900">Arachnids</h6>
-              <p className="text-gray-700">Acari (mites and ticks), Amblypygi (whip spiders), Araneae (spiders), Opiliones (harvestmen), Palpigradi (palpigrades), Pseudoscorpiones (false scorpions), Ricinulei (hooded tick-spiders or ricinuleids), Schizomida (schizomids), Scorpiones (scorpions), Solifugae (solifuges, solpugids or camel-spiders), Uropygi (vinegaroons or whip scorpions)</p>
+              <div>
+                <h6 className="text-lg font-semibold mb-3 text-gray-900">Myriapods</h6>
+                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                  <li>Chilopoda (centipedes)</li>
+                  <li>Diplopoda (millipedes)</li>
+                  <li>Pauropoda (pauropods)</li>
+                  <li>Symphyla (garden centipedes or symphylans)</li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <h6 className="text-lg font-semibold mb-3 text-gray-900">Myriapods</h6>
-              <p className="text-gray-700">Chilopoda (centipedes), Diplopoda (millipedes), Pauropoda (pauropods), Symphyla (garden centipedes or symphylans)</p>
+            
+            <p className="text-gray-700">
+              See our <Link href="/collections" className="text-blue-600 hover:text-blue-800 underline">Collections Page</Link> for more information.
+            </p>
+          </div>
+
+          {/* Image Gallery */}
+          <div className="lg:col-span-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 grid-flow-dense auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[110px]">
+              {randomImages.map((image, index) => {
+                const isFeatured = index === 0 || (index + 1) % 14 === 0;
+                const sizeClass = isFeatured
+                  ? "col-span-2 row-span-2"
+                  : image.orientation === "portrait"
+                    ? "col-span-1 row-span-3"
+                    : "col-span-1 row-span-1";
+
+                return (
+                  <div
+                    key={`${image.src}-${index}`}
+                    className={`overflow-hidden rounded-sm bg-gray-100 ${sizeClass}`}
+                  >
+                    <Image
+                      src={`/images/${image.src}`}
+                      alt={`Gallery image ${index + 1}`}
+                      width={isFeatured ? 800 : 400}
+                      height={isFeatured ? 600 : 300}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
-          
-          <p className="text-gray-700">
-            See our <Link href="/collections" className="text-blue-600 hover:text-blue-800 underline">Collections Page</Link> for more information.
-          </p>
         </div>
       </div>
     </div>
