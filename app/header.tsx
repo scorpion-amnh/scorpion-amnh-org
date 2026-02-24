@@ -61,7 +61,16 @@ export function Header() {
             >
               Research
             </Link>
-            <a href="#" className="text-sm xl:text-base font-medium text-gray-300 hover:text-white">People</a>
+            <Link 
+              href="/people" 
+              className={`text-sm xl:text-base font-medium transition-colors ${
+                isActive('/people')
+                  ? 'text-white border-b-2 border-blue-500 pb-1'
+                  : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              People
+            </Link>
             <Link 
               href="/facilities" 
               className={`text-sm xl:text-base font-medium transition-colors ${
