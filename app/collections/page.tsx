@@ -2,59 +2,61 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Collections() {
   const [activeSection, setActiveSection] = useState('general-information');
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const sections = [
-    { id: 'general-information', label: 'General Information', subsections: [
-      { id: 'personnel', label: 'Personnel' },
-      { id: 'use-of-collections', label: 'Use of Collections' },
-      { id: 'loan-requests', label: 'Loan Requests' },
-      { id: 'visiting-scientists', label: 'Visiting Scientists' },
-    ]},
-    { id: 'specimens', label: 'Specimens', subsections: [
-      { id: 'scorpions', label: 'Scorpions' },
-      { id: 'curation', label: 'Curation of Collections' },
-      { id: 'collecting', label: 'Collecting' },
-      { id: 'legal-documentation', label: 'Legal Documentation' },
-    ]},
-    { id: 'tissue-samples', label: 'Tissue Samples', subsections: [
-      { id: 'the-collection', label: 'The Collection' },
-      { id: 'preparing-tissue', label: 'Preparing Tissue Samples' },
-    ]},
+    { id: 'general-information', label: 'General Information' },
+    { id: 'specimens', label: 'Specimens' },
+    { id: 'tissue-samples', label: 'Tissue Samples' },
   ];
+
+  useEffect(() => {
+    if (contentRef.current) {
+      const headerHeight = 96; // Approximate header height in pixels
+      const yOffset = contentRef.current.offsetTop - headerHeight;
+      window.scrollTo({ top: yOffset, behavior: 'smooth' });
+    }
+  }, [activeSection]);
 
   return (
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">
-        <div className="mb-12">
-          {/* Main Content */}
-          <div>
-              <h1 className="text-5xl font-bold mb-8 text-gray-900">Collections</h1>
-              <p className="text-xl text-gray-700 mb-8">Arachnid and Myriapod collections at the American Museum of Natural History</p>
+        <h1 className="text-5xl font-bold mb-8 text-gray-900">Collections</h1>
+        
+        <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+          Arachnid and Myriapod collections at the American Museum of Natural History
+        </p>
 
-              {/* Secondary Navigation */}
-              <nav className="mb-8 border-b border-gray-200">
-                <div className="flex gap-8">
-                  {sections.map((section) => (
+        {/* Grid Layout with Sidebar Navigation */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 relative">
+          {/* Sidebar Navigation */}
+          <div className="lg:col-span-1">
+            <nav className="sticky top-32 xl:top-36 z-40">
+              <ul className="space-y-2">
+                {sections.map((section) => (
+                  <li key={section.id}>
                     <button
-                      key={section.id}
                       onClick={() => setActiveSection(section.id)}
-                      className={`pb-4 font-medium transition-colors border-b-2 ${
+                      className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${
                         activeSection === section.id
-                          ? 'border-blue-600 text-blue-600'
-                          : 'border-transparent text-gray-700 hover:text-gray-900'
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       }`}
                     >
                       {section.label}
                     </button>
-                  ))}
-                </div>
-              </nav>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
 
-              {/* Tab Content */}
+          {/* Content Area */}
+          <div ref={contentRef} className="lg:col-span-3">
               {activeSection === 'general-information' && (
               <div className="mb-8">
                 <h2 className="text-2xl font-bold mb-6 text-gray-900">General Information</h2>
@@ -302,9 +304,9 @@ export default function Collections() {
             </p>
           </div>
           )}
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
