@@ -306,7 +306,7 @@ export default function People() {
 
         {activeSection === 'principal-investigator' && (
         <div>
-          <h2 className="text-2xl font-bold mb-2 text-gray-900">Principal Investigator</h2>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Principal Investigator</h2>
           <p className="text-xl text-gray-600 mb-8">Curator of The Arachnology Lab at AMNH</p>
           
           <div className="mb-12 pb-12 border-gray-200">
@@ -391,7 +391,7 @@ export default function People() {
 
         {activeSection === 'staff' && (
         <div>
-          <h2 className="text-2xl font-bold mb-2 text-gray-900">Staff</h2>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Staff</h2>
           <p className="text-xl text-gray-600 mb-8">Current staff of Arachnology at AMNH</p>
           
           {/* Pio Colmenares */}
@@ -731,7 +731,7 @@ export default function People() {
 
         {activeSection === 'postdocs' && (
         <div>
-          <h2 className="text-2xl font-bold mb-2 text-gray-900">Postdocs</h2>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Postdocs</h2>
           <p className="text-xl text-gray-600 mb-8">Current and former postdocs at the Arachnology Lab</p>
           
           {/* Ricardo Botero-Trujillo */}
@@ -957,7 +957,7 @@ export default function People() {
 
         {activeSection === 'graduate-students' && (
         <div>
-          <h2 className="text-2xl font-bold mb-2 text-gray-900">Graduate Students</h2>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Graduate Students</h2>
           <p className="text-xl text-gray-600 mb-8">
             Several graduate students worked in the Arachnology lab in past years. These students were funded from various sources including grants from the <a href="http://www.nsf.gov" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">National Science Foundation</a> and the AMNH (graduate student fellowships and the Comparative Biology Program of the Richard Gilder Graduate School). If you are interested graduate study in the Arachnology lab, please visit the website of the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Richard Gilder Graduate School</a> to apply to the RGGS for a graduate student fellowship for study at a partner programs (e.g., City University of New York).
           </p>
@@ -1104,7 +1104,7 @@ export default function People() {
 
         {activeSection === 'undergraduate-students' && (
         <div>
-          <h2 className="text-2xl font-bold mb-2 text-gray-900">Undergraduate Students</h2>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Undergraduate Students</h2>
           <p className="text-xl text-gray-600 mb-8">
             Over the years, several undergraduate students have worked in the Arachnology Lab supported by various internships. Most have gone on to graduate school and beyond. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/undergraduate-fellowships/reu-biology-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Research Experiences for Undergraduates Program.</a>
           </p>
@@ -1161,7 +1161,7 @@ export default function People() {
 
         {activeSection === 'high-school-students' && (
         <div>
-          <h2 className="text-2xl font-bold mb-2 text-gray-900">High School Students</h2>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">High School Students</h2>
           <p className="text-xl text-gray-600 mb-8">
             Several high school students worked in the Arachnology Lab supported by various internships. Many went on to undergraduate programs. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program.</a>
           </p>
@@ -1644,7 +1644,7 @@ export default function People() {
 
         {activeSection === 'volunteers' && (
         <div>
-          <h2 className="text-2xl font-bold mb-2 text-gray-900">Volunteers and Field Assistants</h2>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Volunteers and Field Assistants</h2>
           <p className="text-xl text-gray-600 mb-8">
             The Arachnology Lab at the AMNH has had many dedicated volunteers work with us over the years. With their help we have been able to accomplish a great deal of work. We would like to thank all of our volunteers for their invaluable assistance. If you are interested in volunteering in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/join-support/volunteer-now" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Volunteer Department.</a>
           </p>
@@ -2539,7 +2539,7 @@ export default function People() {
 
         {activeSection === 'visiting-students' && (
         <div>
-          <h2 className="text-2xl font-bold mb-2 text-gray-900">Visiting Students</h2>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Visiting Students</h2>
           <p className="text-xl text-gray-600 mb-8">
             Many graduate students from other institutions in the U.S. and abroad have visited the AMNH Arachnology Lab in the past, often funded in part by the AMNH Small Grants program (Annette Kade Fellowships, Collections Study Grants and Theodore Roosevelt Memorial Fund). If you are interested in applying for small grants to visit the AMNH, please visit the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/research-grants-and-student-exchange-fellowships" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Richard Gilder Graduate School.</a>
           </p>

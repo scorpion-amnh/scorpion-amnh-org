@@ -47,7 +47,7 @@ export default function Collections() {
           <div ref={contentRef} className="lg:col-span-3">
               {activeSection === 'general-information' && (
               <div className="mb-8">
-                <h2 className="text-2xl font-bold mb-6 text-gray-900">General Information</h2>
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">General Information</h2>
 
                 <div className="mb-8">
                   <h3 className="text-xl font-bold mb-4 text-gray-900">Personnel</h3>
@@ -117,7 +117,7 @@ export default function Collections() {
 
           {activeSection === 'specimens' && (
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-6 text-gray-900">Specimens</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">Specimens</h2>
             <p className="text-lg leading-8 text-gray-700 mb-6">
               The AMNH contains the second-largest collection of scorpions, and the largest collection of minor arachnid orders, in North America. The myriapod collections are also among the largest in North America. The collections include a worldwide representation of arachnid and myriapod taxa, with a strong emphasis on material from North America and elsewhere in the New World. The majority of specimens are preserved in ethanol, although large collections of slide-mounted Acari and pseudoscorpions are also represented.
             </p>
@@ -237,7 +237,7 @@ export default function Collections() {
 
           {activeSection === 'tissue-samples' && (
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-6 text-gray-900">Tissue Samples</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">Tissue Samples</h2>
             <p className="text-lg leading-8 text-gray-700 mb-6">
               As part of our research on the molecular systematics of scorpions, a synoptic collection of scorpion tissues, comprising ca. 2000 tissue samples and associated vouchers (nearly a quarter of all described scorpion species and half of all described genera) has accumulated through fieldwork and donations or exchanges with colleagues around the world.
             </p>

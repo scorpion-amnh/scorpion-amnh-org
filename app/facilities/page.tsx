@@ -10,12 +10,12 @@ export default function Facilities() {
         <h1 className="text-5xl font-bold mb-8 text-gray-900">Facilities</h1>
         <p className="text-xl text-gray-700 mb-12">The Arachnology Lab has access to multiple research facilities in the Division of Invertebrate Zoology and associated facilities in the American Museum of Natural History.</p>
 
-        <h2 className="text-2xl font-bold mb-6 text-gray-900">Scorpion Research Laboratory</h2>
+        <h2 className="text-3xl font-bold mb-6 text-gray-900">Scorpion Research Laboratory</h2>
         <p className="text-lg leading-8 text-gray-700 mb-8">
           The Scorpion Research Laboratory is situated in the Division of Invertebrate Zoology, in Section 13 (old Entomology Department) on the fifth floor of the AMNH. There you can find the offices of Lorenzo Prendini and the Museum Specialists. Student offices are located on the sixth floor. The collection is located in the Natural Sciences Building (NSB). We have a separate Molecular Lab and access to other facilities and laboratories at the AMNH.
         </p>
 
-        <h2 className="text-2xl font-bold mb-6 text-gray-900">Research Laboratory Facilities</h2>
+        <h2 className="text-3xl font-bold mb-6 text-gray-900">Research Laboratory Facilities</h2>
         
         <h3 className="text-xl font-bold mb-4 text-gray-900">Natural Sciences Building Optical Equipment</h3>
         <p className="text-lg leading-8 text-gray-700 mb-6">
@@ -75,7 +75,7 @@ export default function Facilities() {
           className="w-full h-auto rounded-lg mb-8"
         />
 
-        <h2 className="text-2xl font-bold mb-6 text-gray-900">Associated AMNH Facilities</h2>
+        <h2 className="text-3xl font-bold mb-6 text-gray-900">Associated AMNH Facilities</h2>
         <p className="text-lg leading-8 text-gray-700 mb-6">
           Lorenzo Prendini's Arachnology Lab has access to the parallel virtual supercomputer clusters, the Invertebrate Zoology Histological Laboratory, the GIS Laboratory of the Center for Biodiversity and Conservation, the Microscopy and Imaging Facility, and the AMNH Library. Other services and facilities of the AMNH are also available.
         </p>

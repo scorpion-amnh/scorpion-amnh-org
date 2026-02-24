@@ -7,7 +7,7 @@ export default function Publications() {
         <h1 className="text-5xl font-bold mb-12 text-gray-900">Scientific Publications</h1>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2024</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2024</h2>
           <div className="space-y-4">
             <p>
               Blasco-Arostegui &amp; <b>Prendini, L.</b> 2024.{' '}
@@ -35,7 +35,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2020</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2020</h2>
           <div className="space-y-4">
             <p>
               <b>Prendini, L.</b> 2020a.{' '}
@@ -63,7 +63,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2019</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2019</h2>
           <div className="space-y-4">
             <p>
               Esposito, L.A. and <b>Prendini, L.</b> 2019. Island ancestors and New World Biogeography: A case study from the
@@ -94,7 +94,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2018</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2018</h2>
           <div className="space-y-4">
             <p>
               Barrales Alcalá, D.A., Francke, O.F., and <b>Prendini, L.</b> 2018. Systematic revision of the giant North
@@ -190,7 +190,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2017</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2017</h2>
           <div className="space-y-4">
             <p>
               Esposito, L.A, Yamaguti, H.Y., Souza, C.A., Pinto-da-Rocha, R. and <b>Prendini, L.</b> 2017. Systematic revision
@@ -235,7 +235,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2016</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2016</h2>
           <div className="space-y-4">
             <p>
               Adams, A., Marais, E., Turner, S., <b>Prendini, L.</b>, and Pinshow, B. 2016. Similar burrow architecture of
@@ -397,7 +397,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2015</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2015</h2>
           <div className="space-y-4">
             <p>
               Amr, Z., Abed, O.A., Al Share, T., Hamidan, N., and <b>Prendini, L.</b> 2015. New records of Jordanian scorpions.
@@ -518,7 +518,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2014</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2014</h2>
           <div className="space-y-4">
             <p>
               Bryson, R.W., Jr., <b>Prendini, L.</b>, Savary, W.E., and Pearman, P.B. 2014. Caves as microrefugia: Pleistocene
@@ -664,7 +664,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2013</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2013</h2>
           <div className="space-y-4">
             <p>
               Bryson, R.W., Jr., Riddle, B.R., Graham, M.R., Tilston Smith, B., and <b>Prendini, L.</b> 2013. As old as the
@@ -786,7 +786,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2012</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2012</h2>
           <div className="space-y-4">
             <p>
               Engelbrecht, I. and <b>Prendini, L.</b> 2012. Cryptic diversity of South African trapdoor spiders: Three new
@@ -880,7 +880,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2011</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2011</h2>
           <div className="space-y-4">
             <p>
               Engelbrecht, I. and <b>Prendini, L.</b> 2011. An assessment of the taxonomic resolution of southern African
@@ -1021,7 +1021,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2010</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2010</h2>
           <div className="space-y-4">
             <p>
               Mattoni, C., <b>Ochoa, J.</b>, Ojanguren-Affilastro, A., and <b>Prendini, L.</b> 2010. Towards an all-species
@@ -1107,7 +1107,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2009</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2009</h2>
           <div className="space-y-4">
             <p>
               Dippenaar-Schoeman, A.S., Van den Berg, A. and <b>Prendini, L.</b> 2009. Spiders and scorpions (Arachnida:
@@ -1186,7 +1186,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2008</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2008</h2>
           <div className="space-y-4">
             <p>
               Cushing, P.E. et al. 2008.{' '}
@@ -1319,7 +1319,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2007</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2007</h2>
           <div className="space-y-4">
             <p>
               Baldo, L., <b>Prendini, L.</b>, Corthals, A. and Werren, J. 2007. <i>Wolbachia</i> are present in southern
@@ -1376,7 +1376,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2006</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2006</h2>
           <div className="space-y-4">
             <p>
               <b>Prendini, L.</b> 2006. New South African flat rock scorpions (Liochelidae: <i>Hadogenes</i>). <b>American
@@ -1419,7 +1419,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2005</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2005</h2>
           <div className="space-y-4">
             <p>
               <b>Prendini, L.</b> 2005. Comment on "Identifying spiders through DNA barcodes". <b>Canadian Journal of
@@ -1500,7 +1500,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2004</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2004</h2>
           <div className="space-y-4">
             <p>
               Coddington, J.A., Giribet, G., Harvey, MSc, <b>Prendini, L.</b>, and Walter, D.E. 2004. <i>Arachnida</i>. pp.
@@ -1604,7 +1604,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2003</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2003</h2>
           <div className="space-y-4">
             <p>
               <b>Prendini, L.</b> 2003. A new genus and species of bothriurid scorpion from the Brandberg Massif, Namibia, with
@@ -1671,7 +1671,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2002</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2002</h2>
           <div className="space-y-4">
             <p>
               Dyason, K., Brandt, W., <b>Prendini, L.</b>, Verdonck, F., Tytgat, J., Du Plessis, J., Müller, G. and Van der
@@ -1763,7 +1763,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2001</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2001</h2>
           <div className="space-y-4">
             <p>
               <b>Prendini, L.</b> 2001. A review of synonyms and subspecies in the genus <i>Opistophthalmus</i> C.L. Koch
@@ -1855,7 +1855,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">2000</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2000</h2>
           <div className="space-y-4">
             <p>
               <b>Prendini, L.</b> 2000. A new species of <i>Parabuthus</i> Pocock (Scorpiones, Buthidae), and new records of
@@ -1897,7 +1897,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">1999</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">1999</h2>
           <div className="space-y-4">
             <p>
               <b>Prendini, L.</b>, Crowe, T.M., Linder, H.P. and Wheeler, W.C. 1999. Taking the sting out of scorpion
@@ -1908,7 +1908,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">1998</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">1998</h2>
           <div className="space-y-4">
             <p>
               <b>Prendini, L.</b> and Linder, H.P. 1998. Phylogeny of the South African species of restioid leafhoppers
@@ -1926,7 +1926,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">1997</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">1997</h2>
           <div className="space-y-4">
             <p>
               Newlands, G. and <b>Prendini, L.</b> 1997. Redescription of <i>Hadogenes zumpti</i> (Scorpiones: Ischnuridae), an
@@ -1981,7 +1981,7 @@ export default function Publications() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">1996</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">1996</h2>
           <div className="space-y-4">
             <p>
               <b>Prendini, L.</b>, Theron. L-J., Van der Merwe, K. and Owen-Smith, N. 1996. Abundance and guild structure of

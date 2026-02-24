@@ -26,6 +26,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@layer base {
+  h1, h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+}
+
 ul,
 ol {
   list-style-position: outside;
@@ -35,3 +41,4 @@ ol {
 li {
   padding-left: 0.1em;
 }
+

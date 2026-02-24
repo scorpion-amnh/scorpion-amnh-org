@@ -78,7 +78,7 @@ export default function Fieldwork() {
           ))}
         </div>
 
-        <h2 className="text-2xl font-bold mb-3 text-gray-900">Locations</h2>
+        <h2 className="text-3xl font-bold mb-3 text-gray-900">Locations</h2>
         <p className="text-lg text-gray-700 mb-8">
           A map showing where fieldwork had been conducted and a detailed list of locations is available upon request.
         </p>
