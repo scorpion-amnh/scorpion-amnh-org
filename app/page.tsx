@@ -70,7 +70,7 @@ export default function Home() {
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {randomImages.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-lg bg-gray-100 shadow-md hover:shadow-lg transition-shadow">
+              <div key={index} className="aspect-square overflow-hidden rounded-lg bg-gray-100">
                 <Image
                   src={`/images/${image}`}
                   alt={`Gallery image ${index + 1}`}
