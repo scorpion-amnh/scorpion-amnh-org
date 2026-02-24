@@ -96,6 +96,7 @@ module.exports = {
         blue: {
           500: brandColors["cyan-10"],
           600: brandColors["cyan-40"],
+          800: brandColors["cyan-60"],
         },
       },
     },

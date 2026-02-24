@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { HeaderNav, type HeaderNavItem } from "./components/HeaderNav";
 
 export function Header() {
   const pathname = usePathname();
@@ -15,6 +16,17 @@ export function Header() {
     }
     return pathname.startsWith(href);
   };
+
+  const navItems: HeaderNavItem[] = [
+    { href: "/", label: "Home" },
+    { href: "/arachnids", label: "Arachnids" },
+    { href: "/research", label: "Research" },
+    { href: "/people", label: "People" },
+    { href: "/facilities", label: "Facilities" },
+    { href: "/collections", label: "Collections" },
+    { href: "/fieldwork", label: "Fieldwork" },
+    { href: "/publications", label: "Publications" },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-700 bg-gray-900">
@@ -32,88 +44,7 @@ export function Header() {
               />
             </Link>
           </div>
-          <nav className="hidden lg:flex lg:items-center lg:gap-6">
-            <Link 
-              href="/" 
-              className={`text-sm xl:text-base font-medium transition-colors ${
-                isActive('/') && pathname === '/'
-                  ? 'text-white border-b-2 border-blue-500 pb-1'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Home
-            </Link>
-            <Link 
-              href="/arachnids" 
-              className={`text-sm xl:text-base font-medium transition-colors ${
-                isActive('/arachnids')
-                  ? 'text-white border-b-2 border-blue-500 pb-1'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Arachnids
-            </Link>
-            <Link 
-              href="/research" 
-              className={`text-sm xl:text-base font-medium transition-colors ${
-                isActive('/research')
-                  ? 'text-white border-b-2 border-blue-500 pb-1'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Research
-            </Link>
-            <Link 
-              href="/people" 
-              className={`text-sm xl:text-base font-medium transition-colors ${
-                isActive('/people')
-                  ? 'text-white border-b-2 border-blue-500 pb-1'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              People
-            </Link>
-            <Link 
-              href="/facilities" 
-              className={`text-sm xl:text-base font-medium transition-colors ${
-                isActive('/facilities')
-                  ? 'text-white border-b-2 border-blue-500 pb-1'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Facilities
-            </Link>
-            <Link 
-              href="/collections" 
-              className={`text-sm xl:text-base font-medium transition-colors ${
-                isActive('/collections')
-                  ? 'text-white border-b-2 border-blue-500 pb-1'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Collections
-            </Link>
-            <Link 
-              href="/fieldwork" 
-              className={`text-sm xl:text-base font-medium transition-colors ${
-                isActive('/fieldwork')
-                  ? 'text-white border-b-2 border-blue-500 pb-1'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Fieldwork
-            </Link>
-            <Link 
-              href="/publications" 
-              className={`text-sm xl:text-base font-medium transition-colors ${
-                isActive('/publications')
-                  ? 'text-white border-b-2 border-blue-500 pb-1'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Publications
-            </Link>
-          </nav>
+          <HeaderNav items={navItems} isActive={isActive} variant="desktop" />
           <button
             type="button"
             className="lg:hidden text-gray-300"
@@ -160,96 +91,12 @@ export function Header() {
                 </svg>
               </button>
             </div>
-            <nav className="px-5 py-4 space-y-3">
-              <Link 
-                href="/" 
-                className={`block text-base font-medium transition-colors ${
-                  isActive('/') && pathname === '/'
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link 
-                href="/arachnids" 
-                className={`block text-base font-medium transition-colors ${
-                  isActive('/arachnids')
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Arachnids
-              </Link>
-              <Link 
-                href="/research" 
-                className={`block text-base font-medium transition-colors ${
-                  isActive('/research')
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Research
-              </Link>
-              <Link 
-                href="/people" 
-                className={`block text-base font-medium transition-colors ${
-                  isActive('/people')
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                People
-              </Link>
-              <Link 
-                href="/facilities" 
-                className={`block text-base font-medium transition-colors ${
-                  isActive('/facilities')
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Facilities
-              </Link>
-              <Link 
-                href="/collections" 
-                className={`block text-base font-medium transition-colors ${
-                  isActive('/collections')
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Collections
-              </Link>
-              <Link 
-                href="/fieldwork" 
-                className={`block text-base font-medium transition-colors ${
-                  isActive('/fieldwork')
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Fieldwork
-              </Link>
-              <Link 
-                href="/publications" 
-                className={`block text-base font-medium transition-colors ${
-                  isActive('/publications')
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Publications
-              </Link>
-            </nav>
+            <HeaderNav
+              items={navItems}
+              isActive={isActive}
+              variant="mobile"
+              onNavigate={() => setIsMenuOpen(false)}
+            />
           </div>
         </div>
       </div>

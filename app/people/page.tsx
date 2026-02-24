@@ -309,11 +309,21 @@ export default function People() {
           <h2 className="text-2xl font-bold mb-2 text-gray-900">Principal Investigator</h2>
           <p className="text-xl text-gray-600 mb-8">Curator of The Arachnology Lab at AMNH</p>
           
-          <div className="bg-gray-50 p-8 rounded-sm">
-            <div className="grid md:grid-cols-5 gap-8">
+          <div className="mb-12 pb-12 border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <Image
+                  src="/images/prendini.jpg"
+                  alt="Lorenzo Prendini"
+                  width={500}
+                  height={750}
+                  className="w-full h-auto rounded-sm"
+                />
+              </div>
+              
               <div className="md:col-span-3">
-                <h3 className="text-2xl font-bold mb-1 text-gray-900">Lorenzo Prendini</h3>
-                <p className="text-lg text-gray-600 mb-6">
+                <h3 className="text-xl font-bold mb-1 text-gray-900">Lorenzo Prendini</h3>
+                <p className="text-lg text-gray-600 mb-4">
                   Head of the Arachnology Lab at AMNH, Curator of Arachnids and Myriapods in the Division of Invertebrate Zoology
                 </p>
                 
@@ -360,7 +370,7 @@ export default function People() {
                 </div>
 
                 <div className="mt-8">
-                  <h4 className="text-lg font-bold mb-4 text-gray-900">Contact</h4>
+                  <h4 className="text-base font-bold mb-3 text-gray-900">Contact</h4>
                   <div className="text-gray-700 space-y-1">
                     <p>Curator of Arachnida and Myriapoda</p>
                     <p>Division of Invertebrate Zoology</p>
@@ -373,18 +383,6 @@ export default function People() {
                     <p>Fax: (212) 769-5277</p>
                   </div>
                 </div>
-              </div>
-              
-              <div className="md:col-span-2">
-                <figure>
-                  <Image
-                    src="/images/prendini.jpg"
-                    alt="Lorenzo Prendini"
-                    width={500}
-                    height={750}
-                    className="w-full h-auto rounded-sm"
-                  />
-                </figure>
               </div>
             </div>
           </div>
