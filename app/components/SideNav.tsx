@@ -13,8 +13,8 @@ type SideNavProps = {
 
 export function SideNav({ sections, activeSection, onSelect }: SideNavProps) {
   return (
-    <nav className="sticky top-32 xl:top-36 z-40">
-      <ul className="space-y-2">
+    <nav className="side-nav sticky top-32 xl:top-36 z-40">
+      <ul className="space-y-2 list-none m-0 p-0">
         {sections.map((section) => (
           <li key={section.id}>
             <SideNavButton
