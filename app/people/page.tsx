@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { SideNav } from "../components/SideNav";
 
 export default function People() {
   const [activeSection, setActiveSection] = useState('lab-evolution');
@@ -43,24 +44,11 @@ export default function People() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 relative">
           {/* Sidebar Navigation */}
           <div className="lg:col-span-1">
-            <nav className="sticky top-32 xl:top-36 z-40">
-              <ul className="space-y-2">
-                {sections.map((section) => (
-                  <li key={section.id}>
-                    <button
-                      onClick={() => setActiveSection(section.id)}
-                      className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${
-                        activeSection === section.id
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }`}
-                    >
-                      {section.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <SideNav
+              sections={sections}
+              activeSection={activeSection}
+              onSelect={setActiveSection}
+            />
           </div>
 
           {/* Content Area */}
@@ -74,14 +62,14 @@ export default function People() {
           <figure className="mb-8">
             <Image
               src="/images/labfall2019_p08qpk.jpg"
-              alt="Fall 2019 Arachnology Lab at AMNH. Left to Right: George Tsinias, Jairo Moreno, Lorenzo Prendini, Stephanie Loria, Valentin Ehrernthal, Eleanor Goetz, Pio Colmenares, Miryam Trujillo, Ricardo Botero-Trujillo."
+              alt="Fall 2019 Arachnology Lab at AMNH. Left to Right: George Tsinias, Jairo Moreno, Lorenzo Prendini, Stephanie Loria, Valentin Ehrenthal, Eleanor Goetz, Pio Colmenares, Miryam Trujillo, Ricardo Botero-Trujillo."
               width={1200}
               height={800}
               className="w-full h-auto rounded-lg"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: George Tsinias, Jairo Moreno, Lorenzo Prendini, Stephanie Loria, 
-              Valentin Ehrernthal, Eleanor Goetz, Pio Colmenares, Miryam Trujillo, Ricardo Botero-Trujillo.
+              Valentin Ehrenthal, Eleanor Goetz, Pio Colmenares, Miryam Trujillo, Ricardo Botero-Trujillo.
             </figcaption>
           </figure>
         </div>
@@ -1125,7 +1113,7 @@ export default function People() {
           
           <div className="space-y-6">
             {[
-              { name: 'Valentin Ehrernthal', affiliation: 'University of Hamburg, Germany', years: '2019 to 2020', image: 'Valentin_r2sqbc.jpg', bio: 'Valentin spent six months at the AMNH working on Southeast Asian scorpions. He generated images and data for a morphological matrix and performed extractions, PCRs and Sanger Sequencing. Additionally, he learned about the biogeography and phylogeny of these scorpions.' },
+              { name: 'Valentin Ehrenthal', affiliation: 'University of Hamburg, Germany', years: '2019 to 2020', image: 'Valentin_r2sqbc.jpg', bio: 'Valentin spent six months at the AMNH working on Southeast Asian scorpions. He generated images and data for a morphological matrix and performed extractions, PCRs and Sanger Sequencing. Additionally, he learned about the biogeography and phylogeny of these scorpions.' },
               { name: 'Diogo Casellato', affiliation: 'CUNY, Baruch College | Brazil Scientific Mobility Program', years: '2015 to 2019', image: 'DiogoCasellato2015.jpg', bio: 'Diogo interned in the molecular lab, learning to extract, amplify, sequence, and edit DNA as part of a variety of scorpion phylogenetics projects.' },
               { name: 'Elena Babicz', affiliation: 'Bridgewater State University', years: '2019', image: 'Elena.jpg', bio: 'Elena spent the summer at the AMNH as an REU intern under the supervision of Stephanie Loria and Pio Colmenares, focusing on Thelyphonids. She was tasked with generating molecular data and images of the specimens, and also learned about the morphology, biogeography and phylogeny of this order of arachnids.' },
               { name: 'Colby Sain', affiliation: 'University of Tennessee', years: '2019', image: 'Colby.jpg', bio: 'Colby came to the AMNH as an REU intern. She worked under the mentorship of Ricardo Botero-Trujillo and Stephanie Loria, primarily on Ricinulei, with a focus on the African genus, <em>Ricinoides</em>. She generated an extensive set of morphological images, and she also generated molecular data. At the University of Tennessee, she studies Geology with a focus on Paleontology. In the future, Colby hopes to do more work in the Arachnology Lab.' },

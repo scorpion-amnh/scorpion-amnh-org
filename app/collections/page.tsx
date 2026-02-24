@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { SideNav } from "../components/SideNav";
 
 export default function Collections() {
   const [activeSection, setActiveSection] = useState('general-information');
@@ -35,24 +36,11 @@ export default function Collections() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 relative">
           {/* Sidebar Navigation */}
           <div className="lg:col-span-1">
-            <nav className="sticky top-32 xl:top-36 z-40">
-              <ul className="space-y-2">
-                {sections.map((section) => (
-                  <li key={section.id}>
-                    <button
-                      onClick={() => setActiveSection(section.id)}
-                      className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${
-                        activeSection === section.id
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }`}
-                    >
-                      {section.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <SideNav
+              sections={sections}
+              activeSection={activeSection}
+              onSelect={setActiveSection}
+            />
           </div>
 
           {/* Content Area */}
