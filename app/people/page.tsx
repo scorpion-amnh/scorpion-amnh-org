@@ -456,7 +456,7 @@ export default function People() {
               <div className="md:col-span-3">
                 <h4 className="text-lg font-bold mb-1 text-gray-900">Michelle Locke</h4>
                 <p className="text-base text-gray-600 mb-1">Scientific Assistant</p>
-                <p className="text-sm text-gray-500 mb-3">Staff from 2015 to 2016</p>
+                <p className="text-sm text-gray-500 mb-3">Technical staff from 2015 to 2016</p>
                 <p className="text-gray-700">
                   Michelle Locke completed her MSc at Carleton University, in Ottawa ON. Michelle's MSc thesis was a revision of the flower fly genus <em>Dasysyrphus</em> (Diptera: Syrphidae) under the supervision of Dr. Jeff Skevington of Agriculture and Agri-Food Canada. before coming to the AMNH she worked as a contract Research Technician at the Canadian National Collection of Insects, Arachnids and Nematodes in Ottawa, ON. Her contract work focused on the Syrphidae collection, doing identifications, curation, databasing, species level conservation assessments, macro photography of specimens and work on a field guide to the Syrphidae. She came to the Division of Invertebrate Zoology, AMNH in 2014.
                 </p>
@@ -479,7 +479,7 @@ export default function People() {
               <div className="md:col-span-3">
                 <h4 className="text-lg font-bold mb-1 text-gray-900">Pamela Horsley</h4>
                 <p className="text-base text-gray-600 mb-1">Scientific Assistant</p>
-                <p className="text-sm text-gray-500 mb-3">Staff from 2013 to 2014</p>
+                <p className="text-sm text-gray-500 mb-3">Technical staff from 2013 to 2014</p>
                 <p className="text-gray-700">
                   Pamela completed her MSc in Entomology at McGill University in 2009 and her thesis research included a systematic revision of the hyper-diverse leaf litter-inhabiting genus <em>Trachyphloeomimus</em> (Curculionidae, Entiminae). In 2009, she was hired through an NSF grant as the Entomology Collection Manager at the San Diego Natural History Museum. Her research and work experience has allowed her to do field work in central and northeast Mexico, as well as the south-western United States. She is heavily involved with the Entomological Collections Network (ECN), <a href="http://www.ecnweb.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Entomological Collections Network</a>, serving as president and assisting with coordination of the annual meetings.
                 </p>
@@ -502,7 +502,7 @@ export default function People() {
               <div className="md:col-span-3">
                 <h4 className="text-lg font-bold mb-1 text-gray-900">Ofelia Delgado</h4>
                 <p className="text-base text-gray-600 mb-1">Scientific Assistant</p>
-                <p className="text-sm text-gray-500 mb-3">Staff from 2010 to 2012</p>
+                <p className="text-sm text-gray-500 mb-3">Technical staff from 2010 to 2012</p>
                 <p className="text-gray-700">
                   Ofelia completed her BSc in Biology at the Facultad de Ciencias, Universidad Nacional Autónoma de México (UNAM) in 2000, based on a floristic survey of tropical dry forest. After graduating, she assisted in the curation of the Section of Odonata in the Insects National Collection, Instituto de Biología, UNAM, focusing on the Odonata of Jalisco. Her experience in the field includes collecting arachnids, insects and plants in Central and Southern Mexico. After volunteering in Lorenzo Prendini's molecular lab for several years, she came to work as a Scientific Assistant in January 2010, spending much time working on solifuges and scorpions in the molecular lab.
                 </p>
@@ -525,7 +525,7 @@ export default function People() {
               <div className="md:col-span-3">
                 <h4 className="text-lg font-bold mb-1 text-gray-900">Jeremy Huff</h4>
                 <p className="text-base text-gray-600 mb-1">Scientific Assistant</p>
-                <p className="text-sm text-gray-500 mb-3">Staff from 2007 to 2010</p>
+                <p className="text-sm text-gray-500 mb-3">Technical staff from 2007 to 2010</p>
                 <p className="text-gray-700">
                   Jeremy began working as a Scientific Assistant in the Division of Invertebrate Zoology in 2007. His main research interest is the systematics of the whip scorpions (Thelyphonida). Huff has extensive field experience collecting arachnids in Belize, Cameroon, Costa Rica, Dominican Republic, French Guiana, Grand Cayman, Guatemala, Guinea-Bissau, Guyana, Malaysia, Martinique, Mexico, Senegal, South Africa and the southwestern USA. He did 10 field trips for the AMNH and has collected several thousand specimens and discovered many new species.
                 </p>
@@ -548,7 +548,7 @@ export default function People() {
               <div className="md:col-span-3">
                 <h4 className="text-lg font-bold mb-1 text-gray-900">Randy Mercurio</h4>
                 <p className="text-base text-gray-600 mb-1">Scientific Assistant</p>
-                <p className="text-sm text-gray-500 mb-3">Staff from 2002 to 2007</p>
+                <p className="text-sm text-gray-500 mb-3">Technical staff from 2002 to 2007</p>
                 <p className="text-gray-700">
                   Randy joined the Division of Invertebrate Zoology, AMNH, as a full-time employee in 2002, after completing a B.A. in Biology at New York University. He worked as Scientific Assistant to Lorenzo Prendini and managed the curation of the Arachnid and Myriapod Collections. Randy is a professional photographer and was responsible for producing many of the photographs in publications and the group's website. His other research interests include the taxonomy, natural history, ecology and biogeography of centipedes in North America, as well as their functional morphology. He has collected arachnids and myriapods in Arizona, California, Connecticut, Florida, Massachusetts, New York, Nevada, Rhode Island, and Mexico.
                 </p>
@@ -590,9 +590,31 @@ export default function People() {
             </div>
           </div>
 
+          {/* Victoria Long */}
+          <div className="mb-12 pb-12 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <Image
+                  src="/images/victoria.jpg"
+                  alt="Victoria Long"
+                  width={400}
+                  height={533}
+                  className="w-full h-auto rounded-sm"
+                />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-xl font-bold mb-1 text-gray-900">Victoria Long</h3>
+                <p className="text-lg text-gray-600 mb-4">Staff Member</p>
+                <p className="text-gray-700">
+                  Victoria is currently assisting with DNA extractions and PCR reactions, as well as curatorial tasks in the main collections. She first came to the lab as a volunteer.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Alumni Section */}
           <h3 className="text-2xl font-bold mt-12 mb-2 text-gray-900">Alumni</h3>
-          <p className="text-xl text-gray-600 mb-8">Former staff of Arachnology at AMNH</p>
+          <p className="text-xl text-gray-600 mb-8">Former technical staff of the Arachnology Lab at AMNH</p>
 
           {/* Eleanor Goetz */}
           <div className="mb-8 pb-8 border-b border-gray-200">
@@ -609,7 +631,7 @@ export default function People() {
               <div className="md:col-span-3">
                 <h4 className="text-lg font-bold mb-1 text-gray-900">Eleanor Goetz</h4>
                 <p className="text-base text-gray-600 mb-1">Lab Technician</p>
-                <p className="text-sm text-gray-500 mb-3">Staff from 2019 to 2021</p>
+                <p className="text-sm text-gray-500 mb-3">Technical staff from 2019 to 2021</p>
                 <p className="text-gray-700">
                   Eleanor graduated from Smith College in 2019 with a BA in Biological Sciences, where she was a member of the Katz Lab and focussed on the lifecycles of foraminifera. She started in the Prendini lab as a Science Research Mentoring Program student in 2013 and continued to volunteer before starting as a Lab Technician in the fall of 2019. Eleanor currently works in the molecular lab doing DNA extractions, PCRs, Sanger Sequencing preparations, and generating molecular data.
                 </p>
@@ -632,8 +654,8 @@ export default function People() {
               { name: 'Diana Pietri', title: 'Laboratory Technician', years: '2003 to 2005', image: 'diana.jpg' },
               { name: 'Tarang Sharma', title: 'Laboratory Technician', years: '2003 to 2004', image: 'tarang.jpg' },
               { name: 'Rebecca Budinoff', title: 'Laboratory Technician', years: '2004', image: 'rebecca.jpg' },
-            ].map((person, index) => (
-              <div key={index} className="pb-6 border-b border-gray-200">
+            ].map((person, index, list) => (
+              <div key={index} className={`pb-6 ${index < list.length - 1 ? 'border-b border-gray-200' : ''}`}>
                 <div className="grid md:grid-cols-5 gap-6">
                   <div className="md:col-span-2">
                     <Image
@@ -647,7 +669,7 @@ export default function People() {
                   <div className="md:col-span-3">
                     <h4 className="text-lg font-bold mb-1 text-gray-900">{person.name}</h4>
                     <p className="text-base text-gray-600 mb-1">{person.title}</p>
-                    <p className="text-sm text-gray-500 mb-3">Staff from {person.years}</p>
+                    <p className="text-sm text-gray-500 mb-3">Technical staff from {person.years}</p>
                     <p className="text-gray-700">
                       {person.title === 'Laboratory Technician' && 
                         `${person.name.split(' ')[0]} worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. ${person.name.split(' ')[0] === 'Kanvaly' ? 'He' : 'She'} assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.`
@@ -1670,28 +1692,6 @@ export default function People() {
 
           <h3 className="text-xl font-bold mb-4 text-gray-900">Current Volunteers</h3>
 
-          {/* Victoria Long */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <Image
-                  src="/images/victoria.jpg"
-                  alt="Victoria Long"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Victoria Long</h4>
-                <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
-                <p className="text-gray-700">
-                  Victoria is currently assisting with DNA extractions and PCR reactions, as well as curatorial tasks in the main collections.
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* George Tsinias */}
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
@@ -1737,6 +1737,28 @@ export default function People() {
           </div>
 
           <h3 className="text-xl font-bold mb-4 mt-8 text-gray-900">Former Volunteers</h3>
+
+          {/* Victoria Long */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <Image
+                  src="/images/victoria.jpg"
+                  alt="Victoria Long"
+                  width={300}
+                  height={400}
+                  className="w-full h-auto rounded-sm"
+                />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Victoria Long</h4>
+                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+                <p className="text-gray-700">
+                  Victoria first came to the lab as a volunteer, assisting with DNA extractions and PCR reactions, as well as curatorial tasks in the main collections. She currently serves as technical staff for the lab.
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* Gerbi Carreon */}
           <div className="mb-6 pb-6 border-b border-gray-200">
@@ -2539,7 +2561,7 @@ export default function People() {
           </div>
 
           {/* Peg Werns */}
-          <div className="mb-6 pb-6">
+          <div className="pb-6">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
                 <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
