@@ -775,6 +775,73 @@ export default function People() {
           <h2 className="text-3xl font-bold mb-2 text-gray-900">Postdocs</h2>
           <p className="text-xl text-gray-600 mb-8">Current and former postdocs at the Arachnology Lab</p>
           
+          {/* Muhammad Tahir */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <Image
+                  src="/images/Tahir.jpg"
+                  alt="Muhammad Tahir"
+                  width={400}
+                  height={533}
+                  className="w-full h-auto rounded-sm"
+                />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Muhammad Tahir</h3>
+                <p className="text-base text-gray-600 mb-1">Higher Education Commission, Pakistan</p>
+                <p className="text-sm text-gray-500 mb-3">Current postdoc and from 2013 to 2014</p>
+                <p className="mb-3">
+                  <a href="https://www.researchgate.net/profile/Stephanie_Loria2" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Research Gate</a>
+                </p>
+                <p className="text-gray-700">
+                  Tahir received his PhD from University of the Punjab, Lahore, with a dissertation on the "Biodiversity and predatory efficacy of spiders inhabiting the rice fields of central Punjab, Pakistan". He also worked on the scorpions of Pakistan in collaboration with Lorenzo Prendini. He came to the AMNH, in May 2013 for postdoc supported by a Postdoctoral Fellowship by the Higher Education Commission of Pakistan, which focused on the molecular systematics of the medically important scorpions in the family Buthidae occurring in Pakistan. He was an Assistant Professor of Zoology at the University of Sargodha, Pakistan and has returned to the AMNH.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Jose Barba-Montoya */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Jose Barba-Montoya</h3>
+                {/* <p className="text-base text-gray-600 mb-1">Affiliation TBD</p> */}
+                <p className="text-sm text-gray-500 mb-3">Current postdoc</p>
+                {/* <p className="text-gray-700">Bio coming soon.</p> */}
+              </div>
+            </div>
+          </div>
+
+          {/* Jairo A. Moreno-González */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <Image
+                  src="/images/Jairo.jpg"
+                  alt="Jairo A. Moreno-González"
+                  width={400}
+                  height={533}
+                  className="w-full h-auto rounded-sm"
+                />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Jairo A. Moreno-González</h3>
+                <p className="text-base text-gray-600 mb-1">Museu de Zoologia, Universidade de Sao Paulo, Brasil</p>
+                <p className="text-sm text-gray-500 mb-3">Current postdoc</p>
+                <p className="text-gray-700">
+                  Jairo received his PhD from the Instituto de Biociencias, Universidad de Sao Paulo, Sao Paulo, Brazil. His research interests are focused on systematics and evolution of some arachnid orders such as Scorpiones (Buthidae: <em>Tityus</em>), and Pedipalpi (Schizomida, Uropygi and Amblypygi). His PhD project deals with the systematic revision of <em>Tityus</em> (<em>Archaeotityus</em>) using phenotypic and genetic evidence. He visited the AMNH for six months to examine material and score morphological characters for his thesis disseration.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h3 className="text-2xl font-bold mt-12 mb-2 text-gray-900">Alumni</h3>
+          <p className="text-xl text-gray-600 mb-8">Former postdocs of the Arachnology Lab at AMNH</p>
+
           {/* Ricardo Botero-Trujillo */}
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
@@ -848,32 +915,6 @@ export default function People() {
                 </p>
                 <p className="text-gray-700">
                   Stephanie first came to the AMNH as a high school student participating in the High School Science Research Program of the Center for Biodiversity and Conservation with Felicity Arengo. In 2011, she completed her B.S. at Sewanee University in TN. During her B.S. she spent a summer working at the Field Museum of Natural History in Chicago as an NSF REU intern studying the evolution and biogeography of the Malagasy giant pill-millipedes, genus <em>Sphaeromimus</em>, under the guidance of Thomas Wesener and Petra Sierwald. Stephanie entered the Comparative Biology PhD program at the AMNH Richard Gilder Graduate School in 2011 and graduated in 2015. Her dissertation focused on the evolution and biogeography of Southeast Asian scorpions, particularly the family Chaerilidae.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Muhammad Tahir */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <Image
-                  src="/images/Tahir.jpg"
-                  alt="Muhammad Tahir"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Muhammad Tahir</h3>
-                <p className="text-base text-gray-600 mb-1">Higher Education Commission, Pakistan</p>
-                <p className="text-sm text-gray-500 mb-3">Postdoc from 2013 to 2014</p>
-                <p className="mb-3">
-                  <a href="https://www.researchgate.net/profile/Stephanie_Loria2" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Research Gate</a>
-                </p>
-                <p className="text-gray-700">
-                  Tahir received his PhD from University of the Punjab, Lahore, with a dissertation on the "Biodiversity and predatory efficacy of spiders inhabiting the rice fields of central Punjab, Pakistan". He also worked on the scorpions of Pakistan in collaboration with Lorenzo Prendini. He came to the AMNH, in May 2013 for postdoc supported by a Postdoctoral Fellowship by the Higher Education Commission of Pakistan, which focused on the molecular systematics of the medically important scorpions in the family Buthidae occurring in Pakistan. He is currently working as Assistant Professor of Zoology at the University of Sargodha, Pakistan.
                 </p>
               </div>
             </div>
@@ -972,7 +1013,7 @@ export default function People() {
           </div>
 
           {/* Erich S. Volschenk */}
-          <div className="mb-8 pb-8">
+          <div className="pb-6">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
@@ -2602,7 +2643,7 @@ export default function People() {
                 <p className="text-sm text-gray-600 mb-1">Museu de Zoologia, Universidade de Sao Paulo, Brasil</p>
                 <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
                 <p className="text-gray-700">
-                  Jairo is a PhD candidate at the Instituto de Biociencias, Universidad de Sao Paulo, Sao Paulo, Brazil. His research interests are focused on systematics and evolution of some arachnid orders such as Scorpiones (Buthidae: <em>Tityus</em>), and Pedipalpi (Schizomida, Uropygi and Amblypygi). His PhD project deals with the systematic revision of <em>Tityus</em> (<em>Archaeotityus</em>) using phenotypic and genetic evidence. He visited the AMNH for six months to examine material and score morphological characters for his thesis disseration.
+                  Jairo received his PhD from the Instituto de Biociencias, Universidad de Sao Paulo, Sao Paulo, Brazil. His research interests are focused on systematics and evolution of some arachnid orders such as Scorpiones (Buthidae: <em>Tityus</em>), and Pedipalpi (Schizomida, Uropygi and Amblypygi). His PhD project deals with the systematic revision of <em>Tityus</em> (<em>Archaeotityus</em>) using phenotypic and genetic evidence. He visited the AMNH for six months to examine material and score morphological characters for his thesis disseration.
                 </p>
               </div>
             </div>
