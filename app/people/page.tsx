@@ -307,7 +307,7 @@ export default function People() {
         {activeSection === 'principal-investigator' && (
         <div>
           <h2 className="text-3xl font-bold mb-2 text-gray-900">Principal Investigator</h2>
-          <p className="text-xl text-gray-600 mb-8">Curator of The Arachnology Lab at AMNH</p>
+          <p className="text-xl text-gray-600 mb-8">Head of the Arachnology Lab at AMNH</p>
           
           <div className="mb-12 pb-12 border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
@@ -323,8 +323,11 @@ export default function People() {
               
               <div className="md:col-span-3">
                 <h3 className="text-xl font-bold mb-1 text-gray-900">Lorenzo Prendini</h3>
-                <p className="text-lg text-gray-600 mb-4">
-                  Head of the Arachnology Lab at AMNH, Curator of Arachnids and Myriapods in the Division of Invertebrate Zoology
+                <p className="text-lg text-gray-600 mb-1"> Curator of Arachnida and Myriapoda, Division of Invertebrate Zoology</p>
+                <p className="text-lg text-gray-600 mb-1"> Professor of Comparative Biology, Richard Gilder Graduate School</p>
+                <p className="text-lg text-gray-600 mb-1"> Principle Investigator, Institute of Comparative Genomics</p>
+                <p className="text-lg text-gray-600 mb-1"> Chair, AMNH Scientific Publications</p>
+                <p className="text-lg text-gray-600 mb-4"> Adjunct Professor, Ecology, Evolution and Behavior, City University of New York
                 </p>
                 
                 <div className="space-y-3 mb-8">
