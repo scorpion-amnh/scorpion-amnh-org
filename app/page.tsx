@@ -89,8 +89,8 @@ export default function Home() {
             
             <div className="grid gap-6 mb-6">
               <div>
-                <h6 className="text-lg font-semibold mb-3 text-gray-900">Chelicerata</h6>
-                <h6 className="text-lg font-semibold mb-1 text-gray-900">Arachnida</h6>
+                <h5 className="text-lg font-semibold mb-3 text-gray-900">Chelicerata</h5>
+                <h6 className="font-semibold mb-1 text-gray-900">Arachnida</h6>
                 <ul className="list-disc list-inside text-gray-700 mb-3 space-y-1">
                   <li>Acari (mites and ticks)</li>
                   <li>Amblypygi (whip spiders)</li>
@@ -104,13 +104,13 @@ export default function Home() {
                   <li>Solifugae (camel-spiders, solifuges or solpugids)</li>
                   <li>Thelyphonida (vinegaroons or whip scorpions)</li>
                 </ul>
-                <h6 className="text-lg font-semibold text-gray-900">Xiphosura</h6>
+                <h6 className="font-semibold text-gray-900">Xiphosura</h6>
                 <p className="mb-3">Horseshoe crabs</p>
-                <h6 className="text-lg font-semibold text-gray-900">Pycnogonida</h6>
+                <h6 className="font-semibold text-gray-900">Pycnogonida</h6>
                 <p>Sea spiders</p>
               </div>
               <div>
-                <h6 className="text-lg font-semibold text-gray-900 mb-3">Myriapods</h6>
+                <h5 className="text-lg font-semibold text-gray-900 mb-1">Myriapoda</h5>
                 <ul className="list-disc list-inside text-gray-700 space-y-1">
                   <li>Chilopoda (centipedes)</li>
                   <li>Diplopoda (millipedes)</li>
@@ -118,15 +118,64 @@ export default function Home() {
                   <li>Symphyla (garden centipedes or symphylans)</li>
                 </ul>
               </div>
+              <div>
+                <h4 className="text-2xl font-semibold text-gray-900 mb-1">Visits and Requests</h4>
+                <p>Queries regarding visits to the collections, loan requests, and/or specimen donations should be addressed to <Link href="/people#principal-investigator" className="text-blue-600 hover:text-blue-800 underline">Lorenzo Prendini</Link>, Curator of Arachnida and Myriapoda, and <Link href="/people#museum-specialists" className="text-blue-600 hover:text-blue-800 underline">Pío Colmenares</Link>, Museum Specialist responsible for management of the collections, processing loan requests, and assisting visitors.</p>
+              </div>
             </div>
             
             <p className="text-gray-700">
-              See our <Link href="/collections" className="text-blue-600 hover:text-blue-800 underline">Collections Page</Link> for more information.
+              See <Link href="/collections" className="text-blue-600 hover:text-blue-800 underline">Collections</Link> for more information.
             </p>
           </div>
 
           {/* Image Gallery */}
           <div className="lg:col-span-2">
+            <div className="grid grid-cols-3 gap-4 mb-4">
+              <figure>
+                <div className="overflow-hidden rounded-sm bg-gray-100">
+                  <Image
+                    src="/images/Willis-Gertsch.jpg"
+                    alt="Willis J. Gertsch"
+                    width={600}
+                    height={450}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <figcaption className="text-sm text-gray-600 mt-3 italic">
+                  Willis Gertsch
+                </figcaption>
+              </figure>
+              <figure>
+                <div className="overflow-hidden rounded-sm bg-gray-100">
+                  <Image
+                    src="/images/John-Cooke.jpg"
+                    alt="John L. Cooke"
+                    width={600}
+                    height={450}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <figcaption className="text-sm text-gray-600 mt-3 italic">
+                  John L. Cooke
+                </figcaption>
+              </figure>
+              <figure>
+                <div className="overflow-hidden rounded-sm bg-gray-100">
+                  <Image
+                    src="/images/Norman-Platnick.jpg"
+                    alt="Norman I. Platnick"
+                    width={600}
+                    height={450}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <figcaption className="text-sm text-gray-600 mt-3 italic">
+                  Norman I. Platnick
+                </figcaption>
+              </figure>
+            </div>
+            <div className="h-px w-full bg-gray-200 mb-5" />
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 grid-flow-dense auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[110px]">
               {randomImages.map((image, index) => {
                 const isFeatured = index === 0 || (index + 1) % 14 === 0;

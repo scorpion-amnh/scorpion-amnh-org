@@ -31,6 +31,19 @@ export default function People() {
     }
   }, [activeSection]);
 
+  useEffect(() => {
+    const applyHash = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        setActiveSection(hash);
+      }
+    };
+
+    applyHash();
+    window.addEventListener('hashchange', applyHash);
+    return () => window.removeEventListener('hashchange', applyHash);
+  }, []);
+
   return (
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">
@@ -307,7 +320,7 @@ export default function People() {
         )}
 
         {activeSection === 'principal-investigator' && (
-        <div>
+        <div id="principal-investigator">
           <h2 className="text-3xl font-bold mb-2 text-gray-900">Principal Investigator</h2>
           <p className="text-xl text-gray-600 mb-8">Head of the Arachnology Lab at AMNH</p>
           
@@ -395,7 +408,7 @@ export default function People() {
         )}
 
         {activeSection === 'museum-specialists' && (
-        <div>
+        <div id="museum-specialists">
           <h2 className="text-3xl font-bold mb-8 text-gray-900">Museum Specialists</h2>
 
           {/* Pio Colmenares */}
