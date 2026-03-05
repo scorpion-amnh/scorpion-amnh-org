@@ -76,9 +76,10 @@ export default function Home() {
           <h2 className="text-3xl font-semibold mb-4 text-gray-700">Scorpion Systematics Research Group</h2>
           <h3 className="text-xl text-gray-600 mb-8">Division of Invertebrate Zoology at the American Museum of Natural History</h3>
           
-          <p className="text-lg leading-8 text-gray-700 mb-8">
+          {/* <p className="text-lg leading-8 text-gray-700 mb-8">
             The Arachnology Lab at the AMNH focuses on the taxonomy, phylogeny and biogeography of scorpions and related arachnid orders. There are many compelling reasons to study these organisms. Arachnids are ancient, ecologically, morphologically and taxonomically diverse, distributed in most terrestrial habitats and elevations on all continents except Antarctica, and some are economically or medically important. Arachnids inspire fear and fascination. Many species are threatened yet little is known about their biology, new species remain to be discovered, and there are few experts globally. The world arachnid fauna will remain poorly known until more specialists are trained and prospects for their employment improve.
-          </p>
+          </p> */}
+          <p className="text-lg leading-8 text-gray-700 mb-8">Arachnology at the AMNH spans nearly a century. It began with Willis J. Gertsch, the first Curator of Arachnida, who served for 36 years, from his appointment in 1933 until his retirement in 1968. Gertsch was briefly succeeded by John L. Cooke, from 1969 to 1972, who was in turn succeeded by Norman I. Platnick, Curator of Arachnida from 1973 until his retirement, 41 years later, in 2014. From 2002 onwards, when Lorenzo Prendini was appointed Curator of non-spider arachnids and myriapods, Platnick curated the collections of Araneae (spiders) and Ricinulei (hooded tick-spiders). Prendini assumed responsibility for all Arachnida and Myriapoda after Platnick’s retirement.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -88,23 +89,28 @@ export default function Home() {
             
             <div className="grid gap-6 mb-6">
               <div>
-                <h6 className="text-lg font-semibold mb-3 text-gray-900">Arachnids</h6>
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                <h6 className="text-lg font-semibold mb-3 text-gray-900">Chelicerata</h6>
+                <h6 className="text-lg font-semibold mb-1 text-gray-900">Arachnida</h6>
+                <ul className="list-disc list-inside text-gray-700 mb-3 space-y-1">
                   <li>Acari (mites and ticks)</li>
                   <li>Amblypygi (whip spiders)</li>
                   <li>Araneae (spiders)</li>
-                  <li>Opiliones (harvestmen)</li>
+                  <li>Opiliones (harvestmen or opilionids)</li>
                   <li>Palpigradi (palpigrades)</li>
                   <li>Pseudoscorpiones (false scorpions)</li>
                   <li>Ricinulei (hooded tick-spiders or ricinuleids)</li>
                   <li>Schizomida (schizomids)</li>
                   <li>Scorpiones (scorpions)</li>
-                  <li>Solifugae (solifuges, solpugids or camel-spiders)</li>
-                  <li>Uropygi (vinegaroons or whip scorpions)</li>
+                  <li>Solifugae (camel-spiders, solifuges or solpugids)</li>
+                  <li>Thelyphonida (vinegaroons or whip scorpions)</li>
                 </ul>
+                <h6 className="text-lg font-semibold text-gray-900">Xiphosura</h6>
+                <p className="mb-3">Horseshoe crabs</p>
+                <h6 className="text-lg font-semibold text-gray-900">Pycnogonida</h6>
+                <p>Sea spiders</p>
               </div>
               <div>
-                <h6 className="text-lg font-semibold mb-3 text-gray-900">Myriapods</h6>
+                <h6 className="text-lg font-semibold text-gray-900 mb-3">Myriapods</h6>
                 <ul className="list-disc list-inside text-gray-700 space-y-1">
                   <li>Chilopoda (centipedes)</li>
                   <li>Diplopoda (millipedes)</li>
