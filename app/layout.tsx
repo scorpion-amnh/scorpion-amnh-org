@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Image from "next/image";
 import { Header } from "./header";
+import { Footer } from "./components/Footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,19 +33,7 @@ export default function RootLayout({
         <div className="pt-24 xl:pt-28">
           {children}
         </div>
-        <footer className="bg-gray-900 text-white p-8">
-          <div className="mx-auto max-w-7xl flex items-center justify-between">
-            <p className="text-sm">&copy; Copyright Lorenzo Prendini 2026. All Rights Reserved.</p>
-            <a href="https://www.amnh.org" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/images/amnh-logo-white.svg"
-                alt="Logo: American Museum of Natural History"
-                width={150}
-                height={50}
-              />
-            </a>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
