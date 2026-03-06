@@ -1371,6 +1371,23 @@ export default function People() {
 
           {graduateStudentsTab === 'alumni' && (
           <>
+
+          {/* Nayeli Gutiérrez Trejo */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="Nayeli Gutiérrez Trejo" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Nayeli Gutiérrez Trejo</h3>
+                <p className="text-base text-gray-600 mb-1">Comparative Biology Ph.D. Program, Richard Gilder Graduate School, AMNH</p>
+                <p className="text-sm text-gray-500 mb-3">Graduate student from 2018 to 2023</p>
+                <p className="text-gray-700">
+                  Nayeli completed her B.S. and M.S. in Mexico at the Universidad Autonoma del Estado de Hidalgo and Universidad Nacional Autonoma de Mexico, respectively, where she studied the systematics of Cerambycidae beetles. During her PhD at the RGGS, with Dr. Prendini as co advisor, she investigated the evolutionary history of the beetle genus <em>Tetraopes</em>, which comprises a diverse and highly specialized group of species that interact with the toxic defenses of milkweed plants in the genus <em>Asclepias</em>.
+                </p>
+              </div>
+            </div>
+          </div>
           
           {/* Jayson Slovak */}
           <div className="mb-8 pb-8 border-b border-gray-200">
@@ -1387,9 +1404,9 @@ export default function People() {
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Jayson Slovak</h3>
                 <p className="text-base text-gray-600 mb-1">City University of New York</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student in 2016</p>
+                <p className="text-sm text-gray-500 mb-3">Graduate student from 2016 to 2020</p>
                 <p className="text-gray-700">
-                  Jayson Slovak graduated with a BA in Biology from Queens College, CUNY. During his undergraduate studies he worked under Dr. Stephane Boissinot to see how population size affected abundance of Transposable Elements in the Threespine Stickleback. During his leap year he accompanied an expedition with Dr. Boissinot to Ethiopia to frog collect samples for his lab. He is currently a master student from City College working under Dr. Lorenzo Prendini since June 2016. His work will involve studying how the Great Rift Valley of Ethiopia affects Scorpion distribution and speciation in the region.
+                  Jayson Slovak graduated with a BA in Biology from Queens College, CUNY. During his undergraduate studies he worked under Dr. Stephane Boissinot to see how population size affected abundance of Transposable Elements in the Threespine Stickleback. During his leap year he accompanied an expedition with Dr. Boissinot to Ethiopia to frog collect samples for his lab. He worked as a Masters student in City College from 2016 to 2020, studying how the Great Rift Valley affects scorpion distribution and speciation in the region.
                 </p>
               </div>
             </div>
