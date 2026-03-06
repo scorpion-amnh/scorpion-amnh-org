@@ -980,7 +980,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
-                  src="/images/Jose.jpg"
+                  src="/images/jose_barba_arachnology_lab.jpg"
                   alt="Jose Barba-Montoya"
                   width={400}
                   height={533}
