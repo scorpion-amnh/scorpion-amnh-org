@@ -839,7 +839,6 @@ export default function People() {
             <Tabs
               options={[
                 { value: 'current', label: 'Current' },
-                { value: 'alumni', label: 'Alumni' },
               ]}
               value={researchAffiliatesTab}
               onChange={setResearchAffiliatesTab}
