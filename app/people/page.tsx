@@ -426,8 +426,9 @@ export default function People() {
 
           {museumTab === 'current' && (
           <>
+          <p className="text-gray-900 mb-8">Current museum specialist of the Arachnology Lab at AMNH</p>
           {/* Pio Colmenares */}
-          <div className="mb-12 pb-12 border-b border-gray-200">
+          <div className="mb-8 pb-8">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
@@ -470,8 +471,7 @@ export default function People() {
 
           {museumTab === 'alumni' && (
           <>
-          <h3 className="text-2xl font-bold mt-12 mb-2 text-gray-900">Alumni</h3>
-          <p className="text-xl text-gray-600 mb-8">Former museum specialists of the Arachnology Lab at AMNH</p>
+          <p className="text-gray-900 mb-8">Former museum specialists of the Arachnology Lab at AMNH</p>
 
           {/* Michelle Locke */}
           <div className="mb-8 pb-8 border-b border-gray-200">
