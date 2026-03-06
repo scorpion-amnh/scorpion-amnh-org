@@ -7,29 +7,608 @@ export default function Publications() {
         <h1 className="text-5xl font-bold mb-12 text-gray-900">Scientific Publications</h1>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">2024</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2026</h2>
           <div className="space-y-4">
             <p>
-              Blasco-Arostegui &amp; <b>Prendini, L.</b> 2024.{' '}
+              Blasco-Aróstegui, J., Blick, T., and <b>Prendini, L.</b> 2026. Scorpions described by Carl Ludwig Koch in Die
+              Arachniden (1836–1847): Correct publication dates, volume citations, and updated taxonomy. <b>Arachnology</b> 20(4): 527-532.
+            </p>
+            <p>
+              Botero-Trujillo, R. and <b>Prendini, L.</b> 2026. Phylogeny and revised generic classification of African Ricinulei
+              (Ricinoididae), descriptions of four new genera, three new species, and comparative morphology of the male
+              copulatory apparatus. <b>Bulletin of the American Museum of Natural History</b> 480: 1-92.
+            </p>
+            <p>
+              Cazzaniga, N., and <b>Prendini, L.</b> 2026. <i>Phrynus abstrusus</i>, a new troglophilous whip spider (Amblypygi:
+              Phrynidae) from southern Texas. <b>American Museum Novitates</b> 4050: 1-14.
+            </p>
+            <p>
+              Hussen, F.S., Kadir, H.S., Ahmed, A.I., and <b>Prendini, L.</b> 2026. A new species of the medically important
+              scorpion genus <i>Hemiscorpius</i> Peters, 1861 (Hemiscorpiidae Pocock, 1893) from Kurdistan, Iraq. <b>Diversity</b>
+              18(1): 121 (16 pp.).{' '}
               <a
-                href="/documents/Blasco-Arostegui%20%26%20Prendini%202024.pdf"
+                href="https://doi.org/10.3390/d18020121"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
               >
-                PDF
+                https://doi.org/10.3390/d18020121
               </a>
             </p>
             <p>
-              Cazzaniga &amp; <b>Prendini, L.</b> 2024.{' '}
+              Mirshamsi, O., Amiri, M., Aliabadian, M., and <b>Prendini, L.</b> 2026. Phylogeny and historical biogeography of
+              the scorpion genus <i>Hottentotta</i> Birula, 1908 (Buthidae) in the Iranian Plateau and the Zagros Mountains.
+              <b>Insects</b> 17(3): 239 (20 pp.).{' '}
               <a
-                href="/documents/Cazzaniga%20%26%20Prendini%202024.pdf"
+                href="https://doi.org/10.3390/insects17030239"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
               >
-                PDF
+                https://doi.org/10.3390/insects17030239
               </a>
+            </p>
+            <p>
+              <b>Prendini, L.</b>, Xuan, Q., Du, S., Wang, C., Ehrenthal, V.L., and Loria, S.F. 2026. Phylogeny and divergence
+              time estimation of relictual Asian scorpion family suggests Early Cretaceous connections between Burma Terrane
+              and Eurasia, and corrects placement of Chinese taxon. <b>American Museum Novitates</b> 4051: 1-55.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2025</h2>
+          <div className="space-y-4">
+            <p>
+              Amiri Ghanat Saman, E., Barahoei, H., Dehghan, H., Oshaghi, M.A., Rafinejad, J., Azarm, A., and <b>Prendini, L.</b>
+              2025. A new species of the medically important scorpion genus, <i>Hemiscorpius</i> Peters, 1861 (Hemiscorpiidae),
+              from southern Iran. <b>Diversity</b> 17(5): 321; 1-13.{' '}
+              <a
+                href="https://doi.org/10.3390/d17050321"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.3390/d17050321
+              </a>
+            </p>
+            <p>
+              Blasco-Aróstegui, J., Moreno-González, J.A., Loria, S.F., Carvalho, L.S., Bird, T.L., Ahn, D.N., Barahoei, H.,
+              Haddad, C.R., and <b>Prendini, L.</b> 2025. Include scorpions in global conservation plans. <b>Science</b>
+              389(6765): 1099-1100.{' '}
+              <a
+                href="https://doi.org/10.1126/science.adz4176"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.1126/science.adz4176
+              </a>
+            </p>
+            <p>
+              Blasco-Aróstegui, J., Simone, Y., and <b>Prendini, L.</b> 2025. Systematic revision of the European species of
+              <i>Buthus</i> Leach, 1815 (Scorpiones: Buthidae). <b>Bulletin of the American Museum of Natural History</b> 476:
+              1-131.
+            </p>
+            <p>
+              Blasco-Aróstegui, J., Simone, Y., Paulo, O.S., and <b>Prendini, L.</b> 2025. Mito-nuclear discordance reveals
+              introgressive hybridization following vicariance and secondary contact in Iberian scorpions (Buthidae: <i>Buthus</i>).
+              <b>BMC Ecology and Evolution</b> 25(112): 1-22.{' '}
+              <a
+                href="https://doi.org/10.1186/s12862-025-02445-0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.1186/s12862-025-02445-0
+              </a>
+            </p>
+            <p>
+              Botero-Trujillo, R., and <b>Prendini, L.</b> 2025. <i>Cryptocellus armasi</i>, a new troglomorphic, cave-dwelling
+              hooded tick-spider from Venezuela (Arachnida, Ricinulei). <b>Zootaxa</b> 5563(1): 96-108.{' '}
+              <a
+                href="https://doi.org/10.11646/zootaxa.5563.1.10"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.11646/zootaxa.5563.1.10
+              </a>
+            </p>
+            <p>
+              Castro-Pereira, D., Pinto-da-Rocha, R., and <b>Prendini, L.</b> 2025. <i>Mastigoproctus spinifemoratus</i>, a new
+              species of giant vinegaroon (Thelyphonida: Thelyphonidae) from Mexico. <b>Arthropoda</b> 3(1): 1-10.{' '}
+              <a
+                href="https://doi.org/10.3390/arthropoda3010002"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.3390/arthropoda3010002
+              </a>
+            </p>
+            <p>
+              Colmenares, P.A., Moreno-González, J.A., Villarreal, O., and <b>Prendini, L.</b> 2025. New genus and species of
+              short-tailed whipscorpion (Schizomida: Hubbardiidae) from the Venezuelan Amazon. <b>Zootaxa</b> 5563(1): 84-95.{' '}
+              <a
+                href="https://doi.org/10.11646/zootaxa.5563.1.9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.11646/zootaxa.5563.1.9
+              </a>
+            </p>
+            <p>
+              Dehghan, H., Amiri Ghanat Saman, E., Madjdzadeh, S.M., Amiri, M., Moeinadini, A., <b>Prendini, L.</b>, and
+              Barahoei, H. 2026. Molecules, morphometrics and modeling of the medically important genus <i>Hemiscorpius</i>
+              Peters, 1861 (Scorpiones: Hemiscorpiidae) in Iran reveal new species from Kerman. <b>Insects</b> 17(1): 18; 1-28.
+              <a
+                href="https://doi.org/10.3390/insects17010018"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.3390/insects17010018
+              </a>
+            </p>
+            <p>
+              Král, J., Sember, A., Divišová, K., Kořínková, T., Reyes Lerma, A.C., Ávila Herrera, I.M., Forman, M.,
+              Šťáhlavský, F., Musilová, J., Torres Kalme, S., Palacios Vargas, J.G., Zrzavá, M., Vrbová, I., Moreno-González,
+              J.A., Cushing, P.E., Gromov, A.V., Šebestiánová, S., Šlechtová, V.B., <b>Prendini, L.*</b>, and Bird, T.L.* 2025.
+              Advances in understanding the karyotype evolution of Tetrapulmonata and two other arachnid taxa, Ricinulei and
+              Solifugae. <b>Genes</b> 16(207): 1-67.{' '}
+              <a
+                href="https://doi.org/10.3390/genes16020207"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.3390/genes16020207
+              </a>{' '}
+              *contributed equally
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2025. All genera of the world: Order Amblypygi (Animalia: Arthropoda: Arachnida). <b>MegaTaxa</b>
+              18(2): 392-401.{' '}
+              <a
+                href="https://doi.org/10.11646/megataxa.18.2.2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.11646/megataxa.18.2.2
+              </a>
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2025. All genera of the world: Order Palpigradi (Animalia: Arthropoda: Arachnida). <b>MegaTaxa</b>
+              18(2): 402-406.{' '}
+              <a
+                href="https://doi.org/10.11646/megataxa.18.2.3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.11646/megataxa.18.2.3
+              </a>
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2025. All genera of the world: Order Ricinulei (Animalia: Arthropoda: Arachnida). <b>MegaTaxa</b>
+              18(2): 407-412.{' '}
+              <a
+                href="https://doi.org/10.11646/megataxa.18.2.4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.11646/megataxa.18.2.4
+              </a>
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2025. All genera of the world: Order Schizomida (Animalia: Arthropoda: Arachnida). <b>MegaTaxa</b>
+              18(2): 413-423.{' '}
+              <a
+                href="https://doi.org/10.11646/megataxa.18.2.5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.11646/megataxa.18.2.5
+              </a>
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2025. All genera of the world: Order Solifugae (Animalia: Arthropoda: Arachnida). <b>MegaTaxa</b>
+              18(2): 424-446.{' '}
+              <a
+                href="https://doi.org/10.11646/megataxa.18.2.6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.11646/megataxa.18.2.6
+              </a>
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2025. All genera of the world: Order Thelyphonida (Animalia: Arthropoda: Arachnida). <b>MegaTaxa</b>
+              18(2): 447-455.{' '}
+              <a
+                href="https://doi.org/10.11646/megataxa.18.2.7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.11646/megataxa.18.2.7
+              </a>
+            </p>
+            <p>
+              Xuan, Q., <b>Prendini, L.</b>, Engel, M.S., Cai, C., and Huang, D. 2025. Extinct scorpion family Chaerilobuthidae
+              from mid-Cretaceous Kachin amber reinterpreted as subfamily of extant family Pseudochactidae (Chelicerata:
+              Scorpiones). <b>Zoological Journal of the Linnean Society</b> 203: 1-60.{' '}
+              <a
+                href="https://doi.org/10.1093/zoolinnean/zlae169"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.1093/zoolinnean/zlae169
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2024</h2>
+          <div className="space-y-4">
+            <p>
+              Amiri, M., <b>Prendini, L.</b>, Hussen, F.S., Aliabadian, M., Siahsarvie, R., and Mirshamsi, O. 2024. Integrative
+              systematics of the widespread Middle Eastern buthid scorpion, <i>Hottentotta saulcyi</i> (Simon, 1880), reveals a
+              new species in Iran. <b>Arthropod Systematics &amp; Phylogeny</b> 82: 323-341.{' '}
+              <a
+                href="https://doi.org/10.3897/asp.82.e98662"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.3897/asp.82.e98662
+              </a>
+            </p>
+            <p>
+              Blasco-Aróstegui, J., and <b>Prendini, L.</b> 2024. Redescription of <i>Euscorpius studentium</i> based on adult
+              specimens; updated classification of cavernicolous Euscorpiidae; and review of cavernicolous scorpions in the
+              Balkans. <b>Diversity</b> 16(12): 737; 1-26.{' '}
+              <a
+                href="https://doi.org/10.3390/d16120737"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.3390/d16120737
+              </a>
+            </p>
+            <p>
+              Botero-Trujillo, R., Moreno-Gonzalez, J.A., and <b>Prendini, L.</b> 2024. The Neotropical hypoctonine whip-scorpions
+              (Thelyphonida: Thelyphonidae): Phylogenetic analysis, with descriptions of two new genera and species. <b>Insects</b>
+              15(10): 761; 1-39.{' '}
+              <a
+                href="https://doi.org/10.3390/insects15100761"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.3390/insects15100761
+              </a>
+            </p>
+            <p>
+              Cazzaniga, N., and <b>Prendini, L.</b> 2024. Integrative systematics reveals cryptic diversity in <i>Paraphrynus</i>
+              whip spiders (Amblypygi: Phrynidae) from southwestern North America. <b>Diversity</b> 16(11): 669; 1-16.{' '}
+              <a
+                href="https://doi.org/10.3390/d16110669"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.3390/d16110669
+              </a>
+            </p>
+            <p>
+              Gutiérrez-Trejo, N., Van Dam, M.H., Lam, A.W., Martínez-Herrera, G., Noguera, F.A., Weissling, T., Ware, J.L.,
+              Toledo-Hernández, V.H., Skillman, Jr., F.W., Farrell, B.D., Pérez-Flores, O., <b>Prendini, L.</b>, and Carpenter,
+              J.M. 2024. Phylogenomics of <i>Tetraopes</i> longhorn beetles unravels their evolutionary history and biogeographic
+              origins. <b>Scientific Reports</b> 14: 7285.{' '}
+              <a
+                href="https://doi.org/10.1038/s41598-024-57827-z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.1038/s41598-024-57827-z
+              </a>
+            </p>
+            <p>
+              Moreno-González, J.A., Luna-Sarmiento, D.A., and <b>Prendini, L.</b> 2024. Phylogeny of the troglomorphic scorpion
+              genus <i>Troglotayosicus</i> (Scorpiones: Troglotayosicidae) with description of a new species from Colombia.
+              <b>American Museum Novitates</b> 4011: 1-39.
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2024. Gerald Newlands (1941–2022). <b>Arachnology</b> 19(7): 1043-1050.
+            </p>
+            <p>
+              <b>Prendini, L.</b> and Bird, T. 2024. 2024 Arachnological Expedition to the Central Namib Inselbergs. <b>The Barking
+              Gecko</b> (Newsletter, NamibRand Nature Reserve, Namibia), April 2024 25(1): 18-19.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2023</h2>
+          <div className="space-y-4">
+            <p>
+              Blasco-Aróstegui, J., and <b>Prendini, L.</b> 2023. Glacial relicts? A new scorpion from Mount Olympus
+              (Euscorpiidae: <i>Euscorpius</i>). <b>American Museum Novitates</b> 4003: 1-36.
+            </p>
+            <p>
+              Dunlop, J.A., Wellmann, C.H., <b>Prendini, L.</b>, and Shear, W.A. 2023. A pectinal tooth with peg sensilla from an
+              Early Devonian scorpion. <b>Journal of Arachnology</b> 51: 255-257.
+            </p>
+            <p>
+              Haddad, C.R., <b>Prendini, L.</b>, Neethling, J.-A., and Dippenaar-Schoeman, A.S. 2023. The non-acarine Arachnida of
+              the Amathole Mountains, South Africa. <b>Bothalia – African Biodiversity &amp; Conservation</b> 53(1): a13.{' '}
+              <a
+                href="http://dx.doi.org/10.38201/btha.abc.v53.i1.13"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                http://dx.doi.org/10.38201/btha.abc.v53.i1.13
+              </a>
+            </p>
+            <p>
+              Monod, L., Lehmann-Graber, C., Austin, C.C., Iova, B., and <b>Prendini, L.</b> 2023. Atlas of Australasian hormurid
+              scorpions. I. The genus <i>Hormurus</i> in Papua New Guinea. Exceptional morphological diversity in male and female
+              copulatory structures suggests genital coevolution. <b>Revue suisse de Zoologie</b> 130(suppl.): 1-243.
+            </p>
+            <p>
+              Moreno-González, J.A., Gutierrez-Estrada, M., and <b>Prendini, L.</b> 2023. Systematic revision of the whip spider
+              family Paracharontidae (Arachnida: Amblypygi) with description of a new troglobitic genus and species from
+              Colombia. <b>American Museum Novitates</b> 4000: 1-36.
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2023. Scorpion diversity. <b>The Barking Gecko</b> (Newsletter, NamibRand Nature Reserve, Namibia),
+              May 2023 29(1): 11.
+            </p>
+            <p>
+              <b>Prendini, L.</b> and Bird, T.L. 2023. Endemism of Arachnida (Amblypygi, Scorpiones and Solifugae) in the
+              highlands and escarpments of Angola and Namibia: Current knowledge and future directions. In: Mendelsohn, J.,
+              Huntley, B.J., and Vaz Pinto, P. (Eds.) Monograph on Endemism in the Highlands and Escarpments of Angola and
+              Namibia. <b>Namibian Journal of Environment</b> 8: 231-244;{' '}
+              <a
+                href="https://nje.org.na/index.php/nje/article/view/volume8-prendini"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://nje.org.na/index.php/nje/article/view/volume8-prendini
+              </a>
+              ; ISSN: 2026-8327
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2022</h2>
+          <div className="space-y-4">
+            <p>
+              Botero-Trujillo, R., Davis, S.R., Michalik, P., and <b>Prendini, L.</b> 2022. <i>Hirsutisoma grimaldii</i> sp. nov.,
+              a ca. 99-million-year-old ricinuleid (Primoricinulei, Hirsutisomidae) from Cretaceous Burmese amber with a
+              corticolous, scansorial lifestyle. <b>Palaeoentomology</b> 5(5): 493-504.{' '}
+              <a
+                href="https://doi.org/10.11646/palaeoentomology.5.5.11"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.11646/palaeoentomology.5.5.11
+              </a>
+            </p>
+            <p>
+              Loria, S.F., Ehrenthal, V.L., Nguyen, D.A. and <b>Prendini, L.</b> 2022. Climate relicts: Asian scorpion family
+              Pseudochactidae survived Miocene aridification in caves of the Annamite Mountains. <b>Insect Systematics and
+              Diversity</b> 6(6): 3; 1-21.{' '}
+              <a
+                href="https://doi.org/10.1093/isd/ixac028"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.1093/isd/ixac028
+              </a>
+            </p>
+            <p>
+              Monjaraz-Ruedas, R., Francke, O.F., and <b>Prendini, L.</b> 2022. World travelers: Parthenogenesis and ecological
+              tolerance enable multiple colonization events by the widespread short-tailed whipscorpion, <i>Stenochrus portoricensis</i>
+              (Schizomida: Hubbardiidae). <b>Insect Systematics and Diversity</b> 6(1): 7; 1-17.{' '}
+              <a
+                href="https://doi.org/10.1093/isd/ixab032"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.1093/isd/ixab032
+              </a>
+            </p>
+            <p>
+              Seiter, M., Schwaha, T., <b>Prendini, L.</b>, Gorb, S.N., and Wolff, J.O. 2022. Cerotegument microstructure of whip
+              spiders (Amblypygi: Euamblypygi Weygoldt, 1996) reveals characters for systematics from family to species level.
+              <b>Journal of Morphology</b> 283(4): 1-18.{' '}
+              <a
+                href="https://doi.org/10.1002/jmor.21452"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.1002/jmor.21452
+              </a>
+            </p>
+            <p>
+              Seiter, M., Strobl, L., Schwaha, T., <b>Prendini, L.</b>, and Schramm, F.D. 2022. Morphometry of the pedipalp patella
+              provides new characters for species-level taxonomy in whip spiders (Arachnida, Amblypygi): A test case with the
+              description of a new species of <i>Phrynus</i>. <b>Zoologischer Anzeiger</b> 298: 10-28.{' '}
+              <a
+                href="https://doi.org/10.1016/j.jcz.2022.02.004"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.1016/j.jcz.2022.02.004
+              </a>
+            </p>
+            <p>
+              Vrech, D., Peretti, A.V., <b>Prendini, L.</b>, and Mattoni, C.I. 2022. Bundles of sperm: Structural diversity in sperm
+              packages of scorpions illuminates evolution of insemination in an ancient lineage. <b>American Museum Novitates</b>
+              2993: 1-50.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">2021</h2>
+          <div className="space-y-4">
+            <p>
+              Barahoei, H., <b>Prendini, L.</b>, Navidpour, S., Tahir, H.M., Aliabadian, M., Siahsarvie, R., and Mirshamsi, O.
+              2021. Integrative systematics of the tooth-tailed scorpions, <i>Odontobuthus</i> Vachon, 1950 (Buthidae), with
+              descriptions of three new species from the Iranian Plateau. <b>Zoological Journal of the Linnean Society</b>
+              195(2): 355-398.
+            </p>
+            <p>
+              Botero-Trujillo, R., Carvalho, L.S., Florez D., E. and <b>Prendini, L.</b> 2021. Four new species of “hooded
+              tick-spiders” (Ricinulei, Ricinoididae) from South and Central America, with clarification of the identity of
+              <i>Cryptocellus leleupi</i> Cooreman, 1976. <b>American Museum Novitates</b> 3976: 1-35.
+            </p>
+            <p>
+              Botero-Trujillo, R., Ochoa, J.A., and <b>Prendini, L.</b> 2021. A new troglomorphic, leaf-litter scorpion from Ecuador
+              (Troglotayosicidae: <i>Troglotayosicus</i>). <b>American Museum Novitates</b> 3981: 1-24.
+            </p>
+            <p>
+              Botero-Trujillo, R., Sain, C., and <b>Prendini, L.</b> 2021. The “giant” Ricinulei (Ricinoididae: <i>Ricinoides</i>) of
+              West Africa, with descriptions of five new species and comparative morphology of the male copulatory apparatus.
+              <b>Bulletin of the American Museum of Natural History</b> 448: 1-68.
+            </p>
+            <p>
+              Cain, S., Gefen, E., and <b>Prendini, L.</b> 2021. Systematic revision of the sand scorpions, genus <i>Buthacus</i>
+              Birula, 1908 (Buthidae C.L. Koch, 1837) of the Levant, with redescription of <i>Buthacus arenicola</i> (Simon, 1885)
+              from Algeria and Tunisia. <b>Bulletin of the American Museum of Natural History</b> 450: 1-134.
+            </p>
+            <p>
+              Cain, S., Loria, S.F., Ben-Shlomo, R., <b>Prendini, L.</b>, and Gefen, E. 2021. Dated phylogeny and ancestral range
+              estimation of sand scorpions (Buthidae: <i>Buthacus</i>) reveal Early Miocene divergence across land bridges
+              connecting Africa and Asia. <b>Molecular Phylogenetics and Evolution</b> 164 (107212).{' '}
+              <a
+                href="https://doi.org/10.1016/j.ympev.2021.107212"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.1016/j.ympev.2021.107212
+              </a>
+            </p>
+            <p>
+              Engel, M.S., Ceríaco, L.M.P., Daniel, G.M., Dellapé, P.M., Löbl, I., Marinov, M., Reis, R.E., Young, M.T., Dubois,
+              A., Agarwal, I., Albornoz, P.L., Alvarado, M., Alvarez, N., Andreone, F., Araujo-Vieira, K., Ascher, J.S., Baêta,
+              D., Baldo, D., Bandeira, S.A., Barden, P., Barrasso, D.A., Bendifallah, L., Bockmann, F.A., Böhme, W., Borkent, A.,
+              Brandão, C.R.F., Busack, S.D., Bybee, S.M., Channing, A., Chatzimanolis, S., Christenhusz, M.J.M., Crisci, J.V.,
+              D’Elía, G., Da Costa, L.M., Davis, S.R., De Lucena, C.A.S., Deuve, T., Elizalde, S.F., Faivovich, J., Farooq, H.,
+              Ferguson, A.W., Gippoliti, S., Gonçalves, F.M.P., Gonzalez, V.H., Greenbaum, E., Hinojosa-Díaz, I.A., Ineich, I.,
+              Jiang, J., Kahono, S., Kury, A.B., Lohrmann, V., Lucinda, P.H.F., Lynch, J.D., Malécot, V., Marques, M.P., Marris,
+              J.W.M., McKellar, R.C., Mendes, L.F., Nihei, S.S., Nishikawa, K., Ohler, A., Orrico, V.G.D., Ota, H., Paiva, J.,
+              Parrinha, D., Pauwels, O.S.G., Pereyra, M.O., Pestana, L.B., Pinheiro, P.D.P., <b>Prendini, L.</b>, Prokop, J.,
+              Rasmussen, C., Rödel, M.-O., Rodrigues, M.T., Rodríguez, S.M., Salatnaya, H., Sampaio, Í., Sánchez-García, A.,
+              Shebl, M.A., Santos, B.S., Solórzano-Kraemer, M.M., Sousa, A.C.A., Stoev, P., Teta, P., Trape, J.-F., Van-Dúnem Dos
+              Santos, C., Vasudevan, K., Vink, C.J., Vogel, G., Wagner, P., Wappler, T., Ware, J.L., Wedmann, S., Zacharie, C.K.,
+              and Ziegler, T. 2021. The taxonomic impediment: A shortage of taxonomists, not lack of technical approaches.
+              <b>Zoological Journal of the Linnean Society</b> 193(2): 381-387.{' '}
+              <a
+                href="https://doi.org/10.1093/zoolinnean/zlab072"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.1093/zoolinnean/zlab072
+              </a>
+            </p>
+            <p>
+              Goodman, A.M., <b>Prendini, L.</b>, and Esposito, L.A. 2021. Systematics of the arboreal Neotropical 'thorellii'
+              clade of <i>Centruroides</i> Marx, 1890 bark scorpions (Buthidae C.L. Koch 1837), and the efficacy of mini-barcodes
+              for museum specimens. <b>Diversity</b> 13(9): 441; 1-22.{' '}
+              <a
+                href="https://doi.org/10.3390/d13090441"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.3390/d13090441
+              </a>
+            </p>
+            <p>
+              Goodman, A.M., <b>Prendini, L.</b>, Francke, O.F., and Esposito, L.A. 2021. Systematic revision of the arboreal
+              Neotropical ‘thorellii’ clade of <i>Centruroides</i> Marx, 1890, bark scorpions (Buthidae C.L. Koch, 1837), with
+              descriptions of six new species. <b>Bulletin of the American Museum of Natural History</b> 452: 1-92.
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2020 [2021]. Biography of Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 1-21.
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2020 [2021]. Bibliography of Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 22-57.
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2020 [2021]. Arachnida (Araneae, Ricinulei) described by Norman I. Platnick. <b>Entomologica
+              Americana</b> 126(1-4): 58-100.
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2020 [2021]. Taxa dedicated to Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 101-107.
+            </p>
+            <p>
+              <b>Prendini, L.</b>, Ehrenthal, V., and Loria, S.F. 2021. Systematic revision of the relictual Asian scorpion family
+              Pseudochactidae Gromov, 1998 with a review of cavernicolous, troglobitic, and troglomorphic scorpions. <b>Bulletin
+              of the American Museum of Natural History</b> 453: 1-149.
+            </p>
+            <p>
+              Schramm, F.D., Valdez-Mondragón, A., and <b>Prendini, L.</b> 2021. Volcanism and palaeoclimate change drive
+              diversification of world’s largest whip spider (Amblypygi). <b>Molecular Ecology</b> 30(12): 2872-2890.
+            </p>
+            <p>
+              Seiter, M., Schwaha, T., Ferreira, R.L., <b>Prendini, L.</b>, and Wolff, J.O. 2021. Fine structure of the epicuticular
+              secretion coat and associated glands of Pedipalpi and Palpigradi (Arachnida). <b>Journal of Morphology</b> 282(8):
+              1158-1169.
+            </p>
+            <p>
+              Silva de Miranda, G., Giupponi, A.P.L., <b>Prendini, L.</b>, and Scharff, N. 2021. Systematic revision of the
+              pantropical whip spider family Charinidae Quintero, 1986 (Arachnida, Amblypygi). <b>European Journal of Taxonomy</b>
+              772: 1-409.{' '}
+              <a
+                href="https://doi.org/10.5852/ejt.2021.772.1505"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.5852/ejt.2021.772.1505
+              </a>
+            </p>
+            <p>
+              Silva de Miranda, G., Scharff, N., Giupponi, A.P.L., and <b>Prendini, L.</b> 2021. Phylogeny and biogeography of the
+              pantropical whip spider family Charinidae (Arachnida, Amblypygi). <b>Zoological Journal of the Linnean Society</b>
+              194(1): 136-180.{' '}
+              <a
+                href="https://doi.org/10.1093/zoolinnean/zlaa101"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://doi.org/10.1093/zoolinnean/zlaa101
+              </a>
+            </p>
+            <p>
+              Zamani, A., Sääksjärvi, I.E., and <b>Prendini, L.</b> 2021. Amateur venom-extraction business may hasten extinction
+              of scorpions. <b>Arachnologische Mitteilungen / Arachnology Letters</b> 61: 20-23.
             </p>
           </div>
         </section>
@@ -38,26 +617,62 @@ export default function Publications() {
           <h2 className="text-3xl font-bold mb-6 text-gray-900">2020</h2>
           <div className="space-y-4">
             <p>
-              <b>Prendini, L.</b> 2020a.{' '}
+              Esposito, L.A., and <b>Prendini, L.</b> 2020. Publisher correction: Island ancestors and New World biogeography: A
+              case study from the scorpions (Buthidae: Centruroidinae). <b>Scientific Reports</b> 10: 7545 (1 p.).
+            </p>
+            <p>
+              Loria, S.F. and <b>Prendini, L.</b> 2020. Burrowing into the forest: Phylogeny of the Asian forest scorpions
+              (Scorpionidae: Heterometrinae) and the evolution of ecomorphotypes. <b>Cladistics</b> 37(2): 109-161.
+            </p>
+            <p>
+              Loria, S.F. and <b>Prendini, L.</b> 2020. Out of India, thrice: Origins and diversification of the Asian forest
+              scorpions, <i>Heterometrus</i> (Scorpionidae). <b>Scientific Reports</b> 10(22301): 1-19.{' '}
               <a
-                href="/documents/Prendini%202020a.pdf"
+                href="https://doi.org/10.1038/s41598-020-78183-8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
               >
-                PDF
+                https://doi.org/10.1038/s41598-020-78183-8
               </a>
             </p>
             <p>
-              <b>Prendini, L.</b> 2020d.{' '}
-              <a
-                href="/documents/Prendini%202020d.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                PDF
-              </a>
+              Monjaraz-Ruedas, R., Francke, O.F., and <b>Prendini, L.</b> 2020. Integrative systematics untangles evolutionary
+              history of <i>Stenochrus</i> Chamberlin, 1922 (Schizomida: Hubbardiidae), a neglected junkyard genus of North
+              American short-tailed whipscorpions. <b>Biological Journal of the Linnean Society</b> 130: 458-479.
+            </p>
+            <p>
+              Monjaraz-Ruedas, R., <b>Prendini, L.</b>, and Francke, O.F. 2020. First species of <i>Surazomus</i> (Schizomida:
+              Hubbardiidae) from North America illuminate diversification of short-tailed whipscorpions in the New World.
+              <b>Arthropod Systematics &amp; Phylogeny</b> 78(2): 245-263.
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2020. Dr. Norman I. Platnick (1951–2020). <b>Boletín de la Asociación Mexicana de Sistemática de
+              Artrópodos</b> 4(1): 2-4.
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2020. In Memoriam Dr. Norm Platnick. <b>American Arachnology</b> 85: 5-6.
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2020. In Memory of Dr Norman I. Platnick ’68. Curator Emeritus at the American Museum of Natural
+              History. <b>Concord University Magazine</b> Spring 2020, pp. 76-77.
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2020. Norman Ira Platnick 1951–2020. <b>Arachnology</b> 18(5): 507-516.
+            </p>
+            <p>
+              <b>Prendini, L.</b> 2020. Tribute to a titan: Norman Platnick (30 December 1951 – 8 April 2020). <b>The Spider Club
+              News</b> (Newsletter of the Spider Club of Southern Africa) 36(1): 22-24.
+            </p>
+            <p>
+              <b>Prendini, L.</b> and Loria, S.F. 2020. Systematic revision of the Asian forest scorpions (Heterometrinae Simon,
+              1879), revised suprageneric classification of Scorpionidae Latreille, 1802, and revalidation of Rugodentidae
+              Bastawade et al., 2005. <b>Bulletin of the American Museum of Natural History</b> 442: 1-480.
+            </p>
+            <p>
+              Seiter, M., Reyes Lerma, A.C., Král, J., Sember, A., Divišová, K., Palacios Vargas, J.G., Colmenares García, P.A.,
+              Loria, S.F., and <b>Prendini, L.</b> 2020. Cryptic diversity in the whip spider genus <i>Paraphrynus</i> (Amblypygi:
+              Phrynidae): Integrating morphology, karyotype and DNA. <b>Arthropod Systematics &amp; Phylogeny</b> 78(2): 265-285.
             </p>
           </div>
         </section>
@@ -67,7 +682,7 @@ export default function Publications() {
           <div className="space-y-4">
             <p>
               Esposito, L.A. and <b>Prendini, L.</b> 2019. Island ancestors and New World Biogeography: A case study from the
-              Scorpions (Buthidae, Centruroidinae). <b>Scientific Reports</b> 9: 3500.{' '}
+              scorpions (Buthidae, Centruroidinae). <b>Scientific Reports</b> 9: 3500.{' '}
               <a
                 href="https://res.cloudinary.com/gato/image/upload/v1590612862/Esposito_and_Prendini_2018_gxezg3.pdf"
                 target="_blank"
@@ -78,8 +693,8 @@ export default function Publications() {
               </a>
             </p>
             <p>
-              Monjaraz-Ruedas, R., Francke, O.F., and <b>Prendini, L.</b> 2019. Systematics of the Short-tailed Whipscorpion
-              Genus <i>Stenochrus</i> Chamberlin, 1922 (Schizomida: Hubardiidae) with descriptions of six new genera and five new
+              Monjaraz-Ruedas, R., Francke, O.F., and <b>Prendini, L.</b> 2019. Systematics of the short-tailed whipscorpion genus
+              <i>Stenochrus</i> Chamberlin, 1922 (Schizomida: Hubbardiidae) with descriptions of six new genera and five new
               species. <b>Bulletin of the American Museum of Natural History</b> 435: 1-91.{' '}
               <a
                 href="https://research.amnh.org/users/lorenzo/PDF/monjaraz_et_al_2019.pdf"
@@ -89,6 +704,11 @@ export default function Publications() {
               >
                 PDF
               </a>
+            </p>
+            <p>
+              Ramírez, M.J., Grismado, C.J., Ubick, D., Ovtsharenko, V., Cushing, P., Platnick, N., Wheeler, W.C.,
+              <b>Prendini, L.</b>, Crowley, L.M, and Horner, N. 2019. Myrmecultoridae, a new family of myrmecophilic spiders from
+              the Chihuahuan Desert (Araneae: Entelegynae). <b>American Museum Novitates</b> 3930: 1-24.
             </p>
           </div>
         </section>
@@ -852,6 +1472,10 @@ export default function Publications() {
               </a>
             </p>
             <p>
+              <b>Prendini, L.</b> 2012. The Scorpion King. Among the most long-lived terrestrial arthropods. <b>Asian Geographic</b>
+              87(2): 86-89.
+            </p>
+            <p>
               Sissom, W.D., Hughes, G.B., Bryson, R.W., Jr., and <b>Prendini, L.</b> 2012. The <i>vorhiesi</i> group of
               <i>Vaejovis</i> C.L. Koch, 1836 (Scorpiones: Vaejovidae) in Arizona, with description of a new species from the Hualapai
               Mountains. <b>American Museum Novitates</b> 3742: 1-19.{' '}
@@ -1148,6 +1772,11 @@ export default function Publications() {
               </a>
             </p>
             <p>
+              <b>Prendini, L.</b> 2009. Assembling the Scorpion Tree of Life: ‘High-level systematics and phylogeny of the extant
+              scorpions (Scorpiones: Orthosterni)’ reanalysed. In: Arrivillaga, J., El Souki, M. &amp; Herrera, B. (Eds.)
+              <b>Monografía Digital Sociedad Venezolana de Entomología</b> 2: 1-41. ISBN 978-980-12-3750-1.
+            </p>
+            <p>
               <b>Prendini, L.</b>, Esposito, L.A., Huff, J.C. and <b>Volschenk, E.S.</b> 2009. Redescription of <i>Rhopalurus
               abudi</i> Armas & Marcanoi Fondeur (Scorpiones: Buthidae), with first description of the male and first
               record from Hispaniola. <b>Journal of Arachnology</b> 37: 206-244.{' '}
@@ -1189,7 +1818,8 @@ export default function Publications() {
           <h2 className="text-3xl font-bold mb-6 text-gray-900">2008</h2>
           <div className="space-y-4">
             <p>
-              Cushing, P.E. et al. 2008.{' '}
+              Cushing, P.E., <b>Prendini, L.</b>, Savary, W.E., Brookhart, J.O., Wharton, R.A., Bird, T., and Gromov, A.V. 2008.
+              Global survey and inventory of Solifugae. <b>American Arachnology</b> 76: 11. [Abstract]{' '}
               <a
                 href="/documents/Cushing%20et%20al.%202008.pdf"
                 target="_blank"
@@ -1332,6 +1962,10 @@ export default function Publications() {
               >
                 PDF
               </a>
+            </p>
+            <p>
+              Mattoni, C.I. and <b>Prendini, L.</b> 2007. Phylogeny and biogeography of the family Bothriuridae (Scorpiones).
+              <b>Darwiniana</b> 45(supl.): 96-98.
             </p>
             <p>
               Ojanguren Affilastro, A.A., Mattoni, C.I. and <b>Prendini, L.</b> 2007. The genus <i>Brachistosternus</i>
@@ -1541,18 +2175,6 @@ export default function Publications() {
               </a>
             </p>
             <p>
-              <b>Prendini, L.</b> 2004. Revision of <i>Karasbergia</i> Hewitt (Scorpiones: Buthidae), a monotypic genus endemic
-              to southern Africa. <b>Journal of Afrotropical Zoology</b> 1: 77-93.{' '}
-              <a
-                href="https://research.amnh.org/users/lorenzo/PDF/Prendini.2004.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                PDF
-              </a>
-            </p>
-            <p>
               <b>Prendini, L.</b> 2004. Systematics of the genus <i>Pseudolychas</i> Kraepelin (Scorpiones: Buthidae).
               <b>Annals of the Entomological Society of America</b> 97(1): 37-63.{' '}
               <a
@@ -1657,7 +2279,8 @@ export default function Publications() {
               </a>
             </p>
             <p>
-              <b>Prendini, L.</b> 2003.{' '}
+              <b>Prendini, L.</b> 2003. Threats facing southern Africa’s unique scorpion fauna. <b>Colophon</b>, Newsletter of the
+              IUCN Species Survival Commission, Southern African Invertebrates Specialist Group 3: 7-11.{' '}
               <a
                 href="/documents/Prendini%202003.pdf"
                 target="_blank"
@@ -1674,8 +2297,8 @@ export default function Publications() {
           <h2 className="text-3xl font-bold mb-6 text-gray-900">2002</h2>
           <div className="space-y-4">
             <p>
-              Dyason, K., Brandt, W., <b>Prendini, L.</b>, Verdonck, F., Tytgat, J., Du Plessis, J., Müller, G. and Van der
-              Walt, J. 2002. Determination of species-specific components in the venom of <i>Parabuthus</i> scorpions from southern
+              Dyason, K., Brandt, W., <b>Prendini, L.</b>, Verdonck, F., Tytgat, J., Du Plessis, J., Müller, G. and Van der Walt,
+              J. 2002. Determination of species-specific components in the venom of <i>Parabuthus</i> scorpions from southern
               Africa using matrix-assisted laser desorption time-of-flight mass spectrometry. <b>Rapid Communications in Mass
               Spectrometry</b> 16: 768-773.{' '}
               <a
