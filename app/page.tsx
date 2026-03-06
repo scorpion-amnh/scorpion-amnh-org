@@ -220,6 +220,9 @@ export default function Home() {
               </figure>
             </div>
             <div className="h-px w-full bg-gray-200 mb-5" />
+            <h6 className="font-semibold mb-3 text-gray-900">
+              Images from our work in the field and in the lab
+            </h6>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 grid-flow-dense auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[110px]">
               {randomImages.map((image, index) => {
                 const isFeatured = index === 0 || (index + 1) % 14 === 0;
