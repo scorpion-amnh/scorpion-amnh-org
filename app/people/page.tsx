@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { SideNav } from "../components/SideNav";
+import { Tabs } from "../components/Tabs";
 
 export default function People() {
   const [activeSection, setActiveSection] = useState('lab-evolution');
@@ -412,25 +413,15 @@ export default function People() {
         <div id="museum-specialists">
           <h2 className="text-3xl font-bold mb-8 text-gray-900">Museum Specialists</h2>
 
-          <div className="mb-6 border-b border-gray-200">
-            <div className="flex gap-6">
-              <button
-                type="button"
-                onClick={() => setMuseumTab('current')}
-                className={`relative -mb-px px-1 pb-2 text-sm font-medium transition-colors ${museumTab === 'current' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-600 border-b-2 border-transparent hover:text-gray-800'}`}
-                aria-selected={museumTab === 'current'}
-              >
-                Current
-              </button>
-              <button
-                type="button"
-                onClick={() => setMuseumTab('alumni')}
-                className={`relative -mb-px px-1 pb-2 text-sm font-medium transition-colors ${museumTab === 'alumni' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-600 border-b-2 border-transparent hover:text-gray-800'}`}
-                aria-selected={museumTab === 'alumni'}
-              >
-                Alumni
-              </button>
-            </div>
+          <div className="mb-6">
+            <Tabs
+              options={[
+                { value: 'current', label: 'Current' },
+                { value: 'alumni', label: 'Alumni' },
+              ]}
+              value={museumTab}
+              onChange={setMuseumTab}
+            />
           </div>
 
           {museumTab === 'current' && (
