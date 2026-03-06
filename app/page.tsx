@@ -143,7 +143,7 @@ export default function Home() {
                   <li>Palpigradi (palpigrades)</li>
                   <li>Pseudoscorpiones (false scorpions)</li>
                   <li>Ricinulei (hooded tick-spiders or ricinuleids)</li>
-                  <li>Schizomida (schizomids)</li>
+                  <li>Schizomida (short-tailed whipscorpions or schizomids)</li>
                   <li>Scorpiones (scorpions)</li>
                   <li>Solifugae (camel-spiders, solifuges or solpugids)</li>
                   <li>Thelyphonida (vinegaroons or whip scorpions)</li>
