@@ -1241,7 +1241,104 @@ export default function People() {
             />
           </div>
           {graduateStudentsTab === 'current' && (
-          <p className="text-gray-700">No current graduate students listed.</p>
+          <>
+
+          {/* George Popovici */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <div className="w-full aspect-[3/4] bg-gray-100 rounded-sm flex items-center justify-center text-gray-400 text-4xl font-semibold">
+                  GP
+                </div>
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">George Popovici</h3>
+                <p className="text-base text-gray-600 mb-1">Comparative Biology Ph.D. Program, Richard Gilder Graduate School, AMNH</p>
+                <p className="text-sm text-gray-500 mb-3">Graduate student from 2026 - Ph.D. on systematics and biogeography of the Asian vinegaroons (whip scorpions) and the evolution of defense secretions</p>
+                <p className="text-gray-700">
+                  George Popovici graduated with a BSc in Biological Sciences from Imperial College London in 2025, during which time he conducted research on centipede taxonomy and systematics at the Natural History Museum, London. He is also affiliated with the Molecular Biology Laboratory of the “Grigore Antipa” National Museum of Natural History in Bucharest, Romania, where his work focuses on the systematics and biogeography of Romanian myriapods and arachnids. George joined the AMNH in 2025 as a doctoral student in the Richard Gilder Graduate School&apos;s Comparative Biology PhD program; his current research investigates the taxonomy and systematics of the <em>Thelyphonida</em> (whip scorpions) and the evolution of their complex chemical defense systems.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Alice Wang */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <div className="w-full aspect-[3/4] bg-gray-100 rounded-sm flex items-center justify-center text-gray-400 text-4xl font-semibold">
+                  AW
+                </div>
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Alice Wang</h3>
+                <p className="text-base text-gray-600 mb-1">Comparative Biology Ph.D. Program, Richard Gilder Graduate School, AMNH</p>
+                <p className="text-sm text-gray-500 mb-3">Graduate student from 2026 - Ph.D. on phylogeny and evolution of sound communication in hormurid scorpions</p>
+                <p className="text-gray-700">
+                  Alice Wang graduated with a BA in Environmental Science with a minor in Biology from Barnard College, Columbia University. Her research interests lie at the intersection of animal behavior and phylogenomics, focusing on how animals perceive and respond to the world around them and the evolutionary context underlying these actions. She has previously conducted research spanning systematics and biogeography of African freshwater tetra fishes (Alestidae) and olfactory communication in dogs (<em>Canis familiaris</em>). Her current research focuses on describing and determining the evolutionary history of intraspecific acoustic communication in scorpions, combining behavioral studies of live animals with morphological and phylogenomic analyses of museum collections.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Colby Sain */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <div className="w-full aspect-[3/4] bg-gray-100 rounded-sm flex items-center justify-center text-gray-400 text-4xl font-semibold">
+                  CS
+                </div>
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Colby Sain</h3>
+                <p className="text-base text-gray-600 mb-1">Ecology, Evolution and Behavior Program, City College, City University of New York</p>
+                <p className="text-sm text-gray-500 mb-3">Graduate student from 2023 - M.S. on systematics and biogeography of montane lineages of vaejovid scorpions in the U.S.</p>
+                <p className="text-gray-700">
+                  Colby Sain began her academic career as an undergraduate at the University of Tennessee, Knoxville, within the Department of Earth and Planetary Sciences, where she studied invertebrate microfossils. In 2019, Colby joined the AMNH as an REU (Research Experiences for Undergraduates) student under the guidance of Ricardo Botero-Trujillo, Stephanie Loria, and Pio Colmenares, focusing on the order <em>Ricinulei</em>. From conducting molecular laboratory work to collecting live specimens in the field, she has continued to collaborate with the AMNH Arachnology Lab in various capacities. Colby is currently a graduate student at the City University of New York (CUNY), where her thesis research investigates the systematics and distribution of <em>Vaejovis</em> scorpions in the American Southwest.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Nicolas Cazzaniga */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <div className="w-full aspect-[3/4] bg-gray-100 rounded-sm flex items-center justify-center text-gray-400 text-4xl font-semibold">
+                  NC
+                </div>
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Nicolas Cazzaniga</h3>
+                <p className="text-base text-gray-600 mb-1">Ecology, Evolution and Behavior Program, City University of New York</p>
+                <p className="text-sm text-gray-500 mb-3">Graduate student from 2022 - Ph.D. on systematics, evolution and biogeography of the Neotropical whip spider family Phrynidae</p>
+                <p className="text-gray-700">
+                  Nick completed his B.S. in Entomology at Purdue University in 2019, where his capstone thesis analyzed social versus solitary growth rates in the Socotra Island Blue Baboon tarantula, <em>Monocentropus balfouri</em>. During his undergraduate tenure, he dedicated significant time to the Yale insect collection and various entomology laboratories on the Purdue campus. Nick pivoted his focus toward the understudied arachnid orders after working with live specimens in Purdue’s invertebrate zoo and within the exotic pet trade. Following a brief residency in the zoological sector at the Maritime Aquarium, he was awarded a Graduate Student Fellowship from the AMNH in 2022. He is currently conducting his doctoral research on the systematics and biogeography of the amblypygid family <em>Phrynidae</em> through the Ecology and Evolutionary Biology PhD program at the City University of New York. His work is supported by an NSF grant focused on the Systematics and Evolution of Pedipalpi.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Javier Blasco Aróstegui */}
+          <div className="mb-8 pb-8">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <div className="w-full aspect-[3/4] bg-gray-100 rounded-sm flex items-center justify-center text-gray-400 text-4xl font-semibold">
+                  JB
+                </div>
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Javier Blasco Aróstegui</h3>
+                <p className="text-base text-gray-600 mb-1">Center of Ecology, Evolution and Climate Change, University of Lisbon, Portugal</p>
+                <p className="text-sm text-gray-500 mb-3">Graduate student from 2021 to 2026 - Ph.D. on systematics, evolution and biogeography of European scorpions</p>
+                <p className="text-gray-700">
+                  Javier Blasco-Aróstegui is a visiting PhD candidate (2022–2026) from the University of Lisbon, who has collaborated with the AMNH Arachnology Lab since 2022. His research integrates phylogenomics, comparative morphology, and toxinology to explore the evolutionary history and diversification of Western Palearctic scorpions. By leveraging museum collections and data from global field expeditions, he aims to elucidate how geological and climatic shifts have shaped regional endemism across the Mediterranean and beyond. Javier holds an MSc in Biodiversity and Conservation (UIMP–CSIC) and a BSc in Biology from the University of Salamanca. His professional background includes tenures as a laboratory technician at CIBIO-InBIO, where he studied shark genomics, and as a fieldwork technician at the Museo Nacional de Ciencias Naturales (CSIC), focused on arthropod biodiversity. His expertise bridges evolutionary genomics, systematics, and conservation science—a trajectory sparked by a 2016 residency at the Natural History Museum, London. He actively contributes to the AMNH collections by generating high-quality molecular datasets and depositing specimens from his worldwide expeditions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          </>
           )}
 
           {graduateStudentsTab === 'alumni' && (
