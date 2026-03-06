@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { SideNav } from "../components/SideNav";
 import { Tabs } from "../components/Tabs";
+import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
 
 export default function People() {
   const [activeSection, setActiveSection] = useState('lab-evolution');
@@ -53,6 +54,7 @@ export default function People() {
     window.addEventListener('hashchange', applyHash);
     return () => window.removeEventListener('hashchange', applyHash);
   }, []);
+
 
   return (
     <div className="bg-white min-h-screen">
@@ -1247,9 +1249,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <div className="w-full aspect-[3/4] bg-gray-100 rounded-sm flex items-center justify-center text-gray-400 text-4xl font-semibold">
-                  GP
-                </div>
+                <PhotoPlaceholder name="George Popovici" />
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">George Popovici</h3>
@@ -1266,9 +1266,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <div className="w-full aspect-[3/4] bg-gray-100 rounded-sm flex items-center justify-center text-gray-400 text-4xl font-semibold">
-                  AW
-                </div>
+                <PhotoPlaceholder name="Alice Wang" />
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Alice Wang</h3>
@@ -1285,9 +1283,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <div className="w-full aspect-[3/4] bg-gray-100 rounded-sm flex items-center justify-center text-gray-400 text-4xl font-semibold">
-                  CS
-                </div>
+                <PhotoPlaceholder name="Colby Sain" />
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Colby Sain</h3>
@@ -1304,9 +1300,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <div className="w-full aspect-[3/4] bg-gray-100 rounded-sm flex items-center justify-center text-gray-400 text-4xl font-semibold">
-                  NC
-                </div>
+                <PhotoPlaceholder name="Nicolas Cazzaniga" />
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Nicolas Cazzaniga</h3>
@@ -1323,9 +1317,7 @@ export default function People() {
           <div className="mb-8 pb-8">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <div className="w-full aspect-[3/4] bg-gray-100 rounded-sm flex items-center justify-center text-gray-400 text-4xl font-semibold">
-                  JB
-                </div>
+                <PhotoPlaceholder name="Javier Blasco Aróstegui" />
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Javier Blasco Aróstegui</h3>
@@ -1543,7 +1535,7 @@ export default function People() {
                         className="w-full h-auto rounded-sm"
                       />
                     ) : (
-                      <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                      <PhotoPlaceholder name={person.name} />
                     )}
                   </div>
                   <div className="md:col-span-3">
@@ -1610,7 +1602,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Luke Siegel" />
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Luke Siegel</h3>
@@ -1670,7 +1662,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Nathan Auyeng" />
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Nathan Auyeng</h3>
@@ -1686,7 +1678,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Aleyna Singer" />
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Aleyna Singer</h3>
@@ -1702,7 +1694,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Simon Au" />
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Simon Au</h3>
@@ -1718,7 +1710,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Amrita Banerj" />
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Amrita Banerj</h3>
@@ -1912,7 +1904,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Michelle Bayefsky-Anand" />
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Michelle Bayefsky-Anand</h3>
@@ -2226,7 +2218,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Adrian Armstrong" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Adrian Armstrong</h4>
@@ -2264,7 +2256,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Mark Cooper" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Mark Cooper</h4>
@@ -2324,7 +2316,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Ann Garbacki" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Ann Garbacki</h4>
@@ -2340,7 +2332,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Tom Gartner" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Tom Gartner</h4>
@@ -2400,7 +2392,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Peter Hawkes" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Peter Hawkes</h4>
@@ -2460,7 +2452,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Dawid Jacobs" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Dawid Jacobs</h4>
@@ -2498,7 +2490,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Allyson Mellone" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Allyson Mellone</h4>
@@ -2561,7 +2553,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Asel Zhetigenova" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Asel Zhetigenova</h4>
@@ -2577,7 +2569,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Howard Bichard" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Howard Bichard</h4>
@@ -2593,7 +2585,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Abigail Carlton" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Abigail Carlton</h4>
@@ -2653,7 +2645,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Suzanna Dodd" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Suzanna Dodd</h4>
@@ -2691,7 +2683,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Carine Galvão" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Carine Galvão</h4>
@@ -2707,7 +2699,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Tiffany Gentry" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Tiffany Gentry</h4>
@@ -2836,7 +2828,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Israel Na'aman" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Israel Na'aman</h4>
@@ -2852,7 +2844,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Danielle Parsons" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Danielle Parsons</h4>
@@ -2868,7 +2860,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Fabienne Paumet" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Fabienne Paumet</h4>
@@ -2884,7 +2876,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Warren Schmidt" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Warren Schmidt</h4>
@@ -2900,7 +2892,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Susan Tosier" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Susan Tosier</h4>
@@ -2960,7 +2952,7 @@ export default function People() {
           <div className="pb-6">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Peg Werns" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Peg Werns</h4>
@@ -3508,7 +3500,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Ingrid Catalina Romero Ortiz" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Ingrid Catalina Romero Ortiz</h4>
@@ -3594,7 +3586,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Roberta Engel" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Roberta Engel</h4>
@@ -3634,7 +3626,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <PhotoPlaceholder name="Patricia Carrera" />
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Patricia Carrera</h4>
