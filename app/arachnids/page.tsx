@@ -110,15 +110,6 @@ export default function Arachnids() {
             <p className="text-lg leading-8 text-gray-700 mb-6">
               Arachnids occur on all continents except Antarctica but most orders are more abundant and diverse in tropical and subtropical regions. Many arachnid orders are restricted to humid habitats, like caves (some scorpions have been collected nearly 1 km below the surface) or forest leaf litter. Others are more widespread, however. For example, the greatest abundance and diversity of scorpions occurs in desert and semi-desert habitats, but they may also be found in savannas and grasslands, coniferous, deciduous, and tropical forests, on high mountain slopes (up to 4,900 m elevation), and even in the intertidal zone. Although most species are terrestrial, many inhabit the forest canopy. Favored habitats include spaces under tree bark, logs, stones, and in rock crevices, burrows or interstitial spaces in the soil or litter. Many spiders inhabit webs or silken retreats. Some arachnids adapt well to human environments. Arachnids are often abundant in suitable habitat. For example, densities of 8-12 individuals per square meter were reported for the scorpion, <em>Serradigitus littoralis</em>, from Baja California. Given their high densities in some areas, the importance of arachnids in ecological food webs, particularly with respect to helping control insect populations, is considerable. Many are sensitive to environmental degradation and are considered equilibrium species.
             </p>
-            <div className="mb-8">
-              <Image
-                src="/images/distribution.jpg"
-                alt="Approximate world distribution of scorpions"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-sm"
-              />
-            </div>
           </div>
 
           <div className="mb-8">
@@ -219,15 +210,6 @@ export default function Arachnids() {
             <p className="text-lg leading-8 text-gray-700 mb-6">
               Despite their notoriety, worldwide distribution, medical, ecological and conservation importance, the taxonomy of many arachnid orders remains neglected. Numerous families and genera have never been revised and recent inventories of arachnid diversity, even in relatively well-surveyed regions (e.g. Australia, southern Africa, and the United States), continue to uncover new species and distribution records. Several minor orders (e.g., Palpigradi, Ricinulei) have few living specialists. Given the paucity of active taxonomists and, in some cases, an aging demographic, it is unlikely that the world arachnid fauna will become better known until more specialists are trained and the prospects for their employment improve. Our lab is addressing this shortfall by developing expertise and training new specialists in the systematics and morphology of scorpions and understudied arachnid orders like Amblypygi (whip spiders), Ricinulei (hooded tick-spiders or ricinuleids), Schizomida (schizomids), Solifugae (camel-spiders, solifuges or solpugids), and Thelyphonida (vinegaroons or whip scorpions).
             </p>
-            <div className="mb-8">
-              <Image
-                src="/images/dropinpubs.gif"
-                alt="Drop in publications"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-sm"
-              />
-            </div>
           </div>
 
           <div className="mb-8">
