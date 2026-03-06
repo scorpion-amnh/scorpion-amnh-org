@@ -1684,7 +1684,7 @@ export default function People() {
         <div className="people-compact">
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">High School Students</h2>
           <p className="text-xl text-gray-600 mb-8">
-            Several high school students worked in the Arachnology Lab supported by various internships. Many went on to undergraduate programs. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program.</a>
+            Several high school students have worked in the Arachnology Lab supported by various internships. Many have continued to undergraduate programs. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program.</a>
           </p>
           <div className="mb-6">
             <Tabs
@@ -1697,11 +1697,187 @@ export default function People() {
             />
           </div>
           {highSchoolStudentsTab === 'current' && (
-          <p className="text-gray-700">No current high school students listed.</p>
+          <>
+          {/* Meredith Metz */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="Meredith Metz" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Meredith Metz</h3>
+                <p className="text-sm text-gray-500 mb-3">High school student from 2025 to 2026</p>
+                <p className="text-gray-700">
+                  Meredith Metz joined the Arachnology lab in 2025 and continues to volunteer during the summer extracting and sequencing scorpion and amblypygid DNA under the supervision of Pío Colmenares and Colby Sain.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Alex Liu */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="Alex Liu" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Alex Liu</h3>
+                <p className="text-sm text-gray-500 mb-3">High school student in 2026</p>
+                <p className="text-gray-700">
+                  Alex volunteers in the Arachnology Lab assisting Pío Colmenares with sorting, organization and curation of collections.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Balthazar Edwards */}
+          <div className="mb-8 pb-8">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="Balthazar Edwards" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Balthazar Edwards</h3>
+                <p className="text-sm text-gray-500 mb-3">High school student in 2026</p>
+                <p className="text-gray-700">
+                  Balthazar volunteers in the Arachnology Lab assisting Pío Colmenares with sorting, organization and curation of collections.
+                </p>
+              </div>
+            </div>
+          </div>
+          </>
           )}
 
           {highSchoolStudentsTab === 'alumni' && (
           <>
+
+          {/* Anika Mahbub */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="Anika Mahbub" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Anika Mahbub</h3>
+                <p className="text-sm text-gray-500 mb-3">High school student in 2024</p>
+                <p className="text-gray-700">
+                  Anika was a volunteer research student for the Bronx High School of Science research program. She was mentored by Colby E. Sain for the summer of 2024. She worked in the Molecular Systematics Laboratory learning lab techniques such as DNA extraction and PCR, and helped make a data base of <em>Vaejovis</em> morphometrics. She went on to pursue a Bachelors of Science at Brandeis University.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* William Phillips */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="William Phillips" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">William Phillips</h3>
+                <p className="text-sm text-gray-500 mb-3">High school student from 2023 to 2024</p>
+                <p className="text-gray-700">
+                  Will volunteered in the Arachnology lab from 2023 to 2024, recording morphometric data and conducting digital imaging on scorpions, and assisting with sorting, organization and curation of collections, supervised by Lorenzo Prendini.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Christina Li */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="Christina Li" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Christina Li</h3>
+                <p className="text-sm text-gray-500 mb-3">High school student in 2023</p>
+                <p className="text-gray-700">
+                  Christina volunteered in the Arachnology lab in the summer of 2023 where she conducted DNA extraction, quantitation, PCR and sequencing, supervised by Pío Colmenares.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Michelle Li */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="Michelle Li" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Michelle Li</h3>
+                <p className="text-sm text-gray-500 mb-3">High school student in 2023</p>
+                <p className="text-gray-700">
+                  Michelle volunteered in the Arachnology lab in the summer of 2023 where she conducted DNA extraction, quantitation, PCR and sequencing, supervised by Pío Colmenares.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Eva-Lucia Prendini */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="Eva-Lucia Prendini" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Eva-Lucia Prendini</h3>
+                <p className="text-sm text-gray-500 mb-3">High school student in 2023</p>
+                <p className="text-gray-700">
+                  Eva-Lucia volunteered in the Arachnology lab in the summer of 2023 where she conducted DNA extraction, quantitation, PCR and sequencing, supervised by Pío Colmenares.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Sophia Collins */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="Sophia Collins" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Sophia Collins</h3>
+                <p className="text-sm text-gray-500 mb-3">High school student in 2022</p>
+                <p className="text-gray-700">
+                  Sophia volunteered at the Arachnida and Myriapoda collections in 2022, assisting Pio Colmenares with sorting, organization and curation of collections.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Aibrean Henry */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="Aibrean Henry" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Aibrean Henry</h3>
+                <p className="text-sm text-gray-500 mb-3">High school student in 2022</p>
+                <p className="text-gray-700">
+                  Aibrean volunteered at the Arachnida and Myriapoda collections in 2022, assisting Pio Colmenares with sorting, organization and curation of collections.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Alex Moell */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="Alex Moell" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Alex Moell</h3>
+                <p className="text-sm text-gray-500 mb-3">High school student in 2022</p>
+                <p className="text-gray-700">
+                  Alex volunteered at the Arachnida and Myriapoda collections in 2022, assisting Pio Colmenares with sorting, organization and curation of collections.
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* Hritwik Paul */}
           <div className="mb-8 pb-8 border-b border-gray-200">
@@ -1719,7 +1895,7 @@ export default function People() {
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Hritwik Paul</h3>
                 <p className="text-sm text-gray-500 mb-3">High school student in 2019</p>
                 <p className="text-gray-700">
-                  Hritwik joined the Arachnology lab in 2019 and is currently involved in curatorial activities, such as the reorganization of the Scorpion collection, sorting, labeling and rehousing, under the supervision of Pío Colmenares.
+                  Hritwik volunteered at the Arachnida collections in 2019, assisting with curatorial activities, such as the reorganization of the scorpion collection, sorting, labeling and rehousing, under the supervision of Pío Colmenares.
                 </p>
               </div>
             </div>
@@ -1735,7 +1911,7 @@ export default function People() {
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Luke Siegel</h3>
                 <p className="text-sm text-gray-500 mb-3">High school student in 2019</p>
                 <p className="text-gray-700">
-                  Luke joined the Arachnology lab in 2019 and is currently involved in curatorial activities, such as the reorganization of the Scorpion collection, sorting, labeling and rehousing, under the supervision of Pío Colmenares.
+                  Luke volunteered at the Arachnida collections in 2019, assisting with curatorial activities, such as the reorganization of the scorpion collection, sorting, labeling and rehousing, under the supervision of Pío Colmenares.
                 </p>
               </div>
             </div>
@@ -1795,7 +1971,7 @@ export default function People() {
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Nathan Auyeng</h3>
                 <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
                 <p className="text-gray-700">
-                  Nathan came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. He assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorking and Pío Colmenares.
+                  Nathan came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. He assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
                 </p>
               </div>
             </div>
@@ -1811,7 +1987,7 @@ export default function People() {
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Aleyna Singer</h3>
                 <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
                 <p className="text-gray-700">
-                  Aleyna came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorking and Pío Colmenares.
+                  Aleyna came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
                 </p>
               </div>
             </div>
@@ -1827,23 +2003,39 @@ export default function People() {
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Simon Au</h3>
                 <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
                 <p className="text-gray-700">
-                  Simon came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. He assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorking and Pío Colmenares.
+                  Simon came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. He assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Amrita Banerj */}
+          {/* Agnes Oduro */}
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <PhotoPlaceholder name="Amrita Banerj" />
+                <PhotoPlaceholder name="Agnes Oduro" />
               </div>
               <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Amrita Banerj</h3>
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Agnes Oduro</h3>
                 <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
                 <p className="text-gray-700">
-                  Amrita came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorking and Pío Colmenares.
+                  Agnes came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida and Myriapoda collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Amrita Banerji */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
+                <PhotoPlaceholder name="Amrita Banerji" />
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Amrita Banerji</h3>
+                <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
+                <p className="text-gray-700">
+                  Amrita came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida and Myriapoda collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
                 </p>
               </div>
             </div>
@@ -2171,7 +2363,7 @@ export default function People() {
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Boitumelo "Tumi" McCallum</h3>
                 <p className="text-sm text-gray-500 mb-3">High school student from 2003 to 2004</p>
                 <p className="text-gray-700">
-                  Tumi attended the NSF After-School Centers in Exploration and New Discovery (ASCEND) program at the AMNH for 8 months (October 2003-May 2004). She worked in the Molecular Systematics Laboratory, under the supervision of Lorenzo Prendini, Diana Pietri and Tarang Sharma, where she learned to isolate, amplify, sequence and edit DNA.
+                  Tumi attended the NSF After-School Centers in Exploration and New Discovery (ASCEND) program at the AMNH for 8 months (October 2003-May 2004). She worked in the Molecular Systematics Laboratory, under the supervision of Lorenzo Prendini, Diana Pietri and Tarang Sharma, where she learned to isolate, amplify, sequence and edit DNA. Tumi passed away in 2007. May she rest in peace.
                 </p>
               </div>
             </div>
