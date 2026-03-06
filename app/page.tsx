@@ -128,7 +128,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Collections Section */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 order-2 lg:order-1">
             <h4 className="text-2xl font-bold mb-6 text-gray-900">Collections</h4>
             
             <div className="grid gap-6 mb-6">
@@ -174,7 +174,7 @@ export default function Home() {
           </div>
 
           {/* Image Gallery */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 order-1 lg:order-2">
             <div className="grid grid-cols-3 gap-4 mb-4">
               <figure>
                 <div className="overflow-hidden rounded-sm bg-gray-100">
