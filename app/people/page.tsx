@@ -966,14 +966,10 @@ export default function People() {
                 />
               </div>
               <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Muhammad Tahir</h3>
-                <p className="text-base text-gray-600 mb-1">Higher Education Commission, Pakistan</p>
-                <p className="text-sm text-gray-500 mb-3">Current postdoc and from 2013 to 2014</p>
-                <p className="mb-3">
-                  <a href="https://www.researchgate.net/profile/Stephanie_Loria2" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Research Gate</a>
-                </p>
+                <h3 className="text-lg font-bold mb-1 text-gray-900">H. Muhammad Tahir</h3>
+                <p className="text-base text-gray-600 mb-3">Postdoc in 2026 - Postdoctoral research on the systematics and evolution of Pakistani scorpions supported by a Fulbright Postdoctoral Fellowship</p>
                 <p className="text-gray-700">
-                  Tahir received his PhD from University of the Punjab, Lahore, with a dissertation on the "Biodiversity and predatory efficacy of spiders inhabiting the rice fields of central Punjab, Pakistan". He also worked on the scorpions of Pakistan in collaboration with Lorenzo Prendini. He came to the AMNH, in May 2013 for postdoc supported by a Postdoctoral Fellowship by the Higher Education Commission of Pakistan, which focused on the molecular systematics of the medically important scorpions in the family Buthidae occurring in Pakistan. He was an Assistant Professor of Zoology at the University of Sargodha, Pakistan and has returned to the AMNH.
+                  Tahir earned his PhD from the University of the Punjab, Lahore, with a dissertation entitled “Biodiversity and Predatory Efficacy of Spiders Inhabiting the Rice Fields of Central Punjab, Pakistan.” In addition to his work on <em>Araneae</em>, he has conducted extensive research on the scorpions of Pakistan in collaboration with Dr. Lorenzo Prendini. In May 2013, he first joined the American Museum of Natural History (AMNH) as a postdoctoral fellow under the Higher Education Commission (HEC) of Pakistan Postdoctoral Fellowship Program, where his research focused on the molecular systematics of scorpions, particularly within the family <em>Buthidae</em>. In January 2026, he rejoined the AMNH as a Fulbright Postdoctoral Fellow. His current research involves the molecular systematics and development of a comprehensive DNA barcode database for medically and commercially significant scorpion species of Pakistan, including those from the Kashmir region. Alongside his research at the AMNH, he serves as Professor of Zoology at Government College University, Lahore.
                 </p>
               </div>
             </div>
@@ -983,19 +979,26 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <div className="w-full aspect-[3/4] bg-gray-200 rounded-sm" />
+                <Image
+                  src="/images/Jose.jpg"
+                  alt="Jose Barba-Montoya"
+                  width={400}
+                  height={533}
+                  className="w-full h-auto rounded-sm"
+                />
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Jose Barba-Montoya</h3>
-                {/* <p className="text-base text-gray-600 mb-1">Affiliation TBD</p> */}
-                <p className="text-sm text-gray-500 mb-3">Current postdoc</p>
-                {/* <p className="text-gray-700">Bio coming soon.</p> */}
+                <p className="text-base text-gray-600 mb-3">Postdoc in 2024 and 2025 - Postdoctoral research on the phylogenomics of <em>Chelicerata</em> supported by a Gerstner Postdoctoral Fellowship</p>
+                <p className="text-gray-700">
+                  Jose investigates patterns of molecular evolution and species diversification across the tree of life by integrating phylogenomics with systematics and ecology. His primary focus lies in inferring evolutionary relationships and divergence times at both the species and subspecies levels. A central pillar of his research involves the development of novel bioinformatic methods for phylogenomic analysis and molecular clock dating, designed to mitigate sources of error and enhance the accuracy of evolutionary reconstructions. Currently a Research Associate in the Division of Invertebrate Zoology at the American Museum of Natural History (AMNH), Jose previously served as a Gerstner Scholar in Bioinformatics and Computational Biology at the Richard Gilder Graduate School (2023–2025). He continues to collaborate with Professor Lorenzo Prendini and members of the Arachnology Lab to investigate evolutionary patterns across the arachnid tree of life, utilizing high-throughput, next-generation sequencing data.
+                </p>
               </div>
             </div>
           </div>
 
           {/* Jairo A. Moreno-González */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
+          <div className="mb-8 pb-8">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
@@ -1008,10 +1011,9 @@ export default function People() {
               </div>
               <div className="md:col-span-3">
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Jairo A. Moreno-González</h3>
-                <p className="text-base text-gray-600 mb-1">Museu de Zoologia, Universidade de Sao Paulo, Brasil</p>
-                <p className="text-sm text-gray-500 mb-3">Current postdoc</p>
+                <p className="text-base text-gray-600 mb-3">Postdoc from 2022 to 2026 - Postdoctoral research on the systematics and evolution of <em>Pedipalpi</em> and Neotropical scorpions supported by an NSF Postdoctoral Fellowship and a Theodore Roosevelt Postdoctoral Fellowship</p>
                 <p className="text-gray-700">
-                  Jairo received his PhD from the Instituto de Biociencias, Universidad de Sao Paulo, Sao Paulo, Brazil. His research interests are focused on systematics and evolution of some arachnid orders such as Scorpiones (Buthidae: <em>Tityus</em>), and Pedipalpi (Schizomida, Uropygi and Amblypygi). His PhD project deals with the systematic revision of <em>Tityus</em> (<em>Archaeotityus</em>) using phenotypic and genetic evidence. He visited the AMNH for six months to examine material and score morphological characters for his thesis disseration.
+                  Jairo A. Moreno-González earned his B.Sc. in Biology from the Universidad del Valle, Colombia, and his Ph.D. in Biological Sciences at Universidade de São Paulo, Brazil. His Ph.D. dissertation focused on the systematics of the neotropical scorpion genus <em>Tityus</em> (Arachnida: <em>Scorpiones</em>, <em>Buthidae</em>), integrating morphological and molecular evidence. In May 2022, Jairo joint the American Museum of Natural History (AMNH) as a postdoc of the NSF project: “Systematics and evolution of <em>Pedipalpi</em> (whip spiders and whip scorpions): phylogenomics and morphology of understudied arachnids”, under the supervision of Dr. Lorenzo Prendini. In 2024, he became a Gerstner Scholar at the Richard Gilder School (RGGS) at AMNH with his project: "Neotropical biogeography assessed from the perspective of the World’s most diverse scorpion genus, <em>Tityus</em>". In May 2026, after finishing his appointment at Gerstner Scholar, he will continue to investigate the biogeography and phylogenomics of <em>Tityus</em> as a postdoctoral NSF STAR Grant scholar. Jairo's research combines detailed phenotype examination and molecular data to test biogeographic and phylogenetic hypotheses, using various arachnid orders —including <em>Amblypygi</em>, <em>Schizomida</em>, <em>Scorpiones</em>, and <em>Thelyphonida</em>— as study models.
                 </p>
               </div>
             </div>
