@@ -9,6 +9,14 @@ import { Tabs } from "../components/Tabs";
 export default function People() {
   const [activeSection, setActiveSection] = useState('lab-evolution');
   const [museumTab, setMuseumTab] = useState<'current' | 'alumni'>('current');
+  const [technicalStaffTab, setTechnicalStaffTab] = useState<'current' | 'alumni'>('current');
+  const [researchAffiliatesTab, setResearchAffiliatesTab] = useState<'current' | 'alumni'>('current');
+  const [postdocsTab, setPostdocsTab] = useState<'current' | 'alumni'>('current');
+  const [graduateStudentsTab, setGraduateStudentsTab] = useState<'current' | 'alumni'>('alumni');
+  const [undergraduateStudentsTab, setUndergraduateStudentsTab] = useState<'current' | 'alumni'>('alumni');
+  const [highSchoolStudentsTab, setHighSchoolStudentsTab] = useState<'current' | 'alumni'>('alumni');
+  const [volunteersTab, setVolunteersTab] = useState<'current' | 'alumni'>('current');
+  const [visitingStudentsTab, setVisitingStudentsTab] = useState<'current' | 'alumni'>('alumni');
   const contentRef = useRef<HTMLDivElement>(null);
 
   const sections = [
@@ -51,7 +59,7 @@ export default function People() {
       <div className="container mx-auto max-w-5xl px-6 py-12">
         <h1 className="text-5xl font-bold mb-8 text-gray-900">People</h1>
         
-        <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+        <p className="text-lg leading-8 text-gray-700 mb-8">
           The Arachnology Lab, headed by Lorenzo Prendini, Associate Curator (Arachnids and Myriapods), 
           includes permanent specialists, various laboratory assistants, postdoctoral fellows, and PhD students. 
           Every year, the Group accommodates several visiting scientists, undergraduate students, high school students, and volunteers.
@@ -71,10 +79,6 @@ export default function People() {
           <div ref={contentRef} className="md:col-span-3">
         {activeSection === 'lab-evolution' && (
         <div>
-          {/* Fall 2019 */}
-          <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">Fall 2019</h2>
-          <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
             <Image
               src="/images/labfall2019_p08qpk.jpg"
@@ -88,7 +92,6 @@ export default function People() {
               Valentin Ehrenthal, Eleanor Goetz, Pio Colmenares, Miryam Trujillo, Ricardo Botero-Trujillo.
             </figcaption>
           </figure>
-        </div>
 
         {/* July 2019 */}
         <div className="mb-12">
@@ -594,6 +597,18 @@ export default function People() {
         {activeSection === 'technical-staff' && (
         <div>
           <h2 className="text-3xl font-bold mb-8 text-gray-900">Technical Staff</h2>
+          <div className="mb-6">
+            <Tabs
+              options={[
+                { value: 'current', label: 'Current' },
+                { value: 'alumni', label: 'Alumni' },
+              ]}
+              value={technicalStaffTab}
+              onChange={setTechnicalStaffTab}
+            />
+          </div>
+          {technicalStaffTab === 'current' && (
+          <>
           {/* Steve Thurston */}
           <div className="mb-12 pb-12 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
@@ -645,6 +660,11 @@ export default function People() {
             </div>
           </div>
 
+          </>
+          )}
+
+          {technicalStaffTab === 'alumni' && (
+          <>
           {/* Alumni Section */}
           <h3 className="text-2xl font-bold mt-12 mb-2 text-gray-900">Alumni</h3>
           <p className="text-xl text-gray-600 mb-8">Former technical staff of the Arachnology Lab at AMNH</p>
@@ -714,12 +734,27 @@ export default function People() {
             ))}
 
           </div>
+          </>
+          )}
         </div>
         )}
 
         {activeSection === 'research-affiliates' && (
         <div>
           <h2 className="text-3xl font-bold mb-8 text-gray-900">Research Affiliates</h2>
+          <div className="mb-6">
+            <Tabs
+              options={[
+                { value: 'current', label: 'Current' },
+                { value: 'alumni', label: 'Alumni' },
+              ]}
+              value={researchAffiliatesTab}
+              onChange={setResearchAffiliatesTab}
+            />
+          </div>
+
+          {researchAffiliatesTab === 'current' && (
+          <>
 
           {/* Boris Zakharov */}
           <div className="mb-12 pb-12 border-b border-gray-200">
@@ -800,6 +835,12 @@ export default function People() {
               </div>
             </div>
           </div>
+          </>
+          )}
+
+          {researchAffiliatesTab === 'alumni' && (
+          <p className="text-gray-700">No alumni listed yet.</p>
+          )}
         </div>
         )}
 
@@ -807,6 +848,18 @@ export default function People() {
         <div>
           <h2 className="text-3xl font-bold mb-2 text-gray-900">Postdocs</h2>
           <p className="text-xl text-gray-600 mb-8">Current and former postdocs at the Arachnology Lab</p>
+          <div className="mb-6">
+            <Tabs
+              options={[
+                { value: 'current', label: 'Current' },
+                { value: 'alumni', label: 'Alumni' },
+              ]}
+              value={postdocsTab}
+              onChange={setPostdocsTab}
+            />
+          </div>
+          {postdocsTab === 'current' && (
+          <>
           
           {/* Muhammad Tahir */}
           <div className="mb-8 pb-8 border-b border-gray-200">
@@ -872,6 +925,11 @@ export default function People() {
             </div>
           </div>
 
+          </>
+          )}
+
+          {postdocsTab === 'alumni' && (
+          <>
           <h3 className="text-2xl font-bold mt-12 mb-2 text-gray-900">Alumni</h3>
           <p className="text-xl text-gray-600 mb-8">Former postdocs of the Arachnology Lab at AMNH</p>
 
@@ -1067,6 +1125,8 @@ export default function People() {
               </div>
             </div>
           </div>
+          </>
+          )}
         </div>
         )}
 
@@ -1076,6 +1136,22 @@ export default function People() {
           <p className="text-xl text-gray-600 mb-8">
             Several graduate students worked in the Arachnology lab in past years. These students were funded from various sources including grants from the <a href="http://www.nsf.gov" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">National Science Foundation</a> and the AMNH (graduate student fellowships and the Comparative Biology Program of the Richard Gilder Graduate School). If you are interested graduate study in the Arachnology lab, please visit the website of the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Richard Gilder Graduate School</a> to apply to the RGGS for a graduate student fellowship for study at a partner programs (e.g., City University of New York).
           </p>
+          <div className="mb-6">
+            <Tabs
+              options={[
+                { value: 'current', label: 'Current' },
+                { value: 'alumni', label: 'Alumni' },
+              ]}
+              value={graduateStudentsTab}
+              onChange={setGraduateStudentsTab}
+            />
+          </div>
+          {graduateStudentsTab === 'current' && (
+          <p className="text-gray-700">No current graduate students listed.</p>
+          )}
+
+          {graduateStudentsTab === 'alumni' && (
+          <>
           
           {/* Jayson Slovak */}
           <div className="mb-8 pb-8 border-b border-gray-200">
@@ -1214,6 +1290,8 @@ export default function People() {
               </div>
             </div>
           </div>
+          </>
+          )}
         </div>
         )}
 
@@ -1223,6 +1301,22 @@ export default function People() {
           <p className="text-xl text-gray-600 mb-8">
             Over the years, several undergraduate students have worked in the Arachnology Lab supported by various internships. Most have gone on to graduate school and beyond. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/undergraduate-fellowships/reu-biology-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Research Experiences for Undergraduates Program.</a>
           </p>
+          <div className="mb-6">
+            <Tabs
+              options={[
+                { value: 'current', label: 'Current' },
+                { value: 'alumni', label: 'Alumni' },
+              ]}
+              value={undergraduateStudentsTab}
+              onChange={setUndergraduateStudentsTab}
+            />
+          </div>
+          {undergraduateStudentsTab === 'current' && (
+          <p className="text-gray-700">No current undergraduate students listed.</p>
+          )}
+
+          {undergraduateStudentsTab === 'alumni' && (
+          <>
           
           <div className="space-y-6">
             {[
@@ -1271,6 +1365,8 @@ export default function People() {
               </div>
             ))}
           </div>
+          </>
+          )}
         </div>
         )}
 
@@ -1280,6 +1376,22 @@ export default function People() {
           <p className="text-xl text-gray-600 mb-8">
             Several high school students worked in the Arachnology Lab supported by various internships. Many went on to undergraduate programs. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program.</a>
           </p>
+          <div className="mb-6">
+            <Tabs
+              options={[
+                { value: 'current', label: 'Current' },
+                { value: 'alumni', label: 'Alumni' },
+              ]}
+              value={highSchoolStudentsTab}
+              onChange={setHighSchoolStudentsTab}
+            />
+          </div>
+          {highSchoolStudentsTab === 'current' && (
+          <p className="text-gray-700">No current high school students listed.</p>
+          )}
+
+          {highSchoolStudentsTab === 'alumni' && (
+          <>
 
           {/* Hritwik Paul */}
           <div className="mb-8 pb-8 border-b border-gray-200">
@@ -1754,6 +1866,8 @@ export default function People() {
               </div>
             </div>
           </div>
+          </>
+          )}
         </div>
         )}
 
@@ -1763,6 +1877,18 @@ export default function People() {
           <p className="text-xl text-gray-600 mb-8">
             The Arachnology Lab at the AMNH has had many dedicated volunteers work with us over the years. With their help we have been able to accomplish a great deal of work. We would like to thank all of our volunteers for their invaluable assistance. If you are interested in volunteering in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/join-support/volunteer-now" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Volunteer Department.</a>
           </p>
+          <div className="mb-6">
+            <Tabs
+              options={[
+                { value: 'current', label: 'Current' },
+                { value: 'alumni', label: 'Alumni' },
+              ]}
+              value={volunteersTab}
+              onChange={setVolunteersTab}
+            />
+          </div>
+          {volunteersTab === 'current' && (
+          <>
 
           <h3 className="text-xl font-bold mb-4 text-gray-900">Current Volunteers</h3>
 
@@ -1810,6 +1936,11 @@ export default function People() {
             </div>
           </div>
 
+          </>
+          )}
+
+          {volunteersTab === 'alumni' && (
+          <>
           <h3 className="text-xl font-bold mb-4 mt-8 text-gray-900">Former Volunteers</h3>
 
           {/* Victoria Long */}
@@ -2649,6 +2780,8 @@ export default function People() {
               </div>
             </div>
           </div>
+          </>
+          )}
         </div>
         )}
 
@@ -2658,6 +2791,22 @@ export default function People() {
           <p className="text-xl text-gray-600 mb-8">
             Many graduate students from other institutions in the U.S. and abroad have visited the AMNH Arachnology Lab in the past, often funded in part by the AMNH Small Grants program (Annette Kade Fellowships, Collections Study Grants and Theodore Roosevelt Memorial Fund). If you are interested in applying for small grants to visit the AMNH, please visit the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/research-grants-and-student-exchange-fellowships" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Richard Gilder Graduate School.</a>
           </p>
+          <div className="mb-6">
+            <Tabs
+              options={[
+                { value: 'current', label: 'Current' },
+                { value: 'alumni', label: 'Alumni' },
+              ]}
+              value={visitingStudentsTab}
+              onChange={setVisitingStudentsTab}
+            />
+          </div>
+          {visitingStudentsTab === 'current' && (
+          <p className="text-gray-700">No current visiting students listed.</p>
+          )}
+
+          {visitingStudentsTab === 'alumni' && (
+          <>
 
           {/* Jairo A. Moreno-González */}
           <div className="mb-6 pb-6 border-b border-gray-200">
@@ -3536,6 +3685,8 @@ export default function People() {
               </div>
             </div>
           </div>
+          </>
+          )}
         </div>
         )}
           </div>
