@@ -31,7 +31,7 @@ export default function People() {
     { id: 'undergraduate-students', label: 'Undergraduate Students' },
     { id: 'high-school-students', label: 'High School Students' },
     { id: 'volunteers', label: 'Volunteers' },
-    { id: 'visiting-students', label: 'Visiting Students' },
+    { id: 'visiting-students', label: 'Visitors' },
   ];
 
   useEffect(() => {
@@ -3318,9 +3318,9 @@ export default function People() {
 
         {activeSection === 'visiting-students' && (
         <div>
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Visiting Students</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Visitors</h2>
           <p className="text-xl text-gray-600 mb-8">
-            Many graduate students from other institutions in the U.S. and abroad have visited the AMNH Arachnology Lab in the past, often funded in part by the AMNH Small Grants program (Annette Kade Fellowships, Collections Study Grants and Theodore Roosevelt Memorial Fund). If you are interested in applying for small grants to visit the AMNH, please visit the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/research-grants-and-student-exchange-fellowships" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Richard Gilder Graduate School.</a>
+            Many postdocs and graduate students from other institutions in the U.S. and abroad have visited the AMNH Arachnology Lab in the past, often funded in part by the AMNH Small Grants program (Annette Kade Fellowships, Collections Study Grants and Theodore Roosevelt Memorial Fund). If you are interested in applying for small grants to visit the AMNH, please visit the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/research-grants-and-student-exchange-fellowships" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Richard Gilder Graduate School.</a>
           </p>
           <div className="mb-6">
             <Tabs
@@ -3333,11 +3333,369 @@ export default function People() {
             />
           </div>
           {visitingStudentsTab === 'current' && (
-          <p className="text-gray-700">No current visiting students listed.</p>
+          <>
+
+          {/* Antonio Galán Sánchez */}
+          <div className="mb-6 pb-6">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Antonio Galán Sánchez" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Antonio Galán Sánchez</h4>
+                <p className="text-sm text-gray-600 mb-1">Museum für Naturkunde, Humboldt-Universität, Berlin, Germany</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2025 and 2026</p>
+                <p className="text-gray-700">
+                  Antonio’s research focuses on the evolution and functional impacts of eye loss in spiders. He is also interested in linyphiid systematics, the online documentation of biodiversity inventories, and the taxonomy of Araneomorphae. As part of his PhD project, Antonio studied the Synspermiata, a diverse but understudied clade of spiders which exhibit extraordinary diversity in eye number. Antonio visited the AMNH collection in January 2025 to revise, identify, and request loan materials. After being awarded an Annette-Kade Fellowship, he returned to the AMNH for three months in 2025 and 2026 to comprehensively survey and document the variation in eyes across the family Pholcidae and other Synspermiata, as well as scan high-quality specimens using the micro-CT facility.
+                </p>
+              </div>
+            </div>
+          </div>
+          </>
           )}
 
           {visitingStudentsTab === 'alumni' && (
           <>
+
+          {/* Matias Izquierdo */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Matias Izquierdo" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Matias Izquierdo</h4>
+                <p className="text-sm text-gray-600 mb-1">Universidad Nacional, Cordoba, Argentina</p>
+                <p className="text-sm text-gray-500 mb-2">Postdoc in 2025</p>
+                <p className="text-gray-700">
+                  Matias visited the AMNH for research on spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Breanna Jordan */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Breanna Jordan" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Breanna Jordan</h4>
+                <p className="text-sm text-gray-600 mb-1">Harvard University, Cambridge, MA</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2025</p>
+                <p className="text-gray-700">
+                  Breanna visited the AMNH for research on sea spiders (Pycnogonida).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Sarah Morris */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Sarah Morris" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Sarah Morris</h4>
+                <p className="text-sm text-gray-600 mb-1">The George Washington University, Washington, DC</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2025</p>
+                <p className="text-gray-700">
+                  Sarah visited the AMNH for research on spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Daniel Castro-Pereira */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Daniel Castro-Pereira" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Daniel Castro-Pereira</h4>
+                <p className="text-sm text-gray-600 mb-1">Universidade de São Paulo, Brazil</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
+                <p className="text-gray-700">
+                  Daniel visited the AMNH for research on whip scorpions (Thelyphonida) supported by a grant from FAPESP.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Kaylin Chong */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Kaylin Chong" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Kaylin Chong</h4>
+                <p className="text-sm text-gray-600 mb-1">Harvard University, Cambridge, MA</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
+                <p className="text-gray-700">
+                  Kaylin visited the AMNH for research on ticks (Acari: Ixodida).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Erik Ciaccio */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Erik Ciaccio" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Erik Ciaccio</h4>
+                <p className="text-sm text-gray-600 mb-1">University of Idaho, Moscow, ID</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
+                <p className="text-gray-700">
+                  Erik visited the AMNH for research on mygalomorph spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Valentin Ehrenthal */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Valentin Ehrenthal" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Valentin Ehrenthal</h4>
+                <p className="text-sm text-gray-600 mb-1">University of Hamburg, Germany</p>
+                <p className="text-sm text-gray-500 mb-2">MS student in 2024</p>
+                <p className="text-gray-700">
+                  Valentin visited the AMNH for research on Asian scorpions supported by an Annette Kade Fellowship.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Miguel Garcia */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Miguel Garcia" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Miguel Garcia</h4>
+                <p className="text-sm text-gray-600 mb-1">Instituto Politecnico Nacional, Mexico</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
+                <p className="text-gray-700">
+                  Miguel visited the AMNH for his research on spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Leonel Martinez */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Leonel Martinez" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Leonel Martinez</h4>
+                <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales, Argentina</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2024 and 2025</p>
+                <p className="text-gray-700">
+                  Leonel visited the AMNH twice (2024, 2025) for research on spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Paulo Pantoja */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Paulo Pantoja" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Paulo Pantoja</h4>
+                <p className="text-sm text-gray-600 mb-1">Federal University of Pará, Brazil</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
+                <p className="text-gray-700">
+                  Paulo visited the AMNH for research on spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Karina Silvestre */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Karina Silvestre" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Karina Silvestre</h4>
+                <p className="text-sm text-gray-600 mb-1">University of Idaho, Moscow, ID</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
+                <p className="text-gray-700">
+                  Karina visited the AMNH for research on mygalomorph spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Pedro Martins */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Pedro Martins" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Pedro Martins</h4>
+                <p className="text-sm text-gray-600 mb-1">Federal University of Minas Gerais, Brazil</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2023</p>
+                <p className="text-gray-700">
+                  Pedro visited the AMNH for research on spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Goran Shikak */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Goran Shikak" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Goran Shikak</h4>
+                <p className="text-sm text-gray-600 mb-1">University of Colorado, Denver, CO</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2023</p>
+                <p className="text-gray-700">
+                  Goran visited the AMNH for research on Solifugae.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Pietro Tardelli */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Pietro Tardelli" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Pietro Tardelli</h4>
+                <p className="text-sm text-gray-600 mb-1">The George Washington University, Washington, DC</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2023</p>
+                <p className="text-gray-700">
+                  Pietro visited the AMNH for research on spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Arnau Calatayud-Mascarell */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Arnau Calatayud-Mascarell" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Arnau Calatayud-Mascarell</h4>
+                <p className="text-sm text-gray-600 mb-1">University of Idaho, Moscow, ID</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student from 2022 to 2025</p>
+                <p className="text-gray-700">
+                  Arnau visited the AMNH three times (2022, 2023, 2025) for his research on mygalomorph spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* David Chamé-Vázquez */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="David Chamé-Vázquez" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">David Chamé-Vázquez</h4>
+                <p className="text-sm text-gray-600 mb-1">Centro de Investigaciones Biológicas del Noroeste, La Paz, Mexico</p>
+                <p className="text-sm text-gray-500 mb-2">Postdoc in 2022</p>
+                <p className="text-gray-700">
+                  David visited the AMNH for research on phrurolithid spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Sahibzada M. Jawad */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Sahibzada M. Jawad" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Sahibzada M. Jawad</h4>
+                <p className="text-sm text-gray-600 mb-1">Ismailia College, Peshawar, Pakistan</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2022</p>
+                <p className="text-gray-700">
+                  Sahib visited the AMNH for research on Pakistani scorpions supported by a HEC Pakistan Ph.D. Fellowship.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Willians Porto */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Willians Porto" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Willians Porto</h4>
+                <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales, Argentina</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2022</p>
+                <p className="text-gray-700">
+                  Willians visited the AMNH for research on harvestmen (Opiliones).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Valerie Warhol */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Valerie Warhol" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Valerie Warhol</h4>
+                <p className="text-sm text-gray-600 mb-1">Carnegie Museum of Natural History, Pittsburgh, PA</p>
+                <p className="text-sm text-gray-500 mb-2">Volunteer researcher in 2022</p>
+                <p className="text-gray-700">
+                  Valerie visited the AMNH for research on spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Shahan Derkarabetian */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Shahan Derkarabetian" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Shahan Derkarabetian</h4>
+                <p className="text-sm text-gray-600 mb-1">Harvard University, Cambridge, MA</p>
+                <p className="text-sm text-gray-500 mb-2">Postdoc in 2019</p>
+                <p className="text-gray-700">
+                  Shahan visited the AMNH for research on harvestmen (Opiliones).
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* Jairo A. Moreno-González */}
           <div className="mb-6 pb-6 border-b border-gray-200">
@@ -3431,6 +3789,29 @@ export default function People() {
             </div>
           </div>
 
+          {/* Rene Barba */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <Image
+                  src="/images/ReneBarba.jpg"
+                  alt="Rene Barba"
+                  width={300}
+                  height={400}
+                  className="w-full h-auto rounded-sm"
+                />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Rene Barba</h4>
+                <p className="text-sm text-gray-600 mb-1">Instituto de Ecología y Sistemática, Havana, Cuba | Collections Study Grant</p>
+                <p className="text-sm text-gray-500 mb-2">Student in 2019</p>
+                <p className="text-gray-700">
+                  Rene's research focuses on the pseudoscorpion families Sternophoridae, Olpiidae and Garypinidae. He visited the AMNH collections to examine and image type and nontype material from the Caribbean.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Jahnavi Joshi */}
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
@@ -3492,7 +3873,7 @@ export default function People() {
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Stephan Schaffrath</h4>
                 <p className="text-sm text-gray-600 mb-1">University of Cologne, Germany</p>
-                <p className="text-sm text-gray-500 mb-2">PhD Student from 2014 to 2014 and in 2018</p>
+                <p className="text-sm text-gray-500 mb-2">PhD Student in 2014 and 2018</p>
                 <p className="text-gray-700">
                   For Stephan's PhD he visited the AMNH to receive training in DNA isolation, amplification and sequencing while investigating the chemical composition of scorpion venoms, with a view to using species-specific signatures for systematics. Later, Stephan returned to spend three months at the AMNH generating DNA and morphological data for his PhD thesis, focused on the scorpion genus <em>Euscorpius</em> (Euscorpiidae).
                 </p>
@@ -3500,20 +3881,20 @@ export default function People() {
             </div>
           </div>
 
-          {/* Carlos Albeto Martinez Muñoz */}
+          {/* Carlos Alberto Martinez Muñoz */}
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
                 <Image
                   src="/images/CarlosM.jpg"
-                  alt="Carlos Albeto Martinez Muñoz"
+                  alt="Carlos Alberto Martinez Muñoz"
                   width={300}
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
               </div>
               <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Carlos Albeto Martinez Muñoz</h4>
+                <h4 className="text-base font-bold mb-1 text-gray-900">Carlos Alberto Martinez Muñoz</h4>
                 <p className="text-sm text-gray-600 mb-1">University of Turku, Finland</p>
                 <p className="text-sm text-gray-500 mb-2">PhD Student from 2018 to 2019</p>
                 <p className="text-gray-700">
@@ -3729,6 +4110,23 @@ export default function People() {
             </div>
           </div>
 
+          {/* Rebecca Godwin */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Rebecca Godwin" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Rebecca Godwin</h4>
+                <p className="text-sm text-gray-600 mb-1">Auburn University, AL</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
+                <p className="text-gray-700">
+                  Rebecca visited the AMNH for research on trapdoor spiders.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Francisco Salgueiro Sepulveda */}
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
@@ -3907,29 +4305,6 @@ export default function People() {
             </div>
           </div>
 
-          {/* Rene Barba */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <Image
-                  src="/images/ReneBarba.jpg"
-                  alt="Rene Barba"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Rene Barba</h4>
-                <p className="text-sm text-gray-600 mb-1">Instituto de Ecología y Sistemática, Havana, Cuba | Collections Study Grant</p>
-                <p className="text-sm text-gray-500 mb-2">Student in 2019</p>
-                <p className="text-gray-700">
-                  Rene's research focuses on the pseudoscorpion families Sternophoridae, Olpiidae and Garypinidae. He visited the AMNH collections to examine and image type and nontype material from the Caribbean.
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Roberta Engel */}
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
@@ -3942,6 +4317,23 @@ export default function People() {
                 <p className="text-sm text-gray-500 mb-2">Student in 2012</p>
                 <p className="text-gray-700">
                   Roberta's research focused on the systematics of pseudoscorpions. She visited the AMNH to examine the holdings of Australian pseudoscorpions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* David Vrech */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="David Vrech" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">David Vrech</h4>
+                <p className="text-sm text-gray-600 mb-1">Universidad Nacional de Córdoba, Argentina</p>
+                <p className="text-sm text-gray-500 mb-2">PhD student in 2012</p>
+                <p className="text-gray-700">
+                  David visited the AMNH for research on the sperm packages of scorpions.
                 </p>
               </div>
             </div>
