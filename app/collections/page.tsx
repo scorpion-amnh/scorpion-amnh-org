@@ -35,13 +35,12 @@ export default function Collections() {
         {/* Grid Layout with Sidebar Navigation */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 relative">
           {/* Sidebar Navigation */}
-          <div className="lg:col-span-1">
-            <SideNav
-              sections={sections}
-              activeSection={activeSection}
-              onSelect={setActiveSection}
-            />
-          </div>
+          <SideNav
+            className="lg:col-span-1"
+            sections={sections}
+            activeSection={activeSection}
+            onSelect={setActiveSection}
+          />
 
           {/* Content Area */}
           <div ref={contentRef} className="lg:col-span-3">

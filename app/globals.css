@@ -41,3 +41,11 @@ li {
   padding-left: 0.1em;
 }
 
+.side-nav-scroll {
+  scrollbar-width: none;
+}
+
+.side-nav-scroll::-webkit-scrollbar {
+  height: 0;
+}
+
