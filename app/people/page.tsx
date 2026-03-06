@@ -1548,7 +1548,57 @@ export default function People() {
             />
           </div>
           {undergraduateStudentsTab === 'current' && (
-          <p className="text-gray-700">No current undergraduate students listed.</p>
+          <>
+          <div className="space-y-6">
+            {[
+              {
+                name: 'William Phillips',
+                affiliation: 'Rutgers University, New Brunswick, NJ',
+                years: '2024 to present',
+                image: null,
+                bio: 'William (Will) worked in the Arachnology lab from 2024, recording meristic data and conducting digital imaging on scorpions, supervised by Lorenzo Prendini, and conducting DNA extraction, quantitation, PCR and sequencing, supervised by Colby Sain.',
+              },
+              {
+                name: 'Dhruva Mathews Jagga Ram',
+                affiliation: 'Columbia University, New York, NY',
+                years: '2025 to 2026',
+                image: null,
+                bio: 'Dhruva worked in the Arachnology lab in 2025 and 2026, conducting DNA extraction, quantitation, PCR and sequencing, supervised by Colby Sain.',
+              },
+              {
+                name: 'Maggie Mannon',
+                affiliation: 'Rutgers University, New Brunswick, NJ',
+                years: '2025 to 2026',
+                image: null,
+                bio: 'Maggie worked in the Arachnology lab in 2025 and 2026, recording morphometric data from scorpions, under the supervision of Jairo Moreno-González and Lorenzo Prendini.',
+              },
+            ].map((person, index) => (
+              <div key={index} className={`pb-6 ${index < 2 ? 'border-b border-gray-200' : ''}`}>
+                <div className="grid md:grid-cols-5 gap-6">
+                  <div className="md:col-span-2">
+                    {person.image ? (
+                      <Image
+                        src={`/images/${person.image}`}
+                        alt={person.name}
+                        width={400}
+                        height={533}
+                        className="w-full h-auto rounded-sm"
+                      />
+                    ) : (
+                      <PhotoPlaceholder name={person.name} />
+                    )}
+                  </div>
+                  <div className="md:col-span-3">
+                    <h3 className="text-lg font-bold mb-1 text-gray-900">{person.name}</h3>
+                    <p className="text-base text-gray-600 mb-1">{person.affiliation}</p>
+                    <p className="text-sm text-gray-500 mb-3">Undergraduate student {person.years.includes('to') ? 'from' : 'in'} {person.years}</p>
+                    <p className="text-gray-700">{person.bio}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          </>
           )}
 
           {undergraduateStudentsTab === 'alumni' && (
@@ -1556,6 +1606,30 @@ export default function People() {
           
           <div className="space-y-6">
             {[
+              { name: 'Allison Borkenhagen', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2025', image: null, bio: 'Allison worked in the Arachnida and Myriapoda collections in the summer of 2025, assisting Pio Colmenares and Lorenzo Prendini with sorting, organization and curation of the arachnid collections.' },
+              { name: 'Sharon Brown', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2025', image: null, bio: 'Sharon worked in the Arachnida and Myriapoda collections in the summer of 2025, assisting Pio Colmenares and Lorenzo Prendini with sorting, organization and curation of the arachnid collections.' },
+              { name: 'Jack Coulson', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2025', image: null, bio: 'Jack worked in the Arachnology lab in the summer of 2025, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Pio Colmenares.' },
+              { name: 'Eugene Ko', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2025', image: null, bio: 'Eugene worked in the Arachnology lab in the summer of 2025, recording morphometric data and conducting digital imaging on scorpions, under the supervision of Jairo Moreno-González.' },
+              { name: 'Jakub Minkiewicz', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2025', image: null, bio: 'Jakub worked in the Arachnology lab in the summer of 2025, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Pio Colmenares.' },
+              { name: 'Adithya Raghunath', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2025', image: null, bio: 'Adithya worked in the Arachnology lab in the summer of 2025, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Pio Colmenares.' },
+              { name: 'Drusilla Sheridan', affiliation: 'CUNY, John Jay College', years: '2025', image: null, bio: 'Dru worked in the Arachnology lab in 2025, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Pio Colmenares and Colby Sain.' },
+              { name: 'Maxine Ting', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2025', image: null, bio: 'Maxine worked in the Arachnology lab in the summer of 2025, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Pio Colmenares.' },
+              { name: 'Russell Gurland', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2024 to 2025', image: null, bio: 'In the summer of 2024, Russell worked in the Arachnida and Myriapoda collections, assisting Pio Colmenares with sorting, organization and curation of the arachnid collections. In the summer of 2025, Russell assisted Lorenzo Prendini with digital imaging of scorpions.' },
+              { name: 'Cassandra Hansen', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2024', image: null, bio: 'Cassandra worked in the Arachnida and Myriapoda collections in the summer of 2024, assisting Pio Colmenares and Lorenzo Prendini with sorting, organization and curation of the arachnid collections.' },
+              { name: 'Delia Lasek', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2024', image: null, bio: 'Delia worked in the Arachnology lab in the summer of 2024, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Pio Colmenares.' },
+              { name: 'Emma Leonard', affiliation: 'Binghamton University, Binghamton, NY', years: '2024', image: null, bio: 'Emma worked in the Arachnology lab in the summer of 2024 with a team of undergraduate students to obtain foundational skills for PCR, biology research, and professional development, under the supervision of Pio Colmenares. She then moved to the Cornell School of Veterinary Medicine (DVM program).' },
+              { name: 'Grace Michlik', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2024', image: null, bio: 'Grace worked in the Arachnology lab in the summer of 2024, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Pio Colmenares.' },
+              { name: 'Amara Pardo', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2024', image: null, bio: 'Amara worked in the Arachnida and Myriapoda collections in the summer of 2024, assisting Pio Colmenares and Lorenzo Prendini with sorting, organization and curation of the arachnid collections.' },
+              { name: 'Mann Patel', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2024', image: null, bio: 'During the summer of 2024, Mann worked in the Arachnology Lab, extracting DNA samples and sequencing genes from 70 species, gaining hands-on experience that directly strengthened his training and skills as a genetics major.' },
+              { name: 'Christania Fraenkel', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2023', image: null, bio: 'Christania worked in the Arachnology lab in the summer of 2023, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Pio Colmenares.' },
+              { name: 'Mitchell Kiwior', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2023', image: null, bio: 'Mitch worked in the Arachnida and Myriapoda collections in the summer of 2023, assisting Pio Colmenares with curation and organization of the Cokendolper collection of arachnids.' },
+              { name: 'Graham Ort', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2023', image: null, bio: 'Graham worked in the Arachnology lab in the summer of 2023, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Pio Colmenares.' },
+              { name: 'Thi Vu', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2023', image: null, bio: 'Thi worked in the Arachnida and Myriapoda collections in the summer of 2023, assisting Pio Colmenares with curation and organization of the Cokendolper collection of arachnids.' },
+              { name: 'Hannah Choi', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2022', image: null, bio: 'Hannah worked in the Arachnida and Myriapoda collections in the summer of 2022, assisting Pio Colmenares with curation and digitization of a collection of Chilean spiders.' },
+              { name: 'Alexus Crespo', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2022', image: null, bio: 'Alexus worked in the Arachnology lab in the summer of 2022, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Pio Colmenares.' },
+              { name: 'Camille Jaramillo', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2022', image: null, bio: 'Camille worked in the Arachnida and Myriapoda collections in the summer of 2022, assisting Pio Colmenares with curation and digitization of a collection of Chilean spiders.' },
+              { name: 'Angie Lopez', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2022', image: null, bio: 'Angie worked in the Arachnology lab in the summer of 2022, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Pio Colmenares.' },
+              { name: 'Jared Martin', affiliation: 'University of Illinois Urbana-Champaign', years: '2022', image: null, bio: 'Jared worked in the Arachnida and Myriapoda Collections in the summer of 2022, assisting with curation of a donation of Opiliones (harvestmen).' },
               { name: 'Valentin Ehrenthal', affiliation: 'University of Hamburg, Germany', years: '2019 to 2020', image: 'Valentin_r2sqbc.jpg', bio: 'Valentin spent six months at the AMNH working on Southeast Asian scorpions. He generated images and data for a morphological matrix and performed extractions, PCRs and Sanger Sequencing. Additionally, he learned about the biogeography and phylogeny of these scorpions.' },
               { name: 'Diogo Casellato', affiliation: 'CUNY, Baruch College | Brazil Scientific Mobility Program', years: '2015 to 2019', image: 'DiogoCasellato2015.jpg', bio: 'Diogo interned in the molecular lab, learning to extract, amplify, sequence, and edit DNA as part of a variety of scorpion phylogenetics projects.' },
               { name: 'Elena Babicz', affiliation: 'Bridgewater State University', years: '2019', image: 'Elena.jpg', bio: 'Elena spent the summer at the AMNH as an REU intern under the supervision of Stephanie Loria and Pio Colmenares, focusing on Thelyphonids. She was tasked with generating molecular data and images of the specimens, and also learned about the morphology, biogeography and phylogeny of this order of arachnids.' },
