@@ -79,6 +79,8 @@ export default function People() {
           <div ref={contentRef} className="md:col-span-3">
         {activeSection === 'lab-evolution' && (
         <div>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Fall 2019</h2>
+          <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
             <Image
               src="/images/labfall2019_p08qpk.jpg"
@@ -95,7 +97,7 @@ export default function People() {
 
         {/* July 2019 */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">July 2019</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">July 2019</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
             <Image
@@ -114,7 +116,7 @@ export default function People() {
 
         {/* August 2018 */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">August 2018</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">August 2018</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
             <Image
@@ -133,7 +135,7 @@ export default function People() {
 
         {/* September 2017 */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">September 2017</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">September 2017</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
             <Image
@@ -152,7 +154,7 @@ export default function People() {
 
         {/* August 2017 */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">August 2017</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">August 2017</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
             <Image
@@ -170,7 +172,7 @@ export default function People() {
 
         {/* August 2015 */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">August 2015</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">August 2015</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
             <Image
@@ -189,7 +191,7 @@ export default function People() {
 
         {/* January 2015 */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">January 2015</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">January 2015</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
             <Image
@@ -207,7 +209,7 @@ export default function People() {
 
         {/* August 2013 */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">August 2013</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">August 2013</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
             <Image
@@ -225,7 +227,7 @@ export default function People() {
 
         {/* August 2011 */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">August 2011</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">August 2011</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
             <Image
@@ -244,7 +246,7 @@ export default function People() {
 
         {/* 2006 */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">2006</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2006</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
             <Image
@@ -264,7 +266,7 @@ export default function People() {
 
         {/* 2007 */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">2007</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2007</h2>
           <h6 className="text-lg text-gray-600 mb-6">Scorpion Biologists ICA</h6>
           <figure className="mb-8">
             <Image
@@ -284,7 +286,7 @@ export default function People() {
 
         {/* October 2007 */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">October 2007</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">October 2007</h2>
           <h6 className="text-lg text-gray-600 mb-6">BSI Solifugae Meeting at DMNS</h6>
           <figure className="mb-8">
             <Image
@@ -304,7 +306,7 @@ export default function People() {
 
         {/* December 2008 */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-1">December 2008</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">December 2008</h2>
           <h6 className="text-lg text-gray-600 mb-6">AToL Morphology Scoring Party at Smithsonian USNM</h6>
           <figure className="mb-8">
             <Image
@@ -325,7 +327,7 @@ export default function People() {
 
         {activeSection === 'principal-investigator' && (
         <div id="principal-investigator">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">Principal Investigator</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Principal Investigator</h2>
           <p className="text-xl text-gray-600 mb-8">Head of the Arachnology Lab at AMNH</p>
           
           <div className="pb-8">
@@ -504,7 +506,7 @@ export default function People() {
 
         {activeSection === 'museum-specialists' && (
         <div id="museum-specialists">
-          <h2 className="text-3xl font-bold mb-8 text-gray-900">Museum Specialists</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-8 text-gray-900">Museum Specialists</h2>
 
           <div className="mb-6">
             <Tabs
@@ -687,7 +689,7 @@ export default function People() {
 
         {activeSection === 'technical-staff' && (
         <div className="people-compact">
-          <h2 className="text-3xl font-bold mb-8 text-gray-900">Technical Staff</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-8 text-gray-900">Technical Staff</h2>
           <div className="mb-6">
             <Tabs
               options={[
@@ -832,7 +834,7 @@ export default function People() {
 
         {activeSection === 'research-affiliates' && (
         <div className="people-compact">
-          <h2 className="text-3xl font-bold mb-8 text-gray-900">Research Affiliates</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-8 text-gray-900">Research Affiliates</h2>
           <div className="mb-6">
             <Tabs
               options={[
@@ -937,7 +939,7 @@ export default function People() {
 
         {activeSection === 'postdocs' && (
         <div className="people-compact">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">Postdocs</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Postdocs</h2>
           <p className="text-xl text-gray-600 mb-8">Current and former postdocs at the Arachnology Lab</p>
           <div className="mb-6">
             <Tabs
@@ -1223,7 +1225,7 @@ export default function People() {
 
         {activeSection === 'graduate-students' && (
         <div className="people-compact">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">Graduate Students</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Graduate Students</h2>
           <p className="text-xl text-gray-600 mb-8">
             Several graduate students worked in the Arachnology lab in past years. These students were funded from various sources including grants from the <a href="http://www.nsf.gov" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">National Science Foundation</a> and the AMNH (graduate student fellowships and the Comparative Biology Program of the Richard Gilder Graduate School). If you are interested graduate study in the Arachnology lab, please visit the website of the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Richard Gilder Graduate School</a> to apply to the RGGS for a graduate student fellowship for study at a partner programs (e.g., City University of New York).
           </p>
@@ -1388,7 +1390,7 @@ export default function People() {
 
         {activeSection === 'undergraduate-students' && (
         <div className="people-compact">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">Undergraduate Students</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Undergraduate Students</h2>
           <p className="text-xl text-gray-600 mb-8">
             Over the years, several undergraduate students have worked in the Arachnology Lab supported by various internships. Most have gone on to graduate school and beyond. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/undergraduate-fellowships/reu-biology-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Research Experiences for Undergraduates Program.</a>
           </p>
@@ -1463,7 +1465,7 @@ export default function People() {
 
         {activeSection === 'high-school-students' && (
         <div className="people-compact">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">High School Students</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">High School Students</h2>
           <p className="text-xl text-gray-600 mb-8">
             Several high school students worked in the Arachnology Lab supported by various internships. Many went on to undergraduate programs. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program.</a>
           </p>
@@ -1964,7 +1966,7 @@ export default function People() {
 
         {activeSection === 'volunteers' && (
         <div>
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">Volunteers and Field Assistants</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Volunteers and Field Assistants</h2>
           <p className="text-xl text-gray-600 mb-8">
             The Arachnology Lab at the AMNH has had many dedicated volunteers work with us over the years. With their help we have been able to accomplish a great deal of work. We would like to thank all of our volunteers for their invaluable assistance. If you are interested in volunteering in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/join-support/volunteer-now" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Volunteer Department.</a>
           </p>
@@ -2878,7 +2880,7 @@ export default function People() {
 
         {activeSection === 'visiting-students' && (
         <div>
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">Visiting Students</h2>
+          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Visiting Students</h2>
           <p className="text-xl text-gray-600 mb-8">
             Many graduate students from other institutions in the U.S. and abroad have visited the AMNH Arachnology Lab in the past, often funded in part by the AMNH Small Grants program (Annette Kade Fellowships, Collections Study Grants and Theodore Roosevelt Memorial Fund). If you are interested in applying for small grants to visit the AMNH, please visit the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/research-grants-and-student-exchange-fellowships" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Richard Gilder Graduate School.</a>
           </p>
