@@ -58,9 +58,9 @@ export default function People() {
         </p>
 
         {/* Grid Layout with Sidebar Navigation */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 relative">
           {/* Sidebar Navigation */}
-          <div className="lg:col-span-1">
+          <div className="sm:col-span-1">
             <SideNav
               sections={sections}
               activeSection={activeSection}
@@ -69,7 +69,7 @@ export default function People() {
           </div>
 
           {/* Content Area */}
-          <div ref={contentRef} className="lg:col-span-3">
+          <div ref={contentRef} className="sm:col-span-3">
         {activeSection === 'lab-evolution' && (
         <div>
           {/* Fall 2019 */}
