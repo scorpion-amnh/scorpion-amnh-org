@@ -2392,7 +2392,65 @@ export default function People() {
           {volunteersTab === 'current' && (
           <>
 
-          <h3 className="text-xl font-bold mb-4 text-gray-900">Current Volunteers</h3>
+          {/* Soleil Blanquera */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Soleil Blanquera" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Soleil Blanquera</h4>
+                <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
+                <p className="text-gray-700">
+                  Soleil volunteered at the Arachnology Lab in 2025 and 2026, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Colby Sain.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Brian Sperber */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <PhotoPlaceholder name="Brian Sperber" />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Brian Sperber</h4>
+                <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
+                <p className="text-gray-700">
+                  Brian volunteered in the Arachnida and Myriapoda from 2021, assisting Pio Colmenares with sorting, organization and curation of collections.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Victoria Long */}
+          <div className="mb-6 pb-6">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <Image
+                  src="/images/victoria.jpg"
+                  alt="Victoria Long"
+                  width={300}
+                  height={400}
+                  className="w-full h-auto rounded-sm"
+                />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Victoria Long</h4>
+                <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
+                <p className="text-gray-700">
+                  Victoria is a volunteer who previously worked in the Arachnology Lab as a Technician.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          </>
+          )}
+
+          {volunteersTab === 'alumni' && (
+          <>
 
           {/* George Tsinias */}
           <div className="mb-6 pb-6 border-b border-gray-200">
@@ -2408,9 +2466,9 @@ export default function People() {
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">George Tsinias</h4>
-                <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
+                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
                 <p className="text-gray-700">
-                  George helps with curatorial tasks in the main collection, like labeling and rebottling material.
+                  George helped with curatorial tasks, like labeling and rebottling material, in the main collection.
                 </p>
               </div>
             </div>
@@ -2430,38 +2488,9 @@ export default function People() {
               </div>
               <div className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Christian Liriano</h4>
-                <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
-                <p className="text-gray-700">
-                  Christian is currently preparing material for loans in the spider collection. He also showed great interest for harvestmen.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          </>
-          )}
-
-          {volunteersTab === 'alumni' && (
-          <>
-          <h3 className="text-xl font-bold mb-4 mt-8 text-gray-900">Former Volunteers</h3>
-
-          {/* Victoria Long */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <Image
-                  src="/images/victoria.jpg"
-                  alt="Victoria Long"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Victoria Long</h4>
                 <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
                 <p className="text-gray-700">
-                  Victoria first came to the lab as a volunteer, assisting with DNA extractions and PCR reactions, as well as curatorial tasks in the main collections. She currently serves as technical staff for the lab.
+                  Christian prepared material for loans in the spider collection and was interested in harvestmen.
                 </p>
               </div>
             </div>
@@ -2625,7 +2654,7 @@ export default function People() {
                 <h4 className="text-base font-bold mb-1 text-gray-900">Stefan Foord</h4>
                 <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
                 <p className="text-gray-700">
-                  Stefan is an arachnologist and professor at the University of Venda, South Africa who has generously donated material to the AMNH for several years.
+                  Stefan was an arachnologist and professor at the University of Venda, South Africa who generously donated material to the AMNH. RIP.
                 </p>
               </div>
             </div>
@@ -3239,7 +3268,7 @@ export default function People() {
                 <h4 className="text-base font-bold mb-1 text-gray-900">Zach Valois</h4>
                 <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
                 <p className="text-gray-700">
-                  Zach assisted the NSF-REVSYS Vaejovidae project with fieldwork throughout Arizona, Nevada, and Utah. Zach is currently studying scorpion biogeography at the Utah State University.
+                  Zach generously assisted the NSF-REVSYS Vaejovidae project with fieldwork throughout Arizona, Nevada, and Utah. Zach was studying scorpion biogeography at the Utah State University. RIP.
                 </p>
               </div>
             </div>
