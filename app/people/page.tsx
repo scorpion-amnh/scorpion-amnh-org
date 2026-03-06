@@ -7,6 +7,7 @@ import { SideNav } from "../components/SideNav";
 
 export default function People() {
   const [activeSection, setActiveSection] = useState('lab-evolution');
+  const [museumTab, setMuseumTab] = useState<'current' | 'alumni'>('current');
   const contentRef = useRef<HTMLDivElement>(null);
 
   const sections = [
@@ -411,6 +412,29 @@ export default function People() {
         <div id="museum-specialists">
           <h2 className="text-3xl font-bold mb-8 text-gray-900">Museum Specialists</h2>
 
+          <div className="mb-6 border-b border-gray-200">
+            <div className="flex gap-6">
+              <button
+                type="button"
+                onClick={() => setMuseumTab('current')}
+                className={`relative -mb-px px-1 pb-2 text-sm font-medium transition-colors ${museumTab === 'current' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-600 border-b-2 border-transparent hover:text-gray-800'}`}
+                aria-selected={museumTab === 'current'}
+              >
+                Current
+              </button>
+              <button
+                type="button"
+                onClick={() => setMuseumTab('alumni')}
+                className={`relative -mb-px px-1 pb-2 text-sm font-medium transition-colors ${museumTab === 'alumni' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-600 border-b-2 border-transparent hover:text-gray-800'}`}
+                aria-selected={museumTab === 'alumni'}
+              >
+                Alumni
+              </button>
+            </div>
+          </div>
+
+          {museumTab === 'current' && (
+          <>
           {/* Pio Colmenares */}
           <div className="mb-12 pb-12 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
@@ -450,7 +474,11 @@ export default function People() {
               </div>
             </div>
           </div>
+          </>
+          )}
 
+          {museumTab === 'alumni' && (
+          <>
           <h3 className="text-2xl font-bold mt-12 mb-2 text-gray-900">Alumni</h3>
           <p className="text-xl text-gray-600 mb-8">Former museum specialists of the Arachnology Lab at AMNH</p>
 
@@ -568,6 +596,8 @@ export default function People() {
               </div>
             </div>
           </div>
+          </>
+          )}
         </div>
         )}
 
