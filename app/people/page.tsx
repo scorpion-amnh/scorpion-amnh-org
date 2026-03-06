@@ -341,15 +341,85 @@ export default function People() {
               </div>
               
               <div className="md:col-span-3">
-                <h3 className="text-xl font-bold mb-1 text-gray-900">Lorenzo Prendini</h3>
-                <p className="text-lg text-gray-600 mb-1"> Curator of Arachnida and Myriapoda, Division of Invertebrate Zoology</p>
-                <p className="text-lg text-gray-600 mb-1"> Professor of Comparative Biology, Richard Gilder Graduate School</p>
-                <p className="text-lg text-gray-600 mb-1"> Principle Investigator, Institute of Comparative Genomics</p>
-                <p className="text-lg text-gray-600 mb-1"> Chair, AMNH Scientific Publications</p>
-                <p className="text-lg text-gray-600 mb-4"> Adjunct Professor, Ecology, Evolution and Behavior, City University of New York
-                </p>
-                
-                <div className="space-y-3 mb-8">
+                <h3 className="text-xl font-bold mb-2 text-gray-900">Lorenzo Prendini</h3>
+                <div className="space-y-3 mb-4">
+                  <p className="text-lg text-gray-600 mb-0">
+                    Curator of Arachnida and Myriapoda, Division of Invertebrate Zoology
+                  </p>
+                  <p className="text-base text-gray-600 mt-0">
+                    <a
+                      href="https://www.amnh.org/research/staff-directory/lorenzo-prendini"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      Lorenzo Prendini: Curator, Invertebrate Zoology, Professor RGGS | AMNH
+                    </a>
+                  </p>
+                  <p className="text-lg text-gray-600 mb-0">
+                    Professor of Comparative Biology, Richard Gilder Graduate School
+                  </p>
+                  <p className="text-base text-gray-600 mt-0">
+                    <a
+                      href="https://www.amnh.org/research/richard-gilder-graduate-school"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      Graduate Programs at the Museum | Richard Gilder Graduate School
+                    </a>
+                  </p>
+                  <p className="text-lg text-gray-600 mb-0">
+                    Principle Investigator, Institute of Comparative Genomics
+                  </p>
+                  <p className="text-base text-gray-600 mt-0">
+                    <a
+                      href="https://www.amnh.org/research/institute-comparative-genomics"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      Institute for Comparative Genomics | AMNH
+                    </a>
+                  </p>
+                  <p className="text-lg text-gray-600 mb-0">
+                    Chair, AMNH Scientific Publications
+                  </p>
+                  <p className="text-base text-gray-600 mt-0">
+                    <a
+                      href="https://www.amnh.org/research/scientific-publications"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      Scientific Publications | American Museum of Natural History
+                    </a>
+                  </p>
+                  <p className="text-lg text-gray-600 mb-0">
+                    Adjunct Professor, Ecology, Evolution and Behavior, City University of New York
+                  </p>
+                  <p className="text-base text-gray-600 mt-0">
+                    <a
+                      href="https://www.gc.cuny.edu/people/lorenzo-prendini"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      Prendini, Lorenzo | CUNY Graduate Center
+                    </a>
+                  </p>
+                </div>
+                <div className="space-y-3 mt-8 mb-8">
+                  <h4 className="text-base font-bold mb-3 text-gray-900">CV and Online Profiles</h4>
+                  <p>
+                    <a 
+                      href="/documents/PrendiniCV2020_jyaiq9.pdf" 
+                      target="_blank"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      Curriculum Vitae (PDF)
+                    </a>
+                  </p>
                   <p>
                     <a 
                       href="https://www.researchgate.net/profile/Lorenzo-Prendini" 
@@ -358,15 +428,6 @@ export default function People() {
                       className="text-blue-600 hover:text-blue-800 underline"
                     >
                       Research Gate
-                    </a>
-                  </p>
-                  <p>
-                    <a 
-                      href="/documents/PrendiniCV2020_jyaiq9.pdf" 
-                      target="_blank"
-                      className="text-blue-600 hover:text-blue-800 underline"
-                    >
-                      Curriculum Vitae (PDF)
                     </a>
                   </p>
                   <p>
@@ -387,6 +448,36 @@ export default function People() {
                       className="text-blue-600 hover:text-blue-800 underline"
                     >
                       Google Scholar
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="https://orcid.org/0000-0001-8727-7106"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      ORCID
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="https://www.linkedin.com/in/lorenzo-prendini-34824218/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      LinkedIn
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="https://loop.frontiersin.org/people/722676/bio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      Loop
                     </a>
                   </p>
                 </div>
