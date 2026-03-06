@@ -595,7 +595,7 @@ export default function People() {
         )}
 
         {activeSection === 'technical-staff' && (
-        <div>
+        <div className="people-compact">
           <h2 className="text-3xl font-bold mb-8 text-gray-900">Technical Staff</h2>
           <div className="mb-6">
             <Tabs
@@ -740,7 +740,7 @@ export default function People() {
         )}
 
         {activeSection === 'research-affiliates' && (
-        <div>
+        <div className="people-compact">
           <h2 className="text-3xl font-bold mb-8 text-gray-900">Research Affiliates</h2>
           <div className="mb-6">
             <Tabs
