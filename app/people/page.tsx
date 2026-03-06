@@ -747,7 +747,7 @@ export default function People() {
                 <h3 className="text-xl font-bold mb-1 text-gray-900">Victoria Long</h3>
                 <p className="text-lg text-gray-600 mb-4">Staff Member</p>
                 <p className="text-gray-700">
-                  Victoria is currently assisting with DNA extractions and PCR reactions, as well as curatorial tasks in the main collections. She first came to the lab as a volunteer.
+                  Victoria Long Lab Technician Staff from 2021 to 2026 Victoria worked in the Arachnology Lab as a Technician on the NSF Pedipalpi grant (PI: Prendini) from 2021 to 2026, conducting DNA extraction, quantitation, PCR and sequencing.
                 </p>
               </div>
             </div>
