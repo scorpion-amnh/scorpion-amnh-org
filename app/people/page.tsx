@@ -55,6 +55,42 @@ export default function People() {
     return () => window.removeEventListener('hashchange', applyHash);
   }, []);
 
+  const handleSectionSelect = (id: string) => {
+    setActiveSection(id);
+
+    switch (id) {
+      case 'museum-specialists':
+        setMuseumTab('current');
+        break;
+      case 'technical-staff':
+        setTechnicalStaffTab('current');
+        break;
+      case 'research-affiliates':
+        setResearchAffiliatesTab('current');
+        break;
+      case 'postdocs':
+        setPostdocsTab('current');
+        break;
+      case 'graduate-students':
+        setGraduateStudentsTab('current');
+        break;
+      case 'undergraduate-students':
+        setUndergraduateStudentsTab('current');
+        break;
+      case 'high-school-students':
+        setHighSchoolStudentsTab('current');
+        break;
+      case 'volunteers':
+        setVolunteersTab('current');
+        break;
+      case 'visiting-students':
+        setVisitingStudentsTab('current');
+        break;
+      default:
+        break;
+    }
+  };
+
 
   return (
     <div className="bg-white min-h-screen">
@@ -74,7 +110,7 @@ export default function People() {
             className="lg:col-span-1"
             sections={sections}
             activeSection={activeSection}
-            onSelect={setActiveSection}
+            onSelect={handleSectionSelect}
           />
 
           {/* Content Area */}
