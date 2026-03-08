@@ -3,12 +3,37 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { HeaderNav, type HeaderNavItem } from "./components/HeaderNav";
 
 export function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!headerRef.current) {
+      return;
+    }
+
+    const root = document.documentElement;
+    const updateHeight = () => {
+      if (!headerRef.current) {
+        return;
+      }
+      const height = headerRef.current.getBoundingClientRect().height;
+      root.style.setProperty("--header-height", `${height}px`);
+    };
+
+    updateHeight();
+
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(headerRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const isActive = (href: string) => {
     if (href === '/') {
@@ -29,9 +54,12 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-700 bg-gray-900 h-[var(--header-height)]">
+    <header
+      ref={headerRef}
+      className="fixed top-0 left-0 right-0 z-50 border-b border-gray-700 bg-gray-900"
+    >
       <div className="mx-auto max-w-7xl w-full">
-        <div className="flex h-full w-full items-center justify-between pl-6 pr-4 md:pl-8 md:pr-8 xl:pl-10 xl:pr-10 gap-6 py-4 xl:py-6">
+        <div className="flex w-full items-center justify-between pl-6 pr-4 md:pl-8 md:pr-8 xl:pl-10 xl:pr-10 gap-6 py-4 xl:py-6">
           <div className="flex-1 min-w-0 max-w-[400px]">
             <Link href="/">
               <Image

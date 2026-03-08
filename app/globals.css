@@ -5,6 +5,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --header-height: 6rem;
+  --section-scroll-gap: 1rem;
 }
 
 @media (min-width: 1280px) {
@@ -47,8 +48,14 @@ ol {
 .side-nav {
   position: -webkit-sticky;
   position: sticky;
-  top: var(--header-height);
+  top: calc(var(--header-height) + var(--section-scroll-gap));
   align-self: flex-start;
+}
+
+@media (max-width: 1023px) {
+  .side-nav {
+    top: var(--header-height);
+  }
 }
 
 li {
@@ -61,6 +68,11 @@ li {
 
 .side-nav-scroll::-webkit-scrollbar {
   height: 0;
+}
+
+
+.section-content h2 {
+  scroll-margin-top: calc(var(--header-height) + 5rem);
 }
 
 @layer utilities {

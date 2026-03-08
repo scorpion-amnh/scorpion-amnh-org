@@ -16,13 +16,13 @@ export function SideNav({ sections, activeSection, onSelect, className }: SideNa
   return (
     <nav
       className={[
-        "side-nav sticky w-full z-40 bg-white self-start h-fit",
+        "side-nav sticky w-full z-40 bg-white self-start h-fit pt-[var(--section-scroll-gap)] lg:pt-0",
         className,
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      <ul className="side-nav-scroll list-none m-0 p-0 pt-2 pr-12 lg:pr-0 flex gap-2 overflow-x-auto whitespace-nowrap pb-3 lg:pb-0 lg:block lg:space-y-2">
+      <ul className="side-nav-scroll list-none m-0 p-0 pr-12 lg:pr-0 flex gap-2 overflow-x-auto whitespace-nowrap pb-3 lg:pb-0 lg:block lg:space-y-2">
         {sections.map((section) => (
           <li key={section.id} className="flex-none lg:block">
             <SideNavButton

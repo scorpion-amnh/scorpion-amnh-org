@@ -32,6 +32,18 @@ export default function People() {
     return Number.isNaN(parsed) ? 0 : parsed;
   };
 
+  const getScrollGap = () => {
+    const rootStyles = getComputedStyle(document.documentElement);
+    const value = rootStyles.getPropertyValue("--section-scroll-gap").trim();
+    if (value.endsWith("rem")) {
+      const rem = parseFloat(value);
+      const fontSize = parseFloat(rootStyles.fontSize) || 16;
+      return rem * fontSize;
+    }
+    const parsed = parseFloat(value);
+    return Number.isNaN(parsed) ? 0 : parsed;
+  };
+
   const sections = [
     { id: 'lab-evolution', label: 'Lab Evolution' },
     { id: 'principal-investigator', label: 'Principal Investigator' },
@@ -49,6 +61,26 @@ export default function People() {
   useEffect(() => {
     if (contentRef.current) {
       const headerHeight = getHeaderHeight();
+      const scrollGap = getScrollGap();
+      if (window.innerWidth >= 1024) {
+        const heading = contentRef.current.querySelector("h2");
+        if (heading) {
+          const yOffset = heading.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap;
+          window.scrollTo({ top: yOffset, behavior: 'smooth' });
+          return;
+        }
+
+        const yOffset = contentRef.current.offsetTop - headerHeight - scrollGap;
+        window.scrollTo({ top: yOffset, behavior: 'smooth' });
+        return;
+      }
+
+      const heading = contentRef.current.querySelector("h2");
+      if (heading) {
+        heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+
       const yOffset = contentRef.current.offsetTop - headerHeight;
       window.scrollTo({ top: yOffset, behavior: 'smooth' });
     }
@@ -126,7 +158,7 @@ export default function People() {
           />
 
           {/* Content Area */}
-          <div ref={contentRef} className="md:col-span-3">
+          <div ref={contentRef} className="md:col-span-3 section-content">
         {activeSection === 'lab-evolution' && (
         <div>
           {/* Summer 2025 */}
