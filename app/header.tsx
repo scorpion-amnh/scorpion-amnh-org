@@ -29,9 +29,9 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-700 bg-gray-900">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-700 bg-gray-900 h-[var(--header-height)]">
       <div className="mx-auto max-w-7xl w-full">
-        <div className="flex w-full items-center justify-between pl-6 pr-4 md:pl-8 md:pr-8 xl:pl-10 xl:pr-10 gap-6 py-4 xl:py-6">
+        <div className="flex h-full w-full items-center justify-between pl-6 pr-4 md:pl-8 md:pr-8 xl:pl-10 xl:pr-10 gap-6 py-4 xl:py-6">
           <div className="flex-1 min-w-0 max-w-[400px]">
             <Link href="/">
               <Image

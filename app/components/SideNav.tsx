@@ -16,7 +16,7 @@ export function SideNav({ sections, activeSection, onSelect, className }: SideNa
   return (
     <nav
       className={[
-        "side-nav sticky w-full top-28 xl:top-36 z-40 bg-white self-start h-fit",
+        "side-nav sticky w-full z-40 bg-white self-start h-fit",
         className,
       ]
         .filter(Boolean)

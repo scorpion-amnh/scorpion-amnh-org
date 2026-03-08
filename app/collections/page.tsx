@@ -9,6 +9,18 @@ export default function Collections() {
   const [activeSection, setActiveSection] = useState('general-information');
   const contentRef = useRef<HTMLDivElement>(null);
 
+  const getHeaderHeight = () => {
+    const rootStyles = getComputedStyle(document.documentElement);
+    const value = rootStyles.getPropertyValue("--header-height").trim();
+    if (value.endsWith("rem")) {
+      const rem = parseFloat(value);
+      const fontSize = parseFloat(rootStyles.fontSize) || 16;
+      return rem * fontSize;
+    }
+    const parsed = parseFloat(value);
+    return Number.isNaN(parsed) ? 0 : parsed;
+  };
+
   const sections = [
     { id: 'general-information', label: 'General Information' },
     { id: 'specimens', label: 'Specimens' },
@@ -17,7 +29,7 @@ export default function Collections() {
 
   useEffect(() => {
     if (contentRef.current) {
-      const headerHeight = 96; // Approximate header height in pixels
+      const headerHeight = getHeaderHeight();
       const yOffset = contentRef.current.offsetTop - headerHeight;
       window.scrollTo({ top: yOffset, behavior: 'smooth' });
     }

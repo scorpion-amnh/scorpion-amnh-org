@@ -4,6 +4,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --header-height: 6rem;
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --header-height: 7rem;
+  }
 }
 
 @theme inline {
@@ -35,6 +42,13 @@ ol {
   list-style: none;
   margin: 0;
   padding-left: 0;
+}
+
+.side-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--header-height);
+  align-self: flex-start;
 }
 
 li {
