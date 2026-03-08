@@ -827,7 +827,7 @@ export default function People() {
           )}
 
           {museumTab === 'alumni' && (
-          <>
+          <div className="people-compact">
           <p className="text-gray-900 mb-8">Former museum specialists of the Arachnology Lab at AMNH</p>
 
           {/* Michelle Locke */}
@@ -944,13 +944,13 @@ export default function People() {
               </div>
             </div>
           </div>
-          </>
+          </div>
           )}
         </div>
         )}
 
         {activeSection === 'technical-staff' && (
-        <div className="people-compact">
+        <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-8 text-gray-900">Technical Staff</h2>
           <div className="mb-6">
             <Tabs
@@ -1019,7 +1019,7 @@ export default function People() {
           )}
 
           {technicalStaffTab === 'alumni' && (
-          <>
+          <div className="people-compact">
           {/* Alumni Section */}
           <h3 className="text-2xl font-bold mt-12 mb-2 text-gray-900">Alumni</h3>
           <p className="text-xl text-gray-600 mb-8">Former technical staff of the Arachnology Lab at AMNH</p>
@@ -1089,13 +1089,13 @@ export default function People() {
             ))}
 
           </div>
-          </>
+          </div>
           )}
         </div>
         )}
 
         {activeSection === 'research-affiliates' && (
-        <div className="people-compact">
+        <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-8 text-gray-900">Research Affiliates</h2>
           <div className="mb-6">
             <Tabs
@@ -1199,7 +1199,7 @@ export default function People() {
         )}
 
         {activeSection === 'postdocs' && (
-        <div className="people-compact">
+        <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Postdocs</h2>
           <p className="text-xl text-gray-600 mb-8">Current and former postdocs at the Arachnology Lab</p>
           <div className="mb-6">
@@ -1285,7 +1285,7 @@ export default function People() {
           )}
 
           {postdocsTab === 'alumni' && (
-          <>
+          <div className="people-compact">
           <h3 className="text-2xl font-bold mt-12 mb-2 text-gray-900">Alumni</h3>
           <p className="text-xl text-gray-600 mb-8">Former postdocs of the Arachnology Lab at AMNH</p>
 
@@ -1481,13 +1481,13 @@ export default function People() {
               </div>
             </div>
           </div>
-          </>
+          </div>
           )}
         </div>
         )}
 
         {activeSection === 'graduate-students' && (
-        <div className="people-compact">
+        <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Graduate Students</h2>
           <p className="text-xl text-gray-600 mb-8">
             Several graduate students worked in the Arachnology lab in past years. These students were funded from various sources including grants from the <a href="http://www.nsf.gov" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">National Science Foundation</a> and the AMNH (graduate student fellowships and the Comparative Biology Program of the Richard Gilder Graduate School). If you are interested graduate study in the Arachnology lab, please visit the website of the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Richard Gilder Graduate School</a> to apply to the RGGS for a graduate student fellowship for study at a partner programs (e.g., City University of New York).
@@ -1594,7 +1594,7 @@ export default function People() {
           )}
 
           {graduateStudentsTab === 'alumni' && (
-          <>
+          <div className="people-compact">
 
           {/* Nayeli Gutiérrez Trejo */}
           <div className="mb-8 pb-8 border-b border-gray-200">
@@ -1750,13 +1750,13 @@ export default function People() {
               </div>
             </div>
           </div>
-          </>
+          </div>
           )}
         </div>
         )}
 
         {activeSection === 'undergraduate-students' && (
-        <div className="people-compact">
+        <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Undergraduate Students</h2>
           <p className="text-xl text-gray-600 mb-8">
             Over the years, several undergraduate students have worked in the Arachnology Lab supported by various internships. Most have gone on to graduate school and beyond. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/undergraduate-fellowships/reu-biology-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Research Experiences for Undergraduates Program.</a>
@@ -1826,7 +1826,7 @@ export default function People() {
           )}
 
           {undergraduateStudentsTab === 'alumni' && (
-          <>
+          <div className="people-compact">
           
           <div className="space-y-6">
             {[
@@ -1899,13 +1899,13 @@ export default function People() {
               </div>
             ))}
           </div>
-          </>
+          </div>
           )}
         </div>
         )}
 
         {activeSection === 'high-school-students' && (
-        <div className="people-compact">
+        <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">High School Students</h2>
           <p className="text-xl text-gray-600 mb-8">
             Several high school students have worked in the Arachnology Lab supported by various internships. Many have continued to undergraduate programs. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program.</a>
@@ -1973,7 +1973,7 @@ export default function People() {
           )}
 
           {highSchoolStudentsTab === 'alumni' && (
-          <>
+          <div className="people-compact">
 
           {/* Anika Mahbub */}
           <div className="mb-8 pb-8 border-b border-gray-200">
@@ -2592,7 +2592,7 @@ export default function People() {
               </div>
             </div>
           </div>
-          </>
+          </div>
           )}
         </div>
         )}
@@ -2618,11 +2618,11 @@ export default function People() {
 
           {/* Soleil Blanquera */}
           <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
                 <PhotoPlaceholder name="Soleil Blanquera" />
               </div>
-              <div className="md:col-span-4">
+              <div className="md:col-span-3">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Soleil Blanquera</h4>
                 <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
                 <p className="text-gray-700">
@@ -2634,11 +2634,11 @@ export default function People() {
 
           {/* Brian Sperber */}
           <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
                 <PhotoPlaceholder name="Brian Sperber" />
               </div>
-              <div className="md:col-span-4">
+              <div className="md:col-span-3">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Brian Sperber</h4>
                 <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
                 <p className="text-gray-700">
@@ -2650,8 +2650,8 @@ export default function People() {
 
           {/* Victoria Long */}
           <div className="mb-6 pb-6">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
                 <Image
                   src="/images/victoria.jpg"
                   alt="Victoria Long"
@@ -2660,7 +2660,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
               </div>
-              <div className="md:col-span-4">
+              <div className="md:col-span-3">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Victoria Long</h4>
                 <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
                 <p className="text-gray-700">
@@ -3561,11 +3561,11 @@ export default function People() {
 
           {/* Antonio Galán Sánchez */}
           <div className="mb-6 pb-6">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-2">
                 <PhotoPlaceholder name="Antonio Galán Sánchez" />
               </div>
-              <div className="md:col-span-4">
+              <div className="md:col-span-3">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Antonio Galán Sánchez</h4>
                 <p className="text-sm text-gray-600 mb-1">Museum für Naturkunde, Humboldt-Universität, Berlin, Germany</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2025 and 2026</p>
