@@ -64,21 +64,25 @@ export default function Arachnids() {
             <p className="text-lg leading-8 text-gray-700 mb-6">
               Arachnids enjoy widespread public appeal (much of it based on fear). Their antiquity, combined with a sense of mystery, toxicity, and fearsome appearance, contributes to a fascination that continues to surround them. Among the most ancient arthropods, arachnids evolved from amphibious ancestors that lived up to 400 million years ago. The arachnid ground plan, developed so long ago, is remarkably effective. Paleozoic arachnids closely resemble their modern descendants in basic anatomical details (e.g., number of body segments), except that some were considerably larger. For example, the fossil scorpion <em>Brontoscorpio anglicus</em> is estimated to have measured approximately 1 meter in length, an order of magnitude greater than the largest extant <em>Pandinus</em> from tropical contributed greatly to their evolutionary success.
             </p>
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <Image
-                src="/images/fossil1.jpg"
-                alt="Fossil scorpion"
-                width={300}
-                height={300}
-                className="w-full h-auto rounded-sm"
-              />
-              <Image
-                src="/images/fossil2.jpg"
-                alt="Fossil scorpion"
-                width={300}
-                height={300}
-                className="w-full h-auto rounded-sm"
-              />
+            <div className="flex flex-wrap gap-4 mb-8 items-start max-w-full">
+              <div className="w-fit">
+                <Image
+                  src="/images/fossil1.jpg"
+                  alt="Fossil scorpion"
+                  width={247}
+                  height={163}
+                  className="h-auto rounded-sm"
+                />
+              </div>
+              <div className="w-fit">
+                <Image
+                  src="/images/fossil2.jpg"
+                  alt="Fossil scorpion"
+                  width={247}
+                  height={163}
+                  className="h-auto rounded-sm"
+                />
+              </div>
             </div>
           </div>
 
@@ -87,21 +91,25 @@ export default function Arachnids() {
             <p className="text-lg leading-8 text-gray-700 mb-6">
               Arachnids are notorious. The venoms of some spider and scorpion taxa contain multiple low molecular weight proteinaceous neurotoxins that block sodium and potassium channels, preventing the transmission of nerve impulses across synapses. In regions where envenomation represents a significant cause of morbidity and mortality, spiders and scorpions are justifiably feared. Some 100,000 scorpion stings occur annually in Mexico and as many as 800 people (mostly young children and the elderly) die as a result. The figures may be even higher in North Africa and the Middle East. Nevertheless, most arachnids are harmless. The bite or sting of most arachnids, if able to pierce the skin, may be painful, but is not life-threatening. Only about 25 scorpion species, representing less than 1% of the known scorpion fauna, are considered medically important. In the U.S., the average number of deaths per year from spider bites is estimated to be around 3 to 7. The most significant risk comes from black widow or brown recluse spiders, but even with these, the mortality rate is primarily for the very young, the elderly, or those with compromised immune systems. For context, the risk of death from an arachnid encounter in the U.S. is significantly lower than that from stinging insects (bees, wasps, and hornets), which average around 72 deaths per year, mainly due to anaphylactic shock (severe allergic reaction).
             </p>
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <Image
-                src="/images/venom.gif"
-                alt="Venom drop coming out of the aculeus"
-                width={300}
-                height={300}
-                className="w-full h-auto rounded-sm"
-              />
-              <Image
-                src="/images/redtelson.jpg"
-                alt="Red telson"
-                width={300}
-                height={300}
-                className="w-full h-auto rounded-sm"
-              />
+            <div className="flex flex-wrap gap-4 mb-8 items-start max-w-full">
+              <div className="w-fit">
+                <Image
+                  src="/images/venom.gif"
+                  alt="Venom drop coming out of the aculeus"
+                  width={478}
+                  height={317}
+                  className="h-auto rounded-sm"
+                />
+              </div>
+              <div className="w-fit">
+                <Image
+                  src="/images/redtelson.jpg"
+                  alt="Red telson"
+                  width={434}
+                  height={223}
+                  className="h-auto rounded-sm"
+                />
+              </div>
             </div>
           </div>
 
@@ -117,26 +125,30 @@ export default function Arachnids() {
             <p className="text-lg leading-8 text-gray-700 mb-6">
               Arachnids are primarily nocturnal. Several orders (e.g., scorpions, solifuges and opilionids) fluoresce under long-wave ultraviolet light, facilitating their collection and observation at night. The simple eyes of arachnids detect luminosity, but little else. Prey are detected by a variety of sensory organs, e.g., slit sensilla in the tarsi, sensory setae (trichobothria) on the pedipalps, and specialized structures like malleoli in solifuges or pectines in scorpions, and attacked with the pedipalps, chelicerae or, in the case of scorpions, the sting. Spiders are unique among arachnids in the ability to use silk to capture prey in webs or snares. Although many arachnid orders rely on mechanical means to subdue prey, several orders, notably spiders, scorpions and pseudoscorpions, employ venom. Many arachnids use the pedipalps to manipulate captured prey, tearing pieces off with the chelicerae to be digested in a pre-oral cavity before being sucked into the gut. Arachnids are the primary consumers of other terrestrial arthropods, keeping insect populations in check. For example, <em>Scorpio maurus</em> was reported to eat an annual average of 11% of the Israeli isopod population, whereas <em>Urodacus yaschenkoi</em> 7.9 kg/ha of invertebrate prey in Australia. Cannibalism and intraguild predation by other arachnid taxa are important sources of arachnid mortality, as is predation by other invertebrates (e.g., centipedes) and vertebrates (e.g., birds, lizards, and insectivorous mammals). Arachnid mortality is highest immediately after birth, lower for individuals of intermediate age, and high for adults. Mortality is particularly high among males due to increased mobility during breeding season and cannibalism by females. Biased adult sex ratios are typical of arachnids. Social behavior occurs in some spiders, scorpions and whip spiders, in which family groups with overlapping generations cooperate to construct and occupy communal nests or burrows, inhabited by individuals of various ages.
             </p>
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <figure className="text-center">
+            <div className="flex flex-wrap gap-4 mb-8 items-start max-w-full">
+              <figure className="w-fit inline-flex flex-col items-start">
                 <Image
                   src="/images/cannibalism.jpg"
                   alt="Scorpion predating on another scorpion species"
-                  width={300}
-                  height={300}
-                  className="w-full h-auto rounded-sm"
+                  width={271}
+                  height={196}
+                  className="h-auto rounded-sm"
                 />
-                <figcaption className="text-sm text-gray-600 mt-2">Scorpion predating on another scorpion species</figcaption>
+                <figcaption className="text-sm text-gray-600 mt-2 text-left" style={{ width: 271 }}>
+                  Scorpion predating on another scorpion species
+                </figcaption>
               </figure>
-              <figure className="text-center">
+              <figure className="w-fit inline-flex flex-col items-start">
                 <Image
                   src="/images/scorpionmite.jpg"
                   alt="Mites on a scorpion"
-                  width={300}
-                  height={300}
-                  className="w-full h-auto rounded-sm"
+                  width={272}
+                  height={196}
+                  className="h-auto rounded-sm"
                 />
-                <figcaption className="text-sm text-gray-600 mt-2">Mites on a scorpion</figcaption>
+                <figcaption className="text-sm text-gray-600 mt-2 text-left" style={{ width: 272 }}>
+                  Mites on a scorpion
+                </figcaption>
               </figure>
             </div>
           </div>
@@ -146,42 +158,54 @@ export default function Arachnids() {
             <p className="text-lg leading-8 text-gray-700 mb-6">
               Arachnids have a remarkable life history. Many arachnids exhibit an elaborate, ritualized, species-specific courtship prior to insemination, such as the mating dance or <em>promenade-à-deux</em> of scorpions. Sperm transfer is usually indirect, occurring via a spermatophore or insertion using modified pedipalps (spiders) or chelicerae (solifuges). However, intromission is direct in harvestmen (Opiliones), where the male inserts a chitinized penis into the female genital opening during mating. Scorpions are unusual among arachnids in that all are viviparous: embryos develop in the reproductive tract and receive nourishment from yolk or maternal tissues. Several species are parthenogenic. Unlike most other terrestrial arthropods, many arachnids (especially the large-bodied arachnid taxa, like mygalomorph spiders, scorpions, whip spiders and vinegaroons) resemble vertebrates in life history traits and are considered K-selected. They have low reproductive rates compared to other terrestrial arthropods and are among the most long-lived. Gestation times are long (several months to more than a year) and litter sizes often small (1-100). Young are often large at birth and altricial, clinging to the mother or remaining in the nest or burrow for the first few molts before dispersing. Time to sexual maturity varies from 2-8 years, depending on the species. Average longevity is around 4 years, but larger species may live up to 30 years (e.g., in some scorpions).
             </p>
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <Image
-                src="/images/scorpionbabies1.jpg"
-                alt="Scorpion with offspring"
-                width={300}
-                height={300}
-                className="w-full h-auto rounded-sm"
-              />
-              <Image
-                src="/images/scorpionbabies2.jpg"
-                alt="Scorpion with offspring"
-                width={300}
-                height={300}
-                className="w-full h-auto rounded-sm"
-              />
+            <div className="grid grid-cols-2 gap-4 mb-4 w-full items-start sm:inline-grid sm:w-auto sm:justify-start">
+              <div className="w-full">
+                <Image
+                  src="/images/scorpionbabies1.jpg"
+                  alt="Scorpion with offspring"
+                  width={270}
+                  height={195}
+                  className="w-full h-auto rounded-sm sm:w-auto"
+                  style={{ maxWidth: 270 }}
+                />
+              </div>
+              <div className="w-full">
+                <Image
+                  src="/images/scorpionbabies2.jpg"
+                  alt="Scorpion with offspring"
+                  width={270}
+                  height={195}
+                  className="w-full h-auto rounded-sm sm:w-auto"
+                  style={{ maxWidth: 270 }}
+                />
+              </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <figure className="text-center">
+            <div className="grid grid-cols-2 gap-4 mb-8 w-full items-start sm:inline-grid sm:w-auto sm:justify-start">
+              <figure className="w-full inline-flex flex-col items-start">
                 <Image
                   src="/images/spermatophore.jpg"
                   alt="Scorpion spermatophore"
-                  width={300}
-                  height={300}
-                  className="w-full h-auto rounded-sm"
+                  width={250}
+                  height={250}
+                  className="w-full h-auto rounded-sm sm:w-auto"
+                  style={{ maxWidth: 250 }}
                 />
-                <figcaption className="text-sm text-gray-600 mt-2">Scorpion spermatophore</figcaption>
+                <figcaption className="text-sm text-gray-600 mt-2 text-left" style={{ width: "100%", maxWidth: 250 }}>
+                  Scorpion spermatophore
+                </figcaption>
               </figure>
-              <figure className="text-center">
+              <figure className="w-full inline-flex flex-col items-start">
                 <Image
                   src="/images/capsule.jpg"
                   alt="Scorpion capsule"
-                  width={300}
-                  height={300}
-                  className="w-full h-auto rounded-sm"
+                  width={188}
+                  height={250}
+                  className="w-full h-auto rounded-sm sm:w-auto"
+                  style={{ maxWidth: 188 }}
                 />
-                <figcaption className="text-sm text-gray-600 mt-2">Scorpion capsule</figcaption>
+                <figcaption className="text-sm text-gray-600 mt-2 text-left" style={{ width: "100%", maxWidth: 188 }}>
+                  Scorpion capsule
+                </figcaption>
               </figure>
             </div>
           </div>
@@ -191,16 +215,18 @@ export default function Arachnids() {
             <p className="text-lg leading-8 text-gray-700 mb-6">
               Urgency for the study of any taxonomic group can be argued based on prevailing ignorance about the world's biota. However, arachnids warrant more attention than they receive. As the primary group of predatory arthropods, arachnids are responsible for controlling insect populations in terrestrial ecosystems. Many of the large-bodied arachnid taxa, e.g., mygalomorph spiders, scorpions, whip spiders and vinegaroons, are K-selected, equilibrium species, and represent indicators of ecosystem health. Their disappearance signals habitat degradation. Small litter sizes, long generation times and low survivorship among sexually immature females contribute to a low rate of population growth for these taxa. Most species are also extremely habitat specific and range-restricted, exacerbating their risk of extinction due to human activities. Increasingly threatened by climate change, habitat destruction and harvesting for the venom, souvenir and exotic pet trades, few species are officially protected, and many may disappear before being described. For example, ca. 105,000 live <em>Pandinus imperator</em> are exported annually from three West African countries to pet shops in Europe, the United States and Japan, indicating the magnitude of trade in this species, which is now CITES-listed. Many other species of spiders (especially mygalomorphs like tarantulas), scorpions, solifuges, whip scorpions and whip spiders, originating from various African, Asian, and Latin American countries, are offered for sale on the exotic pet market; the most sought-after specimens fetch up to $500 each. The many threats faced by many arachnid taxa renders the task of inventorying their diversity and distribution a priority if steps towards their conservation are to be implemented.
             </p>
-            <div className="mb-8 text-center">
-              <figure>
+            <div className="mb-8">
+              <figure className="w-fit inline-flex flex-col items-start">
                 <Image
                   src="/images/beachleft.jpg"
                   alt="Coastal habitat, CA, USA"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto rounded-sm inline-block"
+                  width={238}
+                  height={164}
+                  className="h-auto rounded-sm"
                 />
-                <figcaption className="text-sm text-gray-600 mt-2">Coastal habitat, CA, USA</figcaption>
+                <figcaption className="text-sm text-gray-600 mt-2 text-left" style={{ width: 238 }}>
+                  Coastal habitat, CA, USA
+                </figcaption>
               </figure>
             </div>
           </div>
