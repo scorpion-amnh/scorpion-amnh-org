@@ -49,6 +49,7 @@ type PeopleIndexItem = {
   name: string;
   id: string;
   sectionId: string;
+  sectionLabel: string;
 };
 
 const ignoredPersonHeadingLabels = new Set([
@@ -136,6 +137,25 @@ export default function People() {
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const sideNavRef = useRef<HTMLDivElement>(null);
 
+  const sections = [
+    { id: 'lab-evolution', label: 'Lab Evolution' },
+    { id: 'principal-investigator', label: 'Principal Investigator' },
+    { id: 'museum-specialists', label: 'Museum Specialists' },
+    { id: 'technical-staff', label: 'Technical Staff' },
+    { id: 'research-affiliates', label: 'Research Affiliates' },
+    { id: 'postdocs', label: 'Postdocs' },
+    { id: 'graduate-students', label: 'Graduate Students' },
+    { id: 'undergraduate-students', label: 'Undergraduate Students' },
+    { id: 'high-school-students', label: 'High School Students' },
+    { id: 'volunteers', label: 'Volunteers' },
+    { id: 'visiting-students', label: 'Visitors' },
+  ];
+
+  const sectionLabelMap = useMemo(
+    () => Object.fromEntries(sections.map((section) => [section.id, section.label])),
+    [sections]
+  );
+
   const getHeaderHeight = () => {
     const rootStyles = getComputedStyle(document.documentElement);
     const value = rootStyles.getPropertyValue("--header-height").trim();
@@ -191,7 +211,12 @@ export default function People() {
       const key = `${sectionId}:${rawName}`;
       if (!seen.has(key)) {
         seen.add(key);
-        index.push({ name: rawName, id: cardWrapper ? cardId : headingId, sectionId });
+        index.push({
+          name: rawName,
+          id: cardWrapper ? cardId : headingId,
+          sectionId,
+          sectionLabel: sectionLabelMap[sectionId] ?? sectionId,
+        });
       }
     });
 
@@ -258,20 +283,6 @@ export default function People() {
 
     return sideNavRef.current?.getBoundingClientRect().height ?? 0;
   };
-
-  const sections = [
-    { id: 'lab-evolution', label: 'Lab Evolution' },
-    { id: 'principal-investigator', label: 'Principal Investigator' },
-    { id: 'museum-specialists', label: 'Museum Specialists' },
-    { id: 'technical-staff', label: 'Technical Staff' },
-    { id: 'research-affiliates', label: 'Research Affiliates' },
-    { id: 'postdocs', label: 'Postdocs' },
-    { id: 'graduate-students', label: 'Graduate Students' },
-    { id: 'undergraduate-students', label: 'Undergraduate Students' },
-    { id: 'high-school-students', label: 'High School Students' },
-    { id: 'volunteers', label: 'Volunteers' },
-    { id: 'visiting-students', label: 'Visitors' },
-  ];
 
   useEffect(() => {
     if (contentRef.current) {
@@ -454,7 +465,8 @@ export default function People() {
                           onClick={() => handlePersonSelect(person.id, person.name, person.sectionId)}
                           className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
                         >
-                          {person.name}
+                          <span className="text-gray-900">{person.name}</span>
+                          <span className="ml-4 text-sm text-gray-500">{person.sectionLabel}</span>
                         </button>
                       </li>
                     ))}
@@ -472,7 +484,7 @@ export default function People() {
           {/* Sidebar Navigation */}
           <div
             ref={sideNavRef}
-            className="lg:col-span-1 sticky top-[var(--header-height)] z-40 bg-white self-start lg:static lg:top-auto"
+            className="lg:col-span-1 sticky top-[var(--header-height)] lg:top-[calc(var(--header-height)+var(--section-scroll-gap))] z-40 bg-white self-start"
           >
             <SideNav
               sections={sections}
