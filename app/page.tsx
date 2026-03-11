@@ -13,8 +13,6 @@ const getArachnidGalleryImages = async () => {
     .map((entry) => `/images/arachnids/${entry}`);
 };
 
-type GalleryImage = (typeof galleryImages)[number];
-
 export default async function Home() {
   const galleryImages = await getArachnidGalleryImages();
   return (
