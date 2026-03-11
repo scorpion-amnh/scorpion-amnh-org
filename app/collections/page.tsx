@@ -106,7 +106,7 @@ export default function Collections() {
             <div className="grid grid-cols-2 gap-4 mb-8">
               <figure className="text-center">
                 <Image
-                  src="/images/lourandy.jpg"
+                  src="/images/museum/lourandy.jpg"
                   alt="Collections personnel"
                   width={300}
                   height={300}
@@ -115,7 +115,7 @@ export default function Collections() {
                 <figcaption className="text-sm text-gray-600 mt-2">Louis Sorkin and Randy Mercurio in the collections</figcaption>
               </figure>
               <Image
-                src="/images/collectionssign.jpg"
+                src="/images/museum/collectionssign.jpg"
                 alt='Wall signage that says "AMNH CAN #97 ARANEAE FAMILY LINYPHIIDAE"'
                 width={300}
                 height={300}
@@ -148,7 +148,7 @@ export default function Collections() {
               <li><a href="https://www.amnh.org/research/richard-gilder-graduate-school/grants#1-theodore-roosevelt-memorial-grants" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Theodore Roosevelt Memorial Fund</a></li>
             </ul>
             <Image
-              src="/images/nsb_wetlab.jpg"
+              src="/images/museum/nsb_wetlab.jpg"
               alt="NSB wet lab"
               width={600}
               height={400}
@@ -166,14 +166,14 @@ export default function Collections() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               <Image
-                src="/images/nsb_collections.jpg"
+                src="/images/museum/nsb_collections.jpg"
                 alt="Starr Natural Sciences Building (NSB) collections"
                 width={400}
                 height={400}
                 className="w-full h-auto rounded-sm"
               />
               <Image
-                src="/images/collections_edmundo.jpg"
+                src="/images/museum/collections_edmundo.jpg"
                 alt="Edmundo González Santillan searching the collections"
                 width={400}
                 height={400}
@@ -192,7 +192,7 @@ export default function Collections() {
               Acquisition of the Alexis Harington collection (ca. 6,500 specimens), the Lorenzo Prendini collection (ca. 2,000 specimens) have greatly increased our holdings of southern African scorpions. The Alexis Harington collection comprises a more representative sample than most southern African collections. All families, genera, and most species of southern African scorpions are represented, including any rare or seldom collected species. Most species are represented by series from multiple localities, many representing new records and/or range extensions.
             </p>
             <Image
-              src="/images/scorpionbottles4.jpg"
+              src="/images/museum/scorpionbottles4.jpg"
               alt="Collection storage bottles containing scorpions"
               width={600}
               height={400}
@@ -206,7 +206,7 @@ export default function Collections() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               <figure className="text-center">
                 <Image
-                  src="/images/collections_old.jpg"
+                  src="/images/museum/collections_old.jpg"
                   alt="Refrigerator with trays of collection bottles in former storage facility"
                   width={400}
                   height={400}
@@ -216,7 +216,7 @@ export default function Collections() {
               </figure>
               <figure className="text-center">
                 <Image
-                  src="/images/collections_new.jpg"
+                  src="/images/museum/collections_new.jpg"
                   alt="Refrigerator with trays of collection bottles in new storage facility"
                   width={400}
                   height={400}
@@ -232,14 +232,14 @@ export default function Collections() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               <Image
-                src="/images/randyuv.jpg"
+                src="/images/field/randyuv.jpg"
                 alt="Randy Mercurio and a colleague using a UV light to look for scorpions in the field"
                 width={400}
                 height={400}
                 className="w-full h-auto rounded-sm"
               />
               <Image
-                src="/images/sorting.jpg"
+                src="/images/field/sorting.jpg"
                 alt="Lorenzo Prendini and a colleague sorting scorpions in the field"
                 width={400}
                 height={400}
@@ -290,7 +290,7 @@ export default function Collections() {
               The collection is continually augmented and includes sizable holdings of tissue samples from Araneae (for the ATOL Spider Phylogeny project), Amblypygi, Chilopoda, Diplopoda, Opiliones, Palpigradi, Ricinulei, Schizomida, Solifugae and Uropygi, in addition to Scorpiones. Among other countries, this material originates from Argentina, Australia, Benin, Bolivia, Brazil, Bulgaria, Cameroon, Chile, Dominican Republic, France, French Guiana, Guinea-Bissau, Iran, Israel, Italy, Jamaica, Kazakhstan, Madagascar, Martinique, Mexico, Morocco, Myanmar, Namibia, New Caledonia, New Guinea, New Zealand, Nicaragua, Peru, Philippines, Puerto Rico, Senegal, Seychelles, Taiwan, Tanzania, Thailand, Turkey, South Africa, Uruguay, the U.S.A., Uzbekistan, and Yemen. These collections are currently being stored at -20ºC in large freezers in the Division of Invertebrate Zoology and will eventually be transferred to the <a href="https://www.amnh.org/our-research/sackler-institute-for-comparative-genomics/facilities/amcc" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Ambrose Monell Collection for Molecular and Microbial Research</a> of the AMNH for permanent storage.
             </p>
             <Image
-              src="/images/scorpionbottles3.jpg"
+              src="/images/museum/scorpionbottles3.jpg"
               alt="Collection storage bottles containing scorpions and labels"
               width={600}
               height={400}
@@ -307,7 +307,7 @@ export default function Collections() {
               If refrigeration facilities are unavailable, place each specimen into a separate container of 95-100% ethanol (preferably analytical grade) and keep as cool as possible. If specimens are large and/or heavily sclerotized, remove a leg(s) from one side of the specimen and place into a small vial of 95-100% ethanol. Then inject the specimen, or make an incision, allowing the ethanol to diffuse into the tissues. Use a sterile scalpel or needle for each dissection/injection, and clean forceps in ethanol after each dissection. Place the specimen in a large vessel containing at least five times the volume of the specimen. Replace the ethanol in each container within 24 to 48 hours, and thereafter if it appears discolored. Larger samples may require ethanol to be replaced several times. Make sure to use labels to associate the vial with the larger vessel.
             </p>
             <Image
-              src="/images/lorenzofixing.jpg"
+              src="/images/field/lorenzofixing.jpg"
               alt="Lorenzo Prendini in the field, fixing scorpions via injection"
               width={600}
               height={400}
@@ -319,7 +319,7 @@ export default function Collections() {
               If intact specimens are used as vouchers, preserve these appropriately for morphological examination. If genitalia are used as vouchers, they must be dissected by the individual submitting the sample to the AMNH and placed in a microvial within the same vial as the tissue sample or in a separate, clearly labelled vial.
             </p>
             <Image
-              src="/images/scorpionvials.jpg"
+              src="/images/museum/scorpionvials.jpg"
               alt="Vials of scorpions with a label on each lid"
               width={600}
               height={400}

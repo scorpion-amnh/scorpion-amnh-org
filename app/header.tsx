@@ -63,7 +63,7 @@ export function Header() {
           <div className="flex-1 min-w-0 max-w-[400px]">
             <Link href="/">
               <Image
-                src="/images/logo-color-on-dark.svg"
+                src="/images/logos/logo-color-on-dark.svg"
                 alt="Arachnology at AMNH Logo"
                 width={400}
                 height={40}

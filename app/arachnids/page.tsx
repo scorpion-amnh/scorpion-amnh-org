@@ -9,19 +9,19 @@ export default function Arachnids() {
 
   useEffect(() => {
     const images = [
-      "00050.jpg", "00101.jpg", "00240.jpg", "00474.jpg", "07915.jpg",
-      "cricket1.jpg", "cricket2.jpg", "cricket3.jpg", "cricket4.jpg",
-      "DSC_0001.jpg", "DSC_0002.jpg", "DSC_0003.jpg", "DSC_0005.jpg",
-      "DSC_0006.jpg", "DSC_0008.jpg", "DSC_0009.jpg", "DSC_0010.jpg",
-      "DSC_0011.jpg", "DSC_0012.jpg", "DSC_0013.jpg", "DSC_0014.jpg",
-      "DSC_0015.jpg", "DSC_0016.jpg", "DSC_0017.jpg", "DSC_0018.jpg",
-      "DSC_0019.jpg", "DSC_0020.jpg", "DSC_0021.jpg", "DSC_0022.jpg",
-      "DSC_0023.jpg", "DSC_0024.jpg", "DSC_0025.jpg", "DSC_0026.jpg",
-      "DSC_0027.jpg", "DSC_0028.jpg", "DSC_0029.jpg", "DSC_0030.jpg",
-      "DSC_0031.jpg", "DSC_0032.jpg", "Hexisopodid1.jpg", "Hexisopodid2.gif",
-      "Hexisopodid3.gif", "blind1.jpg", "blind2.gif", "Pterygocercus.jpg",
-      "Rhagodid1.jpg", "Rhagodid2.jpg", "Solipugid1.jpg", "Opisthacanthus.jpg",
-      "pectines.jpg"
+      "arachnids/00050.jpg", "arachnids/00101.jpg", "arachnids/00240.jpg", "arachnids/00474.jpg", "arachnids/07915.jpg",
+      "field/cricket1.jpg", "field/cricket2.jpg", "field/cricket3.jpg", "field/cricket4.jpg",
+      "arachnids/DSC_0001.jpg", "arachnids/DSC_0002.jpg", "arachnids/DSC_0003.jpg", "arachnids/DSC_0005.jpg",
+      "arachnids/DSC_0006.jpg", "arachnids/DSC_0008.jpg", "arachnids/DSC_0009.jpg", "arachnids/DSC_0010.jpg",
+      "arachnids/DSC_0011.jpg", "arachnids/DSC_0012.jpg", "arachnids/DSC_0013.jpg", "arachnids/DSC_0014.jpg",
+      "arachnids/DSC_0015.jpg", "arachnids/DSC_0016.jpg", "arachnids/DSC_0017.jpg", "arachnids/DSC_0018.jpg",
+      "arachnids/DSC_0019.jpg", "arachnids/DSC_0020.jpg", "arachnids/DSC_0021.jpg", "arachnids/DSC_0022.jpg",
+      "arachnids/DSC_0023.jpg", "arachnids/DSC_0024.jpg", "arachnids/DSC_0025.jpg", "arachnids/DSC_0026.jpg",
+      "arachnids/DSC_0027.jpg", "arachnids/DSC_0028.jpg", "arachnids/DSC_0029.jpg", "arachnids/DSC_0030.jpg",
+      "arachnids/DSC_0031.jpg", "arachnids/DSC_0032.jpg", "arachnids/Hexisopodid1.jpg", "arachnids/Hexisopodid2.gif",
+      "arachnids/Hexisopodid3.gif", "arachnids/blind1.jpg", "arachnids/blind2.gif", "arachnids/Pterygocercus.jpg",
+      "arachnids/Rhagodid1.jpg", "arachnids/Rhagodid2.jpg", "arachnids/Solipugid1.jpg", "arachnids/Opisthacanthus.jpg",
+      "arachnids/pectines.jpg"
     ];
 
     const shuffled = [...images].sort(() => Math.random() - 0.5);
@@ -67,7 +67,7 @@ export default function Arachnids() {
             <div className="flex flex-wrap gap-4 mb-8 items-start max-w-full">
               <div className="w-fit">
                 <Image
-                  src="/images/fossil1.jpg"
+                  src="/images/arachnids/fossil1.jpg"
                   alt="Fossil scorpion"
                   width={247}
                   height={163}
@@ -76,7 +76,7 @@ export default function Arachnids() {
               </div>
               <div className="w-fit">
                 <Image
-                  src="/images/fossil2.jpg"
+                  src="/images/arachnids/fossil2.jpg"
                   alt="Fossil scorpion"
                   width={247}
                   height={163}
@@ -94,7 +94,7 @@ export default function Arachnids() {
             <div className="flex flex-wrap gap-4 mb-8 items-start max-w-full">
               <div className="w-fit">
                 <Image
-                  src="/images/venom.gif"
+                  src="/images/arachnids/venom.gif"
                   alt="Venom drop coming out of the aculeus"
                   width={478}
                   height={317}
@@ -103,7 +103,7 @@ export default function Arachnids() {
               </div>
               <div className="w-fit">
                 <Image
-                  src="/images/redtelson.jpg"
+                  src="/images/arachnids/redtelson.jpg"
                   alt="Red telson"
                   width={434}
                   height={223}
@@ -128,7 +128,7 @@ export default function Arachnids() {
             <div className="flex flex-wrap gap-4 mb-8 items-start max-w-full">
               <figure className="w-fit inline-flex flex-col items-start">
                 <Image
-                  src="/images/cannibalism.jpg"
+                  src="/images/arachnids/cannibalism.jpg"
                   alt="Scorpion predating on another scorpion species"
                   width={271}
                   height={196}
@@ -140,7 +140,7 @@ export default function Arachnids() {
               </figure>
               <figure className="w-fit inline-flex flex-col items-start">
                 <Image
-                  src="/images/scorpionmite.jpg"
+                  src="/images/arachnids/scorpionmite.jpg"
                   alt="Mites on a scorpion"
                   width={272}
                   height={196}
@@ -161,7 +161,7 @@ export default function Arachnids() {
             <div className="grid grid-cols-2 gap-4 mb-4 w-full items-start sm:inline-grid sm:w-auto sm:justify-start">
               <div className="w-full">
                 <Image
-                  src="/images/scorpionbabies1.jpg"
+                  src="/images/arachnids/scorpionbabies1.jpg"
                   alt="Scorpion with offspring"
                   width={270}
                   height={195}
@@ -171,7 +171,7 @@ export default function Arachnids() {
               </div>
               <div className="w-full">
                 <Image
-                  src="/images/scorpionbabies2.jpg"
+                  src="/images/arachnids/scorpionbabies2.jpg"
                   alt="Scorpion with offspring"
                   width={270}
                   height={195}
@@ -183,7 +183,7 @@ export default function Arachnids() {
             <div className="grid grid-cols-2 gap-4 mb-8 w-full items-start sm:inline-grid sm:w-auto sm:justify-start">
               <figure className="w-full inline-flex flex-col items-start">
                 <Image
-                  src="/images/spermatophore.jpg"
+                  src="/images/arachnids/spermatophore.jpg"
                   alt="Scorpion spermatophore"
                   width={250}
                   height={250}
@@ -196,7 +196,7 @@ export default function Arachnids() {
               </figure>
               <figure className="w-full inline-flex flex-col items-start">
                 <Image
-                  src="/images/capsule.jpg"
+                  src="/images/arachnids/capsule.jpg"
                   alt="Scorpion capsule"
                   width={188}
                   height={250}
@@ -218,7 +218,7 @@ export default function Arachnids() {
             <div className="mb-8">
               <figure className="w-fit inline-flex flex-col items-start">
                 <Image
-                  src="/images/beachleft.jpg"
+                  src="/images/field/beachleft.jpg"
                   alt="Coastal habitat, CA, USA"
                   width={238}
                   height={164}

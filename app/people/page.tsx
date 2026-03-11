@@ -1,11 +1,47 @@
 'use client';
 
-import Image from "next/image";
+import NextImage, { type ImageProps } from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { SideNav } from "../components/SideNav";
 import { Tabs } from "../components/Tabs";
 import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
+
+const peopleImageFolderOverrides: Record<string, string> = {
+  "2024-fieldwork-Pio-and-Jairo.HEIC": "field",
+  "2024-preparing-samples-abroad.JPG": "field",
+  "2025-Colmenares-and-visiting-researchers-in-the-collection.jpg": "museum",
+  "highschool2006.jpg": "museum",
+  "SRMPSashaandEleanor.jpg": "museum",
+  "jose_barba_arachnology_lab.jpg": "museum",
+  "drawing.jpg": "arachnids",
+};
+
+const resolvePeopleImageSrc = (src: ImageProps["src"]) => {
+  if (typeof src !== "string") {
+    return src;
+  }
+
+  if (!src.startsWith("/images/")) {
+    return src;
+  }
+
+  const relative = src.replace("/images/", "");
+  if (relative.includes("/")) {
+    return src;
+  }
+
+  const overrideFolder = peopleImageFolderOverrides[relative];
+  if (overrideFolder) {
+    return `/images/${overrideFolder}/${relative}`;
+  }
+
+  return `/images/people/${relative}`;
+};
+
+const Image = (props: ImageProps) => (
+  <NextImage {...props} src={resolvePeopleImageSrc(props.src)} />
+);
 
 export default function People() {
   const [activeSection, setActiveSection] = useState('lab-evolution');

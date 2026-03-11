@@ -19,7 +19,7 @@ const fieldworkImages = [
   { src: "IMG_0684.jpg", orientation: "landscape" },
   { src: "DSCN6382.jpg", orientation: "portrait" },
   { src: "IMG_2478.jpg", orientation: "landscape" },
-  { src: "Edmund%20blacklightingZimapan.jpg", orientation: "portrait" },
+  { src: "Edmund-blacklightingZimapan.jpg", orientation: "portrait" },
   { src: "DSCN0089.jpg", orientation: "portrait" },
   { src: "Jose.and.Camillo.jpg", orientation: "landscape" },
   { src: "DSCN2068.jpg", orientation: "portrait" },
@@ -67,7 +67,7 @@ export default function Fieldwork() {
                 }`}
               >
                 <Image
-                  src={`/images/${image.src}`}
+                  src={`/images/field/${image.src}`}
                   alt={`Fieldwork image ${index + 1}`}
                   width={image.orientation === "portrait" ? 300 : 400}
                   height={image.orientation === "portrait" ? 400 : 300}

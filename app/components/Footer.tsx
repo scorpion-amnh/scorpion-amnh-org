@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="">
         <div className="w-full">
           <Image
-            src="/images/Banner-Photo-2005-09-01.jpg"
+            src="/images/field/Banner-Photo-2005-09-01.jpg"
             alt="Banner photo"
             width={9000}
             height={1371}
@@ -24,7 +24,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 >
                 <Image
-                    src="/images/amnh-logo-white.svg"
+                    src="/images/logos/amnh-logo-white.svg"
                     alt="Logo: American Museum of Natural History"
                     width={150}
                     height={50}
