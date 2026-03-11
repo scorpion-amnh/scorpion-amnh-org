@@ -2,7 +2,7 @@
 
 import NextImage, { type ImageProps } from "next/image";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { SideNav } from "../components/SideNav";
 import { Tabs } from "../components/Tabs";
 import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
@@ -45,6 +45,79 @@ const Image = (props: ImageProps) => (
   <NextImage {...props} src={resolvePeopleImageSrc(props.src)} />
 );
 
+type PeopleIndexItem = {
+  name: string;
+  id: string;
+  sectionId: string;
+};
+
+const ignoredPersonHeadingLabels = new Set([
+  "Contact",
+  "CV and Online Profiles",
+  "Alumni",
+  "Current",
+  "Former",
+  "Additional Alumni - Condensed",
+  "CV",
+]);
+
+const toPersonAnchorId = (name: string) => {
+  const slug = name
+    .toLowerCase()
+    .replace(/[’']/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return `person-${slug}`;
+};
+
+const normalizeSearchText = (value: string) =>
+  value
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase();
+
+const getEditDistance = (a: string, b: string) => {
+  const aLen = a.length;
+  const bLen = b.length;
+  if (!aLen) return bLen;
+  if (!bLen) return aLen;
+
+  const dp = Array.from({ length: aLen + 1 }, () => new Array(bLen + 1).fill(0));
+  for (let i = 0; i <= aLen; i += 1) dp[i][0] = i;
+  for (let j = 0; j <= bLen; j += 1) dp[0][j] = j;
+
+  for (let i = 1; i <= aLen; i += 1) {
+    for (let j = 1; j <= bLen; j += 1) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + cost
+      );
+    }
+  }
+
+  return dp[aLen][bLen];
+};
+
+const getFuzzyScore = (query: string, name: string) => {
+  if (!query) return null;
+  if (name.includes(query)) return 0;
+
+  const nameTokens = name.split(/\s+/g).filter(Boolean);
+  const tokenDistances = nameTokens.map((token) => getEditDistance(query, token));
+  const bestTokenDistance = tokenDistances.length ? Math.min(...tokenDistances) : getEditDistance(query, name);
+  const nameDistance = getEditDistance(query, name);
+  const bestDistance = Math.min(bestTokenDistance, nameDistance);
+
+  const maxDistance = Math.max(1, Math.floor(query.length * 0.35));
+  if (bestDistance <= maxDistance) {
+    return bestDistance + 1;
+  }
+
+  return null;
+};
+
 export default function People() {
   const [activeSection, setActiveSection] = useState('lab-evolution');
   const [museumTab, setMuseumTab] = useState<'current' | 'alumni'>('current');
@@ -56,7 +129,12 @@ export default function People() {
   const [highSchoolStudentsTab, setHighSchoolStudentsTab] = useState<'current' | 'alumni'>('alumni');
   const [volunteersTab, setVolunteersTab] = useState<'current' | 'alumni'>('current');
   const [visitingStudentsTab, setVisitingStudentsTab] = useState<'current' | 'alumni'>('alumni');
+  const [peopleIndex, setPeopleIndex] = useState<PeopleIndexItem[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+  const sideNavRef = useRef<HTMLDivElement>(null);
 
   const getHeaderHeight = () => {
     const rootStyles = getComputedStyle(document.documentElement);
@@ -70,6 +148,97 @@ export default function People() {
     return Number.isNaN(parsed) ? 0 : parsed;
   };
 
+  const buildPeopleIndex = () => {
+    if (!contentRef.current) {
+      setPeopleIndex([]);
+      return;
+    }
+
+    const headings = Array.from(contentRef.current.querySelectorAll("h3, h4, h5"));
+    const seen = new Set<string>();
+    const index: PeopleIndexItem[] = [];
+
+    headings.forEach((heading) => {
+      const rawName = heading.textContent?.replace(/\s+/g, " ").trim() ?? "";
+      const section = heading.closest("[data-section]");
+      const sectionId = section?.getAttribute("data-section") ?? "";
+      if (!rawName || ignoredPersonHeadingLabels.has(rawName)) {
+        return;
+      }
+
+      if (!sectionId) {
+        return;
+      }
+
+      if (rawName.length < 2) {
+        return;
+      }
+
+      const headingId = heading.id || toPersonAnchorId(rawName);
+      if (!heading.id) {
+        heading.id = headingId;
+      }
+
+      const card = heading.closest(".grid");
+      const cardWrapper = (card?.parentElement as HTMLElement | null) ?? null;
+      const cardId = cardWrapper?.id ? cardWrapper.id : `${headingId}-card`;
+      if (cardWrapper && !cardWrapper.id) {
+        cardWrapper.id = cardId;
+      }
+
+      heading.setAttribute("data-person-name", rawName);
+
+      const key = `${sectionId}:${rawName}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        index.push({ name: rawName, id: cardWrapper ? cardId : headingId, sectionId });
+      }
+    });
+
+    setPeopleIndex(index);
+  };
+
+  const handlePersonSelect = (id: string, name: string, sectionId: string) => {
+    setSearchQuery(name);
+    setIsSearchOpen(false);
+    setActiveSection(sectionId);
+
+    if (typeof window !== "undefined") {
+      window.history.replaceState(null, "", `#${id}`);
+    }
+
+    requestAnimationFrame(() => {
+      const target = document.getElementById(id);
+      if (!target) {
+        return;
+      }
+
+      const headerHeight = getHeaderHeight();
+      const scrollGap = getScrollGap();
+      const sideNavOffset = getSideNavOffset();
+      const yOffset = target.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap - sideNavOffset;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
+    });
+  };
+
+  const filteredResults = useMemo(() => {
+    const query = normalizeSearchText(searchQuery.trim());
+    if (!query) {
+      return [] as PeopleIndexItem[];
+    }
+
+    return peopleIndex
+      .map((person) => {
+        const normalizedName = normalizeSearchText(person.name);
+        const score = getFuzzyScore(query, normalizedName);
+        return score === null ? null : { person, score };
+      })
+      .filter((item): item is { person: PeopleIndexItem; score: number } => item !== null)
+      .sort((a, b) => a.score - b.score || a.person.name.localeCompare(b.person.name))
+      .map((item) => item.person)
+      .slice(0, 12);
+  }, [peopleIndex, searchQuery]);
+
   const getScrollGap = () => {
     const rootStyles = getComputedStyle(document.documentElement);
     const value = rootStyles.getPropertyValue("--section-scroll-gap").trim();
@@ -80,6 +249,14 @@ export default function People() {
     }
     const parsed = parseFloat(value);
     return Number.isNaN(parsed) ? 0 : parsed;
+  };
+
+  const getSideNavOffset = () => {
+    if (window.innerWidth >= 1024) {
+      return 0;
+    }
+
+    return sideNavRef.current?.getBoundingClientRect().height ?? 0;
   };
 
   const sections = [
@@ -100,6 +277,7 @@ export default function People() {
     if (contentRef.current) {
       const headerHeight = getHeaderHeight();
       const scrollGap = getScrollGap();
+      const sideNavOffset = getSideNavOffset();
       if (window.innerWidth >= 1024) {
         const heading = contentRef.current.querySelector("h2");
         if (heading) {
@@ -115,14 +293,45 @@ export default function People() {
 
       const heading = contentRef.current.querySelector("h2");
       if (heading) {
-        heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const yOffset = heading.getBoundingClientRect().top + window.scrollY - headerHeight - sideNavOffset;
+        window.scrollTo({ top: yOffset, behavior: 'smooth' });
         return;
       }
 
-      const yOffset = contentRef.current.offsetTop - headerHeight;
+      const yOffset = contentRef.current.offsetTop - headerHeight - sideNavOffset;
       window.scrollTo({ top: yOffset, behavior: 'smooth' });
     }
   }, [activeSection]);
+
+  useEffect(() => {
+    buildPeopleIndex();
+  }, [
+    activeSection,
+    museumTab,
+    technicalStaffTab,
+    researchAffiliatesTab,
+    postdocsTab,
+    graduateStudentsTab,
+    undergraduateStudentsTab,
+    highSchoolStudentsTab,
+    volunteersTab,
+    visitingStudentsTab,
+  ]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!searchContainerRef.current) {
+        return;
+      }
+
+      if (!searchContainerRef.current.contains(event.target as Node)) {
+        setIsSearchOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const applyHash = () => {
@@ -184,20 +393,94 @@ export default function People() {
           includes permanent specialists, various laboratory assistants, postdoctoral fellows, and PhD students. 
           Every year, the Group accommodates several visiting scientists, undergraduate students, high school students, and volunteers.
         </p>
+  <div className="mb-10" ref={searchContainerRef}>
+          <label className="sr-only" htmlFor="people-search">
+            Search people
+          </label>
+          <div className="relative">
+            <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-gray-400">
+              <svg
+                aria-hidden="true"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </span>
+            <input
+              id="people-search"
+              name="people-search"
+              type="search"
+              placeholder="Search people"
+              value={searchQuery}
+              onChange={(event) => {
+                const nextValue = event.target.value;
+                setSearchQuery(nextValue);
+                setIsSearchOpen(Boolean(nextValue.trim()));
+              }}
+              onFocus={() => {
+                if (searchQuery.trim()) {
+                  setIsSearchOpen(true);
+                }
+              }}
+              onKeyDown={(event) => {
+                if (event.key === "Escape") {
+                  setIsSearchOpen(false);
+                }
+              }}
+              aria-autocomplete="list"
+              aria-expanded={isSearchOpen}
+              aria-controls="people-search-results"
+              className="w-full rounded-md border border-gray-300 bg-white py-3 pl-11 pr-4 text-base text-gray-900 shadow-sm focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500"
+            />
+            {isSearchOpen && (
+              <div className="absolute z-50 mt-2 w-full rounded-md border border-gray-200 bg-white shadow-lg">
+                {filteredResults.length > 0 ? (
+                  <ul
+                    id="people-search-results"
+                    role="listbox"
+                    className="max-h-72 overflow-auto py-2"
+                  >
+                    {filteredResults.map((person) => (
+                      <li key={person.id} role="option">
+                        <button
+                          type="button"
+                          onClick={() => handlePersonSelect(person.id, person.name, person.sectionId)}
+                          className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
+                        >
+                          {person.name}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <div className="px-4 py-3 text-sm text-gray-500">No matches found.</div>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
 
         {/* Grid Layout with Sidebar Navigation */}
         <div className="grid grid-cols-1 lg:grid-cols-4 lg:gap-8 relative">
           {/* Sidebar Navigation */}
-          <SideNav
-            className="lg:col-span-1"
-            sections={sections}
-            activeSection={activeSection}
-            onSelect={handleSectionSelect}
-          />
+          <div ref={sideNavRef} className="lg:col-span-1">
+            <SideNav
+              sections={sections}
+              activeSection={activeSection}
+              onSelect={handleSectionSelect}
+            />
+          </div>
 
           {/* Content Area */}
           <div ref={contentRef} className="md:col-span-3 section-content">
-        {activeSection === 'lab-evolution' && (
+        <div data-section="lab-evolution" className={activeSection === 'lab-evolution' ? 'block' : 'hidden'}>
         <div>
           {/* Summer 2025 */}
           <div className="mb-12">
@@ -623,9 +906,9 @@ export default function People() {
           </figure>
         </div>
         </div>
-        )}
+        </div>
 
-        {activeSection === 'principal-investigator' && (
+        <div data-section="principal-investigator" className={activeSection === 'principal-investigator' ? 'block' : 'hidden'}>
         <div id="principal-investigator">
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Principal Investigator</h2>
           <p className="text-xl text-gray-600 mb-8">Head of the Arachnology Lab at AMNH</p>
@@ -802,9 +1085,9 @@ export default function People() {
             </div>
           </div>
         </div>
-        )}
+        </div>
 
-        {activeSection === 'museum-specialists' && (
+        <div data-section="museum-specialists" className={activeSection === 'museum-specialists' ? 'block' : 'hidden'}>
         <div id="museum-specialists">
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-8 text-gray-900">Museum Specialists</h2>
 
@@ -985,9 +1268,9 @@ export default function People() {
           </div>
           )}
         </div>
-        )}
+        </div>
 
-        {activeSection === 'technical-staff' && (
+        <div data-section="technical-staff" className={activeSection === 'technical-staff' ? 'block' : 'hidden'}>
         <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-8 text-gray-900">Technical Staff</h2>
           <div className="mb-6">
@@ -1130,9 +1413,9 @@ export default function People() {
           </div>
           )}
         </div>
-        )}
+        </div>
 
-        {activeSection === 'research-affiliates' && (
+        <div data-section="research-affiliates" className={activeSection === 'research-affiliates' ? 'block' : 'hidden'}>
         <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-8 text-gray-900">Research Affiliates</h2>
           <div className="mb-6">
@@ -1234,9 +1517,9 @@ export default function People() {
           <p className="text-gray-700">No alumni listed yet.</p>
           )}
         </div>
-        )}
+        </div>
 
-        {activeSection === 'postdocs' && (
+        <div data-section="postdocs" className={activeSection === 'postdocs' ? 'block' : 'hidden'}>
         <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Postdocs</h2>
           <p className="text-xl text-gray-600 mb-8">Current and former postdocs at the Arachnology Lab</p>
@@ -1522,9 +1805,9 @@ export default function People() {
           </div>
           )}
         </div>
-        )}
+        </div>
 
-        {activeSection === 'graduate-students' && (
+        <div data-section="graduate-students" className={activeSection === 'graduate-students' ? 'block' : 'hidden'}>
         <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Graduate Students</h2>
           <p className="text-xl text-gray-600 mb-8">
@@ -1791,9 +2074,9 @@ export default function People() {
           </div>
           )}
         </div>
-        )}
+        </div>
 
-        {activeSection === 'undergraduate-students' && (
+        <div data-section="undergraduate-students" className={activeSection === 'undergraduate-students' ? 'block' : 'hidden'}>
         <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Undergraduate Students</h2>
           <p className="text-xl text-gray-600 mb-8">
@@ -1940,9 +2223,9 @@ export default function People() {
           </div>
           )}
         </div>
-        )}
+        </div>
 
-        {activeSection === 'high-school-students' && (
+        <div data-section="high-school-students" className={activeSection === 'high-school-students' ? 'block' : 'hidden'}>
         <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">High School Students</h2>
           <p className="text-xl text-gray-600 mb-8">
@@ -2633,9 +2916,9 @@ export default function People() {
           </div>
           )}
         </div>
-        )}
+        </div>
 
-        {activeSection === 'volunteers' && (
+        <div data-section="volunteers" className={activeSection === 'volunteers' ? 'block' : 'hidden'}>
         <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Volunteers and Field Assistants</h2>
           <p className="text-xl text-gray-600 mb-8">
@@ -3576,9 +3859,9 @@ export default function People() {
           </>
           )}
         </div>
-        )}
+        </div>
 
-        {activeSection === 'visiting-students' && (
+        <div data-section="visiting-students" className={activeSection === 'visiting-students' ? 'block' : 'hidden'}>
         <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Visitors</h2>
           <p className="text-xl text-gray-600 mb-8">
@@ -4873,7 +5156,7 @@ export default function People() {
           </>
           )}
         </div>
-        )}
+        </div>
           </div>
         </div>
       </div>
