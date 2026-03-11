@@ -2132,8 +2132,8 @@ export default function People() {
                 image: null,
                 bio: 'Maggie worked in the Arachnology lab in 2025 and 2026, recording morphometric data from scorpions, under the supervision of Jairo Moreno-González and Lorenzo Prendini.',
               },
-            ].map((person, index) => (
-              <div key={index} className={`pb-6 ${index < 2 ? 'border-b border-gray-200' : ''}`}>
+            ].map((person, index, list) => (
+              <div key={index} className={`pb-6 ${index < list.length - 1 ? 'border-b border-gray-200' : ''}`}>
                 <div className="grid md:grid-cols-5 gap-6">
                   <div className="md:col-span-2">
                     {person.image ? (
@@ -2209,8 +2209,8 @@ export default function People() {
               { name: 'Michelle McCoy', affiliation: 'North Carolina University | NSF Research Experiences for Undergraduates Internship', years: '2004', image: 'mccoy.jpg', bio: 'Michelle contributed to the first phylogeny for the Gondwana scorpion family Hormuridae, based on a simultaneous analysis six gene loci and morphology.' },
               { name: 'Samara Maaliki', affiliation: 'CUNY, City University of New York | NSF Research Experiences for Undergraduates Internship | Undergraduate Mentoring in Evolutionary Biology Internship', years: '2003', image: 'maaliki.jpg', bio: 'Samara studied the morphology of the central Asian scorpion <em>Pseudochactas ovchinnikovi</em> and investigated its phylogenetic position with morphological and molecular data.' },
               { name: 'Lauren Esposito', affiliation: 'University of Texas, El Paso | NSF Research Experiences for Undergraduates Internship', years: '2002', image: 'lauren.jpg', bio: 'Lauren first came to the AMNH for a summer research project on the systematics of medically important African <em>Parabuthus</em> scorpions. She returned to the lab as a graduate student from 2004 to 2011.' },
-            ].map((person, index) => (
-              <div key={index} className={`pb-6 ${index < 18 ? 'border-b border-gray-200' : ''}`}>
+            ].map((person, index, list) => (
+              <div key={index} className={`pb-6 ${index < list.length - 1 ? 'border-b border-gray-200' : ''}`}>
                 <div className="grid md:grid-cols-5 gap-6">
                   <div className="md:col-span-2">
                     {person.image ? (
