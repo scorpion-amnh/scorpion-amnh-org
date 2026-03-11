@@ -1,115 +1,22 @@
-'use client';
-
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import path from "path";
+import { promises as fs } from "fs";
+import { HomeGallery } from "./components/HomeGallery";
 
-const galleryImages: Array<{ src: string; orientation: "landscape" | "portrait" }> = [
-  { src: "arachnids/00050.jpg", orientation: "landscape" },
-  { src: "arachnids/00101.jpg", orientation: "landscape" },
-  { src: "arachnids/00240.jpg", orientation: "landscape" },
-  { src: "arachnids/00474.jpg", orientation: "landscape" },
-  { src: "arachnids/07915.jpg", orientation: "landscape" },
-  { src: "field/cricket1.jpg", orientation: "landscape" },
-  { src: "field/cricket2.jpg", orientation: "landscape" },
-  { src: "field/cricket3.jpg", orientation: "landscape" },
-  { src: "field/cricket4.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0001.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0002.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0003.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0005.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0006.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0008.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0009.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0010.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0011.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0012.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0013.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0014.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0015.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0016.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0017.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0018.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0019.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0020.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0021.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0022.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0023.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0024.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0025.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0026.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0027.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0028.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0029.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0030.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0031.jpg", orientation: "landscape" },
-  { src: "arachnids/DSC_0032.jpg", orientation: "landscape" },
-  { src: "arachnids/Hexisopodid1.jpg", orientation: "landscape" },
-  { src: "arachnids/Hexisopodid2.gif", orientation: "landscape" },
-  { src: "arachnids/Hexisopodid3.gif", orientation: "landscape" },
-  { src: "arachnids/blind1.jpg", orientation: "landscape" },
-  { src: "arachnids/blind2.gif", orientation: "landscape" },
-  { src: "arachnids/Pterygocercus.jpg", orientation: "landscape" },
-  { src: "arachnids/Rhagodid1.jpg", orientation: "landscape" },
-  { src: "arachnids/Rhagodid2.jpg", orientation: "landscape" },
-  { src: "arachnids/Solipugid1.jpg", orientation: "landscape" },
-  { src: "arachnids/Opisthacanthus.jpg", orientation: "landscape" },
-  { src: "arachnids/pectines.jpg", orientation: "landscape" },
-  { src: "arachnids/Amblypygi-1.JPG", orientation: "landscape" },
-  { src: "arachnids/Amblypygi-2.JPG", orientation: "landscape" },
-  { src: "arachnids/Amblypygi-4.JPG", orientation: "landscape" },
-  { src: "arachnids/Amblypygi-7.JPG", orientation: "landscape" },
-  { src: "arachnids/Amblypygi-8.JPG", orientation: "landscape" },
-  { src: "arachnids/Opiliones-2.JPG", orientation: "landscape" },
-  { src: "arachnids/Opiliones-3.PNG", orientation: "landscape" },
-  { src: "arachnids/Opiliones-4.PNG", orientation: "landscape" },
-  { src: "arachnids/Opiliones-5.JPG", orientation: "landscape" },
-  { src: "arachnids/Opiliones-6.JPG", orientation: "landscape" },
-  { src: "arachnids/Opiliones-9.JPG", orientation: "landscape" },
-  { src: "arachnids/Opiliones-10.JPG", orientation: "landscape" },
-  { src: "arachnids/Opiliones.JPG", orientation: "landscape" },
-  { src: "arachnids/Ricinulei.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpion-60.jpg", orientation: "landscape" },
-  { src: "arachnids/Scorpion-61.png", orientation: "landscape" },
-  { src: "arachnids/Scorpions-21.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-22.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-23.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-24.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-25.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-26.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-29.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-30.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-32.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-33.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-34.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-36.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-37.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-38.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-40.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-41.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-42.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-44.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-47.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-48.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-49.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-50.JPG", orientation: "landscape" },
-  { src: "arachnids/Scorpions-51.JPG", orientation: "landscape" },
-  { src: "arachnids/Spider.JPG", orientation: "landscape" },
-  { src: "arachnids/Tityus_adrianoi_female_2.JPG", orientation: "landscape" },
-  { src: "arachnids/Tityus_gasci_female_2.JPG", orientation: "landscape" },
-  { src: "arachnids/Tityus_gasci_male_7.JPG", orientation: "landscape" },
-] ;
+const getArachnidGalleryImages = async () => {
+  const folder = path.join(process.cwd(), "public", "images", "arachnids");
+  const entries = await fs.readdir(folder);
+  return entries
+    .filter((entry) => entry !== ".DS_Store")
+    .sort((a, b) => a.localeCompare(b))
+    .map((entry) => `/images/arachnids/${entry}`);
+};
 
 type GalleryImage = (typeof galleryImages)[number];
 
-export default function Home() {
-  const [randomImages, setRandomImages] = useState<GalleryImage[]>([...galleryImages]);
-
-  useEffect(() => {
-    const shuffled = [...galleryImages].sort(() => Math.random() - 0.5);
-    setRandomImages(shuffled);
-  }, []);
-
+export default async function Home() {
+  const galleryImages = await getArachnidGalleryImages();
   return (
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">
@@ -219,31 +126,7 @@ export default function Home() {
               </figure>
             </div>
             <div className="h-px w-full bg-gray-200 mb-5" />
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 grid-flow-dense auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[110px]">
-              {randomImages.map((image, index) => {
-                const isFeatured = index === 0 || (index + 1) % 14 === 0;
-                const sizeClass = isFeatured
-                  ? "col-span-2 row-span-2"
-                  : image.orientation === "portrait"
-                    ? "col-span-1 row-span-3"
-                    : "col-span-1 row-span-1";
-
-                return (
-                  <div
-                    key={`${image.src}-${index}`}
-                    className={`overflow-hidden rounded-sm bg-gray-100 ${sizeClass}`}
-                  >
-                    <Image
-                      src={`/images/${image.src}`}
-                      alt={`Gallery image ${index + 1}`}
-                      width={isFeatured ? 800 : 400}
-                      height={isFeatured ? 600 : 300}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                );
-              })}
-            </div>
+            <HomeGallery images={galleryImages} />
           </div>
         </div>
       </div>

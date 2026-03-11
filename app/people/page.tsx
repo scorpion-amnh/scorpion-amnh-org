@@ -14,6 +14,8 @@ const peopleImageFolderOverrides: Record<string, string> = {
   "highschool2006.jpg": "museum",
   "SRMPSashaandEleanor.jpg": "museum",
   "jose_barba_arachnology_lab.jpg": "museum",
+  "Jesus.jpg": "museum",
+  "Loria.jpg": "field",
   "drawing.jpg": "arachnids",
 };
 
