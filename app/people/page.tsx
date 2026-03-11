@@ -470,7 +470,10 @@ export default function People() {
         {/* Grid Layout with Sidebar Navigation */}
         <div className="grid grid-cols-1 lg:grid-cols-4 lg:gap-8 relative">
           {/* Sidebar Navigation */}
-          <div ref={sideNavRef} className="lg:col-span-1">
+          <div
+            ref={sideNavRef}
+            className="lg:col-span-1 sticky top-[var(--header-height)] z-40 bg-white self-start lg:static lg:top-auto"
+          >
             <SideNav
               sections={sections}
               activeSection={activeSection}
