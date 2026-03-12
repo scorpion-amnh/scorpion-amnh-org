@@ -16,8 +16,48 @@ const peopleImageFolderOverrides: Record<string, string> = {
   "jose_barba_arachnology_lab.jpg": "museum",
   "Jesus.jpg": "museum",
   "Loria.jpg": "field",
-  "drawing.jpg": "arachnids",
+  "drawing.jpg": "research",
 };
+
+const peopleImageFilenameAliases: Record<string, string> = {
+  "2025-Molecular-lab-interns-Summer-2025.jpg": "2025-molecular-lab-summer-interns--Adithya-Raghunath--Jakub-Minkiewicz--Jack-Coulson--Maxine-Ting.jpg",
+  "2025-Group-photp-back-Nick-William-Jose-Jairo-Drusilla-Lorenzo-Pio-front-Javier-Colby.jpg": "2025-lab-outside-guilder-center--Nick-Cazzaniga--William-Phillips--Jose-Barba-Montoya--Jairo-A-Moreno-Gonzalez--Drusilla-Sheridan--Lorenzo-Prendini--Pio-Colmenares--Javier-Blasco-Arostegui--Colby-Sain.jpg",
+  "2024-lunch-Pio-Ricardo-Lorenzo-Colby-Jairo.JPG": "2024-lab-lunch--Pio-Colmenares--Ricardo-Botero-Trujillo--Lorenzo-Prendini--Colby-Sain--Jairo-Blasco-Arostegui.JPG",
+  "2023-dinner-Left-front-to-back-Pio-Isadora-Stephanie-Lorenzo-Valentin-right-front-to-back-Victoria-Jairo-Javier-Taylor-Colby.JPG": "2023-lab-dinner--Pio-Colmenares--Isadora-Colmenares--Stephanie-Loria--Lorenzo-Prendini--Valentin-Ehrenthal--Victoria-Long--Jairo-A-Moreno-Gonzalez--Javier-Blasco-Arostegui--Taylor-Hicks--Colby-Sain.JPG",
+  "2023-Kimberly-Russell-and-students-from-Rutgers-University.HEIC": "2023-Kimberly-Russell-and-students-from-Rutgers-University.jpg",
+  "2022-Lab-end-of-day-Javier-Marcel-Colby-Jairo-Sahibzada-Pio.JPG": "2022-lab-in-rose-center--Javier-Blasco-Arostegui--Marcel-Hermes--Colby-Sain--Jairo-A-Moreno-Gonzalez--Sahibzada-M-Jawad--Pio-Colmenares.jpg",
+  "2021-lunch-Ricardo-Lorenzo-Lou-Pio.HEIC": "2021-lab-lunch--Ricardo-Botero-Trujillo--Lorenzo-Prendini--Lou-Sorkin--Pio-Colmenares.jpg",
+  "labfall2019_p08qpk.jpg": "2019-lab-in-NYC-fall.jpg",
+  "summer2019.jpg": "2019-lab-in-NYC-summer.jpg",
+  "Prendini_Lab_Summer2018.jpg": "2018-lab-outside-AMNH.jpg",
+  "PrendiniLabSeptember2017.jpg": "2017-lab-outside-AMNH.jpg",
+  "PrendiniLabAugust2017.jpg": "2017-lab-in-NYC.jpg",
+  "PrendiniLabAugust2015.jpg": "2015-lab-outside-AMNH.jpg",
+  "PrendiniLabJan2015.jpg": "2015-lab-inside-AMNH-paleontology.jpg",
+  "scorpiongroups2013.jpg": "2013-lab-outside-AMNH.jpg",
+  "scorpiongroups.jpg": "2011-lab-outside-AMNH.jpg",
+  "scorpiongroup.jpg": "2006-lab-outside-AMNH.jpg",
+  "ica.jpg": "2007-scorpion-biologists-ICA.jpg",
+  "Solifugae_2007.jpg": "2007-BSI-solifugae-meeting-at-DMNS.jpg",
+  "Atol_2008.jpg": "2008-ATOL-morphology-scroing-party-at-Smithsonian-USNM.jpg",
+};
+
+const normalizeImageLookupText = (value: string) =>
+  value
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .replace(/ß/g, "ss")
+    .replace(/[’']/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+
+const toTitleCaseHyphen = (value: string) =>
+  value
+    .split(" ")
+    .filter(Boolean)
+    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
+    .join("-");
 
 const resolvePeopleImageSrc = (src: ImageProps["src"]) => {
   if (typeof src !== "string") {
@@ -38,12 +78,89 @@ const resolvePeopleImageSrc = (src: ImageProps["src"]) => {
     return `/images/${overrideFolder}/${relative}`;
   }
 
-  return `/images/people/${relative}`;
+  const aliasFilename = peopleImageFilenameAliases[relative] ?? relative;
+  return `/images/people/${aliasFilename}`;
 };
 
-const Image = (props: ImageProps) => (
-  <NextImage {...props} src={resolvePeopleImageSrc(props.src)} />
-);
+const getNameBasedPeopleCandidates = (alt?: string) => {
+  if (!alt) {
+    return [];
+  }
+
+  const normalized = normalizeImageLookupText(alt);
+  if (!normalized) {
+    return [];
+  }
+
+  const tokens = normalized.split(" ").filter(Boolean);
+  const baseNames = new Set<string>();
+
+  if (tokens.length > 0) {
+    baseNames.add(toTitleCaseHyphen(tokens.join(" ")));
+    baseNames.add(tokens.join("-"));
+  }
+
+  if (tokens.length >= 3) {
+    const withoutSingleLetterTokens = tokens.filter((token) => token.length > 1);
+    if (withoutSingleLetterTokens.length >= 2) {
+      baseNames.add(toTitleCaseHyphen(withoutSingleLetterTokens.join(" ")));
+      baseNames.add(withoutSingleLetterTokens.join("-"));
+    }
+  }
+
+  const extensions = ["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"];
+  const candidates: string[] = [];
+
+  baseNames.forEach((baseName) => {
+    if (baseName.includes(".")) {
+      candidates.push(`/images/people/${baseName}`);
+      return;
+    }
+
+    extensions.forEach((extension) => {
+      candidates.push(`/images/people/${baseName}.${extension}`);
+    });
+  });
+
+  return candidates;
+};
+
+const getImageCandidates = (src: ImageProps["src"], alt?: string) => {
+  const resolved = resolvePeopleImageSrc(src);
+  if (typeof resolved !== "string") {
+    return [resolved];
+  }
+
+  const candidates = [resolved, ...getNameBasedPeopleCandidates(alt)];
+  return candidates.filter((candidate, index) => candidates.indexOf(candidate) === index);
+};
+
+const Image = (props: ImageProps) => {
+  const candidates = useMemo(
+    () => getImageCandidates(props.src, typeof props.alt === "string" ? props.alt : undefined),
+    [props.src, props.alt]
+  );
+  const [candidateIndex, setCandidateIndex] = useState(0);
+
+  useEffect(() => {
+    setCandidateIndex(0);
+  }, [candidates]);
+
+  const activeSrc = candidates[candidateIndex] ?? resolvePeopleImageSrc(props.src);
+
+  return (
+    <NextImage
+      {...props}
+      src={activeSrc}
+      onError={(event) => {
+        props.onError?.(event);
+        setCandidateIndex((current) =>
+          current < candidates.length - 1 ? current + 1 : current
+        );
+      }}
+    />
+  );
+};
 
 type PeopleIndexItem = {
   name: string;
