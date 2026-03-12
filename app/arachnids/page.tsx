@@ -1,32 +1,32 @@
 'use client';
 
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
+
+const images = [
+  "arachnids/00050.jpg", "arachnids/00101.jpg", "arachnids/00240.jpg", "arachnids/00474.jpg", "arachnids/07915.jpg",
+  "field/cricket1.jpg", "field/cricket2.jpg", "field/cricket3.jpg", "field/cricket4.jpg",
+  "arachnids/DSC_0001.jpg", "arachnids/DSC_0002.jpg", "arachnids/DSC_0003.jpg", "arachnids/DSC_0005.jpg",
+  "arachnids/DSC_0006.jpg", "arachnids/DSC_0008.jpg", "arachnids/DSC_0009.jpg", "arachnids/DSC_0010.jpg",
+  "arachnids/DSC_0011.jpg", "arachnids/DSC_0012.jpg", "arachnids/DSC_0013.jpg", "arachnids/DSC_0014.jpg",
+  "arachnids/DSC_0015.jpg", "arachnids/DSC_0016.jpg", "arachnids/DSC_0017.jpg", "arachnids/DSC_0018.jpg",
+  "arachnids/DSC_0019.jpg", "arachnids/DSC_0020.jpg", "arachnids/DSC_0021.jpg", "arachnids/DSC_0022.jpg",
+  "arachnids/DSC_0023.jpg", "arachnids/DSC_0024.jpg", "arachnids/DSC_0025.jpg", "arachnids/DSC_0026.jpg",
+  "arachnids/DSC_0027.jpg", "arachnids/DSC_0028.jpg", "arachnids/DSC_0029.jpg", "arachnids/DSC_0030.jpg",
+  "arachnids/DSC_0031.jpg", "arachnids/DSC_0032.jpg", "arachnids/Hexisopodid1.jpg", "arachnids/Hexisopodid2.gif",
+  "arachnids/Hexisopodid3.gif", "arachnids/blind1.jpg", "arachnids/blind2.gif", "arachnids/Pterygocercus.jpg",
+  "arachnids/Rhagodid1.jpg", "arachnids/Rhagodid2.jpg", "arachnids/Solipugid1.jpg", "arachnids/Opisthacanthus.jpg",
+  "arachnids/pectines.jpg"
+];
+
+const hashText = (value: string) =>
+  value.split("").reduce((hash, char) => ((hash << 5) - hash + char.charCodeAt(0)) | 0, 0);
+
+const deterministicShuffle = <T extends string>(items: T[]) =>
+  [...items].sort((a, b) => hashText(a) - hashText(b));
 
 export default function Arachnids() {
-  const [randomImages, setRandomImages] = useState<string[]>([]);
-
-  useEffect(() => {
-    const images = [
-      "arachnids/00050.jpg", "arachnids/00101.jpg", "arachnids/00240.jpg", "arachnids/00474.jpg", "arachnids/07915.jpg",
-      "field/cricket1.jpg", "field/cricket2.jpg", "field/cricket3.jpg", "field/cricket4.jpg",
-      "arachnids/DSC_0001.jpg", "arachnids/DSC_0002.jpg", "arachnids/DSC_0003.jpg", "arachnids/DSC_0005.jpg",
-      "arachnids/DSC_0006.jpg", "arachnids/DSC_0008.jpg", "arachnids/DSC_0009.jpg", "arachnids/DSC_0010.jpg",
-      "arachnids/DSC_0011.jpg", "arachnids/DSC_0012.jpg", "arachnids/DSC_0013.jpg", "arachnids/DSC_0014.jpg",
-      "arachnids/DSC_0015.jpg", "arachnids/DSC_0016.jpg", "arachnids/DSC_0017.jpg", "arachnids/DSC_0018.jpg",
-      "arachnids/DSC_0019.jpg", "arachnids/DSC_0020.jpg", "arachnids/DSC_0021.jpg", "arachnids/DSC_0022.jpg",
-      "arachnids/DSC_0023.jpg", "arachnids/DSC_0024.jpg", "arachnids/DSC_0025.jpg", "arachnids/DSC_0026.jpg",
-      "arachnids/DSC_0027.jpg", "arachnids/DSC_0028.jpg", "arachnids/DSC_0029.jpg", "arachnids/DSC_0030.jpg",
-      "arachnids/DSC_0031.jpg", "arachnids/DSC_0032.jpg", "arachnids/Hexisopodid1.jpg", "arachnids/Hexisopodid2.gif",
-      "arachnids/Hexisopodid3.gif", "arachnids/blind1.jpg", "arachnids/blind2.gif", "arachnids/Pterygocercus.jpg",
-      "arachnids/Rhagodid1.jpg", "arachnids/Rhagodid2.jpg", "arachnids/Solipugid1.jpg", "arachnids/Opisthacanthus.jpg",
-      "arachnids/pectines.jpg"
-    ];
-
-    const shuffled = [...images].sort(() => Math.random() - 0.5);
-    setRandomImages(shuffled);
-  }, []);
+  const randomImages = useMemo(() => deterministicShuffle(images), []);
 
   return (
     <div className="bg-white min-h-screen">

@@ -1,19 +1,20 @@
 'use client';
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 
 type HomeGalleryProps = {
   images: string[];
 };
 
-export function HomeGallery({ images }: HomeGalleryProps) {
-  const [randomImages, setRandomImages] = useState<string[]>(images);
+const hashText = (value: string) =>
+  value.split("").reduce((hash, char) => ((hash << 5) - hash + char.charCodeAt(0)) | 0, 0);
 
-  useEffect(() => {
-    const shuffled = [...images].sort(() => Math.random() - 0.5);
-    setRandomImages(shuffled);
-  }, [images]);
+const deterministicShuffle = <T extends string>(items: T[]) =>
+  [...items].sort((a, b) => hashText(a) - hashText(b));
+
+export function HomeGallery({ images }: HomeGalleryProps) {
+  const randomImages = useMemo(() => deterministicShuffle(images), [images]);
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 grid-flow-dense auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[110px]">

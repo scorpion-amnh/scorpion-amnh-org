@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 
 const fieldworkImages = [
   { src: "DSCN7139.jpg", orientation: "portrait" },
@@ -35,13 +35,14 @@ const fieldworkImages = [
   { src: "Jeremy-Valerio_Senegal.jpg", orientation: "landscape" },
 ] as const;
 
-export default function Fieldwork() {
-  const [shuffledImages, setShuffledImages] = useState([...fieldworkImages]);
+const hashText = (value: string) =>
+  value.split("").reduce((hash, char) => ((hash << 5) - hash + char.charCodeAt(0)) | 0, 0);
 
-  useEffect(() => {
-    const shuffled = [...fieldworkImages].sort(() => Math.random() - 0.5);
-    setShuffledImages(shuffled);
-  }, []);
+const deterministicShuffle = <T extends { src: string }>(items: readonly T[]) =>
+  [...items].sort((a, b) => hashText(a.src) - hashText(b.src));
+
+export default function Fieldwork() {
+  const shuffledImages = useMemo(() => deterministicShuffle(fieldworkImages), []);
 
   return (
     <div className="bg-white min-h-screen">

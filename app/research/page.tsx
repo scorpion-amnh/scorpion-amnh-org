@@ -1,7 +1,5 @@
 'use client';
 
-import Link from "next/link";
-
 export default function Research() {
   return (
     <div className="bg-white min-h-screen">

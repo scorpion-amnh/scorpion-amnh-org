@@ -93,6 +93,9 @@ module.exports = {
         zinc: grayScale,
         slate: grayScale,
         cyan: cyanScale,
+        rust: rustScale,
+        olive: oliveScale,
+        gold: goldScale,
         blue: {
           500: brandColors["cyan-10"],
           600: brandColors["cyan-40"],

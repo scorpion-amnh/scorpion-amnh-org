@@ -1,7 +1,7 @@
 'use client';
 
 import NextImage from "next/image";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 
 type PhotoPlaceholderProps = {
   name: string;
@@ -103,28 +103,23 @@ export const PhotoPlaceholder = ({ name, className }: PhotoPlaceholderProps) => 
 
   const candidates = useMemo(() => getNameBasedPeopleCandidates(name), [name]);
   const [candidateIndex, setCandidateIndex] = useState(0);
-  const [showInitialsFallback, setShowInitialsFallback] = useState(candidates.length === 0);
+  const safeCandidateIndex = candidateIndex < candidates.length ? candidateIndex : 0;
+  const showInitialsFallback = candidates.length === 0 || candidateIndex >= candidates.length;
 
-  useEffect(() => {
-    setCandidateIndex(0);
-    setShowInitialsFallback(candidates.length === 0);
-  }, [candidates]);
-
-  if (!showInitialsFallback && candidates[candidateIndex]) {
+  if (!showInitialsFallback && candidates[safeCandidateIndex]) {
     return (
       <div className={`${containerClasses} relative overflow-hidden`}>
         <NextImage
-          src={candidates[candidateIndex]}
+          src={candidates[safeCandidateIndex]}
           alt={name}
           fill
           sizes="(min-width: 768px) 33vw, 100vw"
           className="object-cover"
           onError={() => {
-            if (candidateIndex < candidates.length - 1) {
-              setCandidateIndex((current) => current + 1);
-            } else {
-              setShowInitialsFallback(true);
-            }
+            setCandidateIndex((current) => {
+              const normalized = current < candidates.length ? current : 0;
+              return normalized + 1;
+            });
           }}
         />
       </div>

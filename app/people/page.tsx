@@ -1,8 +1,7 @@
 'use client';
 
 import NextImage, { type ImageProps } from "next/image";
-import Link from "next/link";
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { SideNav } from "../components/SideNav";
 import { Tabs } from "../components/Tabs";
 import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
@@ -141,12 +140,11 @@ const Image = (props: ImageProps) => {
     [props.src, props.alt]
   );
   const [candidateIndex, setCandidateIndex] = useState(0);
-
-  useEffect(() => {
-    setCandidateIndex(0);
-  }, [candidates]);
-
-  const activeSrc = candidates[candidateIndex] ?? resolvePeopleImageSrc(props.src);
+  const candidateCount = candidates.length;
+  const normalizedCandidateIndex = candidateCount > 0
+    ? Math.min(candidateIndex, candidateCount - 1)
+    : 0;
+  const activeSrc = candidates[normalizedCandidateIndex] ?? resolvePeopleImageSrc(props.src);
 
   return (
     <NextImage
@@ -154,9 +152,14 @@ const Image = (props: ImageProps) => {
       src={activeSrc}
       onError={(event) => {
         props.onError?.(event);
-        setCandidateIndex((current) =>
-          current < candidates.length - 1 ? current + 1 : current
-        );
+        setCandidateIndex((current) => {
+          if (candidateCount === 0) {
+            return 0;
+          }
+
+          const normalized = Math.min(current, candidateCount - 1);
+          return Math.min(normalized + 1, candidateCount - 1);
+        });
       }}
     />
   );
@@ -257,26 +260,29 @@ export default function People() {
   const shouldScrollOnSectionChange = useRef(false);
   const pendingPersonScrollId = useRef<string | null>(null);
 
-  const sections = [
-    { id: 'lab-evolution', label: 'Lab Evolution' },
-    { id: 'principal-investigator', label: 'Principal Investigator' },
-    { id: 'museum-specialists', label: 'Museum Specialists' },
-    { id: 'technical-staff', label: 'Technical Staff' },
-    { id: 'research-affiliates', label: 'Research Affiliates' },
-    { id: 'postdocs', label: 'Postdocs' },
-    { id: 'graduate-students', label: 'Graduate Students' },
-    { id: 'undergraduate-students', label: 'Undergraduate Students' },
-    { id: 'high-school-students', label: 'High School Students' },
-    { id: 'volunteers', label: 'Volunteers' },
-    { id: 'visiting-students', label: 'Visitors' },
-  ];
+  const sections = useMemo(
+    () => [
+      { id: 'lab-evolution', label: 'Lab Evolution' },
+      { id: 'principal-investigator', label: 'Principal Investigator' },
+      { id: 'museum-specialists', label: 'Museum Specialists' },
+      { id: 'technical-staff', label: 'Technical Staff' },
+      { id: 'research-affiliates', label: 'Research Affiliates' },
+      { id: 'postdocs', label: 'Postdocs' },
+      { id: 'graduate-students', label: 'Graduate Students' },
+      { id: 'undergraduate-students', label: 'Undergraduate Students' },
+      { id: 'high-school-students', label: 'High School Students' },
+      { id: 'volunteers', label: 'Volunteers' },
+      { id: 'visiting-students', label: 'Visitors' },
+    ],
+    []
+  );
 
   const sectionLabelMap = useMemo(
     () => Object.fromEntries(sections.map((section) => [section.id, section.label])),
     [sections]
   );
 
-  const getHeaderHeight = () => {
+  const getHeaderHeight = useCallback(() => {
     const rootStyles = getComputedStyle(document.documentElement);
     const value = rootStyles.getPropertyValue("--header-height").trim();
     if (value.endsWith("rem")) {
@@ -286,9 +292,9 @@ export default function People() {
     }
     const parsed = parseFloat(value);
     return Number.isNaN(parsed) ? 0 : parsed;
-  };
+  }, []);
 
-  const buildPeopleIndex = () => {
+  const buildPeopleIndex = useCallback(() => {
     if (!contentRef.current) {
       setPeopleIndex([]);
       return;
@@ -347,7 +353,7 @@ export default function People() {
     });
 
     setPeopleIndex(index);
-  };
+  }, [sectionLabelMap]);
 
   const setTabForSection = (sectionId: string, tab?: 'current' | 'alumni' | null) => {
     if (!tab) {
@@ -420,7 +426,7 @@ export default function People() {
       .slice(0, 12);
   }, [peopleIndex, searchQuery]);
 
-  const getScrollGap = () => {
+  const getScrollGap = useCallback(() => {
     const rootStyles = getComputedStyle(document.documentElement);
     const value = rootStyles.getPropertyValue("--section-scroll-gap").trim();
     if (value.endsWith("rem")) {
@@ -430,17 +436,17 @@ export default function People() {
     }
     const parsed = parseFloat(value);
     return Number.isNaN(parsed) ? 0 : parsed;
-  };
+  }, []);
 
-  const getSideNavOffset = () => {
+  const getSideNavOffset = useCallback(() => {
     if (window.innerWidth >= 1024) {
       return 0;
     }
 
     return sideNavRef.current?.getBoundingClientRect().height ?? 0;
-  };
+  }, []);
 
-  const runPendingPersonScroll = () => {
+  const runPendingPersonScroll = useCallback(() => {
     const targetId = pendingPersonScrollId.current;
     if (!targetId) {
       return;
@@ -471,7 +477,7 @@ export default function People() {
     };
 
     requestAnimationFrame(tryScroll);
-  };
+  }, [getHeaderHeight, getScrollGap, getSideNavOffset]);
 
   useEffect(() => {
     if (!shouldScrollOnSectionChange.current) {
@@ -513,7 +519,7 @@ export default function People() {
         : contentRef.current.offsetTop - headerHeight - sideNavOffset;
       window.scrollTo({ top: yOffset, behavior: 'smooth' });
     }
-  }, [activeSection]);
+  }, [activeSection, getHeaderHeight, getScrollGap, getSideNavOffset]);
 
   useEffect(() => {
     runPendingPersonScroll();
@@ -528,10 +534,15 @@ export default function People() {
     highSchoolStudentsTab,
     volunteersTab,
     visitingStudentsTab,
+    runPendingPersonScroll,
   ]);
 
   useEffect(() => {
-    buildPeopleIndex();
+    const frame = requestAnimationFrame(() => {
+      buildPeopleIndex();
+    });
+
+    return () => cancelAnimationFrame(frame);
   }, [
     activeSection,
     museumTab,
@@ -543,6 +554,7 @@ export default function People() {
     highSchoolStudentsTab,
     volunteersTab,
     visitingStudentsTab,
+    buildPeopleIndex,
   ]);
 
   useEffect(() => {
@@ -664,7 +676,6 @@ export default function People() {
                 }
               }}
               aria-autocomplete="list"
-              aria-expanded={isSearchOpen}
               aria-controls="people-search-results"
               className="w-full rounded-md border border-gray-300 bg-white py-3 pl-11 pr-4 text-base text-gray-900 shadow-sm focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500"
             />
@@ -677,7 +688,7 @@ export default function People() {
                     className="max-h-72 overflow-auto py-2"
                   >
                     {filteredResults.map((person) => (
-                      <li key={`${person.sectionId}-${person.id}`} role="option">
+                      <li key={`${person.sectionId}-${person.id}`} role="option" aria-selected={false}>
                         <button
                           type="button"
                           onClick={() => handlePersonSelect(person.id, person.name, person.sectionId, person.tab)}

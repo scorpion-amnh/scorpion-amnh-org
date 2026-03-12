@@ -12,12 +12,13 @@ type TabsProps<T extends string> = {
 export function Tabs<T extends string>({ options, value, onChange }: TabsProps<T>) {
   return (
     <div className="border-b border-gray-200">
-      <div className="flex gap-6">
+      <div className="flex gap-6" role="tablist">
         {options.map((option) => {
           const isActive = option.value === value;
           return (
             <button
               key={option.value}
+              role="tab"
               type="button"
               onClick={() => onChange(option.value)}
               className={`relative -mb-px px-1 pb-2 text-sm font-medium transition-colors ${
