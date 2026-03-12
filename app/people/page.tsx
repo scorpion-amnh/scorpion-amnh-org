@@ -1031,14 +1031,14 @@ export default function People() {
           <figure className="mb-8">
             <Image
               src="/images/scorpiongroup.jpg"
-              alt="2006 Arachnology Lab at AMNH Left to Right: (Back Row) Jeremy Huff, Erich Volschenk, Lionel Monod, Edmundo González, (Front Row) Randy Mercurio, Camilo Mattoni, Lauren Esposito, Monica Mosier, Ofelia Delgado, Valerio Vignoli, Lorenzo Prendini."
+              alt="2006 Arachnology Lab at AMNH Left to Right: (Back Row) Jeremy Huff, Erich Volschenk, Lionel Monod, Edmundo González, (Front Row) Randy Mercurio, Camilo Mattoni, Lauren A. Esposito, Monica Mosier, Ofelia Delgado, Valerio Vignoli, Lorenzo Prendini."
               width={1200}
               height={800}
               className="w-full h-auto rounded-sm"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: (Back Row) Jeremy Huff, Erich Volschenk, Lionel Monod, Edmundo González, 
-              (Front Row) Randy Mercurio, Camilo Mattoni, Lauren Esposito, Monica Mosier, Ofelia Delgado, 
+              (Front Row) Randy Mercurio, Camilo Mattoni, Lauren A. Esposito, Monica Mosier, Ofelia Delgado, 
               Valerio Vignoli, Lorenzo Prendini.
             </figcaption>
           </figure>
@@ -1051,14 +1051,14 @@ export default function People() {
           <figure className="mb-8">
             <Image
               src="/images/ica.jpg"
-              alt="2007 Scorpion Biologists ICA Left to Right: (Back Row) Carsten Kamenz, Mingsheng Zhu, Edmundo González, Roger Farley, Erich Volschenk, Lauren Esposito, Camilo Mattoni, (Front Row) Jason Dunlop, Jeremy Huff, Warren Savary, Ricardo Pinto-da-Rocha, Oscar Francke, Lorenzo Prendini."
+              alt="2007 Scorpion Biologists ICA Left to Right: (Back Row) Carsten Kamenz, Mingsheng Zhu, Edmundo González, Roger Farley, Erich Volschenk, Lauren A. Esposito, Camilo Mattoni, (Front Row) Jason Dunlop, Jeremy Huff, Warren Savary, Ricardo Pinto-da-Rocha, Oscar Francke, Lorenzo Prendini."
               width={1200}
               height={800}
               className="w-full h-auto rounded-sm"
             />
             <figcaption className="text-sm text-gray-600 mt-3 italic">
               Left to Right: (Back Row) Carsten Kamenz, Mingsheng Zhu, Edmundo González, Roger Farley, 
-              Erich Volschenk, Lauren Esposito, Camilo Mattoni, (Front Row) Jason Dunlop, Jeremy Huff, 
+              Erich Volschenk, Lauren A. Esposito, Camilo Mattoni, (Front Row) Jason Dunlop, Jeremy Huff, 
               Warren Savary, Ricardo Pinto-da-Rocha, Oscar Francke, Lorenzo Prendini.
             </figcaption>
           </figure>
@@ -1560,18 +1560,18 @@ export default function People() {
           {/* Additional Alumni - Condensed */}
           <div className="space-y-6">
             {[
-              { name: 'Yili Lim', title: 'Laboratory Technician', years: '2008 to 2009', image: 'yili.jpg' },
-              { name: 'Tricia Rubi', title: 'Laboratory Technician', years: '2008 to 2009', image: 'tricia.jpg' },
-              { name: 'Kaythi Han', title: 'Laboratory Technician', years: '2008', image: 'kaythi.jpg' },
-              { name: 'Allison Kerwin', title: 'Laboratory Technician', years: '2008', image: 'allison.jpg' },
-              { name: 'Kanvaly Bamba', title: 'Laboratory Technician', years: '2007 to 2008', image: 'Kanvaly-B-Bamba.jpg' },
-              { name: 'Torsten Dikow', title: 'Laboratory Technician', years: '2007', image: 'torsten.jpg' },
-              { name: 'Ligia Benavides', title: 'Laboratory Technician', years: '2006 to 2007', image: 'ligia.jpg' },
-              { name: 'Monica Mosier', title: 'Laboratory Technician', years: '2006', image: 'monica.jpg' },
-              { name: 'Kenneth "Tripp" MacDonald', title: 'Laboratory Technician', years: '2005', image: 'Kenneth-Tripp-MacDonald.jpg' },
-              { name: 'Diana Pietri', title: 'Laboratory Technician', years: '2003 to 2005', image: 'diana.jpg' },
-              { name: 'Tarang Sharma', title: 'Laboratory Technician', years: '2003 to 2004', image: 'tarang.jpg' },
-              { name: 'Rebecca Budinoff', title: 'Laboratory Technician', years: '2004', image: 'rebecca.jpg' },
+              { name: 'Yili Lim', title: 'Laboratory Technician', years: '2008 to 2009', image: 'people/Yili-Lim.jpg' },
+              { name: 'Tricia Rubi', title: 'Laboratory Technician', years: '2008 to 2009', image: 'people/Tricia-Rubi.jpg' },
+              { name: 'Kaythi Han', title: 'Laboratory Technician', years: '2008', image: 'people/Kaythi-Han.jpg' },
+              { name: 'Allison Kerwin', title: 'Laboratory Technician', years: '2008', image: 'people/Allison-Kerwin.jpg' },
+              { name: 'Kanvaly Bamba', title: 'Laboratory Technician', years: '2007 to 2008', image: 'people/Kanvaly-B-Bamba.jpg' },
+              { name: 'Torsten Dikow', title: 'Laboratory Technician', years: '2007', image: 'people/Torsten-Dikow.jpg' },
+              { name: 'Ligia Benavides', title: 'Laboratory Technician', years: '2006 to 2007', image: 'people/Ligia-Benavides.jpg' },
+              { name: 'Monica Mosier', title: 'Laboratory Technician', years: '2006', image: 'people/Monica-Mosier.jpg' },
+              { name: 'Kenneth "Tripp" MacDonald', title: 'Laboratory Technician', years: '2005', image: 'people/Kenneth-Tripp-MacDonald.jpg' },
+              { name: 'Diana Pietri', title: 'Laboratory Technician', years: '2003 to 2005', image: 'people/Diana-Pietri.jpg' },
+              { name: 'Tarang Sharma', title: 'Laboratory Technician', years: '2003 to 2004', image: 'people/Tarang-Sharma.jpg' },
+              { name: 'Rebecca Budinoff', title: 'Laboratory Technician', years: '2004', image: 'people/Rebecca-Budinoff.jpg' },
             ].map((person, index, list) => (
               <div key={index} className={`pb-6 ${index < list.length - 1 ? 'border-b border-gray-200' : ''}`}>
                 <div className="grid md:grid-cols-5 gap-6">
@@ -2236,7 +2236,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
-                  src="/images/lauren.jpg"
+                  src="/images/people/Lauren-A-Esposito.jpg"
                   alt="Lauren A. Esposito"
                   width={400}
                   height={533}
@@ -2356,25 +2356,25 @@ export default function People() {
               { name: 'Camille Jaramillo', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2022', image: null, bio: 'Camille worked in the Arachnida and Myriapoda collections in the summer of 2022, assisting Pio Colmenares with curation and digitization of a collection of Chilean spiders.' },
               { name: 'Angie Lopez', affiliation: 'Rutgers University, New Brunswick, NJ', years: '2022', image: null, bio: 'Angie worked in the Arachnology lab in the summer of 2022, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Pio Colmenares.' },
               { name: 'Jared Martin', affiliation: 'University of Illinois Urbana-Champaign', years: '2022', image: null, bio: 'Jared worked in the Arachnida and Myriapoda Collections in the summer of 2022, assisting with curation of a donation of Opiliones (harvestmen).' },
-              { name: 'Valentin Ehrenthal', affiliation: 'University of Hamburg, Germany', years: '2019 to 2020', image: 'Valentin-Ehrenthal.jpg', bio: 'Valentin spent six months at the AMNH working on Southeast Asian scorpions. He generated images and data for a morphological matrix and performed extractions, PCRs and Sanger Sequencing. Additionally, he learned about the biogeography and phylogeny of these scorpions.' },
-              { name: 'Diogo Casellato', affiliation: 'CUNY, Baruch College | Brazil Scientific Mobility Program', years: '2015 to 2019', image: 'DiogoCasellato2015.jpg', bio: 'Diogo interned in the molecular lab, learning to extract, amplify, sequence, and edit DNA as part of a variety of scorpion phylogenetics projects.' },
-              { name: 'Elena Babicz', affiliation: 'Bridgewater State University', years: '2019', image: 'Elena.jpg', bio: 'Elena spent the summer at the AMNH as an REU intern under the supervision of Stephanie Loria and Pio Colmenares, focusing on Thelyphonids. She was tasked with generating molecular data and images of the specimens, and also learned about the morphology, biogeography and phylogeny of this order of arachnids.' },
-              { name: 'Colby Sain', affiliation: 'University of Tennessee', years: '2019', image: 'Colby.jpg', bio: 'Colby came to the AMNH as an REU intern. She worked under the mentorship of Ricardo Botero-Trujillo and Stephanie Loria, primarily on Ricinulei, with a focus on the African genus, <em>Ricinoides</em>. She generated an extensive set of morphological images, and she also generated molecular data. At the University of Tennessee, she studies Geology with a focus on Paleontology. In the future, Colby hopes to do more work in the Arachnology Lab.' },
-              { name: 'Deborah Chin', affiliation: 'Fairleigh Dickinson University', years: '2016 to 2018', image: 'deborah.jpg', bio: 'Deborah spent the summer doing extractions and PCRs on scorpions in the AMNH molecular lab.' },
-              { name: 'Sasha Mendez', affiliation: 'Rutgers University', years: '2018', image: 'Sasha.jpg', bio: 'Sasha spent the summer obtaining DNA extractions, PCRs and sequences from scorpion samples in the AMNH molecular lab.' },
-              { name: 'Lam Ngo', affiliation: 'Sewanee: The University of the South', years: '2018', image: 'Lam.jpg', bio: 'Lam assisted with field work in Asia, surpervised by Stephanie Loria.' },
-              { name: 'Massimiliano "Max" Roppo', affiliation: 'Sapienza University of Rome, Italy', years: '2018', image: 'Roppo2.jpg', bio: 'Max came to the AMNH and spent three months adquiring morphological data on some African scorpions.' },
-              { name: 'Maggie Ruben', affiliation: 'Sapienza University of Rome, Italy', years: '2018', image: 'Maggie.jpg', bio: 'Maggie spent the summer of 2016 studying cuticular fluorescence in scorpions and other chelicerates including horseshoe crabs, solifuges, opilionids, and extinct eurypterids.' },
+              { name: 'Valentin Ehrenthal', affiliation: 'University of Hamburg, Germany', years: '2019 to 2020', image: null, bio: 'Valentin spent six months at the AMNH working on Southeast Asian scorpions. He generated images and data for a morphological matrix and performed extractions, PCRs and Sanger Sequencing. Additionally, he learned about the biogeography and phylogeny of these scorpions.' },
+              { name: 'Diogo Casellato', affiliation: 'CUNY, Baruch College | Brazil Scientific Mobility Program', years: '2015 to 2019', image: null, bio: 'Diogo interned in the molecular lab, learning to extract, amplify, sequence, and edit DNA as part of a variety of scorpion phylogenetics projects.' },
+              { name: 'Elena Babicz', affiliation: 'Bridgewater State University', years: '2019', image: null, bio: 'Elena spent the summer at the AMNH as an REU intern under the supervision of Stephanie Loria and Pio Colmenares, focusing on Thelyphonids. She was tasked with generating molecular data and images of the specimens, and also learned about the morphology, biogeography and phylogeny of this order of arachnids.' },
+              { name: 'Colby Sain', affiliation: 'University of Tennessee', years: '2019', image: null, bio: 'Colby came to the AMNH as an REU intern. She worked under the mentorship of Ricardo Botero-Trujillo and Stephanie Loria, primarily on Ricinulei, with a focus on the African genus, <em>Ricinoides</em>. She generated an extensive set of morphological images, and she also generated molecular data. At the University of Tennessee, she studies Geology with a focus on Paleontology. In the future, Colby hopes to do more work in the Arachnology Lab.' },
+              { name: 'Deborah Chin', affiliation: 'Fairleigh Dickinson University', years: '2016 to 2018', image: 'people/Deborah-Chin.jpg', bio: 'Deborah spent the summer doing extractions and PCRs on scorpions in the AMNH molecular lab.' },
+              { name: 'Sasha Mendez', affiliation: 'Rutgers University', years: '2018', image: 'people/Sasha-Mendez.jpg', bio: 'Sasha spent the summer obtaining DNA extractions, PCRs and sequences from scorpion samples in the AMNH molecular lab.' },
+              { name: 'Lam Ngo', affiliation: 'Sewanee: The University of the South', years: '2018', image: 'people/Lam-Ngo.jpg', bio: 'Lam assisted with field work in Asia, surpervised by Stephanie Loria.' },
+              { name: 'Massimiliano "Max" Roppo', affiliation: 'Sapienza University of Rome, Italy', years: '2018', image: 'people/Massimiliano-Max-Roppo.jpg', bio: 'Max came to the AMNH and spent three months adquiring morphological data on some African scorpions.' },
+              { name: 'Maggie Ruben', affiliation: 'Sapienza University of Rome, Italy', years: '2018', image: 'people/Maggie-Mannon.jpeg', bio: 'Maggie spent the summer of 2016 studying cuticular fluorescence in scorpions and other chelicerates including horseshoe crabs, solifuges, opilionids, and extinct eurypterids.' },
               { name: 'Michelle Yun', affiliation: 'CUNY, York College', years: '2010', image: null, bio: 'Michelle took part in an investigation of the phylogeny of the scorpion genus <em>Parabuthus</em> sequencing six different loci from samples collected all over southern Africa.' },
-              { name: 'Angela Holuba', affiliation: 'Barnard College', years: '2008', image: 'angela.jpg', bio: 'Angela worked on a project investigating the phylogeny and evolutionary relationships of the scorpion family Buthidae.' },
-              { name: 'Sylvia Johnson', affiliation: 'Barnard College | Collegiate Science and Technology Entry Program', years: '2008', image: 'sylvia.jpg', bio: 'Sylvia worked on a project investigating the phylogeny and evolutionary relationships of the scorpion family Diplocentridae.' },
-              { name: 'Gena Esposito', affiliation: 'University of Texas at Austin | NSF RevSys Grant', years: '2007', image: 'gena.jpg', bio: 'Gena generated DNA sequence data as part of an investigation of the phylogeny of the scorpion family Buthidae.' },
-              { name: 'Sarah Schoenbrun', affiliation: 'Brown University | NSF Research Experiences for Undergraduates Internship', years: '2007', image: 'sarah.jpg', bio: 'Sarah studied the medically important North American scorpion genus, <em>Centruroides</em>, using molecular data from previously unidentified specimens to clarify their phylogenetic placement. Sarah also investigated the relationship between venom genes of <em>Centruroides</em> and other medically important scorpions.' },
-              { name: 'Steve Webb', affiliation: 'Muhlenberg College | NSF Research Experiences for Undergraduates Internship', years: '2005', image: 'webb.jpg', bio: 'Steve tested the phylogenetic placement and monophyly of the former scorpion family Microcharmidae, using morphological and molecular data.' },
-              { name: 'Kanvaly B. Bamba', affiliation: 'Yale University | NSF Research Experiences for Undergraduates Internship', years: '2004', image: 'bamba.jpg', bio: 'Kanvaly contributed to the first phylogeny for the Gondwana scorpion family Hormuridae, based on a simultaneous analysis six gene loci and morphology.' },
-              { name: 'Michelle McCoy', affiliation: 'North Carolina University | NSF Research Experiences for Undergraduates Internship', years: '2004', image: 'mccoy.jpg', bio: 'Michelle contributed to the first phylogeny for the Gondwana scorpion family Hormuridae, based on a simultaneous analysis six gene loci and morphology.' },
-              { name: 'Samara Maaliki', affiliation: 'CUNY, City University of New York | NSF Research Experiences for Undergraduates Internship | Undergraduate Mentoring in Evolutionary Biology Internship', years: '2003', image: 'maaliki.jpg', bio: 'Samara studied the morphology of the central Asian scorpion <em>Pseudochactas ovchinnikovi</em> and investigated its phylogenetic position with morphological and molecular data.' },
-              { name: 'Lauren Esposito', affiliation: 'University of Texas, El Paso | NSF Research Experiences for Undergraduates Internship', years: '2002', image: 'lauren.jpg', bio: 'Lauren first came to the AMNH for a summer research project on the systematics of medically important African <em>Parabuthus</em> scorpions. She returned to the lab as a graduate student from 2004 to 2011.' },
+              { name: 'Angela Holuba', affiliation: 'Barnard College', years: '2008', image: 'people/Angela-Holuba.jpg', bio: 'Angela worked on a project investigating the phylogeny and evolutionary relationships of the scorpion family Buthidae.' },
+              { name: 'Sylvia Johnson', affiliation: 'Barnard College | Collegiate Science and Technology Entry Program', years: '2008', image: 'people/Sylvia-Johnson.jpg', bio: 'Sylvia worked on a project investigating the phylogeny and evolutionary relationships of the scorpion family Diplocentridae.' },
+              { name: 'Gena Esposito', affiliation: 'University of Texas at Austin | NSF RevSys Grant', years: '2007', image: 'people/Gena-Esposito.jpg', bio: 'Gena generated DNA sequence data as part of an investigation of the phylogeny of the scorpion family Buthidae.' },
+              { name: 'Sarah Schoenbrun', affiliation: 'Brown University | NSF Research Experiences for Undergraduates Internship', years: '2007', image: 'people/Sarah-Schoenbrun.jpg', bio: 'Sarah studied the medically important North American scorpion genus, <em>Centruroides</em>, using molecular data from previously unidentified specimens to clarify their phylogenetic placement. Sarah also investigated the relationship between venom genes of <em>Centruroides</em> and other medically important scorpions.' },
+              { name: 'Steve Webb', affiliation: 'Muhlenberg College | NSF Research Experiences for Undergraduates Internship', years: '2005', image: 'people/Steve-Webb.jpg', bio: 'Steve tested the phylogenetic placement and monophyly of the former scorpion family Microcharmidae, using morphological and molecular data.' },
+              { name: 'Kanvaly B. Bamba', affiliation: 'Yale University | NSF Research Experiences for Undergraduates Internship', years: '2004', image: 'people/Kanvaly-B-Bamba.jpg', bio: 'Kanvaly contributed to the first phylogeny for the Gondwana scorpion family Hormuridae, based on a simultaneous analysis six gene loci and morphology.' },
+              { name: 'Michelle McCoy', affiliation: 'North Carolina University | NSF Research Experiences for Undergraduates Internship', years: '2004', image: null, bio: 'Michelle contributed to the first phylogeny for the Gondwana scorpion family Hormuridae, based on a simultaneous analysis six gene loci and morphology.' },
+              { name: 'Samara Maaliki', affiliation: 'CUNY, City University of New York | NSF Research Experiences for Undergraduates Internship | Undergraduate Mentoring in Evolutionary Biology Internship', years: '2003', image: null, bio: 'Samara studied the morphology of the central Asian scorpion <em>Pseudochactas ovchinnikovi</em> and investigated its phylogenetic position with morphological and molecular data.' },
+              { name: 'Lauren A. Esposito', affiliation: 'University of Texas, El Paso | NSF Research Experiences for Undergraduates Internship', years: '2002', image: 'people/Lauren-A-Esposito.jpg', bio: 'Lauren first came to the AMNH for a summer research project on the systematics of medically important African <em>Parabuthus</em> scorpions. She returned to the lab as a graduate student from 2004 to 2011.' },
             ].map((person, index, list) => (
               <div key={index} className={`pb-6 ${index < list.length - 1 ? 'border-b border-gray-200' : ''}`}>
                 <div className="grid md:grid-cols-5 gap-6">
@@ -2954,7 +2954,7 @@ export default function People() {
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Michelle Bayefsky-Anand</h3>
                 <p className="text-sm text-gray-500 mb-3">High school student in 2008</p>
                 <p className="text-gray-700">
-                  Michelle, a student at Ramaz Upper High School, worked in the Molecular Systematics Laboratory learning to extract, amplify, and sequence scorpion DNA under the supervision of Lauren Esposito and Lorenzo Prendini in 2008.
+                  Michelle, a student at Ramaz Upper High School, worked in the Molecular Systematics Laboratory learning to extract, amplify, and sequence scorpion DNA under the supervision of Lauren A. Esposito and Lorenzo Prendini in 2008.
                 </p>
               </div>
             </div>
