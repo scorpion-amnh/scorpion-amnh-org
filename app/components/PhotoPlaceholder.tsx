@@ -25,6 +25,13 @@ const toTitleCaseHyphen = (value: string) =>
     .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
     .join("-");
 
+const toTitleCaseUnderscore = (value: string) =>
+  value
+    .split(" ")
+    .filter(Boolean)
+    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
+    .join("_");
+
 const getNameBasedPeopleCandidates = (name: string) => {
   const normalized = normalizeImageLookupText(name);
   if (!normalized) {
@@ -37,6 +44,8 @@ const getNameBasedPeopleCandidates = (name: string) => {
   if (tokens.length > 0) {
     baseNames.add(toTitleCaseHyphen(tokens.join(" ")));
     baseNames.add(tokens.join("-"));
+    baseNames.add(toTitleCaseUnderscore(tokens.join(" ")));
+    baseNames.add(tokens.join("_"));
   }
 
   if (tokens.length >= 3) {
@@ -44,6 +53,8 @@ const getNameBasedPeopleCandidates = (name: string) => {
     if (withoutSingleLetterTokens.length >= 2) {
       baseNames.add(toTitleCaseHyphen(withoutSingleLetterTokens.join(" ")));
       baseNames.add(withoutSingleLetterTokens.join("-"));
+      baseNames.add(toTitleCaseUnderscore(withoutSingleLetterTokens.join(" ")));
+      baseNames.add(withoutSingleLetterTokens.join("_"));
     }
   }
 
