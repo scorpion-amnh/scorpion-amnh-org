@@ -475,7 +475,7 @@ export default function People() {
                     className="max-h-72 overflow-auto py-2"
                   >
                     {filteredResults.map((person) => (
-                      <li key={person.id} role="option">
+                      <li key={`${person.sectionId}-${person.id}`} role="option">
                         <button
                           type="button"
                           onClick={() => handlePersonSelect(person.id, person.name, person.sectionId)}
