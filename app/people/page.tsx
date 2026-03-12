@@ -1634,7 +1634,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
-                  src="/images/Boris.jpg"
+                  src="/images/people/Boris-Zakharov.jpg"
                   alt="Boris Zakharov"
                   width={400}
                   height={533}
@@ -1663,7 +1663,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
-                  src="/images/Vladimir.jpg"
+                  src="/images/people/Vladimir-Ovtsharenko.jpg"
                   alt="Vladimir Ovtsharenko"
                   width={400}
                   height={533}
@@ -1692,7 +1692,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
-                  src="/images/lou.jpg"
+                  src="/images/people/Louis-Sorkin.jpg"
                   alt="Louis Sorkin"
                   width={400}
                   height={533}
@@ -2298,14 +2298,14 @@ export default function People() {
                 name: 'Dhruva Mathews Jagga Ram',
                 affiliation: 'Columbia University, New York, NY',
                 years: '2025 to 2026',
-                image: null,
+                image: 'people/Dhruva-Mathews-Jagga-Ram.jpeg',
                 bio: 'Dhruva worked in the Arachnology lab in 2025 and 2026, conducting DNA extraction, quantitation, PCR and sequencing, supervised by Colby Sain.',
               },
               {
                 name: 'Maggie Mannon',
                 affiliation: 'Rutgers University, New Brunswick, NJ',
                 years: '2025 to 2026',
-                image: null,
+                image: 'people/Maggie-Mannon.jpeg',
                 bio: 'Maggie worked in the Arachnology lab in 2025 and 2026, recording morphometric data from scorpions, under the supervision of Jairo Moreno-González and Lorenzo Prendini.',
               },
             ].map((person, index, list) => (
