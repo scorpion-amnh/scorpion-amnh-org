@@ -50,6 +50,7 @@ type PeopleIndexItem = {
   id: string;
   sectionId: string;
   sectionLabel: string;
+  tab?: 'current' | 'alumni';
 };
 
 const ignoredPersonHeadingLabels = new Set([
@@ -137,6 +138,7 @@ export default function People() {
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const sideNavRef = useRef<HTMLDivElement>(null);
   const shouldScrollOnSectionChange = useRef(false);
+  const pendingPersonScrollId = useRef<string | null>(null);
 
   const sections = [
     { id: 'lab-evolution', label: 'Lab Evolution' },
@@ -183,6 +185,10 @@ export default function People() {
       const rawName = heading.textContent?.replace(/\s+/g, " ").trim() ?? "";
       const section = heading.closest("[data-section]");
       const sectionId = section?.getAttribute("data-section") ?? "";
+      const tab = (heading.closest("[data-tab]") as HTMLElement | null)?.getAttribute("data-tab") as
+        | 'current'
+        | 'alumni'
+        | null;
       if (!rawName || ignoredPersonHeadingLabels.has(rawName)) {
         return;
       }
@@ -209,7 +215,8 @@ export default function People() {
 
       heading.setAttribute("data-person-name", rawName);
 
-      const key = `${sectionId}:${rawName}`;
+      const normalizedName = normalizeSearchText(rawName).replace(/\s+/g, " ").trim();
+      const key = `${sectionId}:${normalizedName}`;
       if (!seen.has(key)) {
         seen.add(key);
         index.push({
@@ -217,6 +224,7 @@ export default function People() {
           id: cardWrapper ? cardId : headingId,
           sectionId,
           sectionLabel: sectionLabelMap[sectionId] ?? sectionId,
+          tab: tab ?? undefined,
         });
       }
     });
@@ -224,28 +232,55 @@ export default function People() {
     setPeopleIndex(index);
   };
 
-  const handlePersonSelect = (id: string, name: string, sectionId: string) => {
+  const setTabForSection = (sectionId: string, tab?: 'current' | 'alumni' | null) => {
+    if (!tab) {
+      return;
+    }
+
+    switch (sectionId) {
+      case 'museum-specialists':
+        setMuseumTab(tab);
+        break;
+      case 'technical-staff':
+        setTechnicalStaffTab(tab);
+        break;
+      case 'research-affiliates':
+        setResearchAffiliatesTab(tab);
+        break;
+      case 'postdocs':
+        setPostdocsTab(tab);
+        break;
+      case 'graduate-students':
+        setGraduateStudentsTab(tab);
+        break;
+      case 'undergraduate-students':
+        setUndergraduateStudentsTab(tab);
+        break;
+      case 'high-school-students':
+        setHighSchoolStudentsTab(tab);
+        break;
+      case 'volunteers':
+        setVolunteersTab(tab);
+        break;
+      case 'visiting-students':
+        setVisitingStudentsTab(tab);
+        break;
+      default:
+        break;
+    }
+  };
+
+  const handlePersonSelect = (id: string, name: string, sectionId: string, tab?: 'current' | 'alumni') => {
     setSearchQuery(name);
     setIsSearchOpen(false);
+    setTabForSection(sectionId, tab);
     setActiveSection(sectionId);
-    shouldScrollOnSectionChange.current = true;
+    shouldScrollOnSectionChange.current = false;
+    pendingPersonScrollId.current = id;
 
     if (typeof window !== "undefined") {
       window.history.replaceState(null, "", `#${id}`);
     }
-
-    requestAnimationFrame(() => {
-      const target = document.getElementById(id);
-      if (!target) {
-        return;
-      }
-
-      const headerHeight = getHeaderHeight();
-      const scrollGap = getScrollGap();
-      const sideNavOffset = getSideNavOffset();
-      const yOffset = target.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap - sideNavOffset;
-      window.scrollTo({ top: yOffset, behavior: "smooth" });
-    });
   };
 
   const filteredResults = useMemo(() => {
@@ -327,6 +362,38 @@ export default function People() {
       window.scrollTo({ top: yOffset, behavior: 'smooth' });
     }
   }, [activeSection]);
+
+  useEffect(() => {
+    const targetId = pendingPersonScrollId.current;
+    if (!targetId) {
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      const target = document.getElementById(targetId);
+      if (!target) {
+        return;
+      }
+
+      pendingPersonScrollId.current = null;
+      const headerHeight = getHeaderHeight();
+      const scrollGap = getScrollGap();
+      const sideNavOffset = getSideNavOffset();
+      const yOffset = target.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap - sideNavOffset;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
+    });
+  }, [
+    activeSection,
+    museumTab,
+    technicalStaffTab,
+    researchAffiliatesTab,
+    postdocsTab,
+    graduateStudentsTab,
+    undergraduateStudentsTab,
+    highSchoolStudentsTab,
+    volunteersTab,
+    visitingStudentsTab,
+  ]);
 
   useEffect(() => {
     buildPeopleIndex();
@@ -478,7 +545,7 @@ export default function People() {
                       <li key={`${person.sectionId}-${person.id}`} role="option">
                         <button
                           type="button"
-                          onClick={() => handlePersonSelect(person.id, person.name, person.sectionId)}
+                          onClick={() => handlePersonSelect(person.id, person.name, person.sectionId, person.tab)}
                           className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
                         >
                           <span className="text-gray-900">{person.name}</span>
@@ -1854,8 +1921,7 @@ export default function People() {
               onChange={setGraduateStudentsTab}
             />
           </div>
-          {graduateStudentsTab === 'current' && (
-          <>
+          <div data-tab="current" className={graduateStudentsTab === 'current' ? 'block' : 'hidden'}>
 
           {/* George Popovici */}
           <div className="mb-8 pb-8 border-b border-gray-200">
@@ -1942,11 +2008,9 @@ export default function People() {
             </div>
           </div>
 
-          </>
-          )}
+          </div>
 
-          {graduateStudentsTab === 'alumni' && (
-          <div className="people-compact">
+          <div data-tab="alumni" className={`people-compact ${graduateStudentsTab === 'alumni' ? 'block' : 'hidden'}`}>
 
           {/* Nayeli Gutiérrez Trejo */}
           <div className="mb-8 pb-8 border-b border-gray-200">
@@ -2103,7 +2167,6 @@ export default function People() {
             </div>
           </div>
           </div>
-          )}
         </div>
         </div>
 
