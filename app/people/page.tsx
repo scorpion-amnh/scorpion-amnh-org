@@ -136,6 +136,7 @@ export default function People() {
   const contentRef = useRef<HTMLDivElement>(null);
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const sideNavRef = useRef<HTMLDivElement>(null);
+  const shouldScrollOnSectionChange = useRef(false);
 
   const sections = [
     { id: 'lab-evolution', label: 'Lab Evolution' },
@@ -227,6 +228,7 @@ export default function People() {
     setSearchQuery(name);
     setIsSearchOpen(false);
     setActiveSection(sectionId);
+    shouldScrollOnSectionChange.current = true;
 
     if (typeof window !== "undefined") {
       window.history.replaceState(null, "", `#${id}`);
@@ -285,31 +287,43 @@ export default function People() {
   };
 
   useEffect(() => {
+    if (!shouldScrollOnSectionChange.current) {
+      return;
+    }
+
+    shouldScrollOnSectionChange.current = false;
+
     if (contentRef.current) {
       const headerHeight = getHeaderHeight();
       const scrollGap = getScrollGap();
       const sideNavOffset = getSideNavOffset();
+      const activeSectionElement = contentRef.current.querySelector(
+        `[data-section="${activeSection}"]`
+      ) as HTMLElement | null;
+      const activeHeading = activeSectionElement?.querySelector("h2") ?? null;
       if (window.innerWidth >= 1024) {
-        const heading = contentRef.current.querySelector("h2");
-        if (heading) {
-          const yOffset = heading.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap;
+        if (activeHeading) {
+          const yOffset = activeHeading.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap;
           window.scrollTo({ top: yOffset, behavior: 'smooth' });
           return;
         }
 
-        const yOffset = contentRef.current.offsetTop - headerHeight - scrollGap;
+        const yOffset = activeSectionElement
+          ? activeSectionElement.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap
+          : contentRef.current.offsetTop - headerHeight - scrollGap;
         window.scrollTo({ top: yOffset, behavior: 'smooth' });
         return;
       }
 
-      const heading = contentRef.current.querySelector("h2");
-      if (heading) {
-        const yOffset = heading.getBoundingClientRect().top + window.scrollY - headerHeight - sideNavOffset;
+      if (activeHeading) {
+        const yOffset = activeHeading.getBoundingClientRect().top + window.scrollY - headerHeight - sideNavOffset;
         window.scrollTo({ top: yOffset, behavior: 'smooth' });
         return;
       }
 
-      const yOffset = contentRef.current.offsetTop - headerHeight - sideNavOffset;
+      const yOffset = activeSectionElement
+        ? activeSectionElement.getBoundingClientRect().top + window.scrollY - headerHeight - sideNavOffset
+        : contentRef.current.offsetTop - headerHeight - sideNavOffset;
       window.scrollTo({ top: yOffset, behavior: 'smooth' });
     }
   }, [activeSection]);
@@ -348,6 +362,7 @@ export default function People() {
     const applyHash = () => {
       const hash = window.location.hash.replace('#', '');
       if (hash) {
+        shouldScrollOnSectionChange.current = true;
         setActiveSection(hash);
       }
     };
@@ -359,6 +374,7 @@ export default function People() {
 
   const handleSectionSelect = (id: string) => {
     setActiveSection(id);
+    shouldScrollOnSectionChange.current = true;
 
     switch (id) {
       case 'museum-specialists':
