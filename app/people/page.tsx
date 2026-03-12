@@ -3339,6 +3339,28 @@ export default function People() {
             </div>
           </div>
 
+          {/* Tom Sullivan */}
+          <div className="mb-6 pb-6 border-b border-gray-200">
+            <div className="grid md:grid-cols-5 gap-4">
+              <div className="md:col-span-1">
+                <Image
+                  src="/images/Tom-Sullivan.jpg"
+                  alt="Tom Sullivan"
+                  width={300}
+                  height={400}
+                  className="w-full h-auto rounded-sm"
+                />
+              </div>
+              <div className="md:col-span-4">
+                <h4 className="text-base font-bold mb-1 text-gray-900">Tom Sullivan</h4>
+                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+                <p className="text-gray-700">
+                  Tom assisted with sorting and labeling the Arachnid and Myriapod Collections and packing and unpacking loans.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Patrick Gildenhuys */}
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
