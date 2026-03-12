@@ -10,18 +10,18 @@ import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
 const peopleImageFolderOverrides: Record<string, string> = {
   "2024-fieldwork-Pio-and-Jairo.HEIC": "field",
   "2024-preparing-samples-abroad.JPG": "field",
-  "2025-Colmenares-and-visiting-researchers-in-the-collection.jpg": "museum",
-  "highschool2006.jpg": "museum",
-  "SRMPSashaandEleanor.jpg": "museum",
-  "jose_barba_arachnology_lab.jpg": "museum",
-  "Jesus.jpg": "museum",
   "Loria.jpg": "field",
   "drawing.jpg": "research",
 };
 
 const peopleImageFilenameAliases: Record<string, string> = {
+  "2025-Colmenares-and-visiting-researchers-in-the-collection.jpg": "2025-Pio-Colmenares-and-visiting-researchers-in-the-collection.jpg",
   "2025-Molecular-lab-interns-Summer-2025.jpg": "2025-molecular-lab-summer-interns--Adithya-Raghunath--Jakub-Minkiewicz--Jack-Coulson--Maxine-Ting.jpg",
   "2025-Group-photp-back-Nick-William-Jose-Jairo-Drusilla-Lorenzo-Pio-front-Javier-Colby.jpg": "2025-lab-outside-guilder-center--Nick-Cazzaniga--William-Phillips--Jose-Barba-Montoya--Jairo-A-Moreno-Gonzalez--Drusilla-Sheridan--Lorenzo-Prendini--Pio-Colmenares--Javier-Blasco-Arostegui--Colby-Sain.jpg",
+  "highschool2006.jpg": "Jianhua-Lin--and--Qiao-Rong-Huang.jpg",
+  "SRMPSashaandEleanor.jpg": "Sasha-Reiter--and--Eleanor-Goetz.jpg",
+  "jose_barba_arachnology_lab.jpg": "Jose-Barba-Montoya.jpg",
+  "Jesus.jpg": "Jesus-Alberto-Cruz-Lopez.jpg",
   "2024-lunch-Pio-Ricardo-Lorenzo-Colby-Jairo.JPG": "2024-lab-lunch--Pio-Colmenares--Ricardo-Botero-Trujillo--Lorenzo-Prendini--Colby-Sain--Jairo-Blasco-Arostegui.JPG",
   "2023-dinner-Left-front-to-back-Pio-Isadora-Stephanie-Lorenzo-Valentin-right-front-to-back-Victoria-Jairo-Javier-Taylor-Colby.JPG": "2023-lab-dinner--Pio-Colmenares--Isadora-Colmenares--Stephanie-Loria--Lorenzo-Prendini--Valentin-Ehrenthal--Victoria-Long--Jairo-A-Moreno-Gonzalez--Javier-Blasco-Arostegui--Taylor-Hicks--Colby-Sain.JPG",
   "2023-Kimberly-Russell-and-students-from-Rutgers-University.HEIC": "2023-Kimberly-Russell-and-students-from-Rutgers-University.jpg",
@@ -739,7 +739,7 @@ export default function People() {
             <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
             <figure className="mb-8">
               <Image
-                src="/images/2025-Colmenares-and-visiting-researchers-in-the-collection.jpg"
+                src="/images/2025-Pio-Colmenares-and-visiting-researchers-in-the-collection.jpg"
                 alt="2025 Colmenares and visiting researchers in the collection"
                 width={1200}
                 height={800}
@@ -769,24 +769,6 @@ export default function People() {
             </figure>
           </div>
 
-          {/* 2024 Fieldwork */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2024</h2>
-            <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-            <figure className="mb-8">
-              <Image
-                src="/images/2024-fieldwork-Pio-and-Jairo.HEIC"
-                alt="2024 fieldwork with Pío Colmenares and Jairo Moreno-González"
-                width={1200}
-                height={800}
-                className="w-full h-auto rounded-sm"
-              />
-              <figcaption className="text-sm text-gray-600 mt-3 italic">
-                Pío Colmenares and Jairo Moreno-González during fieldwork.
-              </figcaption>
-            </figure>
-          </div>
-
           {/* 2024 Lunch */}
           <div className="mb-12">
             <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2024</h2>
@@ -801,24 +783,6 @@ export default function People() {
               />
               <figcaption className="text-sm text-gray-600 mt-3 italic">
                 Left to right: Pío Colmenares, Ricardo Botero-Trujillo, Lorenzo Prendini, Colby Sain, Jairo Moreno-González.
-              </figcaption>
-            </figure>
-          </div>
-
-          {/* 2024 Preparing Samples Abroad */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2024</h2>
-            <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-            <figure className="mb-8">
-              <Image
-                src="/images/2024-preparing-samples-abroad.JPG"
-                alt="2024 preparing samples abroad"
-                width={1200}
-                height={800}
-                className="w-full h-auto rounded-sm"
-              />
-              <figcaption className="text-sm text-gray-600 mt-3 italic">
-                Pío Colmenares preparing samples abroad.
               </figcaption>
             </figure>
           </div>
@@ -1531,16 +1495,9 @@ export default function People() {
               <div className="md:col-span-3">
                 <h3 className="text-xl font-bold mb-1 text-gray-900">Steve Thurston</h3>
                 <p className="text-lg text-gray-600 mb-4">Scientific Illustrator</p>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-700">
                   While completing his BS in Horticulture at the University of Connecticut (1977), Steve was trained by M.J. Brush in the Biological Illustration studio and began working as a scientific illustrator, drawing bugs for Dr. James A. Slater. He later received his MFA in New Genres/Video at The San Francisco Art Institute and has worked variously as a carpenter, video maker, artist and illustrator. He began full time employment at the AMNH in 1999 as a Scientific Assistant, providing illustration, photo and graphic support to the Division of Invertebrate Zoology.
                 </p>
-                <Image
-                  src="/images/drawing.jpg"
-                  alt="Illustration of Amblypygi by Steve Thurston"
-                  width={400}
-                  height={300}
-                  className="mt-4 rounded-sm"
-                />
               </div>
             </div>
           </div>
@@ -1791,7 +1748,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
-                  src="/images/jose_barba_arachnology_lab.jpg"
+                  src="/images/Jose-Barba-Montoya.jpg"
                   alt="Jose Barba-Montoya"
                   width={400}
                   height={533}
@@ -1896,7 +1853,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
-                  src="/images/Loria2.jpg"
+                  src="/images/Stephanie-F-Loria.jpg"
                   alt="Stephanie F. Loria"
                   width={400}
                   height={533}
@@ -2187,7 +2144,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
-                  src="/images/Loria.jpg"
+                  src="/images/Stephanie-F-Loria.jpg"
                   alt="Stephanie F. Loria"
                   width={400}
                   height={533}
@@ -2924,7 +2881,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
-                  src="/images/SRMPSashaandEleanor.jpg"
+                  src="/images/Sasha-Reiter--and--Eleanor-Goetz.jpg"
                   alt="Sasha Reiter and Eleanor Goetz"
                   width={400}
                   height={533}
@@ -2947,7 +2904,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
-                  src="/images/SRMPSashaandEleanor.jpg"
+                  src="/images/Sasha-Reiter--and--Eleanor-Goetz.jpg"
                   alt="Sasha Reiter and Eleanor Goetz"
                   width={400}
                   height={533}
@@ -3008,7 +2965,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
-                  src="/images/highschool2006.jpg"
+                  src="/images/Jianhua-Lin--and--Qiao-Rong-Huang.jpg"
                   alt="Jianhua Lin and Qiao Rong Huang"
                   width={400}
                   height={533}
@@ -3031,7 +2988,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
                 <Image
-                  src="/images/highschool2006.jpg"
+                  src="/images/Jianhua-Lin--and--Qiao-Rong-Huang.jpg"
                   alt="Jianhua Lin and Qiao Rong Huang"
                   width={400}
                   height={533}
@@ -4829,7 +4786,7 @@ export default function People() {
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
                 <Image
-                  src="/images/Jesus.jpg"
+                  src="/images/Jesus-Alberto-Cruz-Lopez.jpg"
                   alt="Jesus Alberto Cruz-López"
                   width={300}
                   height={400}
