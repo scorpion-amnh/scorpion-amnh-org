@@ -278,6 +278,8 @@ export default function People() {
     shouldScrollOnSectionChange.current = false;
     pendingPersonScrollId.current = id;
 
+    runPendingPersonScroll();
+
     if (typeof window !== "undefined") {
       window.history.replaceState(null, "", `#${id}`);
     }
@@ -319,6 +321,39 @@ export default function People() {
     }
 
     return sideNavRef.current?.getBoundingClientRect().height ?? 0;
+  };
+
+  const runPendingPersonScroll = () => {
+    const targetId = pendingPersonScrollId.current;
+    if (!targetId) {
+      return;
+    }
+
+    let attempts = 0;
+    const maxAttempts = 12;
+
+    const tryScroll = () => {
+      const target = document.getElementById(targetId);
+      if (!target || target.offsetParent === null) {
+        attempts += 1;
+        if (attempts < maxAttempts) {
+          requestAnimationFrame(tryScroll);
+          return;
+        }
+
+        pendingPersonScrollId.current = null;
+        return;
+      }
+
+      pendingPersonScrollId.current = null;
+      const headerHeight = getHeaderHeight();
+      const scrollGap = getScrollGap();
+      const sideNavOffset = getSideNavOffset();
+      const yOffset = target.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap - sideNavOffset;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
+    };
+
+    requestAnimationFrame(tryScroll);
   };
 
   useEffect(() => {
@@ -364,24 +399,7 @@ export default function People() {
   }, [activeSection]);
 
   useEffect(() => {
-    const targetId = pendingPersonScrollId.current;
-    if (!targetId) {
-      return;
-    }
-
-    requestAnimationFrame(() => {
-      const target = document.getElementById(targetId);
-      if (!target) {
-        return;
-      }
-
-      pendingPersonScrollId.current = null;
-      const headerHeight = getHeaderHeight();
-      const scrollGap = getScrollGap();
-      const sideNavOffset = getSideNavOffset();
-      const yOffset = target.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap - sideNavOffset;
-      window.scrollTo({ top: yOffset, behavior: "smooth" });
-    });
+    runPendingPersonScroll();
   }, [
     activeSection,
     museumTab,
@@ -1200,8 +1218,7 @@ export default function People() {
             />
           </div>
 
-          {museumTab === 'current' && (
-          <>
+          <div data-tab="current" className={museumTab === 'current' ? 'block' : 'hidden'}>
           <p className="text-gray-900 mb-8">Current museum specialist of the Arachnology Lab at AMNH</p>
           {/* Pio Colmenares */}
           <div className="mb-8 pb-8">
@@ -1242,11 +1259,12 @@ export default function People() {
               </div>
             </div>
           </div>
-          </>
-          )}
+          </div>
 
-          {museumTab === 'alumni' && (
-          <div className="people-compact">
+          <div
+            data-tab="alumni"
+            className={`people-compact ${museumTab === 'alumni' ? 'block' : 'hidden'}`}
+          >
           <p className="text-gray-900 mb-8">Former museum specialists of the Arachnology Lab at AMNH</p>
 
           {/* Michelle Locke */}
@@ -1364,7 +1382,6 @@ export default function People() {
             </div>
           </div>
           </div>
-          )}
         </div>
         </div>
 
@@ -1381,8 +1398,7 @@ export default function People() {
               onChange={setTechnicalStaffTab}
             />
           </div>
-          {technicalStaffTab === 'current' && (
-          <>
+          <div data-tab="current" className={technicalStaffTab === 'current' ? 'block' : 'hidden'}>
           {/* Steve Thurston */}
           <div className="mb-12 pb-12 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
@@ -1434,11 +1450,12 @@ export default function People() {
             </div>
           </div>
 
-          </>
-          )}
+          </div>
 
-          {technicalStaffTab === 'alumni' && (
-          <div className="people-compact">
+          <div
+            data-tab="alumni"
+            className={`people-compact ${technicalStaffTab === 'alumni' ? 'block' : 'hidden'}`}
+          >
           {/* Alumni Section */}
           <h3 className="text-2xl font-bold mt-12 mb-2 text-gray-900">Alumni</h3>
           <p className="text-xl text-gray-600 mb-8">Former technical staff of the Arachnology Lab at AMNH</p>
@@ -1509,7 +1526,6 @@ export default function People() {
 
           </div>
           </div>
-          )}
         </div>
         </div>
 
@@ -1526,8 +1542,7 @@ export default function People() {
             />
           </div>
 
-          {researchAffiliatesTab === 'current' && (
-          <>
+          <div data-tab="current" className={researchAffiliatesTab === 'current' ? 'block' : 'hidden'}>
 
           {/* Boris Zakharov */}
           <div className="mb-12 pb-12 border-b border-gray-200">
@@ -1608,12 +1623,11 @@ export default function People() {
               </div>
             </div>
           </div>
-          </>
-          )}
+          </div>
 
-          {researchAffiliatesTab === 'alumni' && (
-          <p className="text-gray-700">No alumni listed yet.</p>
-          )}
+          <div data-tab="alumni" className={researchAffiliatesTab === 'alumni' ? 'block' : 'hidden'}>
+            <p className="text-gray-700">No alumni listed yet.</p>
+          </div>
         </div>
         </div>
 
@@ -1631,8 +1645,7 @@ export default function People() {
               onChange={setPostdocsTab}
             />
           </div>
-          {postdocsTab === 'current' && (
-          <>
+          <div data-tab="current" className={postdocsTab === 'current' ? 'block' : 'hidden'}>
           
           {/* Muhammad Tahir */}
           <div className="mb-8 pb-8 border-b border-gray-200">
@@ -1700,11 +1713,12 @@ export default function People() {
             </div>
           </div>
 
-          </>
-          )}
+          </div>
 
-          {postdocsTab === 'alumni' && (
-          <div className="people-compact">
+          <div
+            data-tab="alumni"
+            className={`people-compact ${postdocsTab === 'alumni' ? 'block' : 'hidden'}`}
+          >
           <h3 className="text-2xl font-bold mt-12 mb-2 text-gray-900">Alumni</h3>
           <p className="text-xl text-gray-600 mb-8">Former postdocs of the Arachnology Lab at AMNH</p>
 
@@ -1901,7 +1915,6 @@ export default function People() {
             </div>
           </div>
           </div>
-          )}
         </div>
         </div>
 
@@ -2186,8 +2199,7 @@ export default function People() {
               onChange={setUndergraduateStudentsTab}
             />
           </div>
-          {undergraduateStudentsTab === 'current' && (
-          <>
+          <div data-tab="current" className={undergraduateStudentsTab === 'current' ? 'block' : 'hidden'}>
           <div className="space-y-6">
             {[
               {
@@ -2237,11 +2249,12 @@ export default function People() {
               </div>
             ))}
           </div>
-          </>
-          )}
+          </div>
 
-          {undergraduateStudentsTab === 'alumni' && (
-          <div className="people-compact">
+          <div
+            data-tab="alumni"
+            className={`people-compact ${undergraduateStudentsTab === 'alumni' ? 'block' : 'hidden'}`}
+          >
           
           <div className="space-y-6">
             {[
@@ -2315,7 +2328,6 @@ export default function People() {
             ))}
           </div>
           </div>
-          )}
         </div>
         </div>
 
@@ -2335,8 +2347,7 @@ export default function People() {
               onChange={setHighSchoolStudentsTab}
             />
           </div>
-          {highSchoolStudentsTab === 'current' && (
-          <>
+          <div data-tab="current" className={highSchoolStudentsTab === 'current' ? 'block' : 'hidden'}>
           {/* Meredith Metz */}
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
@@ -2384,11 +2395,12 @@ export default function People() {
               </div>
             </div>
           </div>
-          </>
-          )}
+          </div>
 
-          {highSchoolStudentsTab === 'alumni' && (
-          <div className="people-compact">
+          <div
+            data-tab="alumni"
+            className={`people-compact ${highSchoolStudentsTab === 'alumni' ? 'block' : 'hidden'}`}
+          >
 
           {/* Anika Mahbub */}
           <div className="mb-8 pb-8 border-b border-gray-200">
@@ -3008,7 +3020,6 @@ export default function People() {
             </div>
           </div>
           </div>
-          )}
         </div>
         </div>
 
@@ -3028,8 +3039,7 @@ export default function People() {
               onChange={setVolunteersTab}
             />
           </div>
-          {volunteersTab === 'current' && (
-          <>
+          <div data-tab="current" className={volunteersTab === 'current' ? 'block' : 'hidden'}>
 
           {/* Soleil Blanquera */}
           <div className="mb-6 pb-6 border-b border-gray-200">
@@ -3085,11 +3095,9 @@ export default function People() {
             </div>
           </div>
 
-          </>
-          )}
+          </div>
 
-          {volunteersTab === 'alumni' && (
-          <>
+          <div data-tab="alumni" className={volunteersTab === 'alumni' ? 'block' : 'hidden'}>
 
           {/* George Tsinias */}
           <div className="mb-6 pb-6 border-b border-gray-200">
@@ -3950,8 +3958,7 @@ export default function People() {
               </div>
             </div>
           </div>
-          </>
-          )}
+          </div>
         </div>
         </div>
 
@@ -3971,8 +3978,7 @@ export default function People() {
               onChange={setVisitingStudentsTab}
             />
           </div>
-          {visitingStudentsTab === 'current' && (
-          <>
+          <div data-tab="current" className={visitingStudentsTab === 'current' ? 'block' : 'hidden'}>
 
           {/* Antonio Galán Sánchez */}
           <div className="mb-6 pb-6">
@@ -3990,11 +3996,9 @@ export default function People() {
               </div>
             </div>
           </div>
-          </>
-          )}
+          </div>
 
-          {visitingStudentsTab === 'alumni' && (
-          <>
+          <div data-tab="alumni" className={visitingStudentsTab === 'alumni' ? 'block' : 'hidden'}>
 
           {/* Matias Izquierdo */}
           <div className="mb-6 pb-6 border-b border-gray-200">
@@ -5247,8 +5251,7 @@ export default function People() {
               </div>
             </div>
           </div>
-          </>
-          )}
+          </div>
         </div>
         </div>
           </div>
