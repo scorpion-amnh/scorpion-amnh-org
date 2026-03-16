@@ -1,48 +1,13 @@
 'use client';
 
-import NextImage, { type ImageProps } from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { SideNav } from "../components/SideNav";
 import { Tabs } from "../components/Tabs";
 import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
-import { getImageCandidates, resolvePeopleImageSrc } from "./imageUtils";
+import { PeopleImage } from "./PeopleImage";
 import { usePeopleNavigation } from "./usePeopleNavigation";
 
-const Image = (props: ImageProps) => {
-  const candidates = useMemo(
-    () => getImageCandidates(props.src, typeof props.alt === "string" ? props.alt : undefined),
-    [props.src, props.alt]
-  );
-  const [candidateIndex, setCandidateIndex] = useState(0);
-
-  useEffect(() => {
-    setCandidateIndex(0);
-  }, [candidates]);
-
-  const candidateCount = candidates.length;
-  const normalizedCandidateIndex = candidateCount > 0
-    ? Math.min(candidateIndex, candidateCount - 1)
-    : 0;
-  const activeSrc = candidates[normalizedCandidateIndex] ?? resolvePeopleImageSrc(props.src);
-
-  return (
-    <NextImage
-      {...props}
-      src={activeSrc}
-      onError={(event) => {
-        props.onError?.(event);
-        setCandidateIndex((current) => {
-          if (candidateCount === 0) {
-            return 0;
-          }
-
-          const normalized = Math.min(current, candidateCount - 1);
-          return Math.min(normalized + 1, candidateCount - 1);
-        });
-      }}
-    />
-  );
-};
+const Image = PeopleImage;
 
 export default function People() {
   const sections = useMemo(
@@ -195,7 +160,7 @@ export default function People() {
             <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2025</h2>
             <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
             <figure className="mb-8">
-              <Image
+              <PeopleImage
                 src="/images/2025-Molecular-lab-interns-Summer-2025.jpg"
                 alt="Summer 2025 Molecular Lab Interns"
                 width={1200}
@@ -213,7 +178,7 @@ export default function People() {
             <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2025</h2>
             <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
             <figure className="mb-8">
-              <Image
+              <PeopleImage
                 src="/images/2025-Pio-Colmenares-and-visiting-researchers-in-the-collection.jpg"
                 alt="2025 Colmenares and visiting researchers in the collection"
                 width={1200}
