@@ -1,7 +1,7 @@
 'use client';
 
 import NextImage from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { getNameBasedPeopleCandidates } from "../people/imageUtils";
 
 type PhotoPlaceholderProps = {
@@ -39,11 +39,13 @@ export const PhotoPlaceholder = ({ name, className }: PhotoPlaceholderProps) => 
     () => getNameBasedPeopleCandidates(name, { includeUnderscore: true }),
     [name]
   );
-  const [candidateIndex, setCandidateIndex] = useState(0);
+  const candidateKey = useMemo(() => candidates.join('|'), [candidates]);
+  const [candidateState, setCandidateState] = useState<{ key: string; index: number }>({
+    key: '',
+    index: 0,
+  });
 
-  useEffect(() => {
-    setCandidateIndex(0);
-  }, [candidates]);
+  const candidateIndex = candidateState.key === candidateKey ? candidateState.index : 0;
 
   const safeCandidateIndex = candidateIndex < candidates.length ? candidateIndex : 0;
   const showInitialsFallback = candidates.length === 0 || candidateIndex >= candidates.length;
@@ -58,9 +60,10 @@ export const PhotoPlaceholder = ({ name, className }: PhotoPlaceholderProps) => 
           sizes="(min-width: 768px) 33vw, 100vw"
           className="object-cover"
           onError={() => {
-            setCandidateIndex((current) => {
-              const normalized = current < candidates.length ? current : 0;
-              return normalized + 1;
+            setCandidateState((current) => {
+              const currentIndex = current.key === candidateKey ? current.index : 0;
+              const normalized = currentIndex < candidates.length ? currentIndex : 0;
+              return { key: candidateKey, index: normalized + 1 };
             });
           }}
         />
