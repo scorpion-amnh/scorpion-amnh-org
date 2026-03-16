@@ -1296,248 +1296,224 @@ export default function People() {
           <div data-tab="current" className={graduateStudentsTab === 'current' ? 'block' : 'hidden'}>
 
           {/* George Popovici */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="George Popovici" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">George Popovici</h3>
-                <p className="text-base text-gray-600 mb-1">Comparative Biology Ph.D. Program, Richard Gilder Graduate School, AMNH</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student from 2026 - Ph.D. on systematics and biogeography of the Asian vinegaroons (whip scorpions) and the evolution of defense secretions</p>
-                <p className="text-gray-700">
-                  George Popovici graduated with a BSc in Biological Sciences from Imperial College London in 2025, during which time he conducted research on centipede taxonomy and systematics at the Natural History Museum, London. He is also affiliated with the Molecular Biology Laboratory of the “Grigore Antipa” National Museum of Natural History in Bucharest, Romania, where his work focuses on the systematics and biogeography of Romanian myriapods and arachnids. George joined the AMNH in 2025 as a doctoral student in the Richard Gilder Graduate School&apos;s Comparative Biology PhD program; his current research investigates the taxonomy and systematics of the <em>Thelyphonida</em> (whip scorpions) and the evolution of their complex chemical defense systems.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="George Popovici" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">George Popovici</h3>
+              <p className="text-base text-gray-600 mb-1">Comparative Biology Ph.D. Program, Richard Gilder Graduate School, AMNH</p>
+              <p className="text-sm text-gray-500 mb-3">Graduate student from 2026 - Ph.D. on systematics and biogeography of the Asian vinegaroons (whip scorpions) and the evolution of defense secretions</p>
+              <p className="text-gray-700">
+                George Popovici graduated with a BSc in Biological Sciences from Imperial College London in 2025, during which time he conducted research on centipede taxonomy and systematics at the Natural History Museum, London. He is also affiliated with the Molecular Biology Laboratory of the “Grigore Antipa” National Museum of Natural History in Bucharest, Romania, where his work focuses on the systematics and biogeography of Romanian myriapods and arachnids. George joined the AMNH in 2025 as a doctoral student in the Richard Gilder Graduate School&apos;s Comparative Biology PhD program; his current research investigates the taxonomy and systematics of the <em>Thelyphonida</em> (whip scorpions) and the evolution of their complex chemical defense systems.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Alice Wang */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Alice Wang" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Alice Wang</h3>
-                <p className="text-base text-gray-600 mb-1">Comparative Biology Ph.D. Program, Richard Gilder Graduate School, AMNH</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student from 2026 - Ph.D. on phylogeny and evolution of sound communication in hormurid scorpions</p>
-                <p className="text-gray-700">
-                  Alice Wang graduated with a BA in Environmental Science with a minor in Biology from Barnard College, Columbia University. Her research interests lie at the intersection of animal behavior and phylogenomics, focusing on how animals perceive and respond to the world around them and the evolutionary context underlying these actions. She has previously conducted research spanning systematics and biogeography of African freshwater tetra fishes (Alestidae) and olfactory communication in dogs (<em>Canis familiaris</em>). Her current research focuses on describing and determining the evolutionary history of intraspecific acoustic communication in scorpions, combining behavioral studies of live animals with morphological and phylogenomic analyses of museum collections.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Alice Wang" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Alice Wang</h3>
+              <p className="text-base text-gray-600 mb-1">Comparative Biology Ph.D. Program, Richard Gilder Graduate School, AMNH</p>
+              <p className="text-sm text-gray-500 mb-3">Graduate student from 2026 - Ph.D. on phylogeny and evolution of sound communication in hormurid scorpions</p>
+              <p className="text-gray-700">
+                Alice Wang graduated with a BA in Environmental Science with a minor in Biology from Barnard College, Columbia University. Her research interests lie at the intersection of animal behavior and phylogenomics, focusing on how animals perceive and respond to the world around them and the evolutionary context underlying these actions. She has previously conducted research spanning systematics and biogeography of African freshwater tetra fishes (Alestidae) and olfactory communication in dogs (<em>Canis familiaris</em>). Her current research focuses on describing and determining the evolutionary history of intraspecific acoustic communication in scorpions, combining behavioral studies of live animals with morphological and phylogenomic analyses of museum collections.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Colby Sain */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Colby Sain" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Colby Sain</h3>
-                <p className="text-base text-gray-600 mb-1">Ecology, Evolution and Behavior Program, City College, City University of New York</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student from 2023 - M.S. on systematics and biogeography of montane lineages of vaejovid scorpions in the U.S.</p>
-                <p className="text-gray-700">
-                  Colby Sain began her academic career as an undergraduate at the University of Tennessee, Knoxville, within the Department of Earth and Planetary Sciences, where she studied invertebrate microfossils. In 2019, Colby joined the AMNH as an REU (Research Experiences for Undergraduates) student under the guidance of Ricardo Botero-Trujillo, Stephanie Loria, and Pio Colmenares, focusing on the order <em>Ricinulei</em>. From conducting molecular laboratory work to collecting live specimens in the field, she has continued to collaborate with the AMNH Arachnology Lab in various capacities. Colby is currently a graduate student at the City University of New York (CUNY), where her thesis research investigates the systematics and distribution of <em>Vaejovis</em> scorpions in the American Southwest.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Colby Sain" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Colby Sain</h3>
+              <p className="text-base text-gray-600 mb-1">Ecology, Evolution and Behavior Program, City College, City University of New York</p>
+              <p className="text-sm text-gray-500 mb-3">Graduate student from 2023 - M.S. on systematics and biogeography of montane lineages of vaejovid scorpions in the U.S.</p>
+              <p className="text-gray-700">
+                Colby Sain began her academic career as an undergraduate at the University of Tennessee, Knoxville, within the Department of Earth and Planetary Sciences, where she studied invertebrate microfossils. In 2019, Colby joined the AMNH as an REU (Research Experiences for Undergraduates) student under the guidance of Ricardo Botero-Trujillo, Stephanie Loria, and Pio Colmenares, focusing on the order <em>Ricinulei</em>. From conducting molecular laboratory work to collecting live specimens in the field, she has continued to collaborate with the AMNH Arachnology Lab in various capacities. Colby is currently a graduate student at the City University of New York (CUNY), where her thesis research investigates the systematics and distribution of <em>Vaejovis</em> scorpions in the American Southwest.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Nicolas Cazzaniga */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Nicolas Cazzaniga" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Nicolas Cazzaniga</h3>
-                <p className="text-base text-gray-600 mb-1">Ecology, Evolution and Behavior Program, City University of New York</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student from 2022 - Ph.D. on systematics, evolution and biogeography of the Neotropical whip spider family Phrynidae</p>
-                <p className="text-gray-700">
-                  Nick completed his B.S. in Entomology at Purdue University in 2019, where his capstone thesis analyzed social versus solitary growth rates in the Socotra Island Blue Baboon tarantula, <em>Monocentropus balfouri</em>. During his undergraduate tenure, he dedicated significant time to the Yale insect collection and various entomology laboratories on the Purdue campus. Nick pivoted his focus toward the understudied arachnid orders after working with live specimens in Purdue’s invertebrate zoo and within the exotic pet trade. Following a brief residency in the zoological sector at the Maritime Aquarium, he was awarded a Graduate Student Fellowship from the AMNH in 2022. He is currently conducting his doctoral research on the systematics and biogeography of the amblypygid family <em>Phrynidae</em> through the Ecology and Evolutionary Biology PhD program at the City University of New York. His work is supported by an NSF grant focused on the Systematics and Evolution of Pedipalpi.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Nicolas Cazzaniga" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Nicolas Cazzaniga</h3>
+              <p className="text-base text-gray-600 mb-1">Ecology, Evolution and Behavior Program, City University of New York</p>
+              <p className="text-sm text-gray-500 mb-3">Graduate student from 2022 - Ph.D. on systematics, evolution and biogeography of the Neotropical whip spider family Phrynidae</p>
+              <p className="text-gray-700">
+                Nick completed his B.S. in Entomology at Purdue University in 2019, where his capstone thesis analyzed social versus solitary growth rates in the Socotra Island Blue Baboon tarantula, <em>Monocentropus balfouri</em>. During his undergraduate tenure, he dedicated significant time to the Yale insect collection and various entomology laboratories on the Purdue campus. Nick pivoted his focus toward the understudied arachnid orders after working with live specimens in Purdue’s invertebrate zoo and within the exotic pet trade. Following a brief residency in the zoological sector at the Maritime Aquarium, he was awarded a Graduate Student Fellowship from the AMNH in 2022. He is currently conducting his doctoral research on the systematics and biogeography of the amblypygid family <em>Phrynidae</em> through the Ecology and Evolutionary Biology PhD program at the City University of New York. His work is supported by an NSF grant focused on the Systematics and Evolution of Pedipalpi.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Javier Blasco Aróstegui */}
-          <div className="mb-8 pb-8">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Javier Blasco Aróstegui" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Javier Blasco Aróstegui</h3>
-                <p className="text-base text-gray-600 mb-1">Center of Ecology, Evolution and Climate Change, University of Lisbon, Portugal</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student from 2021 to 2026 - Ph.D. on systematics, evolution and biogeography of European scorpions</p>
-                <p className="text-gray-700">
-                  Javier Blasco-Aróstegui is a visiting PhD candidate (2022–2026) from the University of Lisbon, who has collaborated with the AMNH Arachnology Lab since 2022. His research integrates phylogenomics, comparative morphology, and toxinology to explore the evolutionary history and diversification of Western Palearctic scorpions. By leveraging museum collections and data from global field expeditions, he aims to elucidate how geological and climatic shifts have shaped regional endemism across the Mediterranean and beyond. Javier holds an MSc in Biodiversity and Conservation (UIMP–CSIC) and a BSc in Biology from the University of Salamanca. His professional background includes tenures as a laboratory technician at CIBIO-InBIO, where he studied shark genomics, and as a fieldwork technician at the Museo Nacional de Ciencias Naturales (CSIC), focused on arthropod biodiversity. His expertise bridges evolutionary genomics, systematics, and conservation science—a trajectory sparked by a 2016 residency at the Natural History Museum, London. He actively contributes to the AMNH collections by generating high-quality molecular datasets and depositing specimens from his worldwide expeditions.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Javier Blasco Aróstegui" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Javier Blasco Aróstegui</h3>
+              <p className="text-base text-gray-600 mb-1">Center of Ecology, Evolution and Climate Change, University of Lisbon, Portugal</p>
+              <p className="text-sm text-gray-500 mb-3">Graduate student from 2021 to 2026 - Ph.D. on systematics, evolution and biogeography of European scorpions</p>
+              <p className="text-gray-700">
+                Javier Blasco-Aróstegui is a visiting PhD candidate (2022–2026) from the University of Lisbon, who has collaborated with the AMNH Arachnology Lab since 2022. His research integrates phylogenomics, comparative morphology, and toxinology to explore the evolutionary history and diversification of Western Palearctic scorpions. By leveraging museum collections and data from global field expeditions, he aims to elucidate how geological and climatic shifts have shaped regional endemism across the Mediterranean and beyond. Javier holds an MSc in Biodiversity and Conservation (UIMP–CSIC) and a BSc in Biology from the University of Salamanca. His professional background includes tenures as a laboratory technician at CIBIO-InBIO, where he studied shark genomics, and as a fieldwork technician at the Museo Nacional de Ciencias Naturales (CSIC), focused on arthropod biodiversity. His expertise bridges evolutionary genomics, systematics, and conservation science—a trajectory sparked by a 2016 residency at the Natural History Museum, London. He actively contributes to the AMNH collections by generating high-quality molecular datasets and depositing specimens from his worldwide expeditions.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           </div>
 
           <div data-tab="alumni" className={`people-compact ${graduateStudentsTab === 'alumni' ? 'block' : 'hidden'}`}>
 
           {/* Nayeli Gutiérrez Trejo */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Nayeli Gutiérrez Trejo" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Nayeli Gutiérrez Trejo</h3>
-                <p className="text-base text-gray-600 mb-1">Comparative Biology Ph.D. Program, Richard Gilder Graduate School, AMNH</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student from 2018 to 2023</p>
-                <p className="text-gray-700">
-                  Nayeli completed her B.S. and M.S. in Mexico at the Universidad Autonoma del Estado de Hidalgo and Universidad Nacional Autonoma de Mexico, respectively, where she studied the systematics of Cerambycidae beetles. During her PhD at the RGGS, with Dr. Prendini as co advisor, she investigated the evolutionary history of the beetle genus <em>Tetraopes</em>, which comprises a diverse and highly specialized group of species that interact with the toxic defenses of milkweed plants in the genus <em>Asclepias</em>.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Nayeli Gutiérrez Trejo" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Nayeli Gutiérrez Trejo</h3>
+              <p className="text-base text-gray-600 mb-1">Comparative Biology Ph.D. Program, Richard Gilder Graduate School, AMNH</p>
+              <p className="text-sm text-gray-500 mb-3">Graduate student from 2018 to 2023</p>
+              <p className="text-gray-700">
+                Nayeli completed her B.S. and M.S. in Mexico at the Universidad Autonoma del Estado de Hidalgo and Universidad Nacional Autonoma de Mexico, respectively, where she studied the systematics of Cerambycidae beetles. During her PhD at the RGGS, with Dr. Prendini as co advisor, she investigated the evolutionary history of the beetle genus <em>Tetraopes</em>, which comprises a diverse and highly specialized group of species that interact with the toxic defenses of milkweed plants in the genus <em>Asclepias</em>.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
           
           {/* Jayson Slovak */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/jayson.jpg"
-                  alt="Jayson Slovak"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Jayson Slovak</h3>
-                <p className="text-base text-gray-600 mb-1">City University of New York</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student from 2016 to 2020</p>
-                <p className="text-gray-700">
-                  Jayson Slovak graduated with a BA in Biology from Queens College, CUNY. During his undergraduate studies he worked under Dr. Stephane Boissinot to see how population size affected abundance of Transposable Elements in the Threespine Stickleback. During his leap year he accompanied an expedition with Dr. Boissinot to Ethiopia to frog collect samples for his lab. He worked as a Masters student in City College from 2016 to 2020, studying how the Great Rift Valley affects scorpion distribution and speciation in the region.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/jayson.jpg"
+                alt="Jayson Slovak"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Jayson Slovak</h3>
+              <p className="text-base text-gray-600 mb-1">City University of New York</p>
+              <p className="text-sm text-gray-500 mb-3">Graduate student from 2016 to 2020</p>
+              <p className="text-gray-700">
+                Jayson Slovak graduated with a BA in Biology from Queens College, CUNY. During his undergraduate studies he worked under Dr. Stephane Boissinot to see how population size affected abundance of Transposable Elements in the Threespine Stickleback. During his leap year he accompanied an expedition with Dr. Boissinot to Ethiopia to frog collect samples for his lab. He worked as a Masters student in City College from 2016 to 2020, studying how the Great Rift Valley affects scorpion distribution and speciation in the region.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Stephanie F. Loria */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/Stephanie-F-Loria.jpg"
-                  alt="Stephanie F. Loria"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Stephanie F. Loria</h3>
-                <p className="text-base text-gray-600 mb-1">Richard Gilder Graduate School, American Museum of Natural History</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student from 2011 to 2016</p>
-                <p className="text-gray-700">
-                  Stephanie first came to the AMNH as a high school student participating in the High School Science Research Program of the Center for Biodiversity and Conservation with Felicity Arengo. In 2011, she completed her B.S. at Sewanee University in TN. During her B.S. she spent a summer working at the Field Museum of Natural History in Chicago as an NSF REU intern studying the evolution and biogeography of the Malagasy giant pill-millipedes, genus <em>Sphaeromimus</em>, under the guidance of Thomas Wesener and Petra Sierwald. Stephanie entered the Comparative Biology PhD program at the AMNH Richard Gilder Graduate School in 2011 and graduated in 2015. Her dissertation focused on the evolution and biogeography of Southeast Asian scorpions, particularly the family Chaerilidae.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/Stephanie-F-Loria.jpg"
+                alt="Stephanie F. Loria"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Stephanie F. Loria</h3>
+              <p className="text-base text-gray-600 mb-1">Richard Gilder Graduate School, American Museum of Natural History</p>
+              <p className="text-sm text-gray-500 mb-3">Graduate student from 2011 to 2016</p>
+              <p className="text-gray-700">
+                Stephanie first came to the AMNH as a high school student participating in the High School Science Research Program of the Center for Biodiversity and Conservation with Felicity Arengo. In 2011, she completed her B.S. at Sewanee University in TN. During her B.S. she spent a summer working at the Field Museum of Natural History in Chicago as an NSF REU intern studying the evolution and biogeography of the Malagasy giant pill-millipedes, genus <em>Sphaeromimus</em>, under the guidance of Thomas Wesener and Petra Sierwald. Stephanie entered the Comparative Biology PhD program at the AMNH Richard Gilder Graduate School in 2011 and graduated in 2015. Her dissertation focused on the evolution and biogeography of Southeast Asian scorpions, particularly the family Chaerilidae.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Tharina Bird */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/tharina.jpg"
-                  alt="Tharina Bird"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Tharina Bird</h3>
-                <p className="text-base text-gray-600 mb-1">Colorado State University, Fort Collins, CO | NSF BS&I Grant</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student from 2009 to 2014</p>
-                <p className="text-gray-700">
-                  Tharina holds six degrees including two B.S. degrees, a Masters and a Higher Education Diploma from the University of Pretoria, South Africa. She was funded in part for a PhD at Colorado State University, by a National Science Foundation Biodiversity Surveys and Inventories grant to Paula Cushing and Lorenzo Prendini, graduating in 2014. Tharina visited the AMNH on several occasions to study and image the extensive camel spider collection for her dissertation research on the cheliceral morphology of Solifugae and worked extensively with Prendini. She then returned to the National Museum of Namibia, Windhoek.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/tharina.jpg"
+                alt="Tharina Bird"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Tharina Bird</h3>
+              <p className="text-base text-gray-600 mb-1">Colorado State University, Fort Collins, CO | NSF BS&I Grant</p>
+              <p className="text-sm text-gray-500 mb-3">Graduate student from 2009 to 2014</p>
+              <p className="text-gray-700">
+                Tharina holds six degrees including two B.S. degrees, a Masters and a Higher Education Diploma from the University of Pretoria, South Africa. She was funded in part for a PhD at Colorado State University, by a National Science Foundation Biodiversity Surveys and Inventories grant to Paula Cushing and Lorenzo Prendini, graduating in 2014. Tharina visited the AMNH on several occasions to study and image the extensive camel spider collection for her dissertation research on the cheliceral morphology of Solifugae and worked extensively with Prendini. She then returned to the National Museum of Namibia, Windhoek.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Lionel Monod */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/lionel.jpg"
-                  alt="Lionel Monod"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Lionel Monod</h3>
-                <p className="text-base text-gray-600 mb-1">CUNY, The City College of New York | AMNH Graduate Student Fellowship</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student from 2005 to 2011</p>
-                <p className="text-gray-700">
-                  Lionel completed a B.Sc. at the University of Geneva and an MSc revising the systematics of <em>Liocheles</em> scorpions at the Muséum National d'Histoire Naturelle, Paris, graduating in 2000. Monod subsequently worked at the Muséum d'Histoire Naturelle, Geneva. He visited the AMNH to work in the collections and Molecular Systematics Laboratory in November-December 2002 and, in 2005, Monod was awarded a Graduate Student Fellowship from the AMNH to conduct a PhD thesis on the systematics and biogeography of Indo-Pacific liochelid scorpions, via the PhD program in Ecology and Evolutionary Biology, City University of New York. He completed his PhD in 2011 and now works as a Research Officer at the Muséum d'Histoire Naturelle, Geneva.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/lionel.jpg"
+                alt="Lionel Monod"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Lionel Monod</h3>
+              <p className="text-base text-gray-600 mb-1">CUNY, The City College of New York | AMNH Graduate Student Fellowship</p>
+              <p className="text-sm text-gray-500 mb-3">Graduate student from 2005 to 2011</p>
+              <p className="text-gray-700">
+                Lionel completed a B.Sc. at the University of Geneva and an MSc revising the systematics of <em>Liocheles</em> scorpions at the Muséum National d'Histoire Naturelle, Paris, graduating in 2000. Monod subsequently worked at the Muséum d'Histoire Naturelle, Geneva. He visited the AMNH to work in the collections and Molecular Systematics Laboratory in November-December 2002 and, in 2005, Monod was awarded a Graduate Student Fellowship from the AMNH to conduct a PhD thesis on the systematics and biogeography of Indo-Pacific liochelid scorpions, via the PhD program in Ecology and Evolutionary Biology, City University of New York. He completed his PhD in 2011 and now works as a Research Officer at the Muséum d'Histoire Naturelle, Geneva.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Edmundo González Santillan */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/edmundo.jpg"
-                  alt="Edmundo González Santillan"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Edmundo González Santillan</h3>
-                <p className="text-base text-gray-600 mb-1">CUNY, The City College of New York | NSF REVSYS Grant</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student from 2004 to 2012</p>
-                <p className="text-gray-700">
-                  Edmundo completed his B.S. and MSc at the Universidad Nacional Autónoma de México (UNAM). In 2004, Edmundo moved to the AMNH, supported by a National Science Foundation REVSYS grant on vaejovid systematics awarded to Lorenzo Prendini. He was accepted into the PhD program in Ecology and Evolutionary Biology, City University of New York, in 2005. For his dissertation he studied the systematic biology of the North American vaejovid scorpion subfamily Syntropinae. After graduating in 2012, he moved to the Laboratorio Nacional de Genómica para la Biodiversidad in Guanajuato, Mexico, where he continues his research on the evolution, phylogeny and biogeography of Mexican scorpions.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/edmundo.jpg"
+                alt="Edmundo González Santillan"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Edmundo González Santillan</h3>
+              <p className="text-base text-gray-600 mb-1">CUNY, The City College of New York | NSF REVSYS Grant</p>
+              <p className="text-sm text-gray-500 mb-3">Graduate student from 2004 to 2012</p>
+              <p className="text-gray-700">
+                Edmundo completed his B.S. and MSc at the Universidad Nacional Autónoma de México (UNAM). In 2004, Edmundo moved to the AMNH, supported by a National Science Foundation REVSYS grant on vaejovid systematics awarded to Lorenzo Prendini. He was accepted into the PhD program in Ecology and Evolutionary Biology, City University of New York, in 2005. For his dissertation he studied the systematic biology of the North American vaejovid scorpion subfamily Syntropinae. After graduating in 2012, he moved to the Laboratorio Nacional de Genómica para la Biodiversidad in Guanajuato, Mexico, where he continues his research on the evolution, phylogeny and biogeography of Mexican scorpions.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Lauren A. Esposito */}
-          <div className="mb-8 pb-8">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/people/Lauren-A-Esposito.jpg"
-                  alt="Lauren A. Esposito"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Lauren A. Esposito</h3>
-                <p className="text-base text-gray-600 mb-1">CUNY, The City College of New York | MAGNET-STEM Fellowship | NSF AGEP Fellowship | CUNY College NOW Fellow | CUNY Magnet Dissertation Fellowship | NSF GK-12 Fellowship</p>
-                <p className="text-sm text-gray-500 mb-3">Graduate student from 2004 to 2011</p>
-                <p className="text-gray-700">
-                  Lauren first came to the AMNH in 2002 as an undergraduate intern in the National Science Foundation (NSF) Research Experience for Undergraduates program, for a summer research project on the systematics of medically important African <em>Parabuthus</em> scorpions. After graduating with her B.S. from the University of Texas at El Paso, she was accepted into the PhD program in Ecology and Evolutionary Biology, City University of New York, and returned to the AMNH to continue research on scorpions. She revised the systematics of the medically important North American scorpion genus <em>Centruroides</em> for her PhD dissertation. She completed her doctorate degree in 2011 and is now at the California Academy of Sciences, where she is an Assistant Curator and Schlinger Chair of Arachnology.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/people/Lauren-A-Esposito.jpg"
+                alt="Lauren A. Esposito"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Lauren A. Esposito</h3>
+              <p className="text-base text-gray-600 mb-1">CUNY, The City College of New York | MAGNET-STEM Fellowship | NSF AGEP Fellowship | CUNY College NOW Fellow | CUNY Magnet Dissertation Fellowship | NSF GK-12 Fellowship</p>
+              <p className="text-sm text-gray-500 mb-3">Graduate student from 2004 to 2011</p>
+              <p className="text-gray-700">
+                Lauren first came to the AMNH in 2002 as an undergraduate intern in the National Science Foundation (NSF) Research Experience for Undergraduates program, for a summer research project on the systematics of medically important African <em>Parabuthus</em> scorpions. After graduating with her B.S. from the University of Texas at El Paso, she was accepted into the PhD program in Ecology and Evolutionary Biology, City University of New York, and returned to the AMNH to continue research on scorpions. She revised the systematics of the medically important North American scorpion genus <em>Centruroides</em> for her PhD dissertation. She completed her doctorate degree in 2011 and is now at the California Academy of Sciences, where she is an Assistant Curator and Schlinger Chair of Arachnology.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
           </div>
         </div>
         </div>
@@ -1696,52 +1672,46 @@ export default function People() {
           />
           <div data-tab="current" className={highSchoolStudentsTab === 'current' ? 'block' : 'hidden'}>
           {/* Meredith Metz */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Meredith Metz" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Meredith Metz</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student from 2025 to 2026</p>
-                <p className="text-gray-700">
-                  Meredith Metz joined the Arachnology lab in 2025 and continues to volunteer during the summer extracting and sequencing scorpion and amblypygid DNA under the supervision of Pío Colmenares and Colby Sain.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Meredith Metz" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Meredith Metz</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student from 2025 to 2026</p>
+              <p className="text-gray-700">
+                Meredith Metz joined the Arachnology lab in 2025 and continues to volunteer during the summer extracting and sequencing scorpion and amblypygid DNA under the supervision of Pío Colmenares and Colby Sain.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Alex Liu */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Alex Liu" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Alex Liu</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2026</p>
-                <p className="text-gray-700">
-                  Alex volunteers in the Arachnology Lab assisting Pío Colmenares with sorting, organization and curation of collections.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Alex Liu" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Alex Liu</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2026</p>
+              <p className="text-gray-700">
+                Alex volunteers in the Arachnology Lab assisting Pío Colmenares with sorting, organization and curation of collections.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Balthazar Edwards */}
-          <div className="mb-8 pb-8">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Balthazar Edwards" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Balthazar Edwards</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2026</p>
-                <p className="text-gray-700">
-                  Balthazar volunteers in the Arachnology Lab assisting Pío Colmenares with sorting, organization and curation of collections.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Balthazar Edwards" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Balthazar Edwards</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2026</p>
+              <p className="text-gray-700">
+                Balthazar volunteers in the Arachnology Lab assisting Pío Colmenares with sorting, organization and curation of collections.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
           </div>
 
           <div
@@ -1750,622 +1720,558 @@ export default function People() {
           >
 
           {/* Anika Mahbub */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Anika Mahbub" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Anika Mahbub</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2024</p>
-                <p className="text-gray-700">
-                  Anika was a volunteer research student for the Bronx High School of Science research program. She was mentored by Colby E. Sain for the summer of 2024. She worked in the Molecular Systematics Laboratory learning lab techniques such as DNA extraction and PCR, and helped make a data base of <em>Vaejovis</em> morphometrics. She went on to pursue a Bachelors of Science at Brandeis University.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Anika Mahbub" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Anika Mahbub</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2024</p>
+              <p className="text-gray-700">
+                Anika was a volunteer research student for the Bronx High School of Science research program. She was mentored by Colby E. Sain for the summer of 2024. She worked in the Molecular Systematics Laboratory learning lab techniques such as DNA extraction and PCR, and helped make a data base of <em>Vaejovis</em> morphometrics. She went on to pursue a Bachelors of Science at Brandeis University.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* William Phillips */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="William Phillips" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">William Phillips</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student from 2023 to 2024</p>
-                <p className="text-gray-700">
-                  Will volunteered in the Arachnology lab from 2023 to 2024, recording morphometric data and conducting digital imaging on scorpions, and assisting with sorting, organization and curation of collections, supervised by Lorenzo Prendini.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="William Phillips" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">William Phillips</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student from 2023 to 2024</p>
+              <p className="text-gray-700">
+                Will volunteered in the Arachnology lab from 2023 to 2024, recording morphometric data and conducting digital imaging on scorpions, and assisting with sorting, organization and curation of collections, supervised by Lorenzo Prendini.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Christina Li */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Christina Li" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Christina Li</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2023</p>
-                <p className="text-gray-700">
-                  Christina volunteered in the Arachnology lab in the summer of 2023 where she conducted DNA extraction, quantitation, PCR and sequencing, supervised by Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Christina Li" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Christina Li</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2023</p>
+              <p className="text-gray-700">
+                Christina volunteered in the Arachnology lab in the summer of 2023 where she conducted DNA extraction, quantitation, PCR and sequencing, supervised by Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Michelle Li */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Michelle Li" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Michelle Li</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2023</p>
-                <p className="text-gray-700">
-                  Michelle volunteered in the Arachnology lab in the summer of 2023 where she conducted DNA extraction, quantitation, PCR and sequencing, supervised by Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Michelle Li" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Michelle Li</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2023</p>
+              <p className="text-gray-700">
+                Michelle volunteered in the Arachnology lab in the summer of 2023 where she conducted DNA extraction, quantitation, PCR and sequencing, supervised by Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Eva-Lucia Prendini */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Eva-Lucia Prendini" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Eva-Lucia Prendini</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2023</p>
-                <p className="text-gray-700">
-                  Eva-Lucia volunteered in the Arachnology lab in the summer of 2023 where she conducted DNA extraction, quantitation, PCR and sequencing, supervised by Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Eva-Lucia Prendini" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Eva-Lucia Prendini</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2023</p>
+              <p className="text-gray-700">
+                Eva-Lucia volunteered in the Arachnology lab in the summer of 2023 where she conducted DNA extraction, quantitation, PCR and sequencing, supervised by Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Sophia Collins */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Sophia Collins" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Sophia Collins</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2022</p>
-                <p className="text-gray-700">
-                  Sophia volunteered at the Arachnida and Myriapoda collections in 2022, assisting Pio Colmenares with sorting, organization and curation of collections.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Sophia Collins" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Sophia Collins</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2022</p>
+              <p className="text-gray-700">
+                Sophia volunteered at the Arachnida and Myriapoda collections in 2022, assisting Pio Colmenares with sorting, organization and curation of collections.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Aibrean Henry */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Aibrean Henry" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Aibrean Henry</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2022</p>
-                <p className="text-gray-700">
-                  Aibrean volunteered at the Arachnida and Myriapoda collections in 2022, assisting Pio Colmenares with sorting, organization and curation of collections.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Aibrean Henry" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Aibrean Henry</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2022</p>
+              <p className="text-gray-700">
+                Aibrean volunteered at the Arachnida and Myriapoda collections in 2022, assisting Pio Colmenares with sorting, organization and curation of collections.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Alex Moell */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Alex Moell" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Alex Moell</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2022</p>
-                <p className="text-gray-700">
-                  Alex volunteered at the Arachnida and Myriapoda collections in 2022, assisting Pio Colmenares with sorting, organization and curation of collections.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Alex Moell" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Alex Moell</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2022</p>
+              <p className="text-gray-700">
+                Alex volunteered at the Arachnida and Myriapoda collections in 2022, assisting Pio Colmenares with sorting, organization and curation of collections.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Hritwik Paul */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/HPaul_mnmt2g.jpg"
-                  alt="Hritwik Paul"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Hritwik Paul</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2019</p>
-                <p className="text-gray-700">
-                  Hritwik volunteered at the Arachnida collections in 2019, assisting with curatorial activities, such as the reorganization of the scorpion collection, sorting, labeling and rehousing, under the supervision of Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/HPaul_mnmt2g.jpg"
+                alt="Hritwik Paul"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Hritwik Paul</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2019</p>
+              <p className="text-gray-700">
+                Hritwik volunteered at the Arachnida collections in 2019, assisting with curatorial activities, such as the reorganization of the scorpion collection, sorting, labeling and rehousing, under the supervision of Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Luke Siegel */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Luke Siegel" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Luke Siegel</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2019</p>
-                <p className="text-gray-700">
-                  Luke volunteered at the Arachnida collections in 2019, assisting with curatorial activities, such as the reorganization of the scorpion collection, sorting, labeling and rehousing, under the supervision of Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Luke Siegel" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Luke Siegel</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2019</p>
+              <p className="text-gray-700">
+                Luke volunteered at the Arachnida collections in 2019, assisting with curatorial activities, such as the reorganization of the scorpion collection, sorting, labeling and rehousing, under the supervision of Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Cherie Qu */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/Cherie.jpg"
-                  alt="Cherie Qu"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Cherie Qu</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2019</p>
-                <p className="text-gray-700">
-                  Cherie volunteered at the Arachnology lab during the summer of 2019, through the AMNH Lang program. She worked rehousing and organizing spiders and daddy longlegs, under the supervision of Lou Sorkin.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/Cherie.jpg"
+                alt="Cherie Qu"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Cherie Qu</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2019</p>
+              <p className="text-gray-700">
+                Cherie volunteered at the Arachnology lab during the summer of 2019, through the AMNH Lang program. She worked rehousing and organizing spiders and daddy longlegs, under the supervision of Lou Sorkin.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Azmi Anamika */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/Azmi.jpg"
-                  alt="Azmi Anamika"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Azmi Anamika</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2019</p>
-                <p className="text-gray-700">
-                  Azmi volunteered at the Arachnology lab during the summer of 2019, through the AMNH Lang program. She worked rehousing and organizing spiders and daddy longlegs, under the supervision of Lou Sorkin.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/Azmi.jpg"
+                alt="Azmi Anamika"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Azmi Anamika</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2019</p>
+              <p className="text-gray-700">
+                Azmi volunteered at the Arachnology lab during the summer of 2019, through the AMNH Lang program. She worked rehousing and organizing spiders and daddy longlegs, under the supervision of Lou Sorkin.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Nathan Auyeng */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Nathan Auyeng" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Nathan Auyeng</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
-                <p className="text-gray-700">
-                  Nathan came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. He assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Nathan Auyeng" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Nathan Auyeng</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
+              <p className="text-gray-700">
+                Nathan came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. He assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Aleyna Singer */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Aleyna Singer" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Aleyna Singer</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
-                <p className="text-gray-700">
-                  Aleyna came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Aleyna Singer" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Aleyna Singer</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
+              <p className="text-gray-700">
+                Aleyna came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Simon Au */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Simon Au" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Simon Au</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
-                <p className="text-gray-700">
-                  Simon came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. He assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Simon Au" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Simon Au</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
+              <p className="text-gray-700">
+                Simon came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. He assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Agnes Oduro */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Agnes Oduro" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Agnes Oduro</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
-                <p className="text-gray-700">
-                  Agnes came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida and Myriapoda collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Agnes Oduro" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Agnes Oduro</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
+              <p className="text-gray-700">
+                Agnes came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida and Myriapoda collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Amrita Banerji */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Amrita Banerji" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Amrita Banerji</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
-                <p className="text-gray-700">
-                  Amrita came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida and Myriapoda collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Amrita Banerji" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Amrita Banerji</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
+              <p className="text-gray-700">
+                Amrita came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida and Myriapoda collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Geeta Sharma */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/Geeta.jpg"
-                  alt="Geeta Sharma"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Geeta Sharma</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2017</p>
-                <p className="text-gray-700">
-                  Geeta volunteered at the AMNH during the summer of 2017. She worked sorting and organizing a scorpion collection from South Africa, under the supervision of Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/Geeta.jpg"
+                alt="Geeta Sharma"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Geeta Sharma</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2017</p>
+              <p className="text-gray-700">
+                Geeta volunteered at the AMNH during the summer of 2017. She worked sorting and organizing a scorpion collection from South Africa, under the supervision of Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Sophia Castro */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/Sophia.jpg"
-                  alt="Sophia Castro"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Sophia Castro</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2017</p>
-                <p className="text-gray-700">
-                  Sophia volunteered at the AMNH during the summer of 2017. She worked sorting and organizing a scorpion collection from South Africa, under the supervision of Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/Sophia.jpg"
+                alt="Sophia Castro"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Sophia Castro</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2017</p>
+              <p className="text-gray-700">
+                Sophia volunteered at the AMNH during the summer of 2017. She worked sorting and organizing a scorpion collection from South Africa, under the supervision of Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Tamar Cohen */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/Tamar.jpg"
-                  alt="Tamar Cohen"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Tamar Cohen</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2017</p>
-                <p className="text-gray-700">
-                  Tamar volunteered at the AMNH during the summer of 2017. She worked in the Molecular Systematics Laboratory where they learned lab techniques and to perform PCRs under the supervision of Pío Colmenares.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/Tamar.jpg"
+                alt="Tamar Cohen"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Tamar Cohen</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2017</p>
+              <p className="text-gray-700">
+                Tamar volunteered at the AMNH during the summer of 2017. She worked in the Molecular Systematics Laboratory where they learned lab techniques and to perform PCRs under the supervision of Pío Colmenares.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Chelsea Silva */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/ChelseaSilva2015.jpg"
-                  alt="Chelsea Silva"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Chelsea Silva</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2015</p>
-                <p className="text-gray-700">
-                  Chelsea volunteered at the AMNH during the summer of 2015. She worked in the Molecular Systematics Laboratory where she learned lab techniques and to perform PCRs under the supervision of Michelle Locke and Diogo Casellato.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/ChelseaSilva2015.jpg"
+                alt="Chelsea Silva"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Chelsea Silva</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2015</p>
+              <p className="text-gray-700">
+                Chelsea volunteered at the AMNH during the summer of 2015. She worked in the Molecular Systematics Laboratory where she learned lab techniques and to perform PCRs under the supervision of Michelle Locke and Diogo Casellato.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Billy Conlan */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/BillyConlan2015.jpg"
-                  alt="Billy Conlan"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Billy Conlan</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2015</p>
-                <p className="text-gray-700">
-                  Billy volunteered at the AMNH during the summer of 2015. He worked in the Molecular Systematics Laboratory where he learned lab techniques and to perform PCRs under the supervision of Michelle Locke and Diogo Casellato.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/BillyConlan2015.jpg"
+                alt="Billy Conlan"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Billy Conlan</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2015</p>
+              <p className="text-gray-700">
+                Billy volunteered at the AMNH during the summer of 2015. He worked in the Molecular Systematics Laboratory where he learned lab techniques and to perform PCRs under the supervision of Michelle Locke and Diogo Casellato.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Eleanor Goetz */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/Sasha-Reiter--and--Eleanor-Goetz.jpg"
-                  alt="Sasha Reiter and Eleanor Goetz"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-                <p className="text-sm text-gray-600 mt-2 italic">Sasha Reiter and Eleanor Goetz</p>
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Eleanor Goetz</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student from 2013 to 2014</p>
-                <p className="text-gray-700">
-                  Eleanor attended the AMNH Science Research Mentoring Program (SRMP) at the AMNH for the 2013-2014 academic year. She worked in the Molecular Systematics Laboratory where she learned to isolate, amplify, sequence, and edit DNA under the supervision of Stephanie Loria.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/Sasha-Reiter--and--Eleanor-Goetz.jpg"
+                alt="Sasha Reiter and Eleanor Goetz"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+              <p className="text-sm text-gray-600 mt-2 italic">Sasha Reiter and Eleanor Goetz</p>
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Eleanor Goetz</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student from 2013 to 2014</p>
+              <p className="text-gray-700">
+                Eleanor attended the AMNH Science Research Mentoring Program (SRMP) at the AMNH for the 2013-2014 academic year. She worked in the Molecular Systematics Laboratory where she learned to isolate, amplify, sequence, and edit DNA under the supervision of Stephanie Loria.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Sasha Reiter */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/Sasha-Reiter--and--Eleanor-Goetz.jpg"
-                  alt="Sasha Reiter and Eleanor Goetz"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-                <p className="text-sm text-gray-600 mt-2 italic">Sasha Reiter and Eleanor Goetz</p>
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Sasha Reiter</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student from 2013 to 2014</p>
-                <p className="text-gray-700">
-                  Sasha attended the AMNH Science Research Mentoring Program (SRMP) at the AMNH for the 2013-2014 academic year. They worked in the Molecular Systematics Laboratory where they learned to isolate, amplify, sequence, and edit DNA under the supervision of Stephanie Loria.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/Sasha-Reiter--and--Eleanor-Goetz.jpg"
+                alt="Sasha Reiter and Eleanor Goetz"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+              <p className="text-sm text-gray-600 mt-2 italic">Sasha Reiter and Eleanor Goetz</p>
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Sasha Reiter</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student from 2013 to 2014</p>
+              <p className="text-gray-700">
+                Sasha attended the AMNH Science Research Mentoring Program (SRMP) at the AMNH for the 2013-2014 academic year. They worked in the Molecular Systematics Laboratory where they learned to isolate, amplify, sequence, and edit DNA under the supervision of Stephanie Loria.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Adam Getzler */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/adam.jpg"
-                  alt="Adam Getzler"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Adam Getzler</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2011</p>
-                <p className="text-gray-700">
-                  Adam, a student at Plainview Old-Bethpage JFK High School, volunteered at the AMNH during the summer of 2011, sequencing scorpion DNA to further his interest in genetics. He went on to a Bachelor's degree at the University of Chicago.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/adam.jpg"
+                alt="Adam Getzler"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Adam Getzler</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2011</p>
+              <p className="text-gray-700">
+                Adam, a student at Plainview Old-Bethpage JFK High School, volunteered at the AMNH during the summer of 2011, sequencing scorpion DNA to further his interest in genetics. He went on to a Bachelor's degree at the University of Chicago.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Michelle Bayefsky-Anand */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Michelle Bayefsky-Anand" />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Michelle Bayefsky-Anand</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student in 2008</p>
-                <p className="text-gray-700">
-                  Michelle, a student at Ramaz Upper High School, worked in the Molecular Systematics Laboratory learning to extract, amplify, and sequence scorpion DNA under the supervision of Lauren A. Esposito and Lorenzo Prendini in 2008.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Michelle Bayefsky-Anand" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Michelle Bayefsky-Anand</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student in 2008</p>
+              <p className="text-gray-700">
+                Michelle, a student at Ramaz Upper High School, worked in the Molecular Systematics Laboratory learning to extract, amplify, and sequence scorpion DNA under the supervision of Lauren A. Esposito and Lorenzo Prendini in 2008.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Jianhua Lin */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/Jianhua-Lin--and--Qiao-Rong-Huang.jpg"
-                  alt="Jianhua Lin and Qiao Rong Huang"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-                <p className="text-sm text-gray-600 mt-2 italic">Qiao Rong Huang and Jianhua Lin</p>
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Jianhua Lin</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student from 2006 to 2007</p>
-                <p className="text-gray-700">
-                  Jianhua attended the NSF High School Research Program in Genetics at the AMNH for two academic years (2005-2007). She learned to conduct measurements and record setal counts under the supervision of Jeremy Huff and Lorenzo Prendini (summer 2006). From fall 2006 she worked in the Molecular Systematics Laboratory extracting, amplifying, and sequencing scorpion DNA.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/Jianhua-Lin--and--Qiao-Rong-Huang.jpg"
+                alt="Jianhua Lin and Qiao Rong Huang"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+              <p className="text-sm text-gray-600 mt-2 italic">Qiao Rong Huang and Jianhua Lin</p>
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Jianhua Lin</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student from 2006 to 2007</p>
+              <p className="text-gray-700">
+                Jianhua attended the NSF High School Research Program in Genetics at the AMNH for two academic years (2005-2007). She learned to conduct measurements and record setal counts under the supervision of Jeremy Huff and Lorenzo Prendini (summer 2006). From fall 2006 she worked in the Molecular Systematics Laboratory extracting, amplifying, and sequencing scorpion DNA.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Qiao Rong Huang */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/Jianhua-Lin--and--Qiao-Rong-Huang.jpg"
-                  alt="Jianhua Lin and Qiao Rong Huang"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-                <p className="text-sm text-gray-600 mt-2 italic">Qiao Rong Huang and Jianhua Lin</p>
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Qiao Rong Huang</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student from 2006 to 2007</p>
-                <p className="text-gray-700">
-                  Qiao attended the NSF High School Research Program in Genetics at the AMNH for two academic years (2005-2007). She learned to conduct measurements and record setal counts under the supervision of Jeremy Huff and Lorenzo Prendini (summer 2006). From fall 2006 she worked in the Molecular Systematics Laboratory extracting, amplifying, and sequencing scorpion DNA.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/Jianhua-Lin--and--Qiao-Rong-Huang.jpg"
+                alt="Jianhua Lin and Qiao Rong Huang"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+              <p className="text-sm text-gray-600 mt-2 italic">Qiao Rong Huang and Jianhua Lin</p>
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Qiao Rong Huang</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student from 2006 to 2007</p>
+              <p className="text-gray-700">
+                Qiao attended the NSF High School Research Program in Genetics at the AMNH for two academic years (2005-2007). She learned to conduct measurements and record setal counts under the supervision of Jeremy Huff and Lorenzo Prendini (summer 2006). From fall 2006 she worked in the Molecular Systematics Laboratory extracting, amplifying, and sequencing scorpion DNA.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Melanie Ng */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/melanie.jpg"
-                  alt="Melanie Ng"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Melanie Ng</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student from 2004 to 2005</p>
-                <p className="text-gray-700">
-                  Melanie attended the AMNH High School Science Research Program in Biodiversity at the AMNH for 10 months (September 2004-June 2005). She learned to sort, identify and database specimens, prepare labels, conduct measurements, record setal counts, and prepare photographs with visible and UV light, under the supervision of Lorenzo Prendini and Randy Mercurio. Melanie also worked in the Molecular Systematics Laboratory, under the supervision of Rebecca Budinoff and Tripp MacDonald, where she learned to isolate, amplify, sequence, and edit DNA.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/melanie.jpg"
+                alt="Melanie Ng"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Melanie Ng</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student from 2004 to 2005</p>
+              <p className="text-gray-700">
+                Melanie attended the AMNH High School Science Research Program in Biodiversity at the AMNH for 10 months (September 2004-June 2005). She learned to sort, identify and database specimens, prepare labels, conduct measurements, record setal counts, and prepare photographs with visible and UV light, under the supervision of Lorenzo Prendini and Randy Mercurio. Melanie also worked in the Molecular Systematics Laboratory, under the supervision of Rebecca Budinoff and Tripp MacDonald, where she learned to isolate, amplify, sequence, and edit DNA.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Connie Cai */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/cai.jpg"
-                  alt="Connie Cai"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Connie Cai</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student from 2004 to 2005</p>
-                <p className="text-gray-700">
-                  Connie attended the AMNH High School Science Research Program in Biodiversity at the AMNH for 10 months (September 2004-June 2005). She learned to sort, identify and database specimens, prepare labels, conduct measurements, record setal counts, and prepare photographs with visible and UV light, under the supervision of Lorenzo Prendini and Randy Mercurio.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/cai.jpg"
+                alt="Connie Cai"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Connie Cai</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student from 2004 to 2005</p>
+              <p className="text-gray-700">
+                Connie attended the AMNH High School Science Research Program in Biodiversity at the AMNH for 10 months (September 2004-June 2005). She learned to sort, identify and database specimens, prepare labels, conduct measurements, record setal counts, and prepare photographs with visible and UV light, under the supervision of Lorenzo Prendini and Randy Mercurio.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Bernard Laszczower */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/berny.jpg"
-                  alt="Bernard Laszczower"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Bernard Laszczower</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student from 2003 to 2004</p>
-                <p className="text-gray-700">
-                  Bernard attended the NSF After-School Centers in Exploration and New Discovery (ASCEND) program at the AMNH for 8 months (October 2003-May 2004). He worked in the Molecular Systematics Laboratory, under the supervision of Lorenzo Prendini, Diana Pietri and Tarang Sharma, where he learned to isolate, amplify, sequence and edit DNA.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/berny.jpg"
+                alt="Bernard Laszczower"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Bernard Laszczower</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student from 2003 to 2004</p>
+              <p className="text-gray-700">
+                Bernard attended the NSF After-School Centers in Exploration and New Discovery (ASCEND) program at the AMNH for 8 months (October 2003-May 2004). He worked in the Molecular Systematics Laboratory, under the supervision of Lorenzo Prendini, Diana Pietri and Tarang Sharma, where he learned to isolate, amplify, sequence and edit DNA.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Boitumelo "Tumi" McCallum */}
-          <div className="mb-8 pb-8">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/tumi.jpg"
-                  alt="Boitumelo 'Tumi' McCallum"
-                  width={400}
-                  height={533}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Boitumelo "Tumi" McCallum</h3>
-                <p className="text-sm text-gray-500 mb-3">High school student from 2003 to 2004</p>
-                <p className="text-gray-700">
-                  Tumi attended the NSF After-School Centers in Exploration and New Discovery (ASCEND) program at the AMNH for 8 months (October 2003-May 2004). She worked in the Molecular Systematics Laboratory, under the supervision of Lorenzo Prendini, Diana Pietri and Tarang Sharma, where she learned to isolate, amplify, sequence and edit DNA. Tumi passed away in 2007. May she rest in peace.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/tumi.jpg"
+                alt="Boitumelo 'Tumi' McCallum"
+                width={400}
+                height={533}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Boitumelo "Tumi" McCallum</h3>
+              <p className="text-sm text-gray-500 mb-3">High school student from 2003 to 2004</p>
+              <p className="text-gray-700">
+                Tumi attended the NSF After-School Centers in Exploration and New Discovery (ASCEND) program at the AMNH for 8 months (October 2003-May 2004). She worked in the Molecular Systematics Laboratory, under the supervision of Lorenzo Prendini, Diana Pietri and Tarang Sharma, where she learned to isolate, amplify, sequence and edit DNA. Tumi passed away in 2007. May she rest in peace.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
           </div>
         </div>
         </div>
@@ -2383,944 +2289,848 @@ export default function People() {
           <div data-tab="current" className={volunteersTab === 'current' ? 'block' : 'hidden'}>
 
           {/* Soleil Blanquera */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Soleil Blanquera" />
-              </div>
-              <div className="md:col-span-3">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Soleil Blanquera</h4>
-                <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
-                <p className="text-gray-700">
-                  Soleil volunteered at the Arachnology Lab in 2025 and 2026, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Colby Sain.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Soleil Blanquera" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h4 className="text-base font-bold mb-1 text-gray-900">Soleil Blanquera</h4>
+              <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
+              <p className="text-gray-700">
+                Soleil volunteered at the Arachnology Lab in 2025 and 2026, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Colby Sain.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Brian Sperber */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Brian Sperber" />
-              </div>
-              <div className="md:col-span-3">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Brian Sperber</h4>
-                <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
-                <p className="text-gray-700">
-                  Brian volunteered in the Arachnida and Myriapoda from 2021, assisting Pio Colmenares with sorting, organization and curation of collections.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Brian Sperber" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h4 className="text-base font-bold mb-1 text-gray-900">Brian Sperber</h4>
+              <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
+              <p className="text-gray-700">
+                Brian volunteered in the Arachnida and Myriapoda from 2021, assisting Pio Colmenares with sorting, organization and curation of collections.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Victoria Long */}
-          <div className="mb-6 pb-6">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PeopleImage
-                  src="/images/victoria.jpg"
-                  alt="Victoria Long"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-3">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Victoria Long</h4>
-                <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
-                <p className="text-gray-700">
-                  Victoria is a volunteer who previously worked in the Arachnology Lab as a Technician.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6">
+            <PeopleCardMedia>
+              <PeopleImage
+                src="/images/victoria.jpg"
+                alt="Victoria Long"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h4 className="text-base font-bold mb-1 text-gray-900">Victoria Long</h4>
+              <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
+              <p className="text-gray-700">
+                Victoria is a volunteer who previously worked in the Arachnology Lab as a Technician.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           </div>
 
           <div data-tab="alumni" className={volunteersTab === 'alumni' ? 'block' : 'hidden'}>
 
           {/* George Tsinias */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/George.jpg"
-                  alt="George Tsinias"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">George Tsinias</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  George helped with curatorial tasks, like labeling and rebottling material, in the main collection.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/George.jpg"
+                alt="George Tsinias"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">George Tsinias</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                George helped with curatorial tasks, like labeling and rebottling material, in the main collection.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Christian Liriano */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Christian.jpg"
-                  alt="Christian Liriano"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Christian Liriano</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Christian prepared material for loans in the spider collection and was interested in harvestmen.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Christian.jpg"
+                alt="Christian Liriano"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Christian Liriano</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Christian prepared material for loans in the spider collection and was interested in harvestmen.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Gerbi Carreon */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Gerbi.jpg"
-                  alt="Gerbi Carreon"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Gerbi Carreon</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Gerbi performed various curatorial activities in the spider collection. He also received training to do DNA extractions and PCRs in the molecular lab.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Gerbi.jpg"
+                alt="Gerbi Carreon"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Gerbi Carreon</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Gerbi performed various curatorial activities in the spider collection. He also received training to do DNA extractions and PCRs in the molecular lab.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Debbie Alwill */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/debbie.jpg"
-                  alt="Debbie Alwill"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Debbie Alwill</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Debbie assisted with labeling and rebottling specimens and packing loans.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/debbie.jpg"
+                alt="Debbie Alwill"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Debbie Alwill</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Debbie assisted with labeling and rebottling specimens and packing loans.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Jasmine Alim */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Jasmin.jpg"
-                  alt="Jasmine Alim"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Jasmine Alim</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Jasmine assisted in the molecular lab with DNA extractions and PCR reactions, also organizing DNA samples.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Jasmin.jpg"
+                alt="Jasmine Alim"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Jasmine Alim</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Jasmine assisted in the molecular lab with DNA extractions and PCR reactions, also organizing DNA samples.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Adrian Armstrong */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Adrian Armstrong" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Adrian Armstrong</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Adrian is the Invertebrate Conservation Scientist in the provincial government Nature Conservation body in KwaZulu-Natal, South Africa. He has generously donated material to the AMNH for more than ten years.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Adrian Armstrong" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Adrian Armstrong</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Adrian is the Invertebrate Conservation Scientist in the provincial government Nature Conservation body in KwaZulu-Natal, South Africa. He has generously donated material to the AMNH for more than ten years.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Reginald Christiaan */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/ReginaldChristiaan.jpg"
-                  alt="Reginald Christiaan"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Reginald Christiaan</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Reginald is a scorpion enthusiast who assisted Prendini with field collections of scorpions in South Africa.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/ReginaldChristiaan.jpg"
+                alt="Reginald Christiaan"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Reginald Christiaan</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Reginald is a scorpion enthusiast who assisted Prendini with field collections of scorpions in South Africa.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Mark Cooper */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Mark Cooper" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Mark Cooper</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Mark is a myriapodologist who graduated with a Masters from the University of Cape Town. He accompanied Lorenzo Prendini on several expeditions to collect arachnids in South Africa.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Mark Cooper" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Mark Cooper</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Mark is a myriapodologist who graduated with a Masters from the University of Cape Town. He accompanied Lorenzo Prendini on several expeditions to collect arachnids in South Africa.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Howard W. Fiedler */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/fiedler.jpg"
-                  alt="Howard W. Fiedler"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Howard W. Fiedler</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Howard assisted with rebottling specimens, organization of specimen and reprint collections, recording scorpion measurement data and digitizing handwritten catalogs.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/fiedler.jpg"
+                alt="Howard W. Fiedler"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Howard W. Fiedler</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Howard assisted with rebottling specimens, organization of specimen and reprint collections, recording scorpion measurement data and digitizing handwritten catalogs.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Stefan Foord */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Stefan.Foord.jpg"
-                  alt="Stefan Foord"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Stefan Foord</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Stefan was an arachnologist and professor at the University of Venda, South Africa who generously donated material to the AMNH. RIP.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Stefan.Foord.jpg"
+                alt="Stefan Foord"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Stefan Foord</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Stefan was an arachnologist and professor at the University of Venda, South Africa who generously donated material to the AMNH. RIP.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Ann Garbacki */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Ann Garbacki" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Ann Garbacki</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Ann assisted with labeling of specimens and inventorying specimens.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Ann Garbacki" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Ann Garbacki</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Ann assisted with labeling of specimens and inventorying specimens.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Tom Gartner */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Tom Gartner" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Tom Gartner</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Tom assisted with sorting and labeling the Arachnid and Myriapod Collections and packing and unpacking loans.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Tom Gartner" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Tom Gartner</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Tom assisted with sorting and labeling the Arachnid and Myriapod Collections and packing and unpacking loans.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Tom Sullivan */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Tom-Sullivan.jpg"
-                  alt="Tom Sullivan"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Tom Sullivan</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Tom assisted with sorting and labeling the Arachnid and Myriapod Collections and packing and unpacking loans.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Tom-Sullivan.jpg"
+                alt="Tom Sullivan"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Tom Sullivan</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Tom assisted with sorting and labeling the Arachnid and Myriapod Collections and packing and unpacking loans.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Patrick Gildenhuys */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Gildenhuys.Patrick.jpg"
-                  alt="Patrick Gildenhuys"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Patrick Gildenhuys</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Patrick is a tarantula enthusiast who accompanied Lorenzo Prendini on several expeditions to collect arachnids in South Africa and neighboring countries, and has generously donated material to the AMNH.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Gildenhuys.Patrick.jpg"
+                alt="Patrick Gildenhuys"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Patrick Gildenhuys</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Patrick is a tarantula enthusiast who accompanied Lorenzo Prendini on several expeditions to collect arachnids in South Africa and neighboring countries, and has generously donated material to the AMNH.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Charles Haddad */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Charles.Haddad.jpg"
-                  alt="Charles Haddad"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Charles Haddad</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Charles is an arachnologist and professor at the University of the Free State, Bloemfontein, South Africa who has generously donated material to the AMNH for several years.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Charles.Haddad.jpg"
+                alt="Charles Haddad"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Charles Haddad</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Charles is an arachnologist and professor at the University of the Free State, Bloemfontein, South Africa who has generously donated material to the AMNH for several years.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Peter Hawkes */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Peter Hawkes" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Peter Hawkes</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Peter is an entomologist who runs AfriBugs, an EIA in South Africa. He has generously donated material to the AMNH for several years.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Peter Hawkes" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Peter Hawkes</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Peter is an entomologist who runs AfriBugs, an EIA in South Africa. He has generously donated material to the AMNH for several years.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Siegfried Huber */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Huber.jpg"
-                  alt="Siegfried Huber"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Siegfried Huber</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Since 2000, Siegfried has conducted expeditions to Oman, Saudi Arabia, Thailand, and New Caledonia, and elsewhere, collecting arachnids. He has generously donated specimens collected during his travels to the AMNH.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Huber.jpg"
+                alt="Siegfried Huber"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Siegfried Huber</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Since 2000, Siegfried has conducted expeditions to Oman, Saudi Arabia, Thailand, and New Caledonia, and elsewhere, collecting arachnids. He has generously donated specimens collected during his travels to the AMNH.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Jeremy Huff */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/huff2.jpg"
-                  alt="Jeremy Huff"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Jeremy Huff</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Jeremy Huff is a former volunteer and a former employee.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/huff2.jpg"
+                alt="Jeremy Huff"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Jeremy Huff</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Jeremy Huff is a former volunteer and a former employee.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Dawid Jacobs */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Dawid Jacobs" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Dawid Jacobs</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Dawid is an entomologist who assisted Prendini with fieldwork in South Africa and generously donated material to the AMNH for several years.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Dawid Jacobs" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Dawid Jacobs</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Dawid is an entomologist who assisted Prendini with fieldwork in South Africa and generously donated material to the AMNH for several years.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Simone Longe */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/simone.jpg"
-                  alt="Simone Longe"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Simone Longe</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Simone assisted in the molecular lab with DNA extractions and PCR reactions, also organizing DNA samples.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/simone.jpg"
+                alt="Simone Longe"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Simone Longe</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Simone assisted in the molecular lab with DNA extractions and PCR reactions, also organizing DNA samples.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Allyson Mellone */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Allyson Mellone" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Allyson Mellone</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Allyson assisted with labeling and rebottling specimens.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Allyson Mellone" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Allyson Mellone</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Allyson assisted with labeling and rebottling specimens.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Warren Savary */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/warren.jpg"
-                  alt="Warren Savary"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Warren Savary</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Warren Savary, a former compliance officer at the U.S. Food and Drug Administration and Field Associate of the California Academy of Sciences, served as research collaborator and webmaster for the NSF-funded REVSYS Vaejovidae grant and, from 2007-2012, as research collaborator and webmaster for the BS&I Solifugae grant. He visited the AMNH Arachnid and Myriapod Collections on several occasions to sort and identify solifuges and vaejovid scorpions.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/warren.jpg"
+                alt="Warren Savary"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Warren Savary</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Warren Savary, a former compliance officer at the U.S. Food and Drug Administration and Field Associate of the California Academy of Sciences, served as research collaborator and webmaster for the NSF-funded REVSYS Vaejovidae grant and, from 2007-2012, as research collaborator and webmaster for the BS&I Solifugae grant. He visited the AMNH Arachnid and Myriapod Collections on several occasions to sort and identify solifuges and vaejovid scorpions.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Rick West */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/west.jpg"
-                  alt="Rick West"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Rick West</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700 mb-2">
-                  Rick West, one of the world's authorities on tarantulas (Theraphosidae), has traveled to over 27 countries to study them. Rick has generously donated interesting arachnids to the AMNH for many years.
-                </p>
-                <p>
-                  <a href="http://www.birdspiders.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">BirdSpiders.com</a>
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/west.jpg"
+                alt="Rick West"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Rick West</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700 mb-2">
+                Rick West, one of the world's authorities on tarantulas (Theraphosidae), has traveled to over 27 countries to study them. Rick has generously donated interesting arachnids to the AMNH for many years.
+              </p>
+              <p>
+                <a href="http://www.birdspiders.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">BirdSpiders.com</a>
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Asel Zhetigenova */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Asel Zhetigenova" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Asel Zhetigenova</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Asel assisted with labeling and rebottling specimens.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Asel Zhetigenova" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Asel Zhetigenova</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Asel assisted with labeling and rebottling specimens.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Howard Bichard */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Howard Bichard" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Howard Bichard</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Howard accompanied Prendini on several expeditions to collect arachnids in South Africa.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Howard Bichard" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Howard Bichard</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Howard accompanied Prendini on several expeditions to collect arachnids in South Africa.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Abigail Carlton */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Abigail Carlton" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Abigail Carlton</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Abigail assisted with sorting, rebottling, labeling, reorganizing, and databasing specimens and tissue samples in the collection.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Abigail Carlton" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Abigail Carlton</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Abigail assisted with sorting, rebottling, labeling, reorganizing, and databasing specimens and tissue samples in the collection.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Ofelia Delgado */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/ofelialab.jpg"
-                  alt="Ofelia Delgado"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Ofelia Delgado</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Ofelia Delgado is a former volunteer and a former employee.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/ofelialab.jpg"
+                alt="Ofelia Delgado"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Ofelia Delgado</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Ofelia Delgado is a former volunteer and a former employee.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* David Desoeur */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/desouer.jpg"
-                  alt="David Desoeur"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">David Desoeur</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  David graduated with a B.Sc. in Biology from the University of Guelph and was interested in the taxonomy of Florida <em>Centruroides</em>. In 2008, he traveled to Florida and the Keys to collect <em>Centruroides</em> samples for morphology and DNA isolation.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/desouer.jpg"
+                alt="David Desoeur"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">David Desoeur</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                David graduated with a B.Sc. in Biology from the University of Guelph and was interested in the taxonomy of Florida <em>Centruroides</em>. In 2008, he traveled to Florida and the Keys to collect <em>Centruroides</em> samples for morphology and DNA isolation.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Suzanna Dodd */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Suzanna Dodd" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Suzanna Dodd</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Suzanna rebottled the type collection, part of the main collection, and assisted with labeling new acquisitions.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Suzanna Dodd" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Suzanna Dodd</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Suzanna rebottled the type collection, part of the main collection, and assisted with labeling new acquisitions.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Ian Engelbrecht */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Engelbrecht.jpg"
-                  alt="Ian Engelbrecht"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Ian Engelbrecht</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Ian was the Invertebrate Conservation Scientist in the provincial government Nature Conservation body in Gauteng, South Africa. He started participating in field expeditions for the AMNH in 2005 with an expedition to the Northern Cape and southern Namibia and has since undertaken numerous other trips and generously donated material to the collection.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Engelbrecht.jpg"
+                alt="Ian Engelbrecht"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Ian Engelbrecht</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Ian was the Invertebrate Conservation Scientist in the provincial government Nature Conservation body in Gauteng, South Africa. He started participating in field expeditions for the AMNH in 2005 with an expedition to the Northern Cape and southern Namibia and has since undertaken numerous other trips and generously donated material to the collection.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Carine Galvão */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Carine Galvão" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Carine Galvão</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Carine assisted with the curation of an extensive collection of scorpions extracted from pitfall traps placed across southern California by the U.S. Geological Survey (USGS), San Diego between 1996 and 2006.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Carine Galvão" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Carine Galvão</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Carine assisted with the curation of an extensive collection of scorpions extracted from pitfall traps placed across southern California by the U.S. Geological Survey (USGS), San Diego between 1996 and 2006.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Tiffany Gentry */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Tiffany Gentry" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Tiffany Gentry</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Tiffany assisted with sorting, rebottling, labeling, reorganizing, and databasing specimens and tissue samples, and with sorting and filing the Arachnid and Myriapod Reprint Collection.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Tiffany Gentry" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Tiffany Gentry</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Tiffany assisted with sorting, rebottling, labeling, reorganizing, and databasing specimens and tissue samples, and with sorting and filing the Arachnid and Myriapod Reprint Collection.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Ilsa Kaim */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/ilsa.jpg"
-                  alt="Ilsa Kaim"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Ilsa Kaim</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Ilsa volunteered at the AMNH for over 20 years. Between 2004-2011, she worked with the Arachnology Group to database the reprint collection in Endnote, and she also databased the type collection.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/ilsa.jpg"
+                alt="Ilsa Kaim"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Ilsa Kaim</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Ilsa volunteered at the AMNH for over 20 years. Between 2004-2011, she worked with the Arachnology Group to database the reprint collection in Endnote, and she also databased the type collection.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Sergios-Orestis Kolokotronis */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/sergios.jpg"
-                  alt="Sergios-Orestis Kolokotronis"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Sergios-Orestis Kolokotronis</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Sergios holds a PhD in Ecology and Evolutionary Biology from Columbia University and had a <a href="https://research.amnh.org/users/koloko" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">postdoc</a> in the AMNH Sackler Institute for Comparative Genomics and Center for Conservation Genetics, where he coordinated the DNA Barcoding Initiative for Conservation. He created and maintained the lab website from 2006 until 2008.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/sergios.jpg"
+                alt="Sergios-Orestis Kolokotronis"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Sergios-Orestis Kolokotronis</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Sergios holds a PhD in Ecology and Evolutionary Biology from Columbia University and had a <a href="https://research.amnh.org/users/koloko" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">postdoc</a> in the AMNH Sackler Institute for Comparative Genomics and Center for Conservation Genetics, where he coordinated the DNA Barcoding Initiative for Conservation. He created and maintained the lab website from 2006 until 2008.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Sulata Maity */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/sulata.jpg"
-                  alt="Sulata Maity"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Sulata Maity</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Sulata volunteered in the Molecular Systematics Laboratory checking DNA concentration with nanodrop.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/sulata.jpg"
+                alt="Sulata Maity"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Sulata Maity</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Sulata volunteered in the Molecular Systematics Laboratory checking DNA concentration with nanodrop.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Kari McWest */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/kari.jpg"
-                  alt="Kari McWest"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Kari McWest</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700 mb-2">
-                  Kari received his Master's from West Texas A&M University, Canyon, where he studied scorpions under David Sissom. He assisted the NSF-REVSYS Vaejovidae project with fieldwork in Mexico and the U.S.
-                </p>
-                <p>
-                  <a href="http://angelfire.com/tx4/scorpiones" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Kari's Scorpion Pages</a>
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/kari.jpg"
+                alt="Kari McWest"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Kari McWest</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700 mb-2">
+                Kari received his Master's from West Texas A&M University, Canyon, where he studied scorpions under David Sissom. He assisted the NSF-REVSYS Vaejovidae project with fieldwork in Mexico and the U.S.
+              </p>
+              <p>
+                <a href="http://angelfire.com/tx4/scorpiones" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Kari's Scorpion Pages</a>
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Randy Mercurio */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/mercurio3.jpg"
-                  alt="Randy Mercurio"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Randy Mercurio</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Randy Mercurio is a former volunteer and former employee.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/mercurio3.jpg"
+                alt="Randy Mercurio"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Randy Mercurio</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Randy Mercurio is a former volunteer and former employee.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Israel Na'aman */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Israel Na'aman" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Israel Na'aman</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Israel received his Masters from the Hebrew University of Jerusalem. During a short visit to the AMNH, he digitized part of the former Lorenzo Prendini scorpion collection, now incorporated into the AMNH collections of Arachnida and Myriapoda.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Israel Na'aman" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Israel Na'aman</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Israel received his Masters from the Hebrew University of Jerusalem. During a short visit to the AMNH, he digitized part of the former Lorenzo Prendini scorpion collection, now incorporated into the AMNH collections of Arachnida and Myriapoda.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Danielle Parsons */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Danielle Parsons" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Danielle Parsons</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Danielle assisted with sorting, rebottling, labeling, reorganizing, and databasing the arachnid collection.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Danielle Parsons" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Danielle Parsons</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Danielle assisted with sorting, rebottling, labeling, reorganizing, and databasing the arachnid collection.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Fabienne Paumet */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Fabienne Paumet" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Fabienne Paumet</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Fabienne assisted with sorting, rebottling, labeling, reorganizing, and databasing the arachnid collection.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Fabienne Paumet" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Fabienne Paumet</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Fabienne assisted with sorting, rebottling, labeling, reorganizing, and databasing the arachnid collection.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Warren Schmidt */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Warren Schmidt" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Warren Schmidt</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Warren accompanied Lorenzo Prendini on an expedition to collect arachnids in Malawi.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Warren Schmidt" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Warren Schmidt</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Warren accompanied Lorenzo Prendini on an expedition to collect arachnids in Malawi.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Susan Tosier */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Susan Tosier" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Susan Tosier</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Susan assisted with sorting, rebottling, labeling, and reorganizing, and databasing the arachnid collection.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Susan Tosier" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Susan Tosier</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Susan assisted with sorting, rebottling, labeling, and reorganizing, and databasing the arachnid collection.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Zach Valois */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/zach.jpg"
-                  alt="Zach Valois"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Zach Valois</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Zach generously assisted the NSF-REVSYS Vaejovidae project with fieldwork throughout Arizona, Nevada, and Utah. Zach was studying scorpion biogeography at the Utah State University. RIP.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/zach.jpg"
+                alt="Zach Valois"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Zach Valois</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Zach generously assisted the NSF-REVSYS Vaejovidae project with fieldwork throughout Arizona, Nevada, and Utah. Zach was studying scorpion biogeography at the Utah State University. RIP.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* John Visser */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Visser.jpg"
-                  alt="John Visser"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">John Visser</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  John Visser was a retired herpetologist with a fascination for scorpions. John's association with the AMNH went back to the time of the herpetologist Charles Mitchell Bogert. He assisted the AMNH with donations of arachnids for several years before he passed away.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Visser.jpg"
+                alt="John Visser"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">John Visser</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                John Visser was a retired herpetologist with a fascination for scorpions. John's association with the AMNH went back to the time of the herpetologist Charles Mitchell Bogert. He assisted the AMNH with donations of arachnids for several years before he passed away.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Peg Werns */}
-          <div className="pb-6">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Peg Werns" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Peg Werns</h4>
-                <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-                <p className="text-gray-700">
-                  Peg assisted with sorting, rebottling, labeling, reorganizing, and databasing specimens and tissue samples.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Peg Werns" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Peg Werns</h4>
+              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
+              <p className="text-gray-700">
+                Peg assisted with sorting, rebottling, labeling, reorganizing, and databasing specimens and tissue samples.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
           </div>
         </div>
         </div>
@@ -3338,822 +3148,739 @@ export default function People() {
           <div data-tab="current" className={visitingStudentsTab === 'current' ? 'block' : 'hidden'}>
 
           {/* Antonio Galán Sánchez */}
-          <div className="mb-6 pb-6">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
-                <PhotoPlaceholder name="Antonio Galán Sánchez" />
-              </div>
-              <div className="md:col-span-3">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Antonio Galán Sánchez</h4>
-                <p className="text-sm text-gray-600 mb-1">Museum für Naturkunde, Humboldt-Universität, Berlin, Germany</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2025 and 2026</p>
-                <p className="text-gray-700">
-                  Antonio’s research focuses on the evolution and functional impacts of eye loss in spiders. He is also interested in linyphiid systematics, the online documentation of biodiversity inventories, and the taxonomy of Araneomorphae. As part of his PhD project, Antonio studied the Synspermiata, a diverse but understudied clade of spiders which exhibit extraordinary diversity in eye number. Antonio visited the AMNH collection in January 2025 to revise, identify, and request loan materials. After being awarded an Annette-Kade Fellowship, he returned to the AMNH for three months in 2025 and 2026 to comprehensively survey and document the variation in eyes across the family Pholcidae and other Synspermiata, as well as scan high-quality specimens using the micro-CT facility.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6">
+            <PeopleCardMedia>
+              <PhotoPlaceholder name="Antonio Galán Sánchez" />
+            </PeopleCardMedia>
+            <PeopleCardBody>
+              <h4 className="text-base font-bold mb-1 text-gray-900">Antonio Galán Sánchez</h4>
+              <p className="text-sm text-gray-600 mb-1">Museum für Naturkunde, Humboldt-Universität, Berlin, Germany</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2025 and 2026</p>
+              <p className="text-gray-700">
+                Antonio’s research focuses on the evolution and functional impacts of eye loss in spiders. He is also interested in linyphiid systematics, the online documentation of biodiversity inventories, and the taxonomy of Araneomorphae. As part of his PhD project, Antonio studied the Synspermiata, a diverse but understudied clade of spiders which exhibit extraordinary diversity in eye number. Antonio visited the AMNH collection in January 2025 to revise, identify, and request loan materials. After being awarded an Annette-Kade Fellowship, he returned to the AMNH for three months in 2025 and 2026 to comprehensively survey and document the variation in eyes across the family Pholcidae and other Synspermiata, as well as scan high-quality specimens using the micro-CT facility.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
           </div>
 
           <div data-tab="alumni" className={visitingStudentsTab === 'alumni' ? 'block' : 'hidden'}>
 
           {/* Matias Izquierdo */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Matias Izquierdo" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Matias Izquierdo</h4>
-                <p className="text-sm text-gray-600 mb-1">Universidad Nacional, Cordoba, Argentina</p>
-                <p className="text-sm text-gray-500 mb-2">Postdoc in 2025</p>
-                <p className="text-gray-700">
-                  Matias visited the AMNH for research on spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Matias Izquierdo" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Matias Izquierdo</h4>
+              <p className="text-sm text-gray-600 mb-1">Universidad Nacional, Cordoba, Argentina</p>
+              <p className="text-sm text-gray-500 mb-2">Postdoc in 2025</p>
+              <p className="text-gray-700">
+                Matias visited the AMNH for research on spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Breanna Jordan */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Breanna Jordan" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Breanna Jordan</h4>
-                <p className="text-sm text-gray-600 mb-1">Harvard University, Cambridge, MA</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2025</p>
-                <p className="text-gray-700">
-                  Breanna visited the AMNH for research on sea spiders (Pycnogonida).
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Breanna Jordan" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Breanna Jordan</h4>
+              <p className="text-sm text-gray-600 mb-1">Harvard University, Cambridge, MA</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2025</p>
+              <p className="text-gray-700">
+                Breanna visited the AMNH for research on sea spiders (Pycnogonida).
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Sarah Morris */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Sarah Morris" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Sarah Morris</h4>
-                <p className="text-sm text-gray-600 mb-1">The George Washington University, Washington, DC</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2025</p>
-                <p className="text-gray-700">
-                  Sarah visited the AMNH for research on spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Sarah Morris" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Sarah Morris</h4>
+              <p className="text-sm text-gray-600 mb-1">The George Washington University, Washington, DC</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2025</p>
+              <p className="text-gray-700">
+                Sarah visited the AMNH for research on spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Daniel Castro-Pereira */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Daniel Castro-Pereira" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Daniel Castro-Pereira</h4>
-                <p className="text-sm text-gray-600 mb-1">Universidade de São Paulo, Brazil</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
-                <p className="text-gray-700">
-                  Daniel visited the AMNH for research on whip scorpions (Thelyphonida) supported by a grant from FAPESP.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Daniel Castro-Pereira" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Daniel Castro-Pereira</h4>
+              <p className="text-sm text-gray-600 mb-1">Universidade de São Paulo, Brazil</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
+              <p className="text-gray-700">
+                Daniel visited the AMNH for research on whip scorpions (Thelyphonida) supported by a grant from FAPESP.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Kaylin Chong */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Kaylin Chong" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Kaylin Chong</h4>
-                <p className="text-sm text-gray-600 mb-1">Harvard University, Cambridge, MA</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
-                <p className="text-gray-700">
-                  Kaylin visited the AMNH for research on ticks (Acari: Ixodida).
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Kaylin Chong" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Kaylin Chong</h4>
+              <p className="text-sm text-gray-600 mb-1">Harvard University, Cambridge, MA</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
+              <p className="text-gray-700">
+                Kaylin visited the AMNH for research on ticks (Acari: Ixodida).
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Erik Ciaccio */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Erik Ciaccio" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Erik Ciaccio</h4>
-                <p className="text-sm text-gray-600 mb-1">University of Idaho, Moscow, ID</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
-                <p className="text-gray-700">
-                  Erik visited the AMNH for research on mygalomorph spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Erik Ciaccio" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Erik Ciaccio</h4>
+              <p className="text-sm text-gray-600 mb-1">University of Idaho, Moscow, ID</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
+              <p className="text-gray-700">
+                Erik visited the AMNH for research on mygalomorph spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Valentin Ehrenthal */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Valentin Ehrenthal" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Valentin Ehrenthal</h4>
-                <p className="text-sm text-gray-600 mb-1">University of Hamburg, Germany</p>
-                <p className="text-sm text-gray-500 mb-2">MS student in 2024</p>
-                <p className="text-gray-700">
-                  Valentin visited the AMNH for research on Asian scorpions supported by an Annette Kade Fellowship.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Valentin Ehrenthal" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Valentin Ehrenthal</h4>
+              <p className="text-sm text-gray-600 mb-1">University of Hamburg, Germany</p>
+              <p className="text-sm text-gray-500 mb-2">MS student in 2024</p>
+              <p className="text-gray-700">
+                Valentin visited the AMNH for research on Asian scorpions supported by an Annette Kade Fellowship.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Miguel Garcia */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Miguel Garcia" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Miguel Garcia</h4>
-                <p className="text-sm text-gray-600 mb-1">Instituto Politecnico Nacional, Mexico</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
-                <p className="text-gray-700">
-                  Miguel visited the AMNH for his research on spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Miguel Garcia" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Miguel Garcia</h4>
+              <p className="text-sm text-gray-600 mb-1">Instituto Politecnico Nacional, Mexico</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
+              <p className="text-gray-700">
+                Miguel visited the AMNH for his research on spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Leonel Martinez */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Leonel Martinez" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Leonel Martinez</h4>
-                <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales, Argentina</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2024 and 2025</p>
-                <p className="text-gray-700">
-                  Leonel visited the AMNH twice (2024, 2025) for research on spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Leonel Martinez" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Leonel Martinez</h4>
+              <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales, Argentina</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2024 and 2025</p>
+              <p className="text-gray-700">
+                Leonel visited the AMNH twice (2024, 2025) for research on spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Paulo Pantoja */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Paulo Pantoja" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Paulo Pantoja</h4>
-                <p className="text-sm text-gray-600 mb-1">Federal University of Pará, Brazil</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
-                <p className="text-gray-700">
-                  Paulo visited the AMNH for research on spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Paulo Pantoja" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Paulo Pantoja</h4>
+              <p className="text-sm text-gray-600 mb-1">Federal University of Pará, Brazil</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
+              <p className="text-gray-700">
+                Paulo visited the AMNH for research on spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Karina Silvestre */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Karina Silvestre" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Karina Silvestre</h4>
-                <p className="text-sm text-gray-600 mb-1">University of Idaho, Moscow, ID</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
-                <p className="text-gray-700">
-                  Karina visited the AMNH for research on mygalomorph spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Karina Silvestre" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Karina Silvestre</h4>
+              <p className="text-sm text-gray-600 mb-1">University of Idaho, Moscow, ID</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
+              <p className="text-gray-700">
+                Karina visited the AMNH for research on mygalomorph spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Pedro Martins */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Pedro Martins" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Pedro Martins</h4>
-                <p className="text-sm text-gray-600 mb-1">Federal University of Minas Gerais, Brazil</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2023</p>
-                <p className="text-gray-700">
-                  Pedro visited the AMNH for research on spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Pedro Martins" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Pedro Martins</h4>
+              <p className="text-sm text-gray-600 mb-1">Federal University of Minas Gerais, Brazil</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2023</p>
+              <p className="text-gray-700">
+                Pedro visited the AMNH for research on spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Goran Shikak */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Goran Shikak" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Goran Shikak</h4>
-                <p className="text-sm text-gray-600 mb-1">University of Colorado, Denver, CO</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2023</p>
-                <p className="text-gray-700">
-                  Goran visited the AMNH for research on Solifugae.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Goran Shikak" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Goran Shikak</h4>
+              <p className="text-sm text-gray-600 mb-1">University of Colorado, Denver, CO</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2023</p>
+              <p className="text-gray-700">
+                Goran visited the AMNH for research on Solifugae.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Pietro Tardelli */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Pietro Tardelli" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Pietro Tardelli</h4>
-                <p className="text-sm text-gray-600 mb-1">The George Washington University, Washington, DC</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2023</p>
-                <p className="text-gray-700">
-                  Pietro visited the AMNH for research on spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Pietro Tardelli" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Pietro Tardelli</h4>
+              <p className="text-sm text-gray-600 mb-1">The George Washington University, Washington, DC</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2023</p>
+              <p className="text-gray-700">
+                Pietro visited the AMNH for research on spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Arnau Calatayud-Mascarell */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Arnau Calatayud-Mascarell" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Arnau Calatayud-Mascarell</h4>
-                <p className="text-sm text-gray-600 mb-1">University of Idaho, Moscow, ID</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student from 2022 to 2025</p>
-                <p className="text-gray-700">
-                  Arnau visited the AMNH three times (2022, 2023, 2025) for his research on mygalomorph spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Arnau Calatayud-Mascarell" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Arnau Calatayud-Mascarell</h4>
+              <p className="text-sm text-gray-600 mb-1">University of Idaho, Moscow, ID</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student from 2022 to 2025</p>
+              <p className="text-gray-700">
+                Arnau visited the AMNH three times (2022, 2023, 2025) for his research on mygalomorph spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* David Chamé-Vázquez */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="David Chamé-Vázquez" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">David Chamé-Vázquez</h4>
-                <p className="text-sm text-gray-600 mb-1">Centro de Investigaciones Biológicas del Noroeste, La Paz, Mexico</p>
-                <p className="text-sm text-gray-500 mb-2">Postdoc in 2022</p>
-                <p className="text-gray-700">
-                  David visited the AMNH for research on phrurolithid spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="David Chamé-Vázquez" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">David Chamé-Vázquez</h4>
+              <p className="text-sm text-gray-600 mb-1">Centro de Investigaciones Biológicas del Noroeste, La Paz, Mexico</p>
+              <p className="text-sm text-gray-500 mb-2">Postdoc in 2022</p>
+              <p className="text-gray-700">
+                David visited the AMNH for research on phrurolithid spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Sahibzada M. Jawad */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Sahibzada M. Jawad" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Sahibzada M. Jawad</h4>
-                <p className="text-sm text-gray-600 mb-1">Ismailia College, Peshawar, Pakistan</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2022</p>
-                <p className="text-gray-700">
-                  Sahib visited the AMNH for research on Pakistani scorpions supported by a HEC Pakistan Ph.D. Fellowship.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Sahibzada M. Jawad" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Sahibzada M. Jawad</h4>
+              <p className="text-sm text-gray-600 mb-1">Ismailia College, Peshawar, Pakistan</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2022</p>
+              <p className="text-gray-700">
+                Sahib visited the AMNH for research on Pakistani scorpions supported by a HEC Pakistan Ph.D. Fellowship.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Willians Porto */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Willians Porto" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Willians Porto</h4>
-                <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales, Argentina</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2022</p>
-                <p className="text-gray-700">
-                  Willians visited the AMNH for research on harvestmen (Opiliones).
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Willians Porto" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Willians Porto</h4>
+              <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales, Argentina</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2022</p>
+              <p className="text-gray-700">
+                Willians visited the AMNH for research on harvestmen (Opiliones).
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Valerie Warhol */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Valerie Warhol" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Valerie Warhol</h4>
-                <p className="text-sm text-gray-600 mb-1">Carnegie Museum of Natural History, Pittsburgh, PA</p>
-                <p className="text-sm text-gray-500 mb-2">Volunteer researcher in 2022</p>
-                <p className="text-gray-700">
-                  Valerie visited the AMNH for research on spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Valerie Warhol" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Valerie Warhol</h4>
+              <p className="text-sm text-gray-600 mb-1">Carnegie Museum of Natural History, Pittsburgh, PA</p>
+              <p className="text-sm text-gray-500 mb-2">Volunteer researcher in 2022</p>
+              <p className="text-gray-700">
+                Valerie visited the AMNH for research on spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Shahan Derkarabetian */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Shahan Derkarabetian" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Shahan Derkarabetian</h4>
-                <p className="text-sm text-gray-600 mb-1">Harvard University, Cambridge, MA</p>
-                <p className="text-sm text-gray-500 mb-2">Postdoc in 2019</p>
-                <p className="text-gray-700">
-                  Shahan visited the AMNH for research on harvestmen (Opiliones).
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Shahan Derkarabetian" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Shahan Derkarabetian</h4>
+              <p className="text-sm text-gray-600 mb-1">Harvard University, Cambridge, MA</p>
+              <p className="text-sm text-gray-500 mb-2">Postdoc in 2019</p>
+              <p className="text-gray-700">
+                Shahan visited the AMNH for research on harvestmen (Opiliones).
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Jairo A. Moreno-González */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Jairo.jpg"
-                  alt="Jairo A. Moreno-González"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Jairo A. Moreno-González</h4>
-                <p className="text-sm text-gray-600 mb-1">Museu de Zoologia, Universidade de Sao Paulo, Brasil</p>
-                <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
-                <p className="text-gray-700">
-                  Jairo received his PhD from the Instituto de Biociencias, Universidad de Sao Paulo, Sao Paulo, Brazil. His research interests are focused on systematics and evolution of some arachnid orders such as Scorpiones (Buthidae: <em>Tityus</em>), and Pedipalpi (Schizomida, Uropygi and Amblypygi). His PhD project deals with the systematic revision of <em>Tityus</em> (<em>Archaeotityus</em>) using phenotypic and genetic evidence. He visited the AMNH for six months to examine material and score morphological characters for his thesis disseration.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Jairo.jpg"
+                alt="Jairo A. Moreno-González"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Jairo A. Moreno-González</h4>
+              <p className="text-sm text-gray-600 mb-1">Museu de Zoologia, Universidade de Sao Paulo, Brasil</p>
+              <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
+              <p className="text-gray-700">
+                Jairo received his PhD from the Instituto de Biociencias, Universidad de Sao Paulo, Sao Paulo, Brazil. His research interests are focused on systematics and evolution of some arachnid orders such as Scorpiones (Buthidae: <em>Tityus</em>), and Pedipalpi (Schizomida, Uropygi and Amblypygi). His PhD project deals with the systematic revision of <em>Tityus</em> (<em>Archaeotityus</em>) using phenotypic and genetic evidence. He visited the AMNH for six months to examine material and score morphological characters for his thesis disseration.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Andria de Paula Santos da Silva */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Andria.jpg"
-                  alt="Andria de Paula Santos da Silva"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Andria de Paula Santos da Silva</h4>
-                <p className="text-sm text-gray-600 mb-1">Instituto de Biociencias, Universidade de Sao Paulo, Brasil</p>
-                <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
-                <p className="text-gray-700">
-                  Andria's PhD project deals with the systematics of the scorpion genus <em>Ananteris</em> (Buthidae). She visited the AMNH collection to examine a large number of these scorpions and generate morphological data.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Andria.jpg"
+                alt="Andria de Paula Santos da Silva"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Andria de Paula Santos da Silva</h4>
+              <p className="text-sm text-gray-600 mb-1">Instituto de Biociencias, Universidade de Sao Paulo, Brasil</p>
+              <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
+              <p className="text-gray-700">
+                Andria's PhD project deals with the systematics of the scorpion genus <em>Ananteris</em> (Buthidae). She visited the AMNH collection to examine a large number of these scorpions and generate morphological data.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Catalina Romero */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Catalina.jpg"
-                  alt="Catalina Romero"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Catalina Romero</h4>
-                <p className="text-sm text-gray-600 mb-1">Universidad Nacional, Colombia</p>
-                <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
-                <p className="text-gray-700">
-                  Catalina spent a few months visiting the AMNH collections to examine specimens and collect morphological data for her PhD thesis on pseudoscorpions of the family Whitiidae.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Catalina.jpg"
+                alt="Catalina Romero"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Catalina Romero</h4>
+              <p className="text-sm text-gray-600 mb-1">Universidad Nacional, Colombia</p>
+              <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
+              <p className="text-gray-700">
+                Catalina spent a few months visiting the AMNH collections to examine specimens and collect morphological data for her PhD thesis on pseudoscorpions of the family Whitiidae.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Miguel Medrano */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Miguel.jpg"
-                  alt="Miguel Medrano"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Miguel Medrano</h4>
-                <p className="text-sm text-gray-600 mb-1">Museu Nacional, Universidade Federal do Rio de Janeiro, Brasil</p>
-                <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
-                <p className="text-gray-700">
-                  Miguel spent a week at the AMNH examining type specimens for his PhD project on systematics of Cosmetidae (Opiliones, Laniatores).
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Miguel.jpg"
+                alt="Miguel Medrano"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Miguel Medrano</h4>
+              <p className="text-sm text-gray-600 mb-1">Museu Nacional, Universidade Federal do Rio de Janeiro, Brasil</p>
+              <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
+              <p className="text-gray-700">
+                Miguel spent a week at the AMNH examining type specimens for his PhD project on systematics of Cosmetidae (Opiliones, Laniatores).
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Rene Barba */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/ReneBarba.jpg"
-                  alt="Rene Barba"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Rene Barba</h4>
-                <p className="text-sm text-gray-600 mb-1">Instituto de Ecología y Sistemática, Havana, Cuba | Collections Study Grant</p>
-                <p className="text-sm text-gray-500 mb-2">Student in 2019</p>
-                <p className="text-gray-700">
-                  Rene's research focuses on the pseudoscorpion families Sternophoridae, Olpiidae and Garypinidae. He visited the AMNH collections to examine and image type and nontype material from the Caribbean.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/ReneBarba.jpg"
+                alt="Rene Barba"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Rene Barba</h4>
+              <p className="text-sm text-gray-600 mb-1">Instituto de Ecología y Sistemática, Havana, Cuba | Collections Study Grant</p>
+              <p className="text-sm text-gray-500 mb-2">Student in 2019</p>
+              <p className="text-gray-700">
+                Rene's research focuses on the pseudoscorpion families Sternophoridae, Olpiidae and Garypinidae. He visited the AMNH collections to examine and image type and nontype material from the Caribbean.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Jahnavi Joshi */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Jahnavi.jpg"
-                  alt="Jahnavi Joshi"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Jahnavi Joshi</h4>
-                <p className="text-sm text-gray-600 mb-1">Natural History Museum, UK</p>
-                <p className="text-sm text-gray-500 mb-2">Post-Doctoral Fellow in 2019</p>
-                <p className="text-gray-700">
-                  Jahnnavi visited the AMNH to examine a series of old centipedes for an ongoing research project at the Natural History Museum in London.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Jahnavi.jpg"
+                alt="Jahnavi Joshi"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Jahnavi Joshi</h4>
+              <p className="text-sm text-gray-600 mb-1">Natural History Museum, UK</p>
+              <p className="text-sm text-gray-500 mb-2">Post-Doctoral Fellow in 2019</p>
+              <p className="text-gray-700">
+                Jahnnavi visited the AMNH to examine a series of old centipedes for an ongoing research project at the Natural History Museum in London.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Aaron Goodman */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Aaron.jpg"
-                  alt="Aaron Goodman"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Aaron Goodman</h4>
-                <p className="text-sm text-gray-600 mb-1">California Academy of Sciences, USA</p>
-                <p className="text-sm text-gray-500 mb-2">Master's Student from 2018 to 2019</p>
-                <p className="text-gray-700">
-                  Aaron is mainly interested in scorpion systematics. He came to the AMNH to generate morphological data for his master's dissertation on the genus <em>Centruroides</em> (Buthidae).
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Aaron.jpg"
+                alt="Aaron Goodman"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Aaron Goodman</h4>
+              <p className="text-sm text-gray-600 mb-1">California Academy of Sciences, USA</p>
+              <p className="text-sm text-gray-500 mb-2">Master's Student from 2018 to 2019</p>
+              <p className="text-gray-700">
+                Aaron is mainly interested in scorpion systematics. He came to the AMNH to generate morphological data for his master's dissertation on the genus <em>Centruroides</em> (Buthidae).
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Stephan Schaffrath */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Stephan_aslq3e.jpg"
-                  alt="Stephan Schaffrath"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Stephan Schaffrath</h4>
-                <p className="text-sm text-gray-600 mb-1">University of Cologne, Germany</p>
-                <p className="text-sm text-gray-500 mb-2">PhD Student in 2014 and 2018</p>
-                <p className="text-gray-700">
-                  For Stephan's PhD he visited the AMNH to receive training in DNA isolation, amplification and sequencing while investigating the chemical composition of scorpion venoms, with a view to using species-specific signatures for systematics. Later, Stephan returned to spend three months at the AMNH generating DNA and morphological data for his PhD thesis, focused on the scorpion genus <em>Euscorpius</em> (Euscorpiidae).
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Stephan_aslq3e.jpg"
+                alt="Stephan Schaffrath"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Stephan Schaffrath</h4>
+              <p className="text-sm text-gray-600 mb-1">University of Cologne, Germany</p>
+              <p className="text-sm text-gray-500 mb-2">PhD Student in 2014 and 2018</p>
+              <p className="text-gray-700">
+                For Stephan's PhD he visited the AMNH to receive training in DNA isolation, amplification and sequencing while investigating the chemical composition of scorpion venoms, with a view to using species-specific signatures for systematics. Later, Stephan returned to spend three months at the AMNH generating DNA and morphological data for his PhD thesis, focused on the scorpion genus <em>Euscorpius</em> (Euscorpiidae).
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Carlos Alberto Martinez Muñoz */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/CarlosM.jpg"
-                  alt="Carlos Alberto Martinez Muñoz"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Carlos Alberto Martinez Muñoz</h4>
-                <p className="text-sm text-gray-600 mb-1">University of Turku, Finland</p>
-                <p className="text-sm text-gray-500 mb-2">PhD Student from 2018 to 2019</p>
-                <p className="text-gray-700">
-                  Carlos' main research interest is focused on Myriapods. He came to the AMNH to examine and organize a series of old types described by Chamberlin.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/CarlosM.jpg"
+                alt="Carlos Alberto Martinez Muñoz"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Carlos Alberto Martinez Muñoz</h4>
+              <p className="text-sm text-gray-600 mb-1">University of Turku, Finland</p>
+              <p className="text-sm text-gray-500 mb-2">PhD Student from 2018 to 2019</p>
+              <p className="text-gray-700">
+                Carlos' main research interest is focused on Myriapods. He came to the AMNH to examine and organize a series of old types described by Chamberlin.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Callum Mclean */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Callum.jpg"
-                  alt="Callum Mclean"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Callum Mclean</h4>
-                <p className="text-sm text-gray-600 mb-1">Manchester Metropolitan University, UK</p>
-                <p className="text-sm text-gray-500 mb-2">PhD Student in 2018</p>
-                <p className="text-gray-700">
-                  Callum visited the AMNH collections to examine various species of Amblypygi for his doctoral thesis, focused in biomechanics of predatory structures in arthropods.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Callum.jpg"
+                alt="Callum Mclean"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Callum Mclean</h4>
+              <p className="text-sm text-gray-600 mb-1">Manchester Metropolitan University, UK</p>
+              <p className="text-sm text-gray-500 mb-2">PhD Student in 2018</p>
+              <p className="text-gray-700">
+                Callum visited the AMNH collections to examine various species of Amblypygi for his doctoral thesis, focused in biomechanics of predatory structures in arthropods.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Shlomo Cain */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Shlomo.jpg"
-                  alt="Shlomo Cain"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Shlomo Cain</h4>
-                <p className="text-sm text-gray-600 mb-1">University of Haifa, Oranim, Israel</p>
-                <p className="text-sm text-gray-500 mb-2">MSc Student in 2018</p>
-                <p className="text-gray-700">
-                  Shlomo visited the AMNH for three months to examine scorpions of the genus <em>Buthacus</em> (Buthidae) for his master's dissertation.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Shlomo.jpg"
+                alt="Shlomo Cain"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Shlomo Cain</h4>
+              <p className="text-sm text-gray-600 mb-1">University of Haifa, Oranim, Israel</p>
+              <p className="text-sm text-gray-500 mb-2">MSc Student in 2018</p>
+              <p className="text-gray-700">
+                Shlomo visited the AMNH for three months to examine scorpions of the genus <em>Buthacus</em> (Buthidae) for his master's dissertation.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Ivan Magalhaes */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Ivan.jpg"
-                  alt="Ivan Magalhaes"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Ivan Magalhaes</h4>
-                <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales Bernardino Rivadavia, Argentina | CONICET | Doctoral fellow, Division Aracnologia</p>
-                <p className="text-sm text-gray-500 mb-2">PhD Student in 2017</p>
-                <p className="text-gray-700">
-                  Ivan is a PhD candidate at the Museo Argentino de Ciencias Naturales "Bernardino Rivadavia", Argentina. His research focuses on spider systematics and its interface with their evolution and biogeography. His current project aims at resolving the systematics of crevice weavers (family Filistatidae), a group of shy and little-studied spiders most diverse in dry subtropical areas. His is also interested in the systematics of sand spiders (<em>Sicarius</em>) and spiny orb weavers (<em>Micrathena</em>).
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Ivan.jpg"
+                alt="Ivan Magalhaes"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Ivan Magalhaes</h4>
+              <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales Bernardino Rivadavia, Argentina | CONICET | Doctoral fellow, Division Aracnologia</p>
+              <p className="text-sm text-gray-500 mb-2">PhD Student in 2017</p>
+              <p className="text-gray-700">
+                Ivan is a PhD candidate at the Museo Argentino de Ciencias Naturales "Bernardino Rivadavia", Argentina. His research focuses on spider systematics and its interface with their evolution and biogeography. His current project aims at resolving the systematics of crevice weavers (family Filistatidae), a group of shy and little-studied spiders most diverse in dry subtropical areas. His is also interested in the systematics of sand spiders (<em>Sicarius</em>) and spiny orb weavers (<em>Micrathena</em>).
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Gerardo Contreras */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/GerardoContreras.jpg"
-                  alt="Gerardo Contreras"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Gerardo Contreras</h4>
-                <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
-                <p className="text-sm text-gray-500 mb-2">Student from 2015 to 2017</p>
-                <p className="text-gray-700">
-                  Gerardo visited the AMNH to examine the collection of the North American scorpions of the genus <em>Vaejovis</em> and relatives, and score characters for his phylogenetic analysis. He returned a second time to generate DNA sequences in the molecular lab.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/GerardoContreras.jpg"
+                alt="Gerardo Contreras"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Gerardo Contreras</h4>
+              <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
+              <p className="text-sm text-gray-500 mb-2">Student from 2015 to 2017</p>
+              <p className="text-gray-700">
+                Gerardo visited the AMNH to examine the collection of the North American scorpions of the genus <em>Vaejovis</em> and relatives, and score characters for his phylogenetic analysis. He returned a second time to generate DNA sequences in the molecular lab.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Rodrigo Monjáraz Ruedas */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/RodrigoRuedas.jpg"
-                  alt="Rodrigo Monjáraz Ruedas"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Rodrigo Monjáraz Ruedas</h4>
-                <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2014 and from 2016 to 2017</p>
-                <p className="text-gray-700">
-                  Rodrigo is studying the Schizomida fauna of Mexico. He visited the AMNH to examine the schizomid holdings of the collection and score morphological characters for his PhD research.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/RodrigoRuedas.jpg"
+                alt="Rodrigo Monjáraz Ruedas"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Rodrigo Monjáraz Ruedas</h4>
+              <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2014 and from 2016 to 2017</p>
+              <p className="text-gray-700">
+                Rodrigo is studying the Schizomida fauna of Mexico. He visited the AMNH to examine the schizomid holdings of the collection and score morphological characters for his PhD research.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Tebogo Ledwaba */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Tebogo.jpg"
-                  alt="Tebogo Ledwaba"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Tebogo Ledwaba</h4>
-                <p className="text-sm text-gray-600 mb-1">Ditsong National Museum of Natural History, Pretoria, South Africa</p>
-                <p className="text-sm text-gray-500 mb-2">Student in 2017</p>
-                <p className="text-gray-700">
-                  Tebogo visited the AMNH for 2 months to digitize the AMNH collection of African scorpions and part of the Karoo BioGaps Grant funded by the South African National Research Foundation.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Tebogo.jpg"
+                alt="Tebogo Ledwaba"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Tebogo Ledwaba</h4>
+              <p className="text-sm text-gray-600 mb-1">Ditsong National Museum of Natural History, Pretoria, South Africa</p>
+              <p className="text-sm text-gray-500 mb-2">Student in 2017</p>
+              <p className="text-gray-700">
+                Tebogo visited the AMNH for 2 months to digitize the AMNH collection of African scorpions and part of the Karoo BioGaps Grant funded by the South African National Research Foundation.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Jesus Alberto Cruz-López */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Jesus-Alberto-Cruz-Lopez.jpg"
-                  alt="Jesus Alberto Cruz-López"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Jesus Alberto Cruz-López</h4>
-                <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
-                <p className="text-sm text-gray-500 mb-2">Student in 2017</p>
-                <p className="text-gray-700">
-                  Jesus visited the AMNH to examine the collection of mexican harvestmen (Opiliones) as part of his dissertation research.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Jesus-Alberto-Cruz-Lopez.jpg"
+                alt="Jesus Alberto Cruz-López"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Jesus Alberto Cruz-López</h4>
+              <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
+              <p className="text-sm text-gray-500 mb-2">Student in 2017</p>
+              <p className="text-gray-700">
+                Jesus visited the AMNH to examine the collection of mexican harvestmen (Opiliones) as part of his dissertation research.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Ricardo Botero-Trujillo */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/ric.jpg"
-                  alt="Ricardo Botero-Trujillo"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Ricardo Botero-Trujillo</h4>
-                <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales Bernardino Rivadavia, Argentina | CONICET | Doctoral fellow, Division Aracnologia | Theodore Roosevelt Memorial Grant</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
-                <p className="text-gray-700">
-                  Ricardo Botero Trujillo earned his biology degree from the Pontificia Universidad Javeriana, Bogotá. While an undergraduate student, he became interested in arachnids and started working on scorpions from his native country, Colombia. Gradually, hooded thick-spider (order Ricinulei) and sun-spiders (order Solifugae) became part of his research interests. After a 5-year period working in the pharmaceutical industry, Ricardo moved to Buenos Aires, Argentina to start his PhD His doctoral thesis consists of a taxonomic revision and phylogenetic analysis of the South American sun-spider family Mummuciidae. After being awarded a Theodore Roosevelt Memorial Grant, Ricardo visited the AMNH to study the collections of the groups he works on.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/ric.jpg"
+                alt="Ricardo Botero-Trujillo"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Ricardo Botero-Trujillo</h4>
+              <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales Bernardino Rivadavia, Argentina | CONICET | Doctoral fellow, Division Aracnologia | Theodore Roosevelt Memorial Grant</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
+              <p className="text-gray-700">
+                Ricardo Botero Trujillo earned his biology degree from the Pontificia Universidad Javeriana, Bogotá. While an undergraduate student, he became interested in arachnids and started working on scorpions from his native country, Colombia. Gradually, hooded thick-spider (order Ricinulei) and sun-spiders (order Solifugae) became part of his research interests. After a 5-year period working in the pharmaceutical industry, Ricardo moved to Buenos Aires, Argentina to start his PhD His doctoral thesis consists of a taxonomic revision and phylogenetic analysis of the South American sun-spider family Mummuciidae. After being awarded a Theodore Roosevelt Memorial Grant, Ricardo visited the AMNH to study the collections of the groups he works on.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Dulce Flor Piedra */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Dulce.jpg"
-                  alt="Dulce Flor Piedra"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Dulce Flor Piedra</h4>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
-                <p className="text-gray-700">
-                  Dulce came to examine the collection of Pseudoscorpiones for her dissertation research.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Dulce.jpg"
+                alt="Dulce Flor Piedra"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Dulce Flor Piedra</h4>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
+              <p className="text-gray-700">
+                Dulce came to examine the collection of Pseudoscorpiones for her dissertation research.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Rebecca Godwin */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PhotoPlaceholder name="Rebecca Godwin" />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Rebecca Godwin</h4>
-                <p className="text-sm text-gray-600 mb-1">Auburn University, AL</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
-                <p className="text-gray-700">
-                  Rebecca visited the AMNH for research on trapdoor spiders.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PhotoPlaceholder name="Rebecca Godwin" />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Rebecca Godwin</h4>
+              <p className="text-sm text-gray-600 mb-1">Auburn University, AL</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
+              <p className="text-gray-700">
+                Rebecca visited the AMNH for research on trapdoor spiders.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Francisco Salgueiro Sepulveda */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
-                <PeopleImage
-                  src="/images/Francisco.jpg"
-                  alt="Francisco Salgueiro Sepulveda"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-              <div className="md:col-span-4">
-                <h4 className="text-base font-bold mb-1 text-gray-900">Francisco Salgueiro Sepulveda</h4>
-                <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
-                <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
-                <p className="text-gray-700">
-                  Francisco spent a month at the AMNH to study the collection of tetragnathid spiders for his dissertation.
-                </p>
-              </div>
-            </div>
-          </div>
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
+              <PeopleImage
+                src="/images/Francisco.jpg"
+                alt="Francisco Salgueiro Sepulveda"
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-sm"
+              />
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
+              <h4 className="text-base font-bold mb-1 text-gray-900">Francisco Salgueiro Sepulveda</h4>
+              <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
+              <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
+              <p className="text-gray-700">
+                Francisco spent a month at the AMNH to study the collection of tetragnathid spiders for his dissertation.
+              </p>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Diego Barrales */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/diego.jpg"
                   alt="Diego Barrales"
@@ -4161,22 +3888,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Diego Barrales</h4>
                 <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
                 <p className="text-sm text-gray-500 mb-2">Student in 2016</p>
                 <p className="text-gray-700">
                   Diego visted the AMNH to examine material belonging to the species <em>Mastigoproctus giganteus</em> especially from localities within the United States. His findings will be incorporated into a morphological analysis used for a species delimitation project.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Samuel Mwangi */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/mwangi.jpg"
                   alt="Samuel Mwangi"
@@ -4184,22 +3909,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Samuel Mwangi</h4>
                 <p className="text-sm text-gray-600 mb-1">West Texas A&M University, Canyon, TX | National Museums of Kenya, Nairobi | Theodore Roosevelt Fellowship, Richard Lounsbery Foundation, Collections Study Grant</p>
                 <p className="text-sm text-gray-500 mb-2">MSc student in 2005 and 2016</p>
                 <p className="text-gray-700">
                   Samuel's MSc research focuses on the diversity of Kenyan scorpions of Kenya. As student at the National Museums of Kenya, Nairobi, he visited the AMNH for training in the Molecular Systematics Laboratory. He later returned to the AMNH to examine and photograph specimens for his Masters research at West Texas A&M University.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Bastian-Jesper Klußmann-Fricke */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/bastian.jpg"
                   alt="Bastian-Jesper Klußmann-Fricke"
@@ -4207,22 +3930,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Bastian-Jesper Klußmann-Fricke</h4>
                 <p className="text-sm text-gray-600 mb-1">University of Rostock, Germany | Annette-Kade Fellowship</p>
                 <p className="text-sm text-gray-500 mb-2">Student in 2015</p>
                 <p className="text-gray-700">
                   Bastian visited the AMNH to study the respiratory and circulatory systems of camel spiders (Solifugae) using osmium tetroxide staining, corrosion casting, and microCT.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Gustavo Silva de Miranda */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/Gustavo.jpg"
                   alt="Gustavo Silva de Miranda"
@@ -4230,39 +3951,35 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Gustavo Silva de Miranda</h4>
                 <p className="text-sm text-gray-600 mb-1">Natural History Museum of Denmark, University of Copenhagen</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2014 and 2015</p>
                 <p className="text-gray-700">
                   Gustavo visited the AMNH twice during his PhD to work on the collection of whip spiders (Amblypygi) for his revision of the family Charinidae. He was trained and generated DNA sequence data from charinid samples in the AMNH molecular lab.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Ingrid Catalina Romero Ortiz */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PhotoPlaceholder name="Ingrid Catalina Romero Ortiz" />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Ingrid Catalina Romero Ortiz</h4>
                 <p className="text-sm text-gray-600 mb-1">Universidad Nacional de Colombia, Bogotá</p>
                 <p className="text-sm text-gray-500 mb-2">Graduate student in 2015</p>
                 <p className="text-gray-700">
                   Ingrid Catalina visited the AMNH to study the pseudoscorpion holdings and types as part of her graduate research on their taxonomy and systematics.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Daniela Ramírez */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/DanielaRamirez.jpg"
                   alt="Daniela Ramírez"
@@ -4270,22 +3987,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Daniela Ramírez</h4>
                 <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2014</p>
                 <p className="text-gray-700">
                   Daniela visited the AMNH to examine the collection of tarantula spiders (Theraphosidae) as part of her PhD research.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Carlos Santibañez-López */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/carlos.jpg"
                   alt="Carlos Santibañez-López"
@@ -4293,56 +4008,50 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Carlos Santibañez-López</h4>
                 <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City | Collections Study Grant, Theodore Roosevelt Memorial Grant</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2009, from 2011 to 2012, and in 2014</p>
                 <p className="text-gray-700">
                   Carlos revised the genus <em>Diplocentrus</em> (Diplocentridae) for his PhD and has studied the taxonomy of other scorpions occurring in Mexico. He first visited the AMNH examine the collection of Diplocentridae and later returned to extract, amplify and sequence DNA from Diplocentridae, and to score a morphological matrix for phylogenetic analysis.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Roberta Engel */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PhotoPlaceholder name="Roberta Engel" />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Roberta Engel</h4>
                 <p className="text-sm text-gray-600 mb-1">University of Connecticut, Storrs, CT</p>
                 <p className="text-sm text-gray-500 mb-2">Student in 2012</p>
                 <p className="text-gray-700">
                   Roberta's research focused on the systematics of pseudoscorpions. She visited the AMNH to examine the holdings of Australian pseudoscorpions.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* David Vrech */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PhotoPlaceholder name="David Vrech" />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">David Vrech</h4>
                 <p className="text-sm text-gray-600 mb-1">Universidad Nacional de Córdoba, Argentina</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2012</p>
                 <p className="text-gray-700">
                   David visited the AMNH for research on the sperm packages of scorpions.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Humberto Yoji Yamaguti */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/humberto.jpg"
                   alt="Humberto Yoji Yamaguti"
@@ -4350,39 +4059,35 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Humberto Yoji Yamaguti</h4>
                 <p className="text-sm text-gray-600 mb-1">Universidade de São Paulo, Brazil</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2009 and 2011</p>
                 <p className="text-gray-700">
                   Humberto conducted a revision and phylogenetic analysis of the scorpion genus <em>Rhopalurus</em> (Buthidae) for his PhD He visited the AMNH to extract, amplify and sequence DNA from Rhopalurus samples and to use materials to score characters.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Patricia Carrera */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PhotoPlaceholder name="Patricia Carrera" />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Patricia Carrera</h4>
                 <p className="text-sm text-gray-600 mb-1">Universidad Nacional de Cordoba, Argentina | Collections Study Grant</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2009</p>
                 <p className="text-gray-700">
                   Patricia studied mating behavior and sexual selection in bothriurid scorpions for her PhD She visited the AMNH to study the structure and homology of the scorpion hemispermatophore.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Jesus Alfonso Ballesteros Chavez */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/jesusb.jpg"
                   alt="Jesus Alfonso Ballesteros Chavez"
@@ -4390,22 +4095,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Jesus Alfonso Ballesteros Chavez</h4>
                 <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City | Collections Study Grant</p>
                 <p className="text-sm text-gray-500 mb-2">MSc student in 2008</p>
                 <p className="text-gray-700">
                   Jesus' MSc research aimed to reconstruct the phylogenetic relationships of the species belonging to the Neotropical whip spider genus <em>Paraphrynus</em> (Amblypygi) and its relationship with the rest of the genera of Phrynidae. He visited the AMNH to study the Neotropical phrynids. He then moved to George Washington University for a PhD on spiders.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Fabio Akashi Hernandes */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/Hernanades.jpg"
                   alt="Fabio Akashi Hernandes"
@@ -4413,22 +4116,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Fabio Akashi Hernandes</h4>
                 <p className="text-sm text-gray-600 mb-1">UNESP: São Paulo State University, Brazil</p>
                 <p className="text-sm text-gray-500 mb-2">MSc student in 2008 and 2016</p>
                 <p className="text-gray-700">
                   Fabio's main interests are the taxonomy of plant mites (Bdellidae, Tetranychidae, Raphignathoidea) and feather mites (Astigmata), with an emphasis on the taxonomy and phylogeny of the genus <em>Aponychus</em> and related genera (Acari, Tetranychidae). He visited the AMNH to study mite types from several groups.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Andrés Ojanguren-Affilastro */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/ojanguren.jpg"
                   alt="Andrés Ojanguren-Affilastro"
@@ -4436,22 +4137,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Andrés Ojanguren-Affilastro</h4>
                 <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales, Buenos Aires, Argentina | AMNH Collections Study Grant</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2005 and 2007</p>
                 <p className="text-gray-700">
                   Andrés' PhD research was a revision of the diverse South American bothriurid genus <em>Brachistosternus</em>. He visited the AMNH twice, the first time to extract, amplify and sequence DNA from bothriurid samples and a second time to continue his work on bothriurid systematics.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Alexander V. Gromov */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/gromov.jpg"
                   alt="Alexander V. Gromov"
@@ -4459,22 +4158,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Alexander V. Gromov</h4>
                 <p className="text-sm text-gray-600 mb-1">Institute of Zoology, Almaty, Kazakhstan | Collections Study Grant and NSF BS&I Grant</p>
                 <p className="text-sm text-gray-500 mb-2">Student in 2007</p>
                 <p className="text-gray-700">
                   Alex is interested in central Asian solifuges and is revising the family Karschiidae. He visited the AMNH to work on the solpugid collections as part of the Global Survey and Inventory of Solifugae.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Carsten Kamenz */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/carstenk.jpg"
                   alt="Carsten Kamenz"
@@ -4482,22 +4179,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Carsten Kamenz</h4>
                 <p className="text-sm text-gray-600 mb-1">Humboldt University, Berlin, Germany | Annette Kade Fellowship</p>
                 <p className="text-sm text-gray-500 mb-2">Student from 2005 to 2006</p>
                 <p className="text-gray-700">
                   Carsten was a visiting student and a postdoc.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Valerio Vignoli */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/vignoli.jpg"
                   alt="Valerio Vignoli"
@@ -4505,22 +4200,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Valerio Vignoli</h4>
                 <p className="text-sm text-gray-600 mb-1">University of Siena, Italy | Theodore Roosevelt Memorial Grant</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2004 and 2006</p>
                 <p className="text-gray-700">
                   Valerio revised the taxonomy, ecology and biogeography of <em>Euscorpius</em> for his PhD. He visited the AMNH twice to revise the North American scorpion family Typhlochactidae. He also participated in AMNH trips to Benin, Costa Rica, Morocco, Guinea-Bissau and Senegal.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Christian Wirkner */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/wirkner.jpg"
                   alt="Christian Wirkner"
@@ -4528,22 +4221,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Christian Wirkner</h4>
                 <p className="text-sm text-gray-600 mb-1">Friedrich-Schiller University, Jena, Germany | Annette Kade Fellowship</p>
                 <p className="text-sm text-gray-500 mb-2">Student in 2004</p>
                 <p className="text-gray-700">
                   Christian studied the comparative morphology of arthropods from phylogenetic and evolutionary perspectives and, more specifically, organ evolution and transformation, first at Jena University before moving to Rostock University. He visited the AMNH to study the scorpion circulatory system.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Christina Bisulca */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/bisulca.jpg"
                   alt="Christina Bisulca"
@@ -4551,22 +4242,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Christina Bisulca</h4>
                 <p className="text-sm text-gray-600 mb-1">University of Delaware, Newark, DE | Winterthur Art Conservation Fellowship</p>
                 <p className="text-sm text-gray-500 mb-2">MSc student in 2003</p>
                 <p className="text-gray-700">
                   Christina visited the AMNH during her MSc in Art Conservation at the University of Delaware, working with the Department of Natural Sciences Conservation. Bisulca surveyed the state of curation of the non-spider Arachnid and Myriapod Collection, resulting in upgrades to the glassware and closures housing the collection.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Amazonas Chagas, Jr. */}
-          <div className="mb-6 pb-6 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/chagas.jpg"
                   alt="Amazonas Chagas, Jr."
@@ -4574,22 +4263,20 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Amazonas Chagas, Jr.</h4>
                 <p className="text-sm text-gray-600 mb-1">Museu Nacional, Universidade Federal do Rio de Janeiro, Brazil</p>
                 <p className="text-sm text-gray-500 mb-2">Postgraduate student in 2003</p>
                 <p className="text-gray-700">
                   After his Masters, Amazonas visited the AMNH while in the USA to work at the North Carolina State Museum, Raleigh. At the AMNH, Amazonas studied scolopendromorph centipedes from around the world.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
 
           {/* Lionel Monod */}
-          <div className="mb-6 pb-6">
-            <div className="grid md:grid-cols-5 gap-4">
-              <div className="md:col-span-1">
+          <PeopleCard containerClassName="mb-6 pb-6">
+            <PeopleCardMedia className="md:col-span-1">
                 <PeopleImage
                   src="/images/lionel.jpg"
                   alt="Lionel Monod"
@@ -4597,17 +4284,16 @@ export default function People() {
                   height={400}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-4">
+            </PeopleCardMedia>
+            <PeopleCardBody className="md:col-span-4">
                 <h4 className="text-base font-bold mb-1 text-gray-900">Lionel Monod</h4>
                 <p className="text-sm text-gray-600 mb-1">University of Geneva, Switzerland</p>
                 <p className="text-sm text-gray-500 mb-2">Student in 2002</p>
                 <p className="text-gray-700">
                   Lionel Monod was a visiting student and graduate student.
                 </p>
-              </div>
-            </div>
-          </div>
+            </PeopleCardBody>
+          </PeopleCard>
           </div>
         </div>
         </div>
