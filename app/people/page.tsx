@@ -3724,7 +3724,13 @@ export default function People() {
           {/* Ingrid Catalina Romero Ortiz */}
           <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
-                <PhotoPlaceholder name="Ingrid Catalina Romero Ortiz" />
+                <PeopleImage
+                  src="/images/Catalina-Romero.jpg"
+                  alt="Ingrid Catalina Romero Ortiz"
+                  width={300}
+                  height={400}
+                  className="w-full h-auto rounded-sm"
+                />
             </PeopleCardMedia>
             <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Ingrid Catalina Romero Ortiz</h4>
