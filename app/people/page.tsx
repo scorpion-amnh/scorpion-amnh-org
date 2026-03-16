@@ -1152,9 +1152,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Stephanie F. Loria */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Stephanie-F-Loria.jpg"
                   alt="Stephanie F. Loria"
@@ -1162,8 +1161,8 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Stephanie F. Loria</h3>
                 <p className="text-base text-gray-600 mb-1">American Museum of Natural History, New York</p>
                 <p className="text-sm text-gray-500 mb-3">Postdoc from 2018 to 2020</p>
@@ -1173,14 +1172,12 @@ export default function People() {
                 <p className="text-gray-700">
                   Stephanie first came to the AMNH as a high school student participating in the High School Science Research Program of the Center for Biodiversity and Conservation with Felicity Arengo. In 2011, she completed her B.S. at Sewanee University in TN. During her B.S. she spent a summer working at the Field Museum of Natural History in Chicago as an NSF REU intern studying the evolution and biogeography of the Malagasy giant pill-millipedes, genus <em>Sphaeromimus</em>, under the guidance of Thomas Wesener and Petra Sierwald. Stephanie entered the Comparative Biology PhD program at the AMNH Richard Gilder Graduate School in 2011 and graduated in 2015. Her dissertation focused on the evolution and biogeography of Southeast Asian scorpions, particularly the family Chaerilidae.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Carsten Kamenz */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/carstenk.jpg"
                   alt="Carsten Kamenz"
@@ -1188,22 +1185,20 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Carsten Kamenz</h3>
                 <p className="text-base text-gray-600 mb-1">American Museum of Natural History, New York | Kalbfleisch Fellowship</p>
                 <p className="text-sm text-gray-500 mb-3">Postdoc from 2009 to 2011</p>
                 <p className="text-gray-700">
                   Carsten received his PhD at the Humboldt-Universität zu Berlin, Germany, during which he visited the AMNH on an Annette Kade Fellowship. His research interest comprises the evolution of Arachnida with the focus on terrestrial adaptations. Carsten's PhD thesis was a comprehensive study of the morphology of fully land-adapted book lungs from extant and extinct arachnids. During the course of his post-doctoral research at the AMNH, Carsten examined the Palaeozoic scorpions, testing them for the purported aquatic life. The methodological spectrum he applied for revealing the morphological and anatomical characters, reaches from classical microscopy, through electron microscopy, to cutting-edge microtomographical techniques.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* José Antonio Ochoa */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/jose.jpg"
                   alt="José Antonio Ochoa"
@@ -1211,22 +1206,20 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-lg font-bold mb-1 text-gray-900">José Antonio Ochoa</h3>
                 <p className="text-base text-gray-600 mb-1">American Museum of Natural History, New York | Kalbfleisch Fellowship</p>
                 <p className="text-sm text-gray-500 mb-3">Postdoc from 2007 to 2009</p>
                 <p className="text-gray-700">
                   José completed his PhD at the Universidad Nacional de Cordoba, Argentina. His dissertation reviewed the systematics and biogeography of the scorpions of southern Peru. Jose's research interests include the systematics of the Andean scorpion genera <em>Orobothriurus</em> (Bothriuridae) and <em>Hadruroides</em> (Iuridae). He moved to the AMNH, supported by a Postdoctoral Research Fellowship in 2007. His postdoctoral research project was the first attempt to study the phylogeny of the Neotropical family Chactidae using morphological and genetic data.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Dana Price */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/dana.jpg"
                   alt="Dana Price"
@@ -1234,22 +1227,20 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Dana Price</h3>
                 <p className="text-base text-gray-600 mb-1">NSF-BS&I Solifugae Grant | NSF-AToL Spider Phylogeny Grant</p>
                 <p className="text-sm text-gray-500 mb-3">Postdoc from 2007 to 2008</p>
                 <p className="text-gray-700">
                   Dana completed her PhD at Rutgers University in the Graduate Program of Ecology and Evolution. The title of her dissertation was Phylogeny, Biogeography and Behavior of the Dung Beetle Genus <em>Phanaeus</em> (Scarabaeidae: Scarabaeinae). In 2007 Dana worked with Lorenzo Prendini as a Postdoctoral Researcher at the AMNH (Division of Invertebrate Zoology) on sun spiders (Solifugae) and scorpions (Vaejovidae) supported by Prendini's NSF BS&I and RevSys grants; she worked for the NSF AToL Spider Phylogeny grant in 2008. Her interests include systematics, behavior, ecology and conservation biology.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Camilo I. Mattoni */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/camilo.jpg"
                   alt="Camilo I. Mattoni"
@@ -1257,22 +1248,20 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Camilo I. Mattoni</h3>
                 <p className="text-base text-gray-600 mb-1">American Museum of Natural History, New York | Postdoctoral Fellowship</p>
                 <p className="text-sm text-gray-500 mb-3">Postdoc from 2004 to 2006</p>
                 <p className="text-gray-700">
                   Camilo completed his PhD at the Universidad Nacional de Córdoba. His dissertation involved a systematic revision of the South American scorpion genus <em>Bothriurus</em>. He moved to the AMNH, supported by a Postdoctoral Research Fellowship in Genomics, in 2004. The aim of Camilo's postdoctoral research was to produce a robust phylogenetic hypothesis of relationships in the diverse Gondwana scorpion family Bothriuridae, using morphological and genetic data, and a sampling of as many bothriurid species as possible. He is also interested in scorpion ecology, behavior and reproduction, and in theoretical aspects of cladistics. One of his most recent contributions provides the first detailed description and comparison of the genital plugs in scorpions.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Erich S. Volschenk */}
-          <div className="pb-6">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="pb-6">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/erich.jpg"
                   alt="Erich S. Volschenk"
@@ -1280,17 +1269,16 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Erich S. Volschenk</h3>
                 <p className="text-base text-gray-600 mb-1">American Museum of Natural History, New York | Postdoctoral Fellowship</p>
                 <p className="text-sm text-gray-500 mb-3">Postdoc from 2003 to 2006</p>
                 <p className="text-gray-700">
                   Erich completed his PhD at Curtin University, Perth. His PhD dissertation involved a systematic revision of the Australian buthid genera. He began a Postdoctoral Research Fellowship in Genomics at the AMNH in 2003. His postdoctoral research project is the first serious attempt to investigate the phylogeny of the cosmopolitan scorpion family Buthidae, using molecular and morphological data and a broad sample of exemplar species. Erich's research interests include the systematics of Buthidae and the Australian endemic scorpion genus <em>Urodacus</em>, the homology of scorpion hemispermatophores, and the biology of troglobitic arachnids. He pioneered the use of ultraviolet light in scorpion photomicrography.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
           </div>
         </div>
         </div>
