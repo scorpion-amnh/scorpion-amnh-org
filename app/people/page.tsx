@@ -2338,11 +2338,11 @@ export default function People() {
 
           </div>
 
-          <div data-tab="alumni" className={volunteersTab === 'alumni' ? 'block' : 'hidden'}>
+          <div data-tab="alumni" className={`people-compact ${volunteersTab === 'alumni' ? 'block' : 'hidden'}`}>
 
           {/* George Tsinias */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/George.jpg"
                 alt="George Tsinias"
@@ -2351,7 +2351,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">George Tsinias</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2362,7 +2362,7 @@ export default function People() {
 
           {/* Christian Liriano */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Christian.jpg"
                 alt="Christian Liriano"
@@ -2371,7 +2371,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Christian Liriano</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2382,7 +2382,7 @@ export default function People() {
 
           {/* Gerbi Carreon */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Gerbi.jpg"
                 alt="Gerbi Carreon"
@@ -2391,7 +2391,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Gerbi Carreon</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2402,7 +2402,7 @@ export default function People() {
 
           {/* Debbie Alwill */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/debbie.jpg"
                 alt="Debbie Alwill"
@@ -2411,7 +2411,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Debbie Alwill</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2422,7 +2422,7 @@ export default function People() {
 
           {/* Jasmine Alim */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Jasmin.jpg"
                 alt="Jasmine Alim"
@@ -2431,7 +2431,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Jasmine Alim</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2442,10 +2442,10 @@ export default function People() {
 
           {/* Adrian Armstrong */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Adrian Armstrong" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Adrian Armstrong</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2456,7 +2456,7 @@ export default function People() {
 
           {/* Reginald Christiaan */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/ReginaldChristiaan.jpg"
                 alt="Reginald Christiaan"
@@ -2465,7 +2465,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Reginald Christiaan</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2476,10 +2476,10 @@ export default function People() {
 
           {/* Mark Cooper */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Mark Cooper" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Mark Cooper</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2490,7 +2490,7 @@ export default function People() {
 
           {/* Howard W. Fiedler */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/fiedler.jpg"
                 alt="Howard W. Fiedler"
@@ -2499,7 +2499,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Howard W. Fiedler</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2510,7 +2510,7 @@ export default function People() {
 
           {/* Stefan Foord */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Stefan.Foord.jpg"
                 alt="Stefan Foord"
@@ -2519,7 +2519,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Stefan Foord</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2530,10 +2530,10 @@ export default function People() {
 
           {/* Ann Garbacki */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Ann Garbacki" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Ann Garbacki</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2544,10 +2544,10 @@ export default function People() {
 
           {/* Tom Gartner */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Tom Gartner" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Tom Gartner</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2558,7 +2558,7 @@ export default function People() {
 
           {/* Tom Sullivan */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Tom-Sullivan.jpg"
                 alt="Tom Sullivan"
@@ -2567,7 +2567,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Tom Sullivan</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2578,7 +2578,7 @@ export default function People() {
 
           {/* Patrick Gildenhuys */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Gildenhuys.Patrick.jpg"
                 alt="Patrick Gildenhuys"
@@ -2587,7 +2587,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Patrick Gildenhuys</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2598,7 +2598,7 @@ export default function People() {
 
           {/* Charles Haddad */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Charles.Haddad.jpg"
                 alt="Charles Haddad"
@@ -2607,7 +2607,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Charles Haddad</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2618,10 +2618,10 @@ export default function People() {
 
           {/* Peter Hawkes */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Peter Hawkes" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Peter Hawkes</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2632,7 +2632,7 @@ export default function People() {
 
           {/* Siegfried Huber */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Huber.jpg"
                 alt="Siegfried Huber"
@@ -2641,7 +2641,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Siegfried Huber</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2652,7 +2652,7 @@ export default function People() {
 
           {/* Jeremy Huff */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/huff2.jpg"
                 alt="Jeremy Huff"
@@ -2661,7 +2661,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Jeremy Huff</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2672,10 +2672,10 @@ export default function People() {
 
           {/* Dawid Jacobs */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Dawid Jacobs" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Dawid Jacobs</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2686,7 +2686,7 @@ export default function People() {
 
           {/* Simone Longe */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/simone.jpg"
                 alt="Simone Longe"
@@ -2695,7 +2695,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Simone Longe</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2706,10 +2706,10 @@ export default function People() {
 
           {/* Allyson Mellone */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Allyson Mellone" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Allyson Mellone</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2720,7 +2720,7 @@ export default function People() {
 
           {/* Warren Savary */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/warren.jpg"
                 alt="Warren Savary"
@@ -2729,7 +2729,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Warren Savary</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2740,7 +2740,7 @@ export default function People() {
 
           {/* Rick West */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/west.jpg"
                 alt="Rick West"
@@ -2749,7 +2749,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Rick West</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700 mb-2">
@@ -2763,10 +2763,10 @@ export default function People() {
 
           {/* Asel Zhetigenova */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Asel Zhetigenova" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Asel Zhetigenova</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2777,10 +2777,10 @@ export default function People() {
 
           {/* Howard Bichard */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Howard Bichard" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Howard Bichard</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2791,10 +2791,10 @@ export default function People() {
 
           {/* Abigail Carlton */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Abigail Carlton" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Abigail Carlton</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2805,7 +2805,7 @@ export default function People() {
 
           {/* Ofelia Delgado */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/ofelialab.jpg"
                 alt="Ofelia Delgado"
@@ -2814,7 +2814,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Ofelia Delgado</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2825,7 +2825,7 @@ export default function People() {
 
           {/* David Desoeur */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/desouer.jpg"
                 alt="David Desoeur"
@@ -2834,7 +2834,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">David Desoeur</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2845,10 +2845,10 @@ export default function People() {
 
           {/* Suzanna Dodd */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Suzanna Dodd" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Suzanna Dodd</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2859,7 +2859,7 @@ export default function People() {
 
           {/* Ian Engelbrecht */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Engelbrecht.jpg"
                 alt="Ian Engelbrecht"
@@ -2868,7 +2868,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Ian Engelbrecht</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2879,10 +2879,10 @@ export default function People() {
 
           {/* Carine Galvão */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Carine Galvão" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Carine Galvão</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2893,10 +2893,10 @@ export default function People() {
 
           {/* Tiffany Gentry */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Tiffany Gentry" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Tiffany Gentry</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2907,7 +2907,7 @@ export default function People() {
 
           {/* Ilsa Kaim */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/ilsa.jpg"
                 alt="Ilsa Kaim"
@@ -2916,7 +2916,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Ilsa Kaim</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2927,7 +2927,7 @@ export default function People() {
 
           {/* Sergios-Orestis Kolokotronis */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/sergios.jpg"
                 alt="Sergios-Orestis Kolokotronis"
@@ -2936,7 +2936,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Sergios-Orestis Kolokotronis</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2947,7 +2947,7 @@ export default function People() {
 
           {/* Sulata Maity */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/sulata.jpg"
                 alt="Sulata Maity"
@@ -2956,7 +2956,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Sulata Maity</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -2967,7 +2967,7 @@ export default function People() {
 
           {/* Kari McWest */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/kari.jpg"
                 alt="Kari McWest"
@@ -2976,7 +2976,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Kari McWest</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700 mb-2">
@@ -2990,7 +2990,7 @@ export default function People() {
 
           {/* Randy Mercurio */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/mercurio3.jpg"
                 alt="Randy Mercurio"
@@ -2999,7 +2999,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Randy Mercurio</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -3010,10 +3010,10 @@ export default function People() {
 
           {/* Israel Na'aman */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Israel Na'aman" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Israel Na'aman</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -3024,10 +3024,10 @@ export default function People() {
 
           {/* Danielle Parsons */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Danielle Parsons" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Danielle Parsons</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -3038,10 +3038,10 @@ export default function People() {
 
           {/* Fabienne Paumet */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Fabienne Paumet" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Fabienne Paumet</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -3052,10 +3052,10 @@ export default function People() {
 
           {/* Warren Schmidt */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Warren Schmidt" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Warren Schmidt</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -3066,10 +3066,10 @@ export default function People() {
 
           {/* Susan Tosier */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Susan Tosier" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Susan Tosier</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -3080,7 +3080,7 @@ export default function People() {
 
           {/* Zach Valois */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/zach.jpg"
                 alt="Zach Valois"
@@ -3089,7 +3089,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Zach Valois</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -3100,7 +3100,7 @@ export default function People() {
 
           {/* John Visser */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Visser.jpg"
                 alt="John Visser"
@@ -3109,7 +3109,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">John Visser</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -3120,10 +3120,10 @@ export default function People() {
 
           {/* Peg Werns */}
           <PeopleCard containerClassName="pb-6">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Peg Werns" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Peg Werns</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
@@ -3163,14 +3163,14 @@ export default function People() {
           </PeopleCard>
           </div>
 
-          <div data-tab="alumni" className={visitingStudentsTab === 'alumni' ? 'block' : 'hidden'}>
+          <div data-tab="alumni" className={`people-compact ${visitingStudentsTab === 'alumni' ? 'block' : 'hidden'}`}>
 
           {/* Matias Izquierdo */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Matias Izquierdo" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Matias Izquierdo</h4>
               <p className="text-sm text-gray-600 mb-1">Universidad Nacional, Cordoba, Argentina</p>
               <p className="text-sm text-gray-500 mb-2">Postdoc in 2025</p>
@@ -3182,10 +3182,10 @@ export default function People() {
 
           {/* Breanna Jordan */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Breanna Jordan" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Breanna Jordan</h4>
               <p className="text-sm text-gray-600 mb-1">Harvard University, Cambridge, MA</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2025</p>
@@ -3197,10 +3197,10 @@ export default function People() {
 
           {/* Sarah Morris */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Sarah Morris" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Sarah Morris</h4>
               <p className="text-sm text-gray-600 mb-1">The George Washington University, Washington, DC</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2025</p>
@@ -3212,10 +3212,10 @@ export default function People() {
 
           {/* Daniel Castro-Pereira */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Daniel Castro-Pereira" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Daniel Castro-Pereira</h4>
               <p className="text-sm text-gray-600 mb-1">Universidade de São Paulo, Brazil</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
@@ -3227,10 +3227,10 @@ export default function People() {
 
           {/* Kaylin Chong */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Kaylin Chong" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Kaylin Chong</h4>
               <p className="text-sm text-gray-600 mb-1">Harvard University, Cambridge, MA</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
@@ -3242,10 +3242,10 @@ export default function People() {
 
           {/* Erik Ciaccio */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Erik Ciaccio" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Erik Ciaccio</h4>
               <p className="text-sm text-gray-600 mb-1">University of Idaho, Moscow, ID</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
@@ -3257,10 +3257,10 @@ export default function People() {
 
           {/* Valentin Ehrenthal */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Valentin Ehrenthal" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Valentin Ehrenthal</h4>
               <p className="text-sm text-gray-600 mb-1">University of Hamburg, Germany</p>
               <p className="text-sm text-gray-500 mb-2">MS student in 2024</p>
@@ -3272,10 +3272,10 @@ export default function People() {
 
           {/* Miguel Garcia */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Miguel Garcia" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Miguel Garcia</h4>
               <p className="text-sm text-gray-600 mb-1">Instituto Politecnico Nacional, Mexico</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
@@ -3287,10 +3287,10 @@ export default function People() {
 
           {/* Leonel Martinez */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Leonel Martinez" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Leonel Martinez</h4>
               <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales, Argentina</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2024 and 2025</p>
@@ -3302,10 +3302,10 @@ export default function People() {
 
           {/* Paulo Pantoja */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Paulo Pantoja" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Paulo Pantoja</h4>
               <p className="text-sm text-gray-600 mb-1">Federal University of Pará, Brazil</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
@@ -3317,10 +3317,10 @@ export default function People() {
 
           {/* Karina Silvestre */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Karina Silvestre" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Karina Silvestre</h4>
               <p className="text-sm text-gray-600 mb-1">University of Idaho, Moscow, ID</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2024</p>
@@ -3332,10 +3332,10 @@ export default function People() {
 
           {/* Pedro Martins */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Pedro Martins" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Pedro Martins</h4>
               <p className="text-sm text-gray-600 mb-1">Federal University of Minas Gerais, Brazil</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2023</p>
@@ -3347,10 +3347,10 @@ export default function People() {
 
           {/* Goran Shikak */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Goran Shikak" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Goran Shikak</h4>
               <p className="text-sm text-gray-600 mb-1">University of Colorado, Denver, CO</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2023</p>
@@ -3362,10 +3362,10 @@ export default function People() {
 
           {/* Pietro Tardelli */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Pietro Tardelli" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Pietro Tardelli</h4>
               <p className="text-sm text-gray-600 mb-1">The George Washington University, Washington, DC</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2023</p>
@@ -3377,10 +3377,10 @@ export default function People() {
 
           {/* Arnau Calatayud-Mascarell */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Arnau Calatayud-Mascarell" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Arnau Calatayud-Mascarell</h4>
               <p className="text-sm text-gray-600 mb-1">University of Idaho, Moscow, ID</p>
               <p className="text-sm text-gray-500 mb-2">PhD student from 2022 to 2025</p>
@@ -3392,10 +3392,10 @@ export default function People() {
 
           {/* David Chamé-Vázquez */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="David Chamé-Vázquez" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">David Chamé-Vázquez</h4>
               <p className="text-sm text-gray-600 mb-1">Centro de Investigaciones Biológicas del Noroeste, La Paz, Mexico</p>
               <p className="text-sm text-gray-500 mb-2">Postdoc in 2022</p>
@@ -3407,10 +3407,10 @@ export default function People() {
 
           {/* Sahibzada M. Jawad */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Sahibzada M. Jawad" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Sahibzada M. Jawad</h4>
               <p className="text-sm text-gray-600 mb-1">Ismailia College, Peshawar, Pakistan</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2022</p>
@@ -3422,10 +3422,10 @@ export default function People() {
 
           {/* Willians Porto */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Willians Porto" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Willians Porto</h4>
               <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales, Argentina</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2022</p>
@@ -3437,10 +3437,10 @@ export default function People() {
 
           {/* Valerie Warhol */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Valerie Warhol" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Valerie Warhol</h4>
               <p className="text-sm text-gray-600 mb-1">Carnegie Museum of Natural History, Pittsburgh, PA</p>
               <p className="text-sm text-gray-500 mb-2">Volunteer researcher in 2022</p>
@@ -3452,10 +3452,10 @@ export default function People() {
 
           {/* Shahan Derkarabetian */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Shahan Derkarabetian" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Shahan Derkarabetian</h4>
               <p className="text-sm text-gray-600 mb-1">Harvard University, Cambridge, MA</p>
               <p className="text-sm text-gray-500 mb-2">Postdoc in 2019</p>
@@ -3467,7 +3467,7 @@ export default function People() {
 
           {/* Jairo A. Moreno-González */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Jairo.jpg"
                 alt="Jairo A. Moreno-González"
@@ -3476,7 +3476,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Jairo A. Moreno-González</h4>
               <p className="text-sm text-gray-600 mb-1">Museu de Zoologia, Universidade de Sao Paulo, Brasil</p>
               <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
@@ -3488,7 +3488,7 @@ export default function People() {
 
           {/* Andria de Paula Santos da Silva */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Andria.jpg"
                 alt="Andria de Paula Santos da Silva"
@@ -3497,7 +3497,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Andria de Paula Santos da Silva</h4>
               <p className="text-sm text-gray-600 mb-1">Instituto de Biociencias, Universidade de Sao Paulo, Brasil</p>
               <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
@@ -3509,7 +3509,7 @@ export default function People() {
 
           {/* Catalina Romero */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Catalina.jpg"
                 alt="Catalina Romero"
@@ -3518,7 +3518,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Catalina Romero</h4>
               <p className="text-sm text-gray-600 mb-1">Universidad Nacional, Colombia</p>
               <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
@@ -3530,7 +3530,7 @@ export default function People() {
 
           {/* Miguel Medrano */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Miguel.jpg"
                 alt="Miguel Medrano"
@@ -3539,7 +3539,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Miguel Medrano</h4>
               <p className="text-sm text-gray-600 mb-1">Museu Nacional, Universidade Federal do Rio de Janeiro, Brasil</p>
               <p className="text-sm text-gray-500 mb-2">PhD Student in 2019</p>
@@ -3551,7 +3551,7 @@ export default function People() {
 
           {/* Rene Barba */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/ReneBarba.jpg"
                 alt="Rene Barba"
@@ -3560,7 +3560,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Rene Barba</h4>
               <p className="text-sm text-gray-600 mb-1">Instituto de Ecología y Sistemática, Havana, Cuba | Collections Study Grant</p>
               <p className="text-sm text-gray-500 mb-2">Student in 2019</p>
@@ -3572,7 +3572,7 @@ export default function People() {
 
           {/* Jahnavi Joshi */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Jahnavi.jpg"
                 alt="Jahnavi Joshi"
@@ -3581,7 +3581,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Jahnavi Joshi</h4>
               <p className="text-sm text-gray-600 mb-1">Natural History Museum, UK</p>
               <p className="text-sm text-gray-500 mb-2">Post-Doctoral Fellow in 2019</p>
@@ -3593,7 +3593,7 @@ export default function People() {
 
           {/* Aaron Goodman */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Aaron.jpg"
                 alt="Aaron Goodman"
@@ -3602,7 +3602,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Aaron Goodman</h4>
               <p className="text-sm text-gray-600 mb-1">California Academy of Sciences, USA</p>
               <p className="text-sm text-gray-500 mb-2">Master's Student from 2018 to 2019</p>
@@ -3614,7 +3614,7 @@ export default function People() {
 
           {/* Stephan Schaffrath */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Stephan_aslq3e.jpg"
                 alt="Stephan Schaffrath"
@@ -3623,7 +3623,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Stephan Schaffrath</h4>
               <p className="text-sm text-gray-600 mb-1">University of Cologne, Germany</p>
               <p className="text-sm text-gray-500 mb-2">PhD Student in 2014 and 2018</p>
@@ -3635,7 +3635,7 @@ export default function People() {
 
           {/* Carlos Alberto Martinez Muñoz */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/CarlosM.jpg"
                 alt="Carlos Alberto Martinez Muñoz"
@@ -3644,7 +3644,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Carlos Alberto Martinez Muñoz</h4>
               <p className="text-sm text-gray-600 mb-1">University of Turku, Finland</p>
               <p className="text-sm text-gray-500 mb-2">PhD Student from 2018 to 2019</p>
@@ -3656,7 +3656,7 @@ export default function People() {
 
           {/* Callum Mclean */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Callum.jpg"
                 alt="Callum Mclean"
@@ -3665,7 +3665,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Callum Mclean</h4>
               <p className="text-sm text-gray-600 mb-1">Manchester Metropolitan University, UK</p>
               <p className="text-sm text-gray-500 mb-2">PhD Student in 2018</p>
@@ -3677,7 +3677,7 @@ export default function People() {
 
           {/* Shlomo Cain */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Shlomo.jpg"
                 alt="Shlomo Cain"
@@ -3686,7 +3686,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Shlomo Cain</h4>
               <p className="text-sm text-gray-600 mb-1">University of Haifa, Oranim, Israel</p>
               <p className="text-sm text-gray-500 mb-2">MSc Student in 2018</p>
@@ -3698,7 +3698,7 @@ export default function People() {
 
           {/* Ivan Magalhaes */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Ivan.jpg"
                 alt="Ivan Magalhaes"
@@ -3707,7 +3707,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Ivan Magalhaes</h4>
               <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales Bernardino Rivadavia, Argentina | CONICET | Doctoral fellow, Division Aracnologia</p>
               <p className="text-sm text-gray-500 mb-2">PhD Student in 2017</p>
@@ -3719,7 +3719,7 @@ export default function People() {
 
           {/* Gerardo Contreras */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/GerardoContreras.jpg"
                 alt="Gerardo Contreras"
@@ -3728,7 +3728,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Gerardo Contreras</h4>
               <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
               <p className="text-sm text-gray-500 mb-2">Student from 2015 to 2017</p>
@@ -3740,7 +3740,7 @@ export default function People() {
 
           {/* Rodrigo Monjáraz Ruedas */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/RodrigoRuedas.jpg"
                 alt="Rodrigo Monjáraz Ruedas"
@@ -3749,7 +3749,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Rodrigo Monjáraz Ruedas</h4>
               <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2014 and from 2016 to 2017</p>
@@ -3761,7 +3761,7 @@ export default function People() {
 
           {/* Tebogo Ledwaba */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Tebogo.jpg"
                 alt="Tebogo Ledwaba"
@@ -3770,7 +3770,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Tebogo Ledwaba</h4>
               <p className="text-sm text-gray-600 mb-1">Ditsong National Museum of Natural History, Pretoria, South Africa</p>
               <p className="text-sm text-gray-500 mb-2">Student in 2017</p>
@@ -3782,7 +3782,7 @@ export default function People() {
 
           {/* Jesus Alberto Cruz-López */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Jesus-Alberto-Cruz-Lopez.jpg"
                 alt="Jesus Alberto Cruz-López"
@@ -3791,7 +3791,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Jesus Alberto Cruz-López</h4>
               <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
               <p className="text-sm text-gray-500 mb-2">Student in 2017</p>
@@ -3803,7 +3803,7 @@ export default function People() {
 
           {/* Ricardo Botero-Trujillo */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/ric.jpg"
                 alt="Ricardo Botero-Trujillo"
@@ -3812,7 +3812,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Ricardo Botero-Trujillo</h4>
               <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales Bernardino Rivadavia, Argentina | CONICET | Doctoral fellow, Division Aracnologia | Theodore Roosevelt Memorial Grant</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
@@ -3824,7 +3824,7 @@ export default function People() {
 
           {/* Dulce Flor Piedra */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Dulce.jpg"
                 alt="Dulce Flor Piedra"
@@ -3833,7 +3833,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Dulce Flor Piedra</h4>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
               <p className="text-gray-700">
@@ -3844,10 +3844,10 @@ export default function People() {
 
           {/* Rebecca Godwin */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PhotoPlaceholder name="Rebecca Godwin" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Rebecca Godwin</h4>
               <p className="text-sm text-gray-600 mb-1">Auburn University, AL</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
@@ -3859,7 +3859,7 @@ export default function People() {
 
           {/* Francisco Salgueiro Sepulveda */}
           <PeopleCard containerClassName="pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+            <PeopleCardMedia>
               <PeopleImage
                 src="/images/Francisco.jpg"
                 alt="Francisco Salgueiro Sepulveda"
@@ -3868,7 +3868,7 @@ export default function People() {
                 className="w-full h-auto rounded-sm"
               />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
               <h4 className="text-base font-bold mb-1 text-gray-900">Francisco Salgueiro Sepulveda</h4>
               <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
               <p className="text-sm text-gray-500 mb-2">PhD student in 2016</p>
@@ -3879,8 +3879,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Diego Barrales */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/diego.jpg"
                   alt="Diego Barrales"
@@ -3889,7 +3889,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Diego Barrales</h4>
                 <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
                 <p className="text-sm text-gray-500 mb-2">Student in 2016</p>
@@ -3900,8 +3900,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Samuel Mwangi */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/mwangi.jpg"
                   alt="Samuel Mwangi"
@@ -3910,7 +3910,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Samuel Mwangi</h4>
                 <p className="text-sm text-gray-600 mb-1">West Texas A&M University, Canyon, TX | National Museums of Kenya, Nairobi | Theodore Roosevelt Fellowship, Richard Lounsbery Foundation, Collections Study Grant</p>
                 <p className="text-sm text-gray-500 mb-2">MSc student in 2005 and 2016</p>
@@ -3921,8 +3921,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Bastian-Jesper Klußmann-Fricke */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/bastian.jpg"
                   alt="Bastian-Jesper Klußmann-Fricke"
@@ -3931,7 +3931,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Bastian-Jesper Klußmann-Fricke</h4>
                 <p className="text-sm text-gray-600 mb-1">University of Rostock, Germany | Annette-Kade Fellowship</p>
                 <p className="text-sm text-gray-500 mb-2">Student in 2015</p>
@@ -3942,8 +3942,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Gustavo Silva de Miranda */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Gustavo.jpg"
                   alt="Gustavo Silva de Miranda"
@@ -3952,7 +3952,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Gustavo Silva de Miranda</h4>
                 <p className="text-sm text-gray-600 mb-1">Natural History Museum of Denmark, University of Copenhagen</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2014 and 2015</p>
@@ -3963,11 +3963,11 @@ export default function People() {
           </PeopleCard>
 
           {/* Ingrid Catalina Romero Ortiz */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PhotoPlaceholder name="Ingrid Catalina Romero Ortiz" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Ingrid Catalina Romero Ortiz</h4>
                 <p className="text-sm text-gray-600 mb-1">Universidad Nacional de Colombia, Bogotá</p>
                 <p className="text-sm text-gray-500 mb-2">Graduate student in 2015</p>
@@ -3978,8 +3978,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Daniela Ramírez */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/DanielaRamirez.jpg"
                   alt="Daniela Ramírez"
@@ -3988,7 +3988,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Daniela Ramírez</h4>
                 <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2014</p>
@@ -3999,8 +3999,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Carlos Santibañez-López */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/carlos.jpg"
                   alt="Carlos Santibañez-López"
@@ -4009,7 +4009,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Carlos Santibañez-López</h4>
                 <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City | Collections Study Grant, Theodore Roosevelt Memorial Grant</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2009, from 2011 to 2012, and in 2014</p>
@@ -4020,11 +4020,11 @@ export default function People() {
           </PeopleCard>
 
           {/* Roberta Engel */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PhotoPlaceholder name="Roberta Engel" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Roberta Engel</h4>
                 <p className="text-sm text-gray-600 mb-1">University of Connecticut, Storrs, CT</p>
                 <p className="text-sm text-gray-500 mb-2">Student in 2012</p>
@@ -4035,11 +4035,11 @@ export default function People() {
           </PeopleCard>
 
           {/* David Vrech */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PhotoPlaceholder name="David Vrech" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">David Vrech</h4>
                 <p className="text-sm text-gray-600 mb-1">Universidad Nacional de Córdoba, Argentina</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2012</p>
@@ -4050,8 +4050,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Humberto Yoji Yamaguti */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/humberto.jpg"
                   alt="Humberto Yoji Yamaguti"
@@ -4060,7 +4060,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Humberto Yoji Yamaguti</h4>
                 <p className="text-sm text-gray-600 mb-1">Universidade de São Paulo, Brazil</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2009 and 2011</p>
@@ -4071,11 +4071,11 @@ export default function People() {
           </PeopleCard>
 
           {/* Patricia Carrera */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PhotoPlaceholder name="Patricia Carrera" />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Patricia Carrera</h4>
                 <p className="text-sm text-gray-600 mb-1">Universidad Nacional de Cordoba, Argentina | Collections Study Grant</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2009</p>
@@ -4086,8 +4086,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Jesus Alfonso Ballesteros Chavez */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/jesusb.jpg"
                   alt="Jesus Alfonso Ballesteros Chavez"
@@ -4096,7 +4096,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Jesus Alfonso Ballesteros Chavez</h4>
                 <p className="text-sm text-gray-600 mb-1">Instituto de Biología, Universidad Nacional Autonóma de México (IBUNAM), Mexico City | Collections Study Grant</p>
                 <p className="text-sm text-gray-500 mb-2">MSc student in 2008</p>
@@ -4107,8 +4107,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Fabio Akashi Hernandes */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Hernanades.jpg"
                   alt="Fabio Akashi Hernandes"
@@ -4117,7 +4117,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Fabio Akashi Hernandes</h4>
                 <p className="text-sm text-gray-600 mb-1">UNESP: São Paulo State University, Brazil</p>
                 <p className="text-sm text-gray-500 mb-2">MSc student in 2008 and 2016</p>
@@ -4128,8 +4128,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Andrés Ojanguren-Affilastro */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/ojanguren.jpg"
                   alt="Andrés Ojanguren-Affilastro"
@@ -4138,7 +4138,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Andrés Ojanguren-Affilastro</h4>
                 <p className="text-sm text-gray-600 mb-1">Museo Argentino de Ciencias Naturales, Buenos Aires, Argentina | AMNH Collections Study Grant</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2005 and 2007</p>
@@ -4149,8 +4149,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Alexander V. Gromov */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/gromov.jpg"
                   alt="Alexander V. Gromov"
@@ -4159,7 +4159,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Alexander V. Gromov</h4>
                 <p className="text-sm text-gray-600 mb-1">Institute of Zoology, Almaty, Kazakhstan | Collections Study Grant and NSF BS&I Grant</p>
                 <p className="text-sm text-gray-500 mb-2">Student in 2007</p>
@@ -4170,8 +4170,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Carsten Kamenz */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/carstenk.jpg"
                   alt="Carsten Kamenz"
@@ -4180,7 +4180,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Carsten Kamenz</h4>
                 <p className="text-sm text-gray-600 mb-1">Humboldt University, Berlin, Germany | Annette Kade Fellowship</p>
                 <p className="text-sm text-gray-500 mb-2">Student from 2005 to 2006</p>
@@ -4191,8 +4191,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Valerio Vignoli */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/vignoli.jpg"
                   alt="Valerio Vignoli"
@@ -4201,7 +4201,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Valerio Vignoli</h4>
                 <p className="text-sm text-gray-600 mb-1">University of Siena, Italy | Theodore Roosevelt Memorial Grant</p>
                 <p className="text-sm text-gray-500 mb-2">PhD student in 2004 and 2006</p>
@@ -4212,8 +4212,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Christian Wirkner */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/wirkner.jpg"
                   alt="Christian Wirkner"
@@ -4222,7 +4222,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Christian Wirkner</h4>
                 <p className="text-sm text-gray-600 mb-1">Friedrich-Schiller University, Jena, Germany | Annette Kade Fellowship</p>
                 <p className="text-sm text-gray-500 mb-2">Student in 2004</p>
@@ -4233,8 +4233,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Christina Bisulca */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/bisulca.jpg"
                   alt="Christina Bisulca"
@@ -4243,7 +4243,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Christina Bisulca</h4>
                 <p className="text-sm text-gray-600 mb-1">University of Delaware, Newark, DE | Winterthur Art Conservation Fellowship</p>
                 <p className="text-sm text-gray-500 mb-2">MSc student in 2003</p>
@@ -4254,8 +4254,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Amazonas Chagas, Jr. */}
-          <PeopleCard containerClassName="mb-6 pb-6 border-b border-gray-200">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/chagas.jpg"
                   alt="Amazonas Chagas, Jr."
@@ -4264,7 +4264,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Amazonas Chagas, Jr.</h4>
                 <p className="text-sm text-gray-600 mb-1">Museu Nacional, Universidade Federal do Rio de Janeiro, Brazil</p>
                 <p className="text-sm text-gray-500 mb-2">Postgraduate student in 2003</p>
@@ -4275,8 +4275,8 @@ export default function People() {
           </PeopleCard>
 
           {/* Lionel Monod */}
-          <PeopleCard containerClassName="mb-6 pb-6">
-            <PeopleCardMedia className="md:col-span-1">
+          <PeopleCard containerClassName="pb-6">
+            <PeopleCardMedia>
                 <PeopleImage
                   src="/images/lionel.jpg"
                   alt="Lionel Monod"
@@ -4285,7 +4285,7 @@ export default function People() {
                   className="w-full h-auto rounded-sm"
                 />
             </PeopleCardMedia>
-            <PeopleCardBody className="md:col-span-4">
+            <PeopleCardBody>
                 <h4 className="text-base font-bold mb-1 text-gray-900">Lionel Monod</h4>
                 <p className="text-sm text-gray-600 mb-1">University of Geneva, Switzerland</p>
                 <p className="text-sm text-gray-500 mb-2">Student in 2002</p>
