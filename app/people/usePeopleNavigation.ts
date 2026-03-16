@@ -14,7 +14,7 @@ export type TabSectionId =
   | "volunteers"
   | "visiting-students";
 
-type PeopleIndexItem = {
+export type PeopleIndexItem = {
   name: string;
   id: string;
   sectionId: string;
