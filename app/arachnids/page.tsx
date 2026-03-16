@@ -5,7 +5,7 @@ import { useMemo } from "react";
 
 const images = [
   "arachnids/00050.jpg", "arachnids/00101.jpg", "arachnids/00240.jpg", "arachnids/00474.jpg", "arachnids/07915.jpg",
-  "field/cricket1.jpg", "field/cricket2.jpg", "field/cricket3.jpg", "field/cricket4.jpg",
+  "arachnids/cricket1.jpg", "arachnids/cricket2.jpg", "arachnids/cricket3.jpg", "arachnids/cricket4.jpg",
   "arachnids/DSC_0001.jpg", "arachnids/DSC_0002.jpg", "arachnids/DSC_0003.jpg", "arachnids/DSC_0005.jpg",
   "arachnids/DSC_0006.jpg", "arachnids/DSC_0008.jpg", "arachnids/DSC_0009.jpg", "arachnids/DSC_0010.jpg",
   "arachnids/DSC_0011.jpg", "arachnids/DSC_0012.jpg", "arachnids/DSC_0013.jpg", "arachnids/DSC_0014.jpg",
@@ -67,7 +67,7 @@ export default function Arachnids() {
             <div className="flex flex-wrap gap-4 mb-8 items-start max-w-full">
               <div className="w-fit">
                 <Image
-                  src="/images/arachnids/fossil1.jpg"
+                  src="/images/research/fossil1.jpg"
                   alt="Fossil scorpion"
                   width={247}
                   height={163}
@@ -76,7 +76,7 @@ export default function Arachnids() {
               </div>
               <div className="w-fit">
                 <Image
-                  src="/images/arachnids/fossil2.jpg"
+                  src="/images/research/fossil2.jpg"
                   alt="Fossil scorpion"
                   width={247}
                   height={163}
@@ -94,7 +94,7 @@ export default function Arachnids() {
             <div className="flex flex-wrap gap-4 mb-8 items-start max-w-full">
               <div className="w-fit">
                 <Image
-                  src="/images/arachnids/venom.gif"
+                  src="/images/research/venom.gif"
                   alt="Venom drop coming out of the aculeus"
                   width={478}
                   height={317}
@@ -103,7 +103,7 @@ export default function Arachnids() {
               </div>
               <div className="w-fit">
                 <Image
-                  src="/images/arachnids/redtelson.jpg"
+                  src="/images/research/redtelson.jpg"
                   alt="Red telson"
                   width={434}
                   height={223}
@@ -183,7 +183,7 @@ export default function Arachnids() {
             <div className="grid grid-cols-2 gap-4 mb-8 w-full items-start sm:inline-grid sm:w-auto sm:justify-start">
               <figure className="w-full inline-flex flex-col items-start">
                 <Image
-                  src="/images/arachnids/spermatophore.jpg"
+                  src="/images/research/spermatophore.jpg"
                   alt="Scorpion spermatophore"
                   width={250}
                   height={250}
@@ -196,7 +196,7 @@ export default function Arachnids() {
               </figure>
               <figure className="w-full inline-flex flex-col items-start">
                 <Image
-                  src="/images/arachnids/capsule.jpg"
+                  src="/images/research/capsule.jpg"
                   alt="Scorpion capsule"
                   width={188}
                   height={250}
