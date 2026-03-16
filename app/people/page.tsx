@@ -8,8 +8,6 @@ import { PeopleSearch } from "./PeopleSearch";
 import { peopleSections } from "./sections";
 import { usePeopleNavigation } from "./usePeopleNavigation";
 
-const Image = PeopleImage;
-
 export default function People() {
   const {
     activeSection,
@@ -116,7 +114,7 @@ export default function People() {
             <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2025</h2>
             <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
             <figure className="mb-8">
-              <Image
+              <PeopleImage
                 src="/images/2025-Group-photp-back-Nick-William-Jose-Jairo-Drusilla-Lorenzo-Pio-front-Javier-Colby.jpg"
                 alt="2025 Group photo with Nick Cazzaniga, William Phillips, José Barba-Montoya, Jairo Moreno-González, Drusilla Sheridan, Lorenzo Prendini, Pío Colmenares, Javier Blasco Aróstegui, and Colby Sain"
                 width={1200}
@@ -134,7 +132,7 @@ export default function People() {
             <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2024</h2>
             <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
             <figure className="mb-8">
-              <Image
+              <PeopleImage
                 src="/images/2024-lunch-Pio-Ricardo-Lorenzo-Colby-Jairo.JPG"
                 alt="2024 lunch with Pío Colmenares, Ricardo Botero-Trujillo, Lorenzo Prendini, Colby Sain, and Jairo Moreno-González"
                 width={1200}
@@ -152,7 +150,7 @@ export default function People() {
             <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2023</h2>
             <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
             <figure className="mb-8">
-              <Image
+              <PeopleImage
                 src="/images/2023-dinner-Left-front-to-back-Pio-Isadora-Stephanie-Lorenzo-Valentin-right-front-to-back-Victoria-Jairo-Javier-Taylor-Colby.JPG"
                 alt="2023 dinner with Pío Colmenares, Isadora Colmenares, Stephanie Loria, Lorenzo Prendini, Valentin Ehrenthal, Victoria Long, Jairo Moreno-González, Javier Blasco Aróstegui, Taylor, and Colby Sain"
                 width={1200}
@@ -170,7 +168,7 @@ export default function People() {
             <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2023</h2>
             <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
             <figure className="mb-8">
-              <Image
+              <PeopleImage
                 src="/images/2023-Kimberly-Russell-and-students-from-Rutgers-University.HEIC"
                 alt="2023 Kimberly Russell and students from Rutgers University"
                 width={1200}
@@ -188,7 +186,7 @@ export default function People() {
             <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2022</h2>
             <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
             <figure className="mb-8">
-              <Image
+              <PeopleImage
                 src="/images/2022-Lab-end-of-day-Javier-Marcel-Colby-Jairo-Sahibzada-Pio.JPG"
                 alt="2022 end of day in the lab with Javier Blasco Aróstegui, Marcel, Colby Sain, Jairo Moreno-González, Sahibzada M. Jawad, and Pío Colmenares"
                 width={1200}
@@ -206,7 +204,7 @@ export default function People() {
             <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2021</h2>
             <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
             <figure className="mb-8">
-              <Image
+              <PeopleImage
                 src="/images/2021-lunch-Ricardo-Lorenzo-Lou-Pio.HEIC"
                 alt="2021 lunch with Ricardo Botero-Trujillo, Lorenzo Prendini, Lou Sorkin, and Pío Colmenares"
                 width={1200}
@@ -222,7 +220,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Fall 2019</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/labfall2019_p08qpk.jpg"
               alt="Fall 2019 Arachnology Lab at AMNH. Left to Right: George Tsinias, Jairo Moreno-González, Lorenzo Prendini, Stephanie Loria, Valentin Ehrenthal, Eleanor Goetz, Pío Colmenares, Miryam Trujillo, Ricardo Botero-Trujillo."
               width={1200}
@@ -240,7 +238,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2019</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/summer2019.jpg"
               alt="July 2019 Arachnology Lab at AMNH. Left to Right: Elena Babicz, Andria Santos da Silva, Stephanie Loria, Pío Colmenares, Colby Sain, Lorenzo Prendini, Jairo Moreno-González, Ricardo Botero-Trujillo."
               width={1200}
@@ -259,7 +257,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2018</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/Prendini_Lab_Summer2018.jpg"
               alt="August 2018 Arachnology Lab at AMNH. Left to Right: Stephanie Loria, Max Roppo, Lorenzo Prendini, Diogo Casellato, Lou Sorkin, Pío Colmenares, Deborah Chin, Victoria Long, Jayson Slovak."
               width={1200}
@@ -278,7 +276,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Fall 2017</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/PrendiniLabSeptember2017.jpg"
               alt="September 2017 Arachnology Lab at AMNH. Left to Right: Pío Colmenares, Ivan Magalhães, Lorenzo Prendini, Tebogo Lebwada, Lou Sorkin, Gerardo Contreras, Rodrigo Monjáraz Ruedas."
               width={1200}
@@ -297,7 +295,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2017</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/PrendiniLabAugust2017.jpg"
               alt="August 2017 Arachnology Lab at AMNH. Left to Right: Stephanie Loria, Lorenzo Prendini, Pío Colmenares, Jayson Slovak, Deborah Chin."
               width={1200}
@@ -315,7 +313,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2015</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/PrendiniLabAugust2015.jpg"
               alt="August 2015 Arachnology Lab at AMNH. Left to Right: Lorenzo Prendini, Gustavo Miranda, Debbie Alwill, Diogo Casellato (back), Stephanie Loria, Bastian-Jesper Klüßmann-Fricke (back), Michelle Locke, Chelsea Silva, Billy Conlan."
               width={1200}
@@ -334,7 +332,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Winter 2015</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/PrendiniLabJan2015.jpg"
               alt="January 2015 Arachnology Lab at AMNH. Left to Right: Michelle Locke, Lorenzo Prendini, Stephanie Loria."
               width={1200}
@@ -352,7 +350,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2013</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/scorpiongroups2013.jpg"
               alt="August 2013 Arachnology Lab at AMNH. Left to Right: Pam Horsely, Stephanie Loria, Lorenzo Prendini, Massimiliano Roppo, Muhammad Tahir."
               width={1200}
@@ -370,7 +368,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2011</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/scorpiongroups.jpg"
               alt="August 2011 Arachnology Lab at AMNH. Left to Right: Stephanie Loria, Adam Getzler, Ofelia Delgado, Edmundo González, Carlos Santibañez, Lorenzo Prendini, Randy Mercurio."
               width={1200}
@@ -389,7 +387,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2006</h2>
           <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/scorpiongroup.jpg"
               alt="2006 Arachnology Lab at AMNH Left to Right: (Back Row) Jeremy Huff, Erich Volschenk, Lionel Monod, Edmundo González, (Front Row) Randy Mercurio, Camilo Mattoni, Lauren A. Esposito, Monica Mosier, Ofelia Delgado, Valerio Vignoli, Lorenzo Prendini."
               width={1200}
@@ -409,7 +407,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Fall 2007</h2>
           <h6 className="text-lg text-gray-600 mb-6">Scorpion Biologists ICA</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/ica.jpg"
               alt="2007 Scorpion Biologists ICA Left to Right: (Back Row) Carsten Kamenz, Mingsheng Zhu, Edmundo González, Roger Farley, Erich Volschenk, Lauren A. Esposito, Camilo Mattoni, (Front Row) Jason Dunlop, Jeremy Huff, Warren Savary, Ricardo Pinto-da-Rocha, Oscar Francke, Lorenzo Prendini."
               width={1200}
@@ -429,7 +427,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2007</h2>
           <h6 className="text-lg text-gray-600 mb-6">BSI Solifugae Meeting at DMNS</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/Solifugae_2007.jpg"
               alt="October 2007 BSI Solifugae Meeting at DMNS. Left to Right: Kristie Reddick (TAMU), Bob Wharton (TAMU), Warren Savary (CAS), Aaron Spriggs (DMNS), Tharina Bird (NMNW/CSU), Paula Cushing (DMNS), Lorenzo Prendini (AMNH), Sasha Gromov (IZAK), Jack Brookhart (DMNS)."
               width={1200}
@@ -449,7 +447,7 @@ export default function People() {
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Winter 2008</h2>
           <h6 className="text-lg text-gray-600 mb-6">AToL Morphology Scoring Party at Smithsonian USNM</h6>
           <figure className="mb-8">
-            <Image
+            <PeopleImage
               src="/images/Atol_2008.jpg"
               alt="December 2008 AToL Morphology Scoring Party at Smithsonian USNM. Left to Right: Petra Sierwald (FMNH), Jonathan Coddington (USNM), Lorenzo Prendini (AMNH), Gustavo Hormiga (GWU), Charles Griswold (CAS)."
               width={1200}
@@ -473,7 +471,7 @@ export default function People() {
           <div className="pb-8">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/prendini.jpg"
                   alt="Lorenzo Prendini"
                   width={500}
@@ -659,7 +657,7 @@ export default function People() {
           <div className="mb-8 pb-8">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Pio.jpg"
                   alt="Pío A. Colmenares"
                   width={400}
@@ -706,7 +704,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/MichelleLockeField.jpg"
                   alt="Michelle Locke"
                   width={400}
@@ -729,7 +727,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Pam.jpg"
                   alt="Pamela Horsley"
                   width={400}
@@ -752,7 +750,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/ofelialab.jpg"
                   alt="Ofelia Delgado"
                   width={400}
@@ -775,7 +773,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/huff2.jpg"
                   alt="Jeremy Huff"
                   width={400}
@@ -798,7 +796,7 @@ export default function People() {
           <div className="pb-6">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/mercurio3.jpg"
                   alt="Randy Mercurio"
                   width={400}
@@ -832,7 +830,7 @@ export default function People() {
           <div className="mb-12 pb-12 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/thurston.jpg"
                   alt="Steve Thurston"
                   width={400}
@@ -854,7 +852,7 @@ export default function People() {
           <div className="mb-12 pb-8">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/victoria.jpg"
                   alt="Victoria Long"
                   width={400}
@@ -886,7 +884,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Eleanor1_blmjit.jpg"
                   alt="Eleanor Goetz"
                   width={400}
@@ -924,7 +922,7 @@ export default function People() {
               <div key={index} className={`pb-6 ${index < list.length - 1 ? 'border-b border-gray-200' : ''}`}>
                 <div className="grid md:grid-cols-5 gap-6">
                   <div className="md:col-span-2">
-                    <Image
+                    <PeopleImage
                       src={`/images/${person.image}`}
                       alt={person.name}
                       width={400}
@@ -966,7 +964,7 @@ export default function People() {
           <div className="mb-12 pb-12 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/people/Boris-Zakharov.jpg"
                   alt="Boris Zakharov"
                   width={400}
@@ -995,7 +993,7 @@ export default function People() {
           <div className="mb-12 pb-12 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/people/Vladimir-Ovtsharenko.jpg"
                   alt="Vladimir Ovtsharenko"
                   width={400}
@@ -1024,7 +1022,7 @@ export default function People() {
           <div className="pb-6">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/people/Louis-Sorkin.jpg"
                   alt="Louis Sorkin"
                   width={400}
@@ -1063,7 +1061,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Tahir.jpg"
                   alt="Muhammad Tahir"
                   width={400}
@@ -1085,7 +1083,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Jose-Barba-Montoya.jpg"
                   alt="Jose Barba-Montoya"
                   width={400}
@@ -1107,7 +1105,7 @@ export default function People() {
           <div className="mb-8 pb-8">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Jairo.jpg"
                   alt="Jairo A. Moreno-González"
                   width={400}
@@ -1138,7 +1136,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Ricardo.jpg"
                   alt="Ricardo Botero-Trujillo"
                   width={400}
@@ -1164,7 +1162,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Frederic_jkwxyd.jpg"
                   alt="Frederic Schramm"
                   width={400}
@@ -1190,7 +1188,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Stephanie-F-Loria.jpg"
                   alt="Stephanie F. Loria"
                   width={400}
@@ -1216,7 +1214,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/carstenk.jpg"
                   alt="Carsten Kamenz"
                   width={400}
@@ -1239,7 +1237,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/jose.jpg"
                   alt="José Antonio Ochoa"
                   width={400}
@@ -1262,7 +1260,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/dana.jpg"
                   alt="Dana Price"
                   width={400}
@@ -1285,7 +1283,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/camilo.jpg"
                   alt="Camilo I. Mattoni"
                   width={400}
@@ -1308,7 +1306,7 @@ export default function People() {
           <div className="pb-6">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/erich.jpg"
                   alt="Erich S. Volschenk"
                   width={400}
@@ -1452,7 +1450,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/jayson.jpg"
                   alt="Jayson Slovak"
                   width={400}
@@ -1475,7 +1473,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Stephanie-F-Loria.jpg"
                   alt="Stephanie F. Loria"
                   width={400}
@@ -1498,7 +1496,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/tharina.jpg"
                   alt="Tharina Bird"
                   width={400}
@@ -1521,7 +1519,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/lionel.jpg"
                   alt="Lionel Monod"
                   width={400}
@@ -1544,7 +1542,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/edmundo.jpg"
                   alt="Edmundo González Santillan"
                   width={400}
@@ -1567,7 +1565,7 @@ export default function People() {
           <div className="mb-8 pb-8">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/people/Lauren-A-Esposito.jpg"
                   alt="Lauren A. Esposito"
                   width={400}
@@ -1628,7 +1626,7 @@ export default function People() {
                 <div className="grid md:grid-cols-5 gap-6">
                   <div className="md:col-span-2">
                     {person.image ? (
-                      <Image
+                      <PeopleImage
                         src={`/images/${person.image}`}
                         alt={person.name}
                         width={400}
@@ -1706,7 +1704,7 @@ export default function People() {
                 <div className="grid md:grid-cols-5 gap-6">
                   <div className="md:col-span-2">
                     {person.image ? (
-                      <Image
+                      <PeopleImage
                         src={`/images/${person.image}`}
                         alt={person.name}
                         width={400}
@@ -1928,7 +1926,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/HPaul_mnmt2g.jpg"
                   alt="Hritwik Paul"
                   width={400}
@@ -1966,7 +1964,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Cherie.jpg"
                   alt="Cherie Qu"
                   width={400}
@@ -1988,7 +1986,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Azmi.jpg"
                   alt="Azmi Anamika"
                   width={400}
@@ -2090,7 +2088,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Geeta.jpg"
                   alt="Geeta Sharma"
                   width={400}
@@ -2112,7 +2110,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Sophia.jpg"
                   alt="Sophia Castro"
                   width={400}
@@ -2134,7 +2132,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Tamar.jpg"
                   alt="Tamar Cohen"
                   width={400}
@@ -2156,7 +2154,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/ChelseaSilva2015.jpg"
                   alt="Chelsea Silva"
                   width={400}
@@ -2178,7 +2176,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/BillyConlan2015.jpg"
                   alt="Billy Conlan"
                   width={400}
@@ -2200,7 +2198,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Sasha-Reiter--and--Eleanor-Goetz.jpg"
                   alt="Sasha Reiter and Eleanor Goetz"
                   width={400}
@@ -2223,7 +2221,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Sasha-Reiter--and--Eleanor-Goetz.jpg"
                   alt="Sasha Reiter and Eleanor Goetz"
                   width={400}
@@ -2246,7 +2244,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/adam.jpg"
                   alt="Adam Getzler"
                   width={400}
@@ -2284,7 +2282,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Jianhua-Lin--and--Qiao-Rong-Huang.jpg"
                   alt="Jianhua Lin and Qiao Rong Huang"
                   width={400}
@@ -2307,7 +2305,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/Jianhua-Lin--and--Qiao-Rong-Huang.jpg"
                   alt="Jianhua Lin and Qiao Rong Huang"
                   width={400}
@@ -2330,7 +2328,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/melanie.jpg"
                   alt="Melanie Ng"
                   width={400}
@@ -2352,7 +2350,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/cai.jpg"
                   alt="Connie Cai"
                   width={400}
@@ -2374,7 +2372,7 @@ export default function People() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/berny.jpg"
                   alt="Bernard Laszczower"
                   width={400}
@@ -2396,7 +2394,7 @@ export default function People() {
           <div className="mb-8 pb-8">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/tumi.jpg"
                   alt="Boitumelo 'Tumi' McCallum"
                   width={400}
@@ -2465,7 +2463,7 @@ export default function People() {
           <div className="mb-6 pb-6">
             <div className="grid md:grid-cols-5 gap-6">
               <div className="md:col-span-2">
-                <Image
+                <PeopleImage
                   src="/images/victoria.jpg"
                   alt="Victoria Long"
                   width={300}
@@ -2491,7 +2489,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/George.jpg"
                   alt="George Tsinias"
                   width={300}
@@ -2513,7 +2511,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Christian.jpg"
                   alt="Christian Liriano"
                   width={300}
@@ -2535,7 +2533,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Gerbi.jpg"
                   alt="Gerbi Carreon"
                   width={300}
@@ -2557,7 +2555,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/debbie.jpg"
                   alt="Debbie Alwill"
                   width={300}
@@ -2579,7 +2577,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Jasmin.jpg"
                   alt="Jasmine Alim"
                   width={300}
@@ -2617,7 +2615,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/ReginaldChristiaan.jpg"
                   alt="Reginald Christiaan"
                   width={300}
@@ -2655,7 +2653,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/fiedler.jpg"
                   alt="Howard W. Fiedler"
                   width={300}
@@ -2677,7 +2675,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Stefan.Foord.jpg"
                   alt="Stefan Foord"
                   width={300}
@@ -2731,7 +2729,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Tom-Sullivan.jpg"
                   alt="Tom Sullivan"
                   width={300}
@@ -2753,7 +2751,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Gildenhuys.Patrick.jpg"
                   alt="Patrick Gildenhuys"
                   width={300}
@@ -2775,7 +2773,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Charles.Haddad.jpg"
                   alt="Charles Haddad"
                   width={300}
@@ -2813,7 +2811,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Huber.jpg"
                   alt="Siegfried Huber"
                   width={300}
@@ -2835,7 +2833,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/huff2.jpg"
                   alt="Jeremy Huff"
                   width={300}
@@ -2873,7 +2871,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/simone.jpg"
                   alt="Simone Longe"
                   width={300}
@@ -2911,7 +2909,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/warren.jpg"
                   alt="Warren Savary"
                   width={300}
@@ -2933,7 +2931,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/west.jpg"
                   alt="Rick West"
                   width={300}
@@ -3006,7 +3004,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/ofelialab.jpg"
                   alt="Ofelia Delgado"
                   width={300}
@@ -3028,7 +3026,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/desouer.jpg"
                   alt="David Desoeur"
                   width={300}
@@ -3066,7 +3064,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Engelbrecht.jpg"
                   alt="Ian Engelbrecht"
                   width={300}
@@ -3120,7 +3118,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/ilsa.jpg"
                   alt="Ilsa Kaim"
                   width={300}
@@ -3142,7 +3140,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/sergios.jpg"
                   alt="Sergios-Orestis Kolokotronis"
                   width={300}
@@ -3164,7 +3162,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/sulata.jpg"
                   alt="Sulata Maity"
                   width={300}
@@ -3186,7 +3184,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/kari.jpg"
                   alt="Kari McWest"
                   width={300}
@@ -3211,7 +3209,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/mercurio3.jpg"
                   alt="Randy Mercurio"
                   width={300}
@@ -3313,7 +3311,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/zach.jpg"
                   alt="Zach Valois"
                   width={300}
@@ -3335,7 +3333,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Visser.jpg"
                   alt="John Visser"
                   width={300}
@@ -3748,7 +3746,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Jairo.jpg"
                   alt="Jairo A. Moreno-González"
                   width={300}
@@ -3771,7 +3769,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Andria.jpg"
                   alt="Andria de Paula Santos da Silva"
                   width={300}
@@ -3794,7 +3792,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Catalina.jpg"
                   alt="Catalina Romero"
                   width={300}
@@ -3817,7 +3815,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Miguel.jpg"
                   alt="Miguel Medrano"
                   width={300}
@@ -3840,7 +3838,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/ReneBarba.jpg"
                   alt="Rene Barba"
                   width={300}
@@ -3863,7 +3861,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Jahnavi.jpg"
                   alt="Jahnavi Joshi"
                   width={300}
@@ -3886,7 +3884,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Aaron.jpg"
                   alt="Aaron Goodman"
                   width={300}
@@ -3909,7 +3907,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Stephan_aslq3e.jpg"
                   alt="Stephan Schaffrath"
                   width={300}
@@ -3932,7 +3930,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/CarlosM.jpg"
                   alt="Carlos Alberto Martinez Muñoz"
                   width={300}
@@ -3955,7 +3953,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Callum.jpg"
                   alt="Callum Mclean"
                   width={300}
@@ -3978,7 +3976,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Shlomo.jpg"
                   alt="Shlomo Cain"
                   width={300}
@@ -4001,7 +3999,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Ivan.jpg"
                   alt="Ivan Magalhaes"
                   width={300}
@@ -4024,7 +4022,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/GerardoContreras.jpg"
                   alt="Gerardo Contreras"
                   width={300}
@@ -4047,7 +4045,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/RodrigoRuedas.jpg"
                   alt="Rodrigo Monjáraz Ruedas"
                   width={300}
@@ -4070,7 +4068,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Tebogo.jpg"
                   alt="Tebogo Ledwaba"
                   width={300}
@@ -4093,7 +4091,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Jesus-Alberto-Cruz-Lopez.jpg"
                   alt="Jesus Alberto Cruz-López"
                   width={300}
@@ -4116,7 +4114,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/ric.jpg"
                   alt="Ricardo Botero-Trujillo"
                   width={300}
@@ -4139,7 +4137,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Dulce.jpg"
                   alt="Dulce Flor Piedra"
                   width={300}
@@ -4178,7 +4176,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Francisco.jpg"
                   alt="Francisco Salgueiro Sepulveda"
                   width={300}
@@ -4201,7 +4199,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/diego.jpg"
                   alt="Diego Barrales"
                   width={300}
@@ -4224,7 +4222,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/mwangi.jpg"
                   alt="Samuel Mwangi"
                   width={300}
@@ -4247,7 +4245,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/bastian.jpg"
                   alt="Bastian-Jesper Klußmann-Fricke"
                   width={300}
@@ -4270,7 +4268,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Gustavo.jpg"
                   alt="Gustavo Silva de Miranda"
                   width={300}
@@ -4310,7 +4308,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/DanielaRamirez.jpg"
                   alt="Daniela Ramírez"
                   width={300}
@@ -4333,7 +4331,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/carlos.jpg"
                   alt="Carlos Santibañez-López"
                   width={300}
@@ -4390,7 +4388,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/humberto.jpg"
                   alt="Humberto Yoji Yamaguti"
                   width={300}
@@ -4430,7 +4428,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/jesusb.jpg"
                   alt="Jesus Alfonso Ballesteros Chavez"
                   width={300}
@@ -4453,7 +4451,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/Hernanades.jpg"
                   alt="Fabio Akashi Hernandes"
                   width={300}
@@ -4476,7 +4474,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/ojanguren.jpg"
                   alt="Andrés Ojanguren-Affilastro"
                   width={300}
@@ -4499,7 +4497,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/gromov.jpg"
                   alt="Alexander V. Gromov"
                   width={300}
@@ -4522,7 +4520,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/carstenk.jpg"
                   alt="Carsten Kamenz"
                   width={300}
@@ -4545,7 +4543,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/vignoli.jpg"
                   alt="Valerio Vignoli"
                   width={300}
@@ -4568,7 +4566,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/wirkner.jpg"
                   alt="Christian Wirkner"
                   width={300}
@@ -4591,7 +4589,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/bisulca.jpg"
                   alt="Christina Bisulca"
                   width={300}
@@ -4614,7 +4612,7 @@ export default function People() {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/chagas.jpg"
                   alt="Amazonas Chagas, Jr."
                   width={300}
@@ -4637,7 +4635,7 @@ export default function People() {
           <div className="mb-6 pb-6">
             <div className="grid md:grid-cols-5 gap-4">
               <div className="md:col-span-1">
-                <Image
+                <PeopleImage
                   src="/images/lionel.jpg"
                   alt="Lionel Monod"
                   width={300}
