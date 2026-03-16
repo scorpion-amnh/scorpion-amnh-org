@@ -47,14 +47,14 @@ export default function Facilities() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <Image
-            src="/images/arachnids/carapace.jpg"
+            src="/images/research/carapace.jpg"
             alt="Scorpion carapace"
             width={400}
             height={400}
             className="w-full h-auto rounded-lg"
           />
           <Image
-            src="/images/arachnids/chela.jpg"
+            src="/images/research/chela.jpg"
             alt="Scorpion chela"
             width={400}
             height={400}
@@ -67,7 +67,7 @@ export default function Facilities() {
           The <a href="https://www.amnh.org/research/institute-comparative-genomics/molecular-labs" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Molecular Systematics Laboratory</a> contains equipment for high throughput Sanger DNA sequencing, including an Applied Biosystems Inc. Prism™ 3730xl automated DNA sequencer, a Biomek NX sequencing robot for automated PCR and sequence purification and several Eppendorf Mastercyclers. Facilities for next generation sequencing are available in the <a href="https://www.amnh.org/our-research/sackler-institute-for-comparative-genomics" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Sackler Institute for Comparative Genomics</a> and our partner institution <a href="http://www.nygenome.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">The New York Genome Center.</a>
         </p>
         <Image
-          src="/images/people/ofelialab.jpg"
+          src="/images/people/Ofelia-Delgado.jpg"
           alt="Ofelia Delgado working in the molecular lab"
           width={600}
           height={400}
@@ -79,7 +79,7 @@ export default function Facilities() {
           Lorenzo Prendini's Arachnology Lab has access to the parallel virtual supercomputer clusters, the Invertebrate Zoology Histological Laboratory, the GIS Laboratory of the Center for Biodiversity and Conservation, the Microscopy and Imaging Facility, and the AMNH Library. Other services and facilities of the AMNH are also available.
         </p>
         <Image
-          src="/images/arachnids/chelicerae.jpg"
+          src="/images/research/chelicerae.jpg"
           alt="Scorpion chelicerae"
           width={600}
           height={400}
@@ -103,7 +103,7 @@ export default function Facilities() {
           The Histological Laboratory of the Division of Invertebrate Zoology is fully equipped for anatomical work. It includes automated embedding facilities, paraffin and plastic serial thick and semi-thin sectioning equipment (including microtome, glass knife maker, etc.) as well as standard laboratory equipment. If required for the analysis of histological slides, 3-D reconstruction software and digitizing hardware are available.
         </p>
         <Image
-          src="/images/arachnids/circulatory.gif"
+          src="/images/research/circulatory.gif"
           alt="Scorpion circulatory system"
           width={600}
           height={400}
@@ -115,7 +115,7 @@ export default function Facilities() {
           The staff of the Division of Invertebrate Zoology includes <a href="/people/staff" className="text-blue-600 hover:text-blue-800 underline">Steve Thurston,</a> a scientific illustrator, proficient in graphical software techniques as well as traditional scientific illustration.
         </p>
         <Image
-          src="/images/arachnids/drawing.jpg"
+          src="/images/research/drawing.jpg"
           alt="Illustration of Amblypygi by Steve Thurston"
           width={600}
           height={400}
@@ -139,7 +139,7 @@ export default function Facilities() {
           The AMNH <a href="https://www.amnh.org/research/microscopy-and-imaging-facility" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Microscopy and Imaging Facility</a> has a state-of-the-art Hitachi Scanning Electron Microscope and a Zeiss Variable Pressure SEM, including all peripherals (e.g. critical point dryer, sputter coater and darkroom). The SEMs are equipped for standard photography, as well as electronic image capture and handling. The facility is also equipped with a GE PHOENIX CT Scanner and a Zeiss ConFocal Laser Scanning Microscope for 3-D reconstruction. X-ray microanalysis (EDS) and cathodoluminescence techniques are also available. Two AMNH staff members are devoted exclusively to upkeep of the facility, technical assistance and training of users.
         </p>
         <Image
-          src="/images/arachnids/heart.gif"
+          src="/images/research/heart.gif"
           alt="Scorpion heart"
           width={600}
           height={400}
