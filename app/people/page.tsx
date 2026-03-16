@@ -944,9 +944,8 @@ export default function People() {
           <div data-tab="current" className={researchAffiliatesTab === 'current' ? 'block' : 'hidden'}>
 
           {/* Boris Zakharov */}
-          <div className="mb-12 pb-12 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-12 pb-12 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/people/Boris-Zakharov.jpg"
                   alt="Boris Zakharov"
@@ -954,8 +953,8 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-xl font-bold mb-1 text-gray-900">Boris Zakharov</h3>
                 <p className="text-lg text-gray-600 mb-4">Research Associate, La Guardia Community College</p>
                 <p className="text-gray-700 mb-6">
@@ -968,14 +967,12 @@ export default function People() {
                     <p>Phone: (212) 769-5609</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Vladimir Ovtsharenko */}
-          <div className="mb-12 pb-12 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-12 pb-12 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/people/Vladimir-Ovtsharenko.jpg"
                   alt="Vladimir Ovtsharenko"
@@ -983,8 +980,8 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-xl font-bold mb-1 text-gray-900">Vladimir Ovtsharenko</h3>
                 <p className="text-lg text-gray-600 mb-4">Research Associate, Hostos Community College</p>
                 <p className="text-gray-700 mb-6">
@@ -997,14 +994,12 @@ export default function People() {
                     <p>Phone: (212) 769-5618</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Louis Sorkin */}
-          <div className="pb-6">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="pb-6">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/people/Louis-Sorkin.jpg"
                   alt="Louis Sorkin"
@@ -1012,16 +1007,15 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-xl font-bold mb-1 text-gray-900">Louis Sorkin</h3>
                 <p className="text-lg text-gray-600 mb-4">Visiting Scientist, New York Entomological Society</p>
                 <p className="text-gray-700">
                   Lou began his career in arachnid studies during his graduate work at the University of Connecticut where he researched arthropod parasites of spiders. In 1978, Lou began work on spiders and other arachnids under Dr. Norman Platnick, in what was then the Department of Entomology at the AMNH. Over the years he sorted through many spider collections and labeled thousands of vials and worked with many arachnologists, some visiting and examining the museum's collection and sometimes at other institutions during his visits or on excursions from arachnology meetings. He deals with many public inquiries regarding insects and other arthropods. He has interests in entomophagy and forensic entomology (the latter includes stored products, urban, and medico-legal studies). Some of the cases and investigations have been aired online, on television and radio and in the print media. At present, some of his studies include investigations of the common bed bug, <em>Cimex lectularius</em> (Hemiptera: Cimicidae) due to the relatively recent increase in infestations of many homes, business, hotels, by this insect and for which he receives inquiries on their natural history and biology and management. He keeps a few bed bug colonies for study and for educational purposes. After 43 years of dedicated service, Lou retired from his position as Museum Specialist for the Spider Collection in early 2020. He will remain associated with the AMNH Invertebrate Zoology Division to continue with his outreach activities and the organization of the New York Entomological Society.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
           </div>
 
           <div data-tab="alumni" className={researchAffiliatesTab === 'alumni' ? 'block' : 'hidden'}>
@@ -1041,9 +1035,8 @@ export default function People() {
           <div data-tab="current" className={postdocsTab === 'current' ? 'block' : 'hidden'}>
           
           {/* Muhammad Tahir */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Tahir.jpg"
                   alt="Muhammad Tahir"
@@ -1051,21 +1044,19 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-lg font-bold mb-1 text-gray-900">H. Muhammad Tahir</h3>
                 <p className="text-base text-gray-600 mb-3">Postdoc in 2026 - Postdoctoral research on the systematics and evolution of Pakistani scorpions supported by a Fulbright Postdoctoral Fellowship</p>
                 <p className="text-gray-700">
                   Tahir earned his PhD from the University of the Punjab, Lahore, with a dissertation entitled “Biodiversity and Predatory Efficacy of Spiders Inhabiting the Rice Fields of Central Punjab, Pakistan.” In addition to his work on <em>Araneae</em>, he has conducted extensive research on the scorpions of Pakistan in collaboration with Dr. Lorenzo Prendini. In May 2013, he first joined the American Museum of Natural History (AMNH) as a postdoctoral fellow under the Higher Education Commission (HEC) of Pakistan Postdoctoral Fellowship Program, where his research focused on the molecular systematics of scorpions, particularly within the family <em>Buthidae</em>. In January 2026, he rejoined the AMNH as a Fulbright Postdoctoral Fellow. His current research involves the molecular systematics and development of a comprehensive DNA barcode database for medically and commercially significant scorpion species of Pakistan, including those from the Kashmir region. Alongside his research at the AMNH, he serves as Professor of Zoology at Government College University, Lahore.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Jose Barba-Montoya */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Jose-Barba-Montoya.jpg"
                   alt="Jose Barba-Montoya"
@@ -1073,21 +1064,19 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Jose Barba-Montoya</h3>
                 <p className="text-base text-gray-600 mb-3">Postdoc in 2024 and 2025 - Postdoctoral research on the phylogenomics of <em>Chelicerata</em> supported by a Gerstner Postdoctoral Fellowship</p>
                 <p className="text-gray-700">
                   Jose investigates patterns of molecular evolution and species diversification across the tree of life by integrating phylogenomics with systematics and ecology. His primary focus lies in inferring evolutionary relationships and divergence times at both the species and subspecies levels. A central pillar of his research involves the development of novel bioinformatic methods for phylogenomic analysis and molecular clock dating, designed to mitigate sources of error and enhance the accuracy of evolutionary reconstructions. Currently a Research Associate in the Division of Invertebrate Zoology at the American Museum of Natural History (AMNH), Jose previously served as a Gerstner Scholar in Bioinformatics and Computational Biology at the Richard Gilder Graduate School (2023–2025). He continues to collaborate with Professor Lorenzo Prendini and members of the Arachnology Lab to investigate evolutionary patterns across the arachnid tree of life, utilizing high-throughput, next-generation sequencing data.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Jairo A. Moreno-González */}
-          <div className="mb-8 pb-8">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Jairo.jpg"
                   alt="Jairo A. Moreno-González"
@@ -1095,16 +1084,15 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Jairo A. Moreno-González</h3>
                 <p className="text-base text-gray-600 mb-3">Postdoc from 2022 to 2026 - Postdoctoral research on the systematics and evolution of <em>Pedipalpi</em> and Neotropical scorpions supported by an NSF Postdoctoral Fellowship and a Theodore Roosevelt Postdoctoral Fellowship</p>
                 <p className="text-gray-700">
                   Jairo A. Moreno-González earned his B.Sc. in Biology from the Universidad del Valle, Colombia, and his Ph.D. in Biological Sciences at Universidade de São Paulo, Brazil. His Ph.D. dissertation focused on the systematics of the neotropical scorpion genus <em>Tityus</em> (Arachnida: <em>Scorpiones</em>, <em>Buthidae</em>), integrating morphological and molecular evidence. In May 2022, Jairo joint the American Museum of Natural History (AMNH) as a postdoc of the NSF project: “Systematics and evolution of <em>Pedipalpi</em> (whip spiders and whip scorpions): phylogenomics and morphology of understudied arachnids”, under the supervision of Dr. Lorenzo Prendini. In 2024, he became a Gerstner Scholar at the Richard Gilder School (RGGS) at AMNH with his project: "Neotropical biogeography assessed from the perspective of the World’s most diverse scorpion genus, <em>Tityus</em>". In May 2026, after finishing his appointment at Gerstner Scholar, he will continue to investigate the biogeography and phylogenomics of <em>Tityus</em> as a postdoctoral NSF STAR Grant scholar. Jairo's research combines detailed phenotype examination and molecular data to test biogeographic and phylogenetic hypotheses, using various arachnid orders —including <em>Amblypygi</em>, <em>Schizomida</em>, <em>Scorpiones</em>, and <em>Thelyphonida</em>— as study models.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           </div>
 
@@ -1116,9 +1104,8 @@ export default function People() {
           <p className="text-xl text-gray-600 mb-8">Former postdocs of the Arachnology Lab at AMNH</p>
 
           {/* Ricardo Botero-Trujillo */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Ricardo.jpg"
                   alt="Ricardo Botero-Trujillo"
@@ -1126,8 +1113,8 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Ricardo Botero-Trujillo</h3>
                 <p className="text-base text-gray-600 mb-1">Museo Argentino de Ciencias Naturales Bernardino Rivadavia, Argentina | CONICET</p>
                 <p className="text-sm text-gray-500 mb-3">Postdoc from 2018 to 2020</p>
@@ -1137,14 +1124,12 @@ export default function People() {
                 <p className="text-gray-700">
                   Ricardo completed his Biology B.S. at Javeriana University in Bogota. While an undergraduate student, he became interested in arachnids and started working on scorpions from his native country, Colombia. Gradually, hooded thick-spiders (order Ricinulei) and sun-spiders (order Solifugae) became part of his research interests. After a 5-year period working in the pharmaceutical industry, Ricardo moved to Argentina to undertake doctoral studies at the Buenos Aires University. There, he conducted his research at the Division of Arachnology of the Argentinian Museum of Natural Sciences Bernardino Rivadavia. His PhD thesis consisted of a taxonomic revision and phylogenetic analysis of the South American solifuge family Mummuciidae. In 2016, Ricardo visited the AMNH collections, supported by a Theodore Roosevelt Memorial Grant from the AMNH and a Vincent Roth Grant for Systematics Research from the American Arachnological Society. Ricardo is currently a Theodore Roosevelt Postdoctoral Research Fellow from the Richard Gilder Graduate School at the AMNH, and is now working on the evolution of Ricinuleids.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Frederic Schramm */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Frederic_jkwxyd.jpg"
                   alt="Frederic Schramm"
@@ -1152,8 +1137,8 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Frederic Schramm</h3>
                 <p className="text-base text-gray-600 mb-1">American Museum of Natural History, New York | <a href="https://www.daad.de/en/study-and-research-in-germany/scholarships/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">DAAD Scholarships</a></p>
                 <p className="text-sm text-gray-500 mb-3">Postdoc in 2020</p>
@@ -1163,9 +1148,8 @@ export default function People() {
                 <p className="text-gray-700">
                   Fred got his Masters degree in molecular and cellular biology from the Philipps University of Marburg, Germany in 2013. In 2019 he obtained his PhD in molecular biosciences from Stockholm University, Sweden for his work investigating how bacteria fulfill the basic cellular need of maintaining a functional proteome. In his research, Frederic has always been keen on comparative approaches that incorporate the evolutionary perspective enabling a broader and functionally relevant understanding of fundamental biological processes. Becoming convinced of the importance of the evolutionary perspective of his research during his PhD, combined with a long-standing passion for arachnids, he began collaborating on arachnological research projects aimed at enhancing the knowledge of Caribbean arachnid diversity. In February of 2020 he joined the AMNH for a six-months short-term postdoctoral research stay. In his research project funded by the German Academic Exchange Service and a Theodore Roosevelt Memorial Grant he investigates the evolution of Mexican whip spiders.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Stephanie F. Loria */}
           <div className="mb-8 pb-8 border-b border-gray-200">
