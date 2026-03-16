@@ -700,7 +700,7 @@ export default function People() {
           <p className="text-gray-900 mb-8">Former museum specialists of the Arachnology Lab at AMNH</p>
 
           {/* Michelle Locke */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/MichelleLockeField.jpg"
@@ -721,7 +721,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Pamela Horsley */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Pam.jpg"
@@ -742,7 +742,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Ofelia Delgado */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/ofelialab.jpg"
@@ -763,7 +763,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Jeremy Huff */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/huff2.jpg"
@@ -784,7 +784,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Randy Mercurio */}
-          <PeopleCard containerClassName="pb-6">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/mercurio3.jpg"
@@ -816,7 +816,7 @@ export default function People() {
           />
           <div data-tab="current" className={technicalStaffTab === 'current' ? 'block' : 'hidden'}>
           {/* Steve Thurston */}
-          <PeopleCard containerClassName="mb-12 pb-12 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/thurston.jpg"
@@ -836,7 +836,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Victoria Long */}
-          <PeopleCard containerClassName="mb-12 pb-8">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/victoria.jpg"
@@ -866,7 +866,7 @@ export default function People() {
           <p className="text-xl text-gray-600 mb-8">Former technical staff of the Arachnology Lab at AMNH</p>
 
           {/* Eleanor Goetz */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Eleanor1_blmjit.jpg"
@@ -902,7 +902,7 @@ export default function People() {
               { name: 'Tarang Sharma', title: 'Laboratory Technician', years: '2003 to 2004', image: 'people/Tarang-Sharma.jpg' },
               { name: 'Rebecca Budinoff', title: 'Laboratory Technician', years: '2004', image: 'people/Rebecca-Budinoff.jpg' },
             ].map((person, index, list) => (
-              <div key={index} className={`pb-6 ${index < list.length - 1 ? 'border-b border-gray-200' : ''}`}>
+              <div key={index} className={`mb-8 pb-8 ${index < list.length - 1 ? 'border-b border-gray-200' : ''}`}>
                 <div className="grid md:grid-cols-5 gap-6">
                   <div className="md:col-span-2">
                     <PeopleImage
@@ -944,7 +944,7 @@ export default function People() {
           <div data-tab="current" className={researchAffiliatesTab === 'current' ? 'block' : 'hidden'}>
 
           {/* Boris Zakharov */}
-          <PeopleCard containerClassName="mb-12 pb-12 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/people/Boris-Zakharov.jpg"
@@ -971,7 +971,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Vladimir Ovtsharenko */}
-          <PeopleCard containerClassName="mb-12 pb-12 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/people/Vladimir-Ovtsharenko.jpg"
@@ -998,7 +998,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Louis Sorkin */}
-          <PeopleCard containerClassName="pb-6">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/people/Louis-Sorkin.jpg"
@@ -1035,7 +1035,7 @@ export default function People() {
           <div data-tab="current" className={postdocsTab === 'current' ? 'block' : 'hidden'}>
           
           {/* Muhammad Tahir */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Tahir.jpg"
@@ -1055,7 +1055,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Jose Barba-Montoya */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Jose-Barba-Montoya.jpg"
@@ -1104,7 +1104,7 @@ export default function People() {
           <p className="text-xl text-gray-600 mb-8">Former postdocs of the Arachnology Lab at AMNH</p>
 
           {/* Ricardo Botero-Trujillo */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Ricardo.jpg"
@@ -1128,7 +1128,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Frederic Schramm */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Frederic_jkwxyd.jpg"
@@ -1152,7 +1152,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Stephanie F. Loria */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Stephanie-F-Loria.jpg"
@@ -1176,7 +1176,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Carsten Kamenz */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/carstenk.jpg"
@@ -1197,7 +1197,7 @@ export default function People() {
           </PeopleCard>
 
           {/* José Antonio Ochoa */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/jose.jpg"
@@ -1218,7 +1218,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Dana Price */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/dana.jpg"
@@ -1239,7 +1239,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Camilo I. Mattoni */}
-          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/camilo.jpg"
@@ -1260,7 +1260,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Erich S. Volschenk */}
-          <PeopleCard containerClassName="pb-6">
+          <PeopleCard containerClassName="mb-8 pb-8">
               <PeopleCardMedia>
                 <PeopleImage
                   src="/images/erich.jpg"
@@ -1296,7 +1296,7 @@ export default function People() {
           <div data-tab="current" className={graduateStudentsTab === 'current' ? 'block' : 'hidden'}>
 
           {/* George Popovici */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="George Popovici" />
             </PeopleCardMedia>
@@ -1311,7 +1311,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Alice Wang */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Alice Wang" />
             </PeopleCardMedia>
@@ -1326,7 +1326,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Colby Sain */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Colby Sain" />
             </PeopleCardMedia>
@@ -1341,7 +1341,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Nicolas Cazzaniga */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Nicolas Cazzaniga" />
             </PeopleCardMedia>
@@ -1356,7 +1356,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Javier Blasco Aróstegui */}
-          <PeopleCard containerClassName="pb-6">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Javier Blasco Aróstegui" />
             </PeopleCardMedia>
@@ -1375,7 +1375,7 @@ export default function People() {
           <div data-tab="alumni" className={`people-compact ${graduateStudentsTab === 'alumni' ? 'block' : 'hidden'}`}>
 
           {/* Nayeli Gutiérrez Trejo */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Nayeli Gutiérrez Trejo" />
             </PeopleCardMedia>
@@ -1390,7 +1390,7 @@ export default function People() {
           </PeopleCard>
           
           {/* Jayson Slovak */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/jayson.jpg"
@@ -1411,7 +1411,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Stephanie F. Loria */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Stephanie-F-Loria.jpg"
@@ -1432,7 +1432,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Tharina Bird */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/tharina.jpg"
@@ -1453,7 +1453,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Lionel Monod */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/lionel.jpg"
@@ -1474,7 +1474,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Edmundo González Santillan */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/edmundo.jpg"
@@ -1495,7 +1495,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Lauren A. Esposito */}
-          <PeopleCard containerClassName="pb-6">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/people/Lauren-A-Esposito.jpg"
@@ -1553,7 +1553,7 @@ export default function People() {
                 bio: 'Maggie worked in the Arachnology lab in 2025 and 2026, recording morphometric data from scorpions, under the supervision of Jairo Moreno-González and Lorenzo Prendini.',
               },
             ].map((person, index, list) => (
-              <div key={index} className={`pb-6 ${index < list.length - 1 ? 'border-b border-gray-200' : ''}`}>
+              <div key={index} className={`mb-8 pb-8 ${index < list.length - 1 ? 'border-b border-gray-200' : ''}`}>
                 <div className="grid md:grid-cols-5 gap-6">
                   <div className="md:col-span-2">
                     {person.image ? (
@@ -1631,7 +1631,7 @@ export default function People() {
               { name: 'Samara Maaliki', affiliation: 'CUNY, City University of New York | NSF Research Experiences for Undergraduates Internship | Undergraduate Mentoring in Evolutionary Biology Internship', years: '2003', image: null, bio: 'Samara studied the morphology of the central Asian scorpion <em>Pseudochactas ovchinnikovi</em> and investigated its phylogenetic position with morphological and molecular data.' },
               { name: 'Lauren A. Esposito', affiliation: 'University of Texas, El Paso | NSF Research Experiences for Undergraduates Internship', years: '2002', image: 'people/Lauren-A-Esposito.jpg', bio: 'Lauren first came to the AMNH for a summer research project on the systematics of medically important African <em>Parabuthus</em> scorpions. She returned to the lab as a graduate student from 2004 to 2011.' },
             ].map((person, index, list) => (
-              <div key={index} className={`pb-6 ${index < list.length - 1 ? 'border-b border-gray-200' : ''}`}>
+              <div key={index} className={`mb-8 pb-8 ${index < list.length - 1 ? 'border-b border-gray-200' : ''}`}>
                 <div className="grid md:grid-cols-5 gap-6">
                   <div className="md:col-span-2">
                     {person.image ? (
@@ -1672,7 +1672,7 @@ export default function People() {
           />
           <div data-tab="current" className={highSchoolStudentsTab === 'current' ? 'block' : 'hidden'}>
           {/* Meredith Metz */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Meredith Metz" />
             </PeopleCardMedia>
@@ -1686,7 +1686,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Alex Liu */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Alex Liu" />
             </PeopleCardMedia>
@@ -1700,7 +1700,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Balthazar Edwards */}
-          <PeopleCard containerClassName="pb-6">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Balthazar Edwards" />
             </PeopleCardMedia>
@@ -1720,7 +1720,7 @@ export default function People() {
           >
 
           {/* Anika Mahbub */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Anika Mahbub" />
             </PeopleCardMedia>
@@ -1734,7 +1734,7 @@ export default function People() {
           </PeopleCard>
 
           {/* William Phillips */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="William Phillips" />
             </PeopleCardMedia>
@@ -1748,7 +1748,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Christina Li */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Christina Li" />
             </PeopleCardMedia>
@@ -1762,7 +1762,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Michelle Li */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Michelle Li" />
             </PeopleCardMedia>
@@ -1776,7 +1776,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Eva-Lucia Prendini */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Eva-Lucia Prendini" />
             </PeopleCardMedia>
@@ -1790,7 +1790,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Sophia Collins */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Sophia Collins" />
             </PeopleCardMedia>
@@ -1804,7 +1804,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Aibrean Henry */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Aibrean Henry" />
             </PeopleCardMedia>
@@ -1818,7 +1818,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Alex Moell */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Alex Moell" />
             </PeopleCardMedia>
@@ -1832,7 +1832,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Hritwik Paul */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/HPaul_mnmt2g.jpg"
@@ -1852,7 +1852,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Luke Siegel */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Luke Siegel" />
             </PeopleCardMedia>
@@ -1866,7 +1866,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Cherie Qu */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Cherie.jpg"
@@ -1886,7 +1886,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Azmi Anamika */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Azmi.jpg"
@@ -1906,7 +1906,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Nathan Auyeng */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Nathan Auyeng" />
             </PeopleCardMedia>
@@ -1920,7 +1920,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Aleyna Singer */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Aleyna Singer" />
             </PeopleCardMedia>
@@ -1934,7 +1934,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Simon Au */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Simon Au" />
             </PeopleCardMedia>
@@ -1948,7 +1948,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Agnes Oduro */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Agnes Oduro" />
             </PeopleCardMedia>
@@ -1962,7 +1962,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Amrita Banerji */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Amrita Banerji" />
             </PeopleCardMedia>
@@ -1976,7 +1976,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Geeta Sharma */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Geeta.jpg"
@@ -1996,7 +1996,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Sophia Castro */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Sophia.jpg"
@@ -2016,7 +2016,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Tamar Cohen */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Tamar.jpg"
@@ -2036,7 +2036,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Chelsea Silva */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/ChelseaSilva2015.jpg"
@@ -2056,7 +2056,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Billy Conlan */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/BillyConlan2015.jpg"
@@ -2076,7 +2076,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Eleanor Goetz */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Sasha-Reiter--and--Eleanor-Goetz.jpg"
@@ -2097,7 +2097,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Sasha Reiter */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Sasha-Reiter--and--Eleanor-Goetz.jpg"
@@ -2118,7 +2118,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Adam Getzler */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/adam.jpg"
@@ -2138,7 +2138,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Michelle Bayefsky-Anand */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Michelle Bayefsky-Anand" />
             </PeopleCardMedia>
@@ -2152,7 +2152,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Jianhua Lin */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Jianhua-Lin--and--Qiao-Rong-Huang.jpg"
@@ -2173,7 +2173,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Qiao Rong Huang */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Jianhua-Lin--and--Qiao-Rong-Huang.jpg"
@@ -2194,7 +2194,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Melanie Ng */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/melanie.jpg"
@@ -2214,7 +2214,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Connie Cai */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/cai.jpg"
@@ -2234,7 +2234,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Bernard Laszczower */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/berny.jpg"
@@ -2254,7 +2254,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Boitumelo "Tumi" McCallum */}
-          <PeopleCard containerClassName="pb-6">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/tumi.jpg"
@@ -2289,7 +2289,7 @@ export default function People() {
           <div data-tab="current" className={volunteersTab === 'current' ? 'block' : 'hidden'}>
 
           {/* Soleil Blanquera */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Soleil Blanquera" />
             </PeopleCardMedia>
@@ -2303,7 +2303,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Brian Sperber */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Brian Sperber" />
             </PeopleCardMedia>
@@ -2317,7 +2317,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Victoria Long */}
-          <PeopleCard containerClassName="pb-6">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/victoria.jpg"
@@ -2341,7 +2341,7 @@ export default function People() {
           <div data-tab="alumni" className={`people-compact ${volunteersTab === 'alumni' ? 'block' : 'hidden'}`}>
 
           {/* George Tsinias */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/George.jpg"
@@ -2361,7 +2361,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Christian Liriano */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Christian.jpg"
@@ -2381,7 +2381,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Gerbi Carreon */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Gerbi.jpg"
@@ -2401,7 +2401,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Debbie Alwill */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/debbie.jpg"
@@ -2421,7 +2421,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Jasmine Alim */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Jasmin.jpg"
@@ -2441,7 +2441,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Adrian Armstrong */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Adrian Armstrong" />
             </PeopleCardMedia>
@@ -2455,7 +2455,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Reginald Christiaan */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/ReginaldChristiaan.jpg"
@@ -2475,7 +2475,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Mark Cooper */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Mark Cooper" />
             </PeopleCardMedia>
@@ -2489,7 +2489,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Howard W. Fiedler */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/fiedler.jpg"
@@ -2509,7 +2509,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Stefan Foord */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Stefan.Foord.jpg"
@@ -2529,7 +2529,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Ann Garbacki */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Ann Garbacki" />
             </PeopleCardMedia>
@@ -2543,7 +2543,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Tom Gartner */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Tom Gartner" />
             </PeopleCardMedia>
@@ -2557,7 +2557,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Tom Sullivan */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Tom-Sullivan.jpg"
@@ -2577,7 +2577,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Patrick Gildenhuys */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Gildenhuys.Patrick.jpg"
@@ -2597,7 +2597,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Charles Haddad */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Charles.Haddad.jpg"
@@ -2617,7 +2617,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Peter Hawkes */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Peter Hawkes" />
             </PeopleCardMedia>
@@ -2631,7 +2631,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Siegfried Huber */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Huber.jpg"
@@ -2651,7 +2651,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Jeremy Huff */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/huff2.jpg"
@@ -2671,7 +2671,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Dawid Jacobs */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Dawid Jacobs" />
             </PeopleCardMedia>
@@ -2685,7 +2685,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Simone Longe */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/simone.jpg"
@@ -2705,7 +2705,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Allyson Mellone */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Allyson Mellone" />
             </PeopleCardMedia>
@@ -2719,7 +2719,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Warren Savary */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/warren.jpg"
@@ -2739,7 +2739,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Rick West */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/west.jpg"
@@ -2762,7 +2762,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Asel Zhetigenova */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Asel Zhetigenova" />
             </PeopleCardMedia>
@@ -2776,7 +2776,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Howard Bichard */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Howard Bichard" />
             </PeopleCardMedia>
@@ -2790,7 +2790,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Abigail Carlton */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Abigail Carlton" />
             </PeopleCardMedia>
@@ -2804,7 +2804,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Ofelia Delgado */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/ofelialab.jpg"
@@ -2824,7 +2824,7 @@ export default function People() {
           </PeopleCard>
 
           {/* David Desoeur */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/desouer.jpg"
@@ -2844,7 +2844,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Suzanna Dodd */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Suzanna Dodd" />
             </PeopleCardMedia>
@@ -2858,7 +2858,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Ian Engelbrecht */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Engelbrecht.jpg"
@@ -2878,7 +2878,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Carine Galvão */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Carine Galvão" />
             </PeopleCardMedia>
@@ -2892,7 +2892,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Tiffany Gentry */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Tiffany Gentry" />
             </PeopleCardMedia>
@@ -2906,7 +2906,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Ilsa Kaim */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/ilsa.jpg"
@@ -2926,7 +2926,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Sergios-Orestis Kolokotronis */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/sergios.jpg"
@@ -2946,7 +2946,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Sulata Maity */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/sulata.jpg"
@@ -2966,7 +2966,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Kari McWest */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/kari.jpg"
@@ -2989,7 +2989,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Randy Mercurio */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/mercurio3.jpg"
@@ -3009,7 +3009,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Israel Na'aman */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Israel Na'aman" />
             </PeopleCardMedia>
@@ -3023,7 +3023,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Danielle Parsons */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Danielle Parsons" />
             </PeopleCardMedia>
@@ -3037,7 +3037,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Fabienne Paumet */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Fabienne Paumet" />
             </PeopleCardMedia>
@@ -3051,7 +3051,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Warren Schmidt */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Warren Schmidt" />
             </PeopleCardMedia>
@@ -3065,7 +3065,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Susan Tosier */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Susan Tosier" />
             </PeopleCardMedia>
@@ -3079,7 +3079,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Zach Valois */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/zach.jpg"
@@ -3099,7 +3099,7 @@ export default function People() {
           </PeopleCard>
 
           {/* John Visser */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Visser.jpg"
@@ -3119,7 +3119,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Peg Werns */}
-          <PeopleCard containerClassName="pb-6">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Peg Werns" />
             </PeopleCardMedia>
@@ -3148,7 +3148,7 @@ export default function People() {
           <div data-tab="current" className={visitingStudentsTab === 'current' ? 'block' : 'hidden'}>
 
           {/* Antonio Galán Sánchez */}
-          <PeopleCard containerClassName="pb-6">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Antonio Galán Sánchez" />
             </PeopleCardMedia>
@@ -3166,7 +3166,7 @@ export default function People() {
           <div data-tab="alumni" className={`people-compact ${visitingStudentsTab === 'alumni' ? 'block' : 'hidden'}`}>
 
           {/* Matias Izquierdo */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Matias Izquierdo" />
             </PeopleCardMedia>
@@ -3181,7 +3181,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Breanna Jordan */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Breanna Jordan" />
             </PeopleCardMedia>
@@ -3196,7 +3196,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Sarah Morris */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Sarah Morris" />
             </PeopleCardMedia>
@@ -3211,7 +3211,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Daniel Castro-Pereira */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Daniel Castro-Pereira" />
             </PeopleCardMedia>
@@ -3226,7 +3226,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Kaylin Chong */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Kaylin Chong" />
             </PeopleCardMedia>
@@ -3241,7 +3241,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Erik Ciaccio */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Erik Ciaccio" />
             </PeopleCardMedia>
@@ -3256,7 +3256,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Valentin Ehrenthal */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Valentin Ehrenthal" />
             </PeopleCardMedia>
@@ -3271,7 +3271,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Miguel Garcia */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Miguel Garcia" />
             </PeopleCardMedia>
@@ -3286,7 +3286,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Leonel Martinez */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Leonel Martinez" />
             </PeopleCardMedia>
@@ -3301,7 +3301,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Paulo Pantoja */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Paulo Pantoja" />
             </PeopleCardMedia>
@@ -3316,7 +3316,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Karina Silvestre */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Karina Silvestre" />
             </PeopleCardMedia>
@@ -3331,7 +3331,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Pedro Martins */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Pedro Martins" />
             </PeopleCardMedia>
@@ -3346,7 +3346,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Goran Shikak */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Goran Shikak" />
             </PeopleCardMedia>
@@ -3361,7 +3361,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Pietro Tardelli */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Pietro Tardelli" />
             </PeopleCardMedia>
@@ -3376,7 +3376,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Arnau Calatayud-Mascarell */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Arnau Calatayud-Mascarell" />
             </PeopleCardMedia>
@@ -3391,7 +3391,7 @@ export default function People() {
           </PeopleCard>
 
           {/* David Chamé-Vázquez */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="David Chamé-Vázquez" />
             </PeopleCardMedia>
@@ -3406,7 +3406,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Sahibzada M. Jawad */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Sahibzada M. Jawad" />
             </PeopleCardMedia>
@@ -3421,7 +3421,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Willians Porto */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Willians Porto" />
             </PeopleCardMedia>
@@ -3436,7 +3436,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Valerie Warhol */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Valerie Warhol" />
             </PeopleCardMedia>
@@ -3451,7 +3451,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Shahan Derkarabetian */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Shahan Derkarabetian" />
             </PeopleCardMedia>
@@ -3466,7 +3466,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Jairo A. Moreno-González */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Jairo.jpg"
@@ -3487,7 +3487,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Andria de Paula Santos da Silva */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Andria.jpg"
@@ -3508,7 +3508,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Catalina Romero */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Catalina.jpg"
@@ -3529,7 +3529,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Miguel Medrano */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Miguel.jpg"
@@ -3550,7 +3550,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Rene Barba */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/ReneBarba.jpg"
@@ -3571,7 +3571,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Jahnavi Joshi */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Jahnavi.jpg"
@@ -3592,7 +3592,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Aaron Goodman */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Aaron.jpg"
@@ -3613,7 +3613,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Stephan Schaffrath */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Stephan_aslq3e.jpg"
@@ -3634,7 +3634,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Carlos Alberto Martinez Muñoz */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/CarlosM.jpg"
@@ -3655,7 +3655,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Callum Mclean */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Callum.jpg"
@@ -3676,7 +3676,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Shlomo Cain */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Shlomo.jpg"
@@ -3697,7 +3697,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Ivan Magalhaes */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Ivan.jpg"
@@ -3718,7 +3718,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Gerardo Contreras */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/GerardoContreras.jpg"
@@ -3739,7 +3739,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Rodrigo Monjáraz Ruedas */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/RodrigoRuedas.jpg"
@@ -3760,7 +3760,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Tebogo Ledwaba */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Tebogo.jpg"
@@ -3781,7 +3781,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Jesus Alberto Cruz-López */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Jesus-Alberto-Cruz-Lopez.jpg"
@@ -3802,7 +3802,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Ricardo Botero-Trujillo */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/ric.jpg"
@@ -3823,7 +3823,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Dulce Flor Piedra */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Dulce.jpg"
@@ -3843,7 +3843,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Rebecca Godwin */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PhotoPlaceholder name="Rebecca Godwin" />
             </PeopleCardMedia>
@@ -3858,7 +3858,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Francisco Salgueiro Sepulveda */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
               <PeopleImage
                 src="/images/Francisco.jpg"
@@ -3879,7 +3879,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Diego Barrales */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/diego.jpg"
@@ -3900,7 +3900,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Samuel Mwangi */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/mwangi.jpg"
@@ -3921,7 +3921,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Bastian-Jesper Klußmann-Fricke */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/bastian.jpg"
@@ -3942,7 +3942,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Gustavo Silva de Miranda */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Gustavo.jpg"
@@ -3963,7 +3963,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Ingrid Catalina Romero Ortiz */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PhotoPlaceholder name="Ingrid Catalina Romero Ortiz" />
             </PeopleCardMedia>
@@ -3978,7 +3978,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Daniela Ramírez */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/DanielaRamirez.jpg"
@@ -3999,7 +3999,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Carlos Santibañez-López */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/carlos.jpg"
@@ -4020,7 +4020,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Roberta Engel */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PhotoPlaceholder name="Roberta Engel" />
             </PeopleCardMedia>
@@ -4035,7 +4035,7 @@ export default function People() {
           </PeopleCard>
 
           {/* David Vrech */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PhotoPlaceholder name="David Vrech" />
             </PeopleCardMedia>
@@ -4050,7 +4050,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Humberto Yoji Yamaguti */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/humberto.jpg"
@@ -4071,7 +4071,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Patricia Carrera */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PhotoPlaceholder name="Patricia Carrera" />
             </PeopleCardMedia>
@@ -4086,7 +4086,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Jesus Alfonso Ballesteros Chavez */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/jesusb.jpg"
@@ -4107,7 +4107,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Fabio Akashi Hernandes */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Hernanades.jpg"
@@ -4128,7 +4128,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Andrés Ojanguren-Affilastro */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/ojanguren.jpg"
@@ -4149,7 +4149,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Alexander V. Gromov */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/gromov.jpg"
@@ -4170,7 +4170,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Carsten Kamenz */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/carstenk.jpg"
@@ -4191,7 +4191,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Valerio Vignoli */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/vignoli.jpg"
@@ -4212,7 +4212,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Christian Wirkner */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/wirkner.jpg"
@@ -4233,7 +4233,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Christina Bisulca */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/bisulca.jpg"
@@ -4254,7 +4254,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Amazonas Chagas, Jr. */}
-          <PeopleCard containerClassName="pb-6 border-b border-gray-200">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/chagas.jpg"
@@ -4275,7 +4275,7 @@ export default function People() {
           </PeopleCard>
 
           {/* Lionel Monod */}
-          <PeopleCard containerClassName="pb-6">
+          <PeopleCard containerClassName="mb-8 pb-8">
             <PeopleCardMedia>
                 <PeopleImage
                   src="/images/lionel.jpg"

@@ -11,7 +11,7 @@ type PeopleCardSlotProps = {
 };
 
 export const PeopleCard = ({ children, containerClassName }: PeopleCardProps) => {
-  const classes = [containerClassName].filter(Boolean).join(" ");
+  const classes = ["people-card", containerClassName].filter(Boolean).join(" ");
 
   return (
     <div className={classes}>
