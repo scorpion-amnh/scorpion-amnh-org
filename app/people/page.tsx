@@ -1,32 +1,15 @@
 'use client';
 
-import { useMemo } from "react";
 import { SideNav } from "../components/SideNav";
 import { Tabs } from "../components/Tabs";
 import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
 import { PeopleImage } from "./PeopleImage";
+import { peopleSections } from "./sections";
 import { usePeopleNavigation } from "./usePeopleNavigation";
 
 const Image = PeopleImage;
 
 export default function People() {
-  const sections = useMemo(
-    () => [
-      { id: 'lab-evolution', label: 'Lab Evolution' },
-      { id: 'principal-investigator', label: 'Principal Investigator' },
-      { id: 'museum-specialists', label: 'Museum Specialists' },
-      { id: 'technical-staff', label: 'Technical Staff' },
-      { id: 'research-affiliates', label: 'Research Affiliates' },
-      { id: 'postdocs', label: 'Postdocs' },
-      { id: 'graduate-students', label: 'Graduate Students' },
-      { id: 'undergraduate-students', label: 'Undergraduate Students' },
-      { id: 'high-school-students', label: 'High School Students' },
-      { id: 'volunteers', label: 'Volunteers' },
-      { id: 'visiting-students', label: 'Visitors' },
-    ],
-    []
-  );
-
   const {
     activeSection,
     contentRef,
@@ -41,7 +24,7 @@ export default function People() {
     setSearchQuery,
     setTabForSection,
     sideNavRef,
-  } = usePeopleNavigation(sections);
+  } = usePeopleNavigation(peopleSections);
 
   const museumTab = sectionTabs['museum-specialists'];
   const technicalStaffTab = sectionTabs['technical-staff'];
@@ -145,7 +128,7 @@ export default function People() {
             className="lg:col-span-1 sticky top-[var(--header-height)] lg:top-[calc(var(--header-height)+var(--section-scroll-gap))] z-40 bg-white self-start"
           >
             <SideNav
-              sections={sections}
+              sections={peopleSections}
               activeSection={activeSection}
               onSelect={handleSectionSelect}
             />

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import type { PeopleSection } from "./sections";
 
 export type SectionTab = "current" | "alumni";
 
@@ -12,11 +13,6 @@ export type TabSectionId =
   | "high-school-students"
   | "volunteers"
   | "visiting-students";
-
-type PeopleSection = {
-  id: string;
-  label: string;
-};
 
 type PeopleIndexItem = {
   name: string;
