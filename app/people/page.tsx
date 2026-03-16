@@ -3,11 +3,149 @@
 import { SideNav } from "../components/SideNav";
 import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
 import { PeopleCard, PeopleCardBody, PeopleCardMedia } from "./PeopleCard";
+import type { PeopleGroupCardProps } from "./PeopleGroupCard";
+import { PeopleGroupSection } from "./PeopleGroupSection";
 import { PeopleImage } from "./PeopleImage";
 import { PeopleSectionTabs } from "./PeopleSectionTabs";
 import { PeopleSearch } from "./PeopleSearch";
 import { peopleSections } from "./sections";
 import { usePeopleNavigation } from "./usePeopleNavigation";
+
+const peopleGroupData: PeopleGroupCardProps[] = [
+  {
+    src: "/images/2025-Molecular-lab-interns-Summer-2025.jpg",
+    alt: "Summer 2025 Molecular Lab Interns",
+    caption: "Molecular Lab Interns.",
+  },
+  {
+    src: "/images/2025-Pio-Colmenares-and-visiting-researchers-in-the-collection.jpg",
+    alt: "2025 Colmenares and visiting researchers in the collection",
+    caption: "Pío Colmenares and visiting researchers in the collection.",
+  },
+  {
+    src: "/images/2025-Group-photp-back-Nick-William-Jose-Jairo-Drusilla-Lorenzo-Pio-front-Javier-Colby.jpg",
+    alt: "2025 Group photo with Nick Cazzaniga, William Phillips, José Barba-Montoya, Jairo Moreno-González, Drusilla Sheridan, Lorenzo Prendini, Pío Colmenares, Javier Blasco Aróstegui, and Colby Sain",
+    caption: "Back (left to right): Nick Cazzaniga, William Phillips, José Barba-Montoya, Jairo Moreno-González, Drusilla Sheridan, Lorenzo Prendini, Pío Colmenares. Front (left to right): Javier Blasco Aróstegui, Colby Sain.",
+  },
+  {
+    src: "/images/2024-lunch-Pio-Ricardo-Lorenzo-Colby-Jairo.JPG",
+    alt: "2024 lunch with Pío Colmenares, Ricardo Botero-Trujillo, Lorenzo Prendini, Colby Sain, and Jairo Moreno-González",
+    caption: "Left to right: Pío Colmenares, Ricardo Botero-Trujillo, Lorenzo Prendini, Colby Sain, Jairo Moreno-González.",
+  },
+  {
+    src: "/images/2023-dinner-Left-front-to-back-Pio-Isadora-Stephanie-Lorenzo-Valentin-right-front-to-back-Victoria-Jairo-Javier-Taylor-Colby.JPG",
+    alt: "2023 dinner with Pío Colmenares, Isadora Colmenares, Stephanie Loria, Lorenzo Prendini, Valentin Ehrenthal, Victoria Long, Jairo Moreno-González, Javier Blasco Aróstegui, Taylor, and Colby Sain",
+    caption: "Left (front to back): Pío Colmenares, Isadora Colmenares, Stephanie Loria, Lorenzo Prendini, Valentin Ehrenthal. Right (front to back): Victoria Long, Jairo Moreno-González, Javier Blasco Aróstegui, Taylor, Colby Sain.",
+  },
+  {
+    src: "/images/2023-Kimberly-Russell-and-students-from-Rutgers-University.HEIC",
+    alt: "2023 Kimberly Russell and students from Rutgers University",
+    caption: "Kimberly Russell and students from Rutgers University.",
+  },
+  {
+    src: "/images/2022-Lab-end-of-day-Javier-Marcel-Colby-Jairo-Sahibzada-Pio.JPG",
+    alt: "2022 end of day in the lab with Javier Blasco Aróstegui, Marcel, Colby Sain, Jairo Moreno-González, Sahibzada M. Jawad, and Pío Colmenares",
+    caption: "Left to right: Javier Blasco Aróstegui, Marcel, Colby Sain, Jairo Moreno-González, Sahibzada M. Jawad, Pío Colmenares.",
+  },
+  {
+    src: "/images/2021-lunch-Ricardo-Lorenzo-Lou-Pio.HEIC",
+    alt: "2021 lunch with Ricardo Botero-Trujillo, Lorenzo Prendini, Lou Sorkin, and Pío Colmenares",
+    caption: "Left to right: Ricardo Botero-Trujillo, Lorenzo Prendini, Lou Sorkin, Pío Colmenares.",
+  },
+  {
+    src: "/images/labfall2019_p08qpk.jpg",
+    alt: "Fall 2019 Arachnology Lab at AMNH. Left to Right: George Tsinias, Jairo Moreno-González, Lorenzo Prendini, Stephanie Loria, Valentin Ehrenthal, Eleanor Goetz, Pío Colmenares, Miryam Trujillo, Ricardo Botero-Trujillo.",
+    caption: "Left to Right: George Tsinias, Jairo Moreno-González, Lorenzo Prendini, Stephanie Loria, Valentin Ehrenthal, Eleanor Goetz, Pío Colmenares, Miryam Trujillo, Ricardo Botero-Trujillo.",
+  },
+  {
+    src: "/images/summer2019.jpg",
+    alt: "July 2019 Arachnology Lab at AMNH. Left to Right: Elena Babicz, Andria Santos da Silva, Stephanie Loria, Pío Colmenares, Colby Sain, Lorenzo Prendini, Jairo Moreno-González, Ricardo Botero-Trujillo.",
+    caption: "Left to Right: Elena Babicz, Andria Santos da Silva, Stephanie Loria, Pío Colmenares, Colby Sain, Lorenzo Prendini, Jairo Moreno-González, Ricardo Botero-Trujillo.",
+  },
+  {
+    src: "/images/Prendini_Lab_Summer2018.jpg",
+    alt: "August 2018 Arachnology Lab at AMNH. Left to Right: Stephanie Loria, Max Roppo, Lorenzo Prendini, Diogo Casellato, Lou Sorkin, Pío Colmenares, Deborah Chin, Victoria Long, Jayson Slovak.",
+    caption: "Left to Right: Stephanie Loria, Max Roppo, Lorenzo Prendini, Diogo Casellato, Lou Sorkin, Pío Colmenares, Deborah Chin, Victoria Long, Jayson Slovak.",
+  },
+  {
+    src: "/images/PrendiniLabSeptember2017.jpg",
+    alt: "September 2017 Arachnology Lab at AMNH. Left to Right: Pío Colmenares, Ivan Magalhães, Lorenzo Prendini, Tebogo Lebwada, Lou Sorkin, Gerardo Contreras, Rodrigo Monjáraz Ruedas.",
+    caption: "Left to Right: Pío Colmenares, Ivan Magalhães, Lorenzo Prendini, Tebogo Lebwada, Lou Sorkin, Gerardo Contreras, Rodrigo Monjáraz Ruedas.",
+  },
+  {
+    src: "/images/PrendiniLabAugust2017.jpg",
+    alt: "August 2017 Arachnology Lab at AMNH. Left to Right: Stephanie Loria, Lorenzo Prendini, Pío Colmenares, Jayson Slovak, Deborah Chin.",
+    caption: "Left to Right: Stephanie Loria, Lorenzo Prendini, Pío Colmenares, Jayson Slovak, Deborah Chin.",
+  },
+  {
+    src: "/images/PrendiniLabAugust2015.jpg",
+    alt: "August 2015 Arachnology Lab at AMNH. Left to Right: Lorenzo Prendini, Gustavo Miranda, Debbie Alwill, Diogo Casellato (back), Stephanie Loria, Bastian-Jesper Klüßmann-Fricke (back), Michelle Locke, Chelsea Silva, Billy Conlan.",
+    caption: "Left to Right: Lorenzo Prendini, Gustavo Miranda, Debbie Alwill, Diogo Casellato (back), Stephanie Loria, Bastian-Jesper Klüßmann-Fricke (back), Michelle Locke, Chelsea Silva, Billy Conlan.",
+  },
+  {
+    src: "/images/PrendiniLabJan2015.jpg",
+    alt: "January 2015 Arachnology Lab at AMNH. Left to Right: Michelle Locke, Lorenzo Prendini, Stephanie Loria.",
+    caption: "Left to Right: Michelle Locke, Lorenzo Prendini, Stephanie Loria.",
+  },
+  {
+    src: "/images/scorpiongroups2013.jpg",
+    alt: "August 2013 Arachnology Lab at AMNH. Left to Right: Pam Horsely, Stephanie Loria, Lorenzo Prendini, Massimiliano Roppo, Muhammad Tahir.",
+    caption: "Left to Right: Pam Horsely, Stephanie Loria, Lorenzo Prendini, Massimiliano Roppo, Muhammad Tahir.",
+  },
+  {
+    src: "/images/scorpiongroups.jpg",
+    alt: "August 2011 Arachnology Lab at AMNH. Left to Right: Stephanie Loria, Adam Getzler, Ofelia Delgado, Edmundo González, Carlos Santibañez, Lorenzo Prendini, Randy Mercurio.",
+    caption: "Left to Right: Stephanie Loria, Adam Getzler, Ofelia Delgado, Edmundo González, Carlos Santibañez, Lorenzo Prendini, Randy Mercurio.",
+  },
+  {
+    src: "/images/scorpiongroup.jpg",
+    alt: "2006 Arachnology Lab at AMNH Left to Right: (Back Row) Jeremy Huff, Erich Volschenk, Lionel Monod, Edmundo González, (Front Row) Randy Mercurio, Camilo Mattoni, Lauren A. Esposito, Monica Mosier, Ofelia Delgado, Valerio Vignoli, Lorenzo Prendini.",
+    caption: "Left to Right: (Back Row) Jeremy Huff, Erich Volschenk, Lionel Monod, Edmundo González, (Front Row) Randy Mercurio, Camilo Mattoni, Lauren A. Esposito, Monica Mosier, Ofelia Delgado, Valerio Vignoli, Lorenzo Prendini.",
+  },
+  {
+    src: "/images/ica.jpg",
+    alt: "2007 Scorpion Biologists ICA Left to Right: (Back Row) Carsten Kamenz, Mingsheng Zhu, Edmundo González, Roger Farley, Erich Volschenk, Lauren A. Esposito, Camilo Mattoni, (Front Row) Jason Dunlop, Jeremy Huff, Warren Savary, Ricardo Pinto-da-Rocha, Oscar Francke, Lorenzo Prendini.",
+    caption: "Left to Right: (Back Row) Carsten Kamenz, Mingsheng Zhu, Edmundo González, Roger Farley, Erich Volschenk, Lauren A. Esposito, Camilo Mattoni, (Front Row) Jason Dunlop, Jeremy Huff, Warren Savary, Ricardo Pinto-da-Rocha, Oscar Francke, Lorenzo Prendini.",
+  },
+  {
+    src: "/images/Solifugae_2007.jpg",
+    alt: "October 2007 BSI Solifugae Meeting at DMNS. Left to Right: Kristie Reddick (TAMU), Bob Wharton (TAMU), Warren Savary (CAS), Aaron Spriggs (DMNS), Tharina Bird (NMNW/CSU), Paula Cushing (DMNS), Lorenzo Prendini (AMNH), Sasha Gromov (IZAK), Jack Brookhart (DMNS).",
+    caption: "Left to Right: Kristie Reddick (TAMU), Bob Wharton (TAMU), Warren Savary (CAS), Aaron Spriggs (DMNS), Tharina Bird (NMNW/CSU), Paula Cushing (DMNS), Lorenzo Prendini (AMNH), Sasha Gromov (IZAK), Jack Brookhart (DMNS).",
+  },
+  {
+    src: "/images/Atol_2008.jpg",
+    alt: "December 2008 AToL Morphology Scoring Party at Smithsonian USNM. Left to Right: Petra Sierwald (FMNH), Jonathan Coddington (USNM), Lorenzo Prendini (AMNH), Gustavo Hormiga (GWU), Charles Griswold (CAS).",
+    caption: "Left to Right: Petra Sierwald (FMNH), Jonathan Coddington (USNM), Lorenzo Prendini (AMNH), Gustavo Hormiga (GWU), Charles Griswold (CAS).",
+  },
+];
+
+const peopleGroupSectionData: {
+  year?: string;
+  subtitle?: string;
+  cards: [PeopleGroupCardProps, ...PeopleGroupCardProps[]];
+}[] = [
+  { year: "Summer 2025", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[0]] },
+  { year: "2025", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[1]] },
+  { year: "2025", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[2]] },
+  { year: "2024", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[3]] },
+  { year: "2023", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[4]] },
+  { year: "2023", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[5]] },
+  { year: "2022", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[6]] },
+  { year: "2021", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[7]] },
+  { year: "Fall 2019", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[8]] },
+  { year: "Summer 2019", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[9]] },
+  { year: "Summer 2018", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[10]] },
+  { year: "Fall 2017", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[11]] },
+  { year: "Summer 2017", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[12]] },
+  { year: "Summer 2015", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[13]] },
+  { year: "Winter 2015", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[14]] },
+  { year: "Summer 2013", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[15]] },
+  { year: "Summer 2011", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[16]] },
+  { year: "2006", subtitle: "Arachnology Lab at AMNH", cards: [peopleGroupData[17]] },
+  { year: "Fall 2007", subtitle: "Scorpion Biologists ICA", cards: [peopleGroupData[18]] },
+  { year: "2007", subtitle: "BSI Solifugae Meeting at DMNS", cards: [peopleGroupData[19]] },
+  { year: "Winter 2008", subtitle: "AToL Morphology Scoring Party at Smithsonian USNM", cards: [peopleGroupData[20]] },
+];
 
 export default function People() {
   const {
@@ -74,393 +212,14 @@ export default function People() {
           <div ref={contentRef} className="md:col-span-3 section-content">
         <div data-section="lab-evolution" className={activeSection === 'lab-evolution' ? 'block' : 'hidden'}>
         <div>
-          {/* Summer 2025 */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2025</h2>
-            <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-            <figure className="mb-8">
-              <PeopleImage
-                src="/images/2025-Molecular-lab-interns-Summer-2025.jpg"
-                alt="Summer 2025 Molecular Lab Interns"
-                width={1200}
-                height={800}
-                className="w-full h-auto rounded-sm"
-              />
-              <figcaption className="text-sm text-gray-600 mt-3 italic">
-                Molecular Lab Interns.
-              </figcaption>
-            </figure>
-          </div>
-
-          {/* 2025 */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2025</h2>
-            <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-            <figure className="mb-8">
-              <PeopleImage
-                src="/images/2025-Pio-Colmenares-and-visiting-researchers-in-the-collection.jpg"
-                alt="2025 Colmenares and visiting researchers in the collection"
-                width={1200}
-                height={800}
-                className="w-full h-auto rounded-sm"
-              />
-              <figcaption className="text-sm text-gray-600 mt-3 italic">
-                Pío Colmenares and visiting researchers in the collection.
-              </figcaption>
-            </figure>
-          </div>
-
-          {/* 2025 Group Photo */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2025</h2>
-            <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-            <figure className="mb-8">
-              <PeopleImage
-                src="/images/2025-Group-photp-back-Nick-William-Jose-Jairo-Drusilla-Lorenzo-Pio-front-Javier-Colby.jpg"
-                alt="2025 Group photo with Nick Cazzaniga, William Phillips, José Barba-Montoya, Jairo Moreno-González, Drusilla Sheridan, Lorenzo Prendini, Pío Colmenares, Javier Blasco Aróstegui, and Colby Sain"
-                width={1200}
-                height={800}
-                className="w-full h-auto rounded-sm"
-              />
-              <figcaption className="text-sm text-gray-600 mt-3 italic">
-                Back (left to right): Nick Cazzaniga, William Phillips, José Barba-Montoya, Jairo Moreno-González, Drusilla Sheridan, Lorenzo Prendini, Pío Colmenares. Front (left to right): Javier Blasco Aróstegui, Colby Sain.
-              </figcaption>
-            </figure>
-          </div>
-
-          {/* 2024 Lunch */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2024</h2>
-            <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-            <figure className="mb-8">
-              <PeopleImage
-                src="/images/2024-lunch-Pio-Ricardo-Lorenzo-Colby-Jairo.JPG"
-                alt="2024 lunch with Pío Colmenares, Ricardo Botero-Trujillo, Lorenzo Prendini, Colby Sain, and Jairo Moreno-González"
-                width={1200}
-                height={800}
-                className="w-full h-auto rounded-sm"
-              />
-              <figcaption className="text-sm text-gray-600 mt-3 italic">
-                Left to right: Pío Colmenares, Ricardo Botero-Trujillo, Lorenzo Prendini, Colby Sain, Jairo Moreno-González.
-              </figcaption>
-            </figure>
-          </div>
-
-          {/* 2023 Dinner */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2023</h2>
-            <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-            <figure className="mb-8">
-              <PeopleImage
-                src="/images/2023-dinner-Left-front-to-back-Pio-Isadora-Stephanie-Lorenzo-Valentin-right-front-to-back-Victoria-Jairo-Javier-Taylor-Colby.JPG"
-                alt="2023 dinner with Pío Colmenares, Isadora Colmenares, Stephanie Loria, Lorenzo Prendini, Valentin Ehrenthal, Victoria Long, Jairo Moreno-González, Javier Blasco Aróstegui, Taylor, and Colby Sain"
-                width={1200}
-                height={800}
-                className="w-full h-auto rounded-sm"
-              />
-              <figcaption className="text-sm text-gray-600 mt-3 italic">
-                Left (front to back): Pío Colmenares, Isadora Colmenares, Stephanie Loria, Lorenzo Prendini, Valentin Ehrenthal. Right (front to back): Victoria Long, Jairo Moreno-González, Javier Blasco Aróstegui, Taylor, Colby Sain.
-              </figcaption>
-            </figure>
-          </div>
-
-          {/* 2023 Rutgers University Students */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2023</h2>
-            <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-            <figure className="mb-8">
-              <PeopleImage
-                src="/images/2023-Kimberly-Russell-and-students-from-Rutgers-University.HEIC"
-                alt="2023 Kimberly Russell and students from Rutgers University"
-                width={1200}
-                height={800}
-                className="w-full h-auto rounded-sm"
-              />
-              <figcaption className="text-sm text-gray-600 mt-3 italic">
-                Kimberly Russell and students from Rutgers University.
-              </figcaption>
-            </figure>
-          </div>
-
-          {/* 2022 */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2022</h2>
-            <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-            <figure className="mb-8">
-              <PeopleImage
-                src="/images/2022-Lab-end-of-day-Javier-Marcel-Colby-Jairo-Sahibzada-Pio.JPG"
-                alt="2022 end of day in the lab with Javier Blasco Aróstegui, Marcel, Colby Sain, Jairo Moreno-González, Sahibzada M. Jawad, and Pío Colmenares"
-                width={1200}
-                height={800}
-                className="w-full h-auto rounded-sm"
-              />
-              <figcaption className="text-sm text-gray-600 mt-3 italic">
-                Left to right: Javier Blasco Aróstegui, Marcel, Colby Sain, Jairo Moreno-González, Sahibzada M. Jawad, Pío Colmenares.
-              </figcaption>
-            </figure>
-          </div>
-
-          {/* 2021 Lunch */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2021</h2>
-            <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-            <figure className="mb-8">
-              <PeopleImage
-                src="/images/2021-lunch-Ricardo-Lorenzo-Lou-Pio.HEIC"
-                alt="2021 lunch with Ricardo Botero-Trujillo, Lorenzo Prendini, Lou Sorkin, and Pío Colmenares"
-                width={1200}
-                height={800}
-                className="w-full h-auto rounded-sm"
-              />
-              <figcaption className="text-sm text-gray-600 mt-3 italic">
-                Left to right: Ricardo Botero-Trujillo, Lorenzo Prendini, Lou Sorkin, Pío Colmenares.
-              </figcaption>
-            </figure>
-          </div>
-
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Fall 2019</h2>
-          <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/labfall2019_p08qpk.jpg"
-              alt="Fall 2019 Arachnology Lab at AMNH. Left to Right: George Tsinias, Jairo Moreno-González, Lorenzo Prendini, Stephanie Loria, Valentin Ehrenthal, Eleanor Goetz, Pío Colmenares, Miryam Trujillo, Ricardo Botero-Trujillo."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
+          {peopleGroupSectionData.map((section, index) => (
+            <PeopleGroupSection
+              key={`${section.year ?? "group"}-${index}`}
+              year={section.year}
+              subtitle={section.subtitle}
+              cards={section.cards}
             />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: George Tsinias, Jairo Moreno-González, Lorenzo Prendini, Stephanie Loria, 
-              Valentin Ehrenthal, Eleanor Goetz, Pío Colmenares, Miryam Trujillo, Ricardo Botero-Trujillo.
-            </figcaption>
-          </figure>
-
-        {/* July 2019 */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2019</h2>
-          <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/summer2019.jpg"
-              alt="July 2019 Arachnology Lab at AMNH. Left to Right: Elena Babicz, Andria Santos da Silva, Stephanie Loria, Pío Colmenares, Colby Sain, Lorenzo Prendini, Jairo Moreno-González, Ricardo Botero-Trujillo."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
-            />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: Elena Babicz, Andria Santos da Silva, Stephanie Loria, Pío Colmenares, 
-              Colby Sain, Lorenzo Prendini, Jairo Moreno-González, Ricardo Botero-Trujillo.
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* August 2018 */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2018</h2>
-          <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/Prendini_Lab_Summer2018.jpg"
-              alt="August 2018 Arachnology Lab at AMNH. Left to Right: Stephanie Loria, Max Roppo, Lorenzo Prendini, Diogo Casellato, Lou Sorkin, Pío Colmenares, Deborah Chin, Victoria Long, Jayson Slovak."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
-            />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: Stephanie Loria, Max Roppo, Lorenzo Prendini, Diogo Casellato, Lou Sorkin, 
-              Pío Colmenares, Deborah Chin, Victoria Long, Jayson Slovak.
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* September 2017 */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Fall 2017</h2>
-          <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/PrendiniLabSeptember2017.jpg"
-              alt="September 2017 Arachnology Lab at AMNH. Left to Right: Pío Colmenares, Ivan Magalhães, Lorenzo Prendini, Tebogo Lebwada, Lou Sorkin, Gerardo Contreras, Rodrigo Monjáraz Ruedas."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
-            />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: Pío Colmenares, Ivan Magalhães, Lorenzo Prendini, Tebogo Lebwada, 
-              Lou Sorkin, Gerardo Contreras, Rodrigo Monjáraz Ruedas.
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* August 2017 */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2017</h2>
-          <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/PrendiniLabAugust2017.jpg"
-              alt="August 2017 Arachnology Lab at AMNH. Left to Right: Stephanie Loria, Lorenzo Prendini, Pío Colmenares, Jayson Slovak, Deborah Chin."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
-            />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: Stephanie Loria, Lorenzo Prendini, Pío Colmenares, Jayson Slovak, Deborah Chin.
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* August 2015 */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2015</h2>
-          <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/PrendiniLabAugust2015.jpg"
-              alt="August 2015 Arachnology Lab at AMNH. Left to Right: Lorenzo Prendini, Gustavo Miranda, Debbie Alwill, Diogo Casellato (back), Stephanie Loria, Bastian-Jesper Klüßmann-Fricke (back), Michelle Locke, Chelsea Silva, Billy Conlan."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
-            />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: Lorenzo Prendini, Gustavo Miranda, Debbie Alwill, Diogo Casellato (back), 
-              Stephanie Loria, Bastian-Jesper Klüßmann-Fricke (back), Michelle Locke, Chelsea Silva, Billy Conlan.
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* January 2015 */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Winter 2015</h2>
-          <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/PrendiniLabJan2015.jpg"
-              alt="January 2015 Arachnology Lab at AMNH. Left to Right: Michelle Locke, Lorenzo Prendini, Stephanie Loria."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
-            />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: Michelle Locke, Lorenzo Prendini, Stephanie Loria.
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* August 2013 */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2013</h2>
-          <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/scorpiongroups2013.jpg"
-              alt="August 2013 Arachnology Lab at AMNH. Left to Right: Pam Horsely, Stephanie Loria, Lorenzo Prendini, Massimiliano Roppo, Muhammad Tahir."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
-            />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: Pam Horsely, Stephanie Loria, Lorenzo Prendini, Massimiliano Roppo, Muhammad Tahir.
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* August 2011 */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Summer 2011</h2>
-          <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/scorpiongroups.jpg"
-              alt="August 2011 Arachnology Lab at AMNH. Left to Right: Stephanie Loria, Adam Getzler, Ofelia Delgado, Edmundo González, Carlos Santibañez, Lorenzo Prendini, Randy Mercurio."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
-            />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: Stephanie Loria, Adam Getzler, Ofelia Delgado, Edmundo González, 
-              Carlos Santibañez, Lorenzo Prendini, Randy Mercurio.
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* 2006 */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2006</h2>
-          <h6 className="text-lg text-gray-600 mb-6">Arachnology Lab at AMNH</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/scorpiongroup.jpg"
-              alt="2006 Arachnology Lab at AMNH Left to Right: (Back Row) Jeremy Huff, Erich Volschenk, Lionel Monod, Edmundo González, (Front Row) Randy Mercurio, Camilo Mattoni, Lauren A. Esposito, Monica Mosier, Ofelia Delgado, Valerio Vignoli, Lorenzo Prendini."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
-            />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: (Back Row) Jeremy Huff, Erich Volschenk, Lionel Monod, Edmundo González, 
-              (Front Row) Randy Mercurio, Camilo Mattoni, Lauren A. Esposito, Monica Mosier, Ofelia Delgado, 
-              Valerio Vignoli, Lorenzo Prendini.
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* 2007 */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Fall 2007</h2>
-          <h6 className="text-lg text-gray-600 mb-6">Scorpion Biologists ICA</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/ica.jpg"
-              alt="2007 Scorpion Biologists ICA Left to Right: (Back Row) Carsten Kamenz, Mingsheng Zhu, Edmundo González, Roger Farley, Erich Volschenk, Lauren A. Esposito, Camilo Mattoni, (Front Row) Jason Dunlop, Jeremy Huff, Warren Savary, Ricardo Pinto-da-Rocha, Oscar Francke, Lorenzo Prendini."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
-            />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: (Back Row) Carsten Kamenz, Mingsheng Zhu, Edmundo González, Roger Farley, 
-              Erich Volschenk, Lauren A. Esposito, Camilo Mattoni, (Front Row) Jason Dunlop, Jeremy Huff, 
-              Warren Savary, Ricardo Pinto-da-Rocha, Oscar Francke, Lorenzo Prendini.
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* October 2007 */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">2007</h2>
-          <h6 className="text-lg text-gray-600 mb-6">BSI Solifugae Meeting at DMNS</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/Solifugae_2007.jpg"
-              alt="October 2007 BSI Solifugae Meeting at DMNS. Left to Right: Kristie Reddick (TAMU), Bob Wharton (TAMU), Warren Savary (CAS), Aaron Spriggs (DMNS), Tharina Bird (NMNW/CSU), Paula Cushing (DMNS), Lorenzo Prendini (AMNH), Sasha Gromov (IZAK), Jack Brookhart (DMNS)."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
-            />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: Kristie Reddick (TAMU), Bob Wharton (TAMU), Warren Savary (CAS), Aaron Spriggs (DMNS), 
-              Tharina Bird (NMNW/CSU), Paula Cushing (DMNS), Lorenzo Prendini (AMNH), Sasha Gromov (IZAK), 
-              Jack Brookhart (DMNS).
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* December 2008 */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">Winter 2008</h2>
-          <h6 className="text-lg text-gray-600 mb-6">AToL Morphology Scoring Party at Smithsonian USNM</h6>
-          <figure className="mb-8">
-            <PeopleImage
-              src="/images/Atol_2008.jpg"
-              alt="December 2008 AToL Morphology Scoring Party at Smithsonian USNM. Left to Right: Petra Sierwald (FMNH), Jonathan Coddington (USNM), Lorenzo Prendini (AMNH), Gustavo Hormiga (GWU), Charles Griswold (CAS)."
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-sm"
-            />
-            <figcaption className="text-sm text-gray-600 mt-3 italic">
-              Left to Right: Petra Sierwald (FMNH), Jonathan Coddington (USNM), Lorenzo Prendini (AMNH), 
-              Gustavo Hormiga (GWU), Charles Griswold (CAS).
-            </figcaption>
-          </figure>
-        </div>
+          ))}
         </div>
         </div>
 

@@ -1,0 +1,30 @@
+import { PeopleGroupCard, type PeopleGroupCardProps } from "./PeopleGroupCard";
+
+type PeopleGroupSectionProps = {
+  year?: string;
+  subtitle?: string;
+  cards: [PeopleGroupCardProps, ...PeopleGroupCardProps[]];
+};
+
+export const PeopleGroupSection = ({
+  year,
+  subtitle,
+  cards,
+}: PeopleGroupSectionProps) => {
+  return (
+    <div className="mb-12">
+      {year && <h2 className="text-3xl font-bold mt-8 lg:mt-0 text-gray-900 mb-1">{year}</h2>}
+      {subtitle && <h6 className="text-lg text-gray-600 mb-6">{subtitle}</h6>}
+      {cards.map((card) => (
+        <PeopleGroupCard
+          key={`${card.src}-${card.alt}`}
+          src={card.src}
+          alt={card.alt}
+          caption={card.caption}
+          width={card.width}
+          height={card.height}
+        />
+      ))}
+    </div>
+  );
+};
