@@ -2,6 +2,7 @@
 
 import { SideNav } from "../components/SideNav";
 import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
+import { PeopleCard, PeopleCardBody, PeopleCardMedia } from "./PeopleCard";
 import { PeopleImage } from "./PeopleImage";
 import { PeopleSectionTabs } from "./PeopleSectionTabs";
 import { PeopleSearch } from "./PeopleSearch";
@@ -654,9 +655,8 @@ export default function People() {
           <div data-tab="current" className={museumTab === 'current' ? 'block' : 'hidden'}>
           <p className="text-gray-900 mb-8">Current museum specialist of the Arachnology Lab at AMNH</p>
           {/* Pio Colmenares */}
-          <div className="mb-8 pb-8">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Pio.jpg"
                   alt="Pío A. Colmenares"
@@ -664,8 +664,8 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-xl font-bold mb-1 text-gray-900">Pío A. Colmenares</h3>
                 <p className="text-lg text-gray-600 mb-4">Museum Specialist and Collections Manager, Arachnid and Myriapod Collections</p>
                 <p className="mb-3">
@@ -689,9 +689,8 @@ export default function People() {
                     <p>Phone: (212) 769-5614</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
           </div>
 
           <div
@@ -701,9 +700,8 @@ export default function People() {
           <p className="text-gray-900 mb-8">Former museum specialists of the Arachnology Lab at AMNH</p>
 
           {/* Michelle Locke */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/MichelleLockeField.jpg"
                   alt="Michelle Locke"
@@ -711,22 +709,20 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h4 className="text-lg font-bold mb-1 text-gray-900">Michelle Locke</h4>
                 <p className="text-base text-gray-600 mb-1">Scientific Assistant</p>
                 <p className="text-sm text-gray-500 mb-3">Technical staff from 2015 to 2016</p>
                 <p className="text-gray-700">
                   Michelle Locke completed her MSc at Carleton University, in Ottawa ON. Michelle's MSc thesis was a revision of the flower fly genus <em>Dasysyrphus</em> (Diptera: Syrphidae) under the supervision of Dr. Jeff Skevington of Agriculture and Agri-Food Canada. before coming to the AMNH she worked as a contract Research Technician at the Canadian National Collection of Insects, Arachnids and Nematodes in Ottawa, ON. Her contract work focused on the Syrphidae collection, doing identifications, curation, databasing, species level conservation assessments, macro photography of specimens and work on a field guide to the Syrphidae. She came to the Division of Invertebrate Zoology, AMNH in 2014.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Pamela Horsley */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Pam.jpg"
                   alt="Pamela Horsley"
@@ -734,22 +730,20 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h4 className="text-lg font-bold mb-1 text-gray-900">Pamela Horsley</h4>
                 <p className="text-base text-gray-600 mb-1">Scientific Assistant</p>
                 <p className="text-sm text-gray-500 mb-3">Technical staff from 2013 to 2014</p>
                 <p className="text-gray-700">
                   Pamela completed her MSc in Entomology at McGill University in 2009 and her thesis research included a systematic revision of the hyper-diverse leaf litter-inhabiting genus <em>Trachyphloeomimus</em> (Curculionidae, Entiminae). In 2009, she was hired through an NSF grant as the Entomology Collection Manager at the San Diego Natural History Museum. Her research and work experience has allowed her to do field work in central and northeast Mexico, as well as the south-western United States. She is heavily involved with the Entomological Collections Network (ECN), <a href="http://www.ecnweb.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Entomological Collections Network</a>, serving as president and assisting with coordination of the annual meetings.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Ofelia Delgado */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/ofelialab.jpg"
                   alt="Ofelia Delgado"
@@ -757,22 +751,20 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h4 className="text-lg font-bold mb-1 text-gray-900">Ofelia Delgado</h4>
                 <p className="text-base text-gray-600 mb-1">Scientific Assistant</p>
                 <p className="text-sm text-gray-500 mb-3">Technical staff from 2010 to 2012</p>
                 <p className="text-gray-700">
                   Ofelia completed her BSc in Biology at the Facultad de Ciencias, Universidad Nacional Autónoma de México (UNAM) in 2000, based on a floristic survey of tropical dry forest. After graduating, she assisted in the curation of the Section of Odonata in the Insects National Collection, Instituto de Biología, UNAM, focusing on the Odonata of Jalisco. Her experience in the field includes collecting arachnids, insects and plants in Central and Southern Mexico. After volunteering in Lorenzo Prendini's molecular lab for several years, she came to work as a Scientific Assistant in January 2010, spending much time working on solifuges and scorpions in the molecular lab.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Jeremy Huff */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/huff2.jpg"
                   alt="Jeremy Huff"
@@ -780,22 +772,20 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h4 className="text-lg font-bold mb-1 text-gray-900">Jeremy Huff</h4>
                 <p className="text-base text-gray-600 mb-1">Scientific Assistant</p>
                 <p className="text-sm text-gray-500 mb-3">Technical staff from 2007 to 2010</p>
                 <p className="text-gray-700">
                   Jeremy began working as a Scientific Assistant in the Division of Invertebrate Zoology in 2007. His main research interest is the systematics of the whip scorpions (Thelyphonida). Huff has extensive field experience collecting arachnids in Belize, Cameroon, Costa Rica, Dominican Republic, French Guiana, Grand Cayman, Guatemala, Guinea-Bissau, Guyana, Malaysia, Martinique, Mexico, Senegal, South Africa and the southwestern USA. He did 10 field trips for the AMNH and has collected several thousand specimens and discovered many new species.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Randy Mercurio */}
-          <div className="pb-6">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="pb-6">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/mercurio3.jpg"
                   alt="Randy Mercurio"
@@ -803,17 +793,16 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h4 className="text-lg font-bold mb-1 text-gray-900">Randy Mercurio</h4>
                 <p className="text-base text-gray-600 mb-1">Scientific Assistant</p>
                 <p className="text-sm text-gray-500 mb-3">Technical staff from 2002 to 2007</p>
                 <p className="text-gray-700">
                   Randy joined the Division of Invertebrate Zoology, AMNH, as a full-time employee in 2002, after completing a B.A. in Biology at New York University. He worked as Scientific Assistant to Lorenzo Prendini and managed the curation of the Arachnid and Myriapod Collections. Randy is a professional photographer and was responsible for producing many of the photographs in publications and the group's website. His other research interests include the taxonomy, natural history, ecology and biogeography of centipedes in North America, as well as their functional morphology. He has collected arachnids and myriapods in Arizona, California, Connecticut, Florida, Massachusetts, New York, Nevada, Rhode Island, and Mexico.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
           </div>
         </div>
         </div>
@@ -827,9 +816,8 @@ export default function People() {
           />
           <div data-tab="current" className={technicalStaffTab === 'current' ? 'block' : 'hidden'}>
           {/* Steve Thurston */}
-          <div className="mb-12 pb-12 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-12 pb-12 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/thurston.jpg"
                   alt="Steve Thurston"
@@ -837,21 +825,19 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-xl font-bold mb-1 text-gray-900">Steve Thurston</h3>
                 <p className="text-lg text-gray-600 mb-4">Scientific Illustrator</p>
                 <p className="text-gray-700">
                   While completing his BS in Horticulture at the University of Connecticut (1977), Steve was trained by M.J. Brush in the Biological Illustration studio and began working as a scientific illustrator, drawing bugs for Dr. James A. Slater. He later received his MFA in New Genres/Video at The San Francisco Art Institute and has worked variously as a carpenter, video maker, artist and illustrator. He began full time employment at the AMNH in 1999 as a Scientific Assistant, providing illustration, photo and graphic support to the Division of Invertebrate Zoology.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Victoria Long */}
-          <div className="mb-12 pb-8">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-12 pb-8">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/victoria.jpg"
                   alt="Victoria Long"
@@ -859,16 +845,15 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h3 className="text-xl font-bold mb-1 text-gray-900">Victoria Long</h3>
                 <p className="text-lg text-gray-600 mb-4">Staff Member</p>
                 <p className="text-gray-700">
                   Victoria Long Lab Technician Staff from 2021 to 2026 Victoria worked in the Arachnology Lab as a Technician on the NSF Pedipalpi grant (PI: Prendini) from 2021 to 2026, conducting DNA extraction, quantitation, PCR and sequencing.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           </div>
 
@@ -881,9 +866,8 @@ export default function People() {
           <p className="text-xl text-gray-600 mb-8">Former technical staff of the Arachnology Lab at AMNH</p>
 
           {/* Eleanor Goetz */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="md:col-span-2">
+          <PeopleCard containerClassName="mb-8 pb-8 border-b border-gray-200">
+              <PeopleCardMedia>
                 <PeopleImage
                   src="/images/Eleanor1_blmjit.jpg"
                   alt="Eleanor Goetz"
@@ -891,17 +875,16 @@ export default function People() {
                   height={533}
                   className="w-full h-auto rounded-sm"
                 />
-              </div>
-              <div className="md:col-span-3">
+              </PeopleCardMedia>
+              <PeopleCardBody>
                 <h4 className="text-lg font-bold mb-1 text-gray-900">Eleanor Goetz</h4>
                 <p className="text-base text-gray-600 mb-1">Lab Technician</p>
                 <p className="text-sm text-gray-500 mb-3">Technical staff from 2019 to 2021</p>
                 <p className="text-gray-700">
                   Eleanor graduated from Smith College in 2019 with a BA in Biological Sciences, where she was a member of the Katz Lab and focussed on the lifecycles of foraminifera. She started in the Prendini lab as a Science Research Mentoring Program student in 2013 and continued to volunteer before starting as a Lab Technician in the fall of 2019. Eleanor currently works in the molecular lab doing DNA extractions, PCRs, Sanger Sequencing preparations, and generating molecular data.
                 </p>
-              </div>
-            </div>
-          </div>
+              </PeopleCardBody>
+          </PeopleCard>
 
           {/* Additional Alumni - Condensed */}
           <div className="space-y-6">
