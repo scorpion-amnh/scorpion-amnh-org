@@ -5,134 +5,7 @@ import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { SideNav } from "../components/SideNav";
 import { Tabs } from "../components/Tabs";
 import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
-
-const peopleImageFolderOverrides: Record<string, string> = {
-  "2024-fieldwork-Pio-and-Jairo.HEIC": "field",
-  "2024-preparing-samples-abroad.JPG": "field",
-  "Loria.jpg": "field",
-  "drawing.jpg": "research",
-};
-
-const peopleImageFilenameAliases: Record<string, string> = {
-  "2025-Colmenares-and-visiting-researchers-in-the-collection.jpg": "2025-Pio-Colmenares-and-visiting-researchers-in-the-collection.jpg",
-  "2025-Molecular-lab-interns-Summer-2025.jpg": "2025-molecular-lab-summer-interns--Adithya-Raghunath--Jakub-Minkiewicz--Jack-Coulson--Maxine-Ting.jpg",
-  "2025-Group-photp-back-Nick-William-Jose-Jairo-Drusilla-Lorenzo-Pio-front-Javier-Colby.jpg": "2025-lab-outside-guilder-center--Nick-Cazzaniga--William-Phillips--Jose-Barba-Montoya--Jairo-A-Moreno-Gonzalez--Drusilla-Sheridan--Lorenzo-Prendini--Pio-Colmenares--Javier-Blasco-Arostegui--Colby-Sain.jpg",
-  "highschool2006.jpg": "Jianhua-Lin--and--Qiao-Rong-Huang.jpg",
-  "SRMPSashaandEleanor.jpg": "Sasha-Reiter--and--Eleanor-Goetz.jpg",
-  "jose_barba_arachnology_lab.jpg": "Jose-Barba-Montoya.jpg",
-  "Jesus.jpg": "Jesus-Alberto-Cruz-Lopez.jpg",
-  "2024-lunch-Pio-Ricardo-Lorenzo-Colby-Jairo.JPG": "2024-lab-lunch--Pio-Colmenares--Ricardo-Botero-Trujillo--Lorenzo-Prendini--Colby-Sain--Jairo-Blasco-Arostegui.JPG",
-  "2023-dinner-Left-front-to-back-Pio-Isadora-Stephanie-Lorenzo-Valentin-right-front-to-back-Victoria-Jairo-Javier-Taylor-Colby.JPG": "2023-lab-dinner--Pio-Colmenares--Isadora-Colmenares--Stephanie-Loria--Lorenzo-Prendini--Valentin-Ehrenthal--Victoria-Long--Jairo-A-Moreno-Gonzalez--Javier-Blasco-Arostegui--Taylor-Hicks--Colby-Sain.JPG",
-  "2023-Kimberly-Russell-and-students-from-Rutgers-University.HEIC": "2023-Kimberly-Russell-and-students-from-Rutgers-University.jpg",
-  "2022-Lab-end-of-day-Javier-Marcel-Colby-Jairo-Sahibzada-Pio.JPG": "2022-lab-in-rose-center--Javier-Blasco-Arostegui--Marcel-Hermes--Colby-Sain--Jairo-A-Moreno-Gonzalez--Sahibzada-M-Jawad--Pio-Colmenares.jpg",
-  "2021-lunch-Ricardo-Lorenzo-Lou-Pio.HEIC": "2021-lab-lunch--Ricardo-Botero-Trujillo--Lorenzo-Prendini--Lou-Sorkin--Pio-Colmenares.jpg",
-  "labfall2019_p08qpk.jpg": "2019-lab-in-NYC-fall.jpg",
-  "summer2019.jpg": "2019-lab-in-NYC-summer.jpg",
-  "Prendini_Lab_Summer2018.jpg": "2018-lab-outside-AMNH.jpg",
-  "PrendiniLabSeptember2017.jpg": "2017-lab-outside-AMNH.jpg",
-  "PrendiniLabAugust2017.jpg": "2017-lab-in-NYC.jpg",
-  "PrendiniLabAugust2015.jpg": "2015-lab-outside-AMNH.jpg",
-  "PrendiniLabJan2015.jpg": "2015-lab-inside-AMNH-paleontology.jpg",
-  "scorpiongroups2013.jpg": "2013-lab-outside-AMNH.jpg",
-  "scorpiongroups.jpg": "2011-lab-outside-AMNH.jpg",
-  "scorpiongroup.jpg": "2006-lab-outside-AMNH.jpg",
-  "ica.jpg": "2007-scorpion-biologists-ICA.jpg",
-  "Solifugae_2007.jpg": "2007-BSI-solifugae-meeting-at-DMNS.jpg",
-  "Atol_2008.jpg": "2008-ATOL-morphology-scroing-party-at-Smithsonian-USNM.jpg",
-};
-
-const normalizeImageLookupText = (value: string) =>
-  value
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
-    .replace(/ß/g, "ss")
-    .replace(/[’']/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
-
-const toTitleCaseHyphen = (value: string) =>
-  value
-    .split(" ")
-    .filter(Boolean)
-    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
-    .join("-");
-
-const resolvePeopleImageSrc = (src: ImageProps["src"]) => {
-  if (typeof src !== "string") {
-    return src;
-  }
-
-  if (!src.startsWith("/images/")) {
-    return src;
-  }
-
-  const relative = src.replace("/images/", "");
-  if (relative.includes("/")) {
-    return src;
-  }
-
-  const overrideFolder = peopleImageFolderOverrides[relative];
-  if (overrideFolder) {
-    return `/images/${overrideFolder}/${relative}`;
-  }
-
-  const aliasFilename = peopleImageFilenameAliases[relative] ?? relative;
-  return `/images/people/${aliasFilename}`;
-};
-
-const getNameBasedPeopleCandidates = (alt?: string) => {
-  if (!alt) {
-    return [];
-  }
-
-  const normalized = normalizeImageLookupText(alt);
-  if (!normalized) {
-    return [];
-  }
-
-  const tokens = normalized.split(" ").filter(Boolean);
-  const baseNames = new Set<string>();
-
-  if (tokens.length > 0) {
-    baseNames.add(toTitleCaseHyphen(tokens.join(" ")));
-    baseNames.add(tokens.join("-"));
-  }
-
-  if (tokens.length >= 3) {
-    const withoutSingleLetterTokens = tokens.filter((token) => token.length > 1);
-    if (withoutSingleLetterTokens.length >= 2) {
-      baseNames.add(toTitleCaseHyphen(withoutSingleLetterTokens.join(" ")));
-      baseNames.add(withoutSingleLetterTokens.join("-"));
-    }
-  }
-
-  const extensions = ["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"];
-  const candidates: string[] = [];
-
-  baseNames.forEach((baseName) => {
-    if (baseName.includes(".")) {
-      candidates.push(`/images/people/${baseName}`);
-      return;
-    }
-
-    extensions.forEach((extension) => {
-      candidates.push(`/images/people/${baseName}.${extension}`);
-    });
-  });
-
-  return candidates;
-};
-
-const getImageCandidates = (src: ImageProps["src"], alt?: string) => {
-  const resolved = resolvePeopleImageSrc(src);
-  if (typeof resolved !== "string") {
-    return [resolved];
-  }
-
-  const candidates = [resolved, ...getNameBasedPeopleCandidates(alt)];
-  return candidates.filter((candidate, index) => candidates.indexOf(candidate) === index);
-};
+import { getImageCandidates, resolvePeopleImageSrc } from "./imageUtils";
 
 const Image = (props: ImageProps) => {
   const candidates = useMemo(
@@ -140,6 +13,11 @@ const Image = (props: ImageProps) => {
     [props.src, props.alt]
   );
   const [candidateIndex, setCandidateIndex] = useState(0);
+
+  useEffect(() => {
+    setCandidateIndex(0);
+  }, [candidates]);
+
   const candidateCount = candidates.length;
   const normalizedCandidateIndex = candidateCount > 0
     ? Math.min(candidateIndex, candidateCount - 1)
@@ -172,6 +50,33 @@ type PeopleIndexItem = {
   sectionLabel: string;
   tab?: 'current' | 'alumni';
 };
+
+type SectionTab = 'current' | 'alumni';
+
+type TabSectionId =
+  | 'museum-specialists'
+  | 'technical-staff'
+  | 'research-affiliates'
+  | 'postdocs'
+  | 'graduate-students'
+  | 'undergraduate-students'
+  | 'high-school-students'
+  | 'volunteers'
+  | 'visiting-students';
+
+const defaultSectionTabs: Record<TabSectionId, SectionTab> = {
+  'museum-specialists': 'current',
+  'technical-staff': 'current',
+  'research-affiliates': 'current',
+  postdocs: 'current',
+  'graduate-students': 'alumni',
+  'undergraduate-students': 'alumni',
+  'high-school-students': 'alumni',
+  volunteers: 'current',
+  'visiting-students': 'alumni',
+};
+
+const isTabSectionId = (value: string): value is TabSectionId => value in defaultSectionTabs;
 
 const ignoredPersonHeadingLabels = new Set([
   "Contact",
@@ -242,15 +147,7 @@ const getFuzzyScore = (query: string, name: string) => {
 
 export default function People() {
   const [activeSection, setActiveSection] = useState('lab-evolution');
-  const [museumTab, setMuseumTab] = useState<'current' | 'alumni'>('current');
-  const [technicalStaffTab, setTechnicalStaffTab] = useState<'current' | 'alumni'>('current');
-  const [researchAffiliatesTab, setResearchAffiliatesTab] = useState<'current' | 'alumni'>('current');
-  const [postdocsTab, setPostdocsTab] = useState<'current' | 'alumni'>('current');
-  const [graduateStudentsTab, setGraduateStudentsTab] = useState<'current' | 'alumni'>('alumni');
-  const [undergraduateStudentsTab, setUndergraduateStudentsTab] = useState<'current' | 'alumni'>('alumni');
-  const [highSchoolStudentsTab, setHighSchoolStudentsTab] = useState<'current' | 'alumni'>('alumni');
-  const [volunteersTab, setVolunteersTab] = useState<'current' | 'alumni'>('current');
-  const [visitingStudentsTab, setVisitingStudentsTab] = useState<'current' | 'alumni'>('alumni');
+  const [sectionTabs, setSectionTabs] = useState<Record<TabSectionId, SectionTab>>(defaultSectionTabs);
   const [peopleIndex, setPeopleIndex] = useState<PeopleIndexItem[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -281,6 +178,18 @@ export default function People() {
     () => Object.fromEntries(sections.map((section) => [section.id, section.label])),
     [sections]
   );
+
+  const sectionIdSet = useMemo(() => new Set(sections.map((section) => section.id)), [sections]);
+
+  const museumTab = sectionTabs['museum-specialists'];
+  const technicalStaffTab = sectionTabs['technical-staff'];
+  const researchAffiliatesTab = sectionTabs['research-affiliates'];
+  const postdocsTab = sectionTabs.postdocs;
+  const graduateStudentsTab = sectionTabs['graduate-students'];
+  const undergraduateStudentsTab = sectionTabs['undergraduate-students'];
+  const highSchoolStudentsTab = sectionTabs['high-school-students'];
+  const volunteersTab = sectionTabs.volunteers;
+  const visitingStudentsTab = sectionTabs['visiting-students'];
 
   const getHeaderHeight = useCallback(() => {
     const rootStyles = getComputedStyle(document.documentElement);
@@ -355,43 +264,22 @@ export default function People() {
     setPeopleIndex(index);
   }, [sectionLabelMap]);
 
-  const setTabForSection = (sectionId: string, tab?: 'current' | 'alumni' | null) => {
-    if (!tab) {
+  const setTabForSection = useCallback((sectionId: string, tab?: SectionTab | null) => {
+    if (!tab || !isTabSectionId(sectionId)) {
       return;
     }
 
-    switch (sectionId) {
-      case 'museum-specialists':
-        setMuseumTab(tab);
-        break;
-      case 'technical-staff':
-        setTechnicalStaffTab(tab);
-        break;
-      case 'research-affiliates':
-        setResearchAffiliatesTab(tab);
-        break;
-      case 'postdocs':
-        setPostdocsTab(tab);
-        break;
-      case 'graduate-students':
-        setGraduateStudentsTab(tab);
-        break;
-      case 'undergraduate-students':
-        setUndergraduateStudentsTab(tab);
-        break;
-      case 'high-school-students':
-        setHighSchoolStudentsTab(tab);
-        break;
-      case 'volunteers':
-        setVolunteersTab(tab);
-        break;
-      case 'visiting-students':
-        setVisitingStudentsTab(tab);
-        break;
-      default:
-        break;
-    }
-  };
+    setSectionTabs((current) => {
+      if (current[sectionId] === tab) {
+        return current;
+      }
+
+      return {
+        ...current,
+        [sectionId]: tab,
+      };
+    });
+  }, []);
 
   const handlePersonSelect = (id: string, name: string, sectionId: string, tab?: 'current' | 'alumni') => {
     setSearchQuery(name);
@@ -525,15 +413,7 @@ export default function People() {
     runPendingPersonScroll();
   }, [
     activeSection,
-    museumTab,
-    technicalStaffTab,
-    researchAffiliatesTab,
-    postdocsTab,
-    graduateStudentsTab,
-    undergraduateStudentsTab,
-    highSchoolStudentsTab,
-    volunteersTab,
-    visitingStudentsTab,
+    sectionTabs,
     runPendingPersonScroll,
   ]);
 
@@ -545,15 +425,7 @@ export default function People() {
     return () => cancelAnimationFrame(frame);
   }, [
     activeSection,
-    museumTab,
-    technicalStaffTab,
-    researchAffiliatesTab,
-    postdocsTab,
-    graduateStudentsTab,
-    undergraduateStudentsTab,
-    highSchoolStudentsTab,
-    volunteersTab,
-    visitingStudentsTab,
+    sectionTabs,
     buildPeopleIndex,
   ]);
 
@@ -575,51 +447,58 @@ export default function People() {
   useEffect(() => {
     const applyHash = () => {
       const hash = window.location.hash.replace('#', '');
-      if (hash) {
+      if (!hash) {
+        return;
+      }
+
+      if (sectionIdSet.has(hash)) {
+        pendingPersonScrollId.current = null;
         shouldScrollOnSectionChange.current = true;
         setActiveSection(hash);
+        return;
       }
+
+      const target = document.getElementById(hash);
+      if (!target) {
+        return;
+      }
+
+      const sectionElement = target.closest('[data-section]') as HTMLElement | null;
+      const sectionId = sectionElement?.getAttribute('data-section');
+      if (!sectionId || !sectionIdSet.has(sectionId)) {
+        return;
+      }
+
+      const tab = (target.closest('[data-tab]') as HTMLElement | null)?.getAttribute('data-tab') as SectionTab | null;
+      setTabForSection(sectionId, tab);
+      setActiveSection(sectionId);
+      shouldScrollOnSectionChange.current = false;
+      pendingPersonScrollId.current = hash;
+      requestAnimationFrame(() => {
+        runPendingPersonScroll();
+      });
     };
 
     applyHash();
     window.addEventListener('hashchange', applyHash);
     return () => window.removeEventListener('hashchange', applyHash);
-  }, []);
+  }, [sectionIdSet, setTabForSection, runPendingPersonScroll]);
 
   const handleSectionSelect = (id: string) => {
     setActiveSection(id);
     shouldScrollOnSectionChange.current = true;
 
-    switch (id) {
-      case 'museum-specialists':
-        setMuseumTab('current');
-        break;
-      case 'technical-staff':
-        setTechnicalStaffTab('current');
-        break;
-      case 'research-affiliates':
-        setResearchAffiliatesTab('current');
-        break;
-      case 'postdocs':
-        setPostdocsTab('current');
-        break;
-      case 'graduate-students':
-        setGraduateStudentsTab('current');
-        break;
-      case 'undergraduate-students':
-        setUndergraduateStudentsTab('current');
-        break;
-      case 'high-school-students':
-        setHighSchoolStudentsTab('current');
-        break;
-      case 'volunteers':
-        setVolunteersTab('current');
-        break;
-      case 'visiting-students':
-        setVisitingStudentsTab('current');
-        break;
-      default:
-        break;
+    if (isTabSectionId(id)) {
+      setSectionTabs((current) => {
+        if (current[id] === 'current') {
+          return current;
+        }
+
+        return {
+          ...current,
+          [id]: 'current',
+        };
+      });
     }
   };
 
@@ -1306,7 +1185,7 @@ export default function People() {
                 { value: 'alumni', label: 'Alumni' },
               ]}
               value={museumTab}
-              onChange={setMuseumTab}
+              onChange={(value) => setTabForSection('museum-specialists', value)}
             />
           </div>
 
@@ -1487,7 +1366,7 @@ export default function People() {
                 { value: 'alumni', label: 'Alumni' },
               ]}
               value={technicalStaffTab}
-              onChange={setTechnicalStaffTab}
+              onChange={(value) => setTabForSection('technical-staff', value)}
             />
           </div>
           <div data-tab="current" className={technicalStaffTab === 'current' ? 'block' : 'hidden'}>
@@ -1623,7 +1502,7 @@ export default function People() {
                 { value: 'current', label: 'Current' },
               ]}
               value={researchAffiliatesTab}
-              onChange={setResearchAffiliatesTab}
+              onChange={(value) => setTabForSection('research-affiliates', value)}
             />
           </div>
 
@@ -1727,7 +1606,7 @@ export default function People() {
                 { value: 'alumni', label: 'Alumni' },
               ]}
               value={postdocsTab}
-              onChange={setPostdocsTab}
+              onChange={(value) => setTabForSection('postdocs', value)}
             />
           </div>
           <div data-tab="current" className={postdocsTab === 'current' ? 'block' : 'hidden'}>
@@ -2016,7 +1895,7 @@ export default function People() {
                 { value: 'alumni', label: 'Alumni' },
               ]}
               value={graduateStudentsTab}
-              onChange={setGraduateStudentsTab}
+              onChange={(value) => setTabForSection('graduate-students', value)}
             />
           </div>
           <div data-tab="current" className={graduateStudentsTab === 'current' ? 'block' : 'hidden'}>
@@ -2281,7 +2160,7 @@ export default function People() {
                 { value: 'alumni', label: 'Alumni' },
               ]}
               value={undergraduateStudentsTab}
-              onChange={setUndergraduateStudentsTab}
+              onChange={(value) => setTabForSection('undergraduate-students', value)}
             />
           </div>
           <div data-tab="current" className={undergraduateStudentsTab === 'current' ? 'block' : 'hidden'}>
@@ -2429,7 +2308,7 @@ export default function People() {
                 { value: 'alumni', label: 'Alumni' },
               ]}
               value={highSchoolStudentsTab}
-              onChange={setHighSchoolStudentsTab}
+              onChange={(value) => setTabForSection('high-school-students', value)}
             />
           </div>
           <div data-tab="current" className={highSchoolStudentsTab === 'current' ? 'block' : 'hidden'}>
@@ -3121,7 +3000,7 @@ export default function People() {
                 { value: 'alumni', label: 'Alumni' },
               ]}
               value={volunteersTab}
-              onChange={setVolunteersTab}
+              onChange={(value) => setTabForSection('volunteers', value)}
             />
           </div>
           <div data-tab="current" className={volunteersTab === 'current' ? 'block' : 'hidden'}>
@@ -4082,7 +3961,7 @@ export default function People() {
                 { value: 'alumni', label: 'Alumni' },
               ]}
               value={visitingStudentsTab}
-              onChange={setVisitingStudentsTab}
+              onChange={(value) => setTabForSection('visiting-students', value)}
             />
           </div>
           <div data-tab="current" className={visitingStudentsTab === 'current' ? 'block' : 'hidden'}>

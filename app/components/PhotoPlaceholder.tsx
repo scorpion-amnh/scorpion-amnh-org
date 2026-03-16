@@ -1,78 +1,12 @@
 'use client';
 
 import NextImage from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { getNameBasedPeopleCandidates } from "../people/imageUtils";
 
 type PhotoPlaceholderProps = {
   name: string;
   className?: string;
-};
-
-const normalizeImageLookupText = (value: string) =>
-  value
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
-    .replace(/ß/g, "ss")
-    .replace(/[’']/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
-
-const toTitleCaseHyphen = (value: string) =>
-  value
-    .split(" ")
-    .filter(Boolean)
-    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
-    .join("-");
-
-const toTitleCaseUnderscore = (value: string) =>
-  value
-    .split(" ")
-    .filter(Boolean)
-    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
-    .join("_");
-
-const getNameBasedPeopleCandidates = (name: string) => {
-  const normalized = normalizeImageLookupText(name);
-  if (!normalized) {
-    return [];
-  }
-
-  const tokens = normalized.split(" ").filter(Boolean);
-  const baseNames = new Set<string>();
-
-  if (tokens.length > 0) {
-    baseNames.add(toTitleCaseHyphen(tokens.join(" ")));
-    baseNames.add(tokens.join("-"));
-    baseNames.add(toTitleCaseUnderscore(tokens.join(" ")));
-    baseNames.add(tokens.join("_"));
-  }
-
-  if (tokens.length >= 3) {
-    const withoutSingleLetterTokens = tokens.filter((token) => token.length > 1);
-    if (withoutSingleLetterTokens.length >= 2) {
-      baseNames.add(toTitleCaseHyphen(withoutSingleLetterTokens.join(" ")));
-      baseNames.add(withoutSingleLetterTokens.join("-"));
-      baseNames.add(toTitleCaseUnderscore(withoutSingleLetterTokens.join(" ")));
-      baseNames.add(withoutSingleLetterTokens.join("_"));
-    }
-  }
-
-  const extensions = ["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"];
-  const candidates: string[] = [];
-
-  baseNames.forEach((baseName) => {
-    if (baseName.includes(".")) {
-      candidates.push(`/images/people/${baseName}`);
-      return;
-    }
-
-    extensions.forEach((extension) => {
-      candidates.push(`/images/people/${baseName}.${extension}`);
-    });
-  });
-
-  return candidates.filter((candidate, index) => candidates.indexOf(candidate) === index);
 };
 
 const getInitials = (name: string) => {
@@ -101,8 +35,16 @@ export const PhotoPlaceholder = ({ name, className }: PhotoPlaceholderProps) => 
     .filter(Boolean)
     .join(' ');
 
-  const candidates = useMemo(() => getNameBasedPeopleCandidates(name), [name]);
+  const candidates = useMemo(
+    () => getNameBasedPeopleCandidates(name, { includeUnderscore: true }),
+    [name]
+  );
   const [candidateIndex, setCandidateIndex] = useState(0);
+
+  useEffect(() => {
+    setCandidateIndex(0);
+  }, [candidates]);
+
   const safeCandidateIndex = candidateIndex < candidates.length ? candidateIndex : 0;
   const showInitialsFallback = candidates.length === 0 || candidateIndex >= candidates.length;
 
