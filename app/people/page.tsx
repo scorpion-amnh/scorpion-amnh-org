@@ -672,7 +672,7 @@ export default function People() {
                       className="w-full h-auto rounded-sm"
                     />
                   </div>
-                  <div className="md:col-span-3">
+                  <PeopleCardBody>
                     <h4 className="text-lg font-bold mb-1 text-gray-900">{person.name}</h4>
                     <p className="text-base text-gray-600 mb-1">{person.title}</p>
                     <p className="text-sm text-gray-500 mb-3">Technical staff from {person.years}</p>
@@ -681,7 +681,7 @@ export default function People() {
                         `${person.name.split(' ')[0]} worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. ${person.name.split(' ')[0] === 'Kanvaly' ? 'He' : 'She'} assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.`
                       }
                     </p>
-                  </div>
+                  </PeopleCardBody>
                 </div>
               </div>
             ))}
@@ -1327,12 +1327,12 @@ export default function People() {
                       <PhotoPlaceholder name={person.name} />
                     )}
                   </div>
-                  <div className="md:col-span-3">
+                  <PeopleCardBody>
                     <h3 className="text-lg font-bold mb-1 text-gray-900">{person.name}</h3>
                     <p className="text-base text-gray-600 mb-1">{person.affiliation}</p>
                     <p className="text-sm text-gray-500 mb-3">Undergraduate student {person.years.includes('to') ? 'from' : 'in'} {person.years}</p>
                     <p className="text-gray-700">{person.bio}</p>
-                  </div>
+                  </PeopleCardBody>
                 </div>
               </div>
             ))}
@@ -1405,12 +1405,12 @@ export default function People() {
                       <PhotoPlaceholder name={person.name} />
                     )}
                   </div>
-                  <div className="md:col-span-3">
+                  <PeopleCardBody>
                     <h3 className="text-lg font-bold mb-1 text-gray-900">{person.name}</h3>
                     <p className="text-base text-gray-600 mb-1">{person.affiliation}</p>
                     <p className="text-sm text-gray-500 mb-3">Undergraduate student {person.years.includes('to') ? 'from' : 'in'} {person.years}</p>
                     <p className="text-gray-700" dangerouslySetInnerHTML={{ __html: person.bio }} />
-                  </div>
+                  </PeopleCardBody>
                 </div>
               </div>
             ))}

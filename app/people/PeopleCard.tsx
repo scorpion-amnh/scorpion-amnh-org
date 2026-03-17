@@ -10,8 +10,11 @@ type PeopleCardSlotProps = {
   className?: string;
 };
 
+const buildClassName = (baseClassName: string, className?: string) =>
+  [baseClassName, className].filter(Boolean).join(" ");
+
 export const PeopleCard = ({ children, containerClassName }: PeopleCardProps) => {
-  const classes = ["people-card", containerClassName].filter(Boolean).join(" ");
+  const classes = buildClassName("people-card", containerClassName);
 
   return (
     <div className={classes}>
@@ -21,11 +24,11 @@ export const PeopleCard = ({ children, containerClassName }: PeopleCardProps) =>
 };
 
 export const PeopleCardMedia = ({ children, className }: PeopleCardSlotProps) => {
-  const classes = ["md:col-span-2", className].filter(Boolean).join(" ");
+  const classes = buildClassName("md:col-span-2", className);
   return <div className={classes}>{children}</div>;
 };
 
 export const PeopleCardBody = ({ children, className }: PeopleCardSlotProps) => {
-  const classes = ["md:col-span-3", className].filter(Boolean).join(" ");
+  const classes = buildClassName("md:col-span-3", className);
   return <div className={classes}>{children}</div>;
 };
