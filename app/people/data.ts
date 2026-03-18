@@ -1,5 +1,34 @@
 import type { PeopleCategory } from "./types";
 
+export const principalInvestigatorData: PeopleCategory = {
+  current: [
+    {
+      id: "lorenzo-prendini",
+      name: "Lorenzo Prendini",
+      title: [
+        { title: "Curator of Arachnida and Myriapoda, Division of Invertebrate Zoology", url: "https://www.amnh.org/research/staff-directory/lorenzo-prendini", label: "Lorenzo Prendini: Curator, Invertebrate Zoology, Professor RGGS | AMNH" },
+        { title: "Professor of Comparative Biology, Richard Gilder Graduate School", url: "https://www.amnh.org/research/richard-gilder-graduate-school", label: "Graduate Programs at the Museum | Richard Gilder Graduate School" },
+        { title: "Principle Investigator, Institute of Comparative Genomics", url: "https://www.amnh.org/research/institute-comparative-genomics", label: "Institute for Comparative Genomics | AMNH" },
+        { title: "Chair, AMNH Scientific Publications", url: "https://www.amnh.org/research/scientific-publications", label: "Scientific Publications | American Museum of Natural History" },
+        { title: "Adjunct Professor, Ecology, Evolution and Behavior, City University of New York", url: "https://www.gc.cuny.edu/people/lorenzo-prendini", label: "Prendini, Lorenzo | CUNY Graduate Center" }
+      ],
+      image: "Lorenzo-Prendini.jpg",
+      bio: null,
+      links: [
+        { label: "Curriculum Vitae (PDF)", url: "/documents/PrendiniCV2020_jyaiq9.pdf" },
+        { label: "Research Gate", url: "https://www.researchgate.net/profile/Lorenzo-Prendini" },
+        { label: "AMNH Meet the Scientists Video", url: "https://www.amnh.org/explore/videos/research-and-collections/profile-lorenzo-prendini" },
+        { label: "Google Scholar", url: "https://scholar.google.com/citations?user=fU0VpL0AAAAJ&hl=en&oi=ao" },
+        { label: "ORCID", url: "https://orcid.org/0000-0001-8727-7106" },
+        { label: "LinkedIn", url: "https://www.linkedin.com/in/lorenzo-prendini-34824218/" },
+        { label: "Loop", url: "https://loop.frontiersin.org/people/722676/bio" }
+      ],
+      contact: `<div class="text-gray-700 space-y-1"><p>Curator of Arachnida and Myriapoda</p><p>Division of Invertebrate Zoology</p><p>American Museum of Natural History</p><p>Central Park West at 79th Street</p><p>New York, NY 10024-5192</p><p>USA</p><p class="mt-3">Email: lorenzo@amnh.org</p><p>Phone: (212) 769-5843</p><p>Fax: (212) 769-5277</p></div>`
+    }
+  ],
+  alumni: []
+};
+
 export const museumSpecialistsData: PeopleCategory = {
   current: [
     {
@@ -54,6 +83,131 @@ export const museumSpecialistsData: PeopleCategory = {
       years: "Technical staff from 2002 to 2007",
       image: "Randy-Mercurio.jpg",
       bio: "Randy joined the Division of Invertebrate Zoology, AMNH, as a full-time employee in 2002, after completing a B.A. in Biology at New York University. He worked as Scientific Assistant to Lorenzo Prendini and managed the curation of the Arachnid and Myriapod Collections. Randy is a professional photographer and was responsible for producing many of the photographs in publications and the group's website. His other research interests include the taxonomy, natural history, ecology and biogeography of centipedes in North America, as well as their functional morphology. He has collected arachnids and myriapods in Arizona, California, Connecticut, Florida, Massachusetts, New York, Nevada, Rhode Island, and Mexico.",
+    }
+  ]
+};
+
+export const technicalStaffData: PeopleCategory = {
+  current: [
+    {
+      id: "steve-thurston",
+      name: "Steve Thurston",
+      title: "Scientific Illustrator",
+      image: "Steve-Thurston.jpg",
+      bio: "While completing his BS in Horticulture at the University of Connecticut (1977), Steve was trained by M.J. Brush in the Biological Illustration studio and began working as a scientific illustrator, drawing bugs for Dr. James A. Slater. He later received his MFA in New Genres/Video at The San Francisco Art Institute and has worked variously as a carpenter, video maker, artist and illustrator. He began full time employment at the AMNH in 1999 as a Scientific Assistant, providing illustration, photo and graphic support to the Division of Invertebrate Zoology.",
+    },
+    {
+      id: "victoria-long",
+      name: "Victoria Long",
+      title: "Staff Member",
+      image: "Victoria-Long.jpg",
+      bio: "Victoria Long Lab Technician Staff from 2021 to 2026 Victoria worked in the Arachnology Lab as a Technician on the NSF Pedipalpi grant (PI: Prendini) from 2021 to 2026, conducting DNA extraction, quantitation, PCR and sequencing.",
+    }
+  ],
+  alumni: [
+    {
+      id: "eleanor-goetz",
+      name: "Eleanor Goetz",
+      title: "Lab Technician",
+      years: "Technical staff from 2019 to 2021",
+      image: "Eleanor-Goetz.jpg",
+      bio: "Eleanor graduated from Smith College in 2019 with a BA in Biological Sciences, where she was a member of the Katz Lab and focussed on the lifecycles of foraminifera. She started in the Prendini lab as a Science Research Mentoring Program student in 2013 and continued to volunteer before starting as a Lab Technician in the fall of 2019. Eleanor currently works in the molecular lab doing DNA extractions, PCRs, Sanger Sequencing preparations, and generating molecular data.",
+    },
+    {
+      id: "yili-lim",
+      name: "Yili Lim",
+      title: "Laboratory Technician",
+      years: "2008 to 2009",
+      image: "Yili-Lim.jpg",
+      bio: "Yili worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
+    },
+    {
+      id: "tricia-rubi",
+      name: "Tricia Rubi",
+      title: "Laboratory Technician",
+      years: "2008 to 2009",
+      image: "Tricia-Rubi.jpg",
+      bio: "Tricia worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
+    },
+    {
+      id: "kaythi-han",
+      name: "Kaythi Han",
+      title: "Laboratory Technician",
+      years: "2008",
+      image: "Kaythi-Han.jpg",
+      bio: "Kaythi worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
+    },
+    {
+      id: "allison-kerwin",
+      name: "Allison Kerwin",
+      title: "Laboratory Technician",
+      years: "2008",
+      image: "Allison-Kerwin.jpg",
+      bio: "Allison worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
+    },
+    {
+      id: "kanvaly-bamba",
+      name: "Kanvaly Bamba",
+      title: "Laboratory Technician",
+      years: "2007 to 2008",
+      image: "Kanvaly-B-Bamba.jpg",
+      bio: "Kanvaly worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. He assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
+    },
+    {
+      id: "torsten-dikow",
+      name: "Torsten Dikow",
+      title: "Laboratory Technician",
+      years: "2007",
+      image: "Torsten-Dikow.jpg",
+      bio: "Torsten worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. He assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
+    },
+    {
+      id: "ligia-benavides",
+      name: "Ligia Benavides",
+      title: "Laboratory Technician",
+      years: "2006 to 2007",
+      image: "Ligia-Benavides.jpg",
+      bio: "Ligia worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
+    },
+    {
+      id: "monica-mosier",
+      name: "Monica Mosier",
+      title: "Laboratory Technician",
+      years: "2006",
+      image: "Monica-Mosier.jpg",
+      bio: "Monica worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
+    },
+    {
+      id: "kenneth-tripp-macdonald",
+      name: 'Kenneth "Tripp" MacDonald',
+      title: "Laboratory Technician",
+      years: "2005",
+      image: "Kenneth-Tripp-MacDonald.jpg",
+      bio: "Kenneth worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. He assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
+    },
+    {
+      id: "diana-pietri",
+      name: "Diana Pietri",
+      title: "Laboratory Technician",
+      years: "2003 to 2005",
+      image: "Diana-Pietri.jpg",
+      bio: "Diana worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
+    },
+    {
+      id: "tarang-sharma",
+      name: "Tarang Sharma",
+      title: "Laboratory Technician",
+      years: "2003 to 2004",
+      image: "Tarang-Sharma.jpg",
+      bio: "Tarang worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
+    },
+    {
+      id: "rebecca-budinoff",
+      name: "Rebecca Budinoff",
+      title: "Laboratory Technician",
+      years: "2004",
+      image: "Rebecca-Budinoff.jpg",
+      bio: "Rebecca worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
     }
   ]
 };
@@ -1766,131 +1920,6 @@ export const visitorsData: PeopleCategory = {
       years: "Student in 2002",
       image: "Lionel-Monod.jpg",
       bio: "Lionel Monod was a visiting student and graduate student."
-    }
-  ]
-};
-
-export const technicalStaffData: PeopleCategory = {
-  current: [
-    {
-      id: "steve-thurston",
-      name: "Steve Thurston",
-      title: "Scientific Illustrator",
-      image: "Steve-Thurston.jpg",
-      bio: "While completing his BS in Horticulture at the University of Connecticut (1977), Steve was trained by M.J. Brush in the Biological Illustration studio and began working as a scientific illustrator, drawing bugs for Dr. James A. Slater. He later received his MFA in New Genres/Video at The San Francisco Art Institute and has worked variously as a carpenter, video maker, artist and illustrator. He began full time employment at the AMNH in 1999 as a Scientific Assistant, providing illustration, photo and graphic support to the Division of Invertebrate Zoology.",
-    },
-    {
-      id: "victoria-long",
-      name: "Victoria Long",
-      title: "Staff Member",
-      image: "Victoria-Long.jpg",
-      bio: "Victoria Long Lab Technician Staff from 2021 to 2026 Victoria worked in the Arachnology Lab as a Technician on the NSF Pedipalpi grant (PI: Prendini) from 2021 to 2026, conducting DNA extraction, quantitation, PCR and sequencing.",
-    }
-  ],
-  alumni: [
-    {
-      id: "eleanor-goetz",
-      name: "Eleanor Goetz",
-      title: "Lab Technician",
-      years: "Technical staff from 2019 to 2021",
-      image: "Eleanor-Goetz.jpg",
-      bio: "Eleanor graduated from Smith College in 2019 with a BA in Biological Sciences, where she was a member of the Katz Lab and focussed on the lifecycles of foraminifera. She started in the Prendini lab as a Science Research Mentoring Program student in 2013 and continued to volunteer before starting as a Lab Technician in the fall of 2019. Eleanor currently works in the molecular lab doing DNA extractions, PCRs, Sanger Sequencing preparations, and generating molecular data.",
-    },
-    {
-      id: "yili-lim",
-      name: "Yili Lim",
-      title: "Laboratory Technician",
-      years: "2008 to 2009",
-      image: "Yili-Lim.jpg",
-      bio: "Yili worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
-    },
-    {
-      id: "tricia-rubi",
-      name: "Tricia Rubi",
-      title: "Laboratory Technician",
-      years: "2008 to 2009",
-      image: "Tricia-Rubi.jpg",
-      bio: "Tricia worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
-    },
-    {
-      id: "kaythi-han",
-      name: "Kaythi Han",
-      title: "Laboratory Technician",
-      years: "2008",
-      image: "Kaythi-Han.jpg",
-      bio: "Kaythi worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
-    },
-    {
-      id: "allison-kerwin",
-      name: "Allison Kerwin",
-      title: "Laboratory Technician",
-      years: "2008",
-      image: "Allison-Kerwin.jpg",
-      bio: "Allison worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
-    },
-    {
-      id: "kanvaly-bamba",
-      name: "Kanvaly Bamba",
-      title: "Laboratory Technician",
-      years: "2007 to 2008",
-      image: "Kanvaly-B-Bamba.jpg",
-      bio: "Kanvaly worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. He assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
-    },
-    {
-      id: "torsten-dikow",
-      name: "Torsten Dikow",
-      title: "Laboratory Technician",
-      years: "2007",
-      image: "Torsten-Dikow.jpg",
-      bio: "Torsten worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. He assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
-    },
-    {
-      id: "ligia-benavides",
-      name: "Ligia Benavides",
-      title: "Laboratory Technician",
-      years: "2006 to 2007",
-      image: "Ligia-Benavides.jpg",
-      bio: "Ligia worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
-    },
-    {
-      id: "monica-mosier",
-      name: "Monica Mosier",
-      title: "Laboratory Technician",
-      years: "2006",
-      image: "Monica-Mosier.jpg",
-      bio: "Monica worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
-    },
-    {
-      id: "kenneth-tripp-macdonald",
-      name: 'Kenneth "Tripp" MacDonald',
-      title: "Laboratory Technician",
-      years: "2005",
-      image: "Kenneth-Tripp-MacDonald.jpg",
-      bio: "Kenneth worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. He assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
-    },
-    {
-      id: "diana-pietri",
-      name: "Diana Pietri",
-      title: "Laboratory Technician",
-      years: "2003 to 2005",
-      image: "Diana-Pietri.jpg",
-      bio: "Diana worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
-    },
-    {
-      id: "tarang-sharma",
-      name: "Tarang Sharma",
-      title: "Laboratory Technician",
-      years: "2003 to 2004",
-      image: "Tarang-Sharma.jpg",
-      bio: "Tarang worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
-    },
-    {
-      id: "rebecca-budinoff",
-      name: "Rebecca Budinoff",
-      title: "Laboratory Technician",
-      years: "2004",
-      image: "Rebecca-Budinoff.jpg",
-      bio: "Rebecca worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. She assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.",
     }
   ]
 };

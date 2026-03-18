@@ -4,10 +4,10 @@ export type Person = {
   id: string;
   name: string;
   affiliation?: string;
-  title?: string;
+  title?: string | string[] | { title: string; label: string; url?: string }[];
   years?: string;
   image?: string | null;
-  bio: string | ReactNode;
+  bio?: string | ReactNode;
   links?: { label: string; url: string }[];
   contact?: string | ReactNode;
 };
