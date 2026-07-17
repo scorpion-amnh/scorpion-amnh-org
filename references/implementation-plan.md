@@ -1,6 +1,18 @@
 # Implementation Plan
 
+## Progress
+
+**Complete (as of 2026-07-17):** Stages **0**, **1**, **2**, **3**, **4**, and **5.1**.
+
+**Not started:** Stage **5.2**, Stage **6**.
+
+**Stage 7 before 5.2 / 6?** Yes — Stage 7 UX fixes can be done now. They build on the local content layer (`@/lib/content` → `localAdapter`) and do not require a CMS. Stages 5.2 and 6 only matter when moving content editing off repo JSON. Stage 7 still depends on completed work in Stages 1–4 (and parts of Stage 3); it does **not** depend on 5.2 or 6. Some Stage 7 checklist items are already satisfied (tab/section URL persistence, error and not-found pages, validate-content in CI). Copy and label changes in Stage 7 remain subject to author review — document in `references/content-change-suggestions.md`.
+
+---
+
 ## Stage 0 — Extract Content From JSX (do first, unblocks everything else)
+
+**Status: Complete**
 1. Create a `content/` directory at the repo root.
 2. Create a `content/people/` directory.
 3. For each person object in `app/people/data.ts`, create one JSON file at `content/people/<id>.json` containing its fields.
@@ -20,6 +32,8 @@
 17. Rewrite `app/people/PeopleImage.tsx` to render the explicit `image` path directly, with a single `onError` fallback to the initials placeholder — remove the candidate-array retry loop.
 
 ## Stage 1 — Build Typed Content Layer
+
+**Status: Complete**
 1. Run `npm install zod`.
 2. Create `lib/content/schema.ts`.
 3. Define a Zod schema for each of: `Person`, `Publication`, `GalleryImage`, `LabHistoryEntry`, `Page`, `SiteSettings`.
@@ -40,6 +54,8 @@
 18. Add a `Validate content` step to `.github/workflows/deploy.yml` that runs `npm run validate-content` immediately before the `Build Next.js (static export)` step.
 
 ## Stage 2 — Convert Pages to Server Components
+
+**Status: Complete**
 1. Remove `'use client'` from `app/research/page.tsx`.
 2. Remove `'use client'` from `app/facilities/page.tsx`.
 3. Remove `'use client'` from `app/publications/page.tsx`; render entries from `getPublications()`.
@@ -55,6 +71,8 @@
 13. Create `app/people/loading.tsx` and `app/publications/loading.tsx`.
 
 ## Stage 3 — Component and Code-Quality Refactor
+
+**Status: Complete**
 1. Split `app/people/page.tsx` into one file per section under `app/people/sections/` (e.g. `PrincipalInvestigatorSection.tsx`, `MuseumSpecialistsSection.tsx`, `TechnicalStaffSection.tsx`, one per entry in `peopleSections`).
 2. Import and compose the section components from `app/people/page.tsx`.
 3. Create `app/components/Figure.tsx` accepting `src`, `alt`, `caption`, `width`, `height` props.
@@ -73,6 +91,8 @@
 16. Run `npm run lint -- --fix`; manually resolve every remaining lint error.
 
 ## Stage 4 — Search and Navigation State Refactor
+
+**Status: Complete**
 1. Delete `buildPeopleIndex` and its `querySelectorAll` DOM traversal from `app/people/usePeopleNavigation.ts`.
 2. Build the search index inside `usePeopleNavigation` directly from the array returned by `getPeople()` (fields: `name`, `id`, `sectionId`, `tab`).
 3. On every Current/Alumni tab change, call `history.pushState` to add a `?tab=alumni` or `?tab=current` query parameter to the URL.
@@ -81,6 +101,8 @@
 6. Add a global `keydown` listener for `/` that focuses the people search input when no other input is focused.
 
 ## Stage 5.1 — CMS Adapter Layer (deploy-safe refactor)
+
+**Status: Complete**
 1. Create `lib/content/types.ts` defining a `ContentSource` interface with one method per content loader (`getPeople`, `getPeopleSectionOrder`, `getPublications`, `getGallery`, `getLabHistory`, `getSiteSettings`).
 2. Move the file-based loader into `lib/content/localAdapter.ts`; make it implement `ContentSource`.
 3. Create `lib/content/getContentSource.ts` that returns the active adapter based on `process.env.CONTENT_SOURCE`, defaulting to `local` when unset or unrecognized.
@@ -95,6 +117,8 @@
 9. Document in this file: **`Person.id` and `Page.slug` values must never change after publication** — they are used in URLs, search deep links, and future CMS sync.
 
 ## Stage 5.2 — Prepare for Stage 6 (CMS migration checklist)
+
+**Status: Not started** — documentation only; execute when CMS migration is planned.
 Complete these before enabling `CONTENT_SOURCE=cms` in production. None of this is required for DreamHost deploy to keep working.
 
 ### CMS product and hosting
@@ -125,6 +149,8 @@ Complete these before enabling `CONTENT_SOURCE=cms` in production. None of this 
 17. Remove `output: 'export'` from `next.config.ts` only if the hosting target supports Next.js server runtime or ISR.
 
 ## Stage 6 — Real CMS Migration
+
+**Status: Not started**
 1. Execute the Stage 5.2 checklist.
 2. Run `npx tsx scripts/import-to-cms.ts` once against the target CMS environment.
 3. Switch production `CONTENT_SOURCE` from `local` to `cms` in `.github/workflows/deploy.yml` (or per-environment deploy config).
@@ -132,6 +158,8 @@ Complete these before enabling `CONTENT_SOURCE=cms` in production. None of this 
 5. Keep `content/` in the repo as a fallback export until CMS editing is trusted; document a rollback procedure (`CONTENT_SOURCE=local` + redeploy).
 
 ## Stage 7 — UX Fixes, Heuristic 1: Visibility of System Status
+
+**Status: Not started** — may proceed before Stages 5.2 and 6 (see Progress above).
 1. Add a `scroll` event listener in `app/people/usePeopleNavigation.ts` that recalculates `activeSection` based on the section heading nearest the viewport top.
 2. In `app/header.tsx` (or `app/components/Header.tsx` after Stage 3 Step 12), swap the hamburger icon for the close icon when `isMenuOpen` is `true`.
 3. Confirm `app/components/ExternalLink.tsx` (Stage 3 Step 5) renders a visible external-link icon on every instance.
