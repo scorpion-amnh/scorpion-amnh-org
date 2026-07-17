@@ -82,10 +82,11 @@ export function Header({ navItems }: HeaderProps) {
               <Image
                 src="/images/logos/logo-color-on-dark.svg"
                 alt="Arachnology at AMNH Logo"
-                width={400}
-                height={40}
+                width={680}
+                height={136}
                 priority
-                className="w-full h-auto"
+                className="h-auto w-full max-w-[400px]"
+                style={{ height: "auto" }}
               />
             </Link>
           </div>

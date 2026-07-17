@@ -26,8 +26,10 @@ export function Footer() {
                 <Image
                     src={footerLogo}
                     alt="Logo: American Museum of Natural History"
-                    width={150}
-                    height={50}
+                    width={200}
+                    height={43}
+                    className="h-auto w-auto max-w-[150px]"
+                    style={{ width: "auto", height: "auto" }}
                 />
                 </ExternalLink>
             </div>
