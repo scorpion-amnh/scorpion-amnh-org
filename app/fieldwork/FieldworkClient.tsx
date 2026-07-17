@@ -3,12 +3,7 @@
 import Image from "next/image";
 import { useMemo } from "react";
 import type { GalleryImage } from "@/lib/content/schema";
-
-const hashText = (value: string) =>
-  value.split("").reduce((hash, char) => ((hash << 5) - hash + char.charCodeAt(0)) | 0, 0);
-
-const deterministicShuffle = <T extends { src: string }>(items: readonly T[]) =>
-  [...items].sort((a, b) => hashText(a.src) - hashText(b.src));
+import { deterministicShuffle } from "@/lib/shuffle";
 
 type FieldworkClientProps = {
   gallery: GalleryImage[];

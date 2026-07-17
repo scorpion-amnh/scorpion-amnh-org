@@ -1,6 +1,13 @@
-import { getLabHistory } from "@/lib/content";
-import type { PeopleGroupCardProps } from "./PeopleGroupCard";
-import { PeopleClient } from "./PeopleClient";
+import type { Metadata } from "next";
+import { getLabHistory, getPeople, getPeopleSectionOrder } from "@/lib/content";
+import { createPageMetadata } from "@/lib/metadata";
+import type { PeopleGroupCardProps } from "@/app/people/PeopleGroupCard";
+import { PeopleClient } from "@/app/people/PeopleClient";
+
+export const metadata: Metadata = createPageMetadata(
+  "People | Arachnology at AMNH",
+  "Members and alumni of the Scorpion Systematics Research Group at AMNH."
+);
 
 export default function PeoplePage() {
   const labHistorySections = getLabHistory().map((section) => ({
@@ -9,5 +16,16 @@ export default function PeoplePage() {
     cards: section.cards as [PeopleGroupCardProps, ...PeopleGroupCardProps[]],
   }));
 
-  return <PeopleClient labHistorySections={labHistorySections} />;
+  const undergraduateStudents = getPeople().filter(
+    (person) => person.sectionId === "undergraduate-students"
+  );
+  const undergraduateStudentsOrder = getPeopleSectionOrder("undergraduate-students");
+
+  return (
+    <PeopleClient
+      labHistorySections={labHistorySections}
+      undergraduateStudents={undergraduateStudents}
+      undergraduateStudentsOrder={undergraduateStudentsOrder}
+    />
+  );
 }

@@ -2,13 +2,9 @@
 
 import Image from "next/image";
 import { useMemo } from "react";
+import { Figure } from "@/app/components/Figure";
 import type { GalleryImage } from "@/lib/content/schema";
-
-const hashText = (value: string) =>
-  value.split("").reduce((hash, char) => ((hash << 5) - hash + char.charCodeAt(0)) | 0, 0);
-
-const deterministicShuffle = <T extends { src: string }>(items: T[]) =>
-  [...items].sort((a, b) => hashText(a.src) - hashText(b.src));
+import { deterministicShuffle } from "@/lib/shuffle";
 
 type ArachnidsClientProps = {
   gallery: GalleryImage[];
@@ -115,30 +111,30 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
               Arachnids are primarily nocturnal. Several orders (e.g., scorpions, solifuges and opilionids) fluoresce under long-wave ultraviolet light, facilitating their collection and observation at night. The simple eyes of arachnids detect luminosity, but little else. Prey are detected by a variety of sensory organs, e.g., slit sensilla in the tarsi, sensory setae (trichobothria) on the pedipalps, and specialized structures like malleoli in solifuges or pectines in scorpions, and attacked with the pedipalps, chelicerae or, in the case of scorpions, the sting. Spiders are unique among arachnids in the ability to use silk to capture prey in webs or snares. Although many arachnid orders rely on mechanical means to subdue prey, several orders, notably spiders, scorpions and pseudoscorpions, employ venom. Many arachnids use the pedipalps to manipulate captured prey, tearing pieces off with the chelicerae to be digested in a pre-oral cavity before being sucked into the gut. Arachnids are the primary consumers of other terrestrial arthropods, keeping insect populations in check. For example, <em>Scorpio maurus</em> was reported to eat an annual average of 11% of the Israeli isopod population, whereas <em>Urodacus yaschenkoi</em> 7.9 kg/ha of invertebrate prey in Australia. Cannibalism and intraguild predation by other arachnid taxa are important sources of arachnid mortality, as is predation by other invertebrates (e.g., centipedes) and vertebrates (e.g., birds, lizards, and insectivorous mammals). Arachnid mortality is highest immediately after birth, lower for individuals of intermediate age, and high for adults. Mortality is particularly high among males due to increased mobility during breeding season and cannibalism by females. Biased adult sex ratios are typical of arachnids. Social behavior occurs in some spiders, scorpions and whip spiders, in which family groups with overlapping generations cooperate to construct and occupy communal nests or burrows, inhabited by individuals of various ages.
             </p>
             <div className="flex flex-wrap gap-4 mb-8 items-start max-w-full">
-              <figure className="w-fit inline-flex flex-col items-start">
-                <Image
-                  src="/images/arachnids/cannibalism.jpg"
-                  alt="Scorpion predating on another scorpion species"
-                  width={271}
-                  height={196}
-                  className="h-auto rounded-sm"
-                />
-                <figcaption className="text-sm text-gray-600 mt-2 text-left" style={{ width: 271 }}>
-                  Scorpion predating on another scorpion species
-                </figcaption>
-              </figure>
-              <figure className="w-fit inline-flex flex-col items-start">
-                <Image
-                  src="/images/arachnids/scorpionmite.jpg"
-                  alt="Mites on a scorpion"
-                  width={272}
-                  height={196}
-                  className="h-auto rounded-sm"
-                />
-                <figcaption className="text-sm text-gray-600 mt-2 text-left" style={{ width: 272 }}>
-                  Mites on a scorpion
-                </figcaption>
-              </figure>
+              <Figure
+                className="w-fit mb-0"
+                figureClassName="w-fit inline-flex flex-col items-start mb-0"
+                src="/images/arachnids/cannibalism.jpg"
+                alt="Scorpion predating on another scorpion species"
+                width={271}
+                height={196}
+                imageClassName="h-auto rounded-sm"
+                caption="Scorpion predating on another scorpion species"
+                captionClassName="text-sm text-gray-600 mt-2 text-left"
+                captionStyle={{ width: 271 }}
+              />
+              <Figure
+                className="w-fit mb-0"
+                figureClassName="w-fit inline-flex flex-col items-start mb-0"
+                src="/images/arachnids/scorpionmite.jpg"
+                alt="Mites on a scorpion"
+                width={272}
+                height={196}
+                imageClassName="h-auto rounded-sm"
+                caption="Mites on a scorpion"
+                captionClassName="text-sm text-gray-600 mt-2 text-left"
+                captionStyle={{ width: 272 }}
+              />
             </div>
           </div>
 
@@ -170,32 +166,30 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4 mb-8 w-full items-start sm:inline-grid sm:w-auto sm:justify-start">
-              <figure className="w-full inline-flex flex-col items-start">
-                <Image
-                  src="/images/research/spermatophore.jpg"
-                  alt="Scorpion spermatophore"
-                  width={250}
-                  height={250}
-                  className="w-full h-auto rounded-sm sm:w-auto"
-                  style={{ maxWidth: 250 }}
-                />
-                <figcaption className="text-sm text-gray-600 mt-2 text-left" style={{ width: "100%", maxWidth: 250 }}>
-                  Scorpion spermatophore
-                </figcaption>
-              </figure>
-              <figure className="w-full inline-flex flex-col items-start">
-                <Image
-                  src="/images/research/capsule.jpg"
-                  alt="Scorpion capsule"
-                  width={188}
-                  height={250}
-                  className="w-full h-auto rounded-sm sm:w-auto"
-                  style={{ maxWidth: 188 }}
-                />
-                <figcaption className="text-sm text-gray-600 mt-2 text-left" style={{ width: "100%", maxWidth: 188 }}>
-                  Scorpion capsule
-                </figcaption>
-              </figure>
+              <Figure
+                className="w-full mb-0"
+                figureClassName="w-full inline-flex flex-col items-start mb-0"
+                src="/images/research/spermatophore.jpg"
+                alt="Scorpion spermatophore"
+                width={250}
+                height={250}
+                imageClassName="w-full h-auto rounded-sm sm:w-auto"
+                caption="Scorpion spermatophore"
+                captionClassName="text-sm text-gray-600 mt-2 text-left"
+                captionStyle={{ width: "100%", maxWidth: 250 }}
+              />
+              <Figure
+                className="w-full mb-0"
+                figureClassName="w-full inline-flex flex-col items-start mb-0"
+                src="/images/research/capsule.jpg"
+                alt="Scorpion capsule"
+                width={188}
+                height={250}
+                imageClassName="w-full h-auto rounded-sm sm:w-auto"
+                caption="Scorpion capsule"
+                captionClassName="text-sm text-gray-600 mt-2 text-left"
+                captionStyle={{ width: "100%", maxWidth: 188 }}
+              />
             </div>
           </div>
 
@@ -205,18 +199,18 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
               Urgency for the study of any taxonomic group can be argued based on prevailing ignorance about the world's biota. However, arachnids warrant more attention than they receive. As the primary group of predatory arthropods, arachnids are responsible for controlling insect populations in terrestrial ecosystems. Many of the large-bodied arachnid taxa, e.g., mygalomorph spiders, scorpions, whip spiders and vinegaroons, are K-selected, equilibrium species, and represent indicators of ecosystem health. Their disappearance signals habitat degradation. Small litter sizes, long generation times and low survivorship among sexually immature females contribute to a low rate of population growth for these taxa. Most species are also extremely habitat specific and range-restricted, exacerbating their risk of extinction due to human activities. Increasingly threatened by climate change, habitat destruction and harvesting for the venom, souvenir and exotic pet trades, few species are officially protected, and many may disappear before being described. For example, ca. 105,000 live <em>Pandinus imperator</em> are exported annually from three West African countries to pet shops in Europe, the United States and Japan, indicating the magnitude of trade in this species, which is now CITES-listed. Many other species of spiders (especially mygalomorphs like tarantulas), scorpions, solifuges, whip scorpions and whip spiders, originating from various African, Asian, and Latin American countries, are offered for sale on the exotic pet market; the most sought-after specimens fetch up to $500 each. The many threats faced by many arachnid taxa renders the task of inventorying their diversity and distribution a priority if steps towards their conservation are to be implemented.
             </p>
             <div className="mb-8">
-              <figure className="w-fit inline-flex flex-col items-start">
-                <Image
-                  src="/images/field/beachleft.jpg"
-                  alt="Coastal habitat, CA, USA"
-                  width={238}
-                  height={164}
-                  className="h-auto rounded-sm"
-                />
-                <figcaption className="text-sm text-gray-600 mt-2 text-left" style={{ width: 238 }}>
-                  Coastal habitat, CA, USA
-                </figcaption>
-              </figure>
+              <Figure
+                className="w-fit mb-0"
+                figureClassName="w-fit inline-flex flex-col items-start mb-0"
+                src="/images/field/beachleft.jpg"
+                alt="Coastal habitat, CA, USA"
+                width={238}
+                height={164}
+                imageClassName="h-auto rounded-sm"
+                caption="Coastal habitat, CA, USA"
+                captionClassName="text-sm text-gray-600 mt-2 text-left"
+                captionStyle={{ width: 238 }}
+              />
             </div>
           </div>
 

@@ -1,0 +1,1772 @@
+[
+  {
+    "file": "GraduateStudentsSection.tsx",
+    "person": "Jayson Slovak",
+    "kind": "src",
+    "original": "/images/jayson.jpg",
+    "resolved": "/images/people/Jayson-Slovak.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "GraduateStudentsSection.tsx",
+    "person": "Stephanie F. Loria",
+    "kind": "src",
+    "original": "/images/Stephanie-F-Loria.jpg",
+    "resolved": "/images/people/Stephanie-F-Loria.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "GraduateStudentsSection.tsx",
+    "person": "Tharina Bird",
+    "kind": "src",
+    "original": "/images/tharina.jpg",
+    "resolved": "/images/people/Tharina-Bird.png",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "GraduateStudentsSection.tsx",
+    "person": "Lionel Monod",
+    "kind": "src",
+    "original": "/images/lionel.jpg",
+    "resolved": "/images/people/Lionel-Monod.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "GraduateStudentsSection.tsx",
+    "person": "Edmundo González Santillan",
+    "kind": "src",
+    "original": "/images/edmundo.jpg",
+    "resolved": "/images/people/Edmundo-Gonzalez-Santillan.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "GraduateStudentsSection.tsx",
+    "person": "George Popovici",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/George-Popovici.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "GraduateStudentsSection.tsx",
+    "person": "Alice Wang",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Alice-Wang.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "GraduateStudentsSection.tsx",
+    "person": "Colby Sain",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Colby-Sain.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "GraduateStudentsSection.tsx",
+    "person": "Nicolas Cazzaniga",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Nicolas-Cazzaniga.jpeg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "GraduateStudentsSection.tsx",
+    "person": "Javier Blasco Aróstegui",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Javier-Blasco-Arostegui.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "GraduateStudentsSection.tsx",
+    "person": "Nayeli Gutiérrez Trejo",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Nayeli-Gutierrez-Trejo.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Hritwik Paul",
+    "kind": "src",
+    "original": "/images/HPaul_mnmt2g.jpg",
+    "resolved": "/images/people/Hritwik-Paul.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Cherie Qu",
+    "kind": "src",
+    "original": "/images/Cherie.jpg",
+    "resolved": "/images/people/Cherie-Qu.jpg",
+    "score": 88,
+    "reason": "legacy basename substring; name tokens matched (cherie); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Azmi Anamika",
+    "kind": "src",
+    "original": "/images/Azmi.jpg",
+    "resolved": "/images/people/Azmi-Anamika.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Geeta Sharma",
+    "kind": "src",
+    "original": "/images/Geeta.jpg",
+    "resolved": "/images/people/Geeta-Sharma.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Sophia Castro",
+    "kind": "src",
+    "original": "/images/Sophia.jpg",
+    "resolved": "/images/people/Sophia-Castro.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Tamar Cohen",
+    "kind": "src",
+    "original": "/images/Tamar.jpg",
+    "resolved": "/images/people/Tamar-Cohen.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Chelsea Silva",
+    "kind": "src",
+    "original": "/images/ChelseaSilva2015.jpg",
+    "resolved": "/images/people/Chelsea-Silva.jpg",
+    "score": 93,
+    "reason": "legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Billy Conlan",
+    "kind": "src",
+    "original": "/images/BillyConlan2015.jpg",
+    "resolved": "/images/people/Billy-Conlan.jpg",
+    "score": 93,
+    "reason": "legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Sasha Reiter and Eleanor Goetz",
+    "kind": "src",
+    "original": "/images/Sasha-Reiter--and--Eleanor-Goetz.jpg",
+    "resolved": "/images/people/Sasha-Reiter--and--Eleanor-Goetz.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Sasha Reiter and Eleanor Goetz",
+    "kind": "src",
+    "original": "/images/Sasha-Reiter--and--Eleanor-Goetz.jpg",
+    "resolved": "/images/people/Sasha-Reiter--and--Eleanor-Goetz.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Adam Getzler",
+    "kind": "src",
+    "original": "/images/adam.jpg",
+    "resolved": "/images/people/Adam-Getzler.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Jianhua Lin and Qiao Rong Huang",
+    "kind": "src",
+    "original": "/images/Jianhua-Lin--and--Qiao-Rong-Huang.jpg",
+    "resolved": "/images/people/Jianhua-Lin--and--Qiao-Rong-Huang.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Jianhua Lin and Qiao Rong Huang",
+    "kind": "src",
+    "original": "/images/Jianhua-Lin--and--Qiao-Rong-Huang.jpg",
+    "resolved": "/images/people/Jianhua-Lin--and--Qiao-Rong-Huang.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Melanie Ng",
+    "kind": "src",
+    "original": "/images/melanie.jpg",
+    "resolved": "/images/people/Melanie-Ng.jpg",
+    "score": 88,
+    "reason": "legacy basename substring; name tokens matched (melanie); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Connie Cai",
+    "kind": "src",
+    "original": "/images/cai.jpg",
+    "resolved": "/images/people/Connie-Cai.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Bernard Laszczower",
+    "kind": "src",
+    "original": "/images/berny.jpg",
+    "resolved": "/images/people/Bernard-Laszczower.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Boitumelo 'Tumi' McCallum",
+    "kind": "src",
+    "original": "/images/tumi.jpg",
+    "resolved": "/images/people/Boitumelo-Tumi-McCallum.jpg",
+    "score": 85,
+    "reason": "legacy basename substring; name tokens matched (boitumelo, mccallum); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Meredith Metz",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Meredith-Metz.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Alex Liu",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Alex-Liu.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Balthazar Edwards",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Balthazar-Edwards.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Anika Mahbub",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Anika-Mahbub.jpeg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "William Phillips",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/William-Phillips.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Christina Li",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Christina-Li.png",
+    "score": 103,
+    "reason": "exact normalized filename; name tokens matched (christina); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Michelle Li",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Michelle-Li.png",
+    "score": 103,
+    "reason": "exact normalized filename; name tokens matched (michelle); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Eva-Lucia Prendini",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Eva-Lucia-Prendini.jpeg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Sophia Collins",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Sophia-Collins.png",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Aibrean Henry",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Aibrean-Henry.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Alex Moell",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Alex-Moell.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Luke Siegel",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Luke-Siegel.png",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Nathan Auyeng",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Aleyna Singer",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Simon Au",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Simone-Longe.jpg",
+    "score": 88,
+    "reason": "name tokens matched (simon); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Agnes Oduro",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Agnes-Oduro.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Amrita Banerji",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Amrita-Banerji.png",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "HighSchoolStudentsSection.tsx",
+    "person": "Michelle Bayefsky-Anand",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "MuseumSpecialistsSection.tsx",
+    "person": "Pío A. Colmenares",
+    "kind": "src",
+    "original": "/images/Pio.jpg",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "MuseumSpecialistsSection.tsx",
+    "person": "Michelle Locke",
+    "kind": "src",
+    "original": "/images/MichelleLockeField.jpg",
+    "resolved": "/images/people/Michelle-Locke.jpg",
+    "score": 93,
+    "reason": "legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "MuseumSpecialistsSection.tsx",
+    "person": "Pamela Horsley",
+    "kind": "src",
+    "original": "/images/Pam.jpg",
+    "resolved": "/images/people/Pamela-Horsley.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "MuseumSpecialistsSection.tsx",
+    "person": "Ofelia Delgado",
+    "kind": "src",
+    "original": "/images/ofelialab.jpg",
+    "resolved": "/images/people/Ofelia-Delgado.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "MuseumSpecialistsSection.tsx",
+    "person": "Jeremy Huff",
+    "kind": "src",
+    "original": "/images/huff2.jpg",
+    "resolved": "/images/people/Jeremy-Huff.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "MuseumSpecialistsSection.tsx",
+    "person": "Randy Mercurio",
+    "kind": "src",
+    "original": "/images/mercurio3.jpg",
+    "resolved": "/images/people/Randy-Mercurio.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "PostdocsSection.tsx",
+    "person": "Muhammad Tahir",
+    "kind": "src",
+    "original": "/images/Tahir.jpg",
+    "resolved": "/images/people/Muhammad-Tahir.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "PostdocsSection.tsx",
+    "person": "Jose Barba-Montoya",
+    "kind": "src",
+    "original": "/images/Jose-Barba-Montoya.jpg",
+    "resolved": "/images/people/Jose-Barba-Montoya.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "PostdocsSection.tsx",
+    "person": "Jairo A. Moreno-González",
+    "kind": "src",
+    "original": "/images/Jairo.jpg",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "PostdocsSection.tsx",
+    "person": "Ricardo Botero-Trujillo",
+    "kind": "src",
+    "original": "/images/Ricardo.jpg",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "PostdocsSection.tsx",
+    "person": "Frederic Schramm",
+    "kind": "src",
+    "original": "/images/Frederic_jkwxyd.jpg",
+    "resolved": "/images/people/Frederic-Schramm.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "PostdocsSection.tsx",
+    "person": "Stephanie F. Loria",
+    "kind": "src",
+    "original": "/images/Stephanie-F-Loria.jpg",
+    "resolved": "/images/people/Stephanie-F-Loria.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "PostdocsSection.tsx",
+    "person": "Carsten Kamenz",
+    "kind": "src",
+    "original": "/images/carstenk.jpg",
+    "resolved": "/images/people/Carsten-Kamenz.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "PostdocsSection.tsx",
+    "person": "José Antonio Ochoa",
+    "kind": "src",
+    "original": "/images/jose.jpg",
+    "resolved": "/images/people/Jose-Antonio-Ochoa.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "PostdocsSection.tsx",
+    "person": "Dana Price",
+    "kind": "src",
+    "original": "/images/dana.jpg",
+    "resolved": "/images/people/Dana-Price.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "PostdocsSection.tsx",
+    "person": "Camilo I. Mattoni",
+    "kind": "src",
+    "original": "/images/camilo.jpg",
+    "resolved": "/images/people/Camilo-I-Mattoni.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "PostdocsSection.tsx",
+    "person": "Erich S. Volschenk",
+    "kind": "src",
+    "original": "/images/erich.jpg",
+    "resolved": "/images/people/Erich-S-Volschenk.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "PrincipalInvestigatorSection.tsx",
+    "person": "Lorenzo Prendini",
+    "kind": "src",
+    "original": "/images/prendini.jpg",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "TechnicalStaffSection.tsx",
+    "person": "Steve Thurston",
+    "kind": "src",
+    "original": "/images/thurston.jpg",
+    "resolved": "/images/people/Steve-Thurston.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "TechnicalStaffSection.tsx",
+    "person": "Victoria Long",
+    "kind": "src",
+    "original": "/images/victoria.jpg",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "TechnicalStaffSection.tsx",
+    "person": "Eleanor Goetz",
+    "kind": "src",
+    "original": "/images/Eleanor1_blmjit.jpg",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Jairo A. Moreno-González",
+    "kind": "src",
+    "original": "/images/Jairo.jpg",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Andria de Paula Santos da Silva",
+    "kind": "src",
+    "original": "/images/Andria.jpg",
+    "resolved": "/images/people/Andria-de-Paula-Santos-da-Silva.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Catalina Romero",
+    "kind": "src",
+    "original": "/images/Catalina.jpg",
+    "resolved": "/images/people/Catalina-Romero.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Miguel Medrano",
+    "kind": "src",
+    "original": "/images/Miguel.jpg",
+    "resolved": "/images/people/Miguel-Medrano.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Rene Barba",
+    "kind": "src",
+    "original": "/images/ReneBarba.jpg",
+    "resolved": "/images/people/Rene-Barba.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Jahnavi Joshi",
+    "kind": "src",
+    "original": "/images/Jahnavi.jpg",
+    "resolved": "/images/people/Jahnavi-Joshi.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Aaron Goodman",
+    "kind": "src",
+    "original": "/images/Aaron.jpg",
+    "resolved": "/images/people/Aaron-Goodman.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Stephan Schaffrath",
+    "kind": "src",
+    "original": "/images/Stephan_aslq3e.jpg",
+    "resolved": "/images/people/Stephan-Schaffrath.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Carlos Alberto Martinez Muñoz",
+    "kind": "src",
+    "original": "/images/CarlosM.jpg",
+    "resolved": "/images/people/Carlos-Alberto-Martinez-Munoz.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Callum Mclean",
+    "kind": "src",
+    "original": "/images/Callum.jpg",
+    "resolved": "/images/people/Callum-Mclean.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Shlomo Cain",
+    "kind": "src",
+    "original": "/images/Shlomo.jpg",
+    "resolved": "/images/people/Shlomo-Cain.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Ivan Magalhaes",
+    "kind": "src",
+    "original": "/images/Ivan.jpg",
+    "resolved": "/images/people/Ivan-Magalhaes.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Gerardo Contreras",
+    "kind": "src",
+    "original": "/images/GerardoContreras.jpg",
+    "resolved": "/images/people/Gerardo-Contreras.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Rodrigo Monjáraz Ruedas",
+    "kind": "src",
+    "original": "/images/RodrigoRuedas.jpg",
+    "resolved": "/images/people/Rodrigo-Monjaraz-Ruedas.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Tebogo Ledwaba",
+    "kind": "src",
+    "original": "/images/Tebogo.jpg",
+    "resolved": "/images/people/Tebogo-Ledwaba.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Jesus Alberto Cruz-López",
+    "kind": "src",
+    "original": "/images/Jesus-Alberto-Cruz-Lopez.jpg",
+    "resolved": "/images/people/Jesus-Alberto-Cruz-Lopez.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Ricardo Botero-Trujillo",
+    "kind": "src",
+    "original": "/images/ric.jpg",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Dulce Flor Piedra",
+    "kind": "src",
+    "original": "/images/Dulce.jpg",
+    "resolved": "/images/people/Dulce-Flor-Piedra.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Francisco Salgueiro Sepulveda",
+    "kind": "src",
+    "original": "/images/Francisco.jpg",
+    "resolved": "/images/people/Francisco-Salgueiro-Sepulveda.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Diego Barrales",
+    "kind": "src",
+    "original": "/images/diego.jpg",
+    "resolved": "/images/people/Diego-Barrales.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Samuel Mwangi",
+    "kind": "src",
+    "original": "/images/mwangi.jpg",
+    "resolved": "/images/people/Samuel-Mwangi.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Bastian-Jesper Klußmann-Fricke",
+    "kind": "src",
+    "original": "/images/bastian.jpg",
+    "resolved": "/images/people/Bastian-Jesper-Klussmann-Fricke.jpg",
+    "score": 85,
+    "reason": "legacy basename substring; name tokens matched (bastian, jesper, fricke); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Gustavo Silva de Miranda",
+    "kind": "src",
+    "original": "/images/Gustavo.jpg",
+    "resolved": "/images/people/Gustavo-Silva-de-Miranda.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Ingrid Catalina Romero Ortiz",
+    "kind": "src",
+    "original": "/images/Catalina-Romero.jpg",
+    "resolved": "/images/people/Catalina-Romero.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; name tokens matched (catalina, romero); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Daniela Ramírez",
+    "kind": "src",
+    "original": "/images/DanielaRamirez.jpg",
+    "resolved": "/images/people/Daniela-Ramirez.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Carlos Santibañez-López",
+    "kind": "src",
+    "original": "/images/carlos.jpg",
+    "resolved": "/images/people/Carlos-Santibanez-Lopez.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Humberto Yoji Yamaguti",
+    "kind": "src",
+    "original": "/images/humberto.jpg",
+    "resolved": "/images/people/Humberto-Yoji-Yamaguti.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Jesus Alfonso Ballesteros Chavez",
+    "kind": "src",
+    "original": "/images/jesusb.jpg",
+    "resolved": "/images/people/Jesus-Alfonso-Ballesteros-Chavez.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Fabio Akashi Hernandes",
+    "kind": "src",
+    "original": "/images/Hernanades.jpg",
+    "resolved": "/images/people/Fabio-Akashi-Hernandes.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Andrés Ojanguren-Affilastro",
+    "kind": "src",
+    "original": "/images/ojanguren.jpg",
+    "resolved": "/images/people/Andres-Ojanguren-Affilastro.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Alexander V. Gromov",
+    "kind": "src",
+    "original": "/images/gromov.jpg",
+    "resolved": "/images/people/Alexander-V-Gromov.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Carsten Kamenz",
+    "kind": "src",
+    "original": "/images/carstenk.jpg",
+    "resolved": "/images/people/Carsten-Kamenz.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Valerio Vignoli",
+    "kind": "src",
+    "original": "/images/vignoli.jpg",
+    "resolved": "/images/people/Valerio-Vignoli.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Christian Wirkner",
+    "kind": "src",
+    "original": "/images/wirkner.jpg",
+    "resolved": "/images/people/Christian-Wirkner.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Christina Bisulca",
+    "kind": "src",
+    "original": "/images/bisulca.jpg",
+    "resolved": "/images/people/Christina-Bisulca.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Amazonas Chagas, Jr.",
+    "kind": "src",
+    "original": "/images/chagas.jpg",
+    "resolved": "/images/people/Amazonas-Chagas-Jr.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Lionel Monod",
+    "kind": "src",
+    "original": "/images/lionel.jpg",
+    "resolved": "/images/people/Lionel-Monod.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Antonio Galán Sánchez",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Antonio-Galan-Sanchez.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Matias Izquierdo",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Matias-Izquierdo.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Breanna Jordan",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Breanna-Jordan.png",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Sarah Morris",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Sarah-Morris.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Daniel Castro-Pereira",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Daniel-Castro-Pereira.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Kaylin Chong",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Kaylin-Chong.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Erik Ciaccio",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Erik-Ciaccio.png",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Valentin Ehrenthal",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Valentin-Ehrenthal.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Miguel Garcia",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Miguel-Medrano.jpg",
+    "score": 76,
+    "reason": "name tokens matched (miguel); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Leonel Martinez",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Leonel-Martinez.png",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Paulo Pantoja",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Paulo-Pantoja.png",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Karina Silvestre",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Pedro Martins",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Pedro-Martins.png",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Goran Shikak",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Goran-Shikak.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Pietro Tardelli",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Arnau Calatayud-Mascarell",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Arnau-Calatayud-Mascarell.png",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "David Chamé-Vázquez",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/David-Chame-Vazquez.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Sahibzada M. Jawad",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Sahibzada-M-Jawad.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Willians Porto",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Willians-Porto.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Valerie Warhol",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Shahan Derkarabetian",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Shahan-Derkarabetian.png",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Rebecca Godwin",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Rebecca-Budinoff.jpg",
+    "score": 76,
+    "reason": "name tokens matched (rebecca); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Roberta Engel",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Ian-Engelbrecht.jpg",
+    "score": 76,
+    "reason": "name tokens matched (engel); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "David Vrech",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VisitingStudentsSection.tsx",
+    "person": "Patricia Carrera",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Victoria Long",
+    "kind": "src",
+    "original": "/images/victoria.jpg",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "George Tsinias",
+    "kind": "src",
+    "original": "/images/George.jpg",
+    "resolved": "/images/people/George-Tsinias.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Christian Liriano",
+    "kind": "src",
+    "original": "/images/Christian.jpg",
+    "resolved": "/images/people/Christian-Liriano.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Gerbi Carreon",
+    "kind": "src",
+    "original": "/images/Gerbi.jpg",
+    "resolved": "/images/people/Gerbi-Carreon.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Debbie Alwill",
+    "kind": "src",
+    "original": "/images/debbie.jpg",
+    "resolved": "/images/people/Debbie-Alwill.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Jasmine Alim",
+    "kind": "src",
+    "original": "/images/Jasmin.jpg",
+    "resolved": "/images/people/Jasmine-Alim.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Reginald Christiaan",
+    "kind": "src",
+    "original": "/images/ReginaldChristiaan.jpg",
+    "resolved": "/images/people/Reginald-Christiaan.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Howard W. Fiedler",
+    "kind": "src",
+    "original": "/images/fiedler.jpg",
+    "resolved": "/images/people/Howard-W-Fiedler.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Stefan Foord",
+    "kind": "src",
+    "original": "/images/Stefan.Foord.jpg",
+    "resolved": "/images/people/Stefan-Foord.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Tom Sullivan",
+    "kind": "src",
+    "original": "/images/Tom-Sullivan.jpg",
+    "resolved": "/images/people/Tom-Sullivan.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Patrick Gildenhuys",
+    "kind": "src",
+    "original": "/images/Gildenhuys.Patrick.jpg",
+    "resolved": "/images/people/Patrick-Gildenhuys.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Charles Haddad",
+    "kind": "src",
+    "original": "/images/Charles.Haddad.jpg",
+    "resolved": "/images/people/Charles-Haddad.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; exact legacy basename; legacy basename substring; legacy basename contains file stem; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Siegfried Huber",
+    "kind": "src",
+    "original": "/images/Huber.jpg",
+    "resolved": "/images/people/Siegfried-Huber.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Jeremy Huff",
+    "kind": "src",
+    "original": "/images/huff2.jpg",
+    "resolved": "/images/people/Jeremy-Huff.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Simone Longe",
+    "kind": "src",
+    "original": "/images/simone.jpg",
+    "resolved": "/images/people/Simone-Longe.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Warren Savary",
+    "kind": "src",
+    "original": "/images/warren.jpg",
+    "resolved": "/images/people/Warren-Savary.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Rick West",
+    "kind": "src",
+    "original": "/images/west.jpg",
+    "resolved": "/images/people/Rick-West.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Ofelia Delgado",
+    "kind": "src",
+    "original": "/images/ofelialab.jpg",
+    "resolved": "/images/people/Ofelia-Delgado.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "David Desoeur",
+    "kind": "src",
+    "original": "/images/desouer.jpg",
+    "resolved": "/images/people/David-Desoeur.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Ian Engelbrecht",
+    "kind": "src",
+    "original": "/images/Engelbrecht.jpg",
+    "resolved": "/images/people/Ian-Engelbrecht.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Ilsa Kaim",
+    "kind": "src",
+    "original": "/images/ilsa.jpg",
+    "resolved": "/images/people/Ilsa-Kaim.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Sergios-Orestis Kolokotronis",
+    "kind": "src",
+    "original": "/images/sergios.jpg",
+    "resolved": "/images/people/Sergios-Orestis-Kolokotronis.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Sulata Maity",
+    "kind": "src",
+    "original": "/images/sulata.jpg",
+    "resolved": "/images/people/Sulata-Maity.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Kari McWest",
+    "kind": "src",
+    "original": "/images/kari.jpg",
+    "resolved": "/images/people/Kari-McWest.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Randy Mercurio",
+    "kind": "src",
+    "original": "/images/mercurio3.jpg",
+    "resolved": "/images/people/Randy-Mercurio.jpg",
+    "score": 93,
+    "reason": "all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Zach Valois",
+    "kind": "src",
+    "original": "/images/zach.jpg",
+    "resolved": "/images/people/Zach-Valois.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "John Visser",
+    "kind": "src",
+    "original": "/images/Visser.jpg",
+    "resolved": "/images/people/John-Visser.jpg",
+    "score": 93,
+    "reason": "legacy basename substring; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Soleil Blanquera",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Soleil-Blanquera.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Brian Sperber",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Brian-Sperber.jpg",
+    "score": 103,
+    "reason": "exact normalized filename; all name tokens matched; people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Adrian Armstrong",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/arachnids/Tityus_adrianoi_female_2.JPG",
+    "score": 73,
+    "reason": "name tokens matched (adrian)",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Mark Cooper",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Ann Garbacki",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Tom Gartner",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Peter Hawkes",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Dawid Jacobs",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Allyson Mellone",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Asel Zhetigenova",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Diogo-Casellato.jpg",
+    "score": 76,
+    "reason": "name tokens matched (asel); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Howard Bichard",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Howard-W-Fiedler.jpg",
+    "score": 76,
+    "reason": "name tokens matched (howard); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Abigail Carlton",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Suzanna Dodd",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Carine Galvão",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Tiffany Gentry",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Israel Na'aman",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Danielle Parsons",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Fabienne Paumet",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Warren Schmidt",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": "/images/people/Warren-Savary.jpg",
+    "score": 76,
+    "reason": "name tokens matched (warren); people folder bonus",
+    "applied": true
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Susan Tosier",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  },
+  {
+    "file": "VolunteersSection.tsx",
+    "person": "Peg Werns",
+    "kind": "placeholder",
+    "original": "PhotoPlaceholder",
+    "resolved": null,
+    "score": 0,
+    "reason": "no confident match",
+    "applied": false
+  }
+]

@@ -31,7 +31,7 @@ const formatValidationError = (label: string, error: unknown) => {
 export const getPeople = (): Person[] => {
   const peopleDir = path.join(CONTENT_DIR, "people");
   const files = readdirSync(peopleDir)
-    .filter((file) => file.endsWith(".json"))
+    .filter((file) => file.endsWith(".json") && file !== "section-order.json")
     .sort((a, b) => a.localeCompare(b));
 
   return files.map((file) => {
@@ -43,6 +43,19 @@ export const getPeople = (): Person[] => {
     }
     return result.data;
   });
+};
+
+const peopleSectionOrderSchema = z.record(z.string(), z.array(z.string().min(1)));
+
+export const getPeopleSectionOrder = (sectionId: string): string[] => {
+  const filePath = path.join(CONTENT_DIR, "people", "section-order.json");
+  const parsed = readJsonFile<unknown>(filePath);
+  const result = peopleSectionOrderSchema.safeParse(parsed);
+  if (!result.success) {
+    throw new Error(formatValidationError("content/people/section-order.json", result.error));
+  }
+
+  return result.data[sectionId] ?? [];
 };
 
 export const getPublications = (): Publication[] => {
@@ -100,12 +113,9 @@ export const getSiteSettings = (): SiteSettings => {
   return result.data;
 };
 
-export const getPersonImagePath = (image: Person["image"]) => {
-  if (!image) {
-    return null;
-  }
-  return `/images/${image.folder}/${image.filename}`;
-};
+import { getPersonImagePath } from "@/lib/people/personImage";
+
+export { getPersonImagePath };
 
 export const resolvePublicImagePath = (src: string) => {
   if (!src.startsWith("/")) {

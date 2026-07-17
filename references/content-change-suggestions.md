@@ -68,16 +68,93 @@ Migration and validation scripts must preserve author wording exactly. When stru
 - **Original (live page):** Inline JSX uses `src="/images/Pio.jpg"` (file not present in repo → initials placeholder).
 - **Current JSON:** `"image": { "folder": "arachnids", "filename": "Scorpion-60.jpg" }` → resolves to `/images/arachnids/Scorpion-60.jpg` (a scorpion photo; passes `validate-content` because the file exists).
 - **On disk:** `public/images/people/Pio-Colmenares.jpg` exists and appears to be the intended portrait.
-- **Issue:** Wiring `/people` to `getPeople()` would replace the placeholder with the **wrong** scorpion image unless JSON is corrected first.
-- **Suggested action:** Set image to `{ "folder": "people", "filename": "Pio-Colmenares.jpg" }` after author confirms.
-- **Status:** Open
+- **Inline JSX fix (2026-07-17):** `MuseumSpecialistsSection.tsx` now uses `/images/people/Pio-Colmenares.jpg`. See **People image audit (2026-07-17)**.
+- **Issue:** Wiring `/people` to `getPeople()` would still show the **wrong** scorpion image until JSON is corrected.
+- **Suggested action:** Set JSON image to `{ "folder": "people", "filename": "Pio-Colmenares.jpg" }` after author confirms.
+- **Status:** Inline JSX fixed; JSON still open
 
 ### Legacy flat image paths vs JSON `{ folder, filename }`
 
-- **Location:** `app/people/PeopleClient.tsx` (inline `src="/images/…"`); `content/people/*.json`; `getPersonImagePath()`
-- **Issue:** Many inline paths omit the `people/` subfolder (e.g. `/images/prendini.jpg`, `/images/Tahir.jpg`). JSON stores `{ folder: "people", filename: "…" }` and resolves to `/images/people/…`. Some inline paths point to files that are missing from the repo; JSON may point to different on-disk files or `null`.
-- **Suggested action:** Before wiring `getPeople()`, audit each section’s inline `src` against JSON + `public/images/` and document intentional differences here.
-- **Status:** Open
+- **Location:** `app/people/sections/*.tsx`; `content/people/*.json`; `getPersonImagePath()`
+- **Issue:** Many inline paths omitted the `people/` subfolder (e.g. `/images/prendini.jpg`, `/images/Tahir.jpg`). JSON stores `{ folder: "people", filename: "…" }` and resolves to `/images/people/…`. Some inline paths pointed to files missing from the repo; JSON may point to different on-disk files or `null`.
+- **Partial fix (2026-07-17):** See **People image audit (2026-07-17)** below. All inline `src` paths in section files now resolve on disk. JSON is still not wired to the page.
+- **Suggested action:** Before wiring `getPeople()`, reconcile JSON image fields with the applied inline paths documented in `references/people-image-audit-final.json`.
+- **Status:** Partially addressed (inline JSX only)
+
+---
+
+### People image audit (2026-07-17)
+
+Automated audit mapped each broken inline `src` or explicit `<PhotoPlaceholder>` in `app/people/sections/*.tsx` to the best on-disk match under `public/images/` (folder structure unchanged). Matches were applied in code via `<PeopleImage src="…">`.
+
+**Summary**
+
+| Outcome | Count |
+|--------|------:|
+| Photos connected (applied) | 150 |
+| Still using `<PhotoPlaceholder>` (no confident match) | 31 |
+| Auto-matches reverted (false positives) | 8 |
+| Broken inline `src` remaining | 0 |
+
+**Audit artifacts**
+
+- `references/people-image-audit.json` — initial auto-audit (scores, candidates)
+- `references/people-image-audit-final.json` — applied, reverted, and still-placeholder lists (authoritative)
+- Scripts (re-runnable): `scripts/audit-fix-people-images.ts`, `scripts/correct-people-image-matches.ts`, `scripts/generate-people-image-audit-final.ts`
+
+**Applied fix types**
+
+- **111** broken legacy `src` paths → `/images/people/…` (e.g. `/images/prendini.jpg` → `/images/people/Lorenzo-Prendini.jpg`)
+- **39** explicit `<PhotoPlaceholder>` → `<PeopleImage>` where a confident filename match existed
+- **9** high-confidence manual `src` corrections (see table below)
+
+**Manual src corrections**
+
+| Person | Section file | Original `src` | Resolved path |
+|--------|--------------|----------------|---------------|
+| Lorenzo Prendini | `PrincipalInvestigatorSection.tsx` | `/images/prendini.jpg` | `/images/people/Lorenzo-Prendini.jpg` |
+| Pío A. Colmenares | `MuseumSpecialistsSection.tsx` | `/images/Pio.jpg` | `/images/people/Pio-Colmenares.jpg` |
+| Jairo A. Moreno-González | `PostdocsSection.tsx`, `VisitingStudentsSection.tsx` | `/images/Jairo.jpg` | `/images/people/Jairo-A-Moreno-Gonzalez.jpg` |
+| Ricardo Botero-Trujillo | `PostdocsSection.tsx` | `/images/Ricardo.jpg` | `/images/people/Ricardo-Botero-Trujillo.jpg` |
+| Ricardo Botero-Trujillo | `VisitingStudentsSection.tsx` | `/images/ric.jpg` | `/images/people/Ricardo-Botero-Trujillo.jpg` |
+| Victoria Long | `TechnicalStaffSection.tsx`, `VolunteersSection.tsx` | `/images/victoria.jpg` | `/images/people/Victoria-Long.jpg` |
+| Eleanor Goetz | `TechnicalStaffSection.tsx` | `/images/Eleanor1_blmjit.jpg` | `/images/people/Eleanor-Goetz.jpg` |
+
+**Reverted false positives** (left as `<PhotoPlaceholder>`)
+
+| Person | Attempted match | Reason |
+|--------|-----------------|--------|
+| Adrian Armstrong | `/images/arachnids/Tityus_adrianoi_female_2.JPG` | Species photo, not a portrait |
+| Miguel Garcia | `/images/people/Miguel-Medrano.jpg` | Wrong person (first-name match) |
+| Rebecca Godwin | `/images/people/Rebecca-Budinoff.jpg` | Wrong person (first-name match) |
+| Roberta Engel | `/images/people/Ian-Engelbrecht.jpg` | Wrong person (surname partial match) |
+| Simon Au | `/images/people/Simone-Longe.jpg` | Wrong person (first-name match) |
+| Asel Zhetigenova | `/images/people/Diogo-Casellato.jpg` | No plausible match |
+| Howard Bichard | `/images/people/Howard-W-Fiedler.jpg` | Wrong person (first-name match) |
+| Warren Schmidt | `/images/people/Warren-Savary.jpg` | Wrong person (first-name match) |
+
+**Still placeholder (31)** — no on-disk portrait found with sufficient confidence
+
+`HighSchoolStudentsSection.tsx`: Nathan Auyeng, Aleyna Singer, Simon Au, Michelle Bayefsky-Anand  
+`VisitingStudentsSection.tsx`: Miguel Garcia, Karina Silvestre, Pietro Tardelli, Valerie Warhol, Rebecca Godwin, Roberta Engel, David Vrech, Patricia Carrera  
+`VolunteersSection.tsx`: Adrian Armstrong, Mark Cooper, Ann Garbacki, Tom Gartner, Peter Hawkes, Dawid Jacobs, Allyson Mellone, Asel Zhetigenova, Howard Bichard, Abigail Carlton, Suzanna Dodd, Carine Galvão, Tiffany Gentry, Israel Na'aman, Danielle Parsons, Fabienne Paumet, Warren Schmidt, Susan Tosier, Peg Werns  
+(Plus any others listed in `stillPlaceholder` in the audit JSON.)
+
+**Suggested action for author**
+
+1. Spot-check auto-matched photos on `/people`, especially names matched only by partial filename similarity (see full list in audit JSON).
+2. Supply portrait files or correct paths for the 31 placeholder profiles.
+3. Confirm Pío Colmenares JSON image should be updated to `{ "folder": "people", "filename": "Pio-Colmenares.jpg" }` before wiring `getPeople()`.
+- **Status:** Applied in code; awaiting author review
+
+### Undergraduate Students wired to `getPeople()` (2026-07-17)
+
+- **Location:** `app/people/sections/UndergraduateStudentsSection.tsx`; `content/people/*.json`; `content/people/section-order.json`; `app/people/PersonProfileCard.tsx`
+- **Change:** Undergraduate profiles now render from `getPeople()` (filtered by `sectionId: "undergraduate-students"`) instead of a duplicated inline data array. Display order is preserved via `content/people/section-order.json`. Shared `PersonProfileCard` uses `PeopleCard` / `PeopleCardMedia` layout (matching Graduate Students).
+- **Photos:** **44 of 46** undergrad JSON entries include `{ folder, filename }` image paths; all resolve on disk. **2 remain placeholder:** Cassandra Hansen, Michelle Yun (`"image": null` in JSON).
+- **Why earlier audit missed undergrads:** The image audit script only scanned static JSX (`<PhotoPlaceholder name="…" />`). Undergrads used a data-array pattern that was skipped; wiring to JSON fixes this for the section.
+- **Suggested action:** Author confirms bios and photos on `/people` → Undergraduate Students (Current + Alumni). Supply images for Cassandra Hansen and Michelle Yun if available.
+- **Status:** Applied; awaiting author review
 
 ### Lab history group photo paths
 
@@ -96,4 +173,67 @@ Migration and validation scripts must preserve author wording exactly. When stru
 - **Current:** `© Copyright Lorenzo Prendini 2026. All Rights Reserved.`
 - **Issue:** Matches the pre-migration footer at time of extraction; may need annual update.
 - **Suggested action:** Author confirms wording and year.
+- **Status:** Open
+
+---
+
+## Site structure (Stages 2–3, 2026-07-17)
+
+These items document visible or structural changes from the Stage 2–3 refactor. Copy and URLs were preserved unless noted.
+
+### ExternalLink icon on Research, Facilities, and Collections
+
+- **Location:** `/research`, `/facilities`, `/collections`
+- **Change:** External hyperlinks now render via `ExternalLink`, which appends a small external-link icon after the link text.
+- **Issue:** Minor visual change from Stage 3; link URLs and anchor text are unchanged.
+- **Suggested action:** Author confirms the icon is acceptable on these pages.
+- **Status:** Open
+
+### People page external links unchanged
+
+- **Location:** `app/people/sections/*.tsx`
+- **Change:** Inline `<a target="_blank">` links were **not** converted to `ExternalLink` to avoid adding icons across profile links before author review.
+- **Suggested action:** Author decides whether to adopt `ExternalLink` on `/people` in a later pass.
+- **Status:** Open
+
+### `/people` still renders inline JSX (not JSON)
+
+- **Location:** `app/people/sections/*.tsx`; `content/people/*.json`
+- **Change:** People sections were split into separate files for maintainability. Content was moved verbatim from `PeopleClient.tsx`. **`getPeople()` is not used for rendering** — except **Undergraduate Students** (2026-07-17), which now renders from JSON via `PersonProfileCard`.
+- **Suggested action:** After JSON audit, wire remaining sections to `getPeople()` per implementation plan Stage 4+.
+- **Status:** Partial (undergraduate students wired)
+
+### Per-page metadata (`<title>` and description)
+
+- **Location:** All route `page.tsx` files; `app/sitemap.ts`, `app/robots.ts`
+- **Change:** Each route now exports unique `metadata` (title and description). This affects browser tab titles and search/social previews only—not on-page body copy.
+- **Suggested action:** Author spot-checks tab titles match intended page names.
+- **Status:** Open
+
+### Facilities figure markup (`Figure` component)
+
+- **Location:** `/facilities` (Leica MZ16 and Microptics™ ML1000 images)
+- **Change:** Two `<figure>` blocks refactored to the shared `Figure` component. Same images, alt text, and captions; markup/classes may differ slightly.
+- **Suggested action:** Author confirms images still display correctly.
+- **Status:** Open
+
+### Collections figure markup (`Figure` component)
+
+- **Location:** `/collections` (personnel photo; former/new storage facility photos)
+- **Change:** Three `<figure>` blocks refactored to `Figure`. Same images, alt text, and captions.
+- **Suggested action:** Author confirms images still display correctly.
+- **Status:** Open
+
+### Arachnids figure markup (`Figure` component)
+
+- **Location:** `/arachnids` (Ecology, Life History, and Conservation section images)
+- **Change:** Five inline `<figure>` blocks refactored to `Figure`. Same images, alt text, and captions.
+- **Suggested action:** Author confirms images still display correctly.
+- **Status:** Open
+
+### People group cards (`Figure` via `PeopleGroupCard`)
+
+- **Location:** `/people` (Lab Evolution section)
+- **Change:** `PeopleGroupCard` now uses the shared `Figure` component (still with `PeopleImage` for fallback). Same photos and captions.
+- **Suggested action:** Author confirms lab history group photos unchanged.
 - **Status:** Open

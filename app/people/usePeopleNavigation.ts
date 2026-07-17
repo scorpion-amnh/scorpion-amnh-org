@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { getHeaderHeight, getScrollGap } from "@/lib/scrollMetrics";
 import type { PeopleSection } from "./sections";
 
 export type SectionTab = "current" | "alumni";
@@ -123,30 +124,6 @@ export const usePeopleNavigation = (sections: PeopleSection[]) => {
 
   const sectionIdSet = useMemo(() => new Set(sections.map((section) => section.id)), [sections]);
 
-  const getHeaderHeight = useCallback(() => {
-    const rootStyles = getComputedStyle(document.documentElement);
-    const value = rootStyles.getPropertyValue("--header-height").trim();
-    if (value.endsWith("rem")) {
-      const rem = parseFloat(value);
-      const fontSize = parseFloat(rootStyles.fontSize) || 16;
-      return rem * fontSize;
-    }
-    const parsed = parseFloat(value);
-    return Number.isNaN(parsed) ? 0 : parsed;
-  }, []);
-
-  const getScrollGap = useCallback(() => {
-    const rootStyles = getComputedStyle(document.documentElement);
-    const value = rootStyles.getPropertyValue("--section-scroll-gap").trim();
-    if (value.endsWith("rem")) {
-      const rem = parseFloat(value);
-      const fontSize = parseFloat(rootStyles.fontSize) || 16;
-      return rem * fontSize;
-    }
-    const parsed = parseFloat(value);
-    return Number.isNaN(parsed) ? 0 : parsed;
-  }, []);
-
   const getSideNavOffset = useCallback(() => {
     if (window.innerWidth >= 1024) {
       return 0;
@@ -203,7 +180,7 @@ export const usePeopleNavigation = (sections: PeopleSection[]) => {
     };
 
     requestAnimationFrame(tryScroll);
-  }, [getHeaderHeight, getScrollGap, getSideNavOffset]);
+  }, [getSideNavOffset]);
 
   const buildPeopleIndex = useCallback(() => {
     if (!contentRef.current) {
@@ -356,7 +333,7 @@ export const usePeopleNavigation = (sections: PeopleSection[]) => {
         : contentRef.current.offsetTop - headerHeight - sideNavOffset;
       window.scrollTo({ top: yOffset, behavior: "smooth" });
     }
-  }, [activeSection, getHeaderHeight, getScrollGap, getSideNavOffset]);
+  }, [activeSection, getSideNavOffset]);
 
   useEffect(() => {
     runPendingPersonScroll();

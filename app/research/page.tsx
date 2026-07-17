@@ -1,6 +1,13 @@
-'use client';
+import { ExternalLink } from "@/app/components/ExternalLink";
+import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 
-export default function Research() {
+export const metadata: Metadata = createPageMetadata(
+  "Research | Arachnology at AMNH",
+  "Research areas of the Scorpion Systematics Research Group at the American Museum of Natural History."
+);
+
+export default function ResearchPage() {
   return (
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">
@@ -12,21 +19,21 @@ export default function Research() {
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Scorpion Phylogeny and Higher Classification</h2>
             <p className="text-lg leading-8 text-gray-700 mb-6">
-              The framework for our current research on scorpions is a global phylogeny of the Order Scorpiones, using exemplar species as terminal taxa, and morphological data, together with genomic data, as characters, supported by several sources, including National Science Foundation grant, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1655050&HistoricalAwards=false" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Living Fossils: Integrating Phylogenomics and Comparative Morphology to Assemble the Scorpion Tree of Life</a>. When a comprehensive phylogeny of the order is established, it will be possible to revise the contentious familial classification, investigate biogeographical patterns at the continental and intracontinental levels, and test adaptational hypotheses, e.g. concerning the evolution of scorpion venom.
+              The framework for our current research on scorpions is a global phylogeny of the Order Scorpiones, using exemplar species as terminal taxa, and morphological data, together with genomic data, as characters, supported by several sources, including National Science Foundation grant, <ExternalLink href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1655050&HistoricalAwards=false">Living Fossils: Integrating Phylogenomics and Comparative Morphology to Assemble the Scorpion Tree of Life</ExternalLink>. When a comprehensive phylogeny of the order is established, it will be possible to revise the contentious familial classification, investigate biogeographical patterns at the continental and intracontinental levels, and test adaptational hypotheses, e.g. concerning the evolution of scorpion venom.
             </p>
           </div>
 
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Minor Arachnid Orders</h2>
             <p className="text-lg leading-8 text-gray-700 mb-6">
-              We are also interested in the systematics of other smaller arachnid orders, notably Pedipalpi (Amblypygi, Thelyphonida and Schizomida), Ricinulei, and Solifugae, all of which are poorly understood. Our research on these taxa has been supported by several National Science Foundation grants: <a href="https://research.amnh.org/atol/files/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Assembling the Tree of Life: Phylogeny of Spiders, Global Survey and Inventory of Solifugae, Systematics and Evolution of Pedipalpi (Whip Spiders and Whip Scorpions): Phylogenomics and Morphology of Understudied Arachnids</a>. We are particularly interested in taxonomic revisions and phylogenetic analyses of southern African Solifugae, which comprise nearly one quarter of the world solifuge diversity. As patterns of solifuge distribution in southern Africa mirror those of the scorpions, research into their systematics will facilitate the study of congruent biogeographical patterns.
+              We are also interested in the systematics of other smaller arachnid orders, notably Pedipalpi (Amblypygi, Thelyphonida and Schizomida), Ricinulei, and Solifugae, all of which are poorly understood. Our research on these taxa has been supported by several National Science Foundation grants: <ExternalLink href="https://research.amnh.org/atol/files/">Assembling the Tree of Life: Phylogeny of Spiders, Global Survey and Inventory of Solifugae, Systematics and Evolution of Pedipalpi (Whip Spiders and Whip Scorpions): Phylogenomics and Morphology of Understudied Arachnids</ExternalLink>. We are particularly interested in taxonomic revisions and phylogenetic analyses of southern African Solifugae, which comprise nearly one quarter of the world solifuge diversity. As patterns of solifuge distribution in southern Africa mirror those of the scorpions, research into their systematics will facilitate the study of congruent biogeographical patterns.
             </p>
           </div>
 
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Revisionary Systematics</h2>
             <p className="text-lg leading-8 text-gray-700 mb-6">
-              Besides investigating phylogenetic relationships among the major lineages of scorpions and other arachnids, we are interested in revisionary systematics, particularly of the North American, Afrotropical, and Asian scorpion faunas, including world revisions and biogeographical analyses of the Gondwana families Bothriuridae, Hormuridae and Scorpionidae, comprising several paraphyletic genera. This research has been supported among others by grants from the <a href="https://www.dcceew.gov.au/science-research/abrs" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Australian Biological Resources Study (ABRS) - DCCEEW</a>, the <a href="https://www.nationalgeographic.org/society/grants-and-investments/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">National Geographic Society</a>, the <a href="https://www.bsf.org.il/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">U.S.-Israel Binational Science Foundation (BSF)</a>, and an award from the <a href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0413453" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">U.S. National Science Foundation: Revisionary Systematics of the North American Scorpion Family Vaejovidae</a>.
+              Besides investigating phylogenetic relationships among the major lineages of scorpions and other arachnids, we are interested in revisionary systematics, particularly of the North American, Afrotropical, and Asian scorpion faunas, including world revisions and biogeographical analyses of the Gondwana families Bothriuridae, Hormuridae and Scorpionidae, comprising several paraphyletic genera. This research has been supported among others by grants from the <ExternalLink href="https://www.dcceew.gov.au/science-research/abrs">Australian Biological Resources Study (ABRS) - DCCEEW</ExternalLink>, the <ExternalLink href="https://www.nationalgeographic.org/society/grants-and-investments/">National Geographic Society</ExternalLink>, the <ExternalLink href="https://www.bsf.org.il/">U.S.-Israel Binational Science Foundation (BSF)</ExternalLink>, and an award from the <ExternalLink href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0413453">U.S. National Science Foundation: Revisionary Systematics of the North American Scorpion Family Vaejovidae</ExternalLink>.
             </p>
           </div>
 
@@ -47,7 +54,7 @@ export default function Research() {
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Distribution and Conservation</h2>
             <p className="text-lg leading-8 text-gray-700 mb-6">
-              Many range-restricted scorpions and other arachnids are threatened by current land-use practices, climate change, and harvesting for the venom and/or exotic pet trades, yet few are afforded any official protection. Atlasing arachnid distributions, based on historical material contained in natural history collections and new material collected during ongoing expeditions, is important for inventorying their diversity and understanding their distributions. When arachnid distributions have been accurately mapped, assessments of their conservation status can be undertaken. Grants from the Foundational Biodiversity Information Program of the National Research Foundation, South Africa, assisted us with field inventories of arachnid diversity and distribution in the <a href="https://fbip.co.za/biogaps-project/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Karoo</a> and the <a href="https://fbip.co.za/news/waterberg-mountain-complex-in-focus-as-fbip-awards-large-grant/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Waterberg</a> of South Africa. Grants (<a href="http://jrsbiodiversity.org/grant/national-museum-bloemfontein/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Improvement and Integration of Arachnid Biodiversity Information in South Africa</a>) and the SYNTHESYS+ Transnational Access program (<a href="https://www.synthesys.info/access/transnational-access.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">SYNTHESYS - an integrated European infrastructure for researchers in the natural sciences</a>) of the European Union, enabled us to identify and digitize the scorpion holdings of major natural history collections in sub-Saharan Africa, Europe, and the U.K., as part of ongoing taxon inventories.
+              Many range-restricted scorpions and other arachnids are threatened by current land-use practices, climate change, and harvesting for the venom and/or exotic pet trades, yet few are afforded any official protection. Atlasing arachnid distributions, based on historical material contained in natural history collections and new material collected during ongoing expeditions, is important for inventorying their diversity and understanding their distributions. When arachnid distributions have been accurately mapped, assessments of their conservation status can be undertaken. Grants from the Foundational Biodiversity Information Program of the National Research Foundation, South Africa, assisted us with field inventories of arachnid diversity and distribution in the <ExternalLink href="https://fbip.co.za/biogaps-project/">Karoo</ExternalLink> and the <ExternalLink href="https://fbip.co.za/news/waterberg-mountain-complex-in-focus-as-fbip-awards-large-grant/">Waterberg</ExternalLink> of South Africa. Grants (<ExternalLink href="http://jrsbiodiversity.org/grant/national-museum-bloemfontein/">Improvement and Integration of Arachnid Biodiversity Information in South Africa</ExternalLink>) and the SYNTHESYS+ Transnational Access program (<ExternalLink href="https://www.synthesys.info/access/transnational-access.html">SYNTHESYS - an integrated European infrastructure for researchers in the natural sciences</ExternalLink>) of the European Union, enabled us to identify and digitize the scorpion holdings of major natural history collections in sub-Saharan Africa, Europe, and the U.K., as part of ongoing taxon inventories.
             </p>
           </div>
 
@@ -85,25 +92,25 @@ export default function Research() {
               We acknowledge the past and ongoing support of the following organizations, foundations and funding agencies for our research:
             </p>
             <ul className="list-disc list-inside space-y-2 text-lg text-gray-700">
-              <li><a href="http://www.americanarachnology.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">American Arachnological Society</a></li>
-              <li><a href="https://www.amnh.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">American Museum of Natural History</a></li>
-              <li><a href="http://www.environment.gov.au/science/abrs" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Australian Biological Resources Study</a></li>
-              <li><a href="https://eseb.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">ESEB | European Society for Evolutionary Biology</a></li>
-              <li><a href="https://www.synthesys.info/access/transnational-access.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">European Union SYNTHESYS+ Transnational Access program</a> (an integrated European infrastructure for researchers in the natural sciences)</li>
-              <li><a href="https://explorers.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Explorers Club</a></li>
-              <li><a href="https://www.hec.gov.pk/english/pages/home.aspx" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Higher Education Commission of Pakistan</a></li>
-              <li><a href="https://arachnology.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">International Society of Arachnology</a></li>
-              <li><a href="http://jrsbiodiversity.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">JRS Biodiversity Fund</a></li>
-              <li><a href="https://www.maxkadefoundation.org/grants" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Max Kade Foundation</a></li>
-              <li><a href="http://www.speciesconservation.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Mohammad bin Zayed Species Conservation Fund</a></li>
-              <li><a href="http://www.mcz.harvard.edu/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Museum of Comparative Zoology, Harvard University</a></li>
-              <li><a href="http://nationalgeographic.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">National Geographic Society</a></li>
-              <li><a href="http://www.nrf.ac.za/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">National Research Foundation of South Africa</a></li>
-              <li><a href="http://skyefoundation.co.za/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Skye Foundation and Charitable Trust</a></li>
-              <li><a href="https://www.snf.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Stavros Niarchos Foundation</a></li>
-              <li><a href="https://www.bsf.org.il/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">U.S.-Israel Binational Science Foundation</a></li>
-              <li><a href="http://www.nsf.gov/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">U.S. National Science Foundation</a></li>
-              <li><a href="https://www.rlounsbery.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Richard Lounsbery Foundation</a></li>
+              <li><ExternalLink href="http://www.americanarachnology.org/">American Arachnological Society</ExternalLink></li>
+              <li><ExternalLink href="https://www.amnh.org/">American Museum of Natural History</ExternalLink></li>
+              <li><ExternalLink href="http://www.environment.gov.au/science/abrs">Australian Biological Resources Study</ExternalLink></li>
+              <li><ExternalLink href="https://eseb.org/">ESEB | European Society for Evolutionary Biology</ExternalLink></li>
+              <li><ExternalLink href="https://www.synthesys.info/access/transnational-access.html">European Union SYNTHESYS+ Transnational Access program</ExternalLink> (an integrated European infrastructure for researchers in the natural sciences)</li>
+              <li><ExternalLink href="https://explorers.org/">Explorers Club</ExternalLink></li>
+              <li><ExternalLink href="https://www.hec.gov.pk/english/pages/home.aspx">Higher Education Commission of Pakistan</ExternalLink></li>
+              <li><ExternalLink href="https://arachnology.org/">International Society of Arachnology</ExternalLink></li>
+              <li><ExternalLink href="http://jrsbiodiversity.org/">JRS Biodiversity Fund</ExternalLink></li>
+              <li><ExternalLink href="https://www.maxkadefoundation.org/grants">Max Kade Foundation</ExternalLink></li>
+              <li><ExternalLink href="http://www.speciesconservation.org/">Mohammad bin Zayed Species Conservation Fund</ExternalLink></li>
+              <li><ExternalLink href="http://www.mcz.harvard.edu/">Museum of Comparative Zoology, Harvard University</ExternalLink></li>
+              <li><ExternalLink href="http://nationalgeographic.org/">National Geographic Society</ExternalLink></li>
+              <li><ExternalLink href="http://www.nrf.ac.za/">National Research Foundation of South Africa</ExternalLink></li>
+              <li><ExternalLink href="http://skyefoundation.co.za/">Skye Foundation and Charitable Trust</ExternalLink></li>
+              <li><ExternalLink href="https://www.snf.org/">Stavros Niarchos Foundation</ExternalLink></li>
+              <li><ExternalLink href="https://www.bsf.org.il/">U.S.-Israel Binational Science Foundation</ExternalLink></li>
+              <li><ExternalLink href="http://www.nsf.gov/">U.S. National Science Foundation</ExternalLink></li>
+              <li><ExternalLink href="https://www.rlounsbery.org/">Richard Lounsbery Foundation</ExternalLink></li>
             </ul>
           </div>
         </div>

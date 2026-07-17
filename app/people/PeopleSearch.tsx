@@ -1,4 +1,5 @@
 import type { RefObject } from "react";
+import { SearchIcon } from "@/app/components/icons/SearchIcon";
 import type { PeopleIndexItem, SectionTab } from "./usePeopleNavigation";
 
 type PeopleSearchProps = {
@@ -27,19 +28,7 @@ export const PeopleSearch = ({
       </label>
       <div className="relative">
         <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-gray-400">
-          <svg
-            aria-hidden="true"
-            className="h-5 w-5"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="11" cy="11" r="8" />
-            <line x1="21" y1="21" x2="16.65" y2="16.65" />
-          </svg>
+          <SearchIcon />
         </span>
         <input
           id="people-search"

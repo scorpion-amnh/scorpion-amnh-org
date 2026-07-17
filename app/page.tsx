@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getGallery } from "@/lib/content";
-import { HomeGallery } from "./components/HomeGallery";
+import { createPageMetadata } from "@/lib/metadata";
+import { HomeGallery } from "@/app/components/HomeGallery";
+
+export const metadata: Metadata = createPageMetadata(
+  "Arachnology at AMNH",
+  "Scorpion Systematics Research Group at the American Museum of Natural History."
+);
 
 export default function Home() {
   const galleryImages = getGallery("home").map((entry) => entry.src);
