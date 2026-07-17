@@ -90,6 +90,9 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
   const shouldScrollOnSectionChange = useRef(false);
   const pendingPersonScrollId = useRef<string | null>(null);
   const hasRestoredFromUrl = useRef(false);
+  const sectionTabsRef = useRef(sectionTabs);
+
+  sectionTabsRef.current = sectionTabs;
 
   const sectionLabelMap = useMemo(
     () => Object.fromEntries(sections.map((section) => [section.id, section.label])),
@@ -179,11 +182,9 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
         return;
       }
 
-      setSectionTabs(() => {
-        const nextTabs = applyTabQueryToState(tab);
-        syncUrlFromState({ section: sectionId, tabs: nextTabs, hash: null });
-        return nextTabs;
-      });
+      const nextTabs = applyTabQueryToState(tab);
+      setSectionTabs(nextTabs);
+      syncUrlFromState({ section: sectionId, tabs: nextTabs, hash: null });
     },
     [syncUrlFromState]
   );
@@ -252,19 +253,15 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
       setActiveSection(id);
       shouldScrollOnSectionChange.current = true;
 
+      const nextTabs = isTabSectionId(id)
+        ? applyTabQueryToState("current")
+        : sectionTabsRef.current;
+
       if (isTabSectionId(id)) {
-        setSectionTabs(() => {
-          const nextTabs = applyTabQueryToState("current");
-          syncUrlFromState({ section: id, tabs: nextTabs, hash: null });
-          return nextTabs;
-        });
-        return;
+        setSectionTabs(nextTabs);
       }
 
-      setSectionTabs((current) => {
-        syncUrlFromState({ section: id, tabs: current, hash: null });
-        return current;
-      });
+      syncUrlFromState({ section: id, tabs: nextTabs, hash: null });
     },
     [syncUrlFromState]
   );
