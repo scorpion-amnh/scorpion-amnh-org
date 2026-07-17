@@ -86,6 +86,7 @@ export const PeopleSearch = ({
             }}
             onKeyDown={(event) => {
               if (event.key === "Escape") {
+                event.stopPropagation();
                 setSearchQuery("");
                 setIsSearchOpen(false);
                 event.currentTarget.blur();

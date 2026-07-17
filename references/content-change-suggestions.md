@@ -163,6 +163,13 @@ Automated audit mapped each broken inline `src` or explicit `<PhotoPlaceholder>`
 - **Suggested action:** Author verifies each group photo still matches the intended image and caption.
 - **Status:** Open
 
+### People sidebar — “Lab Evolution” label
+
+- **Location:** `app/people/sections.ts` → `{ id: 'lab-evolution', label: 'Lab Evolution' }`; `/people` side nav
+- **Current:** Sidebar and section heading use **Lab Evolution**.
+- **Suggested action:** Author may prefer **Lab Through the Years** (more descriptive for general readers). If approved, change the `label` only — keep `sectionId` as `lab-evolution` so URLs (`?section=lab-evolution`) and JSON keys stay unchanged.
+- **Status:** Open — awaiting author approval
+
 ---
 
 ## Site settings

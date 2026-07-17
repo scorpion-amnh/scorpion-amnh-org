@@ -41,6 +41,28 @@ export function Header({ navItems }: HeaderProps) {
     };
   }, []);
 
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") {
+        return;
+      }
+
+      const target = event.target as HTMLElement | null;
+      if (target?.id === "people-search") {
+        return;
+      }
+
+      setIsMenuOpen(false);
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isMenuOpen]);
+
   const isActive = (href: string) => {
     if (href === "/") {
       return pathname === "/";

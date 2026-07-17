@@ -163,20 +163,21 @@ Complete these before enabling `CONTENT_SOURCE=cms` in production. None of this 
 
 **Status: Not started** — may proceed before Stages 5.2 and 6 (see Progress above).
 
-1. Add a `scroll` event listener in `app/people/usePeopleNavigation.ts` that recalculates `activeSection` based on the section heading nearest the viewport top. — **Watch:** Must coexist with explicit sidebar clicks and `?section=` URL restore; avoid fighting `shouldScrollOnSectionChange` and refresh scroll-to-top behavior.
-2. In `app/components/Header.tsx`, swap the hamburger icon for the close icon when `isMenuOpen` is `true` (close icon already exists inside the drawer). — **Watch:** Keep `aria-expanded` and `aria-label` in sync on the toggle button.
-3. Add a loading skeleton or blurred placeholder to every `Image` in gallery components while the source loads. — **Watch:** Site uses `images: { unoptimized: true }`; placeholders should not flash on every cached revisit.
-4. Render `${filteredResults.length} results` above the results list in `app/people/PeopleSearch.tsx`. — **Watch:** Hide or adjust copy when the query is empty; keep accessible live-region behavior for screen readers.
+1. ~~Add a `scroll` event listener in `app/people/usePeopleNavigation.ts` that recalculates `activeSection` based on the section heading nearest the viewport top.~~ **Done** — scroll spy updates sidebar on manual scroll; suppressed during sidebar clicks, search jumps, URL restore, and person deep links.
+2. ~~In `app/components/Header.tsx`, swap the hamburger icon for the close icon when `isMenuOpen` is `true`.~~ **Won't do** — mobile drawer already has a visible close control (X in panel header) plus backdrop dismiss; swapping the header-bar hamburger would be redundant and mostly hidden behind the overlay.
+3. **Deprioritized (optional polish):** Loading placeholder for gallery images only (`HomeGallery`, Arachnids grid, Fieldwork grid). Use a reserved box + subtle fade-in or pulse — **not** blur placeholders (static export, `images: { unoptimized: true }`, no automatic LQIP). Skip header/footer logos and inline content figures. People photos: optional opacity transition in `PeopleImage` before investing in skeletons. — **Watch:** Avoid flash on repeat visits when images are cached; `bg-gray-100` wrappers already reserve space on gallery grids.
+4. ~~Render `${filteredResults.length} results` above the results list in `app/people/PeopleSearch.tsx`.~~ **Won't do** — index is ~238 people but UI caps at **12** matches; a visible count would often mislead (e.g. “12 results” when more matched) or duplicate what’s obvious in a short list. “No matches found” already covers the empty state. Screen-reader status is handled in item 5.
+5. **People search accessibility (WCAG 2.2 AA):** Fix `app/people/PeopleSearch.tsx` — remove incomplete `combobox` / `listbox` / `option` roles (nested buttons inside options break ARIA). Use a plain labeled search input + results `<ul>` of `<button>` items. Add an sr-only `aria-live="polite"` status region for “N suggestions” / “No matches” (and “Showing 12 of N” only when truncated); no visible count. Mark decorative search icon `aria-hidden`; ensure visible focus indicators on result buttons; optionally move focus to the selected person’s `h3` after jump. — **Watch:** Preserve Escape-to-clear and `/` shortcut; debounce live-region announcements so typing doesn’t spam the screen reader.
 
 ## Stage 7 — UX Fixes, Heuristic 2: Match Between System and the Real World
 
-1. Create `app/components/GlossaryTerm.tsx` that wraps a term in a `<button>` with a `title` attribute and a click-triggered tooltip. — **Watch:** Tooltip must work on keyboard focus, not just click; mobile needs a tap-friendly pattern.
-2. Wrap every occurrence of "Scorpiones", "Pedipalpi", "Solifugae", "Amblypygi", and other order names in body copy with `GlossaryTerm`. — **Watch:** Author must supply definitions; do not invent taxonomy copy — log additions in `references/content-change-suggestions.md`.
-3. Change the `"Lab Evolution"` label in `app/people/sections.ts` to `"Lab Through the Years"`. — **Watch:** Author approval required; `sectionId` stays `lab-evolution` (URLs and JSON must not change).
+**Low priority** — most site visitors are taxonomy/systematics experts; glossary tooling is optional polish, not a core need.
+
+1. **Low priority:** Create `app/components/GlossaryTerm.tsx` that wraps a term in a `<button>` with a `title` attribute and a click-triggered tooltip. Then wrap order names (`Scorpiones`, `Pedipalpi`, `Solifugae`, `Amblypygi`, etc.) in body copy with `GlossaryTerm` — author must supply definitions; log additions in `references/content-change-suggestions.md`. — **Watch:** Tooltip must work on keyboard focus, not just click; mobile needs a tap-friendly pattern.
 
 ## Stage 7 — UX Fixes, Heuristic 3: User Control and Freedom
 
-1. Add a `keydown` listener for `Escape` in `app/components/Header.tsx` that calls `setIsMenuOpen(false)` when the mobile nav is open. — **Watch:** Do not intercept `Escape` when focus is in People search (already clears search there).
+1. ~~Add a `keydown` listener for `Escape` in `app/components/Header.tsx` that calls `setIsMenuOpen(false)` when the mobile nav is open.~~ **Done** — document listener active only while menu is open; skips when focus is in `#people-search`. People search calls `stopPropagation()` on Escape.
 2. Create `app/components/BackToTop.tsx`: a fixed-position button that appears once `window.scrollY > 800` and scrolls to the top on click.
 3. Add `BackToTop` to `app/people/page.tsx`, `app/publications/page.tsx`, `app/arachnids/page.tsx`, `app/facilities/page.tsx`. — **Watch:** Account for fixed header height; avoid overlapping the mobile side nav on People/Collections.
 
