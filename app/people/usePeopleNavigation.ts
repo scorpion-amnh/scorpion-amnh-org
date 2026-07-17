@@ -92,7 +92,9 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
   const hasRestoredFromUrl = useRef(false);
   const sectionTabsRef = useRef(sectionTabs);
 
-  sectionTabsRef.current = sectionTabs;
+  useEffect(() => {
+    sectionTabsRef.current = sectionTabs;
+  }, [sectionTabs]);
 
   const sectionLabelMap = useMemo(
     () => Object.fromEntries(sections.map((section) => [section.id, section.label])),
@@ -278,7 +280,6 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
     }
 
     // Restore section/tab from the URL before first paint on refresh.
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-only URL hydration
     applyNavigationFromUrl({ allowPersonScroll: false });
     setIsNavigationReady(true);
     window.scrollTo(0, 0);
