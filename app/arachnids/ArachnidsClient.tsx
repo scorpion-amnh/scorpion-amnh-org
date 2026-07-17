@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useMemo } from "react";
 import { Figure } from "@/app/components/Figure";
+import { BackToTop } from "@/app/components/BackToTop";
 import type { GalleryImage } from "@/lib/content/schema";
 import { deterministicShuffle } from "@/lib/shuffle";
 
@@ -229,6 +230,7 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
           </div>
         </div>
       </div>
+      <BackToTop />
     </div>
   );
 }

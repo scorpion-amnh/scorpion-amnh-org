@@ -1,6 +1,7 @@
 'use client';
 
 import { CitationHtml } from "@/app/components/CitationHtml";
+import { BackToTop } from "@/app/components/BackToTop";
 import type { Publication } from "@/lib/content/schema";
 
 type PublicationsClientProps = {
@@ -101,6 +102,7 @@ export function PublicationsClient({ publications }: PublicationsClientProps) {
           </section>
         ))}
       </div>
+      <BackToTop />
     </div>
   );
 }

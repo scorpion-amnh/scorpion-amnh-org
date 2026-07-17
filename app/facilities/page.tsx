@@ -1,4 +1,5 @@
 import { ExternalLink } from "@/app/components/ExternalLink";
+import { BackToTop } from "@/app/components/BackToTop";
 import { Figure } from "@/app/components/Figure";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -194,6 +195,7 @@ export default function FacilitiesPage() {
           className="w-full h-auto rounded-lg"
         />
       </div>
+      <BackToTop />
     </div>
   );
 }

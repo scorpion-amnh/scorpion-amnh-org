@@ -1,6 +1,7 @@
 'use client';
 
 import { SideNav } from "@/app/components/SideNav";
+import { BackToTop } from "@/app/components/BackToTop";
 import type { PeopleGroupCardProps } from "@/app/people/PeopleGroupCard";
 import { PeopleSearch } from "@/app/people/PeopleSearch";
 import { GraduateStudentsSection } from "@/app/people/sections/GraduateStudentsSection";
@@ -144,6 +145,7 @@ export function PeopleClient({
           </div>
         </div>
       </div>
+      <BackToTop />
     </div>
   );
 }

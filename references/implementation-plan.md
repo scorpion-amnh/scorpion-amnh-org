@@ -178,8 +178,8 @@ Complete these before enabling `CONTENT_SOURCE=cms` in production. None of this 
 ## Stage 7 — UX Fixes, Heuristic 3: User Control and Freedom
 
 1. ~~Add a `keydown` listener for `Escape` in `app/components/Header.tsx` that calls `setIsMenuOpen(false)` when the mobile nav is open.~~ **Done** — document listener active only while menu is open; skips when focus is in `#people-search`. People search calls `stopPropagation()` on Escape.
-2. Create `app/components/BackToTop.tsx`: a fixed-position button that appears once `window.scrollY > 800` and scrolls to the top on click.
-3. Add `BackToTop` to `app/people/page.tsx`, `app/publications/page.tsx`, `app/arachnids/page.tsx`, `app/facilities/page.tsx`. — **Watch:** Account for fixed header height; avoid overlapping the mobile side nav on People/Collections.
+2. ~~Create `app/components/BackToTop.tsx`: a fixed-position button that appears once `window.scrollY > 800` and scrolls to the top on click.~~ **Done**
+3. ~~Add `BackToTop` to long pages.~~ **Done** — `PeopleClient`, `PublicationsClient`, `ArachnidsClient`, and `facilities/page.tsx`.
 
 ## Stage 7 — UX Fixes, Heuristic 4: Consistency and Standards
 
