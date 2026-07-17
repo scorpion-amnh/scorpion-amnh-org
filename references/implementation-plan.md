@@ -6,7 +6,9 @@
 
 **Not started:** Stage **5.2**, Stage **6**.
 
-**Stage 7 before 5.2 / 6?** Yes — Stage 7 UX fixes can be done now. They build on the local content layer (`@/lib/content` → `localAdapter`) and do not require a CMS. Stages 5.2 and 6 only matter when moving content editing off repo JSON. Stage 7 still depends on completed work in Stages 1–4 (and parts of Stage 3); it does **not** depend on 5.2 or 6. Some Stage 7 checklist items are already satisfied (tab/section URL persistence, error and not-found pages, validate-content in CI). Copy and label changes in Stage 7 remain subject to author review — document in `references/content-change-suggestions.md`.
+**Stage 7 before 5.2 / 6?** Yes — Stage 7 UX fixes can be done now. They build on the local content layer (`@/lib/content` → `localAdapter`) and do not require a CMS. Stages 5.2 and 6 only matter when moving content editing off repo JSON. Stage 7 depends on completed work in Stages 1–4 (and parts of Stage 3); it does **not** depend on 5.2 or 6. Copy and label changes remain subject to author review — document in `references/content-change-suggestions.md`.
+
+**Stage 7 — already complete (removed from checklist below):** ExternalLink with icon (H1/H4); tab/section URL persistence on People and Collections (H3); `/` search shortcut and search `Escape` (H4/H7); validate-content script and CI gate (H5); error and not-found pages (H9).
 
 ---
 
@@ -160,60 +162,60 @@ Complete these before enabling `CONTENT_SOURCE=cms` in production. None of this 
 ## Stage 7 — UX Fixes, Heuristic 1: Visibility of System Status
 
 **Status: Not started** — may proceed before Stages 5.2 and 6 (see Progress above).
-1. Add a `scroll` event listener in `app/people/usePeopleNavigation.ts` that recalculates `activeSection` based on the section heading nearest the viewport top.
-2. In `app/header.tsx` (or `app/components/Header.tsx` after Stage 3 Step 12), swap the hamburger icon for the close icon when `isMenuOpen` is `true`.
-3. Confirm `app/components/ExternalLink.tsx` (Stage 3 Step 5) renders a visible external-link icon on every instance.
-4. Add a loading skeleton or blurred placeholder to every `Image` in gallery components while the source loads.
-5. Render `${filteredResults.length} results` above the results list in `app/people/PeopleSearch.tsx`.
+
+1. Add a `scroll` event listener in `app/people/usePeopleNavigation.ts` that recalculates `activeSection` based on the section heading nearest the viewport top. — **Watch:** Must coexist with explicit sidebar clicks and `?section=` URL restore; avoid fighting `shouldScrollOnSectionChange` and refresh scroll-to-top behavior.
+2. In `app/components/Header.tsx`, swap the hamburger icon for the close icon when `isMenuOpen` is `true` (close icon already exists inside the drawer). — **Watch:** Keep `aria-expanded` and `aria-label` in sync on the toggle button.
+3. Add a loading skeleton or blurred placeholder to every `Image` in gallery components while the source loads. — **Watch:** Site uses `images: { unoptimized: true }`; placeholders should not flash on every cached revisit.
+4. Render `${filteredResults.length} results` above the results list in `app/people/PeopleSearch.tsx`. — **Watch:** Hide or adjust copy when the query is empty; keep accessible live-region behavior for screen readers.
 
 ## Stage 7 — UX Fixes, Heuristic 2: Match Between System and the Real World
-1. Create `app/components/GlossaryTerm.tsx` that wraps a term in a `<button>` with a `title` attribute and a click-triggered tooltip.
-2. Wrap every occurrence of "Scorpiones", "Pedipalpi", "Solifugae", "Amblypygi", and other order names in body copy with `GlossaryTerm`.
-3. Change the `"Lab Evolution"` label in `app/people/sections.ts` to `"Lab Through the Years"`.
+
+1. Create `app/components/GlossaryTerm.tsx` that wraps a term in a `<button>` with a `title` attribute and a click-triggered tooltip. — **Watch:** Tooltip must work on keyboard focus, not just click; mobile needs a tap-friendly pattern.
+2. Wrap every occurrence of "Scorpiones", "Pedipalpi", "Solifugae", "Amblypygi", and other order names in body copy with `GlossaryTerm`. — **Watch:** Author must supply definitions; do not invent taxonomy copy — log additions in `references/content-change-suggestions.md`.
+3. Change the `"Lab Evolution"` label in `app/people/sections.ts` to `"Lab Through the Years"`. — **Watch:** Author approval required; `sectionId` stays `lab-evolution` (URLs and JSON must not change).
 
 ## Stage 7 — UX Fixes, Heuristic 3: User Control and Freedom
-1. Add a `keydown` listener for `Escape` in `app/header.tsx` that calls `setIsMenuOpen(false)` when the mobile nav is open.
+
+1. Add a `keydown` listener for `Escape` in `app/components/Header.tsx` that calls `setIsMenuOpen(false)` when the mobile nav is open. — **Watch:** Do not intercept `Escape` when focus is in People search (already clears search there).
 2. Create `app/components/BackToTop.tsx`: a fixed-position button that appears once `window.scrollY > 800` and scrolls to the top on click.
-3. Add `BackToTop` to `app/people/page.tsx`, `app/publications/page.tsx`, `app/arachnids/page.tsx`, `app/facilities/page.tsx`.
-4. Complete Stage 4 Steps 3–4 to satisfy back-button expectations for tab state.
+3. Add `BackToTop` to `app/people/page.tsx`, `app/publications/page.tsx`, `app/arachnids/page.tsx`, `app/facilities/page.tsx`. — **Watch:** Account for fixed header height; avoid overlapping the mobile side nav on People/Collections.
 
 ## Stage 7 — UX Fixes, Heuristic 4: Consistency and Standards
-1. Replace every remaining ad hoc link `className` with the `ExternalLink` component from Stage 3 Step 5.
-2. Change the `"Visits and Requests"` heading in `app/page.tsx` from `<h4>` to `<h5>` to match its sibling heading level.
-3. Set the `app/publications/page.tsx` `<h1>` text and the `"Publications"` label in the nav items (`content/site.json` after Stage 1 Step 11) to the same string.
-4. Remove the `.people-compact` override block from `app/globals.css`; apply one consistent grid ratio to every `PeopleCard` usage.
 
-## Stage 7 — UX Fixes, Heuristic 5: Error Prevention
-1. Confirm `scripts/validate-content.ts` (Stage 1 Steps 15–16) checks every image reference before build.
-2. Confirm the `Validate content` CI step (Stage 1 Step 18) blocks the workflow on failure.
+1. Replace every remaining ad hoc `<a target="_blank">` with `ExternalLink` (many remain in legacy people section JSX, `MarkdownContent`, `Footer`, `ProfileLinksList`, `PublicationsClient`). — **Watch:** `MarkdownContent` external links need a renderer swap, not manual JSX edits in JSON bios.
+2. Change the `"Visits and Requests"` heading in `app/page.tsx` from `<h4>` to `<h5>` to match its sibling heading level. — **Watch:** Verify heading hierarchy for accessibility after the change.
+3. Align publications page `<h1>` text with the `"Publications"` nav label in `content/site.json` (currently **Scientific Publications** vs **Publications**). — **Watch:** Author chooses which string is canonical; update both places plus `metadata` title if needed.
+4. Remove the `.people-compact` override block from `app/globals.css`; apply one consistent grid ratio to every `PeopleCard` usage. — **Watch:** Visual regression on alumni tab layouts; check mobile and desktop People page sections.
 
 ## Stage 7 — UX Fixes, Heuristic 6: Recognition Rather Than Recall
+
 1. Create `app/components/TableOfContents.tsx` accepting a list of `{ id, label }` and rendering anchor links.
-2. Add `TableOfContents` to `app/arachnids/page.tsx`, `app/facilities/page.tsx`, `app/research/page.tsx`, generated from each page's `h2` section list.
-3. Add a sticky year-jump navigation to `app/publications/page.tsx`, generated from the distinct `year` values in `content/publications.json`.
-4. Add category filter chips above the input in `app/people/PeopleSearch.tsx`, wired to `handleSectionSelect`.
+2. Add `TableOfContents` to `app/arachnids/page.tsx`, `app/facilities/page.tsx`, `app/research/page.tsx`, generated from each page's `h2` section list. — **Watch:** Long pages need `scroll-margin-top` for the fixed header (reuse `lib/scrollMetrics.ts` tokens).
+3. Add a sticky year-jump navigation to `app/publications/page.tsx`, generated from distinct `year` values in `content/publications.json`. — **Watch:** Many year groups — consider collapsing or scrollable chip row on mobile.
+4. Add category filter chips above the input in `app/people/PeopleSearch.tsx`, wired to `handleSectionSelect`. — **Watch:** Clarify UX vs search-by-name (filter sections vs filter results); sync with `?section=` when a chip is selected.
 
 ## Stage 7 — UX Fixes, Heuristic 7: Flexibility and Efficiency of Use
-1. Confirm the `/` keyboard shortcut (Stage 4 Step 6) focuses the people search input.
-2. Add `author`, `year`, and `topic` filter controls to `app/publications/page.tsx` that filter the array returned by `getPublications()`.
-3. Add a "Copy BibTeX" button to each publication entry that generates BibTeX from its structured fields and writes it to the clipboard.
-4. Add a "Copy link" button next to every person heading and page section heading that copies `window.location.origin + pathname + '#' + id` to the clipboard.
+
+1. Add `author`, `year`, and `topic` filter controls to `app/publications/page.tsx` that filter the array returned by `getPublications()`. — **Watch:** "Topic" is not a schema field today — define a rule or add a field with author approval before implementing.
+2. Add a "Copy BibTeX" button to each publication entry that generates BibTeX from structured fields and writes it to the clipboard. — **Watch:** Handle missing `doi`, `volume`, and `pages`; test Safari clipboard permissions.
+3. Add a "Copy link" button next to every person heading and page section heading that copies `window.location.origin + pathname + '#' + id` to the clipboard. — **Watch:** People deep links need `?section=` and `?tab=` in addition to `#person-id` for a reliable share URL; not all sections have stable heading `id`s yet.
 
 ## Stage 7 — UX Fixes, Heuristic 8: Aesthetic and Minimalist Design
+
 1. Restructure the taxonomy list in `app/page.tsx` into a two-column grid with group headers and consistent spacing.
-2. Normalize every figure image width in `app/arachnids/page.tsx` to one of a fixed set of grid columns instead of arbitrary pixel values.
-3. Add a subheading or pull-quote component inside every paragraph exceeding 150 words in `app/arachnids/page.tsx`, `app/facilities/page.tsx`, `app/collections/page.tsx`.
-4. Delete the duplicated introductory paragraph from either `app/page.tsx` or `app/arachnids/page.tsx`; keep one canonical version and link to it from the other.
+2. Normalize every figure image width in `app/arachnids/page.tsx` to one of a fixed set of grid columns instead of arbitrary pixel values. — **Watch:** Preserve `Figure` component aspect ratios; re-check layout after width normalization.
+3. Add a subheading or pull-quote component inside every paragraph exceeding 150 words in `app/arachnids/page.tsx`, `app/facilities/page.tsx`, `app/collections/page.tsx`. — **Watch:** Author must approve any new subheadings or pull-quote text extracted from body copy.
+4. Delete the duplicated introductory paragraph from either `app/page.tsx` or `app/arachnids/page.tsx`; keep one canonical version and link to it from the other. — **Watch:** Author approval required — do not delete or rewrite copy without review.
 
 ## Stage 7 — UX Fixes, Heuristic 9: Help Users Recognize, Diagnose, and Recover from Errors
-1. Confirm `app/not-found.tsx` (Stage 2 Step 11) is in place.
-2. Confirm `app/error.tsx`, `app/people/error.tsx`, `app/publications/error.tsx` (Stage 2 Step 12) are in place.
-3. In `app/people/PeopleImage.tsx`, render a visible "Image unavailable" label inside the initials-fallback state.
-4. Add a check for every `href` pointing to `/documents/*.pdf` to `scripts/validate-content.ts`; fail validation if the file is missing.
+
+1. In `app/people/PeopleImage.tsx`, render a visible "Image unavailable" label inside the initials-fallback state (currently `PhotoPlaceholder` only). — **Watch:** Keep layout stable so cards don't jump when images fail.
+2. Add a check for every `href` pointing to `/documents/*.pdf` to `scripts/validate-content.ts`; fail validation if the file is missing. — **Watch:** Scan both JSX and Markdown/HTML in JSON content fields, not just static pages.
 
 ## Stage 7 — UX Fixes, Heuristic 10: Help and Documentation
-1. Convert the legal specimen-deposition paragraphs in `app/collections/page.tsx` into an ordered `<ol>` list with one step per `<li>`.
-2. Create `content/faq.json` with `{ question, answer, category }` entries covering the loan and visit process.
+
+1. Convert the legal specimen-deposition paragraphs in `app/collections/page.tsx` into an ordered `<ol>` list with one step per `<li>`. — **Watch:** Author must confirm step order and wording; restructuring only, no copy edits without review.
+2. Create `content/faq.json` with `{ question, answer, category }` entries covering the loan and visit process. — **Watch:** All FAQ copy is author-owned; add route to `app/sitemap.ts` when the page exists.
 3. Create `app/faq/page.tsx` that renders `content/faq.json` with a search/filter input.
 4. Add a link to `/faq` from the "Loan Requests" and "Visiting Scientists" sections in `app/collections/page.tsx`.
-5. Link every `GlossaryTerm` tooltip (Heuristic 2) to its full entry on `/faq` or a dedicated `/glossary` page.
+5. Link every `GlossaryTerm` tooltip (Heuristic 2) to its full entry on `/faq` or a dedicated `/glossary` page. — **Watch:** Depends on Heuristic 2 and FAQ/glossary content existing first.
