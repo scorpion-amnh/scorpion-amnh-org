@@ -64,15 +64,14 @@ export default function Home() {
                   <li>Symphyla (garden centipedes or symphylans)</li>
                 </ul>
               </div>
-              <div>
-                <h4 className="text-2xl font-semibold text-gray-900 mb-1">Visits and Requests</h4>
-                <p>Queries regarding visits to the collections, loan requests, and/or specimen donations should be addressed to <Link href="/people#principal-investigator" className="text-blue-600 hover:text-blue-800 underline">Lorenzo Prendini</Link>, Curator of Arachnida and Myriapoda, and <Link href="/people#museum-specialists" className="text-blue-600 hover:text-blue-800 underline">Pío Colmenares</Link>, Museum Specialist responsible for management of the collections, processing loan requests, and assisting visitors.</p>
-              </div>
             </div>
             
-            <p className="text-gray-700">
+            <p className="text-gray-700 mb-6">
               See <Link href="/collections" className="text-blue-600 hover:text-blue-800 underline">Collections</Link> for more information.
             </p>
+
+            <h4 className="text-2xl font-bold mb-2 text-gray-900">Visits and Requests</h4>
+            <p className="text-gray-700">Queries regarding visits to the collections, loan requests, and/or specimen donations should be addressed to <Link href="/people#principal-investigator" className="text-blue-600 hover:text-blue-800 underline">Lorenzo Prendini</Link>, Curator of Arachnida and Myriapoda, and <Link href="/people#museum-specialists" className="text-blue-600 hover:text-blue-800 underline">Pío Colmenares</Link>, Museum Specialist responsible for management of the collections, processing loan requests, and assisting visitors.</p>
           </div>
 
           {/* Image Gallery */}

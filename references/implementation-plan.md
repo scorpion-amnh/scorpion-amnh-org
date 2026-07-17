@@ -184,7 +184,7 @@ Complete these before enabling `CONTENT_SOURCE=cms` in production. None of this 
 ## Stage 7 — UX Fixes, Heuristic 4: Consistency and Standards
 
 1. ~~Replace every remaining ad hoc `<a target="_blank">` with `ExternalLink` (many remain in legacy people section JSX, `MarkdownContent`, `Footer`, `ProfileLinksList`, `PublicationsClient`).~~ **Done** — people section JSX, `MarkdownContent`, `Footer`, `ProfileLinksList`, `PublicationsClient`, and `CitationHtml` now use `ExternalLink`.
-2. Change the `"Visits and Requests"` heading in `app/page.tsx` from `<h4>` to `<h5>` to match its sibling heading level. — **Watch:** Verify heading hierarchy for accessibility after the change.
+2. ~~Change the `"Visits and Requests"` heading in `app/page.tsx` from `<h4>` to `<h5>` to match its sibling heading level.~~ **Done** — moved **Visits and Requests** out of the Collections taxonomy grid; it is now an `<h4>` sibling of **Collections** (not nested under it).
 3. Align publications page `<h1>` text with the `"Publications"` nav label in `content/site.json` (currently **Scientific Publications** vs **Publications**). — **Watch:** Author chooses which string is canonical; update both places plus `metadata` title if needed.
 4. Remove the `.people-compact` override block from `app/globals.css`; apply one consistent grid ratio to every `PeopleCard` usage. — **Watch:** Visual regression on alumni tab layouts; check mobile and desktop People page sections.
 
