@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { getSiteSettings } from "@/lib/content";
 
 export function Footer() {
+  const { footerCopyright, footerLogo } = getSiteSettings();
+
   return (
     <footer className="">
         <div className="w-full">
@@ -16,7 +19,7 @@ export function Footer() {
         <div className="bg-gray-900 text-white p-8">
             <div className="mx-auto max-w-7xl flex items-center justify-between">
                 <p className="text-sm">
-                &copy; Copyright Lorenzo Prendini 2026. All Rights Reserved.
+                {footerCopyright}
                 </p>
                 <a
                 href="https://www.amnh.org"
@@ -24,7 +27,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 >
                 <Image
-                    src="/images/logos/amnh-logo-white.svg"
+                    src={footerLogo}
                     alt="Logo: American Museum of Natural History"
                     width={150}
                     height={50}

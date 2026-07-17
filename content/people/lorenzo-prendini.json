@@ -1,0 +1,69 @@
+{
+  "id": "lorenzo-prendini",
+  "name": "Lorenzo Prendini",
+  "sectionId": "principal-investigator",
+  "tab": "current",
+  "title": [
+    {
+      "title": "Curator of Arachnida and Myriapoda, Division of Invertebrate Zoology",
+      "url": "https://www.amnh.org/research/staff-directory/lorenzo-prendini",
+      "label": "Lorenzo Prendini: Curator, Invertebrate Zoology, Professor RGGS | AMNH"
+    },
+    {
+      "title": "Professor of Comparative Biology, Richard Gilder Graduate School",
+      "url": "https://www.amnh.org/research/richard-gilder-graduate-school",
+      "label": "Graduate Programs at the Museum | Richard Gilder Graduate School"
+    },
+    {
+      "title": "Principle Investigator, Institute of Comparative Genomics",
+      "url": "https://www.amnh.org/research/institute-comparative-genomics",
+      "label": "Institute for Comparative Genomics | AMNH"
+    },
+    {
+      "title": "Chair, AMNH Scientific Publications",
+      "url": "https://www.amnh.org/research/scientific-publications",
+      "label": "Scientific Publications | American Museum of Natural History"
+    },
+    {
+      "title": "Adjunct Professor, Ecology, Evolution and Behavior, City University of New York",
+      "url": "https://www.gc.cuny.edu/people/lorenzo-prendini",
+      "label": "Prendini, Lorenzo | CUNY Graduate Center"
+    }
+  ],
+  "links": [
+    {
+      "label": "Curriculum Vitae (PDF)",
+      "url": "/documents/PrendiniCV2020_jyaiq9.pdf"
+    },
+    {
+      "label": "Research Gate",
+      "url": "https://www.researchgate.net/profile/Lorenzo-Prendini"
+    },
+    {
+      "label": "AMNH Meet the Scientists Video",
+      "url": "https://www.amnh.org/explore/videos/research-and-collections/profile-lorenzo-prendini"
+    },
+    {
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=fU0VpL0AAAAJ&hl=en&oi=ao"
+    },
+    {
+      "label": "ORCID",
+      "url": "https://orcid.org/0000-0001-8727-7106"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/lorenzo-prendini-34824218/"
+    },
+    {
+      "label": "Loop",
+      "url": "https://loop.frontiersin.org/people/722676/bio"
+    }
+  ],
+  "image": {
+    "folder": "people",
+    "filename": "Lorenzo-Prendini.jpg"
+  },
+  "bio": null,
+  "contact": "Curator of Arachnida and Myriapoda\n\nDivision of Invertebrate Zoology\n\nAmerican Museum of Natural History\n\nCentral Park West at 79th Street\n\nNew York, NY 10024-5192\n\nUSA\n\nEmail: lorenzo@amnh.org\n\nPhone: (212) 769-5843\n\nFax: (212) 769-5277"
+}

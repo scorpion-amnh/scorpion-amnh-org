@@ -1,0 +1,13 @@
+{
+  "id": "alice-wang",
+  "name": "Alice Wang",
+  "sectionId": "graduate-students",
+  "tab": "current",
+  "title": "Comparative Biology Ph.D. Program, Richard Gilder Graduate School, AMNH",
+  "years": "Graduate student from 2026 - Ph.D. on phylogeny and evolution of sound communication in hormurid scorpions",
+  "image": {
+    "folder": "people",
+    "filename": "Alice-Wang.jpg"
+  },
+  "bio": "Alice Wang graduated with a BA in Environmental Science with a minor in Biology from Barnard College, Columbia University. Her research interests lie at the intersection of animal behavior and phylogenomics, focusing on how animals perceive and respond to the world around them and the evolutionary context underlying these actions. She has previously conducted research spanning systematics and biogeography of African freshwater tetra fishes (Alestidae) and olfactory communication in dogs (*Canis familiaris*). Her current research focuses on describing and determining the evolutionary history of intraspecific acoustic communication in scorpions, combining behavioral studies of live animals with morphological and phylogenomic analyses of museum collections."
+}

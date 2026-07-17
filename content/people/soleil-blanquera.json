@@ -1,0 +1,12 @@
+{
+  "id": "soleil-blanquera",
+  "name": "Soleil Blanquera",
+  "sectionId": "volunteers",
+  "tab": "current",
+  "years": "Current Volunteer",
+  "image": {
+    "folder": "people",
+    "filename": "Soleil-Blanquera.jpg"
+  },
+  "bio": "Soleil volunteered at the Arachnology Lab in 2025 and 2026, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Colby Sain."
+}

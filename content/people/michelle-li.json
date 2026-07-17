@@ -1,0 +1,12 @@
+{
+  "id": "michelle-li",
+  "name": "Michelle Li",
+  "sectionId": "high-school-students",
+  "tab": "alumni",
+  "years": "High school student in 2023",
+  "image": {
+    "folder": "people",
+    "filename": "Michelle-Li.png"
+  },
+  "bio": "Michelle volunteered in the Arachnology lab in the summer of 2023 where she conducted DNA extraction, quantitation, PCR and sequencing, supervised by Pío Colmenares."
+}

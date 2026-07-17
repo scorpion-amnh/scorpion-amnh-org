@@ -1,0 +1,12 @@
+{
+  "id": "victoria-long",
+  "name": "Victoria Long",
+  "sectionId": "technical-staff",
+  "tab": "current",
+  "title": "Staff Member",
+  "image": {
+    "folder": "people",
+    "filename": "Victoria-Long.jpg"
+  },
+  "bio": "Victoria Long Lab Technician Staff from 2021 to 2026 Victoria worked in the Arachnology Lab as a Technician on the NSF Pedipalpi grant (PI: Prendini) from 2021 to 2026, conducting DNA extraction, quantitation, PCR and sequencing."
+}

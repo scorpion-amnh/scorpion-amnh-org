@@ -6,7 +6,11 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { HeaderNav, type HeaderNavItem } from "./components/HeaderNav";
 
-export function Header() {
+type HeaderProps = {
+  navItems: HeaderNavItem[];
+};
+
+export function Header({ navItems }: HeaderProps) {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
@@ -41,17 +45,6 @@ export function Header() {
     }
     return pathname.startsWith(href);
   };
-
-  const navItems: HeaderNavItem[] = [
-    { href: "/", label: "Home" },
-    { href: "/arachnids", label: "Arachnids" },
-    { href: "/research", label: "Research" },
-    { href: "/people", label: "People" },
-    { href: "/facilities", label: "Facilities" },
-    { href: "/collections", label: "Collections" },
-    { href: "/fieldwork", label: "Fieldwork" },
-    { href: "/publications", label: "Publications" },
-  ];
 
   return (
     <header

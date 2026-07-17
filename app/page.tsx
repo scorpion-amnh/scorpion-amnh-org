@@ -1,20 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import path from "path";
-import { promises as fs } from "fs";
+import { getGallery } from "@/lib/content";
 import { HomeGallery } from "./components/HomeGallery";
 
-const getArachnidGalleryImages = async () => {
-  const folder = path.join(process.cwd(), "public", "images", "arachnids");
-  const entries = await fs.readdir(folder);
-  return entries
-    .filter((entry) => entry !== ".DS_Store")
-    .sort((a, b) => a.localeCompare(b))
-    .map((entry) => `/images/arachnids/${entry}`);
-};
+export default function Home() {
+  const galleryImages = getGallery("home").map((entry) => entry.src);
 
-export default async function Home() {
-  const galleryImages = await getArachnidGalleryImages();
   return (
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">

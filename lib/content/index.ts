@@ -1,0 +1,132 @@
+import { promises as fs, readFileSync, readdirSync } from "fs";
+import path from "path";
+import { z } from "zod";
+import {
+  galleryImageSchema,
+  labHistoryFileSchema,
+  personSchema,
+  publicationSchema,
+  siteSettingsSchema,
+  type GalleryImage,
+  type LabHistoryEntry,
+  type Person,
+  type Publication,
+  type SiteSettings,
+} from "./schema";
+
+const CONTENT_DIR = path.join(process.cwd(), "content");
+
+const readJsonFile = <T>(filePath: string): T => {
+  const raw = readFileSync(filePath, "utf8");
+  return JSON.parse(raw) as T;
+};
+
+const formatValidationError = (label: string, error: unknown) => {
+  if (error instanceof Error) {
+    return `${label}: ${error.message}`;
+  }
+  return `${label}: Unknown validation error`;
+};
+
+export const getPeople = (): Person[] => {
+  const peopleDir = path.join(CONTENT_DIR, "people");
+  const files = readdirSync(peopleDir)
+    .filter((file) => file.endsWith(".json"))
+    .sort((a, b) => a.localeCompare(b));
+
+  return files.map((file) => {
+    const filePath = path.join(peopleDir, file);
+    const parsed = readJsonFile<unknown>(filePath);
+    const result = personSchema.safeParse(parsed);
+    if (!result.success) {
+      throw new Error(formatValidationError(`content/people/${file}`, result.error));
+    }
+    return result.data;
+  });
+};
+
+export const getPublications = (): Publication[] => {
+  const filePath = path.join(CONTENT_DIR, "publications.json");
+  const parsed = readJsonFile<unknown>(filePath);
+  const result = z.array(publicationSchema).safeParse(parsed);
+  if (!result.success) {
+    throw new Error(formatValidationError("content/publications.json", result.error));
+  }
+
+  return [...result.data].sort((a, b) => b.year - a.year);
+};
+
+export const getGallery = (category: string): GalleryImage[] => {
+  const filePath = path.join(CONTENT_DIR, "gallery", `${category}.json`);
+  const parsed = readJsonFile<unknown>(filePath);
+  const result = z.array(galleryImageSchema).safeParse(parsed);
+  if (!result.success) {
+    throw new Error(formatValidationError(`content/gallery/${category}.json`, result.error));
+  }
+  return result.data;
+};
+
+export const getLabHistory = (): LabHistoryEntry[] => {
+  const filePath = path.join(CONTENT_DIR, "lab-history.json");
+  const parsed = readJsonFile<unknown>(filePath);
+  const result = labHistoryFileSchema.safeParse(parsed);
+  if (!result.success) {
+    throw new Error(formatValidationError("content/lab-history.json", result.error));
+  }
+
+  return result.data.sections.map((section) => {
+    const card = result.data.cards[section.cardIndex];
+    if (!card) {
+      throw new Error(
+        `content/lab-history.json: section "${section.year}" references missing card index ${section.cardIndex}`
+      );
+    }
+
+    return {
+      year: section.year,
+      subtitle: section.subtitle,
+      cards: [card],
+    };
+  });
+};
+
+export const getSiteSettings = (): SiteSettings => {
+  const filePath = path.join(CONTENT_DIR, "site.json");
+  const parsed = readJsonFile<unknown>(filePath);
+  const result = siteSettingsSchema.safeParse(parsed);
+  if (!result.success) {
+    throw new Error(formatValidationError("content/site.json", result.error));
+  }
+  return result.data;
+};
+
+export const getPersonImagePath = (image: Person["image"]) => {
+  if (!image) {
+    return null;
+  }
+  return `/images/${image.folder}/${image.filename}`;
+};
+
+export const resolvePublicImagePath = (src: string) => {
+  if (!src.startsWith("/")) {
+    return path.join(process.cwd(), "public", src);
+  }
+  return path.join(process.cwd(), "public", src.slice(1));
+};
+
+export const imagePathExists = async (src: string) => {
+  try {
+    await fs.access(resolvePublicImagePath(src));
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+export type {
+  GalleryImage,
+  LabHistoryEntry,
+  Person,
+  Publication,
+  SiteSettings,
+} from "./schema";

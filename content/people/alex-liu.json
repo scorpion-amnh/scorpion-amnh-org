@@ -1,0 +1,12 @@
+{
+  "id": "alex-liu",
+  "name": "Alex Liu",
+  "sectionId": "high-school-students",
+  "tab": "current",
+  "years": "High school student in 2026",
+  "image": {
+    "folder": "people",
+    "filename": "Alex-Liu.jpg"
+  },
+  "bio": "Alex volunteers in the Arachnology Lab assisting Pío Colmenares with sorting, organization and curation of collections."
+}

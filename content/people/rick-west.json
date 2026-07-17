@@ -1,0 +1,18 @@
+{
+  "id": "rick-west",
+  "name": "Rick West",
+  "sectionId": "volunteers",
+  "tab": "alumni",
+  "years": "Former Volunteer",
+  "links": [
+    {
+      "label": "BirdSpiders.com",
+      "url": "http://www.birdspiders.com"
+    }
+  ],
+  "image": {
+    "folder": "people",
+    "filename": "Rick-West.jpg"
+  },
+  "bio": "Rick West, one of the world's authorities on tarantulas (Theraphosidae), has traveled to over 27 countries to study them. Rick has generously donated interesting arachnids to the AMNH for many years."
+}

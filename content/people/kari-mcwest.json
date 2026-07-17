@@ -1,0 +1,18 @@
+{
+  "id": "kari-mcwest",
+  "name": "Kari McWest",
+  "sectionId": "volunteers",
+  "tab": "alumni",
+  "years": "Former Volunteer",
+  "links": [
+    {
+      "label": "Kari's Scorpion Pages",
+      "url": "http://angelfire.com/tx4/scorpiones"
+    }
+  ],
+  "image": {
+    "folder": "people",
+    "filename": "Kari-McWest.jpg"
+  },
+  "bio": "Kari received his Master's from West Texas A&M University, Canyon, where he studied scorpions under David Sissom. He assisted the NSF-REVSYS Vaejovidae project with fieldwork in Mexico and the U.S."
+}

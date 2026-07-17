@@ -1,0 +1,12 @@
+{
+  "id": "victoria-long-volunteer",
+  "name": "Victoria Long",
+  "sectionId": "volunteers",
+  "tab": "current",
+  "years": "Current Volunteer",
+  "image": {
+    "folder": "people",
+    "filename": "Victoria-Long.jpg"
+  },
+  "bio": "Victoria is a volunteer who previously worked in the Arachnology Lab as a Technician."
+}

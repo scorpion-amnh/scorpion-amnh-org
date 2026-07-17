@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { getSiteSettings } from "@/lib/content";
 import { Header } from "./header";
 import { Footer } from "./components/Footer";
 import "./globals.css";
@@ -15,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arachnology at AMNH | Scorpion Systematics Research Group",
-  description: "The Arachnology Lab in the Division of Invertebrate Zoology at the American Museum of Natural History focuses on the taxonomy, phylogeny and biogeography of scorpions and related arachnid orders.",
+  title: getSiteSettings().defaultMetaTitle,
+  description: getSiteSettings().defaultMetaDescription,
 };
 
 export default function RootLayout({
@@ -24,12 +25,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { navItems } = getSiteSettings();
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
+        <Header navItems={navItems} />
         <div className="pt-[var(--header-height)]">
           {children}
         </div>

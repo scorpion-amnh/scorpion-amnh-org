@@ -1,0 +1,12 @@
+{
+  "id": "gerbi-carreon",
+  "name": "Gerbi Carreon",
+  "sectionId": "volunteers",
+  "tab": "alumni",
+  "years": "Former Volunteer",
+  "image": {
+    "folder": "people",
+    "filename": "Gerbi-Carreon.jpg"
+  },
+  "bio": "Gerbi performed various curatorial activities in the spider collection. He also received training to do DNA extractions and PCRs in the molecular lab."
+}
