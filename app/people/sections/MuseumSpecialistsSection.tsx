@@ -1,5 +1,6 @@
 'use client';
 
+import { ExternalLink } from "@/app/components/ExternalLink";
 import { PeopleCard, PeopleCardBody, PeopleCardMedia } from "@/app/people/PeopleCard";
 import { PeopleImage } from "@/app/people/PeopleImage";
 import { PeopleSectionTabs } from "@/app/people/PeopleSectionTabs";
@@ -32,7 +33,7 @@ export function MuseumSpecialistsSection({ isActive, tab, onTabChange }: TabbedP
                 <h3 className="text-xl font-bold mb-1 text-gray-900">Pío A. Colmenares</h3>
                 <p className="text-lg text-gray-600 mb-4">Museum Specialist and Collections Manager, Arachnid and Myriapod Collections</p>
                 <p className="mb-3">
-                  <a href="https://www.researchgate.net/profile/Pio_Colmenares" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Research Gate</a>
+                  <ExternalLink href="https://www.researchgate.net/profile/Pio_Colmenares">Research Gate</ExternalLink>
                 </p>
                 <p className="text-gray-700 mb-4">
                   Pío is an arachnologist with experience in taxonomy and ecology. His main research interests are the taxonomy, systematics, ecology, conservation and biogeography of Opiliones. In addition to working with Opiliones, he also has experience in the taxonomy of other arachnid orders, such as Amblypygi, Schizomida, Solifugae, and spiders of the family Pholcidae. Pío joined the AMNH staff in 2016 and is currently in charge of the Arachnid and Myriapod Collections.
@@ -99,7 +100,7 @@ export function MuseumSpecialistsSection({ isActive, tab, onTabChange }: TabbedP
                 <p className="text-base text-gray-600 mb-1">Scientific Assistant</p>
                 <p className="text-sm text-gray-500 mb-3">Technical staff from 2013 to 2014</p>
                 <p className="text-gray-700">
-                  Pamela completed her MSc in Entomology at McGill University in 2009 and her thesis research included a systematic revision of the hyper-diverse leaf litter-inhabiting genus <em>Trachyphloeomimus</em> (Curculionidae, Entiminae). In 2009, she was hired through an NSF grant as the Entomology Collection Manager at the San Diego Natural History Museum. Her research and work experience has allowed her to do field work in central and northeast Mexico, as well as the south-western United States. She is heavily involved with the Entomological Collections Network (ECN), <a href="http://www.ecnweb.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Entomological Collections Network</a>, serving as president and assisting with coordination of the annual meetings.
+                  Pamela completed her MSc in Entomology at McGill University in 2009 and her thesis research included a systematic revision of the hyper-diverse leaf litter-inhabiting genus <em>Trachyphloeomimus</em> (Curculionidae, Entiminae). In 2009, she was hired through an NSF grant as the Entomology Collection Manager at the San Diego Natural History Museum. Her research and work experience has allowed her to do field work in central and northeast Mexico, as well as the south-western United States. She is heavily involved with the Entomological Collections Network (ECN), <ExternalLink href="http://www.ecnweb.org">Entomological Collections Network</ExternalLink>, serving as president and assisting with coordination of the annual meetings.
                 </p>
               </PeopleCardBody>
           </PeopleCard>

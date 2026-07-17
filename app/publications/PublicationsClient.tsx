@@ -2,6 +2,7 @@
 
 import { CitationHtml } from "@/app/components/CitationHtml";
 import { BackToTop } from "@/app/components/BackToTop";
+import { ExternalLink } from "@/app/components/ExternalLink";
 import type { Publication } from "@/lib/content/schema";
 
 type PublicationsClientProps = {
@@ -52,14 +53,9 @@ const formatCitation = (publication: Publication) => {
       {publication.doi ? (
         <>
           {" "}
-          <a
-            href={publication.doi}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
-          >
+          <ExternalLink href={publication.doi} className="text-blue-600 hover:underline">
             {publication.doi}
-          </a>
+          </ExternalLink>
         </>
       ) : null}
     </>

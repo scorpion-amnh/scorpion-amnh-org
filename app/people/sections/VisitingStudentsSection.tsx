@@ -1,5 +1,6 @@
 'use client';
 
+import { ExternalLink } from "@/app/components/ExternalLink";
 import { PhotoPlaceholder } from "@/app/components/PhotoPlaceholder";
 import { PeopleCard, PeopleCardBody, PeopleCardMedia } from "@/app/people/PeopleCard";
 import { PeopleImage } from "@/app/people/PeopleImage";
@@ -11,7 +12,7 @@ export function VisitingStudentsSection({ isActive, tab, onTabChange }: TabbedPe
         <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Visitors</h2>
           <p className="text-xl text-gray-600 mb-8">
-            Many postdocs and graduate students from other institutions in the U.S. and abroad have visited the AMNH Arachnology Lab in the past, often funded in part by the AMNH Small Grants program (Annette Kade Fellowships, Collections Study Grants and Theodore Roosevelt Memorial Fund). If you are interested in applying for small grants to visit the AMNH, please visit the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/research-grants-and-student-exchange-fellowships" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Richard Gilder Graduate School.</a>
+            Many postdocs and graduate students from other institutions in the U.S. and abroad have visited the AMNH Arachnology Lab in the past, often funded in part by the AMNH Small Grants program (Annette Kade Fellowships, Collections Study Grants and Theodore Roosevelt Memorial Fund). If you are interested in applying for small grants to visit the AMNH, please visit the <ExternalLink href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/research-grants-and-student-exchange-fellowships">Richard Gilder Graduate School.</ExternalLink>
           </p>
           <PeopleSectionTabs
             value={tab}

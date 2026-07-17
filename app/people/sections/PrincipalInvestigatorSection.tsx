@@ -1,11 +1,12 @@
 'use client';
 
+import { ExternalLink } from "@/app/components/ExternalLink";
 import { PeopleImage } from "@/app/people/PeopleImage";
 import { ProfileLinksList } from "@/app/people/ProfileLinksList";
 import type { PeopleSectionProps } from "@/app/people/sections/types";
 
 const lorenzoProfileLinks = [
-  { href: "/documents/PrendiniCV2020_jyaiq9.pdf", label: "Curriculum Vitae (PDF)", external: false as const },
+  { href: "/documents/PrendiniCV2020_jyaiq9.pdf", label: "Curriculum Vitae (PDF)" },
   { href: "https://www.researchgate.net/profile/Lorenzo-Prendini", label: "Research Gate" },
   {
     href: "https://www.amnh.org/explore/videos/research-and-collections/profile-lorenzo-prendini",
@@ -43,66 +44,41 @@ export function PrincipalInvestigatorSection({ isActive }: PeopleSectionProps) {
                     Curator of Arachnida and Myriapoda, Division of Invertebrate Zoology
                   </p>
                   <p className="text-base text-gray-600 mt-0">
-                    <a
-                      href="https://www.amnh.org/research/staff-directory/lorenzo-prendini"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 underline"
-                    >
+                    <ExternalLink href="https://www.amnh.org/research/staff-directory/lorenzo-prendini">
                       Lorenzo Prendini: Curator, Invertebrate Zoology, Professor RGGS | AMNH
-                    </a>
+                    </ExternalLink>
                   </p>
                   <p className="text-lg text-gray-600 mb-0">
                     Professor of Comparative Biology, Richard Gilder Graduate School
                   </p>
                   <p className="text-base text-gray-600 mt-0">
-                    <a
-                      href="https://www.amnh.org/research/richard-gilder-graduate-school"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 underline"
-                    >
+                    <ExternalLink href="https://www.amnh.org/research/richard-gilder-graduate-school">
                       Graduate Programs at the Museum | Richard Gilder Graduate School
-                    </a>
+                    </ExternalLink>
                   </p>
                   <p className="text-lg text-gray-600 mb-0">
                     Principle Investigator, Institute of Comparative Genomics
                   </p>
                   <p className="text-base text-gray-600 mt-0">
-                    <a
-                      href="https://www.amnh.org/research/institute-comparative-genomics"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 underline"
-                    >
+                    <ExternalLink href="https://www.amnh.org/research/institute-comparative-genomics">
                       Institute for Comparative Genomics | AMNH
-                    </a>
+                    </ExternalLink>
                   </p>
                   <p className="text-lg text-gray-600 mb-0">
                     Chair, AMNH Scientific Publications
                   </p>
                   <p className="text-base text-gray-600 mt-0">
-                    <a
-                      href="https://www.amnh.org/research/scientific-publications"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 underline"
-                    >
+                    <ExternalLink href="https://www.amnh.org/research/scientific-publications">
                       Scientific Publications | American Museum of Natural History
-                    </a>
+                    </ExternalLink>
                   </p>
                   <p className="text-lg text-gray-600 mb-0">
                     Adjunct Professor, Ecology, Evolution and Behavior, City University of New York
                   </p>
                   <p className="text-base text-gray-600 mt-0">
-                    <a
-                      href="https://www.gc.cuny.edu/people/lorenzo-prendini"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 underline"
-                    >
+                    <ExternalLink href="https://www.gc.cuny.edu/people/lorenzo-prendini">
                       Prendini, Lorenzo | CUNY Graduate Center
-                    </a>
+                    </ExternalLink>
                   </p>
                 </div>
                 <ProfileLinksList links={lorenzoProfileLinks} />

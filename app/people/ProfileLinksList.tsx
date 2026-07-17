@@ -1,3 +1,5 @@
+import { ExternalLink } from "@/app/components/ExternalLink";
+
 export type ProfileLink = {
   href: string;
   label: string;
@@ -17,14 +19,13 @@ export const ProfileLinksList = ({
     <h4 className="text-base font-bold mb-3 text-gray-900">{heading}</h4>
     {links.map((link) => (
       <p key={link.href}>
-        <a
-          href={link.href}
-          target="_blank"
-          rel={link.external === false ? undefined : "noopener noreferrer"}
-          className="text-blue-600 hover:text-blue-800 underline"
-        >
-          {link.label}
-        </a>
+        {link.external === false ? (
+          <a href={link.href} className="text-blue-600 hover:text-blue-800 underline">
+            {link.label}
+          </a>
+        ) : (
+          <ExternalLink href={link.href}>{link.label}</ExternalLink>
+        )}
       </p>
     ))}
   </div>

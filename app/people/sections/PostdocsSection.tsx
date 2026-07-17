@@ -1,5 +1,6 @@
 'use client';
 
+import { ExternalLink } from "@/app/components/ExternalLink";
 import { PeopleCard, PeopleCardBody, PeopleCardMedia } from "@/app/people/PeopleCard";
 import { PeopleImage } from "@/app/people/PeopleImage";
 import { PeopleSectionTabs } from "@/app/people/PeopleSectionTabs";
@@ -101,7 +102,7 @@ export function PostdocsSection({ isActive, tab, onTabChange }: TabbedPeopleSect
                 <p className="text-base text-gray-600 mb-1">Museo Argentino de Ciencias Naturales Bernardino Rivadavia, Argentina | CONICET</p>
                 <p className="text-sm text-gray-500 mb-3">Postdoc from 2018 to 2020</p>
                 <p className="mb-3">
-                  <a href="https://www.researchgate.net/profile/Ricardo_Botero-Trujillo" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Research Gate</a>
+                  <ExternalLink href="https://www.researchgate.net/profile/Ricardo_Botero-Trujillo">Research Gate</ExternalLink>
                 </p>
                 <p className="text-gray-700">
                   Ricardo completed his Biology B.S. at Javeriana University in Bogota. While an undergraduate student, he became interested in arachnids and started working on scorpions from his native country, Colombia. Gradually, hooded thick-spiders (order Ricinulei) and sun-spiders (order Solifugae) became part of his research interests. After a 5-year period working in the pharmaceutical industry, Ricardo moved to Argentina to undertake doctoral studies at the Buenos Aires University. There, he conducted his research at the Division of Arachnology of the Argentinian Museum of Natural Sciences Bernardino Rivadavia. His PhD thesis consisted of a taxonomic revision and phylogenetic analysis of the South American solifuge family Mummuciidae. In 2016, Ricardo visited the AMNH collections, supported by a Theodore Roosevelt Memorial Grant from the AMNH and a Vincent Roth Grant for Systematics Research from the American Arachnological Society. Ricardo is currently a Theodore Roosevelt Postdoctoral Research Fellow from the Richard Gilder Graduate School at the AMNH, and is now working on the evolution of Ricinuleids.
@@ -122,10 +123,10 @@ export function PostdocsSection({ isActive, tab, onTabChange }: TabbedPeopleSect
               </PeopleCardMedia>
               <PeopleCardBody>
                 <h3 className="text-lg font-bold mb-1 text-gray-900">Frederic Schramm</h3>
-                <p className="text-base text-gray-600 mb-1">American Museum of Natural History, New York | <a href="https://www.daad.de/en/study-and-research-in-germany/scholarships/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">DAAD Scholarships</a></p>
+                <p className="text-base text-gray-600 mb-1">American Museum of Natural History, New York | <ExternalLink href="https://www.daad.de/en/study-and-research-in-germany/scholarships/">DAAD Scholarships</ExternalLink></p>
                 <p className="text-sm text-gray-500 mb-3">Postdoc in 2020</p>
                 <p className="mb-3">
-                  <a href="https://www.researchgate.net/profile/Frederic_Schramm2" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Research Gate</a>
+                  <ExternalLink href="https://www.researchgate.net/profile/Frederic_Schramm2">Research Gate</ExternalLink>
                 </p>
                 <p className="text-gray-700">
                   Fred got his Masters degree in molecular and cellular biology from the Philipps University of Marburg, Germany in 2013. In 2019 he obtained his PhD in molecular biosciences from Stockholm University, Sweden for his work investigating how bacteria fulfill the basic cellular need of maintaining a functional proteome. In his research, Frederic has always been keen on comparative approaches that incorporate the evolutionary perspective enabling a broader and functionally relevant understanding of fundamental biological processes. Becoming convinced of the importance of the evolutionary perspective of his research during his PhD, combined with a long-standing passion for arachnids, he began collaborating on arachnological research projects aimed at enhancing the knowledge of Caribbean arachnid diversity. In February of 2020 he joined the AMNH for a six-months short-term postdoctoral research stay. In his research project funded by the German Academic Exchange Service and a Theodore Roosevelt Memorial Grant he investigates the evolution of Mexican whip spiders.
@@ -149,7 +150,7 @@ export function PostdocsSection({ isActive, tab, onTabChange }: TabbedPeopleSect
                 <p className="text-base text-gray-600 mb-1">American Museum of Natural History, New York</p>
                 <p className="text-sm text-gray-500 mb-3">Postdoc from 2018 to 2020</p>
                 <p className="mb-3">
-                  <a href="https://www.researchgate.net/profile/Stephanie_Loria2" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Research Gate</a>
+                  <ExternalLink href="https://www.researchgate.net/profile/Stephanie_Loria2">Research Gate</ExternalLink>
                 </p>
                 <p className="text-gray-700">
                   Stephanie first came to the AMNH as a high school student participating in the High School Science Research Program of the Center for Biodiversity and Conservation with Felicity Arengo. In 2011, she completed her B.S. at Sewanee University in TN. During her B.S. she spent a summer working at the Field Museum of Natural History in Chicago as an NSF REU intern studying the evolution and biogeography of the Malagasy giant pill-millipedes, genus <em>Sphaeromimus</em>, under the guidance of Thomas Wesener and Petra Sierwald. Stephanie entered the Comparative Biology PhD program at the AMNH Richard Gilder Graduate School in 2011 and graduated in 2015. Her dissertation focused on the evolution and biogeography of Southeast Asian scorpions, particularly the family Chaerilidae.

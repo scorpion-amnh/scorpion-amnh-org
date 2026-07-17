@@ -1,36 +1,34 @@
-import { readFileSync, writeFileSync } from "fs";
-
-const files = [
-  "app/research/page.tsx",
-  "app/facilities/page.tsx",
-  "app/collections/page.tsx",
-];
+import { readdirSync, readFileSync, writeFileSync } from "fs";
+import { join } from "path";
 
 const externalAnchor =
-  /<a href="(https?:\/\/[^"]+)" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">([\s\S]*?)<\/a>/g;
+  /<a\s+href="(https?:\/\/[^"]+)"\s+target="_blank"\s+rel="noopener noreferrer"\s+className="text-blue-600 hover:text-blue-800 underline"\s*>([\s\S]*?)<\/a>/g;
+
+const sectionsDir = join("app", "people", "sections");
+const files = readdirSync(sectionsDir)
+  .filter((name) => name.endsWith(".tsx"))
+  .map((name) => join(sectionsDir, name));
 
 for (const file of files) {
-  let content = readFileSync(file, "utf8");
-  const hadExternal = externalAnchor.test(content);
-  content = readFileSync(file, "utf8").replace(
+  const original = readFileSync(file, "utf8");
+  const updated = original.replace(
     externalAnchor,
     '<ExternalLink href="$1">$2</ExternalLink>'
   );
 
-  if (content.includes("ExternalLink") && !content.includes('@/app/components/ExternalLink"')) {
-    if (content.startsWith("'use client'")) {
-      content = content.replace(
-        "'use client';\n\n",
-        "'use client';\n\nimport { ExternalLink } from \"@/app/components/ExternalLink\";\n"
-      );
-    } else {
-      content = `import { ExternalLink } from "@/app/components/ExternalLink";\n${content.replace(/^import /m, "import ")}`;
-      if (!content.includes('import { ExternalLink }')) {
-        content = `import { ExternalLink } from "@/app/components/ExternalLink";\n${content}`;
-      }
-    }
+  if (updated === original) {
+    console.log(file, "unchanged");
+    continue;
+  }
+
+  let content = updated;
+  if (!content.includes('from "@/app/components/ExternalLink"')) {
+    content = content.replace(
+      "'use client';\n\n",
+      "'use client';\n\nimport { ExternalLink } from \"@/app/components/ExternalLink\";\n"
+    );
   }
 
   writeFileSync(file, content);
-  console.log(file, hadExternal ? "updated" : "unchanged");
+  console.log(file, "updated");
 }

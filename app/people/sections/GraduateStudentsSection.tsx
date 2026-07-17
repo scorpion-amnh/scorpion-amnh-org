@@ -1,5 +1,6 @@
 'use client';
 
+import { ExternalLink } from "@/app/components/ExternalLink";
 import { PeopleCard, PeopleCardBody, PeopleCardMedia } from "@/app/people/PeopleCard";
 import { PeopleImage } from "@/app/people/PeopleImage";
 import { PeopleSectionTabs } from "@/app/people/PeopleSectionTabs";
@@ -10,7 +11,7 @@ export function GraduateStudentsSection({ isActive, tab, onTabChange }: TabbedPe
         <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Graduate Students</h2>
           <p className="text-xl text-gray-600 mb-8">
-            Several graduate students worked in the Arachnology lab in past years. These students were funded from various sources including grants from the <a href="http://www.nsf.gov" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">National Science Foundation</a> and the AMNH (graduate student fellowships and the Comparative Biology Program of the Richard Gilder Graduate School). If you are interested graduate study in the Arachnology lab, please visit the website of the <a href="https://www.amnh.org/our-research/richard-gilder-graduate-school" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Richard Gilder Graduate School</a> to apply to the RGGS for a graduate student fellowship for study at a partner programs (e.g., City University of New York).
+            Several graduate students worked in the Arachnology lab in past years. These students were funded from various sources including grants from the <ExternalLink href="http://www.nsf.gov">National Science Foundation</ExternalLink> and the AMNH (graduate student fellowships and the Comparative Biology Program of the Richard Gilder Graduate School). If you are interested graduate study in the Arachnology lab, please visit the website of the <ExternalLink href="https://www.amnh.org/our-research/richard-gilder-graduate-school">Richard Gilder Graduate School</ExternalLink> to apply to the RGGS for a graduate student fellowship for study at a partner programs (e.g., City University of New York).
           </p>
           <PeopleSectionTabs
             value={tab}

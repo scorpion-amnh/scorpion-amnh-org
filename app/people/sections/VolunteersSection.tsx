@@ -1,5 +1,6 @@
 'use client';
 
+import { ExternalLink } from "@/app/components/ExternalLink";
 import { PhotoPlaceholder } from "@/app/components/PhotoPlaceholder";
 import { PeopleCard, PeopleCardBody, PeopleCardMedia } from "@/app/people/PeopleCard";
 import { PeopleImage } from "@/app/people/PeopleImage";
@@ -11,7 +12,7 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
         <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Volunteers and Field Assistants</h2>
           <p className="text-xl text-gray-600 mb-8">
-            The Arachnology Lab at the AMNH has had many dedicated volunteers work with us over the years. With their help we have been able to accomplish a great deal of work. We would like to thank all of our volunteers for their invaluable assistance. If you are interested in volunteering in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/join-support/volunteer-now" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Volunteer Department.</a>
+            The Arachnology Lab at the AMNH has had many dedicated volunteers work with us over the years. With their help we have been able to accomplish a great deal of work. We would like to thank all of our volunteers for their invaluable assistance. If you are interested in volunteering in the Arachnology Lab at the AMNH please visit the <ExternalLink href="https://www.amnh.org/join-support/volunteer-now">Volunteer Department.</ExternalLink>
           </p>
           <PeopleSectionTabs
             value={tab}
@@ -499,7 +500,7 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
                 Rick West, one of the world's authorities on tarantulas (Theraphosidae), has traveled to over 27 countries to study them. Rick has generously donated interesting arachnids to the AMNH for many years.
               </p>
               <p>
-                <a href="http://www.birdspiders.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">BirdSpiders.com</a>
+                <ExternalLink href="http://www.birdspiders.com">BirdSpiders.com</ExternalLink>
               </p>
             </PeopleCardBody>
           </PeopleCard>
@@ -683,7 +684,7 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <h4 className="text-base font-bold mb-1 text-gray-900">Sergios-Orestis Kolokotronis</h4>
               <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
               <p className="text-gray-700">
-                Sergios holds a PhD in Ecology and Evolutionary Biology from Columbia University and had a <a href="https://research.amnh.org/users/koloko" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">postdoc</a> in the AMNH Sackler Institute for Comparative Genomics and Center for Conservation Genetics, where he coordinated the DNA Barcoding Initiative for Conservation. He created and maintained the lab website from 2006 until 2008.
+                Sergios holds a PhD in Ecology and Evolutionary Biology from Columbia University and had a <ExternalLink href="https://research.amnh.org/users/koloko">postdoc</ExternalLink> in the AMNH Sackler Institute for Comparative Genomics and Center for Conservation Genetics, where he coordinated the DNA Barcoding Initiative for Conservation. He created and maintained the lab website from 2006 until 2008.
               </p>
             </PeopleCardBody>
           </PeopleCard>
@@ -726,7 +727,7 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
                 Kari received his Master's from West Texas A&M University, Canyon, where he studied scorpions under David Sissom. He assisted the NSF-REVSYS Vaejovidae project with fieldwork in Mexico and the U.S.
               </p>
               <p>
-                <a href="http://angelfire.com/tx4/scorpiones" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Kari's Scorpion Pages</a>
+                <ExternalLink href="http://angelfire.com/tx4/scorpiones">Kari's Scorpion Pages</ExternalLink>
               </p>
             </PeopleCardBody>
           </PeopleCard>

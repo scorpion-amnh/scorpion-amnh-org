@@ -1,5 +1,6 @@
 'use client';
 
+import { ExternalLink } from "@/app/components/ExternalLink";
 import { PersonProfileCard } from "@/app/people/PersonProfileCard";
 import { PeopleSectionTabs } from "@/app/people/PeopleSectionTabs";
 import type { TabbedPeopleSectionProps } from "@/app/people/sections/types";
@@ -30,14 +31,9 @@ export function UndergraduateStudentsSection({
         <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Undergraduate Students</h2>
         <p className="text-xl text-gray-600 mb-8">
           Over the years, several undergraduate students have worked in the Arachnology Lab supported by various internships. Most have gone on to graduate school and beyond. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the{" "}
-          <a
-            href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/undergraduate-fellowships/reu-biology-program"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 underline"
-          >
+          <ExternalLink href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/undergraduate-fellowships/reu-biology-program">
             Research Experiences for Undergraduates Program.
-          </a>
+          </ExternalLink>
         </p>
         <PeopleSectionTabs value={tab} onChange={(value) => onTabChange(value)} />
         <div data-tab="current" className={tab === "current" ? "block" : "hidden"}>

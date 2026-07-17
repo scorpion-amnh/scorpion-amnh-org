@@ -6,7 +6,7 @@ type ExternalLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 export const ExternalLink = ({
   children,
-  className = "text-blue-600 hover:text-blue-800 underline inline-flex items-center gap-1",
+  className = "text-blue-600 hover:text-blue-800 underline",
   href,
   ...props
 }: ExternalLinkProps) => (
@@ -14,7 +14,7 @@ export const ExternalLink = ({
     {children}
     <svg
       aria-hidden="true"
-      className="h-3.5 w-3.5 shrink-0"
+      className="ml-0.5 inline-block h-3.5 w-3.5 shrink-0 align-[-0.125em]"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"

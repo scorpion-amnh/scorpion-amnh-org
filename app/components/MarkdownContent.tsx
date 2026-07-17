@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { ExternalLink } from "@/app/components/ExternalLink";
 
 type MarkdownContentProps = {
   content: string;
@@ -24,16 +25,17 @@ export const MarkdownContent = ({ content, className }: MarkdownContentProps) =>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
-          a: ({ href, children }) => (
-            <a
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 underline"
-            >
-              {children}
-            </a>
-          ),
+          a: ({ href, children }) => {
+            if (href && /^https?:\/\//.test(href)) {
+              return <ExternalLink href={href}>{children}</ExternalLink>;
+            }
+
+            return (
+              <a href={href} className="text-blue-600 hover:text-blue-800 underline">
+                {children}
+              </a>
+            );
+          },
           p: ({ children }) => <p className="mb-4 last:mb-0">{children}</p>,
         }}
       >

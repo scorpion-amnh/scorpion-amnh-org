@@ -1,5 +1,6 @@
 'use client';
 
+import { ExternalLink } from "@/app/components/ExternalLink";
 import { PhotoPlaceholder } from "@/app/components/PhotoPlaceholder";
 import { PeopleCard, PeopleCardBody, PeopleCardMedia } from "@/app/people/PeopleCard";
 import { PeopleImage } from "@/app/people/PeopleImage";
@@ -11,7 +12,7 @@ export function HighSchoolStudentsSection({ isActive, tab, onTabChange }: Tabbed
         <div>
           <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">High School Students</h2>
           <p className="text-xl text-gray-600 mb-8">
-            Several high school students have worked in the Arachnology Lab supported by various internships. Many have continued to undergraduate programs. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program.</a>
+            Several high school students have worked in the Arachnology Lab supported by various internships. Many have continued to undergraduate programs. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <ExternalLink href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program">Science Research Mentoring Program.</ExternalLink>
           </p>
           <PeopleSectionTabs
             value={tab}
@@ -333,7 +334,7 @@ export function HighSchoolStudentsSection({ isActive, tab, onTabChange }: Tabbed
               <h3 className="text-lg font-bold mb-1 text-gray-900">Nathan Auyeng</h3>
               <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
               <p className="text-gray-700">
-                Nathan came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. He assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
+                Nathan came from the AMNH <ExternalLink href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program">Science Research Mentoring Program,</ExternalLink> and volunteered at the Arachnida collections during the summer of 2018. He assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
               </p>
             </PeopleCardBody>
           </PeopleCard>
@@ -347,7 +348,7 @@ export function HighSchoolStudentsSection({ isActive, tab, onTabChange }: Tabbed
               <h3 className="text-lg font-bold mb-1 text-gray-900">Aleyna Singer</h3>
               <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
               <p className="text-gray-700">
-                Aleyna came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
+                Aleyna came from the AMNH <ExternalLink href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program">Science Research Mentoring Program,</ExternalLink> and volunteered at the Arachnida collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
               </p>
             </PeopleCardBody>
           </PeopleCard>
@@ -361,7 +362,7 @@ export function HighSchoolStudentsSection({ isActive, tab, onTabChange }: Tabbed
               <h3 className="text-lg font-bold mb-1 text-gray-900">Simon Au</h3>
               <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
               <p className="text-gray-700">
-                Simon came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida collections during the summer of 2018. He assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
+                Simon came from the AMNH <ExternalLink href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program">Science Research Mentoring Program,</ExternalLink> and volunteered at the Arachnida collections during the summer of 2018. He assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
               </p>
             </PeopleCardBody>
           </PeopleCard>
@@ -381,7 +382,7 @@ export function HighSchoolStudentsSection({ isActive, tab, onTabChange }: Tabbed
               <h3 className="text-lg font-bold mb-1 text-gray-900">Agnes Oduro</h3>
               <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
               <p className="text-gray-700">
-                Agnes came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida and Myriapoda collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
+                Agnes came from the AMNH <ExternalLink href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program">Science Research Mentoring Program,</ExternalLink> and volunteered at the Arachnida and Myriapoda collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
               </p>
             </PeopleCardBody>
           </PeopleCard>
@@ -401,7 +402,7 @@ export function HighSchoolStudentsSection({ isActive, tab, onTabChange }: Tabbed
               <h3 className="text-lg font-bold mb-1 text-gray-900">Amrita Banerji</h3>
               <p className="text-sm text-gray-500 mb-3">High school student in 2018</p>
               <p className="text-gray-700">
-                Amrita came from the AMNH <a href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Science Research Mentoring Program,</a> and volunteered at the Arachnida and Myriapoda collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
+                Amrita came from the AMNH <ExternalLink href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program">Science Research Mentoring Program,</ExternalLink> and volunteered at the Arachnida and Myriapoda collections during the summer of 2018. She assisted with curatorial activities, helping to curate important collections of spiders and other arachnids, under the supervision of Lou Sorkin and Pío Colmenares.
               </p>
             </PeopleCardBody>
           </PeopleCard>
