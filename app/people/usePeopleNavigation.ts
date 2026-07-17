@@ -280,6 +280,7 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
     }
 
     // Restore section/tab from the URL before first paint on refresh.
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-only URL hydration
     applyNavigationFromUrl({ allowPersonScroll: false });
     setIsNavigationReady(true);
     window.scrollTo(0, 0);
