@@ -10,6 +10,11 @@ const parseCssLength = (value: string) => {
 };
 
 export const getHeaderHeight = () => {
+  const header = document.querySelector("header");
+  if (header instanceof HTMLElement) {
+    return header.getBoundingClientRect().height;
+  }
+
   const rootStyles = getComputedStyle(document.documentElement);
   const value = rootStyles.getPropertyValue("--header-height").trim();
   return parseCssLength(value);

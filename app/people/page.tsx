@@ -16,15 +16,13 @@ export default function PeoplePage() {
     cards: section.cards as [PeopleGroupCardProps, ...PeopleGroupCardProps[]],
   }));
 
-  const undergraduateStudents = getPeople().filter(
-    (person) => person.sectionId === "undergraduate-students"
-  );
+  const people = getPeople();
   const undergraduateStudentsOrder = getPeopleSectionOrder("undergraduate-students");
 
   return (
     <PeopleClient
       labHistorySections={labHistorySections}
-      undergraduateStudents={undergraduateStudents}
+      people={people}
       undergraduateStudentsOrder={undergraduateStudentsOrder}
     />
   );

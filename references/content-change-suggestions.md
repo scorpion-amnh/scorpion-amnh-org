@@ -203,6 +203,17 @@ These items document visible or structural changes from the Stage 2–3 refactor
 - **Suggested action:** After JSON audit, wire remaining sections to `getPeople()` per implementation plan Stage 4+.
 - **Status:** Partial (undergraduate students wired)
 
+### Stage 4 — People search and navigation (2026-07-17)
+
+- **Location:** `app/people/usePeopleNavigation.ts`, `app/people/PeopleSearch.tsx`, `app/people/page.tsx`, `lib/people/syncPersonAnchorIds.ts`
+- **Change:**
+  - Search index built from `getPeople()` (238 profiles: `name`, `id`, `sectionId`, `tab`) — no DOM heading scan for search.
+  - Tab state synced to URL via `?tab=current` or `?tab=alumni` (`history.pushState` on tab change; restored on mount and browser back/forward via `popstate`).
+  - Search keyboard shortcuts: `Escape` clears query and blurs input; `/` focuses search when no other field is focused.
+  - Person scroll targets use JSON `id` values; `PersonProfileCard` and `syncPersonAnchorIds` assign matching DOM anchors for inline sections.
+- **Suggested action:** Author tests search (e.g. "Valentin", "Diogo"), tab URL persistence, and browser back button on `/people`.
+- **Status:** Applied; awaiting review
+
 ### Per-page metadata (`<title>` and description)
 
 - **Location:** All route `page.tsx` files; `app/sitemap.ts`, `app/robots.ts`

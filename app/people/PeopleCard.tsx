@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 type PeopleCardProps = {
   children: ReactNode;
   containerClassName?: string;
+  id?: string;
 };
 
 type PeopleCardSlotProps = {
@@ -10,14 +11,14 @@ type PeopleCardSlotProps = {
   className?: string;
 };
 
-const buildClassName = (baseClassName: string, className?: string) =>
-  [baseClassName, className].filter(Boolean).join(" ");
+const buildClassName = (...classNames: Array<string | undefined>) =>
+  classNames.filter(Boolean).join(" ");
 
-export const PeopleCard = ({ children, containerClassName }: PeopleCardProps) => {
-  const classes = buildClassName("people-card", containerClassName);
+export const PeopleCard = ({ children, containerClassName, id }: PeopleCardProps) => {
+  const classes = buildClassName("people-card", id ? "person-anchor" : undefined, containerClassName);
 
   return (
-    <div className={classes}>
+    <div id={id} className={classes}>
       <div className="grid md:grid-cols-5 gap-6">{children}</div>
     </div>
   );

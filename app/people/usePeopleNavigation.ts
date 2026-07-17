@@ -1,19 +1,23 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { getHeaderHeight, getScrollGap } from "@/lib/scrollMetrics";
+import {
+  DEFAULT_ACTIVE_SECTION,
+  applyTabQueryToState,
+  defaultSectionTabs,
+  isTabSectionId,
+  pushPeoplePageUrl,
+  readNavigationStateFromUrl,
+  replacePeoplePageUrl,
+  resolvePersonHashNavigation,
+  type SectionTab,
+  type TabSectionId,
+} from "@/lib/people/peoplePageUrl";
+import { scrollToPersonAnchorWhenReady } from "@/lib/people/scrollToPersonAnchor";
+import { syncPersonAnchorIds } from "@/lib/people/syncPersonAnchorIds";
+import type { Person } from "@/lib/content/schema";
 import type { PeopleSection } from "./sections";
 
-export type SectionTab = "current" | "alumni";
-
-export type TabSectionId =
-  | "museum-specialists"
-  | "technical-staff"
-  | "research-affiliates"
-  | "postdocs"
-  | "graduate-students"
-  | "undergraduate-students"
-  | "high-school-students"
-  | "volunteers"
-  | "visiting-students";
+export type { SectionTab, TabSectionId };
 
 export type PeopleIndexItem = {
   name: string;
@@ -21,39 +25,6 @@ export type PeopleIndexItem = {
   sectionId: string;
   sectionLabel: string;
   tab?: SectionTab;
-};
-
-const defaultSectionTabs: Record<TabSectionId, SectionTab> = {
-  "museum-specialists": "current",
-  "technical-staff": "current",
-  "research-affiliates": "current",
-  postdocs: "current",
-  "graduate-students": "alumni",
-  "undergraduate-students": "alumni",
-  "high-school-students": "alumni",
-  volunteers: "current",
-  "visiting-students": "alumni",
-};
-
-const isTabSectionId = (value: string): value is TabSectionId => value in defaultSectionTabs;
-
-const ignoredPersonHeadingLabels = new Set([
-  "Contact",
-  "CV and Online Profiles",
-  "Alumni",
-  "Current",
-  "Former",
-  "Additional Alumni - Condensed",
-  "CV",
-]);
-
-const toPersonAnchorId = (name: string) => {
-  const slug = name
-    .toLowerCase()
-    .replace(/[’']/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-  return `person-${slug}`;
 };
 
 const normalizeSearchText = (value: string) =>
@@ -104,10 +75,12 @@ const getFuzzyScore = (query: string, name: string) => {
   return null;
 };
 
-export const usePeopleNavigation = (sections: PeopleSection[]) => {
-  const [activeSection, setActiveSection] = useState("lab-evolution");
+export const usePeopleNavigation = (sections: PeopleSection[], people: Person[]) => {
+  const sectionIdSet = useMemo(() => new Set(sections.map((section) => section.id)), [sections]);
+
+  const [activeSection, setActiveSection] = useState(DEFAULT_ACTIVE_SECTION);
   const [sectionTabs, setSectionTabs] = useState<Record<TabSectionId, SectionTab>>(defaultSectionTabs);
-  const [peopleIndex, setPeopleIndex] = useState<PeopleIndexItem[]>([]);
+  const [isNavigationReady, setIsNavigationReady] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
@@ -116,13 +89,24 @@ export const usePeopleNavigation = (sections: PeopleSection[]) => {
   const sideNavRef = useRef<HTMLDivElement>(null);
   const shouldScrollOnSectionChange = useRef(false);
   const pendingPersonScrollId = useRef<string | null>(null);
+  const hasRestoredFromUrl = useRef(false);
 
   const sectionLabelMap = useMemo(
     () => Object.fromEntries(sections.map((section) => [section.id, section.label])),
     [sections]
   );
 
-  const sectionIdSet = useMemo(() => new Set(sections.map((section) => section.id)), [sections]);
+  const peopleIndex = useMemo<PeopleIndexItem[]>(
+    () =>
+      people.map((person) => ({
+        name: person.name,
+        id: person.id,
+        sectionId: person.sectionId,
+        sectionLabel: sectionLabelMap[person.sectionId] ?? person.sectionId,
+        tab: person.tab,
+      })),
+    [people, sectionLabelMap]
+  );
 
   const getSideNavOffset = useCallback(() => {
     if (window.innerWidth >= 1024) {
@@ -132,21 +116,80 @@ export const usePeopleNavigation = (sections: PeopleSection[]) => {
     return sideNavRef.current?.getBoundingClientRect().height ?? 0;
   }, []);
 
-  const setTabForSection = useCallback((sectionId: string, tab?: SectionTab | null) => {
-    if (!tab || !isTabSectionId(sectionId)) {
-      return;
-    }
+  const getGlobalTab = useCallback(
+    (tabs: Record<TabSectionId, SectionTab>): SectionTab => tabs["graduate-students"] ?? "current",
+    []
+  );
 
-    setSectionTabs((current) => {
-      if (current[sectionId] === tab) {
-        return current;
+  const syncUrlFromState = useCallback(
+    (options: {
+      section: string;
+      tabs: Record<TabSectionId, SectionTab>;
+      hash?: string | null;
+      history?: "push" | "replace";
+    }) => {
+      if (typeof window === "undefined") {
+        return;
       }
 
-      return {
-        ...current,
-        [sectionId]: tab,
+      const urlOptions = {
+        section: options.section,
+        tab: getGlobalTab(options.tabs),
+        hash: options.hash ?? null,
       };
-    });
+
+      if (options.history === "replace") {
+        replacePeoplePageUrl(urlOptions);
+      } else {
+        pushPeoplePageUrl(urlOptions);
+      }
+    },
+    [getGlobalTab]
+  );
+
+  const applyNavigationFromUrl = useCallback(
+    (options: { allowPersonScroll: boolean }) => {
+      const { activeSection: sectionFromUrl, sectionTabs: tabsFromUrl, hash } = readNavigationStateFromUrl(
+        sectionIdSet
+      );
+
+      setActiveSection(sectionFromUrl);
+      setSectionTabs(tabsFromUrl);
+      pendingPersonScrollId.current = null;
+      shouldScrollOnSectionChange.current = false;
+
+      const hashNavigation = resolvePersonHashNavigation(hash, sectionIdSet, people);
+      if (!hashNavigation) {
+        return;
+      }
+
+      setActiveSection(hashNavigation.activeSection);
+      setSectionTabs(hashNavigation.sectionTabs);
+
+      if (hashNavigation.shouldScroll && options.allowPersonScroll && hashNavigation.personId) {
+        pendingPersonScrollId.current = hashNavigation.personId;
+      }
+    },
+    [people, sectionIdSet]
+  );
+
+  const setTabForSection = useCallback(
+    (sectionId: string, tab?: SectionTab | null) => {
+      if (!tab || !isTabSectionId(sectionId)) {
+        return;
+      }
+
+      setSectionTabs(() => {
+        const nextTabs = applyTabQueryToState(tab);
+        syncUrlFromState({ section: sectionId, tabs: nextTabs, hash: null });
+        return nextTabs;
+      });
+    },
+    [syncUrlFromState]
+  );
+
+  const queuePersonScroll = useCallback((targetId: string) => {
+    pendingPersonScrollId.current = targetId;
   }, []);
 
   const runPendingPersonScroll = useCallback(() => {
@@ -155,92 +198,14 @@ export const usePeopleNavigation = (sections: PeopleSection[]) => {
       return;
     }
 
-    let attempts = 0;
-    const maxAttempts = 12;
+    pendingPersonScrollId.current = null;
 
-    const tryScroll = () => {
-      const target = document.getElementById(targetId);
-      if (!target || target.offsetParent === null) {
-        attempts += 1;
-        if (attempts < maxAttempts) {
-          requestAnimationFrame(tryScroll);
-          return;
-        }
-
-        pendingPersonScrollId.current = null;
-        return;
-      }
-
-      pendingPersonScrollId.current = null;
-      const headerHeight = getHeaderHeight();
-      const scrollGap = getScrollGap();
-      const sideNavOffset = getSideNavOffset();
-      const yOffset = target.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap - sideNavOffset;
-      window.scrollTo({ top: yOffset, behavior: "smooth" });
-    };
-
-    requestAnimationFrame(tryScroll);
-  }, [getSideNavOffset]);
-
-  const buildPeopleIndex = useCallback(() => {
-    if (!contentRef.current) {
-      setPeopleIndex([]);
-      return;
+    if (contentRef.current) {
+      syncPersonAnchorIds(contentRef.current, people);
     }
 
-    const headings = Array.from(contentRef.current.querySelectorAll("h3, h4, h5"));
-    const seen = new Set<string>();
-    const index: PeopleIndexItem[] = [];
-
-    headings.forEach((heading) => {
-      const rawName = heading.textContent?.replace(/\s+/g, " ").trim() ?? "";
-      const section = heading.closest("[data-section]");
-      const sectionId = section?.getAttribute("data-section") ?? "";
-      const tab = (heading.closest("[data-tab]") as HTMLElement | null)?.getAttribute("data-tab") as
-        | SectionTab
-        | null;
-      if (!rawName || ignoredPersonHeadingLabels.has(rawName)) {
-        return;
-      }
-
-      if (!sectionId) {
-        return;
-      }
-
-      if (rawName.length < 2) {
-        return;
-      }
-
-      const headingId = heading.id || toPersonAnchorId(rawName);
-      if (!heading.id) {
-        heading.id = headingId;
-      }
-
-      const card = heading.closest(".grid");
-      const cardWrapper = (card?.parentElement as HTMLElement | null) ?? null;
-      const cardId = cardWrapper?.id ? cardWrapper.id : `${headingId}-card`;
-      if (cardWrapper && !cardWrapper.id) {
-        cardWrapper.id = cardId;
-      }
-
-      heading.setAttribute("data-person-name", rawName);
-
-      const normalizedName = normalizeSearchText(rawName).replace(/\s+/g, " ").trim();
-      const key = `${sectionId}:${normalizedName}`;
-      if (!seen.has(key)) {
-        seen.add(key);
-        index.push({
-          name: rawName,
-          id: cardWrapper ? cardId : headingId,
-          sectionId,
-          sectionLabel: sectionLabelMap[sectionId] ?? sectionId,
-          tab: tab ?? undefined,
-        });
-      }
-    });
-
-    setPeopleIndex(index);
-  }, [sectionLabelMap]);
+    scrollToPersonAnchorWhenReady(targetId, sideNavRef.current, { smooth: false });
+  }, [people]);
 
   const filteredResults = useMemo(() => {
     const query = normalizeSearchText(searchQuery.trim());
@@ -260,38 +225,67 @@ export const usePeopleNavigation = (sections: PeopleSection[]) => {
       .slice(0, 12);
   }, [peopleIndex, searchQuery]);
 
-  const handlePersonSelect = useCallback((id: string, name: string, sectionId: string, tab?: SectionTab) => {
-    setSearchQuery(name);
-    setIsSearchOpen(false);
-    setTabForSection(sectionId, tab);
-    setActiveSection(sectionId);
-    shouldScrollOnSectionChange.current = false;
-    pendingPersonScrollId.current = id;
+  const handlePersonSelect = useCallback(
+    (id: string, name: string, sectionId: string, tab?: SectionTab) => {
+      const resolvedTab = tab ?? defaultSectionTabs[sectionId as TabSectionId] ?? "current";
+      const nextTabs = applyTabQueryToState(resolvedTab);
 
-    runPendingPersonScroll();
+      setSearchQuery(name);
+      setIsSearchOpen(false);
+      setSectionTabs(nextTabs);
+      setActiveSection(sectionId);
+      shouldScrollOnSectionChange.current = false;
+      queuePersonScroll(id);
 
-    if (typeof window !== "undefined") {
-      window.history.replaceState(null, "", `#${id}`);
-    }
-  }, [runPendingPersonScroll, setTabForSection]);
-
-  const handleSectionSelect = useCallback((id: string) => {
-    setActiveSection(id);
-    shouldScrollOnSectionChange.current = true;
-
-    if (isTabSectionId(id)) {
-      setSectionTabs((current) => {
-        if (current[id] === "current") {
-          return current;
-        }
-
-        return {
-          ...current,
-          [id]: "current",
-        };
+      syncUrlFromState({
+        section: sectionId,
+        tabs: nextTabs,
+        hash: id,
+        history: "replace",
       });
+    },
+    [queuePersonScroll, syncUrlFromState]
+  );
+
+  const handleSectionSelect = useCallback(
+    (id: string) => {
+      setActiveSection(id);
+      shouldScrollOnSectionChange.current = true;
+
+      if (isTabSectionId(id)) {
+        setSectionTabs(() => {
+          const nextTabs = applyTabQueryToState("current");
+          syncUrlFromState({ section: id, tabs: nextTabs, hash: null });
+          return nextTabs;
+        });
+        return;
+      }
+
+      setSectionTabs((current) => {
+        syncUrlFromState({ section: id, tabs: current, hash: null });
+        return current;
+      });
+    },
+    [syncUrlFromState]
+  );
+
+  useLayoutEffect(() => {
+    if (hasRestoredFromUrl.current) {
+      return;
     }
-  }, []);
+
+    hasRestoredFromUrl.current = true;
+
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    // Restore section/tab from the URL before first paint on refresh.
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-only URL hydration
+    applyNavigationFromUrl({ allowPersonScroll: false });
+    setIsNavigationReady(true);
+    window.scrollTo(0, 0);
+  }, [applyNavigationFromUrl]);
 
   useEffect(() => {
     if (!shouldScrollOnSectionChange.current) {
@@ -335,17 +329,23 @@ export const usePeopleNavigation = (sections: PeopleSection[]) => {
     }
   }, [activeSection, getSideNavOffset]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    if (!isNavigationReady || !pendingPersonScrollId.current) {
+      return;
+    }
+
     runPendingPersonScroll();
-  }, [activeSection, sectionTabs, runPendingPersonScroll]);
+  }, [activeSection, sectionTabs, isNavigationReady, runPendingPersonScroll]);
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
-      buildPeopleIndex();
+      if (contentRef.current) {
+        syncPersonAnchorIds(contentRef.current, people);
+      }
     });
 
     return () => cancelAnimationFrame(frame);
-  }, [activeSection, sectionTabs, buildPeopleIndex]);
+  }, [activeSection, sectionTabs, people]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -363,44 +363,21 @@ export const usePeopleNavigation = (sections: PeopleSection[]) => {
   }, []);
 
   useEffect(() => {
-    const applyHash = () => {
-      const hash = window.location.hash.replace("#", "");
-      if (!hash) {
-        return;
-      }
-
-      if (sectionIdSet.has(hash)) {
-        pendingPersonScrollId.current = null;
-        shouldScrollOnSectionChange.current = true;
-        setActiveSection(hash);
-        return;
-      }
-
-      const target = document.getElementById(hash);
-      if (!target) {
-        return;
-      }
-
-      const sectionElement = target.closest("[data-section]") as HTMLElement | null;
-      const sectionId = sectionElement?.getAttribute("data-section");
-      if (!sectionId || !sectionIdSet.has(sectionId)) {
-        return;
-      }
-
-      const tab = (target.closest("[data-tab]") as HTMLElement | null)?.getAttribute("data-tab") as SectionTab | null;
-      setTabForSection(sectionId, tab);
-      setActiveSection(sectionId);
-      shouldScrollOnSectionChange.current = false;
-      pendingPersonScrollId.current = hash;
-      requestAnimationFrame(() => {
-        runPendingPersonScroll();
-      });
+    const handlePopState = () => {
+      applyNavigationFromUrl({ allowPersonScroll: false });
     };
 
-    applyHash();
-    window.addEventListener("hashchange", applyHash);
-    return () => window.removeEventListener("hashchange", applyHash);
-  }, [sectionIdSet, setTabForSection, runPendingPersonScroll]);
+    const handleHashChange = () => {
+      applyNavigationFromUrl({ allowPersonScroll: true });
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, [applyNavigationFromUrl]);
 
   return {
     activeSection,
@@ -408,6 +385,7 @@ export const usePeopleNavigation = (sections: PeopleSection[]) => {
     filteredResults,
     handlePersonSelect,
     handleSectionSelect,
+    isNavigationReady,
     isSearchOpen,
     searchContainerRef,
     searchQuery,

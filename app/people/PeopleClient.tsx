@@ -24,13 +24,13 @@ type PeopleClientProps = {
     subtitle?: string;
     cards: [PeopleGroupCardProps, ...PeopleGroupCardProps[]];
   }[];
-  undergraduateStudents: Person[];
+  people: Person[];
   undergraduateStudentsOrder: string[];
 };
 
 export function PeopleClient({
   labHistorySections,
-  undergraduateStudents,
+  people,
   undergraduateStudentsOrder,
 }: PeopleClientProps) {
   const {
@@ -39,6 +39,7 @@ export function PeopleClient({
     filteredResults,
     handlePersonSelect,
     handleSectionSelect,
+    isNavigationReady,
     isSearchOpen,
     searchContainerRef,
     searchQuery,
@@ -47,7 +48,11 @@ export function PeopleClient({
     setSearchQuery,
     setTabForSection,
     sideNavRef,
-  } = usePeopleNavigation(peopleSections);
+  } = usePeopleNavigation(peopleSections, people);
+
+  const undergraduateStudents = people.filter(
+    (person) => person.sectionId === "undergraduate-students"
+  );
 
   return (
     <div className="bg-white min-h-screen">
@@ -76,61 +81,63 @@ export function PeopleClient({
           >
             <SideNav
               sections={peopleSections}
-              activeSection={activeSection}
+              activeSection={isNavigationReady ? activeSection : ""}
               onSelect={handleSectionSelect}
             />
           </div>
 
           <div ref={contentRef} className="md:col-span-3 section-content">
             <LabEvolutionSection
-              isActive={activeSection === "lab-evolution"}
+              isActive={isNavigationReady && activeSection === "lab-evolution"}
               labHistorySections={labHistorySections}
             />
-            <PrincipalInvestigatorSection isActive={activeSection === "principal-investigator"} />
+            <PrincipalInvestigatorSection
+              isActive={isNavigationReady && activeSection === "principal-investigator"}
+            />
             <MuseumSpecialistsSection
-              isActive={activeSection === "museum-specialists"}
+              isActive={isNavigationReady && activeSection === "museum-specialists"}
               tab={sectionTabs["museum-specialists"]}
               onTabChange={(value) => setTabForSection("museum-specialists", value)}
             />
             <TechnicalStaffSection
-              isActive={activeSection === "technical-staff"}
+              isActive={isNavigationReady && activeSection === "technical-staff"}
               tab={sectionTabs["technical-staff"]}
               onTabChange={(value) => setTabForSection("technical-staff", value)}
             />
             <ResearchAffiliatesSection
-              isActive={activeSection === "research-affiliates"}
+              isActive={isNavigationReady && activeSection === "research-affiliates"}
               tab={sectionTabs["research-affiliates"]}
               onTabChange={(value) => setTabForSection("research-affiliates", value)}
             />
             <PostdocsSection
-              isActive={activeSection === "postdocs"}
+              isActive={isNavigationReady && activeSection === "postdocs"}
               tab={sectionTabs.postdocs}
               onTabChange={(value) => setTabForSection("postdocs", value)}
             />
             <GraduateStudentsSection
-              isActive={activeSection === "graduate-students"}
+              isActive={isNavigationReady && activeSection === "graduate-students"}
               tab={sectionTabs["graduate-students"]}
               onTabChange={(value) => setTabForSection("graduate-students", value)}
             />
             <UndergraduateStudentsSection
-              isActive={activeSection === "undergraduate-students"}
+              isActive={isNavigationReady && activeSection === "undergraduate-students"}
               tab={sectionTabs["undergraduate-students"]}
               onTabChange={(value) => setTabForSection("undergraduate-students", value)}
               people={undergraduateStudents}
               sectionOrder={undergraduateStudentsOrder}
             />
             <HighSchoolStudentsSection
-              isActive={activeSection === "high-school-students"}
+              isActive={isNavigationReady && activeSection === "high-school-students"}
               tab={sectionTabs["high-school-students"]}
               onTabChange={(value) => setTabForSection("high-school-students", value)}
             />
             <VolunteersSection
-              isActive={activeSection === "volunteers"}
+              isActive={isNavigationReady && activeSection === "volunteers"}
               tab={sectionTabs.volunteers}
               onTabChange={(value) => setTabForSection("volunteers", value)}
             />
             <VisitingStudentsSection
-              isActive={activeSection === "visiting-students"}
+              isActive={isNavigationReady && activeSection === "visiting-students"}
               tab={sectionTabs["visiting-students"]}
               onTabChange={(value) => setTabForSection("visiting-students", value)}
             />

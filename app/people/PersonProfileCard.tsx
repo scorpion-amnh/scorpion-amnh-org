@@ -14,7 +14,7 @@ export function PersonProfileCard({ person, containerClassName = "mb-8 pb-8" }: 
   const imageSrc = getPersonImagePath(person.image);
 
   return (
-    <PeopleCard containerClassName={containerClassName}>
+    <PeopleCard id={person.id} containerClassName={containerClassName}>
       <PeopleCardMedia>
         {imageSrc ? (
           <PeopleImage
