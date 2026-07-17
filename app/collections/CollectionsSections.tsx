@@ -4,21 +4,80 @@ import { ExternalLink } from "@/app/components/ExternalLink";
 import { Figure } from "@/app/components/Figure";
 import { SideNav } from "@/app/components/SideNav";
 import { getHeaderHeight, getScrollGap } from "@/lib/scrollMetrics";
+import {
+  COLLECTIONS_SECTION_IDS,
+  DEFAULT_COLLECTIONS_SECTION,
+  isCollectionsSectionId,
+  pushCollectionsPageUrl,
+  readCollectionsSectionFromUrl,
+  type CollectionsSectionId,
+} from "@/lib/collections/collectionsPageUrl";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export function CollectionsSections() {
-  const [activeSection, setActiveSection] = useState('general-information');
+  const [activeSection, setActiveSection] = useState<CollectionsSectionId>(DEFAULT_COLLECTIONS_SECTION);
+  const [isNavigationReady, setIsNavigationReady] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
+  const shouldScrollOnSectionChange = useRef(false);
+  const hasRestoredFromUrl = useRef(false);
 
-  const sections = [
-    { id: 'general-information', label: 'General Information' },
-    { id: 'specimens', label: 'Specimens' },
-    { id: 'tissue-samples', label: 'Tissue Samples' },
-  ];
+  const sections = COLLECTIONS_SECTION_IDS.map((id) => ({
+    id,
+    label:
+      id === "general-information"
+        ? "General Information"
+        : id === "specimens"
+          ? "Specimens"
+          : "Tissue Samples",
+  }));
+
+  const handleSectionSelect = (sectionId: string) => {
+    if (!isCollectionsSectionId(sectionId)) {
+      return;
+    }
+
+    shouldScrollOnSectionChange.current = true;
+    setActiveSection(sectionId);
+    pushCollectionsPageUrl(sectionId);
+  };
+
+  useLayoutEffect(() => {
+    if (hasRestoredFromUrl.current) {
+      return;
+    }
+
+    hasRestoredFromUrl.current = true;
+
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    // Restore section from the URL before first paint on refresh.
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-only URL hydration
+    setActiveSection(readCollectionsSectionFromUrl());
+    setIsNavigationReady(true);
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
+    const handlePopState = () => {
+      shouldScrollOnSectionChange.current = false;
+      setActiveSection(readCollectionsSectionFromUrl());
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  useEffect(() => {
+    if (!shouldScrollOnSectionChange.current) {
+      return;
+    }
+
+    shouldScrollOnSectionChange.current = false;
+
     if (contentRef.current) {
       const headerHeight = getHeaderHeight();
       const scrollGap = getScrollGap();
@@ -61,13 +120,13 @@ export function CollectionsSections() {
           <SideNav
             className="lg:col-span-1"
             sections={sections}
-            activeSection={activeSection}
-            onSelect={setActiveSection}
+            activeSection={isNavigationReady ? activeSection : ""}
+            onSelect={handleSectionSelect}
           />
 
           {/* Content Area */}
           <div ref={contentRef} className="lg:col-span-3 section-content">
-              {activeSection === 'general-information' && (
+              {isNavigationReady && activeSection === 'general-information' && (
               <div className="mb-8">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">General Information</h2>
 
@@ -136,7 +195,7 @@ export function CollectionsSections() {
               </div>
               )}
 
-          {activeSection === 'specimens' && (
+          {isNavigationReady && activeSection === 'specimens' && (
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Specimens</h2>
             <p className="text-lg leading-8 text-gray-700 mb-6">
@@ -254,7 +313,7 @@ export function CollectionsSections() {
           </div>
           )}
 
-          {activeSection === 'tissue-samples' && (
+          {isNavigationReady && activeSection === 'tissue-samples' && (
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Tissue Samples</h2>
             <p className="text-lg leading-8 text-gray-700 mb-6">

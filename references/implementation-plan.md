@@ -80,24 +80,56 @@
 5. Add a `keydown` listener in `app/people/PeopleSearch.tsx` for `Escape` that clears `searchQuery` and blurs the input.
 6. Add a global `keydown` listener for `/` that focuses the people search input when no other input is focused.
 
-## Stage 5 — CMS Adapter Layer
-1. Create `lib/content/types.ts` defining a `ContentSource` interface with one method per function in `lib/content/index.ts`.
-2. Rename `lib/content/index.ts` to `lib/content/localAdapter.ts`; make it implement `ContentSource`.
-3. Create `lib/content/getContentSource.ts` that returns the active adapter based on `process.env.CONTENT_SOURCE`.
-4. Update every component that imports from `lib/content/index.ts` to import from `lib/content/getContentSource.ts` instead.
-5. Confirm every content schema in `lib/content/schema.ts` has a stable `slug` or `id` field; add one where missing.
-6. Document in `references/implementation-plan.md` (this file) that `slug`/`id` values must never change after publication.
+## Stage 5.1 — CMS Adapter Layer (deploy-safe refactor)
+1. Create `lib/content/types.ts` defining a `ContentSource` interface with one method per content loader (`getPeople`, `getPeopleSectionOrder`, `getPublications`, `getGallery`, `getLabHistory`, `getSiteSettings`).
+2. Move the file-based loader into `lib/content/localAdapter.ts`; make it implement `ContentSource`.
+3. Create `lib/content/getContentSource.ts` that returns the active adapter based on `process.env.CONTENT_SOURCE`, defaulting to `local` when unset or unrecognized.
+4. Throw a clear build-time error when `CONTENT_SOURCE=cms` is set before `lib/content/cmsAdapter.ts` exists (Stage 6).
+5. Keep `lib/content/index.ts` as the stable entry point — re-export the `get*` helpers and route each call through `getContentSource()` so existing `@/lib/content` imports keep working.
+6. Leave image helpers (`getPersonImagePath`, `resolvePublicImagePath`, `imagePathExists`) in `lib/content/index.ts`; they are build/validation utilities, not CMS-backed content.
+7. Pin `CONTENT_SOURCE: local` in `.github/workflows/deploy.yml` so DreamHost deploys always build from committed JSON in the repo.
+8. Confirm stable identifiers in `lib/content/schema.ts`:
+   - `Person.id` — stable; matches filename in `content/people/<id>.json` and people-page hash links.
+   - `Page.slug` — defined in schema for future CMS pages.
+   - `Publication`, `GalleryImage`, `LabHistoryEntry` — no dedicated `id` yet; `GalleryImage.src` and publication content fields are stable enough for local files but will need explicit ids before CMS import (see Stage 5.2).
+9. Document in this file: **`Person.id` and `Page.slug` values must never change after publication** — they are used in URLs, search deep links, and future CMS sync.
+
+## Stage 5.2 — Prepare for Stage 6 (CMS migration checklist)
+Complete these before enabling `CONTENT_SOURCE=cms` in production. None of this is required for DreamHost deploy to keep working.
+
+### CMS product and hosting
+1. Select a headless CMS that supports webhook- or API-triggered rebuilds compatible with `.github/workflows/deploy.yml` (static export to DreamHost, or plan a hosting change if dropping `output: 'export'`).
+2. Decide whether production stays on DreamHost static hosting or moves to a Node/ISR host — Stage 6 Step 8 only applies if leaving static export.
+
+### Schema and content identifiers
+3. Add a stable `id` (or `slug`) field to `Publication` in `lib/content/schema.ts` and every entry in `content/publications.json`; generate ids once and treat them as immutable.
+4. Add a stable `id` field to `GalleryImage` (or confirm `src` is the canonical CMS key) for `content/gallery/*.json`.
+5. Add stable ids to `LabHistoryEntry` sections if the CMS model requires separate records per section.
+6. Audit all `Person.id` values against live people-page hash links and search index entries; fix any mismatches before import.
+7. Extend `scripts/validate-content.ts` to fail on duplicate `id` values within each collection once ids are added.
+
+### Import tooling
+8. Create `scripts/import-to-cms.ts` that reads every file under `content/` via `localAdapter` and creates the corresponding CMS records via API.
+9. Run a dry-run import against a staging CMS environment; verify record counts match `npm run validate-content` output.
+10. Document CMS collection field mappings in `references/` (one table per schema: local field → CMS field type).
+
+### Adapter and CI
+11. Create `lib/content/cmsAdapter.ts` implementing `ContentSource`, fetching from the CMS API at build time.
+12. Add CMS API credentials as GitHub Actions secrets (e.g. `CMS_API_URL`, `CMS_API_TOKEN`); do **not** commit them.
+13. Add a CI job matrix or env block that runs `validate-content` + `build` with `CONTENT_SOURCE=cms` against staging credentials before switching production.
+14. Add a webhook endpoint or GitHub Actions `repository_dispatch` trigger so CMS publish events rerun `.github/workflows/deploy.yml`.
+15. Only set `CONTENT_SOURCE: cms` in the deploy workflow **after** steps 11–14 pass on staging.
+
+### Optional Stage 6 features (defer until core migration works)
+16. Create `app/api/preview/route.ts` for draft preview (requires dropping pure static export or using a separate preview host).
+17. Remove `output: 'export'` from `next.config.ts` only if the hosting target supports Next.js server runtime or ISR.
 
 ## Stage 6 — Real CMS Migration
-1. Select a CMS product that supports webhook-triggered rebuilds compatible with `.github/workflows/deploy.yml`.
-2. Create matching collections in the CMS for `Person`, `Publication`, `GalleryImage`, `LabHistoryEntry`, `Page`, `SiteSettings`, using the schemas in `lib/content/schema.ts` as the field reference.
-3. Create `scripts/import-to-cms.ts` that reads every file under `content/` and creates the corresponding record via the CMS API.
-4. Run `npx tsx scripts/import-to-cms.ts` once against the target CMS environment.
-5. Create `lib/content/cmsAdapter.ts` implementing `ContentSource`, fetching from the CMS API.
-6. Set `CONTENT_SOURCE=cms` in the production environment configuration.
-7. Add a webhook endpoint or GitHub Actions `repository_dispatch` trigger that reruns `.github/workflows/deploy.yml` on CMS publish events.
-8. Remove `output: 'export'` from `next.config.ts` if the hosting target moves off DreamHost; enable ISR or on-demand revalidation in its place.
-9. Create `app/api/preview/route.ts` that sets a preview cookie and renders unpublished CMS content when present.
+1. Execute the Stage 5.2 checklist.
+2. Run `npx tsx scripts/import-to-cms.ts` once against the target CMS environment.
+3. Switch production `CONTENT_SOURCE` from `local` to `cms` in `.github/workflows/deploy.yml` (or per-environment deploy config).
+4. Monitor the first production deploy: confirm page count, people search, and image paths match the pre-migration static build.
+5. Keep `content/` in the repo as a fallback export until CMS editing is trusted; document a rollback procedure (`CONTENT_SOURCE=local` + redeploy).
 
 ## Stage 7 — UX Fixes, Heuristic 1: Visibility of System Status
 1. Add a `scroll` event listener in `app/people/usePeopleNavigation.ts` that recalculates `activeSection` based on the section heading nearest the viewport top.

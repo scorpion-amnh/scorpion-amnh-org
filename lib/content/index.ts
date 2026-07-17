@@ -1,121 +1,33 @@
-import { promises as fs, readFileSync, readdirSync } from "fs";
+import { promises as fs } from "fs";
 import path from "path";
-import { z } from "zod";
-import {
-  galleryImageSchema,
-  labHistoryFileSchema,
-  personSchema,
-  publicationSchema,
-  siteSettingsSchema,
-  type GalleryImage,
-  type LabHistoryEntry,
-  type Person,
-  type Publication,
-  type SiteSettings,
-} from "./schema";
-
-const CONTENT_DIR = path.join(process.cwd(), "content");
-
-const readJsonFile = <T>(filePath: string): T => {
-  const raw = readFileSync(filePath, "utf8");
-  return JSON.parse(raw) as T;
-};
-
-const formatValidationError = (label: string, error: unknown) => {
-  if (error instanceof Error) {
-    return `${label}: ${error.message}`;
-  }
-  return `${label}: Unknown validation error`;
-};
-
-export const getPeople = (): Person[] => {
-  const peopleDir = path.join(CONTENT_DIR, "people");
-  const files = readdirSync(peopleDir)
-    .filter((file) => file.endsWith(".json") && file !== "section-order.json")
-    .sort((a, b) => a.localeCompare(b));
-
-  return files.map((file) => {
-    const filePath = path.join(peopleDir, file);
-    const parsed = readJsonFile<unknown>(filePath);
-    const result = personSchema.safeParse(parsed);
-    if (!result.success) {
-      throw new Error(formatValidationError(`content/people/${file}`, result.error));
-    }
-    return result.data;
-  });
-};
-
-const peopleSectionOrderSchema = z.record(z.string(), z.array(z.string().min(1)));
-
-export const getPeopleSectionOrder = (sectionId: string): string[] => {
-  const filePath = path.join(CONTENT_DIR, "people", "section-order.json");
-  const parsed = readJsonFile<unknown>(filePath);
-  const result = peopleSectionOrderSchema.safeParse(parsed);
-  if (!result.success) {
-    throw new Error(formatValidationError("content/people/section-order.json", result.error));
-  }
-
-  return result.data[sectionId] ?? [];
-};
-
-export const getPublications = (): Publication[] => {
-  const filePath = path.join(CONTENT_DIR, "publications.json");
-  const parsed = readJsonFile<unknown>(filePath);
-  const result = z.array(publicationSchema).safeParse(parsed);
-  if (!result.success) {
-    throw new Error(formatValidationError("content/publications.json", result.error));
-  }
-
-  return [...result.data].sort((a, b) => b.year - a.year);
-};
-
-export const getGallery = (category: string): GalleryImage[] => {
-  const filePath = path.join(CONTENT_DIR, "gallery", `${category}.json`);
-  const parsed = readJsonFile<unknown>(filePath);
-  const result = z.array(galleryImageSchema).safeParse(parsed);
-  if (!result.success) {
-    throw new Error(formatValidationError(`content/gallery/${category}.json`, result.error));
-  }
-  return result.data;
-};
-
-export const getLabHistory = (): LabHistoryEntry[] => {
-  const filePath = path.join(CONTENT_DIR, "lab-history.json");
-  const parsed = readJsonFile<unknown>(filePath);
-  const result = labHistoryFileSchema.safeParse(parsed);
-  if (!result.success) {
-    throw new Error(formatValidationError("content/lab-history.json", result.error));
-  }
-
-  return result.data.sections.map((section) => {
-    const card = result.data.cards[section.cardIndex];
-    if (!card) {
-      throw new Error(
-        `content/lab-history.json: section "${section.year}" references missing card index ${section.cardIndex}`
-      );
-    }
-
-    return {
-      year: section.year,
-      subtitle: section.subtitle,
-      cards: [card],
-    };
-  });
-};
-
-export const getSiteSettings = (): SiteSettings => {
-  const filePath = path.join(CONTENT_DIR, "site.json");
-  const parsed = readJsonFile<unknown>(filePath);
-  const result = siteSettingsSchema.safeParse(parsed);
-  if (!result.success) {
-    throw new Error(formatValidationError("content/site.json", result.error));
-  }
-  return result.data;
-};
-
+import { getContentSource } from "./getContentSource";
 import { getPersonImagePath } from "@/lib/people/personImage";
 
+export { getContentSource, getContentSourceName } from "./getContentSource";
+export type { ContentSource, ContentSourceName } from "./types";
+
+export type {
+  GalleryImage,
+  LabHistoryEntry,
+  Person,
+  Publication,
+  SiteSettings,
+} from "./schema";
+
 export { getPersonImagePath };
+
+export const getPeople = () => getContentSource().getPeople();
+
+export const getPeopleSectionOrder = (sectionId: string) =>
+  getContentSource().getPeopleSectionOrder(sectionId);
+
+export const getPublications = () => getContentSource().getPublications();
+
+export const getGallery = (category: string) => getContentSource().getGallery(category);
+
+export const getLabHistory = () => getContentSource().getLabHistory();
+
+export const getSiteSettings = () => getContentSource().getSiteSettings();
 
 export const resolvePublicImagePath = (src: string) => {
   if (!src.startsWith("/")) {
@@ -132,11 +44,3 @@ export const imagePathExists = async (src: string) => {
     return false;
   }
 };
-
-export type {
-  GalleryImage,
-  LabHistoryEntry,
-  Person,
-  Publication,
-  SiteSettings,
-} from "./schema";
