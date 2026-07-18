@@ -13,6 +13,7 @@ import {
   visitorsData,
 } from "../app/people/data";
 import type { Person } from "../app/people/types";
+import { parsePublications } from "./parse-publications";
 
 const ROOT = path.join(process.cwd());
 const CONTENT = path.join(ROOT, "content");
@@ -149,139 +150,6 @@ const serializePerson = (
   }
 
   return record;
-};
-
-type PublicationAuthor = { name: string; isHighlighted: boolean };
-
-type Publication = {
-  year: number;
-  authors: PublicationAuthor[];
-  title: string;
-  journal: string;
-  volume: string | null;
-  pages: string | null;
-  doi: string | null;
-};
-
-const stripPublicationHtml = (html: string) =>
-  html
-    .replace(/\{' '\}/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/<a[^>]*href="([^"]*)"[^>]*>[\s\S]*?<\/a>/gi, (_, href) => {
-      if (href.includes("doi.org") || href.includes("dx.doi.org")) {
-        return ` DOI_LINK:${href} `;
-      }
-      return "";
-    })
-    .replace(/<b>([\s\S]*?)<\/b>/gi, "**$1**")
-    .replace(/<i>([\s\S]*?)<\/i>/gi, "*$1*")
-    .replace(/<[^>]+>/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
-
-const parseAuthors = (authorText: string): PublicationAuthor[] => {
-  const normalized = authorText
-    .replace(/,\s+and\s+/gi, ", ")
-    .replace(/\s+and\s+/gi, ", ");
-  const authors: PublicationAuthor[] = [];
-  const authorPattern = /(\*\*[^*]+\*\*|[^,]+(?:,\s*[A-Z]\.?)?)/g;
-  let match: RegExpExecArray | null;
-
-  while ((match = authorPattern.exec(normalized)) !== null) {
-    const part = match[1].trim().replace(/^and\s+/i, "");
-    if (!part || part.toLowerCase() === "and") {
-      continue;
-    }
-
-    const highlighted = part.startsWith("**") && part.endsWith("**");
-    const name = highlighted ? part.slice(2, -2).trim() : part.replace(/\*\*/g, "").trim();
-    if (name) {
-      authors.push({
-        name,
-        isHighlighted: highlighted || /^Prendini,\s*L\.?$/i.test(name),
-      });
-    }
-  }
-
-  return authors;
-};
-
-const parsePublicationParagraph = (rawHtml: string, year: number): Publication => {
-  const text = stripPublicationHtml(rawHtml);
-  const doiMatch = text.match(/DOI_LINK:([^\s]+)/);
-  const doi = doiMatch ? doiMatch[1] : null;
-  const withoutDoi = text.replace(/\s*DOI_LINK:[^\s]+\s*/g, " ").trim();
-
-  const yearPattern = new RegExp(`\\b${year}\\b\\.\\s*`);
-  const yearIndex = withoutDoi.search(yearPattern);
-  if (yearIndex === -1) {
-    return {
-      year,
-      authors: [{ name: withoutDoi, isHighlighted: false }],
-      title: withoutDoi,
-      journal: "",
-      volume: null,
-      pages: null,
-      doi,
-    };
-  }
-
-  const authorPart = withoutDoi.slice(0, yearIndex).replace(/\.\s*$/, "").trim();
-  const remainder = withoutDoi.slice(yearIndex + `${year}. `.length).trim();
-
-  const authors = parseAuthors(authorPart);
-
-  const journalBoldMatch = remainder.match(/\*\*([^*]+)\*\*\s*(.*)$/);
-  let title = remainder;
-  let journal = "";
-  let volume: string | null = null;
-  let pages: string | null = null;
-
-  if (journalBoldMatch) {
-    const beforeJournal = remainder.slice(0, journalBoldMatch.index).trim();
-    title = beforeJournal.replace(/\.\s*$/, "").trim();
-    journal = journalBoldMatch[1].trim();
-    const afterJournal = journalBoldMatch[2].trim();
-
-    const volumePagesMatch = afterJournal.match(/^(\d+(?:\([^)]+\))?(?:\(suppl\.\))?)\s*:\s*(.+?)\.?$/);
-    if (volumePagesMatch) {
-      volume = volumePagesMatch[1];
-      pages = volumePagesMatch[2].replace(/\.$/, "");
-    } else {
-      const simpleVolumeMatch = afterJournal.match(/^(\d+(?:\([^)]+\))?)\s*(.*)$/);
-      if (simpleVolumeMatch) {
-        volume = simpleVolumeMatch[1] || null;
-        pages = simpleVolumeMatch[2]?.replace(/^:\s*/, "").replace(/\.$/, "") || null;
-      }
-    }
-  } else {
-    title = remainder;
-  }
-
-  return { year, authors, title, journal, volume, pages, doi };
-};
-
-const parsePublications = async (): Promise<Publication[]> => {
-  const publicationSource =
-    process.env.PUBLICATIONS_SOURCE ??
-    path.join(ROOT, "scripts/sources/publications.page.tsx.txt");
-  const source = await fs.readFile(publicationSource, "utf8");
-  const publications: Publication[] = [];
-  const sectionRegex =
-    /<section className="mb-12">\s*<h2[^>]*>(\d{4})<\/h2>\s*<div className="space-y-4">([\s\S]*?)<\/div>\s*<\/section>/g;
-
-  let sectionMatch: RegExpExecArray | null;
-  while ((sectionMatch = sectionRegex.exec(source)) !== null) {
-    const year = Number(sectionMatch[1]);
-    const body = sectionMatch[2];
-    const paragraphRegex = /<p>([\s\S]*?)<\/p>/g;
-    let paragraphMatch: RegExpExecArray | null;
-    while ((paragraphMatch = paragraphRegex.exec(body)) !== null) {
-      publications.push(parsePublicationParagraph(paragraphMatch[1], year));
-    }
-  }
-
-  return publications;
 };
 
 const arachnidsImages = [

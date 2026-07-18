@@ -8,7 +8,8 @@
     "preview": "npm run build && npx serve out -l 3000",
     "start": "next start",
     "lint": "eslint",
-    "validate-content": "tsx scripts/validate-content.ts"
+    "validate-content": "tsx scripts/validate-content.ts",
+    "regenerate-publications": "tsx scripts/regenerate-publications.ts"
   },
   "dependencies": {
     "next": "^16.2.10",
