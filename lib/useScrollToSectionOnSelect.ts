@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, type RefObject } from "react";
+import { getSectionNavScrollBehavior, getSideNavElement } from "@/lib/sectionNavScrollBehavior";
 import { hasScrolledPastSideNavTop, scrollToSectionContent } from "@/lib/scrollToSectionContent";
 
 type UseScrollToSectionOnSelectOptions = {
@@ -6,6 +7,8 @@ type UseScrollToSectionOnSelectOptions = {
   useDataSection?: boolean;
   /** Skip the "only scroll if past side nav top" guard (for long anchor pages). */
   alwaysScroll?: boolean;
+  /** Smooth from page top; instant once the side nav is sticky. */
+  adaptiveScroll?: boolean;
   sideNavRef?: RefObject<HTMLElement | null>;
   contentRef?: RefObject<HTMLDivElement | null>;
 };
@@ -33,25 +36,26 @@ export const useScrollToSectionOnSelect = (
 
     shouldScrollOnSectionChange.current = false;
 
-    const sideNavFromDom = document.querySelector(".side-nav");
-    const sideNavElement =
-      options.sideNavRef?.current ?? (sideNavFromDom instanceof HTMLElement ? sideNavFromDom : null);
+    const sideNavElement = getSideNavElement(options.sideNavRef);
 
     if (!options.alwaysScroll && !hasScrolledPastSideNavTop(sideNavElement)) {
       return;
     }
 
     const mobileSideNavOffset =
-      window.innerWidth >= 1024 || !(sideNavElement instanceof HTMLElement)
-        ? 0
-        : sideNavElement.getBoundingClientRect().height;
+      window.innerWidth >= 1024 || !sideNavElement ? 0 : sideNavElement.getBoundingClientRect().height;
+
+    const behavior = options.adaptiveScroll
+      ? getSectionNavScrollBehavior(sideNavElement)
+      : "smooth";
 
     scrollToSectionContent({
       contentElement: contentRef.current,
       sectionId: options.useDataSection ? activeSection : undefined,
       mobileSideNavOffset,
+      behavior,
     });
-  }, [activeSection, options.alwaysScroll, options.contentRef, options.sideNavRef, options.useDataSection]);
+  }, [activeSection, options.adaptiveScroll, options.alwaysScroll, options.contentRef, options.sideNavRef, options.useDataSection]);
 
   return { contentRef, requestSectionScroll, cancelSectionScroll };
 };

@@ -9,10 +9,8 @@ import {
   readResearchSectionFromUrl,
   RESEARCH_SECTION_IDS,
   RESEARCH_SECTION_LABELS,
-  type ResearchSectionId,
 } from "@/lib/research/researchPageUrl";
-import { useScrollToSectionOnSelect } from "@/lib/useScrollToSectionOnSelect";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useSectionPageNavigation } from "@/lib/useSectionPageNavigation";
 
 const sections = RESEARCH_SECTION_IDS.map((id) => ({
   id,
@@ -20,47 +18,13 @@ const sections = RESEARCH_SECTION_IDS.map((id) => ({
 }));
 
 export function ResearchClient() {
-  const [activeSection, setActiveSection] = useState<ResearchSectionId>(DEFAULT_RESEARCH_SECTION);
-  const [isNavigationReady, setIsNavigationReady] = useState(false);
-  const hasRestoredFromUrl = useRef(false);
-  const { contentRef, requestSectionScroll, cancelSectionScroll } = useScrollToSectionOnSelect(activeSection);
-
-  const handleSectionSelect = (sectionId: string) => {
-    if (!isResearchSectionId(sectionId)) {
-      return;
-    }
-
-    requestSectionScroll();
-    setActiveSection(sectionId);
-    pushResearchPageUrl(sectionId);
-  };
-
-  useLayoutEffect(() => {
-    if (hasRestoredFromUrl.current) {
-      return;
-    }
-
-    hasRestoredFromUrl.current = true;
-
-    if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
-
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-only URL hydration
-    setActiveSection(readResearchSectionFromUrl());
-    setIsNavigationReady(true);
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    const handlePopState = () => {
-      cancelSectionScroll();
-      setActiveSection(readResearchSectionFromUrl());
-    };
-
-    window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
-  }, [cancelSectionScroll]);
+  const { activeSection, contentRef, handleSectionSelect, isNavigationReady } = useSectionPageNavigation({
+    sectionIds: RESEARCH_SECTION_IDS,
+    defaultSection: DEFAULT_RESEARCH_SECTION,
+    isSectionId: isResearchSectionId,
+    readSectionFromUrl: readResearchSectionFromUrl,
+    pushSectionToUrl: pushResearchPageUrl,
+  });
 
   return (
     <div className="bg-white min-h-screen">
@@ -84,8 +48,9 @@ export function ResearchClient() {
           />
 
           <div ref={contentRef} className="lg:col-span-3 section-content">
-            {isNavigationReady && activeSection === "research-areas" && (
-              <div className="mb-8">
+            {isNavigationReady && (
+              <>
+            <div data-section="research-areas" className="mb-12">
                 <h2 className="font-bold mb-6">Research Areas</h2>
 
                 <h3 className="font-bold mb-4">Scorpion Phylogeny and Higher Classification</h3>
@@ -223,11 +188,9 @@ export function ResearchClient() {
                   parallel cladogenesis between cephaleline leaf hoppers (Cicadellidae) and Restionaceae as well as
                   between <i>Tetraopes</i> beetles (Cerambycidae) and <i>Asclepias</i> milkweeds.
                 </p>
-              </div>
-            )}
+            </div>
 
-            {isNavigationReady && activeSection === "funding" && (
-              <div className="mb-8">
+            <div data-section="funding" className="mb-12">
                 <h2 className="font-bold mb-4">Funding</h2>
                 <p className="mb-6">
                   We acknowledge the past and ongoing support of the following organizations, foundations and funding
@@ -305,7 +268,8 @@ export function ResearchClient() {
                     <ExternalLink href="https://www.rlounsbery.org/">Richard Lounsbery Foundation</ExternalLink>
                   </li>
                 </ul>
-              </div>
+            </div>
+              </>
             )}
           </div>
         </div>

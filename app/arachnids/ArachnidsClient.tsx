@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useMemo } from "react";
 import { Figure } from "@/app/components/Figure";
 import { BackToTop } from "@/app/components/BackToTop";
 import { SideNav } from "@/app/components/SideNav";
@@ -13,10 +13,8 @@ import {
   isArachnidsSectionId,
   pushArachnidsPageUrl,
   readArachnidsSectionFromUrl,
-  type ArachnidsSectionId,
 } from "@/lib/arachnids/arachnidsPageUrl";
-import { useScrollToSectionOnSelect } from "@/lib/useScrollToSectionOnSelect";
-import { useSectionScrollSpy } from "@/lib/useSectionScrollSpy";
+import { useSectionPageNavigation } from "@/lib/useSectionPageNavigation";
 import { deterministicShuffle } from "@/lib/shuffle";
 
 type ArachnidsClientProps = {
@@ -30,82 +28,13 @@ const sections = ARACHNIDS_SECTION_IDS.map((id) => ({
 
 export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
   const randomImages = useMemo(() => deterministicShuffle(gallery), [gallery]);
-  const [activeSection, setActiveSection] = useState<ArachnidsSectionId>(DEFAULT_ARACHNIDS_SECTION);
-  const [isNavigationReady, setIsNavigationReady] = useState(false);
-  const hasRestoredFromUrl = useRef(false);
-  const pendingInitialScroll = useRef(false);
-  const { contentRef, requestSectionScroll, cancelSectionScroll } = useScrollToSectionOnSelect(
-    activeSection,
-    { useDataSection: true, alwaysScroll: true }
-  );
-
-  const handleScrollSpySectionChange = useCallback((sectionId: string) => {
-    if (!isArachnidsSectionId(sectionId)) {
-      return;
-    }
-
-    setActiveSection(sectionId);
-  }, []);
-
-  const { pauseScrollSpy } = useSectionScrollSpy({
+  const { activeSection, contentRef, handleSectionSelect, isNavigationReady } = useSectionPageNavigation({
     sectionIds: ARACHNIDS_SECTION_IDS,
-    contentRef,
-    onActiveSectionChange: handleScrollSpySectionChange,
-    enabled: isNavigationReady,
+    defaultSection: DEFAULT_ARACHNIDS_SECTION,
+    isSectionId: isArachnidsSectionId,
+    readSectionFromUrl: readArachnidsSectionFromUrl,
+    pushSectionToUrl: pushArachnidsPageUrl,
   });
-
-  const handleSectionSelect = (sectionId: string) => {
-    if (!isArachnidsSectionId(sectionId)) {
-      return;
-    }
-
-    pauseScrollSpy();
-    setActiveSection(sectionId);
-    requestSectionScroll();
-    pushArachnidsPageUrl(sectionId);
-  };
-
-  useLayoutEffect(() => {
-    if (hasRestoredFromUrl.current) {
-      return;
-    }
-
-    hasRestoredFromUrl.current = true;
-
-    if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
-
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-only URL hydration
-    const sectionFromUrl = readArachnidsSectionFromUrl();
-    setActiveSection(sectionFromUrl);
-    pendingInitialScroll.current = window.location.search.includes("section=");
-    setIsNavigationReady(true);
-    window.scrollTo(0, 0);
-  }, []);
-
-  useLayoutEffect(() => {
-    if (!isNavigationReady || !pendingInitialScroll.current || !contentRef.current) {
-      return;
-    }
-
-    pendingInitialScroll.current = false;
-    pauseScrollSpy(1200);
-    requestSectionScroll();
-  }, [isNavigationReady, pauseScrollSpy, requestSectionScroll, contentRef]);
-
-  useEffect(() => {
-    const handlePopState = () => {
-      cancelSectionScroll();
-      pauseScrollSpy(1200);
-      const sectionFromUrl = readArachnidsSectionFromUrl();
-      setActiveSection(sectionFromUrl);
-      requestSectionScroll();
-    };
-
-    window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
-  }, [cancelSectionScroll, pauseScrollSpy, requestSectionScroll]);
 
   return (
     <div className="bg-white min-h-screen">

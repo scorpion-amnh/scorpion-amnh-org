@@ -9,18 +9,19 @@ import {
   isCollectionsSectionId,
   pushCollectionsPageUrl,
   readCollectionsSectionFromUrl,
-  type CollectionsSectionId,
 } from "@/lib/collections/collectionsPageUrl";
-import { useScrollToSectionOnSelect } from "@/lib/useScrollToSectionOnSelect";
+import { useSectionPageNavigation } from "@/lib/useSectionPageNavigation";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export function CollectionsSections() {
-  const [activeSection, setActiveSection] = useState<CollectionsSectionId>(DEFAULT_COLLECTIONS_SECTION);
-  const [isNavigationReady, setIsNavigationReady] = useState(false);
-  const hasRestoredFromUrl = useRef(false);
-  const { contentRef, requestSectionScroll, cancelSectionScroll } = useScrollToSectionOnSelect(activeSection);
+  const { activeSection, contentRef, handleSectionSelect, isNavigationReady } = useSectionPageNavigation({
+    sectionIds: COLLECTIONS_SECTION_IDS,
+    defaultSection: DEFAULT_COLLECTIONS_SECTION,
+    isSectionId: isCollectionsSectionId,
+    readSectionFromUrl: readCollectionsSectionFromUrl,
+    pushSectionToUrl: pushCollectionsPageUrl,
+  });
 
   const sections = COLLECTIONS_SECTION_IDS.map((id) => ({
     id,
@@ -31,44 +32,6 @@ export function CollectionsSections() {
           ? "Specimens"
           : "Tissue Samples",
   }));
-
-  const handleSectionSelect = (sectionId: string) => {
-    if (!isCollectionsSectionId(sectionId)) {
-      return;
-    }
-
-    requestSectionScroll();
-    setActiveSection(sectionId);
-    pushCollectionsPageUrl(sectionId);
-  };
-
-  useLayoutEffect(() => {
-    if (hasRestoredFromUrl.current) {
-      return;
-    }
-
-    hasRestoredFromUrl.current = true;
-
-    if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
-
-    // Restore section from the URL before first paint on refresh.
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-only URL hydration
-    setActiveSection(readCollectionsSectionFromUrl());
-    setIsNavigationReady(true);
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    const handlePopState = () => {
-      cancelSectionScroll();
-      setActiveSection(readCollectionsSectionFromUrl());
-    };
-
-    window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
-  }, [cancelSectionScroll]);
 
   return (
     <div className="bg-white min-h-screen">
@@ -91,8 +54,9 @@ export function CollectionsSections() {
 
           {/* Content Area */}
           <div ref={contentRef} className="lg:col-span-3 section-content">
-              {isNavigationReady && activeSection === 'general-information' && (
-              <div className="mb-8">
+              {isNavigationReady && (
+              <>
+              <div data-section="general-information" className="mb-12">
                 <h2 className="font-bold mb-6">General Information</h2>
 
                 <div className="mb-8">
@@ -158,10 +122,8 @@ export function CollectionsSections() {
             />
           </div>
               </div>
-              )}
 
-          {isNavigationReady && activeSection === 'specimens' && (
-          <div className="mb-8">
+          <div data-section="specimens" className="mb-12">
             <h2 className="font-bold mb-6">Specimens</h2>
             <p className="mb-6">
               The AMNH contains the second-largest collection of scorpions, and the largest collection of minor arachnid orders, in North America. The myriapod collections are also among the largest in North America. The collections include a worldwide representation of arachnid and myriapod taxa, with a strong emphasis on material from North America and elsewhere in the New World. The majority of specimens are preserved in ethanol, although large collections of slide-mounted Acari and pseudoscorpions are also represented.
@@ -276,10 +238,8 @@ export function CollectionsSections() {
               </p>
             </div>
           </div>
-          )}
 
-          {isNavigationReady && activeSection === 'tissue-samples' && (
-          <div className="mb-8">
+          <div data-section="tissue-samples" className="mb-12">
             <h2 className="font-bold mb-6">Tissue Samples</h2>
             <p className="mb-6">
               As part of our research on the molecular systematics of scorpions, a synoptic collection of scorpion tissues, comprising ca. 2000 tissue samples and associated vouchers (nearly a quarter of all described scorpion species and half of all described genera) has accumulated through fieldwork and donations or exchanges with colleagues around the world.
@@ -334,7 +294,8 @@ export function CollectionsSections() {
               All specimens and tissue samples must be authoritatively identified, preferably to species (if possible) and sexed, with indication whether or not the specimen is adult. If available, the species identification (including authority and date) and sex, as well as the name of the individual responsible for the identification may appear on a separate label in the vial with the specimen/tissue sample. Provenance data and identifications appearing on labels may also be sent to the AMNH in a spreadsheet.
             </p>
           </div>
-          )}
+              </>
+              )}
           </div>
         </div>
       </div>

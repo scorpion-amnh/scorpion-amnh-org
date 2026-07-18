@@ -10,11 +10,9 @@ import {
   isFacilitiesSectionId,
   pushFacilitiesPageUrl,
   readFacilitiesSectionFromUrl,
-  type FacilitiesSectionId,
 } from "@/lib/facilities/facilitiesPageUrl";
-import { useScrollToSectionOnSelect } from "@/lib/useScrollToSectionOnSelect";
+import { useSectionPageNavigation } from "@/lib/useSectionPageNavigation";
 import Image from "next/image";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 const sections = FACILITIES_SECTION_IDS.map((id) => ({
   id,
@@ -22,47 +20,13 @@ const sections = FACILITIES_SECTION_IDS.map((id) => ({
 }));
 
 export function FacilitiesClient() {
-  const [activeSection, setActiveSection] = useState<FacilitiesSectionId>(DEFAULT_FACILITIES_SECTION);
-  const [isNavigationReady, setIsNavigationReady] = useState(false);
-  const hasRestoredFromUrl = useRef(false);
-  const { contentRef, requestSectionScroll, cancelSectionScroll } = useScrollToSectionOnSelect(activeSection);
-
-  const handleSectionSelect = (sectionId: string) => {
-    if (!isFacilitiesSectionId(sectionId)) {
-      return;
-    }
-
-    requestSectionScroll();
-    setActiveSection(sectionId);
-    pushFacilitiesPageUrl(sectionId);
-  };
-
-  useLayoutEffect(() => {
-    if (hasRestoredFromUrl.current) {
-      return;
-    }
-
-    hasRestoredFromUrl.current = true;
-
-    if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
-
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-only URL hydration
-    setActiveSection(readFacilitiesSectionFromUrl());
-    setIsNavigationReady(true);
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    const handlePopState = () => {
-      cancelSectionScroll();
-      setActiveSection(readFacilitiesSectionFromUrl());
-    };
-
-    window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
-  }, [cancelSectionScroll]);
+  const { activeSection, contentRef, handleSectionSelect, isNavigationReady } = useSectionPageNavigation({
+    sectionIds: FACILITIES_SECTION_IDS,
+    defaultSection: DEFAULT_FACILITIES_SECTION,
+    isSectionId: isFacilitiesSectionId,
+    readSectionFromUrl: readFacilitiesSectionFromUrl,
+    pushSectionToUrl: pushFacilitiesPageUrl,
+  });
 
   return (
     <div className="bg-white min-h-screen">
@@ -82,8 +46,9 @@ export function FacilitiesClient() {
           />
 
           <div ref={contentRef} className="lg:col-span-3 section-content">
-            {isNavigationReady && activeSection === "arachnology-facilities" && (
-              <div className="mb-8">
+            {isNavigationReady && (
+              <>
+            <div data-section="arachnology-facilities" className="mb-12">
                 <h2 className="font-bold mb-6">Arachnology Facilities</h2>
 
                 <h3 className="font-bold mb-4">Scorpion Research Laboratory</h3>
@@ -169,11 +134,9 @@ export function FacilitiesClient() {
                   height={400}
                   className="w-full h-auto rounded-lg mb-8"
                 />
-              </div>
-            )}
+            </div>
 
-            {isNavigationReady && activeSection === "associated-amnh-facilities" && (
-              <div className="mb-8">
+            <div data-section="associated-amnh-facilities" className="mb-12">
                 <h2 className="font-bold mb-6">Associated AMNH Facilities</h2>
                 <p className="mb-6">
                   Lorenzo Prendini&apos;s Arachnology Lab has access to the parallel virtual supercomputer clusters, the
@@ -369,7 +332,8 @@ export function FacilitiesClient() {
                   height={400}
                   className="w-full h-auto rounded-lg"
                 />
-              </div>
+            </div>
+              </>
             )}
           </div>
         </div>

@@ -6,6 +6,7 @@ export type ScrollToSectionContentOptions = {
   sectionId?: string;
   /** Sticky side nav height on narrow viewports. */
   mobileSideNavOffset?: number;
+  behavior?: ScrollBehavior;
 };
 
 const resolveStickyTop = (sideNavElement: HTMLElement) => {
@@ -41,31 +42,15 @@ export const scrollToSectionContent = ({
   contentElement,
   sectionId,
   mobileSideNavOffset = 0,
+  behavior = "smooth",
 }: ScrollToSectionContentOptions) => {
   const { sectionElement, heading } = resolveScrollTarget(contentElement, sectionId);
   const headerHeight = getHeaderHeight();
   const scrollGap = getScrollGap();
+  const topOffset =
+    window.innerWidth >= 1024 ? headerHeight + scrollGap : headerHeight + mobileSideNavOffset;
 
-  if (window.innerWidth >= 1024) {
-    if (heading) {
-      const yOffset = heading.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap;
-      window.scrollTo({ top: yOffset, behavior: "smooth" });
-      return;
-    }
-
-    const target = sectionElement ?? contentElement;
-    const yOffset = target.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap;
-    window.scrollTo({ top: yOffset, behavior: "smooth" });
-    return;
-  }
-
-  if (heading) {
-    const yOffset = heading.getBoundingClientRect().top + window.scrollY - headerHeight - mobileSideNavOffset;
-    window.scrollTo({ top: yOffset, behavior: "smooth" });
-    return;
-  }
-
-  const target = sectionElement ?? contentElement;
-  const yOffset = target.getBoundingClientRect().top + window.scrollY - headerHeight - mobileSideNavOffset;
-  window.scrollTo({ top: yOffset, behavior: "smooth" });
+  const target = heading ?? sectionElement ?? contentElement;
+  const yOffset = target.getBoundingClientRect().top + window.scrollY - topOffset;
+  window.scrollTo({ top: yOffset, behavior });
 };

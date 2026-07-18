@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, type RefObject } from "react";
+import { getSideNavElement } from "@/lib/sectionNavScrollBehavior";
 import { getHeaderHeight, getScrollGap } from "@/lib/scrollMetrics";
 
 type UseSectionScrollSpyOptions = {
@@ -9,14 +10,7 @@ type UseSectionScrollSpyOptions = {
   enabled?: boolean;
 };
 
-const getSideNavElement = (sideNavRef?: RefObject<HTMLElement | null>) => {
-  if (sideNavRef?.current) {
-    return sideNavRef.current;
-  }
-
-  const sideNavFromDom = document.querySelector(".side-nav");
-  return sideNavFromDom instanceof HTMLElement ? sideNavFromDom : null;
-};
+const getSideNavElementFromRef = (sideNavRef?: RefObject<HTMLElement | null>) => getSideNavElement(sideNavRef);
 
 export const useSectionScrollSpy = ({
   sectionIds,
@@ -27,11 +21,13 @@ export const useSectionScrollSpy = ({
 }: UseSectionScrollSpyOptions) => {
   const suppressScrollSpy = useRef(true);
   const resumeTimeout = useRef<number | null>(null);
+  const settleFrame = useRef<number | null>(null);
+  const settleCleanup = useRef<(() => void) | null>(null);
 
   const getScrollOffset = useCallback(() => {
     const headerHeight = getHeaderHeight();
     const scrollGap = getScrollGap();
-    const sideNavElement = getSideNavElement(sideNavRef);
+    const sideNavElement = getSideNavElementFromRef(sideNavRef);
 
     const mobileSideNavOffset =
       window.innerWidth >= 1024 || !sideNavElement ? 0 : sideNavElement.getBoundingClientRect().height;
@@ -62,18 +58,74 @@ export const useSectionScrollSpy = ({
     return activeSection;
   }, [contentRef, getScrollOffset, sectionIds]);
 
-  const pauseScrollSpy = useCallback((durationMs = 800) => {
-    suppressScrollSpy.current = true;
-
+  const clearScrollSpyPauseTimers = useCallback(() => {
     if (resumeTimeout.current !== null) {
       window.clearTimeout(resumeTimeout.current);
+      resumeTimeout.current = null;
     }
 
-    resumeTimeout.current = window.setTimeout(() => {
-      suppressScrollSpy.current = false;
-      resumeTimeout.current = null;
-    }, durationMs);
+    if (settleFrame.current !== null) {
+      window.cancelAnimationFrame(settleFrame.current);
+      settleFrame.current = null;
+    }
+
+    settleCleanup.current?.();
+    settleCleanup.current = null;
   }, []);
+
+  const pauseScrollSpy = useCallback(
+    (durationMs = 800) => {
+      suppressScrollSpy.current = true;
+      clearScrollSpyPauseTimers();
+
+      resumeTimeout.current = window.setTimeout(() => {
+        suppressScrollSpy.current = false;
+        resumeTimeout.current = null;
+      }, durationMs);
+    },
+    [clearScrollSpyPauseTimers]
+  );
+
+  const pauseScrollSpyUntilScrollSettles = useCallback(() => {
+    suppressScrollSpy.current = true;
+    clearScrollSpyPauseTimers();
+
+    let lastScrollY = window.scrollY;
+    let stableFrames = 0;
+
+    const finish = () => {
+      suppressScrollSpy.current = false;
+      clearScrollSpyPauseTimers();
+    };
+
+    const watchSettle = () => {
+      if (window.scrollY === lastScrollY) {
+        stableFrames += 1;
+        if (stableFrames >= 4) {
+          finish();
+          return;
+        }
+      } else {
+        stableFrames = 0;
+        lastScrollY = window.scrollY;
+      }
+
+      settleFrame.current = window.requestAnimationFrame(watchSettle);
+    };
+
+    const onScrollEnd = () => {
+      finish();
+    };
+
+    settleCleanup.current = () => {
+      window.removeEventListener("scrollend", onScrollEnd);
+    };
+
+    window.addEventListener("scrollend", onScrollEnd, { once: true });
+    settleFrame.current = window.requestAnimationFrame(watchSettle);
+
+    resumeTimeout.current = window.setTimeout(finish, 3000);
+  }, [clearScrollSpyPauseTimers]);
 
   const enableScrollSpy = useCallback(() => {
     suppressScrollSpy.current = false;
@@ -106,11 +158,14 @@ export const useSectionScrollSpy = ({
 
     return () => {
       window.removeEventListener("scroll", updateActiveSection);
-      if (resumeTimeout.current !== null) {
-        window.clearTimeout(resumeTimeout.current);
-      }
+      clearScrollSpyPauseTimers();
     };
-  }, [enabled, getActiveSectionFromScroll, onActiveSectionChange]);
+  }, [clearScrollSpyPauseTimers, enabled, getActiveSectionFromScroll, onActiveSectionChange]);
 
-  return { pauseScrollSpy, enableScrollSpy, getActiveSectionFromScroll };
+  return {
+    pauseScrollSpy,
+    pauseScrollSpyUntilScrollSettles,
+    enableScrollSpy,
+    getActiveSectionFromScroll,
+  };
 };
