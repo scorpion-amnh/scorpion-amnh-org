@@ -34,9 +34,24 @@ export default function DesignSystemPage() {
         <header className="mb-10 border-b border-gray-200 pb-6">
           <p className="mb-1 text-meta">Design system</p>
           <h1 className="font-bold mb-3">Typography</h1>
-          <p className="text-sm">
+          <p className="mb-4 text-sm">
             Farnham Display · h1–h2 &nbsp;|&nbsp; Source Sans 3 · h3 and below, body, UI.
-            Headings use title case site-wide; add <code className="text-xs">normal-case</code> to opt out.
+            Typography conventions follow <em>The Chicago Manual of Style</em> (CMOS), matching what site
+            users expect from AMNH and scholarly publishing.
+          </p>
+          <p className="text-sm">
+            <strong className="font-semibold">Headings (CMOS headline style).</strong> Set title capitalization in
+            markup. Lowercase articles (<code className="text-xs">a</code>, <code className="text-xs">an</code>,{" "}
+            <code className="text-xs">the</code>), coordinating conjunctions (
+            <code className="text-xs">and</code>, <code className="text-xs">but</code>,{" "}
+            <code className="text-xs">for</code>, <code className="text-xs">or</code>,{" "}
+            <code className="text-xs">nor</code>), and prepositions (
+            <code className="text-xs">of</code>, <code className="text-xs">in</code>,{" "}
+            <code className="text-xs">on</code>, <code className="text-xs">at</code>,{" "}
+            <code className="text-xs">to</code>, etc.) unless they are the first or last word. Capitalize nouns,
+            pronouns, verbs, adjectives, and adverbs. Example:{" "}
+            <span className="text-meta">Theory and Practice of Systematics</span>. Add{" "}
+            <code className="text-xs">normal-case</code> to opt out (proper names, acronyms, UI labels).
           </p>
         </header>
 
@@ -66,7 +81,7 @@ export default function DesignSystemPage() {
               token="h2"
               spec={{ font: "Farnham Display", size: "30px", weight: "700", leading: "1.15" }}
             >
-              <h2 className="font-bold">Graduate Students</h2>
+              <h2 className="font-bold">Theory and Practice of Systematics</h2>
             </TypeScaleRow>
 
             <TypeScaleRow

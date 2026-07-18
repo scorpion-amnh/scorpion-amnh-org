@@ -334,7 +334,7 @@ export function CollectionsSections() {
 
             <h3 className="font-bold mb-4" id="preparing-tissue">Preparing Tissue Samples</h3>
             
-            <h4 className="font-bold mb-2">Tissue samples</h4>
+            <h4 className="font-bold mb-2">Tissue Samples</h4>
             <p className="mb-4">
               If refrigeration facilities are available, place each specimen into a separate container of 95-100% ethanol (preferably analytical grade), and place this directly into the freezer (-20ºC). Ensure that the volume of ethanol in the vessel containing each specimen is at least five times the volume of the specimen. Leave the specimens in the freezer for at least 7 days before dispatching. Replace the (now diluted) ethanol before dispatching.
             </p>
@@ -361,7 +361,7 @@ export function CollectionsSections() {
               className="w-full h-auto rounded-sm mb-8"
             />
 
-            <h4 className="font-bold mb-2">Documentation and archiving</h4>
+            <h4 className="font-bold mb-2">Documentation and Archiving</h4>
             <p className="mb-4">
               All specimens and tissue samples must contain a label, indicating the following provenance data: country, state, region or province, district or county, locality, geographical coordinates (degrees and minutes or decimal degrees), collector, date, habitat, collection method. Labels should be typed, printed or legibly written in indelible ink.
             </p>

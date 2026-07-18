@@ -61,15 +61,6 @@ h6 {
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-transform: capitalize;
-}
-
 h1 {
   font-size: 3rem;
   line-height: 1.1;
