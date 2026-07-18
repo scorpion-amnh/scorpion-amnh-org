@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getGallery } from "@/lib/content";
 import { getHomeLabHistoryTeaserSections } from "@/lib/labHistory/sections";
 import { createPageMetadata } from "@/lib/metadata";
+import { BackToTop } from "@/app/components/BackToTop";
 import { CuratorPortraits } from "@/app/components/CuratorPortraits";
 import { HomeGallery } from "@/app/components/HomeGallery";
 import { LabThroughTheYearsTeaser } from "@/app/components/LabThroughTheYearsTeaser";
@@ -122,6 +123,7 @@ export default function Home() {
           </Link>
         </section>
       </div>
+      <BackToTop />
     </div>
   );
 }
