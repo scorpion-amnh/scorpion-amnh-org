@@ -40,10 +40,10 @@ export default function Home() {
         <LabThroughTheYearsTeaser sections={labHistoryTeaserSections} />
 
         <section className="mb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-6 lg:gap-x-10">
-            <h2 className="font-bold lg:col-span-7">Collections</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-6 lg:gap-x-10">
+            <h2 className="font-bold sm:col-span-1 lg:col-span-7">Collections</h2>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:col-span-7 lg:row-start-2">
+            <div className="grid gap-6 sm:col-span-1 sm:row-start-2 lg:col-span-7 lg:row-start-2 lg:grid-cols-2">
               <div>
                 <h3 className="font-semibold mb-3">Chelicerata</h3>
                 <h4 className="font-semibold mb-1">Arachnida</h4>
@@ -76,7 +76,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-7 lg:row-start-3">
+            <div className="sm:col-span-1 sm:row-start-3 lg:col-span-7 lg:row-start-3">
               <Link
                 href="/collections"
                 className="inline-block rounded-sm bg-gray-900 px-4 py-2 text-white hover:bg-gray-800 transition-colors"
@@ -85,21 +85,21 @@ export default function Home() {
               </Link>
             </div>
 
-            <aside className="rounded-sm bg-gray-00 p-6 lg:col-span-5 lg:row-start-2 lg:row-span-2 self-start">
-              <h2 className="font-bold mb-2">Visits and Requests</h2>
-              <p>
+            <aside className="rounded-sm bg-gray-90 p-6 text-color-light sm:col-span-1 sm:row-start-2 lg:col-span-5 lg:row-start-2 lg:row-span-2 self-start">
+              <h3 className="font-semibold mb-2 text-color-light">Visits and Requests</h3>
+              <p className="text-color-light">
                 Queries regarding visits to the collections, loan requests, and/or specimen donations should be addressed
                 to{" "}
                 <Link
                   href="/people#principal-investigator"
-                  className="text-color-link hover:text-color-link-hover underline"
+                  className="text-color-link-on-dark hover:text-color-link-on-dark-hover underline"
                 >
                   Lorenzo Prendini
                 </Link>
                 , Curator of Arachnida and Myriapoda, and{" "}
                 <Link
                   href="/people#museum-specialists"
-                  className="text-color-link hover:text-color-link-hover underline"
+                  className="text-color-link-on-dark hover:text-color-link-on-dark-hover underline"
                 >
                   Pío Colmenares
                 </Link>

@@ -6,8 +6,11 @@
   --foreground: #181817;
   --text-color-primary: #181817;
   --text-color-secondary: #4c4d4e;
+  --text-color-light: #f4f7fc;
   --text-color-link: #0a7a9a;
   --text-color-link-hover: #005f81;
+  --text-color-link-on-dark: #5fcae5;
+  --text-color-link-on-dark-hover: #8ee4f2;
   --header-height: 6rem;
   --section-scroll-gap: 1rem;
 }
@@ -31,8 +34,11 @@
   --color-foreground: var(--foreground);
   --color-color-primary: var(--text-color-primary);
   --color-color-secondary: var(--text-color-secondary);
+  --color-color-light: var(--text-color-light);
   --color-color-link: var(--text-color-link);
   --color-color-link-hover: var(--text-color-link-hover);
+  --color-color-link-on-dark: var(--text-color-link-on-dark);
+  --color-color-link-on-dark-hover: var(--text-color-link-on-dark-hover);
   --font-sans: var(--font-source-sans);
   --font-display: "Farnham Display", Georgia, "Palatino Linotype", Palatino,
     "Book Antiqua", "Times New Roman", Times, serif;
