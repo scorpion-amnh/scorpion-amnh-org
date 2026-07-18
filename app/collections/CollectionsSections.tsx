@@ -72,8 +72,7 @@ export function CollectionsSections() {
             </p>
             <div className="grid grid-cols-2 gap-4 mb-8">
               <Figure
-                className="text-center mb-0"
-                figureClassName="text-center mb-0"
+                figureClassName="mb-0"
                 src="/images/museum/lourandy.jpg"
                 alt="Collections personnel"
                 width={300}
@@ -169,8 +168,7 @@ export function CollectionsSections() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               <Figure
-                className="text-center mb-0"
-                figureClassName="text-center mb-0"
+                figureClassName="mb-0"
                 src="/images/museum/collections_old.jpg"
                 alt="Refrigerator with trays of collection bottles in former storage facility"
                 width={400}
@@ -178,8 +176,7 @@ export function CollectionsSections() {
                 caption="Former storage facility"
               />
               <Figure
-                className="text-center mb-0"
-                figureClassName="text-center mb-0"
+                figureClassName="mb-0"
                 src="/images/museum/collections_new.jpg"
                 alt="Refrigerator with trays of collection bottles in new storage facility"
                 width={400}

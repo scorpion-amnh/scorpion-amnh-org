@@ -50,8 +50,7 @@ content = content.replace(
                 <figcaption className="text-sm text-gray-600 mt-2">Louis Sorkin and Randy Mercurio in the collections</figcaption>
               </figure>`,
   `<Figure
-                className="text-center mb-0"
-                figureClassName="text-center mb-0"
+                figureClassName="mb-0"
                 src="/images/museum/lourandy.jpg"
                 alt="Collections personnel"
                 width={300}
@@ -82,8 +81,7 @@ content = content.replace(
                 <figcaption className="text-sm text-gray-600 mt-2">New storage facility</figcaption>
               </figure>`,
   `<Figure
-                className="text-center mb-0"
-                figureClassName="text-center mb-0"
+                figureClassName="mb-0"
                 src="/images/museum/collections_old.jpg"
                 alt="Refrigerator with trays of collection bottles in former storage facility"
                 width={400}
@@ -91,8 +89,7 @@ content = content.replace(
                 caption="Former storage facility"
               />
               <Figure
-                className="text-center mb-0"
-                figureClassName="text-center mb-0"
+                figureClassName="mb-0"
                 src="/images/museum/collections_new.jpg"
                 alt="Refrigerator with trays of collection bottles in new storage facility"
                 width={400}

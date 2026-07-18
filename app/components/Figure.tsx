@@ -25,7 +25,7 @@ export const Figure = ({
   height,
   className,
   figureClassName = "mb-8",
-  captionClassName = "text-meta mt-2",
+  captionClassName = "text-meta mt-2 text-left",
   imageClassName = "w-full h-auto rounded-sm",
   captionStyle,
   aspectRatioClassName,

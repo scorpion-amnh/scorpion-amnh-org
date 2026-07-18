@@ -125,6 +125,10 @@ li {
   padding-left: 0.1em;
 }
 
+figure figcaption {
+  text-align: left;
+}
+
 .side-nav-scroll {
   scrollbar-width: none;
 }
