@@ -17,7 +17,7 @@ export function FieldworkClient({ gallery }: FieldworkClientProps) {
       <div className="container mx-auto max-w-5xl px-6 py-12">
         <h1 className="font-bold mb-8">Fieldwork</h1>
 
-        <p className="text-xl mb-8 leading-relaxed">
+        <p className="text-lead mb-8 leading-relaxed">
           The Arachnology Lab has travelled extensively to do fieldwork around the world, and has funded the
           collections trips of many other researchers and students.
         </p>

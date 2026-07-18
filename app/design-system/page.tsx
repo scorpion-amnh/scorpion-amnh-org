@@ -20,7 +20,7 @@ const typeTokens: TypeTokenProps[] = [
   { token: "h4", font: "Source Sans 3", size: "20px", weight: "700", leading: "1.25", color: DEFAULT_COLOR },
   { token: "h5", font: "Source Sans 3", size: "18px", weight: "600", leading: "1.3", color: DEFAULT_COLOR },
   { token: "h6", font: "Source Sans 3", size: "16px", weight: "600", leading: "1.35", color: DEFAULT_COLOR },
-  { token: "p.lead", font: "Source Sans 3", size: "20px", weight: "400", leading: DEFAULT_LEADING, color: DEFAULT_COLOR },
+  { token: "p.lead", font: "Source Sans 3", size: "20px (.text-lead)", weight: "400", leading: DEFAULT_LEADING, color: DEFAULT_COLOR },
   { token: "p", font: "Source Sans 3", size: "16px", weight: "400", leading: DEFAULT_LEADING, color: DEFAULT_COLOR },
   { token: "p.meta", font: "Source Sans 3", size: "14px", weight: "400", leading: DEFAULT_LEADING, color: "secondary (.text-meta)" },
   { token: "figcaption", font: "Source Sans 3", size: "14px", weight: "400", leading: DEFAULT_LEADING, color: "secondary (.text-meta)" },
@@ -59,7 +59,7 @@ export default function DesignSystemPage() {
               token="p.lead"
               spec={{ font: "Source Sans 3", size: "20px", weight: "400" }}
             >
-              <p className="text-xl">Introductory line under the page title.</p>
+              <p className="text-lead">Introductory line under the page title.</p>
             </TypeScaleRow>
 
             <TypeScaleRow

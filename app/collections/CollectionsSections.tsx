@@ -110,7 +110,7 @@ export function CollectionsSections() {
       <div className="container mx-auto max-w-5xl px-6 py-12">
         <h1 className="font-bold mb-8">Collections</h1>
         
-        <p className="text-xl mb-8 leading-relaxed">
+        <p className="text-lead mb-8 leading-relaxed">
           Arachnid and Myriapod collections at the American Museum of Natural History
         </p>
 

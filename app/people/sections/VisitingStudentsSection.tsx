@@ -11,7 +11,7 @@ export function VisitingStudentsSection({ isActive, tab, onTabChange }: TabbedPe
     <div data-section="visiting-students" className={isActive ? 'block' : 'hidden'}>
         <div>
           <h2 className="font-bold mt-8 lg:mt-0 mb-2">Visitors</h2>
-          <p className="text-xl mb-8">
+          <p className="text-lead mb-8">
             Many postdocs and graduate students from other institutions in the U.S. and abroad have visited the AMNH Arachnology Lab in the past, often funded in part by the AMNH Small Grants program (Annette Kade Fellowships, Collections Study Grants and Theodore Roosevelt Memorial Fund). If you are interested in applying for small grants to visit the AMNH, please visit the <ExternalLink href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/research-grants-and-student-exchange-fellowships">Richard Gilder Graduate School.</ExternalLink>
           </p>
           <PeopleSectionTabs

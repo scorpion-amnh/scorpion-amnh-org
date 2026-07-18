@@ -11,7 +11,7 @@ export function HighSchoolStudentsSection({ isActive, tab, onTabChange }: Tabbed
     <div data-section="high-school-students" className={isActive ? 'block' : 'hidden'}>
         <div>
           <h2 className="font-bold mt-8 lg:mt-0 mb-2">High School Students</h2>
-          <p className="text-xl mb-8">
+          <p className="text-lead mb-8">
             Several high school students have worked in the Arachnology Lab supported by various internships. Many have continued to undergraduate programs. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the <ExternalLink href="https://www.amnh.org/learn-teach/grades-9-12/science-research-mentoring-program">Science Research Mentoring Program.</ExternalLink>
           </p>
           <PeopleSectionTabs

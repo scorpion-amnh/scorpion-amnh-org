@@ -10,7 +10,7 @@ export function PostdocsSection({ isActive, tab, onTabChange }: TabbedPeopleSect
     <div data-section="postdocs" className={isActive ? 'block' : 'hidden'}>
         <div>
           <h2 className="font-bold mt-8 lg:mt-0 mb-2">Postdocs</h2>
-          <p className="text-xl mb-8">Current and former postdocs at the Arachnology Lab</p>
+          <p className="text-lead mb-8">Current and former postdocs at the Arachnology Lab</p>
           <PeopleSectionTabs
             value={tab}
             onChange={(value) => onTabChange(value)}
@@ -84,7 +84,7 @@ export function PostdocsSection({ isActive, tab, onTabChange }: TabbedPeopleSect
             className={`people-compact ${tab === 'alumni' ? 'block' : 'hidden'}`}
           >
           <h3 className="font-bold mt-12 mb-2">Alumni</h3>
-          <p className="text-xl mb-8">Former postdocs of the Arachnology Lab at AMNH</p>
+          <p className="text-lead mb-8">Former postdocs of the Arachnology Lab at AMNH</p>
 
           {/* Ricardo Botero-Trujillo */}
           <PeopleCard containerClassName="mb-8 pb-8">

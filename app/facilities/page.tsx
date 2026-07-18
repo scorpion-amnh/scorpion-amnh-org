@@ -15,7 +15,7 @@ export default function FacilitiesPage() {
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">
         <h1 className="font-bold mb-8">Facilities</h1>
-        <p className="text-xl mb-12">The Arachnology Lab has access to multiple research facilities in the Division of Invertebrate Zoology and associated facilities in the American Museum of Natural History.</p>
+        <p className="text-lead mb-12">The Arachnology Lab has access to multiple research facilities in the Division of Invertebrate Zoology and associated facilities in the American Museum of Natural History.</p>
 
         <h2 className="font-bold mb-6">Scorpion Research Laboratory</h2>
         <p className="mb-8">

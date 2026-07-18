@@ -10,7 +10,7 @@ export function GraduateStudentsSection({ isActive, tab, onTabChange }: TabbedPe
     <div data-section="graduate-students" className={isActive ? 'block' : 'hidden'}>
         <div>
           <h2 className="font-bold mt-8 lg:mt-0 mb-2">Graduate Students</h2>
-          <p className="text-xl mb-8">
+          <p className="text-lead mb-8">
             Several graduate students worked in the Arachnology lab in past years. These students were funded from various sources including grants from the <ExternalLink href="http://www.nsf.gov">National Science Foundation</ExternalLink> and the AMNH (graduate student fellowships and the Comparative Biology Program of the Richard Gilder Graduate School). If you are interested graduate study in the Arachnology lab, please visit the website of the <ExternalLink href="https://www.amnh.org/our-research/richard-gilder-graduate-school">Richard Gilder Graduate School</ExternalLink> to apply to the RGGS for a graduate student fellowship for study at a partner programs (e.g., City University of New York).
           </p>
           <PeopleSectionTabs

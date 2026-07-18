@@ -11,7 +11,7 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
     <div data-section="volunteers" className={isActive ? 'block' : 'hidden'}>
         <div>
           <h2 className="font-bold mt-8 lg:mt-0 mb-2">Volunteers and Field Assistants</h2>
-          <p className="text-xl mb-8">
+          <p className="text-lead mb-8">
             The Arachnology Lab at the AMNH has had many dedicated volunteers work with us over the years. With their help we have been able to accomplish a great deal of work. We would like to thank all of our volunteers for their invaluable assistance. If you are interested in volunteering in the Arachnology Lab at the AMNH please visit the <ExternalLink href="https://www.amnh.org/join-support/volunteer-now">Volunteer Department.</ExternalLink>
           </p>
           <PeopleSectionTabs

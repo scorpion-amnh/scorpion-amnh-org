@@ -23,7 +23,7 @@ export function PrincipalInvestigatorSection({ isActive }: PeopleSectionProps) {
     <div data-section="principal-investigator" className={isActive ? 'block' : 'hidden'}>
         <div id="principal-investigator">
           <h2 className="font-bold mt-8 lg:mt-0 mb-2">Principal Investigator</h2>
-          <p className="text-xl mb-8">Head of the Arachnology Lab at AMNH</p>
+          <p className="text-lead mb-8">Head of the Arachnology Lab at AMNH</p>
           
           <div className="pb-8">
             <div className="grid md:grid-cols-5 gap-6">

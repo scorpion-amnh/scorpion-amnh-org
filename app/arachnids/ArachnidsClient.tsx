@@ -18,9 +18,9 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">
         {/* Main Content */}
-        <div className="mb-12">
+        <div className="mb-12 max-w-prose">
           <h1 className="font-bold mb-8">Arachnids</h1>
-          <p className="mb-8">
+          <p className="text-lead mb-8">
             There are many compelling reasons to study arachnids. They are ancient arthropods of great ecological, morphological, and taxonomic diversity. Distributed across nearly every terrestrial habitat and elevation, arachnids inhabit every continent except Antarctica. The group as a whole inspires fear and fascination, and some species are of significant economic or medical importance. Many arachnid species are threatened yet little is known about their biology, many new taxa remain to be discovered, and there is a shortage of experts for many taxa. The world’s arachnid fauna will remain poorly understood until more specialists are trained and prospects for their employment improve.
           </p>
           

@@ -13,7 +13,7 @@ export default function ResearchPage() {
       <div className="container mx-auto max-w-5xl px-6 py-12">
         <div className="mb-12">
           <h1 className="font-bold mb-8">Research</h1>
-          <p className="mb-8">
+          <p className="text-lead mb-8">
             The Arachnology Lab at the AMNH focuses on the systematics and biogeography of scorpions (Scorpiones) and various understudied lineages, especially Pedipalpi, comprising the orders Amblypygi (whip spiders), Schizomida (short-tailed whip scorpions) and Thelyphonida (vinegaroons or whip scorpions). Our research also includes Ricinulei (hooded tick-spiders or ricinuleids), and Solifugae (camel-spiders, solifuges or solpugids), with additional contributions on spiders (Araneae) and harvestmen (Opiliones). Broad areas of research listed below.</p>
 
           <div className="mb-8">

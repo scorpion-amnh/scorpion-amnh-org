@@ -62,7 +62,7 @@ export function TechnicalStaffSection({ isActive, tab, onTabChange }: TabbedPeop
           >
           {/* Alumni Section */}
           <h3 className="font-bold mt-12 mb-2">Alumni</h3>
-          <p className="text-xl mb-8">Former technical staff of the Arachnology Lab at AMNH</p>
+          <p className="text-lead mb-8">Former technical staff of the Arachnology Lab at AMNH</p>
 
           {/* Eleanor Goetz */}
           <PeopleCard containerClassName="mb-8 pb-8">
