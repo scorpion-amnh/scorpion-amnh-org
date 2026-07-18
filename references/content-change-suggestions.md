@@ -51,6 +51,13 @@ Migration and validation scripts must preserve author wording exactly. When stru
 - **Suggested action:** Author decides whether PDF links should be restored site-wide. If yes, approve adding a `pdfUrl` field to the schema and populate from the original bibliography.
 - **Status:** Open
 
+### Search and filter (future UX)
+
+- **Location:** `/publications`; `app/publications/PublicationsClient.tsx`
+- **Issue:** A year-by-year side nav (tab-style, one year visible at a time) was tried and removed. With 31 years and 200+ entries, section-style navigation is the wrong pattern for this page — users need to find citations across years, not swap between isolated year views.
+- **Suggested action:** Add search and filter functionality instead (e.g. text search across title, authors, journal; optional year filter; consider author or publication-type filters). Design and scope to be confirmed with Lorenzo Prendini before implementation.
+- **Status:** Open
+
 ---
 
 ## People
