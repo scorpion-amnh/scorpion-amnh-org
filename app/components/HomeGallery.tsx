@@ -18,6 +18,35 @@ type HomeGalleryProps = {
   images: string[];
 };
 
+type RenderSegment = GallerySegment & {
+  featuredNumber?: number;
+  smallNumbers: number[];
+};
+
+function assignImageNumbers(segments: GallerySegment[]): RenderSegment[] {
+  let imageCounter = 0;
+
+  return segments.map((segment) => {
+    if (segment.featured) {
+      imageCounter += 1;
+      const featuredNumber = imageCounter;
+      const smallNumbers = segment.small.map(() => {
+        imageCounter += 1;
+        return imageCounter;
+      });
+
+      return { ...segment, featuredNumber, smallNumbers };
+    }
+
+    const smallNumbers = segment.small.map(() => {
+      imageCounter += 1;
+      return imageCounter;
+    });
+
+    return { ...segment, smallNumbers };
+  });
+}
+
 function buildSegments(images: string[]): GallerySegment[] {
   const segments: GallerySegment[] = [];
   let index = 0;
@@ -92,9 +121,10 @@ function getSmallPlacement(index: number, isLeft: boolean): string {
 }
 
 export function HomeGallery({ images }: HomeGalleryProps) {
-  const segments = useMemo(() => buildSegments(deterministicShuffleStrings(images)), [images]);
-
-  let imageCounter = 0;
+  const segments = useMemo(
+    () => assignImageNumbers(buildSegments(deterministicShuffleStrings(images))),
+    [images]
+  );
 
   return (
     <div className="flex flex-col gap-4">
@@ -107,30 +137,23 @@ export function HomeGallery({ images }: HomeGalleryProps) {
               key={`segment-${segmentIndex}-small-only`}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[110px]"
             >
-              {segment.small.map((src, smallIndex) => {
-                imageCounter += 1;
-
-                return (
-                  <div
-                    key={`${src}-${smallIndex}`}
-                    className="col-span-1 row-span-1 overflow-hidden rounded-sm bg-gray-100"
-                  >
-                    <Image
-                      src={src}
-                      alt={`Gallery image ${imageCounter}`}
-                      width={400}
-                      height={300}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                );
-              })}
+              {segment.small.map((src, smallIndex) => (
+                <div
+                  key={`${src}-${smallIndex}`}
+                  className="col-span-1 row-span-1 overflow-hidden rounded-sm bg-gray-100"
+                >
+                  <Image
+                    src={src}
+                    alt={`Gallery image ${segment.smallNumbers[smallIndex]}`}
+                    width={400}
+                    height={300}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ))}
             </div>
           );
         }
-
-        const featuredNumber = imageCounter + 1;
-        imageCounter += 1;
 
         return (
           <div
@@ -140,34 +163,30 @@ export function HomeGallery({ images }: HomeGalleryProps) {
             <div className={`overflow-hidden rounded-sm bg-gray-100 ${getFeaturedPlacement(isLeft)}`}>
               <Image
                 src={segment.featured}
-                alt={`Gallery image ${featuredNumber}`}
+                alt={`Gallery image ${segment.featuredNumber}`}
                 width={800}
                 height={600}
                 className="h-full w-full object-cover"
               />
             </div>
 
-            {segment.small.map((src, smallIndex) => {
-              imageCounter += 1;
-
-              return (
-                <div
-                  key={`${src}-${smallIndex}`}
-                  className={`col-span-1 row-span-1 overflow-hidden rounded-sm bg-gray-100 ${getSmallPlacement(
-                    smallIndex,
-                    isLeft
-                  )}`}
-                >
-                  <Image
-                    src={src}
-                    alt={`Gallery image ${imageCounter}`}
-                    width={400}
-                    height={300}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              );
-            })}
+            {segment.small.map((src, smallIndex) => (
+              <div
+                key={`${src}-${smallIndex}`}
+                className={`col-span-1 row-span-1 overflow-hidden rounded-sm bg-gray-100 ${getSmallPlacement(
+                  smallIndex,
+                  isLeft
+                )}`}
+              >
+                <Image
+                  src={src}
+                  alt={`Gallery image ${segment.smallNumbers[smallIndex]}`}
+                  width={400}
+                  height={300}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            ))}
           </div>
         );
       })}
