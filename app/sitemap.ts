@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${baseUrl}/`, changeFrequency: "monthly", priority: 1 },
     { url: `${baseUrl}/people`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/lab-through-the-years`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/publications`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/research`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/arachnids`, changeFrequency: "monthly", priority: 0.8 },

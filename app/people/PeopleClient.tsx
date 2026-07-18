@@ -2,11 +2,9 @@
 
 import { SideNav } from "@/app/components/SideNav";
 import { BackToTop } from "@/app/components/BackToTop";
-import type { PeopleGroupCardProps } from "@/app/people/PeopleGroupCard";
 import { PeopleSearch } from "@/app/people/PeopleSearch";
 import { GraduateStudentsSection } from "@/app/people/sections/GraduateStudentsSection";
 import { HighSchoolStudentsSection } from "@/app/people/sections/HighSchoolStudentsSection";
-import { LabEvolutionSection } from "@/app/people/sections/LabEvolutionSection";
 import { MuseumSpecialistsSection } from "@/app/people/sections/MuseumSpecialistsSection";
 import { PostdocsSection } from "@/app/people/sections/PostdocsSection";
 import { PrincipalInvestigatorSection } from "@/app/people/sections/PrincipalInvestigatorSection";
@@ -20,20 +18,11 @@ import { usePeopleNavigation } from "@/app/people/usePeopleNavigation";
 import type { Person } from "@/lib/content/schema";
 
 type PeopleClientProps = {
-  labHistorySections: {
-    year?: string;
-    subtitle?: string;
-    cards: [PeopleGroupCardProps, ...PeopleGroupCardProps[]];
-  }[];
   people: Person[];
   undergraduateStudentsOrder: string[];
 };
 
-export function PeopleClient({
-  labHistorySections,
-  people,
-  undergraduateStudentsOrder,
-}: PeopleClientProps) {
+export function PeopleClient({ people, undergraduateStudentsOrder }: PeopleClientProps) {
   const {
     activeSection,
     contentRef,
@@ -88,10 +77,6 @@ export function PeopleClient({
           </div>
 
           <div ref={contentRef} className="md:col-span-3 section-content">
-            <LabEvolutionSection
-              isActive={isNavigationReady && activeSection === "lab-evolution"}
-              labHistorySections={labHistorySections}
-            />
             <PrincipalInvestigatorSection
               isActive={isNavigationReady && activeSection === "principal-investigator"}
             />

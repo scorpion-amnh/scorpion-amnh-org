@@ -4,7 +4,6 @@ export type PeopleSection = {
 };
 
 export const peopleSections: PeopleSection[] = [
-  { id: 'lab-evolution', label: 'Lab Evolution' },
   { id: 'principal-investigator', label: 'Principal Investigator' },
   { id: 'museum-specialists', label: 'Museum Specialists' },
   { id: 'technical-staff', label: 'Technical Staff' },

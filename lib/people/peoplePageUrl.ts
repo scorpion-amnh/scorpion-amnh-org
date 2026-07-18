@@ -13,7 +13,7 @@ export type TabSectionId =
   | "volunteers"
   | "visiting-students";
 
-export const DEFAULT_ACTIVE_SECTION = "lab-evolution";
+export const DEFAULT_ACTIVE_SECTION = "principal-investigator";
 
 export const defaultSectionTabs: Record<TabSectionId, SectionTab> = {
   "museum-specialists": "current",
