@@ -235,6 +235,14 @@ These items document visible or structural changes from the Stage 2–3 refactor
 - **Suggested action:** Author confirms images still display correctly.
 - **Status:** Open
 
+### Facilities page — content structure needs rework
+
+- **Location:** `/facilities`; `app/facilities/FacilitiesClient.tsx`
+- **Current:** Side nav has two sections — **Arachnology Facilities** and **Associated AMNH Facilities**. The first section combines former “Scorpion Research Laboratory” and “Research Laboratory Facilities” content under one `h2`, with nested `h3`/`h4` headings (e.g. Scorpion Research Laboratory → Research Laboratory Facilities → optical equipment / molecular lab). The second section uses `h2` + `h3` subsections for each AMNH facility. Copy and grouping were preserved from the legacy page; only nav and heading levels were adjusted for the merge.
+- **Issue:** There is no clear, consistent content pattern across the page. The two nav sections use different internal hierarchies, subsection labels overlap conceptually (lab vs. research lab vs. associated facilities), and the relationship between headings is hard to follow without already knowing the material.
+- **Suggested action:** Author restructures page copy and headings so grouping, nav labels, and hierarchy tell a coherent story (e.g. what belongs under “Arachnology Facilities” vs. “Associated AMNH Facilities”, and whether intermediate headings like “Research Laboratory Facilities” are still needed). Implementation can follow once structure is approved.
+- **Status:** Open — awaiting author review
+
 ### Collections figure markup (`Figure` component)
 
 - **Location:** `/collections` (personnel photo; former/new storage facility photos)
