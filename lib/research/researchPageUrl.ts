@@ -1,4 +1,10 @@
-export const RESEARCH_SECTION_IDS = [
+export const RESEARCH_SECTION_IDS = ["research-areas", "funding"] as const;
+
+export type ResearchSectionId = (typeof RESEARCH_SECTION_IDS)[number];
+
+export const DEFAULT_RESEARCH_SECTION: ResearchSectionId = "research-areas";
+
+const LEGACY_RESEARCH_SECTION_IDS = [
   "scorpion-phylogeny-and-higher-classification",
   "minor-arachnid-orders",
   "revisionary-systematics",
@@ -9,19 +15,26 @@ export const RESEARCH_SECTION_IDS = [
   "paleontology",
   "theory-and-practice-of-systematics",
   "insect-plant-associations",
-  "funding",
 ] as const;
-
-export type ResearchSectionId = (typeof RESEARCH_SECTION_IDS)[number];
-
-export const DEFAULT_RESEARCH_SECTION: ResearchSectionId = "scorpion-phylogeny-and-higher-classification";
 
 export const isResearchSectionId = (value: string): value is ResearchSectionId =>
   RESEARCH_SECTION_IDS.includes(value as ResearchSectionId);
 
 export const readResearchSectionFromUrl = (): ResearchSectionId => {
   const section = new URLSearchParams(window.location.search).get("section");
-  return section && isResearchSectionId(section) ? section : DEFAULT_RESEARCH_SECTION;
+
+  if (section && isResearchSectionId(section)) {
+    return section;
+  }
+
+  if (
+    section &&
+    LEGACY_RESEARCH_SECTION_IDS.includes(section as (typeof LEGACY_RESEARCH_SECTION_IDS)[number])
+  ) {
+    return "research-areas";
+  }
+
+  return DEFAULT_RESEARCH_SECTION;
 };
 
 export const pushResearchPageUrl = (section: ResearchSectionId) => {
@@ -32,15 +45,6 @@ export const pushResearchPageUrl = (section: ResearchSectionId) => {
 };
 
 export const RESEARCH_SECTION_LABELS: Record<ResearchSectionId, string> = {
-  "scorpion-phylogeny-and-higher-classification": "Scorpion Phylogeny and Higher Classification",
-  "minor-arachnid-orders": "Minor Arachnid Orders",
-  "revisionary-systematics": "Revisionary Systematics",
-  "adaptational-and-biogeographical-hypotheses": "Adaptational and Biogeographical Hypotheses",
-  "comparative-morphology-and-anatomy": "Comparative Morphology and Anatomy",
-  "distribution-and-conservation": "Distribution and Conservation",
-  behavior: "Behavior",
-  paleontology: "Paleontology",
-  "theory-and-practice-of-systematics": "Theory and Practice of Systematics",
-  "insect-plant-associations": "Insect-Plant Associations",
+  "research-areas": "Research Areas",
   funding: "Funding",
 };

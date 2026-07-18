@@ -119,9 +119,11 @@ export function ResearchClient() {
           />
 
           <div ref={contentRef} className="lg:col-span-3 section-content">
-            {isNavigationReady && activeSection === "scorpion-phylogeny-and-higher-classification" && (
+            {isNavigationReady && activeSection === "research-areas" && (
               <div className="mb-8">
-                <h2 className="font-bold mb-4">Scorpion Phylogeny and Higher Classification</h2>
+                <h2 className="font-bold mb-6">Research Areas</h2>
+
+                <h3 className="font-bold mb-4">Scorpion Phylogeny and Higher Classification</h3>
                 <p className="mb-6">
                   The framework for our current research on scorpions is a global phylogeny of the Order Scorpiones,
                   using exemplar species as terminal taxa, and morphological data, together with genomic data, as
@@ -135,12 +137,8 @@ export function ResearchClient() {
                   intracontinental levels, and test adaptational hypotheses, e.g. concerning the evolution of scorpion
                   venom.
                 </p>
-              </div>
-            )}
 
-            {isNavigationReady && activeSection === "minor-arachnid-orders" && (
-              <div className="mb-8">
-                <h2 className="font-bold mb-4">Minor Arachnid Orders</h2>
+                <h3 className="font-bold mb-4">Minor Arachnid Orders</h3>
                 <p className="mb-6">
                   We are also interested in the systematics of other smaller arachnid orders, notably Pedipalpi
                   (Amblypygi, Thelyphonida and Schizomida), Ricinulei, and Solifugae, all of which are poorly
@@ -156,12 +154,8 @@ export function ResearchClient() {
                   distribution in southern Africa mirror those of the scorpions, research into their systematics will
                   facilitate the study of congruent biogeographical patterns.
                 </p>
-              </div>
-            )}
 
-            {isNavigationReady && activeSection === "revisionary-systematics" && (
-              <div className="mb-8">
-                <h2 className="font-bold mb-4">Revisionary Systematics</h2>
+                <h3 className="font-bold mb-4">Revisionary Systematics</h3>
                 <p className="mb-6">
                   Besides investigating phylogenetic relationships among the major lineages of scorpions and other
                   arachnids, we are interested in revisionary systematics, particularly of the North American,
@@ -184,12 +178,8 @@ export function ResearchClient() {
                   </ExternalLink>
                   .
                 </p>
-              </div>
-            )}
 
-            {isNavigationReady && activeSection === "adaptational-and-biogeographical-hypotheses" && (
-              <div className="mb-8">
-                <h2 className="font-bold mb-4">Adaptational and Biogeographical Hypotheses</h2>
+                <h3 className="font-bold mb-4">Adaptational and Biogeographical Hypotheses</h3>
                 <p className="mb-6">
                   Phylogenetic analysis precedes the testing of adaptational and biogeographical hypotheses involving
                   arachnids. Our research on scorpions, schizomids, and whip spiders and ricinuleids tested hypotheses
@@ -198,12 +188,8 @@ export function ResearchClient() {
                   STAR: Phylogenomics and Biogeography of Neotropical Tityus: The World&apos;s Most Speciose Scorpion
                   Genus.
                 </p>
-              </div>
-            )}
 
-            {isNavigationReady && activeSection === "comparative-morphology-and-anatomy" && (
-              <div className="mb-8">
-                <h2 className="font-bold mb-4">Comparative Morphology and Anatomy</h2>
+                <h3 className="font-bold mb-4">Comparative Morphology and Anatomy</h3>
                 <p className="mb-6">
                   Our work on the systematics and evolution of arachnids relies heavily on their external morphology and
                   internal anatomy, yet many character systems have not been studied in over a century and never in a
@@ -212,12 +198,8 @@ export function ResearchClient() {
                   pedipalp papillae, and tracheal system of camel spiders (Solifugae), and the pedipalp spination of
                   whip spiders (Amblypygi).
                 </p>
-              </div>
-            )}
 
-            {isNavigationReady && activeSection === "distribution-and-conservation" && (
-              <div className="mb-8">
-                <h2 className="font-bold mb-4">Distribution and Conservation</h2>
+                <h3 className="font-bold mb-4">Distribution and Conservation</h3>
                 <p className="mb-6">
                   Many range-restricted scorpions and other arachnids are threatened by current land-use practices,
                   climate change, and harvesting for the venom and/or exotic pet trades, yet few are afforded any
@@ -242,35 +224,23 @@ export function ResearchClient() {
                   ) of the European Union, enabled us to identify and digitize the scorpion holdings of major natural
                   history collections in sub-Saharan Africa, Europe, and the U.K., as part of ongoing taxon inventories.
                 </p>
-              </div>
-            )}
 
-            {isNavigationReady && activeSection === "behavior" && (
-              <div className="mb-8">
-                <h2 className="font-bold mb-4">Behavior</h2>
+                <h3 className="font-bold mb-4">Behavior</h3>
                 <p className="mb-6">
                   We are interested in several aspects of arachnid behavior. We have publications and/or ongoing projects
                   on burrowing biology, defense behavior and sound production in scorpions; defense secretions of
                   Uropygi (schizomids and thelyphonids); and courtship and mating in scorpions, camel spiders
                   (Solifugae), and whip spiders (Amblypygi).
                 </p>
-              </div>
-            )}
 
-            {isNavigationReady && activeSection === "paleontology" && (
-              <div className="mb-8">
-                <h2 className="font-bold mb-4">Paleontology</h2>
+                <h3 className="font-bold mb-4">Paleontology</h3>
                 <p className="mb-6">
                   An understanding of arachnid phylogeny and evolution requires knowledge of extinct lineages. We have
                   published on fossil scorpions, hooded tick spiders (Ricinulei) and whip spiders (Amblypygi) and are
                   interested in the evolution of terrestrialization.
                 </p>
-              </div>
-            )}
 
-            {isNavigationReady && activeSection === "theory-and-practice-of-systematics" && (
-              <div className="mb-8">
-                <h2 className="font-bold mb-4">Theory and Practice of Systematics</h2>
+                <h3 className="font-bold mb-4">Theory and Practice of Systematics</h3>
                 <p className="mb-6">
                   Although our research is empirically focused, empirical research is no better than the theory on which
                   it is based. Nowhere is this more evident than in the field of systematics. Our research is grounded
@@ -281,12 +251,8 @@ export function ResearchClient() {
                   morphological character systems and exploring cutting-edge approaches to phylogenomics and
                   biogeographical analysis.
                 </p>
-              </div>
-            )}
 
-            {isNavigationReady && activeSection === "insect-plant-associations" && (
-              <div className="mb-8">
-                <h2 className="font-bold mb-4">Insect-Plant Associations</h2>
+                <h3 className="font-bold mb-4">Insect-Plant Associations</h3>
                 <p className="mb-6">
                   Besides arachnids, we are interested in the evolution of insect-plant associations and have studied
                   parallel cladogenesis between cephaleline leaf hoppers (Cicadellidae) and Restionaceae as well as
