@@ -15,7 +15,7 @@ import {
   readArachnidsSectionFromUrl,
   type ArachnidsSectionId,
 } from "@/lib/arachnids/arachnidsPageUrl";
-import { getHeaderHeight, getScrollGap } from "@/lib/scrollMetrics";
+import { useScrollToSectionOnSelect } from "@/lib/useScrollToSectionOnSelect";
 import { deterministicShuffle } from "@/lib/shuffle";
 
 type ArachnidsClientProps = {
@@ -31,16 +31,15 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
   const randomImages = useMemo(() => deterministicShuffle(gallery), [gallery]);
   const [activeSection, setActiveSection] = useState<ArachnidsSectionId>(DEFAULT_ARACHNIDS_SECTION);
   const [isNavigationReady, setIsNavigationReady] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const shouldScrollOnSectionChange = useRef(false);
   const hasRestoredFromUrl = useRef(false);
+  const { contentRef, requestSectionScroll, cancelSectionScroll } = useScrollToSectionOnSelect(activeSection);
 
   const handleSectionSelect = (sectionId: string) => {
     if (!isArachnidsSectionId(sectionId)) {
       return;
     }
 
-    shouldScrollOnSectionChange.current = true;
+    requestSectionScroll();
     setActiveSection(sectionId);
     pushArachnidsPageUrl(sectionId);
   };
@@ -64,47 +63,13 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
 
   useEffect(() => {
     const handlePopState = () => {
-      shouldScrollOnSectionChange.current = false;
+      cancelSectionScroll();
       setActiveSection(readArachnidsSectionFromUrl());
     };
 
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
-  }, []);
-
-  useEffect(() => {
-    if (!shouldScrollOnSectionChange.current) {
-      return;
-    }
-
-    shouldScrollOnSectionChange.current = false;
-
-    if (contentRef.current) {
-      const headerHeight = getHeaderHeight();
-      const scrollGap = getScrollGap();
-      if (window.innerWidth >= 1024) {
-        const heading = contentRef.current.querySelector("h2");
-        if (heading) {
-          const yOffset = heading.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap;
-          window.scrollTo({ top: yOffset, behavior: "smooth" });
-          return;
-        }
-
-        const yOffset = contentRef.current.offsetTop - headerHeight - scrollGap;
-        window.scrollTo({ top: yOffset, behavior: "smooth" });
-        return;
-      }
-
-      const heading = contentRef.current.querySelector("h2");
-      if (heading) {
-        heading.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
-
-      const yOffset = contentRef.current.offsetTop - headerHeight;
-      window.scrollTo({ top: yOffset, behavior: "smooth" });
-    }
-  }, [activeSection]);
+  }, [cancelSectionScroll]);
 
   return (
     <div className="bg-white min-h-screen">

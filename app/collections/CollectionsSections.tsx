@@ -3,7 +3,6 @@
 import { ExternalLink } from "@/app/components/ExternalLink";
 import { Figure } from "@/app/components/Figure";
 import { SideNav } from "@/app/components/SideNav";
-import { getHeaderHeight, getScrollGap } from "@/lib/scrollMetrics";
 import {
   COLLECTIONS_SECTION_IDS,
   DEFAULT_COLLECTIONS_SECTION,
@@ -12,6 +11,7 @@ import {
   readCollectionsSectionFromUrl,
   type CollectionsSectionId,
 } from "@/lib/collections/collectionsPageUrl";
+import { useScrollToSectionOnSelect } from "@/lib/useScrollToSectionOnSelect";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
@@ -19,9 +19,8 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 export function CollectionsSections() {
   const [activeSection, setActiveSection] = useState<CollectionsSectionId>(DEFAULT_COLLECTIONS_SECTION);
   const [isNavigationReady, setIsNavigationReady] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const shouldScrollOnSectionChange = useRef(false);
   const hasRestoredFromUrl = useRef(false);
+  const { contentRef, requestSectionScroll, cancelSectionScroll } = useScrollToSectionOnSelect(activeSection);
 
   const sections = COLLECTIONS_SECTION_IDS.map((id) => ({
     id,
@@ -38,7 +37,7 @@ export function CollectionsSections() {
       return;
     }
 
-    shouldScrollOnSectionChange.current = true;
+    requestSectionScroll();
     setActiveSection(sectionId);
     pushCollectionsPageUrl(sectionId);
   };
@@ -63,47 +62,13 @@ export function CollectionsSections() {
 
   useEffect(() => {
     const handlePopState = () => {
-      shouldScrollOnSectionChange.current = false;
+      cancelSectionScroll();
       setActiveSection(readCollectionsSectionFromUrl());
     };
 
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
-  }, []);
-
-  useEffect(() => {
-    if (!shouldScrollOnSectionChange.current) {
-      return;
-    }
-
-    shouldScrollOnSectionChange.current = false;
-
-    if (contentRef.current) {
-      const headerHeight = getHeaderHeight();
-      const scrollGap = getScrollGap();
-      if (window.innerWidth >= 1024) {
-        const heading = contentRef.current.querySelector("h2");
-        if (heading) {
-          const yOffset = heading.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap;
-          window.scrollTo({ top: yOffset, behavior: 'smooth' });
-          return;
-        }
-
-        const yOffset = contentRef.current.offsetTop - headerHeight - scrollGap;
-        window.scrollTo({ top: yOffset, behavior: 'smooth' });
-        return;
-      }
-
-      const heading = contentRef.current.querySelector("h2");
-      if (heading) {
-        heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        return;
-      }
-
-      const yOffset = contentRef.current.offsetTop - headerHeight;
-      window.scrollTo({ top: yOffset, behavior: 'smooth' });
-    }
-  }, [activeSection]);
+  }, [cancelSectionScroll]);
 
   return (
     <div className="bg-white min-h-screen">

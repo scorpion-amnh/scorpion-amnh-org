@@ -12,7 +12,7 @@ import {
   readFacilitiesSectionFromUrl,
   type FacilitiesSectionId,
 } from "@/lib/facilities/facilitiesPageUrl";
-import { getHeaderHeight, getScrollGap } from "@/lib/scrollMetrics";
+import { useScrollToSectionOnSelect } from "@/lib/useScrollToSectionOnSelect";
 import Image from "next/image";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
@@ -24,16 +24,15 @@ const sections = FACILITIES_SECTION_IDS.map((id) => ({
 export function FacilitiesClient() {
   const [activeSection, setActiveSection] = useState<FacilitiesSectionId>(DEFAULT_FACILITIES_SECTION);
   const [isNavigationReady, setIsNavigationReady] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const shouldScrollOnSectionChange = useRef(false);
   const hasRestoredFromUrl = useRef(false);
+  const { contentRef, requestSectionScroll, cancelSectionScroll } = useScrollToSectionOnSelect(activeSection);
 
   const handleSectionSelect = (sectionId: string) => {
     if (!isFacilitiesSectionId(sectionId)) {
       return;
     }
 
-    shouldScrollOnSectionChange.current = true;
+    requestSectionScroll();
     setActiveSection(sectionId);
     pushFacilitiesPageUrl(sectionId);
   };
@@ -57,47 +56,13 @@ export function FacilitiesClient() {
 
   useEffect(() => {
     const handlePopState = () => {
-      shouldScrollOnSectionChange.current = false;
+      cancelSectionScroll();
       setActiveSection(readFacilitiesSectionFromUrl());
     };
 
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
-  }, []);
-
-  useEffect(() => {
-    if (!shouldScrollOnSectionChange.current) {
-      return;
-    }
-
-    shouldScrollOnSectionChange.current = false;
-
-    if (contentRef.current) {
-      const headerHeight = getHeaderHeight();
-      const scrollGap = getScrollGap();
-      if (window.innerWidth >= 1024) {
-        const heading = contentRef.current.querySelector("h2");
-        if (heading) {
-          const yOffset = heading.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap;
-          window.scrollTo({ top: yOffset, behavior: "smooth" });
-          return;
-        }
-
-        const yOffset = contentRef.current.offsetTop - headerHeight - scrollGap;
-        window.scrollTo({ top: yOffset, behavior: "smooth" });
-        return;
-      }
-
-      const heading = contentRef.current.querySelector("h2");
-      if (heading) {
-        heading.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
-
-      const yOffset = contentRef.current.offsetTop - headerHeight;
-      window.scrollTo({ top: yOffset, behavior: "smooth" });
-    }
-  }, [activeSection]);
+  }, [cancelSectionScroll]);
 
   return (
     <div className="bg-white min-h-screen">

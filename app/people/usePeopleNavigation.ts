@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { getHeaderHeight, getScrollGap } from "@/lib/scrollMetrics";
 import {
   DEFAULT_ACTIVE_SECTION,
   applyTabQueryToState,
@@ -14,6 +13,7 @@ import {
 } from "@/lib/people/peoplePageUrl";
 import { scrollToPersonAnchorWhenReady } from "@/lib/people/scrollToPersonAnchor";
 import { syncPersonAnchorIds } from "@/lib/people/syncPersonAnchorIds";
+import { useScrollToSectionOnSelect } from "@/lib/useScrollToSectionOnSelect";
 import type { Person } from "@/lib/content/schema";
 import type { PeopleSection } from "./sections";
 
@@ -87,10 +87,14 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
   const contentRef = useRef<HTMLDivElement>(null);
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const sideNavRef = useRef<HTMLDivElement>(null);
-  const shouldScrollOnSectionChange = useRef(false);
   const pendingPersonScrollId = useRef<string | null>(null);
   const hasRestoredFromUrl = useRef(false);
   const sectionTabsRef = useRef(sectionTabs);
+  const { requestSectionScroll, cancelSectionScroll } = useScrollToSectionOnSelect(activeSection, {
+    contentRef,
+    useDataSection: true,
+    sideNavRef,
+  });
 
   useEffect(() => {
     sectionTabsRef.current = sectionTabs;
@@ -112,14 +116,6 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
       })),
     [people, sectionLabelMap]
   );
-
-  const getSideNavOffset = useCallback(() => {
-    if (window.innerWidth >= 1024) {
-      return 0;
-    }
-
-    return sideNavRef.current?.getBoundingClientRect().height ?? 0;
-  }, []);
 
   const getGlobalTab = useCallback(
     (tabs: Record<TabSectionId, SectionTab>): SectionTab => tabs["graduate-students"] ?? "current",
@@ -161,7 +157,6 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
       setActiveSection(sectionFromUrl);
       setSectionTabs(tabsFromUrl);
       pendingPersonScrollId.current = null;
-      shouldScrollOnSectionChange.current = false;
 
       const hashNavigation = resolvePersonHashNavigation(hash, sectionIdSet, people);
       if (!hashNavigation) {
@@ -237,7 +232,6 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
       setIsSearchOpen(false);
       setSectionTabs(nextTabs);
       setActiveSection(sectionId);
-      shouldScrollOnSectionChange.current = false;
       queuePersonScroll(id);
 
       syncUrlFromState({
@@ -252,8 +246,8 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
 
   const handleSectionSelect = useCallback(
     (id: string) => {
+      requestSectionScroll();
       setActiveSection(id);
-      shouldScrollOnSectionChange.current = true;
 
       const nextTabs = isTabSectionId(id)
         ? applyTabQueryToState("current")
@@ -265,7 +259,7 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
 
       syncUrlFromState({ section: id, tabs: nextTabs, hash: null });
     },
-    [syncUrlFromState]
+    [requestSectionScroll, syncUrlFromState]
   );
 
   useLayoutEffect(() => {
@@ -285,48 +279,6 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
     setIsNavigationReady(true);
     window.scrollTo(0, 0);
   }, [applyNavigationFromUrl]);
-
-  useEffect(() => {
-    if (!shouldScrollOnSectionChange.current) {
-      return;
-    }
-
-    shouldScrollOnSectionChange.current = false;
-
-    if (contentRef.current) {
-      const headerHeight = getHeaderHeight();
-      const scrollGap = getScrollGap();
-      const sideNavOffset = getSideNavOffset();
-      const activeSectionElement = contentRef.current.querySelector(
-        `[data-section="${activeSection}"]`
-      ) as HTMLElement | null;
-      const activeHeading = activeSectionElement?.querySelector("h2") ?? null;
-      if (window.innerWidth >= 1024) {
-        if (activeHeading) {
-          const yOffset = activeHeading.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap;
-          window.scrollTo({ top: yOffset, behavior: "smooth" });
-          return;
-        }
-
-        const yOffset = activeSectionElement
-          ? activeSectionElement.getBoundingClientRect().top + window.scrollY - headerHeight - scrollGap
-          : contentRef.current.offsetTop - headerHeight - scrollGap;
-        window.scrollTo({ top: yOffset, behavior: "smooth" });
-        return;
-      }
-
-      if (activeHeading) {
-        const yOffset = activeHeading.getBoundingClientRect().top + window.scrollY - headerHeight - sideNavOffset;
-        window.scrollTo({ top: yOffset, behavior: "smooth" });
-        return;
-      }
-
-      const yOffset = activeSectionElement
-        ? activeSectionElement.getBoundingClientRect().top + window.scrollY - headerHeight - sideNavOffset
-        : contentRef.current.offsetTop - headerHeight - sideNavOffset;
-      window.scrollTo({ top: yOffset, behavior: "smooth" });
-    }
-  }, [activeSection, getSideNavOffset]);
 
   useLayoutEffect(() => {
     if (!isNavigationReady || !pendingPersonScrollId.current) {
@@ -363,6 +315,7 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
 
   useEffect(() => {
     const handlePopState = () => {
+      cancelSectionScroll();
       applyNavigationFromUrl({ allowPersonScroll: false });
     };
 
@@ -376,7 +329,7 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
       window.removeEventListener("popstate", handlePopState);
       window.removeEventListener("hashchange", handleHashChange);
     };
-  }, [applyNavigationFromUrl]);
+  }, [applyNavigationFromUrl, cancelSectionScroll]);
 
   return {
     activeSection,
