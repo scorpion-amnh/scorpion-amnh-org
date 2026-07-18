@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ExternalLink } from "@/app/components/ExternalLink";
 import { getSiteSettings } from "@/lib/content";
 
 export function Footer() {
@@ -22,16 +21,20 @@ export function Footer() {
                 <p className="text-sm">
                 {footerCopyright}
                 </p>
-                <ExternalLink href="https://www.amnh.org" className="inline-flex items-center">
-                <Image
+                <a
+                  href="https://www.amnh.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex shrink-0"
+                >
+                  <Image
                     src={footerLogo}
                     alt="Logo: American Museum of Natural History"
                     width={200}
                     height={43}
-                    className="h-auto w-auto max-w-[150px]"
-                    style={{ width: "auto", height: "auto" }}
-                />
-                </ExternalLink>
+                    className="h-auto w-[150px]"
+                  />
+                </a>
             </div>
         </div>
     </footer>

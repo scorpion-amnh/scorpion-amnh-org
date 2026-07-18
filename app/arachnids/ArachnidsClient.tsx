@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Figure } from "@/app/components/Figure";
 import { BackToTop } from "@/app/components/BackToTop";
 import { SideNav } from "@/app/components/SideNav";
@@ -16,6 +16,7 @@ import {
   type ArachnidsSectionId,
 } from "@/lib/arachnids/arachnidsPageUrl";
 import { useScrollToSectionOnSelect } from "@/lib/useScrollToSectionOnSelect";
+import { useSectionScrollSpy } from "@/lib/useSectionScrollSpy";
 import { deterministicShuffle } from "@/lib/shuffle";
 
 type ArachnidsClientProps = {
@@ -32,15 +33,35 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
   const [activeSection, setActiveSection] = useState<ArachnidsSectionId>(DEFAULT_ARACHNIDS_SECTION);
   const [isNavigationReady, setIsNavigationReady] = useState(false);
   const hasRestoredFromUrl = useRef(false);
-  const { contentRef, requestSectionScroll, cancelSectionScroll } = useScrollToSectionOnSelect(activeSection);
+  const pendingInitialScroll = useRef(false);
+  const { contentRef, requestSectionScroll, cancelSectionScroll } = useScrollToSectionOnSelect(
+    activeSection,
+    { useDataSection: true, alwaysScroll: true }
+  );
+
+  const handleScrollSpySectionChange = useCallback((sectionId: string) => {
+    if (!isArachnidsSectionId(sectionId)) {
+      return;
+    }
+
+    setActiveSection(sectionId);
+  }, []);
+
+  const { pauseScrollSpy } = useSectionScrollSpy({
+    sectionIds: ARACHNIDS_SECTION_IDS,
+    contentRef,
+    onActiveSectionChange: handleScrollSpySectionChange,
+    enabled: isNavigationReady,
+  });
 
   const handleSectionSelect = (sectionId: string) => {
     if (!isArachnidsSectionId(sectionId)) {
       return;
     }
 
-    requestSectionScroll();
+    pauseScrollSpy();
     setActiveSection(sectionId);
+    requestSectionScroll();
     pushArachnidsPageUrl(sectionId);
   };
 
@@ -56,20 +77,35 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
     }
 
     // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-only URL hydration
-    setActiveSection(readArachnidsSectionFromUrl());
+    const sectionFromUrl = readArachnidsSectionFromUrl();
+    setActiveSection(sectionFromUrl);
+    pendingInitialScroll.current = window.location.search.includes("section=");
     setIsNavigationReady(true);
     window.scrollTo(0, 0);
   }, []);
 
+  useLayoutEffect(() => {
+    if (!isNavigationReady || !pendingInitialScroll.current || !contentRef.current) {
+      return;
+    }
+
+    pendingInitialScroll.current = false;
+    pauseScrollSpy(1200);
+    requestSectionScroll();
+  }, [isNavigationReady, pauseScrollSpy, requestSectionScroll, contentRef]);
+
   useEffect(() => {
     const handlePopState = () => {
       cancelSectionScroll();
-      setActiveSection(readArachnidsSectionFromUrl());
+      pauseScrollSpy(1200);
+      const sectionFromUrl = readArachnidsSectionFromUrl();
+      setActiveSection(sectionFromUrl);
+      requestSectionScroll();
     };
 
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
-  }, [cancelSectionScroll]);
+  }, [cancelSectionScroll, pauseScrollSpy, requestSectionScroll]);
 
   return (
     <div className="bg-white min-h-screen">
@@ -94,8 +130,9 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
           />
 
           <div ref={contentRef} className="lg:col-span-3 section-content">
-            {isNavigationReady && activeSection === "diversity" && (
-              <div className="mb-8">
+            {isNavigationReady && (
+              <>
+            <div data-section="diversity" className="mb-12">
                 <h2 className="font-bold mb-4">Diversity</h2>
                 <p className="mb-6">
                   The Class Arachnida includes megadiverse orders, like mites and ticks (Acari) with over 60,000
@@ -118,11 +155,9 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
                     </div>
                   ))}
                 </div>
-              </div>
-            )}
+            </div>
 
-            {isNavigationReady && activeSection === "antiquity" && (
-              <div className="mb-8">
+            <div data-section="antiquity" className="mb-12">
                 <h2 className="font-bold mb-4">Antiquity</h2>
                 <p className="mb-6">
                   Arachnids enjoy widespread public appeal (much of it based on fear). Their antiquity, combined with a
@@ -155,11 +190,9 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
                     />
                   </div>
                 </div>
-              </div>
-            )}
+            </div>
 
-            {isNavigationReady && activeSection === "notoriety" && (
-              <div className="mb-8">
+            <div data-section="notoriety" className="mb-12">
                 <h2 className="font-bold mb-4">Notoriety</h2>
                 <p className="mb-6">
                   Arachnids are notorious. The venoms of some spider and scorpion taxa contain multiple low molecular
@@ -198,11 +231,9 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
                     />
                   </div>
                 </div>
-              </div>
-            )}
+            </div>
 
-            {isNavigationReady && activeSection === "distribution" && (
-              <div className="mb-8">
+            <div data-section="distribution" className="mb-12">
                 <h2 className="font-bold mb-4">Distribution</h2>
                 <p className="mb-6">
                   Arachnids occur on all continents except Antarctica but most orders are more abundant and diverse in
@@ -220,11 +251,9 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
                   ecological food webs, particularly with respect to helping control insect populations, is considerable.
                   Many are sensitive to environmental degradation and are considered equilibrium species.
                 </p>
-              </div>
-            )}
+            </div>
 
-            {isNavigationReady && activeSection === "ecology" && (
-              <div className="mb-8">
+            <div data-section="ecology" className="mb-12">
                 <h2 className="font-bold mb-4">Ecology</h2>
                 <p className="mb-6">
                   Arachnids are primarily nocturnal. Several orders (e.g., scorpions, solifuges and opilionids)
@@ -275,11 +304,9 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
                     captionStyle={{ width: 272 }}
                   />
                 </div>
-              </div>
-            )}
+            </div>
 
-            {isNavigationReady && activeSection === "life-history" && (
-              <div className="mb-8">
+            <div data-section="life-history" className="mb-12">
                 <h2 className="font-bold mb-4">Life History</h2>
                 <p className="mb-6">
                   Arachnids have a remarkable life history. Many arachnids exhibit an elaborate, ritualized,
@@ -347,11 +374,9 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
                     captionStyle={{ width: "100%", maxWidth: 188 }}
                   />
                 </div>
-              </div>
-            )}
+            </div>
 
-            {isNavigationReady && activeSection === "conservation" && (
-              <div className="mb-8">
+            <div data-section="conservation" className="mb-12">
                 <h2 className="font-bold mb-4">Conservation</h2>
                 <p className="mb-6">
                   Urgency for the study of any taxonomic group can be argued based on prevailing ignorance about the
@@ -387,11 +412,9 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
                     captionStyle={{ width: 238 }}
                   />
                 </div>
-              </div>
-            )}
+            </div>
 
-            {isNavigationReady && activeSection === "dwindling-expertise" && (
-              <div className="mb-8">
+            <div data-section="dwindling-expertise" className="mb-12">
                 <h2 className="font-bold mb-4">Dwindling Expertise</h2>
                 <p className="mb-6">
                   Despite their notoriety, worldwide distribution, medical, ecological and conservation importance, the
@@ -406,11 +429,9 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
                   Amblypygi (whip spiders), Ricinulei (hooded tick-spiders or ricinuleids), Schizomida (schizomids),
                   Solifugae (camel-spiders, solifuges or solpugids), and Thelyphonida (vinegaroons or whip scorpions).
                 </p>
-              </div>
-            )}
+            </div>
 
-            {isNavigationReady && activeSection === "model-system" && (
-              <div className="mb-8">
+            <div data-section="model-system" className="mb-12">
                 <h2 className="font-bold mb-4">Model System</h2>
                 <p className="mb-6">
                   Many arachnids are easy to find in reasonable numbers and thus conducive to the collection of specimens
@@ -423,7 +444,8 @@ export function ArachnidsClient({ gallery }: ArachnidsClientProps) {
                   arachnid taxa have limited dispersal abilities that restrict their patterns of distribution, making
                   them amenable to biogeographical analysis.
                 </p>
-              </div>
+            </div>
+              </>
             )}
           </div>
         </div>

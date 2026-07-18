@@ -4,6 +4,8 @@ import { hasScrolledPastSideNavTop, scrollToSectionContent } from "@/lib/scrollT
 type UseScrollToSectionOnSelectOptions = {
   /** Scroll to the `[data-section]` wrapper matching `activeSection`. */
   useDataSection?: boolean;
+  /** Skip the "only scroll if past side nav top" guard (for long anchor pages). */
+  alwaysScroll?: boolean;
   sideNavRef?: RefObject<HTMLElement | null>;
   contentRef?: RefObject<HTMLDivElement | null>;
 };
@@ -35,7 +37,7 @@ export const useScrollToSectionOnSelect = (
     const sideNavElement =
       options.sideNavRef?.current ?? (sideNavFromDom instanceof HTMLElement ? sideNavFromDom : null);
 
-    if (!hasScrolledPastSideNavTop(sideNavElement)) {
+    if (!options.alwaysScroll && !hasScrolledPastSideNavTop(sideNavElement)) {
       return;
     }
 
@@ -49,7 +51,7 @@ export const useScrollToSectionOnSelect = (
       sectionId: options.useDataSection ? activeSection : undefined,
       mobileSideNavOffset,
     });
-  }, [activeSection, options.contentRef, options.sideNavRef, options.useDataSection]);
+  }, [activeSection, options.alwaysScroll, options.contentRef, options.sideNavRef, options.useDataSection]);
 
   return { contentRef, requestSectionScroll, cancelSectionScroll };
 };
