@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import { getSiteSettings } from "@/lib/content";
 import { Header } from "@/app/components/Header";
 import { Footer } from "./components/Footer";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sourceSans = Source_Sans_3({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-source-sans",
+  display: "swap",
+  weight: ["400", "600", "700"],
+  fallback: [
+    "system-ui",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue",
+    "Arial",
+    "sans-serif",
+  ],
 });
 
 export const metadata: Metadata = {
@@ -28,10 +35,8 @@ export default function RootLayout({
   const { navItems } = getSiteSettings();
 
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={sourceSans.variable}>
+      <body className="antialiased">
         <Header navItems={navItems} />
         <div className="pt-[var(--header-height)]">
           {children}
