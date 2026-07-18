@@ -11,6 +11,7 @@ export type Publication = {
   volume: string | null;
   pages: string | null;
   doi: string | null;
+  citationHtml?: string;
 };
 
 const stripPublicationHtml = (html: string) =>
