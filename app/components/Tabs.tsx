@@ -23,8 +23,8 @@ export function Tabs<T extends string>({ options, value, onChange }: TabsProps<T
               onClick={() => onChange(option.value)}
               className={`relative -mb-px px-1 pb-2 text-sm font-medium transition-colors ${
                 isActive
-                  ? "text-gray-900 border-b-2 border-gray-900"
-                  : "text-gray-600 border-b-2 border-transparent hover:text-gray-800"
+                  ? "border-b-2 border-color-primary"
+                  : "border-b-2 border-transparent hover:text-color-primary"
               }`}
               aria-selected={isActive}
             >

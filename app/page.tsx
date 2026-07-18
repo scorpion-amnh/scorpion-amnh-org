@@ -18,26 +18,26 @@ export default function Home() {
       <div className="container mx-auto max-w-5xl px-6 py-12">
         {/* Main Content */}
         <div className="mb-8">
-          <h1 className="text-5xl font-bold mb-2 text-gray-900">Arachnology at AMNH</h1>
-          <h2 className="text-3xl font-semibold mb-4 text-gray-700">Scorpion Systematics Research Group</h2>
-          <h3 className="text-xl text-gray-600 mb-8">Division of Invertebrate Zoology at the American Museum of Natural History</h3>
+          <h1 className="font-bold mb-2">Arachnology at AMNH</h1>
+          <h2 className="font-semibold mb-4">Scorpion Systematics Research Group</h2>
+          <h3 className="mb-8">Division of Invertebrate Zoology at the American Museum of Natural History</h3>
           
-          {/* <p className="text-lg leading-8 text-gray-700 mb-8">
+          {/* <p className="mb-8">
             The Arachnology Lab at the AMNH focuses on the taxonomy, phylogeny and biogeography of scorpions and related arachnid orders. There are many compelling reasons to study these organisms. Arachnids are ancient, ecologically, morphologically and taxonomically diverse, distributed in most terrestrial habitats and elevations on all continents except Antarctica, and some are economically or medically important. Arachnids inspire fear and fascination. Many species are threatened yet little is known about their biology, new species remain to be discovered, and there are few experts globally. The world arachnid fauna will remain poorly known until more specialists are trained and prospects for their employment improve.
           </p> */}
-          <p className="text-lg leading-8 text-gray-700 mb-8">Arachnology at the AMNH spans nearly a century. It began with Willis J. Gertsch, the first Curator of Arachnida, who served for 36 years, from his appointment in 1933 until his retirement in 1968. Gertsch was briefly succeeded by John L. Cooke, from 1969 to 1972, who was in turn succeeded by Norman I. Platnick, Curator of Arachnida from 1973 until his retirement, 41 years later, in 2014. From 2002 onwards, when Lorenzo Prendini was appointed Curator of non-spider arachnids and myriapods, Platnick curated the collections of Araneae (spiders) and Ricinulei (hooded tick-spiders). Prendini assumed responsibility for all Arachnida and Myriapoda after Platnick’s retirement.</p>
+          <p className="mb-8">Arachnology at the AMNH spans nearly a century. It began with Willis J. Gertsch, the first Curator of Arachnida, who served for 36 years, from his appointment in 1933 until his retirement in 1968. Gertsch was briefly succeeded by John L. Cooke, from 1969 to 1972, who was in turn succeeded by Norman I. Platnick, Curator of Arachnida from 1973 until his retirement, 41 years later, in 2014. From 2002 onwards, when Lorenzo Prendini was appointed Curator of non-spider arachnids and myriapods, Platnick curated the collections of Araneae (spiders) and Ricinulei (hooded tick-spiders). Prendini assumed responsibility for all Arachnida and Myriapoda after Platnick’s retirement.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Collections Section */}
           <div className="lg:col-span-1 order-2 lg:order-1">
-            <h4 className="text-2xl font-bold mb-6 text-gray-900">Collections</h4>
+            <h4 className="font-bold mb-6">Collections</h4>
             
             <div className="grid gap-6 mb-6">
               <div>
-                <h5 className="text-lg font-semibold mb-3 text-gray-900">Chelicerata</h5>
-                <h6 className="font-semibold mb-1 text-gray-900">Arachnida</h6>
-                <ul className="list-disc list-inside text-gray-700 mb-3 space-y-1">
+                <h5 className="font-semibold mb-3">Chelicerata</h5>
+                <h6 className="font-semibold mb-1">Arachnida</h6>
+                <ul className="list-disc list-inside mb-3 space-y-1">
                   <li>Acari (mites and ticks)</li>
                   <li>Amblypygi (whip spiders)</li>
                   <li>Araneae (spiders)</li>
@@ -50,14 +50,14 @@ export default function Home() {
                   <li>Solifugae (camel-spiders, solifuges or solpugids)</li>
                   <li>Thelyphonida (vinegaroons or whip scorpions)</li>
                 </ul>
-                <h6 className="font-semibold text-gray-900">Xiphosura</h6>
+                <h6 className="font-semibold">Xiphosura</h6>
                 <p className="mb-3">Horseshoe crabs</p>
-                <h6 className="font-semibold text-gray-900">Pycnogonida</h6>
+                <h6 className="font-semibold">Pycnogonida</h6>
                 <p>Sea spiders</p>
               </div>
               <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-1">Myriapoda</h5>
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                <h5 className="font-semibold mb-1">Myriapoda</h5>
+                <ul className="list-disc list-inside space-y-1">
                   <li>Chilopoda (centipedes)</li>
                   <li>Diplopoda (millipedes)</li>
                   <li>Pauropoda (pauropods)</li>
@@ -66,12 +66,12 @@ export default function Home() {
               </div>
             </div>
             
-            <p className="text-gray-700 mb-6">
-              See <Link href="/collections" className="text-blue-600 hover:text-blue-800 underline">Collections</Link> for more information.
+            <p className="mb-6">
+              See <Link href="/collections" className="text-color-link hover:text-color-link-hover underline">Collections</Link> for more information.
             </p>
 
-            <h4 className="text-2xl font-bold mb-2 text-gray-900">Visits and Requests</h4>
-            <p className="text-gray-700">Queries regarding visits to the collections, loan requests, and/or specimen donations should be addressed to <Link href="/people#principal-investigator" className="text-blue-600 hover:text-blue-800 underline">Lorenzo Prendini</Link>, Curator of Arachnida and Myriapoda, and <Link href="/people#museum-specialists" className="text-blue-600 hover:text-blue-800 underline">Pío Colmenares</Link>, Museum Specialist responsible for management of the collections, processing loan requests, and assisting visitors.</p>
+            <h4 className="font-bold mb-2">Visits and Requests</h4>
+            <p>Queries regarding visits to the collections, loan requests, and/or specimen donations should be addressed to <Link href="/people#principal-investigator" className="text-color-link hover:text-color-link-hover underline">Lorenzo Prendini</Link>, Curator of Arachnida and Myriapoda, and <Link href="/people#museum-specialists" className="text-color-link hover:text-color-link-hover underline">Pío Colmenares</Link>, Museum Specialist responsible for management of the collections, processing loan requests, and assisting visitors.</p>
           </div>
 
           {/* Image Gallery */}
@@ -87,7 +87,7 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <figcaption className="text-sm text-gray-600 mt-3 italic">
+                <figcaption className="text-meta mt-3">
                   Willis J. Gertsch
                 </figcaption>
               </figure>
@@ -101,7 +101,7 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <figcaption className="text-sm text-gray-600 mt-3 italic">
+                <figcaption className="text-meta mt-3">
                   John L. Cooke
                 </figcaption>
               </figure>
@@ -115,7 +115,7 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <figcaption className="text-sm text-gray-600 mt-3 italic">
+                <figcaption className="text-meta mt-3">
                   Norman I. Platnick
                 </figcaption>
               </figure>

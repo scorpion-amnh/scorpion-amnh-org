@@ -8,7 +8,7 @@ export function TechnicalStaffSection({ isActive, tab, onTabChange }: TabbedPeop
   return (
     <div data-section="technical-staff" className={isActive ? 'block' : 'hidden'}>
         <div>
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-8 text-gray-900">Technical Staff</h2>
+          <h2 className="font-bold mt-8 lg:mt-0 mb-8">Technical Staff</h2>
           <PeopleSectionTabs
             value={tab}
             onChange={(value) => onTabChange(value)}
@@ -26,9 +26,9 @@ export function TechnicalStaffSection({ isActive, tab, onTabChange }: TabbedPeop
                 />
               </PeopleCardMedia>
               <PeopleCardBody>
-                <h3 className="text-xl font-bold mb-1 text-gray-900">Steve Thurston</h3>
-                <p className="text-lg text-gray-600 mb-4">Scientific Illustrator</p>
-                <p className="text-gray-700">
+                <h3 className="font-bold mb-1">Steve Thurston</h3>
+                <p className="mb-4">Scientific Illustrator</p>
+                <p>
                   While completing his BS in Horticulture at the University of Connecticut (1977), Steve was trained by M.J. Brush in the Biological Illustration studio and began working as a scientific illustrator, drawing bugs for Dr. James A. Slater. He later received his MFA in New Genres/Video at The San Francisco Art Institute and has worked variously as a carpenter, video maker, artist and illustrator. He began full time employment at the AMNH in 1999 as a Scientific Assistant, providing illustration, photo and graphic support to the Division of Invertebrate Zoology.
                 </p>
               </PeopleCardBody>
@@ -46,9 +46,9 @@ export function TechnicalStaffSection({ isActive, tab, onTabChange }: TabbedPeop
                 />
               </PeopleCardMedia>
               <PeopleCardBody>
-                <h3 className="text-xl font-bold mb-1 text-gray-900">Victoria Long</h3>
-                <p className="text-lg text-gray-600 mb-4">Staff Member</p>
-                <p className="text-gray-700">
+                <h3 className="font-bold mb-1">Victoria Long</h3>
+                <p className="mb-4">Staff Member</p>
+                <p>
                   Victoria Long Lab Technician Staff from 2021 to 2026 Victoria worked in the Arachnology Lab as a Technician on the NSF Pedipalpi grant (PI: Prendini) from 2021 to 2026, conducting DNA extraction, quantitation, PCR and sequencing.
                 </p>
               </PeopleCardBody>
@@ -61,8 +61,8 @@ export function TechnicalStaffSection({ isActive, tab, onTabChange }: TabbedPeop
             className={`people-compact ${tab === 'alumni' ? 'block' : 'hidden'}`}
           >
           {/* Alumni Section */}
-          <h3 className="text-2xl font-bold mt-12 mb-2 text-gray-900">Alumni</h3>
-          <p className="text-xl text-gray-600 mb-8">Former technical staff of the Arachnology Lab at AMNH</p>
+          <h3 className="font-bold mt-12 mb-2">Alumni</h3>
+          <p className="text-xl mb-8">Former technical staff of the Arachnology Lab at AMNH</p>
 
           {/* Eleanor Goetz */}
           <PeopleCard containerClassName="mb-8 pb-8">
@@ -76,10 +76,10 @@ export function TechnicalStaffSection({ isActive, tab, onTabChange }: TabbedPeop
                 />
               </PeopleCardMedia>
               <PeopleCardBody>
-                <h4 className="text-lg font-bold mb-1 text-gray-900">Eleanor Goetz</h4>
-                <p className="text-base text-gray-600 mb-1">Lab Technician</p>
-                <p className="text-sm text-gray-500 mb-3">Technical staff from 2019 to 2021</p>
-                <p className="text-gray-700">
+                <h4 className="font-bold mb-1">Eleanor Goetz</h4>
+                <p className="text-base mb-1">Lab Technician</p>
+                <p className="text-meta mb-3">Technical staff from 2019 to 2021</p>
+                <p>
                   Eleanor graduated from Smith College in 2019 with a BA in Biological Sciences, where she was a member of the Katz Lab and focussed on the lifecycles of foraminifera. She started in the Prendini lab as a Science Research Mentoring Program student in 2013 and continued to volunteer before starting as a Lab Technician in the fall of 2019. Eleanor currently works in the molecular lab doing DNA extractions, PCRs, Sanger Sequencing preparations, and generating molecular data.
                 </p>
               </PeopleCardBody>
@@ -113,10 +113,10 @@ export function TechnicalStaffSection({ isActive, tab, onTabChange }: TabbedPeop
                     />
                   </div>
                   <PeopleCardBody>
-                    <h4 className="text-lg font-bold mb-1 text-gray-900">{person.name}</h4>
-                    <p className="text-base text-gray-600 mb-1">{person.title}</p>
-                    <p className="text-sm text-gray-500 mb-3">Technical staff from {person.years}</p>
-                    <p className="text-gray-700">
+                    <h4 className="font-bold mb-1">{person.name}</h4>
+                    <p className="text-base mb-1">{person.title}</p>
+                    <p className="text-meta mb-3">Technical staff from {person.years}</p>
+                    <p>
                       {person.title === 'Laboratory Technician' && 
                         `${person.name.split(' ')[0]} worked in the Molecular Systematics Laboratory of the Division of Invertebrate Zoology, AMNH, isolating, amplifying, and sequencing scorpion, spider, amblypygid, solifuge, uropygid and schizomid DNA. ${person.name.split(' ')[0] === 'Kanvaly' ? 'He' : 'She'} assisted with the training of postdoctoral fellows, undergraduate and high school students, and scientists visiting the lab.`
                       }

@@ -53,7 +53,7 @@ const formatCitation = (publication: Publication) => {
       {publication.doi ? (
         <>
           {" "}
-          <ExternalLink href={publication.doi} className="text-blue-600 hover:underline">
+          <ExternalLink href={publication.doi} className="text-color-link hover:text-color-link-hover underline">
             {publication.doi}
           </ExternalLink>
         </>
@@ -79,11 +79,11 @@ export function PublicationsClient({ publications }: PublicationsClientProps) {
   return (
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">
-        <h1 className="text-5xl font-bold mb-12 text-gray-900">Scientific Publications</h1>
+        <h1 className="font-bold mb-12">Scientific Publications</h1>
 
         {years.map((year) => (
           <section key={year} className="mb-12">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">{year}</h2>
+            <h2 className="font-bold mb-6">{year}</h2>
             <div className="space-y-4">
               {publicationsByYear[year].map((publication, index) => (
                 <p key={`${year}-${index}`}>

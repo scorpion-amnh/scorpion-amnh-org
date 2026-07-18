@@ -29,14 +29,12 @@ export function PersonProfileCard({ person, containerClassName = "mb-8 pb-8" }: 
         )}
       </PeopleCardMedia>
       <PeopleCardBody>
-        <h3 className="text-lg font-bold mb-1 text-gray-900">{person.name}</h3>
+        <h3 className="font-bold mb-1">{person.name}</h3>
         {person.affiliation ? (
-          <p className="text-base text-gray-600 mb-1">{person.affiliation}</p>
+          <p className="text-base mb-1">{person.affiliation}</p>
         ) : null}
-        {person.years ? <p className="text-sm text-gray-500 mb-3">{person.years}</p> : null}
-        {person.bio ? (
-          <MarkdownContent content={person.bio} className="text-gray-700" />
-        ) : null}
+        {person.years ? <p className="text-meta mb-3">{person.years}</p> : null}
+        {person.bio ? <MarkdownContent content={person.bio} /> : null}
       </PeopleCardBody>
     </PeopleCard>
   );

@@ -58,9 +58,9 @@ export function PeopleClient({
   return (
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">
-        <h1 className="text-5xl font-bold mb-8 text-gray-900">People</h1>
+        <h1 className="font-bold mb-8">People</h1>
 
-        <p className="text-lg leading-8 text-gray-700 mb-8">
+        <p className="mb-8">
           The Arachnology Lab, headed by Lorenzo Prendini, Associate Curator (Arachnids and Myriapods),
           includes permanent specialists, various laboratory assistants, postdoctoral fellows, and PhD students.
           Every year, the Group accommodates several visiting scientists, undergraduate students, high school students, and volunteers.

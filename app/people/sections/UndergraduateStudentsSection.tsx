@@ -28,8 +28,8 @@ export function UndergraduateStudentsSection({
   return (
     <div data-section="undergraduate-students" className={isActive ? "block" : "hidden"}>
       <div>
-        <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Undergraduate Students</h2>
-        <p className="text-xl text-gray-600 mb-8">
+        <h2 className="font-bold mt-8 lg:mt-0 mb-2">Undergraduate Students</h2>
+        <p className="text-xl mb-8">
           Over the years, several undergraduate students have worked in the Arachnology Lab supported by various internships. Most have gone on to graduate school and beyond. We acknowledge and appreciate their work. If you are interested in interning in the Arachnology Lab at the AMNH please visit the{" "}
           <ExternalLink href="https://www.amnh.org/our-research/richard-gilder-graduate-school/academics-and-research/fellowship-and-grant-opportunities/undergraduate-fellowships/reu-biology-program">
             Research Experiences for Undergraduates Program.

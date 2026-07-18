@@ -96,7 +96,7 @@ export const PeopleSearch = ({
             aria-autocomplete="list"
             aria-expanded={isSearchOpen}
             aria-controls="people-search-results"
-            className="w-full rounded-md border border-gray-300 bg-white py-3 pl-11 pr-4 text-base text-gray-900 shadow-sm focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500"
+            className="w-full rounded-md border border-gray-300 bg-white py-3 pl-11 pr-4 text-base shadow-sm focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500"
           />
           {isSearchOpen && (
             <div className="absolute z-50 mt-2 w-full rounded-md border border-gray-200 bg-white shadow-lg">
@@ -113,14 +113,14 @@ export const PeopleSearch = ({
                         onClick={() => onPersonSelect(person.id, person.name, person.sectionId, person.tab)}
                         className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
                       >
-                        <span className="text-gray-900">{person.name}</span>
-                        <span className="ml-4 text-sm text-gray-500">{person.sectionLabel}</span>
+                        <span>{person.name}</span>
+                        <span className="ml-4 text-meta">{person.sectionLabel}</span>
                       </button>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <div className="px-4 py-3 text-sm text-gray-500">No matches found.</div>
+                <div className="px-4 py-3 text-meta">No matches found.</div>
               )}
             </div>
           )}

@@ -10,8 +10,8 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
   return (
     <div data-section="volunteers" className={isActive ? 'block' : 'hidden'}>
         <div>
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Volunteers and Field Assistants</h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <h2 className="font-bold mt-8 lg:mt-0 mb-2">Volunteers and Field Assistants</h2>
+          <p className="text-xl mb-8">
             The Arachnology Lab at the AMNH has had many dedicated volunteers work with us over the years. With their help we have been able to accomplish a great deal of work. We would like to thank all of our volunteers for their invaluable assistance. If you are interested in volunteering in the Arachnology Lab at the AMNH please visit the <ExternalLink href="https://www.amnh.org/join-support/volunteer-now">Volunteer Department.</ExternalLink>
           </p>
           <PeopleSectionTabs
@@ -32,9 +32,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
                 />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Soleil Blanquera</h4>
-              <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Soleil Blanquera</h4>
+              <p className="text-meta mb-2">Current Volunteer</p>
+              <p>
                 Soleil volunteered at the Arachnology Lab in 2025 and 2026, conducting DNA extraction, quantitation, PCR and sequencing, under the supervision of Colby Sain.
               </p>
             </PeopleCardBody>
@@ -52,9 +52,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
                 />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Brian Sperber</h4>
-              <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Brian Sperber</h4>
+              <p className="text-meta mb-2">Current Volunteer</p>
+              <p>
                 Brian volunteered in the Arachnida and Myriapoda from 2021, assisting Pio Colmenares with sorting, organization and curation of collections.
               </p>
             </PeopleCardBody>
@@ -72,9 +72,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Victoria Long</h4>
-              <p className="text-sm text-gray-500 mb-2">Current Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Victoria Long</h4>
+              <p className="text-meta mb-2">Current Volunteer</p>
+              <p>
                 Victoria is a volunteer who previously worked in the Arachnology Lab as a Technician.
               </p>
             </PeopleCardBody>
@@ -96,9 +96,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">George Tsinias</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">George Tsinias</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 George helped with curatorial tasks, like labeling and rebottling material, in the main collection.
               </p>
             </PeopleCardBody>
@@ -116,9 +116,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Christian Liriano</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Christian Liriano</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Christian prepared material for loans in the spider collection and was interested in harvestmen.
               </p>
             </PeopleCardBody>
@@ -136,9 +136,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Gerbi Carreon</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Gerbi Carreon</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Gerbi performed various curatorial activities in the spider collection. He also received training to do DNA extractions and PCRs in the molecular lab.
               </p>
             </PeopleCardBody>
@@ -156,9 +156,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Debbie Alwill</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Debbie Alwill</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Debbie assisted with labeling and rebottling specimens and packing loans.
               </p>
             </PeopleCardBody>
@@ -176,9 +176,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Jasmine Alim</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Jasmine Alim</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Jasmine assisted in the molecular lab with DNA extractions and PCR reactions, also organizing DNA samples.
               </p>
             </PeopleCardBody>
@@ -190,9 +190,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Adrian Armstrong" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Adrian Armstrong</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Adrian Armstrong</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Adrian is the Invertebrate Conservation Scientist in the provincial government Nature Conservation body in KwaZulu-Natal, South Africa. He has generously donated material to the AMNH for more than ten years.
               </p>
             </PeopleCardBody>
@@ -210,9 +210,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Reginald Christiaan</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Reginald Christiaan</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Reginald is a scorpion enthusiast who assisted Prendini with field collections of scorpions in South Africa.
               </p>
             </PeopleCardBody>
@@ -224,9 +224,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Mark Cooper" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Mark Cooper</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Mark Cooper</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Mark is a myriapodologist who graduated with a Masters from the University of Cape Town. He accompanied Lorenzo Prendini on several expeditions to collect arachnids in South Africa.
               </p>
             </PeopleCardBody>
@@ -244,9 +244,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Howard W. Fiedler</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Howard W. Fiedler</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Howard assisted with rebottling specimens, organization of specimen and reprint collections, recording scorpion measurement data and digitizing handwritten catalogs.
               </p>
             </PeopleCardBody>
@@ -264,9 +264,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Stefan Foord</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Stefan Foord</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Stefan was an arachnologist and professor at the University of Venda, South Africa who generously donated material to the AMNH. RIP.
               </p>
             </PeopleCardBody>
@@ -278,9 +278,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Ann Garbacki" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Ann Garbacki</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Ann Garbacki</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Ann assisted with labeling of specimens and inventorying specimens.
               </p>
             </PeopleCardBody>
@@ -292,9 +292,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Tom Gartner" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Tom Gartner</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Tom Gartner</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Tom assisted with sorting and labeling the Arachnid and Myriapod Collections and packing and unpacking loans.
               </p>
             </PeopleCardBody>
@@ -312,9 +312,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Tom Sullivan</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Tom Sullivan</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Tom assisted with sorting and labeling the Arachnid and Myriapod Collections and packing and unpacking loans.
               </p>
             </PeopleCardBody>
@@ -332,9 +332,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Patrick Gildenhuys</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Patrick Gildenhuys</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Patrick is a tarantula enthusiast who accompanied Lorenzo Prendini on several expeditions to collect arachnids in South Africa and neighboring countries, and has generously donated material to the AMNH.
               </p>
             </PeopleCardBody>
@@ -352,9 +352,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Charles Haddad</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Charles Haddad</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Charles is an arachnologist and professor at the University of the Free State, Bloemfontein, South Africa who has generously donated material to the AMNH for several years.
               </p>
             </PeopleCardBody>
@@ -366,9 +366,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Peter Hawkes" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Peter Hawkes</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Peter Hawkes</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Peter is an entomologist who runs AfriBugs, an EIA in South Africa. He has generously donated material to the AMNH for several years.
               </p>
             </PeopleCardBody>
@@ -386,9 +386,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Siegfried Huber</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Siegfried Huber</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Since 2000, Siegfried has conducted expeditions to Oman, Saudi Arabia, Thailand, and New Caledonia, and elsewhere, collecting arachnids. He has generously donated specimens collected during his travels to the AMNH.
               </p>
             </PeopleCardBody>
@@ -406,9 +406,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Jeremy Huff</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Jeremy Huff</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Jeremy Huff is a former volunteer and a former employee.
               </p>
             </PeopleCardBody>
@@ -420,9 +420,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Dawid Jacobs" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Dawid Jacobs</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Dawid Jacobs</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Dawid is an entomologist who assisted Prendini with fieldwork in South Africa and generously donated material to the AMNH for several years.
               </p>
             </PeopleCardBody>
@@ -440,9 +440,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Simone Longe</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Simone Longe</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Simone assisted in the molecular lab with DNA extractions and PCR reactions, also organizing DNA samples.
               </p>
             </PeopleCardBody>
@@ -454,9 +454,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Allyson Mellone" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Allyson Mellone</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Allyson Mellone</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Allyson assisted with labeling and rebottling specimens.
               </p>
             </PeopleCardBody>
@@ -474,9 +474,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Warren Savary</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Warren Savary</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Warren Savary, a former compliance officer at the U.S. Food and Drug Administration and Field Associate of the California Academy of Sciences, served as research collaborator and webmaster for the NSF-funded REVSYS Vaejovidae grant and, from 2007-2012, as research collaborator and webmaster for the BS&I Solifugae grant. He visited the AMNH Arachnid and Myriapod Collections on several occasions to sort and identify solifuges and vaejovid scorpions.
               </p>
             </PeopleCardBody>
@@ -494,9 +494,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Rick West</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700 mb-2">
+              <h4 className="font-bold mb-1">Rick West</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p className="mb-2">
                 Rick West, one of the world's authorities on tarantulas (Theraphosidae), has traveled to over 27 countries to study them. Rick has generously donated interesting arachnids to the AMNH for many years.
               </p>
               <p>
@@ -511,9 +511,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Asel Zhetigenova" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Asel Zhetigenova</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Asel Zhetigenova</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Asel assisted with labeling and rebottling specimens.
               </p>
             </PeopleCardBody>
@@ -525,9 +525,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Howard Bichard" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Howard Bichard</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Howard Bichard</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Howard accompanied Prendini on several expeditions to collect arachnids in South Africa.
               </p>
             </PeopleCardBody>
@@ -539,9 +539,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Abigail Carlton" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Abigail Carlton</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Abigail Carlton</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Abigail assisted with sorting, rebottling, labeling, reorganizing, and databasing specimens and tissue samples in the collection.
               </p>
             </PeopleCardBody>
@@ -559,9 +559,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Ofelia Delgado</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Ofelia Delgado</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Ofelia Delgado is a former volunteer and a former employee.
               </p>
             </PeopleCardBody>
@@ -579,9 +579,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">David Desoeur</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">David Desoeur</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 David graduated with a B.Sc. in Biology from the University of Guelph and was interested in the taxonomy of Florida <em>Centruroides</em>. In 2008, he traveled to Florida and the Keys to collect <em>Centruroides</em> samples for morphology and DNA isolation.
               </p>
             </PeopleCardBody>
@@ -593,9 +593,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Suzanna Dodd" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Suzanna Dodd</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Suzanna Dodd</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Suzanna rebottled the type collection, part of the main collection, and assisted with labeling new acquisitions.
               </p>
             </PeopleCardBody>
@@ -613,9 +613,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Ian Engelbrecht</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Ian Engelbrecht</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Ian was the Invertebrate Conservation Scientist in the provincial government Nature Conservation body in Gauteng, South Africa. He started participating in field expeditions for the AMNH in 2005 with an expedition to the Northern Cape and southern Namibia and has since undertaken numerous other trips and generously donated material to the collection.
               </p>
             </PeopleCardBody>
@@ -627,9 +627,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Carine Galvão" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Carine Galvão</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Carine Galvão</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Carine assisted with the curation of an extensive collection of scorpions extracted from pitfall traps placed across southern California by the U.S. Geological Survey (USGS), San Diego between 1996 and 2006.
               </p>
             </PeopleCardBody>
@@ -641,9 +641,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Tiffany Gentry" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Tiffany Gentry</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Tiffany Gentry</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Tiffany assisted with sorting, rebottling, labeling, reorganizing, and databasing specimens and tissue samples, and with sorting and filing the Arachnid and Myriapod Reprint Collection.
               </p>
             </PeopleCardBody>
@@ -661,9 +661,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Ilsa Kaim</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Ilsa Kaim</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Ilsa volunteered at the AMNH for over 20 years. Between 2004-2011, she worked with the Arachnology Group to database the reprint collection in Endnote, and she also databased the type collection.
               </p>
             </PeopleCardBody>
@@ -681,9 +681,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Sergios-Orestis Kolokotronis</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Sergios-Orestis Kolokotronis</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Sergios holds a PhD in Ecology and Evolutionary Biology from Columbia University and had a <ExternalLink href="https://research.amnh.org/users/koloko">postdoc</ExternalLink> in the AMNH Sackler Institute for Comparative Genomics and Center for Conservation Genetics, where he coordinated the DNA Barcoding Initiative for Conservation. He created and maintained the lab website from 2006 until 2008.
               </p>
             </PeopleCardBody>
@@ -701,9 +701,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Sulata Maity</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Sulata Maity</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Sulata volunteered in the Molecular Systematics Laboratory checking DNA concentration with nanodrop.
               </p>
             </PeopleCardBody>
@@ -721,9 +721,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Kari McWest</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700 mb-2">
+              <h4 className="font-bold mb-1">Kari McWest</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p className="mb-2">
                 Kari received his Master's from West Texas A&M University, Canyon, where he studied scorpions under David Sissom. He assisted the NSF-REVSYS Vaejovidae project with fieldwork in Mexico and the U.S.
               </p>
               <p>
@@ -744,9 +744,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Randy Mercurio</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Randy Mercurio</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Randy Mercurio is a former volunteer and former employee.
               </p>
             </PeopleCardBody>
@@ -758,9 +758,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Israel Na'aman" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Israel Na'aman</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Israel Na'aman</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Israel received his Masters from the Hebrew University of Jerusalem. During a short visit to the AMNH, he digitized part of the former Lorenzo Prendini scorpion collection, now incorporated into the AMNH collections of Arachnida and Myriapoda.
               </p>
             </PeopleCardBody>
@@ -772,9 +772,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Danielle Parsons" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Danielle Parsons</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Danielle Parsons</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Danielle assisted with sorting, rebottling, labeling, reorganizing, and databasing the arachnid collection.
               </p>
             </PeopleCardBody>
@@ -786,9 +786,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Fabienne Paumet" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Fabienne Paumet</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Fabienne Paumet</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Fabienne assisted with sorting, rebottling, labeling, reorganizing, and databasing the arachnid collection.
               </p>
             </PeopleCardBody>
@@ -800,9 +800,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Warren Schmidt" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Warren Schmidt</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Warren Schmidt</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Warren accompanied Lorenzo Prendini on an expedition to collect arachnids in Malawi.
               </p>
             </PeopleCardBody>
@@ -814,9 +814,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Susan Tosier" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Susan Tosier</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Susan Tosier</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Susan assisted with sorting, rebottling, labeling, and reorganizing, and databasing the arachnid collection.
               </p>
             </PeopleCardBody>
@@ -834,9 +834,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Zach Valois</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Zach Valois</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Zach generously assisted the NSF-REVSYS Vaejovidae project with fieldwork throughout Arizona, Nevada, and Utah. Zach was studying scorpion biogeography at the Utah State University. RIP.
               </p>
             </PeopleCardBody>
@@ -854,9 +854,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">John Visser</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">John Visser</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 John Visser was a retired herpetologist with a fascination for scorpions. John's association with the AMNH went back to the time of the herpetologist Charles Mitchell Bogert. He assisted the AMNH with donations of arachnids for several years before he passed away.
               </p>
             </PeopleCardBody>
@@ -868,9 +868,9 @@ export function VolunteersSection({ isActive, tab, onTabChange }: TabbedPeopleSe
               <PhotoPlaceholder name="Peg Werns" />
             </PeopleCardMedia>
             <PeopleCardBody>
-              <h4 className="text-base font-bold mb-1 text-gray-900">Peg Werns</h4>
-              <p className="text-sm text-gray-500 mb-2">Former Volunteer</p>
-              <p className="text-gray-700">
+              <h4 className="font-bold mb-1">Peg Werns</h4>
+              <p className="text-meta mb-2">Former Volunteer</p>
+              <p>
                 Peg assisted with sorting, rebottling, labeling, reorganizing, and databasing specimens and tissue samples.
               </p>
             </PeopleCardBody>

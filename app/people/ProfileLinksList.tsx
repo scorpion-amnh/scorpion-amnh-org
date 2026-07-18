@@ -16,11 +16,11 @@ export const ProfileLinksList = ({
   heading = "CV and Online Profiles",
 }: ProfileLinksListProps) => (
   <div className="space-y-3 mt-8 mb-8">
-    <h4 className="text-base font-bold mb-3 text-gray-900">{heading}</h4>
+    <h4 className="font-bold mb-3">{heading}</h4>
     {links.map((link) => (
       <p key={link.href}>
         {link.external === false ? (
-          <a href={link.href} className="text-blue-600 hover:text-blue-800 underline">
+          <a href={link.href} className="text-color-link hover:text-color-link-hover underline">
             {link.label}
           </a>
         ) : (

@@ -22,8 +22,8 @@ export function PrincipalInvestigatorSection({ isActive }: PeopleSectionProps) {
   return (
     <div data-section="principal-investigator" className={isActive ? 'block' : 'hidden'}>
         <div id="principal-investigator">
-          <h2 className="text-3xl font-bold mt-8 lg:mt-0 mb-2 text-gray-900">Principal Investigator</h2>
-          <p className="text-xl text-gray-600 mb-8">Head of the Arachnology Lab at AMNH</p>
+          <h2 className="font-bold mt-8 lg:mt-0 mb-2">Principal Investigator</h2>
+          <p className="text-xl mb-8">Head of the Arachnology Lab at AMNH</p>
           
           <div className="pb-8">
             <div className="grid md:grid-cols-5 gap-6">
@@ -38,44 +38,44 @@ export function PrincipalInvestigatorSection({ isActive }: PeopleSectionProps) {
               </div>
               
               <div className="md:col-span-3">
-                <h3 className="text-xl font-bold mb-2 text-gray-900">Lorenzo Prendini</h3>
+                <h3 className="font-bold mb-2">Lorenzo Prendini</h3>
                 <div className="space-y-3 mb-4">
-                  <p className="text-lg text-gray-600 mb-0">
+                  <p className="mb-0">
                     Curator of Arachnida and Myriapoda, Division of Invertebrate Zoology
                   </p>
-                  <p className="text-base text-gray-600 mt-0">
+                  <p className="text-base mt-0">
                     <ExternalLink href="https://www.amnh.org/research/staff-directory/lorenzo-prendini">
                       Lorenzo Prendini: Curator, Invertebrate Zoology, Professor RGGS | AMNH
                     </ExternalLink>
                   </p>
-                  <p className="text-lg text-gray-600 mb-0">
+                  <p className="mb-0">
                     Professor of Comparative Biology, Richard Gilder Graduate School
                   </p>
-                  <p className="text-base text-gray-600 mt-0">
+                  <p className="text-base mt-0">
                     <ExternalLink href="https://www.amnh.org/research/richard-gilder-graduate-school">
                       Graduate Programs at the Museum | Richard Gilder Graduate School
                     </ExternalLink>
                   </p>
-                  <p className="text-lg text-gray-600 mb-0">
+                  <p className="mb-0">
                     Principle Investigator, Institute of Comparative Genomics
                   </p>
-                  <p className="text-base text-gray-600 mt-0">
+                  <p className="text-base mt-0">
                     <ExternalLink href="https://www.amnh.org/research/institute-comparative-genomics">
                       Institute for Comparative Genomics | AMNH
                     </ExternalLink>
                   </p>
-                  <p className="text-lg text-gray-600 mb-0">
+                  <p className="mb-0">
                     Chair, AMNH Scientific Publications
                   </p>
-                  <p className="text-base text-gray-600 mt-0">
+                  <p className="text-base mt-0">
                     <ExternalLink href="https://www.amnh.org/research/scientific-publications">
                       Scientific Publications | American Museum of Natural History
                     </ExternalLink>
                   </p>
-                  <p className="text-lg text-gray-600 mb-0">
+                  <p className="mb-0">
                     Adjunct Professor, Ecology, Evolution and Behavior, City University of New York
                   </p>
-                  <p className="text-base text-gray-600 mt-0">
+                  <p className="text-base mt-0">
                     <ExternalLink href="https://www.gc.cuny.edu/people/lorenzo-prendini">
                       Prendini, Lorenzo | CUNY Graduate Center
                     </ExternalLink>
@@ -84,8 +84,8 @@ export function PrincipalInvestigatorSection({ isActive }: PeopleSectionProps) {
                 <ProfileLinksList links={lorenzoProfileLinks} />
 
                 <div className="mt-8">
-                  <h4 className="text-base font-bold mb-3 text-gray-900">Contact</h4>
-                  <div className="text-gray-700 space-y-1">
+                  <h4 className="font-bold mb-3">Contact</h4>
+                  <div className="space-y-1">
                     <p>Curator of Arachnida and Myriapoda</p>
                     <p>Division of Invertebrate Zoology</p>
                     <p>American Museum of Natural History</p>

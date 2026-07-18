@@ -13,7 +13,7 @@ export function SideNavButton({ isActive, onClick, children }: SideNavButtonProp
       className={`w-full text-left px-4 py-3 rounded-sm font-medium transition-colors ${
         isActive
           ? "bg-gray-800 text-white"
-          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          : "bg-gray-100 hover:bg-gray-200"
       }`}
     >
       {children}

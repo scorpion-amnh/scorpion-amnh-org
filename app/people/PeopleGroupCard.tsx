@@ -23,6 +23,6 @@ export const PeopleGroupCard = ({
     width={width}
     height={height}
     ImageComponent={PeopleImage}
-    captionClassName="text-sm text-gray-600 mt-3 italic"
+    captionClassName="text-meta mt-3"
   />
 );

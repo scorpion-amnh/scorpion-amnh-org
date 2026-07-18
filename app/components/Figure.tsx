@@ -23,7 +23,7 @@ export const Figure = ({
   height,
   className,
   figureClassName = "mb-8",
-  captionClassName = "text-sm text-gray-600 mt-2",
+  captionClassName = "text-meta mt-2",
   imageClassName = "w-full h-auto rounded-sm",
   captionStyle,
   ImageComponent = Image,
