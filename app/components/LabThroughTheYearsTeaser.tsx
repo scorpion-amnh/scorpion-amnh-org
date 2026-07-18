@@ -53,7 +53,7 @@ export const LabThroughTheYearsTeaser = ({ sections }: LabThroughTheYearsTeaserP
           href="/people"
           className="inline-block rounded-sm border border-gray-300 bg-white px-4 py-2 text-color-primary hover:bg-gray-50 transition-colors"
         >
-          Search people directory
+          Search lab members
         </Link>
       </div>
     </section>
