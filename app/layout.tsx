@@ -27,6 +27,39 @@ export const metadata: Metadata = {
   description: getSiteSettings().defaultMetaDescription,
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://scorpion-amnh.org/#lorenzo-prendini",
+      name: "Lorenzo Prendini",
+      jobTitle: "Curator of Arachnida and Myriapoda",
+      worksFor: {
+        "@type": ["Museum", "EducationalOrganization", "ResearchOrganization"],
+        name: "American Museum of Natural History",
+        url: "https://www.amnh.org",
+      },
+      url: "https://scorpion-amnh.org/",
+      sameAs: [
+        "https://www.amnh.org/research/staff-directory/lorenzo-prendini",
+        "https://scholar.google.com/citations?user=fU0VpL0AAAAJ",
+        "https://www.wikidata.org/wiki/Q21389242",
+        "https://orcid.org/0000-0001-8727-7106",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://scorpion-amnh.org/#website",
+      url: "https://scorpion-amnh.org/",
+      name: "Lorenzo Prendini Arachnology Lab",
+      publisher: {
+        "@id": "https://scorpion-amnh.org/#lorenzo-prendini",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -36,6 +69,12 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={sourceSans.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="antialiased">
         <Header navItems={navItems} />
         <div className="pt-[var(--header-height)]">

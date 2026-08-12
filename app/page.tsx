@@ -23,9 +23,9 @@ export default function Home() {
         <div className="mb-6">
           <h1 className="font-bold mb-2">Arachnology at AMNH</h1>
           <h2 className="font-semibold mb-4">Scorpion Systematics Research Group</h2>
-          <h3 className="mb-8">Division of Invertebrate Zoology at the American Museum of Natural History</h3>
+          <h3 className="mb-8">Lorenzo Prendini, Curator of Arachnida and Myriapoda</h3>
           <p className="text-lead">
-            Arachnology at the AMNH spans nearly a century. It began with Willis J. Gertsch, the first Curator of
+            In the division of Invertebrate Zoology at the American Museum of Natural History, Arachnology at the AMNH spans nearly a century. It began with Willis J. Gertsch, the first Curator of
             Arachnida, who served for 36 years, from his appointment in 1933 until his retirement in 1968. Gertsch was
             briefly succeeded by John L. Cooke, from 1969 to 1972, who was in turn succeeded by Norman I. Platnick,
             Curator of Arachnida from 1973 until his retirement, 41 years later, in 2014. From 2002 onwards, when
