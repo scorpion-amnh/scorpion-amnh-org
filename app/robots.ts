@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://scorpion.amnh.org/sitemap.xml",
+    sitemap: "https://scorpion-amnh.org/sitemap.xml",
   };
 }

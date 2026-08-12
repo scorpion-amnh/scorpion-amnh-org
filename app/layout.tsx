@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
 import { getSiteSettings } from "@/lib/content";
 import { Header } from "@/app/components/Header";
+import { JsonLd } from "@/app/components/JsonLd";
+import { SITE_URL } from "@/lib/metadata";
 import { Footer } from "./components/Footer";
 import "./globals.css";
 
@@ -32,7 +34,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://scorpion-amnh.org/#lorenzo-prendini",
+      "@id": `${SITE_URL}/#lorenzo-prendini`,
       name: "Lorenzo Prendini",
       jobTitle: "Curator of Arachnida and Myriapoda",
       worksFor: {
@@ -40,7 +42,7 @@ const jsonLd = {
         name: "American Museum of Natural History",
         url: "https://www.amnh.org",
       },
-      url: "https://scorpion-amnh.org/",
+      url: `${SITE_URL}/people/lorenzo-prendini`,
       sameAs: [
         "https://www.amnh.org/research/staff-directory/lorenzo-prendini",
         "https://scholar.google.com/citations?user=fU0VpL0AAAAJ",
@@ -50,11 +52,11 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://scorpion-amnh.org/#website",
-      url: "https://scorpion-amnh.org/",
+      "@id": `${SITE_URL}/#website`,
+      url: `${SITE_URL}/`,
       name: "Lorenzo Prendini Arachnology Lab",
       publisher: {
-        "@id": "https://scorpion-amnh.org/#lorenzo-prendini",
+        "@id": `${SITE_URL}/#lorenzo-prendini`,
       },
     },
   ],
@@ -70,10 +72,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={sourceSans.variable}>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={jsonLd} />
       </head>
       <body className="antialiased">
         <Header navItems={navItems} />
