@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { JsonLd } from "@/app/components/JsonLd";
-import { LorenzoPrendiniProfile } from "@/app/people/LorenzoPrendiniProfile";
+import { getPeople, getPeopleSectionOrder } from "@/lib/content";
 import { createPageMetadata, SITE_URL } from "@/lib/metadata";
+import { JsonLd } from "@/app/components/JsonLd";
+import { PeopleClient } from "@/app/people/PeopleClient";
+import { RedirectToPeopleSection } from "@/app/people/lorenzo-prendini/RedirectToPeopleSection";
 
 const PAGE_PATH = "/people/lorenzo-prendini";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
@@ -56,34 +57,21 @@ const profilePageJsonLd = {
   },
 };
 
+/**
+ * Renders the same markup as `/people/?section=principal-investigator&tab=current`
+ * so search engines can index Lorenzo Prendini's bio under a name-specific URL.
+ * Real visitors are redirected on to that interactive URL immediately after mount
+ * (see RedirectToPeopleSection) — the people directory itself is unchanged.
+ */
 export default function LorenzoPrendiniPage() {
+  const people = getPeople();
+  const undergraduateStudentsOrder = getPeopleSectionOrder("undergraduate-students");
+
   return (
-    <div className="bg-white min-h-screen">
+    <>
       <JsonLd data={profilePageJsonLd} />
-      <div className="container mx-auto max-w-5xl px-6 py-12">
-        <nav aria-label="Breadcrumb" className="text-meta mb-6">
-          <Link href="/people" className="text-color-link hover:text-color-link-hover underline">
-            People
-          </Link>
-          <span className="mx-2" aria-hidden="true">/</span>
-          <span>Lorenzo Prendini</span>
-        </nav>
-
-        <h1 className="font-bold mb-2">Lorenzo Prendini</h1>
-        <p className="text-lead mb-8">
-          Curator of Arachnida and Myriapoda, and Head of the Arachnology Lab at the American Museum of Natural History
-        </p>
-
-        <div className="pb-8">
-          <LorenzoPrendiniProfile nameHeading={null} />
-        </div>
-
-        <p>
-          <Link href="/people#principal-investigator" className="text-color-link hover:text-color-link-hover underline">
-            View the full Arachnology Lab roster
-          </Link>
-        </p>
-      </div>
-    </div>
+      <RedirectToPeopleSection />
+      <PeopleClient people={people} undergraduateStudentsOrder={undergraduateStudentsOrder} />
+    </>
   );
 }

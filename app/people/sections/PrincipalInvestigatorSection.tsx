@@ -1,6 +1,5 @@
 'use client';
 
-import Link from "next/link";
 import { LorenzoPrendiniProfile } from "@/app/people/LorenzoPrendiniProfile";
 import type { PeopleSectionProps } from "@/app/people/sections/types";
 
@@ -13,15 +12,6 @@ export function PrincipalInvestigatorSection({ isActive }: PeopleSectionProps) {
 
           <div className="pb-8">
             <LorenzoPrendiniProfile />
-
-            <p className="mt-6">
-              <Link
-                href="/people/lorenzo-prendini"
-                className="text-color-link hover:text-color-link-hover underline"
-              >
-                View Lorenzo Prendini&apos;s full biography page
-              </Link>
-            </p>
           </div>
         </div>
     </div>
