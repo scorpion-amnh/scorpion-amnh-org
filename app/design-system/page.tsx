@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  buildPaletteSteps,
+  grayPaletteSteps,
+  LinkColorSample,
+  LinkOnDarkColorSample,
+  paletteSteps,
+  PaletteScale,
+  SemanticColorRow,
+  SemanticColorTable,
+  type SemanticColorToken,
+} from "@/app/design-system/ColorsSpec";
 import { TypeScaleRow, TypeTokenTable, type TypeTokenProps } from "@/app/design-system/TypographySpec";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
   "Design System | Arachnology at AMNH",
-  "Typography scale for the Scorpion Systematics Research Group website."
+  "Typography and color tokens for the Scorpion Systematics Research Group website."
 );
 
 const DEFAULT_LEADING = "1.5 (default)";
@@ -27,19 +38,85 @@ const typeTokens: TypeTokenProps[] = [
   { token: "a", font: "Source Sans 3", size: "inherits", weight: "inherits", leading: "inherits", color: "link" },
 ];
 
+const semanticColorTokens: SemanticColorToken[] = [
+  {
+    token: "primary",
+    cssVar: "--text-color-primary",
+    hex: "#181817",
+    tailwind: "text-color-primary",
+    usage: "Body copy, headings, default text",
+  },
+  {
+    token: "secondary",
+    cssVar: "--text-color-secondary",
+    hex: "#4C4D4E",
+    tailwind: "text-color-secondary · .text-meta",
+    usage: "Captions, metadata, supporting text",
+  },
+  {
+    token: "light",
+    cssVar: "--text-color-light",
+    hex: "#F4F7FC",
+    tailwind: "text-color-light",
+    usage: "Text on dark panels (e.g. bg-gray-90)",
+  },
+  {
+    token: "link",
+    cssVar: "--text-color-link",
+    hex: "#0A7A9A",
+    tailwind: "text-color-link",
+    usage: "Default inline links",
+  },
+  {
+    token: "link-hover",
+    cssVar: "--text-color-link-hover",
+    hex: "#005F81",
+    tailwind: "hover:text-color-link-hover",
+    usage: "Link hover state on light backgrounds",
+  },
+  {
+    token: "link-on-dark",
+    cssVar: "--text-color-link-on-dark",
+    hex: "#5FCAE5",
+    tailwind: "text-color-link-on-dark",
+    usage: "Links on dark backgrounds",
+  },
+  {
+    token: "link-on-dark-hover",
+    cssVar: "--text-color-link-on-dark-hover",
+    hex: "#8EE4F2",
+    tailwind: "hover:text-color-link-on-dark-hover",
+    usage: "Link hover state on dark backgrounds",
+  },
+  {
+    token: "background",
+    cssVar: "--background",
+    hex: "#FFFFFF",
+    tailwind: "bg-background",
+    usage: "Page background",
+  },
+];
+
 export default function DesignSystemPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto max-w-3xl px-6 py-12">
         <header className="mb-10 border-b border-gray-200 pb-6">
           <p className="mb-1 text-meta">Design system</p>
-          <h1 className="font-bold mb-3">Typography</h1>
+          <h1 className="font-bold mb-3">Design System</h1>
+          <p className="text-sm">
+            Typography and color tokens for the Scorpion Systematics Research Group website.
+          </p>
+        </header>
+
+        <section className="mb-16">
+          <h2 className="font-bold mb-4">Typography</h2>
           <p className="mb-4 text-sm">
             Farnham Display · h1–h2 &nbsp;|&nbsp; Source Sans 3 · h3 and below, body, UI.
             Typography conventions follow <em>The Chicago Manual of Style</em> (CMOS), matching what site
             users expect from AMNH and scholarly publishing.
           </p>
-          <p className="text-sm">
+          <p className="mb-10 text-sm">
             <strong className="font-semibold">Headings (CMOS headline style).</strong> Set title capitalization in
             markup. Lowercase articles (<code className="text-xs">a</code>, <code className="text-xs">an</code>,{" "}
             <code className="text-xs">the</code>), coordinating conjunctions (
@@ -53,16 +130,14 @@ export default function DesignSystemPage() {
             <span className="text-meta">Theory and Practice of Systematics</span>. Add{" "}
             <code className="text-xs">normal-case</code> to opt out (proper names, acronyms, UI labels).
           </p>
-        </header>
 
-        <section className="mb-10">
-          <h2 className="font-bold mb-4">Type scale</h2>
+          <h3 className="font-bold mb-4">Type scale</h3>
           <p className="mb-6 text-sm">
             Stacked preview from largest to smallest. Specs list leading and color only when they
             differ from the body default (leading 1.5, color primary).
           </p>
 
-          <div className="rounded-sm border border-gray-200 px-4 md:px-6">
+          <div className="mb-10 rounded-sm border border-gray-200 px-4 md:px-6">
             <TypeScaleRow
               token="h1"
               spec={{ font: "Farnham Display", size: "48px", weight: "700", leading: "1.1" }}
@@ -143,11 +218,69 @@ export default function DesignSystemPage() {
               </p>
             </TypeScaleRow>
           </div>
+
+          <h3 className="font-bold mb-4">Tokens</h3>
+          <TypeTokenTable rows={typeTokens} />
         </section>
 
         <section>
-          <h2 className="font-bold mb-4">Tokens</h2>
-          <TypeTokenTable rows={typeTokens} />
+          <h2 className="font-bold mb-4">Colors</h2>
+          <p className="mb-10 text-sm">
+            Semantic text colors are defined as CSS custom properties in{" "}
+            <code className="text-xs">globals.css</code> and exposed as Tailwind utilities. Brand palettes live in{" "}
+            <code className="text-xs">tailwind.config.js</code> and are available as{" "}
+            <code className="text-xs">bg-</code>, <code className="text-xs">border-</code>, and related utilities
+            (e.g. <code className="text-xs">bg-gray-90</code>, <code className="text-xs">text-cyan-40</code>).
+          </p>
+
+          <h3 className="font-bold mb-4">Semantic tokens</h3>
+          <p className="mb-6 text-sm">
+            Live previews of text colors used across the site. Link tokens include hover states in context.
+          </p>
+
+          <div className="mb-10 rounded-sm border border-gray-200 px-4 md:px-6">
+            <SemanticColorRow
+              token={semanticColorTokens[0]}
+              sample={<p className="text-color-primary">Primary body and heading text</p>}
+            />
+            <SemanticColorRow
+              token={semanticColorTokens[1]}
+              sample={<p className="text-meta">Secondary metadata and caption text</p>}
+            />
+            <SemanticColorRow
+              token={semanticColorTokens[2]}
+              sample={
+                <p className="rounded-sm bg-gray-90 px-3 py-2 text-color-light">Light text on a dark panel</p>
+              }
+            />
+            <SemanticColorRow token={semanticColorTokens[3]} sample={<LinkColorSample />} />
+            <SemanticColorRow token={semanticColorTokens[4]} sample={<LinkColorSample />} />
+            <SemanticColorRow token={semanticColorTokens[5]} sample={<LinkOnDarkColorSample />} />
+            <SemanticColorRow token={semanticColorTokens[6]} sample={<LinkOnDarkColorSample />} />
+            <SemanticColorRow
+              token={semanticColorTokens[7]}
+              sample={
+                <div className="rounded-sm border border-gray-200 px-3 py-2 text-sm">Page background swatch</div>
+              }
+            />
+          </div>
+
+          <h3 className="font-bold mb-4">Token reference</h3>
+          <SemanticColorTable rows={semanticColorTokens} />
+
+          <h3 className="mb-4 mt-10 font-bold">Brand palettes</h3>
+          <p className="mb-6 text-sm">
+            Full scales from light (left) to dark (right). Gray includes an extra{" "}
+            <code className="text-xs">00</code> step for near-white surfaces.
+          </p>
+
+          <div className="rounded-sm border border-gray-200 px-4 md:px-6">
+            <PaletteScale name="Gray" steps={buildPaletteSteps("gray", grayPaletteSteps)} />
+            <PaletteScale name="Cyan" steps={buildPaletteSteps("cyan", paletteSteps)} />
+            <PaletteScale name="Rust" steps={buildPaletteSteps("rust", paletteSteps)} />
+            <PaletteScale name="Olive" steps={buildPaletteSteps("olive", paletteSteps)} />
+            <PaletteScale name="Gold" steps={buildPaletteSteps("gold", paletteSteps)} />
+          </div>
         </section>
       </div>
     </div>
