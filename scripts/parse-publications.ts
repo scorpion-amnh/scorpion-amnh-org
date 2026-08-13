@@ -31,6 +31,8 @@ const stripPublicationHtml = (html: string) =>
     .replace(/\s+/g, " ")
     .trim();
 
+export { stripPublicationHtml };
+
 const isInitialsOrSuffix = (token: string): boolean => {
   const stripped = token.replace(/\*\*/g, "").trim();
   return (
@@ -170,6 +172,106 @@ const parsePublicationParagraph = (rawHtml: string, year: number): Publication =
   }
 
   return { year, authors, title, journal, volume, pages, doi };
+};
+
+/** Parse a stored citationHtml field back into structured publication fields. */
+export const parseStoredCitationHtml = (
+  citationHtml: string
+): Pick<Publication, "authors" | "title" | "journal" | "volume" | "pages"> => {
+  const text = stripPublicationHtml(citationHtml)
+    .replace(/\*contributed equally\*/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (/AccessScience|McGraw-Hill/i.test(text)) {
+    const authorMatch = citationHtml.match(/<b>([^<]+)<\/b>/);
+    const quotedTitle = text.match(/"([^"]+)"/)?.[1];
+
+    return {
+      authors: parseAuthors(authorMatch?.[1] ?? "Prendini, L."),
+      title: quotedTitle ?? "Scorpiones",
+      journal: "AccessScience, McGraw-Hill",
+      volume: null,
+      pages: null,
+    };
+  }
+
+  const splitPatterns = [
+    /^(.+?)\s+\d{4}\s*\[[^\]]+\]\.\s+([\s\S]+)$/,
+    /^(.+?)\s*\(\d{4}\)\.\s+([\s\S]+)$/,
+    /^(.+?)\s+\d{4}\.\s+([\s\S]+)$/,
+  ] as const;
+
+  let authorPart = "";
+  let remainder = "";
+
+  for (const pattern of splitPatterns) {
+    const match = text.match(pattern);
+    if (match) {
+      authorPart = match[1].replace(/\.\s*$/, "").trim();
+      remainder = match[2].trim();
+      break;
+    }
+  }
+
+  if (!remainder) {
+    throw new Error(`Could not parse citationHtml: ${text.slice(0, 120)}`);
+  }
+
+  const authors = parseAuthors(authorPart);
+  const journalBoldMatch = remainder.match(/\*\*([^*]+)\*\*\s*(.*)$/);
+
+  if (!journalBoldMatch) {
+    return {
+      authors,
+      title: remainder.replace(/\.\s*$/, "").trim(),
+      journal: "",
+      volume: null,
+      pages: null,
+    };
+  }
+
+  const title = remainder.slice(0, journalBoldMatch.index).replace(/\.\s*$/, "").trim();
+  const journal = journalBoldMatch[1].trim();
+  const afterJournal = journalBoldMatch[2].trim();
+
+  const volumePagesMatch = afterJournal.match(/^(\d+(?:\([^)]+\))?(?:\(suppl\.\))?)\s*:\s*(.+?)\.?$/);
+  if (volumePagesMatch) {
+    return {
+      authors,
+      title,
+      journal,
+      volume: volumePagesMatch[1],
+      pages: volumePagesMatch[2]
+        .replace(/\.$/, "")
+        .replace(/\s*DOI_LINK:.*$/i, "")
+        .trim(),
+    };
+  }
+
+  const simpleVolumeMatch = afterJournal.match(/^(\d+(?:\([^)]+\))?)\s*(.*)$/);
+  if (simpleVolumeMatch) {
+    return {
+      authors,
+      title,
+      journal,
+      volume: simpleVolumeMatch[1] || null,
+      pages:
+        simpleVolumeMatch[2]
+          ?.replace(/^:\s*/, "")
+          .replace(/\.$/, "")
+          .replace(/\s*DOI_LINK:.*$/i, "")
+          .trim() || null,
+    };
+  }
+
+  return {
+    authors,
+    title,
+    journal,
+    volume: null,
+    pages: null,
+  };
 };
 
 export const parsePublications = async (root = process.cwd()): Promise<Publication[]> => {

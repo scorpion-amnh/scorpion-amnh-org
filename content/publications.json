@@ -367,14 +367,38 @@
     "year": 2025,
     "authors": [
       {
+        "name": "Dehghan, H.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Amiri Ghanat Saman, E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Madjdzadeh, S.M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Amiri, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Moeinadini, A.",
+        "isHighlighted": false
+      },
+      {
         "name": "Prendini, L.",
         "isHighlighted": true
+      },
+      {
+        "name": "Barahoei, H",
+        "isHighlighted": false
       }
     ],
-    "title": "Dehghan, H., Amiri Ghanat Saman, E., Madjdzadeh, S.M., Amiri, M., Moeinadini, A., **Prendini, L.**, and Barahoei, H. 202",
-    "journal": "",
-    "volume": null,
-    "pages": null,
+    "title": "Molecules, morphometrics and modeling of the medically important genus *Hemiscorpius* Peters, 1861 (Scorpiones: Hemiscorpiidae) in Iran reveal new species from Kerman",
+    "journal": "Insects",
+    "volume": "17(1)",
+    "pages": "18; 1-28.",
     "doi": "https://doi.org/10.3390/insects17010018",
     "citationHtml": "Dehghan, H., Amiri Ghanat Saman, E., Madjdzadeh, S.M., Amiri, M., Moeinadini, A., <b>Prendini, L.</b>, and Barahoei, H. 2026. Molecules, morphometrics and modeling of the medically important genus <i>Hemiscorpius</i> Peters, 1861 (Scorpiones: Hemiscorpiidae) in Iran reveal new species from Kerman. <b>Insects</b> 17(1): 18; 1-28. <a href=\"https://doi.org/10.3390/insects17010018\" >https://doi.org/10.3390/insects17010018</a>"
   },
@@ -458,14 +482,90 @@
     "year": 2025,
     "authors": [
       {
+        "name": "Král, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Sember, A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Divišová, K.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Kořínková, T.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Reyes Lerma, A.C.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ávila Herrera, I.M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Forman, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Šťáhlavský, F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Musilová, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Torres Kalme, S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Palacios Vargas, J.G.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Zrzavá, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Vrbová, I.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Moreno-González, J.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Cushing, P.E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Gromov, A.V.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Šebestiánová, S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Šlechtová, V.B.",
+        "isHighlighted": false
+      },
+      {
         "name": "Prendini, L.*",
         "isHighlighted": true
+      },
+      {
+        "name": "Bird, T.L.*",
+        "isHighlighted": false
       }
     ],
-    "title": "Král, J., Sember, A., Divišová, K., Kořínková, T., Reyes Lerma, A.C., Ávila Herrera, I.M., Forman, M., Šťáhlavský, F., M",
-    "journal": "",
-    "volume": null,
-    "pages": null,
+    "title": "Advances in understanding the karyotype evolution of Tetrapulmonata and two other arachnid taxa, Ricinulei and Solifugae",
+    "journal": "Genes",
+    "volume": "16(207)",
+    "pages": "1-67.",
     "doi": "https://doi.org/10.3390/genes16020207",
     "citationHtml": "Král, J., Sember, A., Divišová, K., Kořínková, T., Reyes Lerma, A.C., Ávila Herrera, I.M., Forman, M., Šťáhlavský, F., Musilová, J., Torres Kalme, S., Palacios Vargas, J.G., Zrzavá, M., Vrbová, I., Moreno-González, J.A., Cushing, P.E., Gromov, A.V., Šebestiánová, S., Šlechtová, V.B., <b>Prendini, L.*</b>, and Bird, T.L.* 2025. Advances in understanding the karyotype evolution of Tetrapulmonata and two other arachnid taxa, Ricinulei and Solifugae. <b>Genes</b> 16(207): 1-67. <a href=\"https://doi.org/10.3390/genes16020207\" > https://doi.org/10.3390/genes16020207 </a> *contributed equally*"
   },
@@ -1289,10 +1389,10 @@
         "isHighlighted": true
       }
     ],
-    "title": "**Prendini, L.** 2020 [2021]. Arachnida (Araneae, Ricinulei) described by Norman I. Platnick. **Entomologica Americana**",
-    "journal": "",
-    "volume": null,
-    "pages": null,
+    "title": "Arachnida (Araneae, Ricinulei) described by Norman I. Platnick",
+    "journal": "Entomologica Americana",
+    "volume": "126(1-4)",
+    "pages": "58-100.",
     "doi": "https://doi.org/10.1664/1947-5136-126.1.58",
     "citationHtml": "<b>Prendini, L.</b> 2020 [2021]. Arachnida (Araneae, Ricinulei) described by Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 58-100. <a href=\"https://doi.org/10.1664/1947-5136-126.1.58\">https://doi.org/10.1664/1947-5136-126.1.58</a>"
   },
@@ -1304,10 +1404,10 @@
         "isHighlighted": true
       }
     ],
-    "title": "**Prendini, L.** 2020 [2021]. Bibliography of Norman I. Platnick. **Entomologica Americana** 126(1-4): 22-57.",
-    "journal": "",
-    "volume": null,
-    "pages": null,
+    "title": "Bibliography of Norman I. Platnick",
+    "journal": "Entomologica Americana",
+    "volume": "126(1-4)",
+    "pages": "22-57.",
     "doi": "https://doi.org/10.1664/1947-5136-126.1.22",
     "citationHtml": "<b>Prendini, L.</b> 2020 [2021]. Bibliography of Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 22-57. <a href=\"https://doi.org/10.1664/1947-5136-126.1.22\">https://doi.org/10.1664/1947-5136-126.1.22</a>"
   },
@@ -1319,10 +1419,10 @@
         "isHighlighted": true
       }
     ],
-    "title": "**Prendini, L.** 2020 [2021]. Biography of Norman I. Platnick. **Entomologica Americana** 126(1-4): 1-21.",
-    "journal": "",
-    "volume": null,
-    "pages": null,
+    "title": "Biography of Norman I. Platnick",
+    "journal": "Entomologica Americana",
+    "volume": "126(1-4)",
+    "pages": "1-21.",
     "doi": "https://doi.org/10.1664/1947-5136-126.1.1",
     "citationHtml": "<b>Prendini, L.</b> 2020 [2021]. Biography of Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 1-21. <a href=\"https://doi.org/10.1664/1947-5136-126.1.1\">https://doi.org/10.1664/1947-5136-126.1.1</a>"
   },
@@ -1334,10 +1434,10 @@
         "isHighlighted": true
       }
     ],
-    "title": "**Prendini, L.** 2020 [2021]. Taxa dedicated to Norman I. Platnick. **Entomologica Americana** 126(1-4): 101-107.",
-    "journal": "",
-    "volume": null,
-    "pages": null,
+    "title": "Taxa dedicated to Norman I. Platnick",
+    "journal": "Entomologica Americana",
+    "volume": "126(1-4)",
+    "pages": "101-107.",
     "doi": "https://doi.org/10.1664/1947-5136-126.1.101",
     "citationHtml": "<b>Prendini, L.</b> 2020 [2021]. Taxa dedicated to Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 101-107. <a href=\"https://doi.org/10.1664/1947-5136-126.1.101\">https://doi.org/10.1664/1947-5136-126.1.101</a>"
   },
@@ -2475,14 +2575,34 @@
     "year": 2016,
     "authors": [
       {
+        "name": "Maquart, P.O.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Réveillion, F.",
+        "isHighlighted": false
+      },
+      {
         "name": "Prendini, L.",
         "isHighlighted": true
+      },
+      {
+        "name": "Burger, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Fisher, B.L.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Van Noort, S",
+        "isHighlighted": false
       }
     ],
-    "title": "Maquart, P.O., Réveillion, F., **Prendini, L.**, Burger, M., Fisher, B.L., and Van Noort, S. (2016). New distribution re",
-    "journal": "",
-    "volume": null,
-    "pages": null,
+    "title": "New distribution records for African whip spiders (Arachnida: Amblypygi)",
+    "journal": "African Entomology",
+    "volume": "24(1)",
+    "pages": "245-246.",
     "doi": "https://doi.org/10.4001/003.024.0245",
     "citationHtml": "Maquart, P.O., Réveillion, F., <b>Prendini, L.</b>, Burger, M., Fisher, B.L., and Van Noort, S. (2016). New distribution records for African whip spiders (Arachnida: Amblypygi). <b>African Entomology</b> 24(1): 245-246. <a href=\"https://doi.org/10.4001/003.024.0245\" >https://doi.org/10.4001/003.024.0245</a>"
   },
@@ -4236,12 +4356,20 @@
       {
         "name": "Ochoa, J.A.",
         "isHighlighted": true
+      },
+      {
+        "name": "Botero-Trujillo, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
       }
     ],
-    "title": "**Ochoa, J.A.**, Botero-Trujillo, R., and **Prendini, L.**. 2010. On the Troglomorphic scorpion *Troglotayosicus humicul",
-    "journal": "",
-    "volume": null,
-    "pages": null,
+    "title": "On the Troglomorphic scorpion *Troglotayosicus humiculum* (Scorpiones, Troglotayosicidae), with first description of the adults",
+    "journal": "American Museum Novitates",
+    "volume": "3691",
+    "pages": "1-19.",
     "doi": "https://doi.org/10.1206/707.1",
     "citationHtml": "<b>Ochoa, J.A.</b>, Botero-Trujillo, R., and <b>Prendini, L.</b>. 2010. On the Troglomorphic scorpion <i>Troglotayosicus humiculum</i> (Scorpiones, Troglotayosicidae), with first description of the adults. <b>American Museum Novitates</b> 3691: 1-19. <a href=\"https://doi.org/10.1206/707.1\" >https://doi.org/10.1206/707.1</a>"
   },
@@ -4857,7 +4985,7 @@
       }
     ],
     "title": "Scorpiones",
-    "journal": "",
+    "journal": "AccessScience, McGraw-Hill",
     "volume": null,
     "pages": null,
     "doi": "https://doi.org/10.1036/1097-8542.607800",
