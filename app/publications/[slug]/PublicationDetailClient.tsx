@@ -3,8 +3,8 @@
 import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import { CitationTail } from "@/app/publications/CitationTail";
+import { CitationDoiLink, CopyIcon, PublicationAccessButtons } from "@/app/publications/PublicationAccessButtons";
 import { BackToTop } from "@/app/components/BackToTop";
-import { ExternalLink } from "@/app/components/ExternalLink";
 import { formatInlineEmphasis } from "@/app/components/InlineEmphasis";
 import type { Publication, PublicationDetail } from "@/lib/content/schema";
 import { copyTextToClipboard } from "@/lib/copyToClipboard";
@@ -58,71 +58,10 @@ const formatDetailAuthors = (authors: Publication["authors"]) =>
     );
   });
 
-const CopyIcon = () => (
-  <svg
-    aria-hidden="true"
-    className="inline-block h-3.5 w-3.5 shrink-0"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-    />
-  </svg>
-);
-
-const ExternalLinkIcon = () => (
-  <svg
-    aria-hidden="true"
-    className="inline-block h-3.5 w-3.5 shrink-0"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-    />
-  </svg>
-);
-
-const DownloadIcon = () => (
-  <svg
-    aria-hidden="true"
-    className="inline-block h-3.5 w-3.5 shrink-0"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
-    />
-  </svg>
-);
-
-const actionButtonClassName =
-  "inline-flex items-center gap-1.5 rounded-sm px-4 py-2 text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-color-link";
-
-const outlineActionButtonClassName = `${actionButtonClassName} border border-color-link bg-white text-color-link hover:bg-sky-50`;
-
-const primaryActionButtonClassName = `${actionButtonClassName} bg-color-link text-white hover:bg-color-link-hover`;
-
-const formatCitationDisplay = (publication: Publication): ReactNode => (
+const formatCitationDisplay = (publication: Publication, doi: string): ReactNode => (
   <>
     {formatDetailAuthors(publication.authors)} {publication.year}. {formatInlineEmphasis(publication.title)}
-    <CitationTail publication={publication} />
+    <CitationTail publication={publication} /> <CitationDoiLink doi={doi} />
   </>
 );
 
@@ -143,7 +82,7 @@ export function PublicationDetailClient({
     });
   };
 
-  const copyButtonLabel =
+  const copyCitationLabel =
     copyState === "copied" ? "Citation copied" : copyState === "error" ? "Copy failed" : "Copy citation";
 
   return (
@@ -168,7 +107,7 @@ export function PublicationDetailClient({
           </ol>
         </nav>
 
-        <header className="mb-10 border-b border-gray-200 pb-8">
+        <header className="mb-10 pb-8">
           <h1 className="mb-6 font-bold">{formatInlineEmphasis(publication.title)}</h1>
 
           <div className="space-y-4">
@@ -204,43 +143,26 @@ export function PublicationDetailClient({
                   </dd>
                 </>
               ) : null}
+              <dt className="font-semibold text-color-primary">Citation</dt>
+              <dd className="leading-relaxed">
+                {formatCitationDisplay(publication, detail.doi)}
+                <button
+                  type="button"
+                  onClick={copyCitation}
+                  aria-label={copyCitationLabel}
+                  title={copyCitationLabel}
+                  className="ml-2.5 inline-flex shrink-0 cursor-pointer align-[-0.125em] text-color-link hover:text-color-link-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-color-link"
+                >
+                  <CopyIcon />
+                </button>
+              </dd>
             </dl>
 
-            <p className="text-meta leading-relaxed">
-              {formatCitationDisplay(publication)}{" "}
-              <ExternalLink href={detail.doi}>{detail.doi}</ExternalLink>
-            </p>
-
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={copyCitation}
-                className={outlineActionButtonClassName}
-              >
-                {copyButtonLabel}
-                <CopyIcon />
-              </button>
-              <a
-                href={detail.doi}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={outlineActionButtonClassName}
-              >
-                DOI
-                <ExternalLinkIcon />
-              </a>
-              {pdfUrl ? (
-                <a
-                  href={pdfUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={primaryActionButtonClassName}
-                >
-                  Download PDF
-                  <DownloadIcon />
-                </a>
-              ) : null}
-            </div>
+            <PublicationAccessButtons
+              doi={detail.doi}
+              pdf={pdfUrl}
+              className="flex flex-wrap items-center gap-3 pt-2"
+            />
           </div>
         </header>
 
@@ -254,7 +176,7 @@ export function PublicationDetailClient({
           <ul className="flush-list flex flex-wrap gap-2">
             {detail.keywords.map((keyword) => (
               <li key={keyword}>
-                <span className="inline-block rounded-full border border-gray-300 bg-gray-50 px-3 py-1 text-sm text-color-secondary">
+                <span className="inline-block rounded-full bg-gray-50 px-3 py-1 text-sm text-color-secondary">
                   {keyword}
                 </span>
               </li>
