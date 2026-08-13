@@ -10,6 +10,27 @@ export const normalizeDoiAbstract = (raw: string): string =>
     .replace(/<[^>]+>/g, "")
     .trim();
 
+export const isPublicationAbstractPlaceholder = (abstract: string | null | undefined): boolean => {
+  if (!abstract) {
+    return true;
+  }
+
+  const trimmed = abstract.trim();
+
+  if (!trimmed || trimmed === "-") {
+    return true;
+  }
+
+  return (
+    /^This publication presents research on/i.test(trimmed) ||
+    /^A memorial tribute honoring/i.test(trimmed) ||
+    /^A field report documenting/i.test(trimmed)
+  );
+};
+
+export const hasPublicationAbstract = (abstract: string | null | undefined): abstract is string =>
+  !isPublicationAbstractPlaceholder(abstract);
+
 export const fetchCrossrefAbstract = async (doi: string): Promise<string | null> => {
   const doiId = doi.replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, "");
   const response = await fetch(`https://api.crossref.org/works/${encodeURIComponent(doiId)}`, {

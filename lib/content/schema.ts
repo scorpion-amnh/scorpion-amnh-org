@@ -61,7 +61,7 @@ export const publicationDetailSchema = z
     title: z.string().min(1).optional(),
     datePublished: z.string().min(1),
     pdf: z.string().url().nullable().optional(),
-    abstract: z.string().min(1),
+    abstract: z.string().min(1).optional(),
     keywords: z.array(z.string().min(1)).min(1),
   })
   .refine((detail) => detail.doi || (detail.year !== undefined && detail.title), {

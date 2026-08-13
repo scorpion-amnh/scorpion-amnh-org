@@ -2,19 +2,21 @@
 
 import { useState, type ReactNode } from "react";
 import Link from "next/link";
-import { CitationTail } from "@/app/publications/CitationTail";
+import { CitationTail, VolumePagesDisplay } from "@/app/publications/CitationTail";
 import { CitationDoiLink, CopyIcon, PublicationAccessButtons } from "@/app/publications/PublicationAccessButtons";
 import { BackToTop } from "@/app/components/BackToTop";
 import { formatInlineEmphasis } from "@/app/components/InlineEmphasis";
 import type { Publication, PublicationDetail } from "@/lib/content/schema";
 import { copyTextToClipboard } from "@/lib/copyToClipboard";
 import {
+  formatAuthorNamesPlain,
   formatPlainCitation,
   getVolumePages,
   isPrendiniAuthor,
   PRENDINI_BIO_PATH,
   getPublicationsYearHref,
 } from "@/lib/publications/citation";
+import { hasPublicationAbstract } from "@/lib/publications/abstract";
 
 type PublicationDetailClientProps = {
   publication: Publication;
@@ -58,11 +60,10 @@ const formatDetailAuthors = (authors: Publication["authors"]) =>
     );
   });
 
-const formatCitationDisplay = (publication: Publication, doi?: string | null): ReactNode => (
+const formatCitationDisplay = (publication: Publication): ReactNode => (
   <>
-    {formatDetailAuthors(publication.authors)} {publication.year}. {formatInlineEmphasis(publication.title)}
+    {formatAuthorNamesPlain(publication.authors)} {publication.year}. {formatInlineEmphasis(publication.title)}
     <CitationTail publication={publication} />
-    {doi ? <> <CitationDoiLink doi={doi} /></> : null}
   </>
 );
 
@@ -75,6 +76,7 @@ export function PublicationDetailClient({
   const citationText = formatPlainCitation(publication, detail.doi ?? null);
   const volumePages = getVolumePages(publication);
   const pdfUrl = detail.pdf ?? publication.pdf ?? null;
+  const citationDoi = detail.doi ?? publication.doi ?? null;
 
   const copyCitation = () => {
     void copyTextToClipboard(citationText).then((copied) => {
@@ -133,7 +135,9 @@ export function PublicationDetailClient({
               {volumePages ? (
                 <>
                   <dt className="font-semibold text-color-primary">Volume and pages</dt>
-                  <dd>{volumePages}</dd>
+                  <dd>
+                    <VolumePagesDisplay volumePages={volumePages} />
+                  </dd>
                 </>
               ) : null}
               <dt className="font-semibold text-color-primary">Year</dt>
@@ -152,25 +156,48 @@ export function PublicationDetailClient({
               ) : null}
               <dt className="font-semibold text-color-primary">Citation</dt>
               <dd className="leading-relaxed">
-                {formatCitationDisplay(publication, detail.doi ?? publication.doi ?? null)}
-                <button
-                  type="button"
-                  onClick={copyCitation}
-                  aria-label={copyCitationLabel}
-                  title={copyCitationLabel}
-                  className="ml-2.5 inline-flex shrink-0 cursor-pointer align-[-0.125em] text-color-link hover:text-color-link-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-color-link"
-                >
-                  <CopyIcon />
-                </button>
+                <div>
+                  {formatCitationDisplay(publication)}
+                  {!citationDoi ? (
+                    <span className="inline whitespace-nowrap">
+                      {"\u00A0"}
+                      <button
+                        type="button"
+                        onClick={copyCitation}
+                        aria-label={copyCitationLabel}
+                        title={copyCitationLabel}
+                        className="ml-1.5 inline-flex shrink-0 cursor-pointer align-[-0.125em] text-color-link hover:text-color-link-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-color-link"
+                      >
+                        <CopyIcon />
+                      </button>
+                    </span>
+                  ) : null}
+                </div>
+                {citationDoi ? (
+                  <span className="inline whitespace-nowrap">
+                    <CitationDoiLink doi={citationDoi} />
+                    <button
+                      type="button"
+                      onClick={copyCitation}
+                      aria-label={copyCitationLabel}
+                      title={copyCitationLabel}
+                      className="ml-1.5 inline-flex shrink-0 cursor-pointer align-[-0.125em] text-color-link hover:text-color-link-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-color-link"
+                    >
+                      <CopyIcon />
+                    </button>
+                  </span>
+                ) : null}
               </dd>
             </dl>
           </div>
         </header>
 
-        <section className="mb-10">
-          <h2 className="mb-6 font-bold">Abstract</h2>
-          <p className="text-lead">{formatInlineEmphasis(detail.abstract)}</p>
-        </section>
+        {hasPublicationAbstract(detail.abstract) ? (
+          <section className="mb-10">
+            <h2 className="mb-6 font-bold">Abstract</h2>
+            <p className="text-lead">{formatInlineEmphasis(detail.abstract)}</p>
+          </section>
+        ) : null}
 
         <section className="mb-10">
           <h2 className="mb-6 font-bold">Keywords and Taxa</h2>

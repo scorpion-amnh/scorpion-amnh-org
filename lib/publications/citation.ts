@@ -31,6 +31,14 @@ export const getVolumePages = (publication: Publication) => {
   return publication.volume ?? publication.pages ?? null;
 };
 
+/** Use non-breaking hyphens in numeric page ranges so line breaks do not split ranges. */
+export const protectPageRangeHyphens = (volumePages: string) =>
+  volumePages.replace(/(\d)\s*[-–—]\s*(\d)/g, (_, start, end) => `${start}\u2011${end}`);
+
+/** Keep volume and pages on one line when space allows, without forcing a new line. */
+export const formatVolumePagesInline = (volumePages: string) =>
+  protectPageRangeHyphens(volumePages.replace(/:\s+/, ":\u00A0"));
+
 export const formatPlainCitation = (publication: Publication, doi?: string | null) => {
   const title = stripMarkdownEmphasis(publication.title);
   const volumePages = getVolumePages(publication);

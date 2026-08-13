@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from "fs";
 import path from "path";
 import { pathToFileURL } from "url";
-import { normalizeDoiAbstract } from "../lib/publications/abstract";
+import { normalizeDoiAbstract, isPublicationAbstractPlaceholder } from "../lib/publications/abstract";
 import type { Publication } from "../lib/content/schema";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
@@ -15,7 +15,7 @@ export type PublicationDetailEntry = {
   title?: string;
   datePublished: string;
   pdf?: string | null;
-  abstract: string;
+  abstract?: string;
   keywords: string[];
 };
 
@@ -125,21 +125,6 @@ const fetchOpenAlex = async (doiId: string) => {
   };
 };
 
-const buildFallbackAbstract = (publication: Publication) => {
-  const plainTitle = stripMarkdown(publication.title);
-  const journal = publication.journal ? ` Published in ${publication.journal}.` : "";
-
-  if (/in memoriam|in memory|tribute|platnick/i.test(plainTitle)) {
-    return `A memorial tribute honoring Dr. Norman I. Platnick (1951–2020), renowned arachnologist and Curator Emeritus at the American Museum of Natural History.${journal}`;
-  }
-
-  if (/expedition|field report/i.test(plainTitle)) {
-    return `A field report documenting arachnological research and observations from the expedition described in the title.${journal}`;
-  }
-
-  return `This publication presents research on ${plainTitle.charAt(0).toLowerCase()}${plainTitle.slice(1)}.${journal}`;
-};
-
 const buildKeywords = (publication: Publication, subjects: string[] = []) => {
   const keywords = new Set<string>();
 
@@ -235,16 +220,15 @@ const buildDetailEntry = async (
     await new Promise((resolve) => setTimeout(resolve, 120));
   }
 
-  if (!abstract) {
-    abstract = buildFallbackAbstract(publication);
-  }
-
   const entry: PublicationDetailEntry = {
     slug,
     datePublished,
-    abstract,
     keywords: buildKeywords(publication, subjects),
   };
+
+  if (abstract && !isPublicationAbstractPlaceholder(abstract)) {
+    entry.abstract = abstract;
+  }
 
   if (pdf) {
     entry.pdf = pdf;

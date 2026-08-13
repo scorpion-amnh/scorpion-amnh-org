@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/app/components/JsonLd";
 import { SITE_URL } from "@/lib/metadata";
 import { stripMarkdownEmphasis } from "@/lib/publications/citation";
+import { hasPublicationAbstract } from "@/lib/publications/abstract";
 import {
   getPublicationDetailBySlug,
   getPublicationDetailSlugs,
@@ -31,8 +32,13 @@ export const generateMetadata = async ({
 
   const title = stripMarkdownEmphasis(publication.title);
   const pageTitle = `${title} | Arachnology at AMNH`;
-  const plainAbstract = stripMarkdownEmphasis(detail.abstract);
-  const description = plainAbstract.slice(0, 300).trimEnd() + (plainAbstract.length > 300 ? "…" : "");
+  const plainAbstract = hasPublicationAbstract(detail.abstract)
+    ? stripMarkdownEmphasis(detail.abstract)
+    : "";
+  const description =
+    plainAbstract.length > 0
+      ? plainAbstract.slice(0, 300).trimEnd() + (plainAbstract.length > 300 ? "…" : "")
+      : `${title}. ${publication.journal ? `${publication.journal}. ` : ""}${publication.year}.`;
   const path = getPublicationDetailPath(slug);
   const url = `${SITE_URL}${path}`;
 
@@ -66,7 +72,9 @@ const buildScholarlyArticleJsonLd = (
     "@type": "ScholarlyArticle",
     "@id": `${pageUrl}#article`,
     headline,
-    abstract: stripMarkdownEmphasis(detail.abstract),
+    ...(hasPublicationAbstract(detail.abstract)
+      ? { abstract: stripMarkdownEmphasis(detail.abstract) }
+      : {}),
     datePublished: detail.datePublished,
     url: pageUrl,
     ...(detail.doi ? { sameAs: detail.doi } : {}),
