@@ -59,6 +59,16 @@ h2 {
   text-rendering: optimizeLegibility;
 }
 
+h1 i,
+h1 em,
+h2 i,
+h2 em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-synthesis: style;
+}
+
 h3,
 h4,
 h5,

@@ -107,7 +107,7 @@ export function PublicationDetailClient({
           </ol>
         </nav>
 
-        <header className="mb-10 pb-8">
+        <header className="mb-10">
           <h1 className="mb-6 font-bold">{formatInlineEmphasis(publication.title)}</h1>
 
           <div className="space-y-4">
@@ -115,6 +115,12 @@ export function PublicationDetailClient({
               <span className="sr-only">Authors: </span>
               {formatDetailAuthors(publication.authors)}
             </p>
+
+            <PublicationAccessButtons
+              doi={detail.doi}
+              pdf={pdfUrl}
+              className="flex flex-wrap items-center gap-3 py-2"
+            />
 
             <dl className="grid gap-3 text-meta sm:grid-cols-[auto_1fr] sm:gap-x-6">
               {publication.journal ? (
@@ -157,22 +163,16 @@ export function PublicationDetailClient({
                 </button>
               </dd>
             </dl>
-
-            <PublicationAccessButtons
-              doi={detail.doi}
-              pdf={pdfUrl}
-              className="flex flex-wrap items-center gap-3 pt-2"
-            />
           </div>
         </header>
 
         <section className="mb-10">
-          <h2 className="mb-4 font-bold">Abstract</h2>
+          <h2 className="mb-6 font-bold">Abstract</h2>
           <p className="text-lead">{formatInlineEmphasis(detail.abstract)}</p>
         </section>
 
         <section className="mb-10">
-          <h2 className="mb-4 font-bold">Keywords &amp; Taxa</h2>
+          <h2 className="mb-6 font-bold">Keywords and Taxa</h2>
           <ul className="flush-list flex flex-wrap gap-2">
             {detail.keywords.map((keyword) => (
               <li key={keyword}>
