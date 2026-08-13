@@ -7,6 +7,7 @@ import {
   getSiteSettings,
   imagePathExists,
 } from "@/lib/content";
+import { getPublicationDetails, getPublicationForDetail } from "@/lib/publications/details";
 
 const failures: string[] = [];
 
@@ -46,6 +47,17 @@ const main = async () => {
     getPublications();
   } catch (error) {
     failures.push(error instanceof Error ? error.message : "Failed to load publications");
+  }
+
+  try {
+    for (const detail of getPublicationDetails()) {
+      const publication = getPublicationForDetail(detail);
+      if (!publication) {
+        failures.push(`Publication detail "${detail.slug}" has no matching publication for DOI ${detail.doi}`);
+      }
+    }
+  } catch (error) {
+    failures.push(error instanceof Error ? error.message : "Failed to load publication details");
   }
 
   for (const category of ["home", "arachnids", "fieldwork"] as const) {

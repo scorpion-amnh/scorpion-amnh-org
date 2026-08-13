@@ -1,9 +1,22 @@
 'use client';
 
+import { useEffect, useLayoutEffect } from "react";
+import { CitationTail } from "@/app/publications/CitationTail";
+import { PublicationAccessButtons } from "@/app/publications/PublicationAccessButtons";
 import { CitationHtml } from "@/app/components/CitationHtml";
 import { BackToTop } from "@/app/components/BackToTop";
 import { formatInlineEmphasis, markdownEmphasisToHtml } from "@/app/components/InlineEmphasis";
+import publicationDetails from "@/content/publication-details.json";
 import type { Publication } from "@/lib/content/schema";
+import { getPublicationDetailPath, sortPublicationsWithinYear } from "@/lib/publications/citation";
+
+const publicationDetailSlugsByDoi = Object.fromEntries(
+  publicationDetails.map((detail) => [detail.doi, detail.slug])
+) as Record<string, string>;
+
+const publicationDetailPdfByDoi = Object.fromEntries(
+  publicationDetails.map((detail) => [detail.doi, detail.pdf ?? null])
+) as Record<string, string | null>;
 
 type PublicationsClientProps = {
   publications: Publication[];
@@ -56,85 +69,26 @@ const extractLinksFromHtml = (html: string) => {
   return { doi, pdf };
 };
 
-const getPublicationLinks = (publication: Publication) => {
+const getPublicationAccess = (publication: Publication) => {
   const htmlLinks = publication.citationHtml
     ? extractLinksFromHtml(publication.citationHtml)
     : { doi: undefined, pdf: undefined };
+  const doi = publication.doi ?? htmlLinks.doi ?? null;
+  const detailSlug = doi ? publicationDetailSlugsByDoi[doi] : undefined;
 
   return {
-    doi: publication.doi ?? htmlLinks.doi ?? null,
-    pdf: publication.pdf ?? htmlLinks.pdf ?? null,
+    abstractHref: detailSlug ? getPublicationDetailPath(detailSlug) : null,
+    doi,
+    pdf: publication.pdf ?? (doi ? publicationDetailPdfByDoi[doi] : null) ?? htmlLinks.pdf ?? null,
   };
 };
 
-const externalLinkLabel = (prefix: string, url: string) => `${prefix} (${url})`;
-
-const PublicationAccessLink = ({ prefix, url }: { prefix: string; url: string }) => (
-  <a
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center gap-1.5 text-color-link hover:text-color-link-hover"
-  >
-    <span className="link-underline">{externalLinkLabel(prefix, url)}</span>
-    <svg
-      aria-hidden="true"
-      className="inline-block h-3.5 w-3.5 shrink-0"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-      />
-    </svg>
-  </a>
+const formatCitation = (publication: Publication) => (
+  <>
+    {formatAuthors(publication.authors)} {publication.year}. {formatInlineEmphasis(publication.title)}
+    <CitationTail publication={publication} />
+  </>
 );
-
-const PublicationLinks = ({ doi, pdf }: { doi: string | null; pdf: string | null }) => {
-  if (!doi && !pdf) {
-    return null;
-  }
-
-  return (
-    <div className="mt-1 space-y-1">
-      {doi ? (
-        <div>
-          <PublicationAccessLink prefix="DOI" url={doi} />
-        </div>
-      ) : null}
-      {pdf ? (
-        <div>
-          <PublicationAccessLink prefix="PDF" url={pdf} />
-        </div>
-      ) : null}
-    </div>
-  );
-};
-
-const formatCitation = (publication: Publication) => {
-  const volumePages =
-    publication.volume && publication.pages
-      ? `${publication.volume}: ${publication.pages}`
-      : publication.volume ?? publication.pages ?? null;
-
-  return (
-    <>
-      {formatAuthors(publication.authors)} {publication.year}. {formatInlineEmphasis(publication.title)}
-      {publication.journal ? (
-        <>
-          {" "}
-          <b>{publication.journal}</b>
-        </>
-      ) : null}
-      {volumePages ? <> {volumePages}.</> : null}
-    </>
-  );
-};
 
 export function PublicationsClient({ publications }: PublicationsClientProps) {
   const publicationsByYear = publications.reduce<Record<number, Publication[]>>(
@@ -150,6 +104,33 @@ export function PublicationsClient({ publications }: PublicationsClientProps) {
     .map(Number)
     .sort((a, b) => b - a);
 
+  years.forEach((year) => {
+    publicationsByYear[year] = sortPublicationsWithinYear(publicationsByYear[year]);
+  });
+
+  useLayoutEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) {
+      return;
+    }
+
+    document.getElementById(hash)?.scrollIntoView();
+  }, []);
+
+  useEffect(() => {
+    const scrollToYearHash = () => {
+      const hash = window.location.hash.slice(1);
+      if (!hash) {
+        return;
+      }
+
+      document.getElementById(hash)?.scrollIntoView();
+    };
+
+    window.addEventListener("hashchange", scrollToYearHash);
+    return () => window.removeEventListener("hashchange", scrollToYearHash);
+  }, []);
+
   return (
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">
@@ -157,10 +138,12 @@ export function PublicationsClient({ publications }: PublicationsClientProps) {
 
         {years.map((year) => (
           <section key={year} className="mb-12">
-            <h2 className="font-bold mb-6">{year}</h2>
+            <h2 id={String(year)} className="publications-year-heading mb-6 font-bold">
+              {year}
+            </h2>
             <div className="space-y-4">
               {publicationsByYear[year].map((publication, index) => {
-                const links = getPublicationLinks(publication);
+                const access = getPublicationAccess(publication);
 
                 return (
                   <div key={`${year}-${index}`}>
@@ -171,7 +154,11 @@ export function PublicationsClient({ publications }: PublicationsClientProps) {
                         formatCitation(publication)
                       )}
                     </p>
-                    <PublicationLinks doi={links.doi} pdf={links.pdf} />
+                    <PublicationAccessButtons
+                      abstractHref={access.abstractHref}
+                      doi={access.doi}
+                      pdf={access.pdf}
+                    />
                   </div>
                 );
               })}

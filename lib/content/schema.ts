@@ -53,6 +53,15 @@ export const publicationSchema = z.object({
   citationHtml: z.string().min(1).optional(),
 });
 
+export const publicationDetailSchema = z.object({
+  slug: z.string().min(1),
+  doi: z.string().min(1),
+  datePublished: z.string().min(1),
+  pdf: z.string().url().nullable().optional(),
+  abstract: z.string().min(1),
+  keywords: z.array(z.string().min(1)).min(1),
+});
+
 export const galleryImageSchema = z.object({
   src: z.string().startsWith("/images/"),
   alt: z.string().min(1),
@@ -108,6 +117,7 @@ export type PersonImage = z.infer<typeof personImageSchema>;
 export type Person = z.infer<typeof personSchema>;
 export type PublicationAuthor = z.infer<typeof publicationAuthorSchema>;
 export type Publication = z.infer<typeof publicationSchema>;
+export type PublicationDetail = z.infer<typeof publicationDetailSchema>;
 export type GalleryImage = z.infer<typeof galleryImageSchema>;
 export type PeopleGroupCard = z.infer<typeof peopleGroupCardSchema>;
 export type LabHistoryEntry = z.infer<typeof labHistoryEntrySchema>;
