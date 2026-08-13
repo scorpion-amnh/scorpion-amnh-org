@@ -11,11 +11,27 @@ import type { Publication } from "@/lib/content/schema";
 import { getPublicationDetailPath, sortPublicationsWithinYear } from "@/lib/publications/citation";
 
 const publicationDetailSlugsByDoi = Object.fromEntries(
-  publicationDetails.map((detail) => [detail.doi, detail.slug])
+  publicationDetails
+    .filter((detail) => detail.doi)
+    .map((detail) => [detail.doi, detail.slug])
+) as Record<string, string>;
+
+const publicationDetailSlugsByYearTitle = Object.fromEntries(
+  publicationDetails
+    .filter((detail) => detail.year !== undefined && detail.title)
+    .map((detail) => [`${detail.year}::${detail.title}`, detail.slug])
 ) as Record<string, string>;
 
 const publicationDetailPdfByDoi = Object.fromEntries(
-  publicationDetails.map((detail) => [detail.doi, detail.pdf ?? null])
+  publicationDetails
+    .filter((detail) => detail.doi)
+    .map((detail) => [detail.doi, detail.pdf ?? null])
+) as Record<string, string | null>;
+
+const publicationDetailPdfByYearTitle = Object.fromEntries(
+  publicationDetails
+    .filter((detail) => detail.year !== undefined && detail.title)
+    .map((detail) => [`${detail.year}::${detail.title}`, detail.pdf ?? null])
 ) as Record<string, string | null>;
 
 type PublicationsClientProps = {
@@ -74,12 +90,19 @@ const getPublicationAccess = (publication: Publication) => {
     ? extractLinksFromHtml(publication.citationHtml)
     : { doi: undefined, pdf: undefined };
   const doi = publication.doi ?? htmlLinks.doi ?? null;
-  const detailSlug = doi ? publicationDetailSlugsByDoi[doi] : undefined;
+  const yearTitleKey = `${publication.year}::${publication.title}`;
+  const detailSlug =
+    (doi ? publicationDetailSlugsByDoi[doi] : undefined) ??
+    publicationDetailSlugsByYearTitle[yearTitleKey];
 
   return {
     abstractHref: detailSlug ? getPublicationDetailPath(detailSlug) : null,
     doi,
-    pdf: publication.pdf ?? (doi ? publicationDetailPdfByDoi[doi] : null) ?? htmlLinks.pdf ?? null,
+    pdf:
+      publication.pdf ??
+      (doi ? publicationDetailPdfByDoi[doi] : publicationDetailPdfByYearTitle[yearTitleKey]) ??
+      htmlLinks.pdf ??
+      null,
   };
 };
 

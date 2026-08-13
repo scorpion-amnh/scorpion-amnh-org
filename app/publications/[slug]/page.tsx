@@ -69,7 +69,7 @@ const buildScholarlyArticleJsonLd = (
     abstract: stripMarkdownEmphasis(detail.abstract),
     datePublished: detail.datePublished,
     url: pageUrl,
-    sameAs: detail.doi,
+    ...(detail.doi ? { sameAs: detail.doi } : {}),
     author: publication.authors.map((author) => {
       const name = author.name.replace(/^and\s+/i, "");
       const isPrendini = /prendini/i.test(name);
@@ -88,11 +88,15 @@ const buildScholarlyArticleJsonLd = (
           name: publication.journal,
         }
       : undefined,
-    identifier: {
-      "@type": "PropertyValue",
-      propertyID: "DOI",
-      value: detail.doi.replace("https://doi.org/", ""),
-    },
+    ...(detail.doi
+      ? {
+          identifier: {
+            "@type": "PropertyValue",
+            propertyID: "DOI",
+            value: detail.doi.replace("https://doi.org/", ""),
+          },
+        }
+      : {}),
     keywords: detail.keywords.join(", "),
     ...(detail.pdf ? { encoding: { "@type": "MediaObject", contentUrl: detail.pdf } } : {}),
   };

@@ -30,19 +30,15 @@
     "year": 2026,
     "authors": [
       {
-        "name": "Prendini",
+        "name": "Prendini, L.",
         "isHighlighted": true
-      },
-      {
-        "name": "L",
-        "isHighlighted": false
       }
     ],
-    "title": "All genera of the world: Order Scorpiones (Animalia: Arthropoda: Arachnida). MegaTaxa 19(2): 270–378.",
-    "journal": "",
-    "volume": null,
-    "pages": null,
-    "doi": "https://doi.org/10.11646/megataxa.19.1.4",
+    "title": "All genera of the world: Order Scorpiones (Animalia: Arthropoda: Arachnida)",
+    "journal": "MegaTaxa",
+    "volume": "19(2)",
+    "pages": "270–378",
+    "doi": "https://doi.org/10.11646/megataxa.19.2.2",
     "pdf": null
   },
   {
@@ -97,20 +93,16 @@
         "isHighlighted": false
       },
       {
-        "name": "Ware",
-        "isHighlighted": false
-      },
-      {
-        "name": "J",
+        "name": "Ware, J.",
         "isHighlighted": false
       }
     ],
-    "title": "Evolution and biogeography of the widespread dragonfly genus Orthetrum (Odonata: Anisoptera: Libellulidae): Massive dispersal in the Tertiary. Systematic Entomology, 51(3), e70066.",
-    "journal": "",
-    "volume": null,
-    "pages": null,
+    "title": "Evolution and biogeography of the widespread dragonfly genus *Orthetrum* (Odonata: Anisoptera: Libellulidae): Massive dispersal in the Tertiary",
+    "journal": "Systematic Entomology",
+    "volume": "51(3)",
+    "pages": "e70066",
     "doi": "https://doi.org/10.1111/syen.70066",
-    "pdf": null
+    "pdf": "https://resjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/syen.70066"
   },
   {
     "year": 2026,
@@ -154,7 +146,7 @@
         "isHighlighted": false
       },
       {
-        "name": "Loria, S.F",
+        "name": "Loria, S.F.",
         "isHighlighted": false
       }
     ],
@@ -188,7 +180,8 @@
     "journal": "Insects",
     "volume": "17(3)",
     "pages": "239 (20 pp.)",
-    "doi": "https://doi.org/10.3390/insects17030239"
+    "doi": "https://doi.org/10.3390/insects17030239",
+    "pdf": "https://www.mdpi.com/2075-4450/17/3/239/pdf"
   },
   {
     "year": 2026,
@@ -202,7 +195,7 @@
         "isHighlighted": true
       }
     ],
-    "title": "Phylogeny and revised generic classification of African Ricinulei (Ricinoididae), descriptions of four new genera, three new species, and comparative morphology of the male copulatory apparatus",
+    "title": "Phylogeny and revised generic classification of African Ricinulei (Ricinoididae), descriptions of five new genera, three new species, and comparative morphology of the male copulatory apparatus",
     "journal": "Bulletin of the American Museum of Natural History",
     "volume": "480",
     "pages": "1-92",
@@ -580,7 +573,7 @@
         "isHighlighted": true
       },
       {
-        "name": "Bird, T",
+        "name": "Bird, T.",
         "isHighlighted": false
       }
     ],

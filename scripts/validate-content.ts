@@ -8,6 +8,10 @@ import {
   imagePathExists,
 } from "@/lib/content";
 import { getPublicationDetails, getPublicationForDetail } from "@/lib/publications/details";
+import {
+  getPublicationsMissingDetails,
+  syncPublicationDetails,
+} from "../scripts/generate-publication-details";
 
 const failures: string[] = [];
 
@@ -18,6 +22,11 @@ const requireImage = async (src: string, label: string) => {
 };
 
 const main = async () => {
+  const syncResult = await syncPublicationDetails();
+  if (syncResult.generated > 0) {
+    console.log(`Synced ${syncResult.generated} new publication detail entries.`);
+  }
+
   try {
     getSiteSettings();
   } catch (error) {
@@ -47,6 +56,20 @@ const main = async () => {
     getPublications();
   } catch (error) {
     failures.push(error instanceof Error ? error.message : "Failed to load publications");
+  }
+
+  try {
+    const publications = getPublications();
+    const details = getPublicationDetails();
+    const missingDetails = getPublicationsMissingDetails(publications, details);
+
+    for (const publication of missingDetails) {
+      failures.push(
+        `Publication missing detail page: [${publication.year}] ${publication.title.replace(/\*([^*]+)\*/g, "$1")}`
+      );
+    }
+  } catch (error) {
+    failures.push(error instanceof Error ? error.message : "Failed to check publication detail coverage");
   }
 
   try {

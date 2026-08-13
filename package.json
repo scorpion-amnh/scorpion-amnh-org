@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "build": "next build",
+    "build": "npm run validate-content && next build",
     "preview": "npm run build && npx serve out -l 3000",
     "start": "next start",
     "lint": "eslint",
+    "sync-publication-details": "tsx scripts/generate-publication-details.ts",
     "validate-content": "tsx scripts/validate-content.ts",
     "regenerate-publications": "tsx scripts/regenerate-publications.ts"
   },

@@ -36,9 +36,40 @@ export const getPublicationDetailByDoi = (doi: string | null | undefined) => {
   return loadPublicationDetails().find((detail) => detail.doi === doi) ?? null;
 };
 
+export const getPublicationDetailForPublication = (publication: Publication) => {
+  if (publication.doi) {
+    const byDoi = getPublicationDetailByDoi(publication.doi);
+    if (byDoi) {
+      return byDoi;
+    }
+  }
+
+  return (
+    loadPublicationDetails().find(
+      (detail) => detail.year === publication.year && detail.title === publication.title
+    ) ?? null
+  );
+};
+
 export { getPublicationDetailPath } from "@/lib/publications/citation";
 
-export const getPublicationForDetail = (detail: PublicationDetail): Publication | null =>
-  getPublications().find((publication) => publication.doi === detail.doi) ?? null;
+export const getPublicationForDetail = (detail: PublicationDetail): Publication | null => {
+  if (detail.doi) {
+    const byDoi = getPublications().find((publication) => publication.doi === detail.doi);
+    if (byDoi) {
+      return byDoi;
+    }
+  }
+
+  if (detail.year !== undefined && detail.title) {
+    return (
+      getPublications().find(
+        (publication) => publication.year === detail.year && publication.title === detail.title
+      ) ?? null
+    );
+  }
+
+  return null;
+};
 
 export const getPublicationDetailSlugs = () => loadPublicationDetails().map((detail) => detail.slug);

@@ -58,10 +58,11 @@ const formatDetailAuthors = (authors: Publication["authors"]) =>
     );
   });
 
-const formatCitationDisplay = (publication: Publication, doi: string): ReactNode => (
+const formatCitationDisplay = (publication: Publication, doi?: string | null): ReactNode => (
   <>
     {formatDetailAuthors(publication.authors)} {publication.year}. {formatInlineEmphasis(publication.title)}
-    <CitationTail publication={publication} /> <CitationDoiLink doi={doi} />
+    <CitationTail publication={publication} />
+    {doi ? <> <CitationDoiLink doi={doi} /></> : null}
   </>
 );
 
@@ -71,7 +72,7 @@ export function PublicationDetailClient({
 }: PublicationDetailClientProps) {
   const [copyState, setCopyState] = useState<"idle" | "copied" | "error">("idle");
 
-  const citationText = formatPlainCitation(publication, detail.doi);
+  const citationText = formatPlainCitation(publication, detail.doi ?? null);
   const volumePages = getVolumePages(publication);
   const pdfUrl = detail.pdf ?? publication.pdf ?? null;
 
@@ -117,7 +118,7 @@ export function PublicationDetailClient({
             </p>
 
             <PublicationAccessButtons
-              doi={detail.doi}
+              doi={detail.doi ?? publication.doi ?? null}
               pdf={pdfUrl}
               className="flex flex-wrap items-center gap-3 py-2"
             />
@@ -151,7 +152,7 @@ export function PublicationDetailClient({
               ) : null}
               <dt className="font-semibold text-color-primary">Citation</dt>
               <dd className="leading-relaxed">
-                {formatCitationDisplay(publication, detail.doi)}
+                {formatCitationDisplay(publication, detail.doi ?? publication.doi ?? null)}
                 <button
                   type="button"
                   onClick={copyCitation}

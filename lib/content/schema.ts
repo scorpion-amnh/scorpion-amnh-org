@@ -53,14 +53,20 @@ export const publicationSchema = z.object({
   citationHtml: z.string().min(1).optional(),
 });
 
-export const publicationDetailSchema = z.object({
-  slug: z.string().min(1),
-  doi: z.string().min(1),
-  datePublished: z.string().min(1),
-  pdf: z.string().url().nullable().optional(),
-  abstract: z.string().min(1),
-  keywords: z.array(z.string().min(1)).min(1),
-});
+export const publicationDetailSchema = z
+  .object({
+    slug: z.string().min(1),
+    doi: z.string().min(1).nullable().optional(),
+    year: z.number().int().optional(),
+    title: z.string().min(1).optional(),
+    datePublished: z.string().min(1),
+    pdf: z.string().url().nullable().optional(),
+    abstract: z.string().min(1),
+    keywords: z.array(z.string().min(1)).min(1),
+  })
+  .refine((detail) => detail.doi || (detail.year !== undefined && detail.title), {
+    message: "Publication detail must include doi or year+title for matching",
+  });
 
 export const galleryImageSchema = z.object({
   src: z.string().startsWith("/images/"),
