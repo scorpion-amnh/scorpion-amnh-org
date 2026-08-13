@@ -3,64 +3,6 @@
     "year": 2026,
     "authors": [
       {
-        "name": "Blasco-Aróstegui, J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Blick, T.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Scorpions described by Carl Ludwig Koch in Die Arachniden (1836–1847): Correct publication dates, volume citations, and updated taxonomy",
-    "journal": "Arachnology",
-    "volume": "20(4)",
-    "pages": "527-532",
-    "doi": null
-  },
-  {
-    "year": 2026,
-    "authors": [
-      {
-        "name": "Botero-Trujillo, R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Phylogeny and revised generic classification of African Ricinulei (Ricinoididae), descriptions of four new genera, three new species, and comparative morphology of the male copulatory apparatus",
-    "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "480",
-    "pages": "1-92",
-    "doi": null
-  },
-  {
-    "year": 2026,
-    "authors": [
-      {
-        "name": "Cazzaniga, N.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "*Phrynus abstrusus*, a new troglophilous whip spider (Amblypygi: Phrynidae) from southern Texas",
-    "journal": "American Museum Novitates",
-    "volume": "4050",
-    "pages": "1-14",
-    "doi": null
-  },
-  {
-    "year": 2026,
-    "authors": [
-      {
         "name": "Hussen, F.S.",
         "isHighlighted": false
       },
@@ -87,15 +29,93 @@
     "year": 2026,
     "authors": [
       {
-        "name": "Mirshamsi, O.",
+        "name": "Prendini",
+        "isHighlighted": true
+      },
+      {
+        "name": "L",
+        "isHighlighted": false
+      }
+    ],
+    "title": "All genera of the world: Order Scorpiones (Animalia: Arthropoda: Arachnida). MegaTaxa 19(2): 270–378.",
+    "journal": "",
+    "volume": null,
+    "pages": null,
+    "doi": "https://doi.org/10.11646/megataxa.19.1.4",
+    "pdf": null
+  },
+  {
+    "year": 2026,
+    "authors": [
+      {
+        "name": "Onsongo, V.",
         "isHighlighted": false
       },
       {
-        "name": "Amiri, M.",
+        "name": "Abbott, J.C.",
         "isHighlighted": false
       },
       {
-        "name": "Aliabadian, M.",
+        "name": "Bybee, S.M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Dijkstra, K.-D.B.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Frandsen, P.B.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Goodman, A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Guralnick, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Kalkman, V.J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Kohli, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Newton, L.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Raxworthy, C.J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ware",
+        "isHighlighted": false
+      },
+      {
+        "name": "J",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Evolution and biogeography of the widespread dragonfly genus Orthetrum (Odonata: Anisoptera: Libellulidae): Massive dispersal in the Tertiary. Systematic Entomology, 51(3), e70066.",
+    "journal": "",
+    "volume": null,
+    "pages": null,
+    "doi": "https://doi.org/10.1111/syen.70066",
+    "pdf": null
+  },
+  {
+    "year": 2026,
+    "authors": [
+      {
+        "name": "Cazzaniga, N.",
         "isHighlighted": false
       },
       {
@@ -103,11 +123,11 @@
         "isHighlighted": true
       }
     ],
-    "title": "Phylogeny and historical biogeography of the scorpion genus *Hottentotta* Birula, 1908 (Buthidae) in the Iranian Plateau and the Zagros Mountains",
-    "journal": "Insects",
-    "volume": "17(3)",
-    "pages": "239 (20 pp.)",
-    "doi": "https://doi.org/10.3390/insects17030239"
+    "title": "*Phrynus abstrusus*, a new troglophilous whip spider (Amblypygi: Phrynidae) from southern Texas",
+    "journal": "American Museum Novitates",
+    "volume": "4050",
+    "pages": "1-14",
+    "doi": "https://doi.org/10.1206/4050.1"
   },
   {
     "year": 2026,
@@ -141,7 +161,73 @@
     "journal": "American Museum Novitates",
     "volume": "4051",
     "pages": "1-55",
-    "doi": null
+    "doi": "https://doi.org/10.1206/4051.1"
+  },
+  {
+    "year": 2026,
+    "authors": [
+      {
+        "name": "Mirshamsi, O.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Amiri, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Aliabadian, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Phylogeny and historical biogeography of the scorpion genus *Hottentotta* Birula, 1908 (Buthidae) in the Iranian Plateau and the Zagros Mountains",
+    "journal": "Insects",
+    "volume": "17(3)",
+    "pages": "239 (20 pp.)",
+    "doi": "https://doi.org/10.3390/insects17030239"
+  },
+  {
+    "year": 2026,
+    "authors": [
+      {
+        "name": "Botero-Trujillo, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Phylogeny and revised generic classification of African Ricinulei (Ricinoididae), descriptions of four new genera, three new species, and comparative morphology of the male copulatory apparatus",
+    "journal": "Bulletin of the American Museum of Natural History",
+    "volume": "480",
+    "pages": "1-92",
+    "doi": "https://doi.org/10.1206/0003-0090.480.1.1"
+  },
+  {
+    "year": 2026,
+    "authors": [
+      {
+        "name": "Blasco-Aróstegui, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Blick, T.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Scorpions described by Carl Ludwig Koch in Die Arachniden (1836–1847): Correct publication dates, volume citations, and updated taxonomy",
+    "journal": "Arachnology",
+    "volume": "20(4)",
+    "pages": "527-532",
+    "doi": "https://doi.org/10.13156/arac.2026.20.4.5"
   },
   {
     "year": 2025,
@@ -180,196 +266,6 @@
     "volume": "17(5)",
     "pages": "321; 1-13",
     "doi": "https://doi.org/10.3390/d17050321"
-  },
-  {
-    "year": 2025,
-    "authors": [
-      {
-        "name": "Blasco-Aróstegui, J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Moreno-González, J.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Loria, S.F.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Carvalho, L.S.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Bird, T.L.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ahn, D.N.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Barahoei, H.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Haddad, C.R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Include scorpions in global conservation plans",
-    "journal": "Science",
-    "volume": "389(6765)",
-    "pages": "1099-1100",
-    "doi": "https://doi.org/10.1126/science.adz4176"
-  },
-  {
-    "year": 2025,
-    "authors": [
-      {
-        "name": "Blasco-Aróstegui, J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Simone, Y.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Systematic revision of the European species of *Buthus* Leach, 1815 (Scorpiones: Buthidae)",
-    "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "476",
-    "pages": "1-131",
-    "doi": null
-  },
-  {
-    "year": 2025,
-    "authors": [
-      {
-        "name": "Blasco-Aróstegui, J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Simone, Y.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Paulo, O.S.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Mito-nuclear discordance reveals introgressive hybridization following vicariance and secondary contact in Iberian scorpions (Buthidae: *Buthus*)",
-    "journal": "BMC Ecology and Evolution",
-    "volume": "25(112)",
-    "pages": "1-22",
-    "doi": "https://doi.org/10.1186/s12862-025-02445-0"
-  },
-  {
-    "year": 2025,
-    "authors": [
-      {
-        "name": "Botero-Trujillo, R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "*Cryptocellus armasi*, a new troglomorphic, cave-dwelling hooded tick-spider from Venezuela (Arachnida, Ricinulei)",
-    "journal": "Zootaxa",
-    "volume": "5563(1)",
-    "pages": "96-108",
-    "doi": "https://doi.org/10.11646/zootaxa.5563.1.10"
-  },
-  {
-    "year": 2025,
-    "authors": [
-      {
-        "name": "Castro-Pereira, D.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Pinto-da-Rocha, R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "*Mastigoproctus spinifemoratus*, a new species of giant vinegaroon (Thelyphonida: Thelyphonidae) from Mexico",
-    "journal": "Arthropoda",
-    "volume": "3(1)",
-    "pages": "1-10",
-    "doi": "https://doi.org/10.3390/arthropoda3010002"
-  },
-  {
-    "year": 2025,
-    "authors": [
-      {
-        "name": "Colmenares, P.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Moreno-González, J.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Villarreal, O.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "New genus and species of short-tailed whipscorpion (Schizomida: Hubbardiidae) from the Venezuelan Amazon",
-    "journal": "Zootaxa",
-    "volume": "5563(1)",
-    "pages": "84-95",
-    "doi": "https://doi.org/10.11646/zootaxa.5563.1.9"
-  },
-  {
-    "year": 2025,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Dehghan, H., Amiri Ghanat Saman, E., Madjdzadeh, S.M., Amiri, M., Moeinadini, A., **Prendini, L.**, and Barahoei, H. 202",
-    "journal": "",
-    "volume": null,
-    "pages": null,
-    "doi": "https://doi.org/10.3390/insects17010018",
-    "citationHtml": "Dehghan, H., Amiri Ghanat Saman, E., Madjdzadeh, S.M., Amiri, M., Moeinadini, A., <b>Prendini, L.</b>, and Barahoei, H. 2026. Molecules, morphometrics and modeling of the medically important genus <i>Hemiscorpius</i> Peters, 1861 (Scorpiones: Hemiscorpiidae) in Iran reveal new species from Kerman. <b>Insects</b> 17(1): 18; 1-28. <a href=\"https://doi.org/10.3390/insects17010018\" > https://doi.org/10.3390/insects17010018 </a>"
-  },
-  {
-    "year": 2025,
-    "authors": [
-      {
-        "name": "Prendini, L.*",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Král, J., Sember, A., Divišová, K., Kořínková, T., Reyes Lerma, A.C., Ávila Herrera, I.M., Forman, M., Šťáhlavský, F., M",
-    "journal": "",
-    "volume": null,
-    "pages": null,
-    "doi": "https://doi.org/10.3390/genes16020207",
-    "citationHtml": "Král, J., Sember, A., Divišová, K., Kořínková, T., Reyes Lerma, A.C., Ávila Herrera, I.M., Forman, M., Šťáhlavský, F., Musilová, J., Torres Kalme, S., Palacios Vargas, J.G., Zrzavá, M., Vrbová, I., Moreno-González, J.A., Cushing, P.E., Gromov, A.V., Šebestiánová, S., Šlechtová, V.B., <b>Prendini, L.*</b>, and Bird, T.L.* 2025. Advances in understanding the karyotype evolution of Tetrapulmonata and two other arachnid taxa, Ricinulei and Solifugae. <b>Genes</b> 16(207): 1-67. <a href=\"https://doi.org/10.3390/genes16020207\" > https://doi.org/10.3390/genes16020207 </a> *contributed equally"
   },
   {
     "year": 2025,
@@ -459,6 +355,39 @@
     "year": 2025,
     "authors": [
       {
+        "name": "Botero-Trujillo, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "*Cryptocellus armasi*, a new troglomorphic, cave-dwelling hooded tick-spider from Venezuela (Arachnida, Ricinulei)",
+    "journal": "Zootaxa",
+    "volume": "5563(1)",
+    "pages": "96-108",
+    "doi": "https://doi.org/10.11646/zootaxa.5563.1.10"
+  },
+  {
+    "year": 2025,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Dehghan, H., Amiri Ghanat Saman, E., Madjdzadeh, S.M., Amiri, M., Moeinadini, A., **Prendini, L.**, and Barahoei, H. 202",
+    "journal": "",
+    "volume": null,
+    "pages": null,
+    "doi": "https://doi.org/10.3390/insects17010018",
+    "citationHtml": "Dehghan, H., Amiri Ghanat Saman, E., Madjdzadeh, S.M., Amiri, M., Moeinadini, A., <b>Prendini, L.</b>, and Barahoei, H. 2026. Molecules, morphometrics and modeling of the medically important genus <i>Hemiscorpius</i> Peters, 1861 (Scorpiones: Hemiscorpiidae) in Iran reveal new species from Kerman. <b>Insects</b> 17(1): 18; 1-28. <a href=\"https://doi.org/10.3390/insects17010018\" >https://doi.org/10.3390/insects17010018</a>"
+  },
+  {
+    "year": 2025,
+    "authors": [
+      {
         "name": "Xuan, Q.",
         "isHighlighted": false
       },
@@ -484,6 +413,195 @@
     "volume": "203",
     "pages": "1-60",
     "doi": "https://doi.org/10.1093/zoolinnean/zlae169"
+  },
+  {
+    "year": 2025,
+    "authors": [
+      {
+        "name": "Blasco-Aróstegui, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Moreno-González, J.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Loria, S.F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Carvalho, L.S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Bird, T.L.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ahn, D.N.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Barahoei, H.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Haddad, C.R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Include scorpions in global conservation plans",
+    "journal": "Science",
+    "volume": "389(6765)",
+    "pages": "1099-1100",
+    "doi": "https://doi.org/10.1126/science.adz4176"
+  },
+  {
+    "year": 2025,
+    "authors": [
+      {
+        "name": "Prendini, L.*",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Král, J., Sember, A., Divišová, K., Kořínková, T., Reyes Lerma, A.C., Ávila Herrera, I.M., Forman, M., Šťáhlavský, F., M",
+    "journal": "",
+    "volume": null,
+    "pages": null,
+    "doi": "https://doi.org/10.3390/genes16020207",
+    "citationHtml": "Král, J., Sember, A., Divišová, K., Kořínková, T., Reyes Lerma, A.C., Ávila Herrera, I.M., Forman, M., Šťáhlavský, F., Musilová, J., Torres Kalme, S., Palacios Vargas, J.G., Zrzavá, M., Vrbová, I., Moreno-González, J.A., Cushing, P.E., Gromov, A.V., Šebestiánová, S., Šlechtová, V.B., <b>Prendini, L.*</b>, and Bird, T.L.* 2025. Advances in understanding the karyotype evolution of Tetrapulmonata and two other arachnid taxa, Ricinulei and Solifugae. <b>Genes</b> 16(207): 1-67. <a href=\"https://doi.org/10.3390/genes16020207\" > https://doi.org/10.3390/genes16020207 </a> *contributed equally*"
+  },
+  {
+    "year": 2025,
+    "authors": [
+      {
+        "name": "Castro-Pereira, D.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Pinto-da-Rocha, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "*Mastigoproctus spinifemoratus*, a new species of giant vinegaroon (Thelyphonida: Thelyphonidae) from Mexico",
+    "journal": "Arthropoda",
+    "volume": "3(1)",
+    "pages": "1-10",
+    "doi": "https://doi.org/10.3390/arthropoda3010002"
+  },
+  {
+    "year": 2025,
+    "authors": [
+      {
+        "name": "Blasco-Aróstegui, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Simone, Y.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Paulo, O.S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Mito-nuclear discordance reveals introgressive hybridization following vicariance and secondary contact in Iberian scorpions (Buthidae: *Buthus*)",
+    "journal": "BMC Ecology and Evolution",
+    "volume": "25(112)",
+    "pages": "1-22",
+    "doi": "https://doi.org/10.1186/s12862-025-02445-0"
+  },
+  {
+    "year": 2025,
+    "authors": [
+      {
+        "name": "Colmenares, P.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Moreno-González, J.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Villarreal, O.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "New genus and species of short-tailed whipscorpion (Schizomida: Hubbardiidae) from the Venezuelan Amazon",
+    "journal": "Zootaxa",
+    "volume": "5563(1)",
+    "pages": "84-95",
+    "doi": "https://doi.org/10.11646/zootaxa.5563.1.9"
+  },
+  {
+    "year": 2025,
+    "authors": [
+      {
+        "name": "Blasco-Aróstegui, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Simone, Y.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Systematic revision of the European species of *Buthus* Leach, 1815 (Scorpiones: Buthidae)",
+    "journal": "Bulletin of the American Museum of Natural History",
+    "volume": "476",
+    "pages": "1-131",
+    "doi": "https://doi.org/10.1206/0003-0090.476.1.1"
+  },
+  {
+    "year": 2024,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Bird, T",
+        "isHighlighted": false
+      }
+    ],
+    "title": "2024 Arachnological Expedition to the Central Namib Inselbergs",
+    "journal": "The Barking Gecko",
+    "volume": null,
+    "pages": null,
+    "doi": null
+  },
+  {
+    "year": 2024,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Gerald Newlands (1941–2022)",
+    "journal": "Arachnology",
+    "volume": "19(7)",
+    "pages": "1043-1050",
+    "doi": "https://doi.org/10.13156/arac.2024.19.7.1043"
   },
   {
     "year": 2024,
@@ -518,46 +636,6 @@
     "volume": "82",
     "pages": "323-341",
     "doi": "https://doi.org/10.3897/asp.82.e98662"
-  },
-  {
-    "year": 2024,
-    "authors": [
-      {
-        "name": "Blasco-Aróstegui, J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Redescription of *Euscorpius studentium* based on adult specimens; updated classification of cavernicolous Euscorpiidae; and review of cavernicolous scorpions in the Balkans",
-    "journal": "Diversity",
-    "volume": "16(12)",
-    "pages": "737; 1-26",
-    "doi": "https://doi.org/10.3390/d16120737"
-  },
-  {
-    "year": 2024,
-    "authors": [
-      {
-        "name": "Botero-Trujillo, R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Moreno-Gonzalez, J.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "The Neotropical hypoctonine whip-scorpions (Thelyphonida: Thelyphonidae): Phylogenetic analysis, with descriptions of two new genera and species",
-    "journal": "Insects",
-    "volume": "15(10)",
-    "pages": "761; 1-39",
-    "doi": "https://doi.org/10.3390/insects15100761"
   },
   {
     "year": 2024,
@@ -659,42 +737,10 @@
     "journal": "American Museum Novitates",
     "volume": "4011",
     "pages": "1-39",
-    "doi": null
+    "doi": "https://doi.org/10.1206/4011.1"
   },
   {
     "year": 2024,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Gerald Newlands (1941–2022)",
-    "journal": "Arachnology",
-    "volume": "19(7)",
-    "pages": "1043-1050",
-    "doi": null
-  },
-  {
-    "year": 2024,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Bird, T",
-        "isHighlighted": false
-      }
-    ],
-    "title": "2024 Arachnological Expedition to the Central Namib Inselbergs",
-    "journal": "The Barking Gecko",
-    "volume": null,
-    "pages": null,
-    "doi": null
-  },
-  {
-    "year": 2023,
     "authors": [
       {
         "name": "Blasco-Aróstegui, J.",
@@ -705,11 +751,33 @@
         "isHighlighted": true
       }
     ],
-    "title": "Glacial relicts? A new scorpion from Mount Olympus (Euscorpiidae: *Euscorpius*)",
-    "journal": "American Museum Novitates",
-    "volume": "4003",
-    "pages": "1-36",
-    "doi": null
+    "title": "Redescription of *Euscorpius studentium* based on adult specimens; updated classification of cavernicolous Euscorpiidae; and review of cavernicolous scorpions in the Balkans",
+    "journal": "Diversity",
+    "volume": "16(12)",
+    "pages": "737; 1-26",
+    "doi": "https://doi.org/10.3390/d16120737"
+  },
+  {
+    "year": 2024,
+    "authors": [
+      {
+        "name": "Botero-Trujillo, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Moreno-Gonzalez, J.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "The Neotropical hypoctonine whip-scorpions (Thelyphonida: Thelyphonidae): Phylogenetic analysis, with descriptions of two new genera and species",
+    "journal": "Insects",
+    "volume": "15(10)",
+    "pages": "761; 1-39",
+    "doi": "https://doi.org/10.3390/insects15100761"
   },
   {
     "year": 2023,
@@ -735,33 +803,7 @@
     "journal": "Journal of Arachnology",
     "volume": "51",
     "pages": "255-257",
-    "doi": null
-  },
-  {
-    "year": 2023,
-    "authors": [
-      {
-        "name": "Haddad, C.R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Neethling, J.-A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Dippenaar-Schoeman, A.S",
-        "isHighlighted": false
-      }
-    ],
-    "title": "The non-acarine Arachnida of the Amathole Mountains, South Africa",
-    "journal": "Bothalia – African Biodiversity & Conservation",
-    "volume": "53(1)",
-    "pages": "a13",
-    "doi": "http://dx.doi.org/10.38201/btha.abc.v53.i1.13"
+    "doi": "https://doi.org/10.1636/JoA-S-22-024"
   },
   {
     "year": 2023,
@@ -791,6 +833,56 @@
     "journal": "Revue suisse de Zoologie",
     "volume": "130(suppl.)",
     "pages": "1-243",
+    "doi": "https://doi.org/10.35929/RSZ.0111"
+  },
+  {
+    "year": 2023,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Bird, T.L",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Endemism of Arachnida (Amblypygi, Scorpiones and Solifugae) in the highlands and escarpments of Angola and Namibia: Current knowledge and future directions. In: Mendelsohn, J., Huntley, B.J., and Vaz Pinto, P. (Eds.) Monograph on Endemism in the Highlands and Escarpments of Angola and Namibia",
+    "journal": "Namibian Journal of Environment",
+    "volume": "8",
+    "pages": "231-244; ; ISSN: 2026-8327",
+    "doi": "https://doi.org/10.64640/645zb268"
+  },
+  {
+    "year": 2023,
+    "authors": [
+      {
+        "name": "Blasco-Aróstegui, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Glacial relicts? A new scorpion from Mount Olympus (Euscorpiidae: *Euscorpius*)",
+    "journal": "American Museum Novitates",
+    "volume": "4003",
+    "pages": "1-36",
+    "doi": "https://doi.org/10.1206/4003.1"
+  },
+  {
+    "year": 2023,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Scorpion diversity",
+    "journal": "The Barking Gecko",
+    "volume": null,
+    "pages": null,
     "doi": null
   },
   {
@@ -813,113 +905,59 @@
     "journal": "American Museum Novitates",
     "volume": "4000",
     "pages": "1-36",
-    "doi": null
+    "doi": "https://doi.org/10.1206/4000.1"
   },
   {
     "year": 2023,
     "authors": [
       {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Scorpion diversity",
-    "journal": "The Barking Gecko",
-    "volume": null,
-    "pages": null,
-    "doi": null
-  },
-  {
-    "year": 2023,
-    "authors": [
+        "name": "Haddad, C.R.",
+        "isHighlighted": false
+      },
       {
         "name": "Prendini, L.",
         "isHighlighted": true
       },
       {
-        "name": "Bird, T.L",
+        "name": "Neethling, J.-A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Dippenaar-Schoeman, A.S",
         "isHighlighted": false
       }
     ],
-    "title": "Endemism of Arachnida (Amblypygi, Scorpiones and Solifugae) in the highlands and escarpments of Angola and Namibia: Current knowledge and future directions. In: Mendelsohn, J., Huntley, B.J., and Vaz Pinto, P. (Eds.) Monograph on Endemism in the Highlands and Escarpments of Angola and Namibia",
-    "journal": "Namibian Journal of Environment",
-    "volume": "8",
-    "pages": "231-244; ; ISSN: 2026-8327",
-    "doi": null
+    "title": "The non-acarine Arachnida of the Amathole Mountains, South Africa",
+    "journal": "Bothalia – African Biodiversity & Conservation",
+    "volume": "53(1)",
+    "pages": "a13",
+    "doi": "https://doi.org/10.38201/btha.abc.v53.i1.13"
   },
   {
     "year": 2022,
     "authors": [
       {
-        "name": "Botero-Trujillo, R.",
+        "name": "Vrech, D.",
         "isHighlighted": false
       },
       {
-        "name": "Davis, S.R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Michalik, P.",
+        "name": "Peretti, A.V.",
         "isHighlighted": false
       },
       {
         "name": "Prendini, L.",
         "isHighlighted": true
+      },
+      {
+        "name": "Mattoni, C.I",
+        "isHighlighted": false
       }
     ],
-    "title": "*Hirsutisoma grimaldii* sp. nov., a ca. 99-million-year-old ricinuleid (Primoricinulei, Hirsutisomidae) from Cretaceous Burmese amber with a corticolous, scansorial lifestyle",
-    "journal": "Palaeoentomology",
-    "volume": "5(5)",
-    "pages": "493-504",
-    "doi": "https://doi.org/10.11646/palaeoentomology.5.5.11"
-  },
-  {
-    "year": 2022,
-    "authors": [
-      {
-        "name": "Loria, S.F.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ehrenthal, V.L.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Nguyen, D.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Climate relicts: Asian scorpion family Pseudochactidae survived Miocene aridification in caves of the Annamite Mountains",
-    "journal": "Insect Systematics and Diversity",
-    "volume": "6(6)",
-    "pages": "3; 1-21",
-    "doi": "https://doi.org/10.1093/isd/ixac028"
-  },
-  {
-    "year": 2022,
-    "authors": [
-      {
-        "name": "Monjaraz-Ruedas, R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Francke, O.F.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "World travelers: Parthenogenesis and ecological tolerance enable multiple colonization events by the widespread short-tailed whipscorpion, *Stenochrus portoricensis* (Schizomida: Hubbardiidae)",
-    "journal": "Insect Systematics and Diversity",
-    "volume": "6(1)",
-    "pages": "7; 1-17",
-    "doi": "https://doi.org/10.1093/isd/ixab032"
+    "title": "Bundles of sperm: Structural diversity in sperm packages of scorpions illuminates evolution of insemination in an ancient lineage",
+    "journal": "American Museum Novitates",
+    "volume": "2993",
+    "pages": "1-50",
+    "doi": "https://doi.org/10.1206/3993.1"
   },
   {
     "year": 2022,
@@ -955,6 +993,58 @@
     "year": 2022,
     "authors": [
       {
+        "name": "Loria, S.F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ehrenthal, V.L.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Nguyen, D.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Climate relicts: Asian scorpion family Pseudochactidae survived Miocene aridification in caves of the Annamite Mountains",
+    "journal": "Insect Systematics and Diversity",
+    "volume": "6(6)",
+    "pages": "3; 1-21",
+    "doi": "https://doi.org/10.1093/isd/ixac028"
+  },
+  {
+    "year": 2022,
+    "authors": [
+      {
+        "name": "Botero-Trujillo, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Davis, S.R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Michalik, P.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "*Hirsutisoma grimaldii* sp. nov., a ca. 99-million-year-old ricinuleid (Primoricinulei, Hirsutisomidae) from Cretaceous Burmese amber with a corticolous, scansorial lifestyle",
+    "journal": "Palaeoentomology",
+    "volume": "5(5)",
+    "pages": "493-504",
+    "doi": "https://doi.org/10.11646/palaeoentomology.5.5.11"
+  },
+  {
+    "year": 2022,
+    "authors": [
+      {
         "name": "Seiter, M.",
         "isHighlighted": false
       },
@@ -985,11 +1075,81 @@
     "year": 2022,
     "authors": [
       {
-        "name": "Vrech, D.",
+        "name": "Monjaraz-Ruedas, R.",
         "isHighlighted": false
       },
       {
-        "name": "Peretti, A.V.",
+        "name": "Francke, O.F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "World travelers: Parthenogenesis and ecological tolerance enable multiple colonization events by the widespread short-tailed whipscorpion, *Stenochrus portoricensis* (Schizomida: Hubbardiidae)",
+    "journal": "Insect Systematics and Diversity",
+    "volume": "6(1)",
+    "pages": "7; 1-17",
+    "doi": "https://doi.org/10.1093/isd/ixab032"
+  },
+  {
+    "year": 2021,
+    "authors": [
+      {
+        "name": "Botero-Trujillo, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ochoa, J.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "A new troglomorphic, leaf-litter scorpion from Ecuador (Troglotayosicidae: *Troglotayosicus*)",
+    "journal": "American Museum Novitates",
+    "volume": "3981",
+    "pages": "1-24",
+    "doi": "https://doi.org/10.1206/3981.1"
+  },
+  {
+    "year": 2021,
+    "authors": [
+      {
+        "name": "Zamani, A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Sääksjärvi, I.E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Amateur venom-extraction business may hasten extinction of scorpions",
+    "journal": "Arachnologische Mitteilungen / Arachnology Letters",
+    "volume": "61",
+    "pages": "20-23",
+    "doi": "https://doi.org/10.30963/aramit6103"
+  },
+  {
+    "year": 2021,
+    "authors": [
+      {
+        "name": "Cain, S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Loria, S.F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ben-Shlomo, R.",
         "isHighlighted": false
       },
       {
@@ -997,15 +1157,71 @@
         "isHighlighted": true
       },
       {
-        "name": "Mattoni, C.I",
+        "name": "Gefen, E",
         "isHighlighted": false
       }
     ],
-    "title": "Bundles of sperm: Structural diversity in sperm packages of scorpions illuminates evolution of insemination in an ancient lineage",
+    "title": "Dated phylogeny and ancestral range estimation of sand scorpions (Buthidae: *Buthacus*) reveal Early Miocene divergence across land bridges connecting Africa and Asia",
+    "journal": "Molecular Phylogenetics and Evolution",
+    "volume": "164",
+    "pages": "(107212)",
+    "doi": "https://doi.org/10.1016/j.ympev.2021.107212"
+  },
+  {
+    "year": 2021,
+    "authors": [
+      {
+        "name": "Seiter, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Schwaha, T.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ferreira, R.L.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Wolff, J.O",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Fine structure of the epicuticular secretion coat and associated glands of Pedipalpi and Palpigradi (Arachnida)",
+    "journal": "Journal of Morphology",
+    "volume": "282(8)",
+    "pages": "1158-1169",
+    "doi": "https://doi.org/10.1002/jmor.21360"
+  },
+  {
+    "year": 2021,
+    "authors": [
+      {
+        "name": "Botero-Trujillo, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Carvalho, L.S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Florez D., E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Four new species of “hooded tick-spiders” (Ricinulei, Ricinoididae) from South and Central America, with clarification of the identity of *Cryptocellus leleupi* Cooreman, 1976",
     "journal": "American Museum Novitates",
-    "volume": "2993",
-    "pages": "1-50",
-    "doi": null
+    "volume": "3976",
+    "pages": "1-35",
+    "doi": "https://doi.org/10.1206/3976.1"
   },
   {
     "year": 2021,
@@ -1043,21 +1259,21 @@
     "journal": "Zoological Journal of the Linnean Society",
     "volume": "195(2)",
     "pages": "355-398",
-    "doi": null
+    "doi": "https://doi.org/10.1093/zoolinnean/zlab030"
   },
   {
     "year": 2021,
     "authors": [
       {
-        "name": "Botero-Trujillo, R.",
+        "name": "Silva de Miranda, G.",
         "isHighlighted": false
       },
       {
-        "name": "Carvalho, L.S.",
+        "name": "Scharff, N.",
         "isHighlighted": false
       },
       {
-        "name": "Florez D., E.",
+        "name": "Giupponi, A.P.L.",
         "isHighlighted": false
       },
       {
@@ -1065,55 +1281,145 @@
         "isHighlighted": true
       }
     ],
-    "title": "Four new species of “hooded tick-spiders” (Ricinulei, Ricinoididae) from South and Central America, with clarification of the identity of *Cryptocellus leleupi* Cooreman, 1976",
-    "journal": "American Museum Novitates",
-    "volume": "3976",
-    "pages": "1-35",
-    "doi": null
+    "title": "Phylogeny and biogeography of the pantropical whip spider family Charinidae (Arachnida, Amblypygi)",
+    "journal": "Zoological Journal of the Linnean Society",
+    "volume": "194(1)",
+    "pages": "136-180",
+    "doi": "https://doi.org/10.1093/zoolinnean/zlaa101"
   },
   {
     "year": 2021,
     "authors": [
       {
-        "name": "Botero-Trujillo, R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ochoa, J.A.",
-        "isHighlighted": false
-      },
-      {
         "name": "Prendini, L.",
         "isHighlighted": true
       }
     ],
-    "title": "A new troglomorphic, leaf-litter scorpion from Ecuador (Troglotayosicidae: *Troglotayosicus*)",
-    "journal": "American Museum Novitates",
-    "volume": "3981",
-    "pages": "1-24",
-    "doi": null
+    "title": "**Prendini, L.** 2020 [2021]. Arachnida (Araneae, Ricinulei) described by Norman I. Platnick. **Entomologica Americana**",
+    "journal": "",
+    "volume": null,
+    "pages": null,
+    "doi": "https://doi.org/10.1664/1947-5136-126.1.58",
+    "citationHtml": "<b>Prendini, L.</b> 2020 [2021]. Arachnida (Araneae, Ricinulei) described by Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 58-100. <a href=\"https://doi.org/10.1664/1947-5136-126.1.58\">https://doi.org/10.1664/1947-5136-126.1.58</a>"
   },
   {
     "year": 2021,
     "authors": [
       {
-        "name": "Botero-Trujillo, R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Sain, C.",
-        "isHighlighted": false
-      },
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "**Prendini, L.** 2020 [2021]. Bibliography of Norman I. Platnick. **Entomologica Americana** 126(1-4): 22-57.",
+    "journal": "",
+    "volume": null,
+    "pages": null,
+    "doi": "https://doi.org/10.1664/1947-5136-126.1.22",
+    "citationHtml": "<b>Prendini, L.</b> 2020 [2021]. Bibliography of Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 22-57. <a href=\"https://doi.org/10.1664/1947-5136-126.1.22\">https://doi.org/10.1664/1947-5136-126.1.22</a>"
+  },
+  {
+    "year": 2021,
+    "authors": [
       {
         "name": "Prendini, L.",
         "isHighlighted": true
       }
     ],
-    "title": "The “giant” Ricinulei (Ricinoididae: *Ricinoides*) of West Africa, with descriptions of five new species and comparative morphology of the male copulatory apparatus",
+    "title": "**Prendini, L.** 2020 [2021]. Biography of Norman I. Platnick. **Entomologica Americana** 126(1-4): 1-21.",
+    "journal": "",
+    "volume": null,
+    "pages": null,
+    "doi": "https://doi.org/10.1664/1947-5136-126.1.1",
+    "citationHtml": "<b>Prendini, L.</b> 2020 [2021]. Biography of Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 1-21. <a href=\"https://doi.org/10.1664/1947-5136-126.1.1\">https://doi.org/10.1664/1947-5136-126.1.1</a>"
+  },
+  {
+    "year": 2021,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "**Prendini, L.** 2020 [2021]. Taxa dedicated to Norman I. Platnick. **Entomologica Americana** 126(1-4): 101-107.",
+    "journal": "",
+    "volume": null,
+    "pages": null,
+    "doi": "https://doi.org/10.1664/1947-5136-126.1.101",
+    "citationHtml": "<b>Prendini, L.</b> 2020 [2021]. Taxa dedicated to Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 101-107. <a href=\"https://doi.org/10.1664/1947-5136-126.1.101\">https://doi.org/10.1664/1947-5136-126.1.101</a>"
+  },
+  {
+    "year": 2021,
+    "authors": [
+      {
+        "name": "Goodman, A.M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Francke, O.F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Esposito, L.A",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Systematic revision of the arboreal Neotropical ‘thorellii’ clade of *Centruroides* Marx, 1890, bark scorpions (Buthidae C.L. Koch, 1837), with descriptions of six new species",
     "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "448",
-    "pages": "1-68",
-    "doi": null
+    "volume": "452",
+    "pages": "1-92",
+    "doi": "https://doi.org/10.1206/0003-0090.452.1.1"
+  },
+  {
+    "year": 2021,
+    "authors": [
+      {
+        "name": "Silva de Miranda, G.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Giupponi, A.P.L.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Scharff, N",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Systematic revision of the pantropical whip spider family Charinidae Quintero, 1986 (Arachnida, Amblypygi)",
+    "journal": "European Journal of Taxonomy",
+    "volume": "772",
+    "pages": "1-409",
+    "doi": "https://doi.org/10.5852/ejt.2021.772.1505"
+  },
+  {
+    "year": 2021,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Ehrenthal, V.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Loria, S.F",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Systematic revision of the relictual Asian scorpion family Pseudochactidae Gromov, 1998 with a review of cavernicolous, troglobitic, and troglomorphic scorpions",
+    "journal": "Bulletin of the American Museum of Natural History",
+    "volume": "453",
+    "pages": "1-149",
+    "doi": "https://doi.org/10.1206/0003-0090.453.1.1"
   },
   {
     "year": 2021,
@@ -1135,21 +1441,13 @@
     "journal": "Bulletin of the American Museum of Natural History",
     "volume": "450",
     "pages": "1-134",
-    "doi": null
+    "doi": "https://doi.org/10.1206/0003-0090.450.1.1"
   },
   {
     "year": 2021,
     "authors": [
       {
-        "name": "Cain, S.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Loria, S.F.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ben-Shlomo, R.",
+        "name": "Goodman, A.M.",
         "isHighlighted": false
       },
       {
@@ -1157,15 +1455,37 @@
         "isHighlighted": true
       },
       {
-        "name": "Gefen, E",
+        "name": "Esposito, L.A",
         "isHighlighted": false
       }
     ],
-    "title": "Dated phylogeny and ancestral range estimation of sand scorpions (Buthidae: *Buthacus*) reveal Early Miocene divergence across land bridges connecting Africa and Asia",
-    "journal": "Molecular Phylogenetics and Evolution",
-    "volume": "164",
-    "pages": "(107212)",
-    "doi": "https://doi.org/10.1016/j.ympev.2021.107212"
+    "title": "Systematics of the arboreal Neotropical 'thorellii' clade of *Centruroides* Marx, 1890 bark scorpions (Buthidae C.L. Koch 1837), and the efficacy of mini-barcodes for museum specimens",
+    "journal": "Diversity",
+    "volume": "13(9)",
+    "pages": "441; 1-22",
+    "doi": "https://doi.org/10.3390/d13090441"
+  },
+  {
+    "year": 2021,
+    "authors": [
+      {
+        "name": "Botero-Trujillo, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Sain, C.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "The “giant” Ricinulei (Ricinoididae: *Ricinoides*) of West Africa, with descriptions of five new species and comparative morphology of the male copulatory apparatus",
+    "journal": "Bulletin of the American Museum of Natural History",
+    "volume": "448",
+    "pages": "1-68",
+    "doi": "https://doi.org/10.1206/0003-0090.448.1.1"
   },
   {
     "year": 2021,
@@ -1561,136 +1881,6 @@
     "year": 2021,
     "authors": [
       {
-        "name": "Goodman, A.M.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Esposito, L.A",
-        "isHighlighted": false
-      }
-    ],
-    "title": "Systematics of the arboreal Neotropical 'thorellii' clade of *Centruroides* Marx, 1890 bark scorpions (Buthidae C.L. Koch 1837), and the efficacy of mini-barcodes for museum specimens",
-    "journal": "Diversity",
-    "volume": "13(9)",
-    "pages": "441; 1-22",
-    "doi": "https://doi.org/10.3390/d13090441"
-  },
-  {
-    "year": 2021,
-    "authors": [
-      {
-        "name": "Goodman, A.M.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Francke, O.F.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Esposito, L.A",
-        "isHighlighted": false
-      }
-    ],
-    "title": "Systematic revision of the arboreal Neotropical ‘thorellii’ clade of *Centruroides* Marx, 1890, bark scorpions (Buthidae C.L. Koch, 1837), with descriptions of six new species",
-    "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "452",
-    "pages": "1-92",
-    "doi": null
-  },
-  {
-    "year": 2021,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "**Prendini, L.** 2020 [2021]. Biography of Norman I. Platnick. **Entomologica Americana** 126(1-4): 1-21.",
-    "journal": "",
-    "volume": null,
-    "pages": null,
-    "doi": null,
-    "citationHtml": "<b>Prendini, L.</b> 2020 [2021]. Biography of Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 1-21."
-  },
-  {
-    "year": 2021,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "**Prendini, L.** 2020 [2021]. Bibliography of Norman I. Platnick. **Entomologica Americana** 126(1-4): 22-57.",
-    "journal": "",
-    "volume": null,
-    "pages": null,
-    "doi": null,
-    "citationHtml": "<b>Prendini, L.</b> 2020 [2021]. Bibliography of Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 22-57."
-  },
-  {
-    "year": 2021,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "**Prendini, L.** 2020 [2021]. Arachnida (Araneae, Ricinulei) described by Norman I. Platnick. **Entomologica Americana**",
-    "journal": "",
-    "volume": null,
-    "pages": null,
-    "doi": null,
-    "citationHtml": "<b>Prendini, L.</b> 2020 [2021]. Arachnida (Araneae, Ricinulei) described by Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 58-100."
-  },
-  {
-    "year": 2021,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "**Prendini, L.** 2020 [2021]. Taxa dedicated to Norman I. Platnick. **Entomologica Americana** 126(1-4): 101-107.",
-    "journal": "",
-    "volume": null,
-    "pages": null,
-    "doi": null,
-    "citationHtml": "<b>Prendini, L.</b> 2020 [2021]. Taxa dedicated to Norman I. Platnick. <b>Entomologica Americana</b> 126(1-4): 101-107."
-  },
-  {
-    "year": 2021,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Ehrenthal, V.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Loria, S.F",
-        "isHighlighted": false
-      }
-    ],
-    "title": "Systematic revision of the relictual Asian scorpion family Pseudochactidae Gromov, 1998 with a review of cavernicolous, troglobitic, and troglomorphic scorpions",
-    "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "453",
-    "pages": "1-149",
-    "doi": null
-  },
-  {
-    "year": 2021,
-    "authors": [
-      {
         "name": "Schramm, F.D.",
         "isHighlighted": false
       },
@@ -1707,129 +1897,7 @@
     "journal": "Molecular Ecology",
     "volume": "30(12)",
     "pages": "2872-2890",
-    "doi": null
-  },
-  {
-    "year": 2021,
-    "authors": [
-      {
-        "name": "Seiter, M.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Schwaha, T.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ferreira, R.L.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Wolff, J.O",
-        "isHighlighted": false
-      }
-    ],
-    "title": "Fine structure of the epicuticular secretion coat and associated glands of Pedipalpi and Palpigradi (Arachnida)",
-    "journal": "Journal of Morphology",
-    "volume": "282(8)",
-    "pages": "1158-1169",
-    "doi": null
-  },
-  {
-    "year": 2021,
-    "authors": [
-      {
-        "name": "Silva de Miranda, G.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Giupponi, A.P.L.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Scharff, N",
-        "isHighlighted": false
-      }
-    ],
-    "title": "Systematic revision of the pantropical whip spider family Charinidae Quintero, 1986 (Arachnida, Amblypygi)",
-    "journal": "European Journal of Taxonomy",
-    "volume": "772",
-    "pages": "1-409",
-    "doi": "https://doi.org/10.5852/ejt.2021.772.1505"
-  },
-  {
-    "year": 2021,
-    "authors": [
-      {
-        "name": "Silva de Miranda, G.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Scharff, N.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Giupponi, A.P.L.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Phylogeny and biogeography of the pantropical whip spider family Charinidae (Arachnida, Amblypygi)",
-    "journal": "Zoological Journal of the Linnean Society",
-    "volume": "194(1)",
-    "pages": "136-180",
-    "doi": "https://doi.org/10.1093/zoolinnean/zlaa101"
-  },
-  {
-    "year": 2021,
-    "authors": [
-      {
-        "name": "Zamani, A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Sääksjärvi, I.E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Amateur venom-extraction business may hasten extinction of scorpions",
-    "journal": "Arachnologische Mitteilungen / Arachnology Letters",
-    "volume": "61",
-    "pages": "20-23",
-    "doi": null
-  },
-  {
-    "year": 2020,
-    "authors": [
-      {
-        "name": "Esposito, L.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Publisher correction: Island ancestors and New World biogeography: A case study from the scorpions (Buthidae: Centruroidinae)",
-    "journal": "Scientific Reports",
-    "volume": "10",
-    "pages": "7545 (1 p.)",
-    "doi": null
+    "doi": "https://doi.org/10.1111/mec.15924"
   },
   {
     "year": 2020,
@@ -1847,157 +1915,7 @@
     "journal": "Cladistics",
     "volume": "37(2)",
     "pages": "109-161",
-    "doi": null
-  },
-  {
-    "year": 2020,
-    "authors": [
-      {
-        "name": "Loria, S.F.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Out of India, thrice: Origins and diversification of the Asian forest scorpions, *Heterometrus* (Scorpionidae)",
-    "journal": "Scientific Reports",
-    "volume": "10(22301)",
-    "pages": "1-19",
-    "doi": "https://doi.org/10.1038/s41598-020-78183-8"
-  },
-  {
-    "year": 2020,
-    "authors": [
-      {
-        "name": "Monjaraz-Ruedas, R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Francke, O.F.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Integrative systematics untangles evolutionary history of *Stenochrus* Chamberlin, 1922 (Schizomida: Hubbardiidae), a neglected junkyard genus of North American short-tailed whipscorpions",
-    "journal": "Biological Journal of the Linnean Society",
-    "volume": "130",
-    "pages": "458-479",
-    "doi": null
-  },
-  {
-    "year": 2020,
-    "authors": [
-      {
-        "name": "Monjaraz-Ruedas, R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Francke, O.F",
-        "isHighlighted": false
-      }
-    ],
-    "title": "First species of *Surazomus* (Schizomida: Hubbardiidae) from North America illuminate diversification of short-tailed whipscorpions in the New World",
-    "journal": "Arthropod Systematics & Phylogeny",
-    "volume": "78(2)",
-    "pages": "245-263",
-    "doi": null
-  },
-  {
-    "year": 2020,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Dr. Norman I. Platnick (1951–2020)",
-    "journal": "Boletín de la Asociación Mexicana de Sistemática de Artrópodos",
-    "volume": "4(1)",
-    "pages": "2-4",
-    "doi": null
-  },
-  {
-    "year": 2020,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "In Memoriam Dr. Norm Platnick",
-    "journal": "American Arachnology",
-    "volume": "85",
-    "pages": "5-6",
-    "doi": null
-  },
-  {
-    "year": 2020,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "In Memory of Dr Norman I. Platnick ’68. Curator Emeritus at the American Museum of Natural History",
-    "journal": "Concord University Magazine",
-    "volume": null,
-    "pages": null,
-    "doi": null
-  },
-  {
-    "year": 2020,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Norman Ira Platnick 1951–2020",
-    "journal": "Arachnology",
-    "volume": "18(5)",
-    "pages": "507-516",
-    "doi": null
-  },
-  {
-    "year": 2020,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Tribute to a titan: Norman Platnick (30 December 1951 – 8 April 2020)",
-    "journal": "The Spider Club News",
-    "volume": null,
-    "pages": null,
-    "doi": null
-  },
-  {
-    "year": 2020,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Loria, S.F",
-        "isHighlighted": false
-      }
-    ],
-    "title": "Systematic revision of the Asian forest scorpions (Heterometrinae Simon, 1879), revised suprageneric classification of Scorpionidae Latreille, 1802, and revalidation of Rugodentidae Bastawade et al., 2005",
-    "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "442",
-    "pages": "1-480",
-    "doi": null
+    "doi": "https://doi.org/10.1111/cla.12434"
   },
   {
     "year": 2020,
@@ -2043,6 +1961,176 @@
     "journal": "Arthropod Systematics & Phylogeny",
     "volume": "78(2)",
     "pages": "265-285",
+    "doi": "https://doi.org/10.26049/ASP78-2-2020-04"
+  },
+  {
+    "year": 2020,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Dr. Norman I. Platnick (1951–2020)",
+    "journal": "Boletín de la Asociación Mexicana de Sistemática de Artrópodos",
+    "volume": "4(1)",
+    "pages": "2-4",
+    "doi": null,
+    "pdf": "https://amxsa.org/wp-content/uploads/2021/01/Boletin-AMXSA-41-JUNIO-2020.pdf"
+  },
+  {
+    "year": 2020,
+    "authors": [
+      {
+        "name": "Monjaraz-Ruedas, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Francke, O.F",
+        "isHighlighted": false
+      }
+    ],
+    "title": "First species of *Surazomus* (Schizomida: Hubbardiidae) from North America illuminate diversification of short-tailed whipscorpions in the New World",
+    "journal": "Arthropod Systematics & Phylogeny",
+    "volume": "78(2)",
+    "pages": "245-263",
+    "doi": "https://doi.org/10.26049/ASP78-2-2020-03"
+  },
+  {
+    "year": 2020,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "In Memoriam Dr. Norm Platnick",
+    "journal": "American Arachnology",
+    "volume": "85",
+    "pages": "5-6",
+    "doi": null,
+    "pdf": "https://www.americanarachnology.org/fileadmin/documents/am_arachnol_newsletter/AmerArachnol85.pdf"
+  },
+  {
+    "year": 2020,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "In Memory of Dr Norman I. Platnick ’68. Curator Emeritus at the American Museum of Natural History",
+    "journal": "Concord University Magazine",
+    "volume": null,
+    "pages": null,
+    "doi": null
+  },
+  {
+    "year": 2020,
+    "authors": [
+      {
+        "name": "Monjaraz-Ruedas, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Francke, O.F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Integrative systematics untangles evolutionary history of *Stenochrus* Chamberlin, 1922 (Schizomida: Hubbardiidae), a neglected junkyard genus of North American short-tailed whipscorpions",
+    "journal": "Biological Journal of the Linnean Society",
+    "volume": "130",
+    "pages": "458-479",
+    "doi": "https://doi.org/10.1093/biolinnean/blaa039"
+  },
+  {
+    "year": 2020,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Norman Ira Platnick 1951–2020",
+    "journal": "Arachnology",
+    "volume": "18(5)",
+    "pages": "507-516",
+    "doi": "https://doi.org/10.13156/arac.2020.18.5.507"
+  },
+  {
+    "year": 2020,
+    "authors": [
+      {
+        "name": "Loria, S.F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Out of India, thrice: Origins and diversification of the Asian forest scorpions, *Heterometrus* (Scorpionidae)",
+    "journal": "Scientific Reports",
+    "volume": "10(22301)",
+    "pages": "1-19",
+    "doi": "https://doi.org/10.1038/s41598-020-78183-8"
+  },
+  {
+    "year": 2020,
+    "authors": [
+      {
+        "name": "Esposito, L.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Publisher correction: Island ancestors and New World biogeography: A case study from the scorpions (Buthidae: Centruroidinae)",
+    "journal": "Scientific Reports",
+    "volume": "10",
+    "pages": "7545 (1 p.)",
+    "doi": "https://doi.org/10.1038/s41598-020-64154-6"
+  },
+  {
+    "year": 2020,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Loria, S.F",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Systematic revision of the Asian forest scorpions (Heterometrinae Simon, 1879), revised suprageneric classification of Scorpionidae Latreille, 1802, and revalidation of Rugodentidae Bastawade et al., 2005",
+    "journal": "Bulletin of the American Museum of Natural History",
+    "volume": "442",
+    "pages": "1-480",
+    "doi": "https://doi.org/10.1206/0003-0090.442.1.1"
+  },
+  {
+    "year": 2020,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Tribute to a titan: Norman Platnick (30 December 1951 – 8 April 2020)",
+    "journal": "The Spider Club News",
+    "volume": null,
+    "pages": null,
     "doi": null
   },
   {
@@ -2061,29 +2149,7 @@
     "journal": "Scientific Reports",
     "volume": "9",
     "pages": "3500",
-    "doi": null
-  },
-  {
-    "year": 2019,
-    "authors": [
-      {
-        "name": "Monjaraz-Ruedas, R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Francke, O.F.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Systematics of the short-tailed whipscorpion genus *Stenochrus* Chamberlin, 1922 (Schizomida: Hubbardiidae) with descriptions of six new genera and five new species",
-    "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "435",
-    "pages": "1-91",
-    "doi": null
+    "doi": "https://doi.org/10.1038/s41598-018-33754-8"
   },
   {
     "year": 2019,
@@ -2133,13 +2199,13 @@
     "journal": "American Museum Novitates",
     "volume": "3930",
     "pages": "1-24",
-    "doi": null
+    "doi": "https://doi.org/10.1206/3930.1"
   },
   {
-    "year": 2018,
+    "year": 2019,
     "authors": [
       {
-        "name": "Barrales Alcalá, D.A.",
+        "name": "Monjaraz-Ruedas, R.",
         "isHighlighted": false
       },
       {
@@ -2151,11 +2217,33 @@
         "isHighlighted": true
       }
     ],
-    "title": "Systematic revision of the giant North American vinegaroons, genus *Mastigoproctus* (Thelyphonida: Thelyphonidae)",
+    "title": "Systematics of the short-tailed whipscorpion genus *Stenochrus* Chamberlin, 1922 (Schizomida: Hubbardiidae) with descriptions of six new genera and five new species",
     "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "418",
-    "pages": "1-62",
-    "doi": null
+    "volume": "435",
+    "pages": "1-91",
+    "doi": "https://doi.org/10.1206/0003-0090.435.1.1"
+  },
+  {
+    "year": 2018,
+    "authors": [
+      {
+        "name": "Schaffrath, S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Reinhard, P",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Intraspecific venom variation in southern African scorpion species of the genera *Parabuthus*, *Uroplectes* and *Opistophthalmus* (Scorpiones: Buthidae, Scorpionidae)",
+    "journal": "Toxicon",
+    "volume": "144",
+    "pages": "83-90",
+    "doi": "https://doi.org/10.1016/j.toxicon.2018.02.004"
   },
   {
     "year": 2018,
@@ -2181,7 +2269,29 @@
     "journal": "Arthropod Systematics and Phylogeny",
     "volume": "76(1)",
     "pages": "87-122",
-    "doi": null
+    "doi": "https://doi.org/10.3897/asp.76.e31942"
+  },
+  {
+    "year": 2018,
+    "authors": [
+      {
+        "name": "Barrales Alcalá, D.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Francke, O.F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Systematic revision of the giant North American vinegaroons, genus *Mastigoproctus* (Thelyphonida: Thelyphonidae)",
+    "journal": "Bulletin of the American Museum of Natural History",
+    "volume": "418",
+    "pages": "1-62",
+    "doi": "https://doi.org/10.1206/0003-0090-418.1.1"
   },
   {
     "year": 2018,
@@ -2199,7 +2309,7 @@
     "journal": "Bulletin of the American Museum of Natural History",
     "volume": "420",
     "pages": "1-81",
-    "doi": null
+    "doi": "https://doi.org/10.1206/907.1"
   },
   {
     "year": 2018,
@@ -2217,7 +2327,7 @@
     "journal": "Zoologischer Anzeiger",
     "volume": "273",
     "pages": "183-191",
-    "doi": null
+    "doi": "https://doi.org/10.1016/j.jcz.2017.12.011"
   },
   {
     "year": 2018,
@@ -2243,7 +2353,7 @@
     "journal": "Zoologischer Anzeiger",
     "volume": "273",
     "pages": "23-32",
-    "doi": null
+    "doi": "https://doi.org/10.1016/j.jcz.2018.02.003"
   },
   {
     "year": 2018,
@@ -2257,13 +2367,17 @@
     "journal": "Science",
     "volume": "360(6396)",
     "pages": "1405-1406",
-    "doi": null
+    "doi": "https://doi.org/10.1126/science.aat9844"
   },
   {
-    "year": 2018,
+    "year": 2017,
     "authors": [
       {
-        "name": "Schaffrath, S.",
+        "name": "Rubin, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Lamsdell, J.C.",
         "isHighlighted": false
       },
       {
@@ -2271,15 +2385,33 @@
         "isHighlighted": true
       },
       {
-        "name": "Reinhard, P",
+        "name": "Hopkins, M.J",
         "isHighlighted": false
       }
     ],
-    "title": "Intraspecific venom variation in southern African scorpion species of the genera *Parabuthus*, *Uroplectes* and *Opistophthalmus* (Scorpiones: Buthidae, Scorpionidae)",
-    "journal": "Toxicon",
-    "volume": "144",
-    "pages": "83-90",
-    "doi": null
+    "title": "Exocuticular hyaline layer of sea scorpions and horseshoe crabs suggests cuticular fluorescence is plesiomorphic in chelicerates",
+    "journal": "Journal of Zoology (London)",
+    "volume": "303(4)",
+    "pages": "245-253",
+    "doi": "https://doi.org/10.1111/jzo.12493"
+  },
+  {
+    "year": 2017,
+    "authors": [
+      {
+        "name": "Rogers, D.C.",
+        "isHighlighted": false
+      },
+      {
+        "name": "et al. [list of authors including Prendini, L.]",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Images are not and should not ever be type specimens: A rebuttal to Garraffoni & Freitas",
+    "journal": "Zootaxa",
+    "volume": "4269(4)",
+    "pages": "455-459",
+    "doi": "https://doi.org/10.11646/zootaxa.4269.4.3"
   },
   {
     "year": 2017,
@@ -2309,35 +2441,70 @@
     "journal": "Bulletin of the American Museum of Natural History",
     "volume": "415",
     "pages": "1-134",
-    "doi": null
+    "doi": "https://doi.org/10.1206/0003-0090-415.1.1"
   },
   {
-    "year": 2017,
+    "year": 2016,
     "authors": [
       {
-        "name": "Rogers, D.C.",
+        "name": "Ceccarelli, F.S.",
         "isHighlighted": false
       },
       {
-        "name": "et al. [list of authors including Prendini, L.]",
+        "name": "Ojanguren-Affilastro, A.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ramírez, M.J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ochoa, J.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Mattoni, C.I.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
         "isHighlighted": true
       }
     ],
-    "title": "Images are not and should not ever be type specimens: A rebuttal to Garraffoni & Freitas",
-    "journal": "Zootaxa",
-    "volume": "4269(4)",
-    "pages": "455-459",
-    "doi": null
+    "title": "Andean uplift drives diversification of the bothriurid scorpion genus *Brachistosternus*",
+    "journal": "Journal of Biogeography.",
+    "volume": null,
+    "pages": null,
+    "doi": "https://doi.org/10.1111/jbi.12760"
   },
   {
-    "year": 2017,
+    "year": 2016,
     "authors": [
       {
-        "name": "Rubin, M.",
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Maquart, P.O., Réveillion, F., **Prendini, L.**, Burger, M., Fisher, B.L., and Van Noort, S. (2016). New distribution re",
+    "journal": "",
+    "volume": null,
+    "pages": null,
+    "doi": "https://doi.org/10.4001/003.024.0245",
+    "citationHtml": "Maquart, P.O., Réveillion, F., <b>Prendini, L.</b>, Burger, M., Fisher, B.L., and Van Noort, S. (2016). New distribution records for African whip spiders (Arachnida: Amblypygi). <b>African Entomology</b> 24(1): 245-246. <a href=\"https://doi.org/10.4001/003.024.0245\" >https://doi.org/10.4001/003.024.0245</a>"
+  },
+  {
+    "year": 2016,
+    "authors": [
+      {
+        "name": "Franz-Guess, S.",
         "isHighlighted": false
       },
       {
-        "name": "Lamsdell, J.C.",
+        "name": "Klußman-Fricke, B.-J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Wirkner, C.S.",
         "isHighlighted": false
       },
       {
@@ -2345,15 +2512,89 @@
         "isHighlighted": true
       },
       {
-        "name": "Hopkins, M.J",
+        "name": "Starck, J.M",
         "isHighlighted": false
       }
     ],
-    "title": "Exocuticular hyaline layer of sea scorpions and horseshoe crabs suggests cuticular fluorescence is plesiomorphic in chelicerates",
-    "journal": "Journal of Zoology (London)",
-    "volume": "303(4)",
-    "pages": "245-253",
-    "doi": null
+    "title": "Morphology of the tracheal system of camel spiders (Chelicerata: Solifugae) based on micro-CT and 3D-reconstruction in exemplar species from three families",
+    "journal": "Arthropod Structure & Development",
+    "volume": "45",
+    "pages": "440-451",
+    "doi": "https://doi.org/10.1016/j.asd.2016.08.004"
+  },
+  {
+    "year": 2016,
+    "authors": [
+      {
+        "name": "Ceriaco, L.M.P.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Gutiérrez, E.E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Dubois, A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "et al. [493 coauthors including Prendini, L.]",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Photography-based taxonomy is inadequate, unnecessary, and potentially harmful for biological sciences",
+    "journal": "Zootaxa",
+    "volume": "4196(3)",
+    "pages": "435-445",
+    "doi": "https://doi.org/10.11646/zootaxa.4196.3.9"
+  },
+  {
+    "year": 2016,
+    "authors": [
+      {
+        "name": "Ojanguren-Affilastro, A.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Mattoni, C.I.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ochoa, J.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ramírez, M.J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ceccarelli, F.S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Phylogeny, species delimitation and convergence in the South American bothriurid scorpion genus *Brachistosternus* Pocock 1893: Integrating morphology, nuclear and mitochondrial DNA",
+    "journal": "Molecular Phylogenetics and Evolution",
+    "volume": "94",
+    "pages": "159-170",
+    "doi": "https://doi.org/10.1016/j.ympev.2015.08.007"
+  },
+  {
+    "year": 2016,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Redefinition and systematic revision of the East African scorpion genus *Pandinoides* (Scorpiones: Scorpionidae) with critique of the taxonomy of *Pandinus*, sensu lato",
+    "journal": "Bulletin of the American Museum of Natural History",
+    "volume": "407",
+    "pages": "1-66",
+    "doi": "https://doi.org/10.1206/0003-0090-407.1.1"
   },
   {
     "year": 2016,
@@ -2383,7 +2624,333 @@
     "journal": "Natuurwissenschaften (The Science of Nature)",
     "volume": "103",
     "pages": "56. DOI 10.1007/s00114-016-1374-z",
-    "doi": null
+    "doi": "https://doi.org/10.1007/s00114-016-1374-z"
+  },
+  {
+    "year": 2016,
+    "authors": [
+      {
+        "name": "Janion-Scheepers, C.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Measey, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Braschler, B.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Chown, S.L.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Coetzee, L.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Colville, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Dames, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Davies, A.B.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Davis, A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Davies, S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Dippenaar-Schoeman, A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Duffy, G.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Fourie, D.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Griffiths, C.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Haddad, C.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Hamer, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Herbert, D.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Hugo-Coetzee, L.E.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Jacobs, A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Jansen van Rensburg, C.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Lamani, S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Lotz, L.N.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Louw, S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Lyle, R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Malan, A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Marais, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Neethling, J.-A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Nxele, T.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Plisko, D.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Swart, A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Theron, P.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Truter, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ueckermann, E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Uys, V.M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Villet, M.H.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Willows-Munrow, S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Wilson, J.R.U",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Soil biota in a megadiverse country: Current knowledge and future directions in South Africa",
+    "journal": "Pedobiologia - Journal of Soil Ecology",
+    "volume": "59",
+    "pages": "129-174",
+    "doi": "https://doi.org/10.1016/j.pedobi.2016.03.004"
+  },
+  {
+    "year": 2016,
+    "authors": [
+      {
+        "name": "González-Santillán, E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Systematic revision of the North American syntropine vaejovid scorpion genera *Maaykuyak, Syntropis*, and *Vizcaino*, with description of the adults of *Syntropis williamsi*",
+    "journal": "Bulletin of the American Museum of Natural History",
+    "volume": "405",
+    "pages": "1-67",
+    "doi": "https://doi.org/10.1206/0003-0090-405.1.1"
+  },
+  {
+    "year": 2016,
+    "authors": [
+      {
+        "name": "Wheeler W.C., Coddington, J.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Crowley, L.M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Dimitrov, D.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Goloboff, P.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Griswold, C.E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Hormiga, G.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Ramírez, M.J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Sierwald, P.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Almeida-Silva, L.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Alvarez-Padilla, F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Arnedo, M.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Benavides Silva, L.R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Benjamin, S.P.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Bond, J.E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Grismado, C.J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Hasan, E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Hedin, M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Izquierdo, M.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Labarque, F.M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ledford, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Lopardo, L.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Maddison, W.P.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Miller, J.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Piacentini, L.N.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Platnick, N.I.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Polotow, D.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Silva-Dávila, D.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Scharff, N.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Szuts, T.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ubick, D.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Vink, C.J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Wood, H.M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Zhang, J",
+        "isHighlighted": false
+      }
+    ],
+    "title": "The spider tree of life: Phylogeny of Araneae based on target-gene analyses from an extensive taxon sampling",
+    "journal": "Cladistics",
+    "volume": null,
+    "pages": null,
+    "doi": "https://doi.org/10.1111/cla.12182"
   },
   {
     "year": 2016,
@@ -2589,81 +3156,17 @@
     "journal": "Zootaxa",
     "volume": "4137(1)",
     "pages": "121-128",
-    "doi": null
+    "doi": "https://doi.org/10.11646/zootaxa.4137.1.9"
   },
   {
-    "year": 2016,
+    "year": 2015,
     "authors": [
       {
-        "name": "Ceccarelli, F.S.",
+        "name": "Cushing, P.E.",
         "isHighlighted": false
       },
       {
-        "name": "Ojanguren-Affilastro, A.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ramírez, M.J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ochoa, J.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Mattoni, C.I.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Andean uplift drives diversification of the bothriurid scorpion genus *Brachistosternus*",
-    "journal": "Journal of Biogeography.",
-    "volume": null,
-    "pages": null,
-    "doi": null
-  },
-  {
-    "year": 2016,
-    "authors": [
-      {
-        "name": "Ceriaco, L.M.P.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Gutiérrez, E.E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Dubois, A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "et al. [493 coauthors including Prendini, L.]",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Photography-based taxonomy is inadequate, unnecessary, and potentially harmful for biological sciences",
-    "journal": "Zootaxa",
-    "volume": "4196(3)",
-    "pages": "435-445",
-    "doi": null
-  },
-  {
-    "year": 2016,
-    "authors": [
-      {
-        "name": "Franz-Guess, S.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Klußman-Fricke, B.-J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Wirkner, C.S.",
+        "name": "Graham, M.R.",
         "isHighlighted": false
       },
       {
@@ -2671,404 +3174,51 @@
         "isHighlighted": true
       },
       {
-        "name": "Starck, J.M",
+        "name": "Brookhart, J.O",
         "isHighlighted": false
       }
     ],
-    "title": "Morphology of the tracheal system of camel spiders (Chelicerata: Solifugae) based on micro-CT and 3D-reconstruction in exemplar species from three families",
-    "journal": "Arthropod Structure & Development",
-    "volume": "45",
-    "pages": "440-451",
-    "doi": null
-  },
-  {
-    "year": 2016,
-    "authors": [
-      {
-        "name": "González-Santillán, E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Systematic revision of the North American syntropine vaejovid scorpion genera *Maaykuyak, Syntropis*, and *Vizcaino*, with description of the adults of *Syntropis williamsi*",
-    "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "405",
-    "pages": "1-67",
-    "doi": null
-  },
-  {
-    "year": 2016,
-    "authors": [
-      {
-        "name": "Janion-Scheepers, C.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Measey, J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Braschler, B.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Chown, S.L.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Coetzee, L.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Colville, J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Dames, J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Davies, A.B.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Davis, A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Davies, S.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Dippenaar-Schoeman, A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Duffy, G.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Fourie, D.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Griffiths, C.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Haddad, C.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Hamer, M.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Herbert, D.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Hugo-Coetzee, L.E.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Jacobs, A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Jansen van Rensburg, C.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Lamani, S.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Lotz, L.N.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Louw, S.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Lyle, R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Malan, A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Marais, M.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Neethling, J.-A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Nxele, T.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Plisko, D.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Swart, A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Theron, P.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Truter, M.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ueckermann, E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Uys, V.M.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Villet, M.H.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Willows-Munrow, S.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Wilson, J.R.U",
-        "isHighlighted": false
-      }
-    ],
-    "title": "Soil biota in a megadiverse country: Current knowledge and future directions in South Africa",
-    "journal": "Pedobiologia - Journal of Soil Ecology",
-    "volume": "59",
-    "pages": "129-174",
-    "doi": null
-  },
-  {
-    "year": 2016,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Maquart, P.O., Réveillion, F., **Prendini, L.**, Burger, M., Fisher, B.L., and Van Noort, S. (2016). New distribution re",
-    "journal": "",
-    "volume": null,
-    "pages": null,
-    "doi": null,
-    "citationHtml": "Maquart, P.O., Réveillion, F., <b>Prendini, L.</b>, Burger, M., Fisher, B.L., and Van Noort, S. (2016). New distribution records for African whip spiders (Arachnida: Amblypygi). <b>African Entomology</b> 24(1): 245-246. <a href=\"https://research.amnh.org/users/lorenzo/PDF/Maquart.2016.pdf\" > PDF </a>"
-  },
-  {
-    "year": 2016,
-    "authors": [
-      {
-        "name": "Ojanguren-Affilastro, A.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Mattoni, C.I.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ochoa, J.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ramírez, M.J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ceccarelli, F.S.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Phylogeny, species delimitation and convergence in the South American bothriurid scorpion genus *Brachistosternus* Pocock 1893: Integrating morphology, nuclear and mitochondrial DNA",
+    "title": "A multilocus molecular phylogeny of the endemic North American camel spider family Eremobatidae (Arachnida: Solifugae)",
     "journal": "Molecular Phylogenetics and Evolution",
-    "volume": "94",
-    "pages": "159-170",
-    "doi": null
+    "volume": "92",
+    "pages": "280-293",
+    "doi": "https://doi.org/10.1016/j.ympev.2015.07.001"
   },
   {
-    "year": 2016,
+    "year": 2015,
     "authors": [
       {
         "name": "Prendini, L.",
         "isHighlighted": true
       }
     ],
-    "title": "Redefinition and systematic revision of the East African scorpion genus *Pandinoides* (Scorpiones: Scorpionidae) with critique of the taxonomy of *Pandinus*, sensu lato",
+    "title": "A remarkably small species of *Uroplectes* Peters, 1861 (Scorpiones: Buthidae) endemic to the Succulent Karoo of the Northern Cape Province, South Africa",
+    "journal": "African Invertebrates",
+    "volume": "56(2)",
+    "pages": "499-513",
+    "doi": "https://doi.org/10.5733/afin.056.0201"
+  },
+  {
+    "year": 2015,
+    "authors": [
+      {
+        "name": "Bird, T.L.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Wharton, R.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Cheliceral morphology in Solifugae (Arachnida): Primary homology, terminology, and character survey",
     "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "407",
-    "pages": "1-66",
-    "doi": null
-  },
-  {
-    "year": 2016,
-    "authors": [
-      {
-        "name": "Wheeler W.C., Coddington, J.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Crowley, L.M.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Dimitrov, D.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Goloboff, P.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Griswold, C.E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Hormiga, G.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Ramírez, M.J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Sierwald, P.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Almeida-Silva, L.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Alvarez-Padilla, F.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Arnedo, M.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Benavides Silva, L.R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Benjamin, S.P.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Bond, J.E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Grismado, C.J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Hasan, E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Hedin, M.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Izquierdo, M.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Labarque, F.M.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ledford, J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Lopardo, L.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Maddison, W.P.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Miller, J.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Piacentini, L.N.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Platnick, N.I.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Polotow, D.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Silva-Dávila, D.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Scharff, N.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Szuts, T.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ubick, D.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Vink, C.J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Wood, H.M.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Zhang, J",
-        "isHighlighted": false
-      }
-    ],
-    "title": "The spider tree of life: Phylogeny of Araneae based on target-gene analyses from an extensive taxon sampling",
-    "journal": "Cladistics",
-    "volume": null,
-    "pages": null,
-    "doi": null
+    "volume": "394",
+    "pages": "1-355",
+    "doi": "https://doi.org/10.1206/916.1"
   },
   {
     "year": 2015,
@@ -3104,54 +3254,6 @@
     "year": 2015,
     "authors": [
       {
-        "name": "Bird, T.L.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Wharton, R.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Cheliceral morphology in Solifugae (Arachnida): Primary homology, terminology, and character survey",
-    "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "394",
-    "pages": "1-355",
-    "doi": null
-  },
-  {
-    "year": 2015,
-    "authors": [
-      {
-        "name": "Cushing, P.E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Graham, M.R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Brookhart, J.O",
-        "isHighlighted": false
-      }
-    ],
-    "title": "A multilocus molecular phylogeny of the endemic North American camel spider family Eremobatidae (Arachnida: Solifugae)",
-    "journal": "Molecular Phylogenetics and Evolution",
-    "volume": "92",
-    "pages": "280-293",
-    "doi": null
-  },
-  {
-    "year": 2015,
-    "authors": [
-      {
         "name": "González-Santillán, E.",
         "isHighlighted": false
       },
@@ -3164,25 +3266,7 @@
     "journal": "Cladistics",
     "volume": "31(4)",
     "pages": "341-405",
-    "doi": null
-  },
-  {
-    "year": 2015,
-    "authors": [
-      {
-        "name": "González-Santillán, E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Systematic revision of the North American syntropine vaejovid scorpions with a subaculear tubercle, *Konetontli* González-Santillán and Prendini, 2013",
-    "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "397",
-    "pages": "1-78",
-    "doi": null
+    "doi": "https://doi.org/10.1111/cla.12091"
   },
   {
     "year": 2015,
@@ -3220,35 +3304,7 @@
     "journal": "PLoS One",
     "volume": "10(1)",
     "pages": "e0116639 (15 pp.)",
-    "doi": null
-  },
-  {
-    "year": 2015,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "A remarkably small species of *Uroplectes* Peters, 1861 (Scorpiones: Buthidae) endemic to the Succulent Karoo of the Northern Cape Province, South Africa",
-    "journal": "African Invertebrates",
-    "volume": "56(2)",
-    "pages": "499-513",
-    "doi": null
-  },
-  {
-    "year": 2015,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Three new *Uroplectes* (Scorpiones: Buthidae) with punctate metasomal segments from tropical central Africa",
-    "journal": "American Museum Novitates",
-    "volume": "3840",
-    "pages": "1-32",
-    "doi": null
+    "doi": "https://doi.org/10.1371/journal.pone.0116639"
   },
   {
     "year": 2015,
@@ -3290,7 +3346,39 @@
     "journal": "Molecular Phylogenetics and Evolution",
     "volume": "91",
     "pages": "226-237",
-    "doi": null
+    "doi": "https://doi.org/10.1016/j.ympev.2015.04.028"
+  },
+  {
+    "year": 2015,
+    "authors": [
+      {
+        "name": "González-Santillán, E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Systematic revision of the North American syntropine vaejovid scorpions with a subaculear tubercle, *Konetontli* González-Santillán and Prendini, 2013",
+    "journal": "Bulletin of the American Museum of Natural History",
+    "volume": "397",
+    "pages": "1-78",
+    "doi": "https://doi.org/10.1206/907.1"
+  },
+  {
+    "year": 2015,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Three new *Uroplectes* (Scorpiones: Buthidae) with punctate metasomal segments from tropical central Africa",
+    "journal": "American Museum Novitates",
+    "volume": "3840",
+    "pages": "1-32",
+    "doi": "https://doi.org/10.1206/3840.1"
   },
   {
     "year": 2014,
@@ -3316,7 +3404,7 @@
     "journal": "BMC Evolutionary Biology",
     "volume": "14(9)",
     "pages": "1-16",
-    "doi": null
+    "doi": "https://doi.org/10.1186/1471-2148-14-9"
   },
   {
     "year": 2014,
@@ -3358,47 +3446,7 @@
     "journal": "Annals of the Entomological Society of America",
     "volume": "107(2)",
     "pages": "510-520",
-    "doi": null
-  },
-  {
-    "year": 2014,
-    "authors": [
-      {
-        "name": "Foord, S.H.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Gelebe, V.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Effects of aspect and altitude on scorpion diversity along an environmental gradient in the Soutpansberg, South Africa",
-    "journal": "Journal of Arid Environments",
-    "volume": "113",
-    "pages": "114-120",
-    "doi": null
-  },
-  {
-    "year": 2014,
-    "authors": [
-      {
-        "name": "Loria, S.F.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Homology of the lateral eyes of Scorpiones: A six-ocellus model",
-    "journal": "PLoS One",
-    "volume": "9(12)",
-    "pages": "e112913 (30 pp.). doi:10.1371/journal.pone.0112913",
-    "doi": null
+    "doi": "https://doi.org/10.1603/AN13140"
   },
   {
     "year": 2014,
@@ -3428,7 +3476,29 @@
     "journal": "Molecular Phylogenetics and Evolution",
     "volume": "71",
     "pages": "298-307",
-    "doi": null
+    "doi": "https://doi.org/10.1016/j.ympev.2013.11.005"
+  },
+  {
+    "year": 2014,
+    "authors": [
+      {
+        "name": "Foord, S.H.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Gelebe, V.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Effects of aspect and altitude on scorpion diversity along an environmental gradient in the Soutpansberg, South Africa",
+    "journal": "Journal of Arid Environments",
+    "volume": "113",
+    "pages": "114-120",
+    "doi": "https://doi.org/10.1016/j.jaridenv.2014.10.006"
   },
   {
     "year": 2014,
@@ -3446,73 +3516,7 @@
     "journal": "Cladistics",
     "volume": null,
     "pages": null,
-    "doi": null
-  },
-  {
-    "year": 2014,
-    "authors": [
-      {
-        "name": "Santibáñez-Lopez, C.E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Francke, O.F.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "*Kolotl* n. gen. (Scorpiones: Diplocentridae) a new scorpion genus from Mexico",
-    "journal": "American Museum Novitates",
-    "volume": "3815",
-    "pages": "1-14",
-    "doi": null
-  },
-  {
-    "year": 2014,
-    "authors": [
-      {
-        "name": "Santibáñez-Lopez, C.E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Francke, O.F.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Phylogeny of the North American scorpion genus *Diplocentrus* Peters, 1861 (Scorpiones: Diplocentridae) based on morphology, nuclear and mitochondrial DNA",
-    "journal": "Arthropod Systematics and Phylogeny",
-    "volume": "72(3)",
-    "pages": "257-279",
-    "doi": null
-  },
-  {
-    "year": 2014,
-    "authors": [
-      {
-        "name": "Santibáñez-Lopez, C.E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Francke, O.F.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Shining a light into the world's deepest caves: Phylogenetic systematics of the troglobiotic scorpion genus *Alacran* Francke, 1982 (Typhlochactidae: Alacraninae)",
-    "journal": "Invertebrate Systematics",
-    "volume": "28",
-    "pages": "643-664",
-    "doi": null
+    "doi": "https://doi.org/10.1111/cla.12067"
   },
   {
     "year": 2014,
@@ -3534,7 +3538,69 @@
     "journal": "American Museum Novitates",
     "volume": "3806",
     "pages": "1-26",
-    "doi": null
+    "doi": "https://doi.org/10.1206/3806.1"
+  },
+  {
+    "year": 2014,
+    "authors": [
+      {
+        "name": "Loria, S.F.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Homology of the lateral eyes of Scorpiones: A six-ocellus model",
+    "journal": "PLoS One",
+    "volume": "9(12)",
+    "pages": "e112913 (30 pp.). doi:10.1371/journal.pone.0112913",
+    "doi": "https://doi.org/10.1371/journal.pone.0112913"
+  },
+  {
+    "year": 2014,
+    "authors": [
+      {
+        "name": "Santibáñez-Lopez, C.E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Francke, O.F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "*Kolotl* n. gen. (Scorpiones: Diplocentridae) a new scorpion genus from Mexico",
+    "journal": "American Museum Novitates",
+    "volume": "3815",
+    "pages": "1-14",
+    "doi": "https://doi.org/10.1206/3815.1"
+  },
+  {
+    "year": 2014,
+    "authors": [
+      {
+        "name": "Santibáñez-Lopez, C.E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Francke, O.F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Phylogeny of the North American scorpion genus *Diplocentrus* Peters, 1861 (Scorpiones: Diplocentridae) based on morphology, nuclear and mitochondrial DNA",
+    "journal": "Arthropod Systematics and Phylogeny",
+    "volume": "72(3)",
+    "pages": "257-279",
+    "doi": "https://doi.org/10.3897/asp.72.e31789"
   },
   {
     "year": 2014,
@@ -3552,7 +3618,29 @@
     "journal": "American Museum Novitates",
     "volume": "3805",
     "pages": "1-23",
-    "doi": null
+    "doi": "https://doi.org/10.1206/3805.1"
+  },
+  {
+    "year": 2014,
+    "authors": [
+      {
+        "name": "Santibáñez-Lopez, C.E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Francke, O.F.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Shining a light into the world's deepest caves: Phylogenetic systematics of the troglobiotic scorpion genus *Alacran* Francke, 1982 (Typhlochactidae: Alacraninae)",
+    "journal": "Invertebrate Systematics",
+    "volume": "28",
+    "pages": "643-664",
+    "doi": "https://doi.org/10.1071/IS14035"
   },
   {
     "year": 2013,
@@ -3582,7 +3670,7 @@
     "journal": "PLOS One",
     "volume": "8(1)",
     "pages": "e52822 (11 pp.)",
-    "doi": null
+    "doi": "https://doi.org/10.1371/journal.pone.0052822"
   },
   {
     "year": 2013,
@@ -3604,99 +3692,7 @@
     "journal": "Journal of Biogeography",
     "volume": "40(10)",
     "pages": "1850-1860",
-    "doi": null
-  },
-  {
-    "year": 2013,
-    "authors": [
-      {
-        "name": "González-Santillán, E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Redefinition and generic revision of the North American vaejovid scorpion subfamily Syntropinae Kraepelin, 1905, with descriptions of six new genera",
-    "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "382",
-    "pages": "1-71",
-    "doi": null
-  },
-  {
-    "year": 2013,
-    "authors": [
-      {
-        "name": "Graham, M.R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Jaeger, J.R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Riddle, B.R",
-        "isHighlighted": false
-      }
-    ],
-    "title": "Phylogeography of Beck's desert scorpion, *Paruroctonus becki*, reveals Pliocene diversification in the Eastern California Shear Zone and postglacial expansion in the Great Basin Desert",
-    "journal": "Molecular Phylogenetics and Evolution",
-    "volume": "69",
-    "pages": "502-513",
-    "doi": null
-  },
-  {
-    "year": 2013,
-    "authors": [
-      {
-        "name": "Graham, M.R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Jaeger, J.R.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Riddle, B.R",
-        "isHighlighted": false
-      }
-    ],
-    "title": "Phylogeography of the Arizona hairy scorpion (*Hadrurus arizonensis*) supports a model of biotic assembly in the Mojave Desert and adds a new Pleistocene refugium",
-    "journal": "Journal of Biogeography",
-    "volume": "40(7)",
-    "pages": "1298-1312. DOI: 10.1111/jbi.12079",
-    "doi": null
-  },
-  {
-    "year": 2013,
-    "authors": [
-      {
-        "name": "Monod, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Harvey, MSc",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Stenotopic *Hormurus* Thorell, 1876 scorpions from the monsoon ecosystems of northern Australia, with a discussion on the evolution of burrowing behaviour in Hormuridae Laurie, 1896",
-    "journal": "Revue suisse de Zoologie",
-    "volume": "120(2)",
-    "pages": "281-346",
-    "doi": null
+    "doi": "https://doi.org/10.1111/jbi.12134"
   },
   {
     "year": 2013,
@@ -3726,7 +3722,99 @@
     "journal": "Biology Letters",
     "volume": "9",
     "pages": "20120932 (8 pp.)",
-    "doi": null
+    "doi": "https://doi.org/10.1098/rsbl.2012.0932"
+  },
+  {
+    "year": 2013,
+    "authors": [
+      {
+        "name": "Graham, M.R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Jaeger, J.R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Riddle, B.R",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Phylogeography of Beck's desert scorpion, *Paruroctonus becki*, reveals Pliocene diversification in the Eastern California Shear Zone and postglacial expansion in the Great Basin Desert",
+    "journal": "Molecular Phylogenetics and Evolution",
+    "volume": "69",
+    "pages": "502-513",
+    "doi": "https://doi.org/10.1016/j.ympev.2013.07.028"
+  },
+  {
+    "year": 2013,
+    "authors": [
+      {
+        "name": "Graham, M.R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Jaeger, J.R.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Riddle, B.R",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Phylogeography of the Arizona hairy scorpion (*Hadrurus arizonensis*) supports a model of biotic assembly in the Mojave Desert and adds a new Pleistocene refugium",
+    "journal": "Journal of Biogeography",
+    "volume": "40(7)",
+    "pages": "1298-1312. DOI: 10.1111/jbi.12079",
+    "doi": "https://doi.org/10.1111/jbi.12079"
+  },
+  {
+    "year": 2013,
+    "authors": [
+      {
+        "name": "González-Santillán, E.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Redefinition and generic revision of the North American vaejovid scorpion subfamily Syntropinae Kraepelin, 1905, with descriptions of six new genera",
+    "journal": "Bulletin of the American Museum of Natural History",
+    "volume": "382",
+    "pages": "1-71",
+    "doi": "https://doi.org/10.1206/830.1"
+  },
+  {
+    "year": 2013,
+    "authors": [
+      {
+        "name": "Monod, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Harvey, MSc",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Stenotopic *Hormurus* Thorell, 1876 scorpions from the monsoon ecosystems of northern Australia, with a discussion on the evolution of burrowing behaviour in Hormuridae Laurie, 1896",
+    "journal": "Revue suisse de Zoologie",
+    "volume": "120(2)",
+    "pages": "281-346",
+    "doi": "https://doi.org/10.5281/zenodo.6118609"
   },
   {
     "year": 2013,
@@ -3752,7 +3840,7 @@
     "journal": "Bulletin of the American Museum of Natural History",
     "volume": "378",
     "pages": "1-121",
-    "doi": null
+    "doi": "https://doi.org/10.1206/796.1"
   },
   {
     "year": 2013,
@@ -3774,7 +3862,29 @@
     "journal": "American Museum Novitates",
     "volume": "3777",
     "pages": "1-47",
-    "doi": null
+    "doi": "https://doi.org/10.1206/3777.2"
+  },
+  {
+    "year": 2012,
+    "authors": [
+      {
+        "name": "Volschenk, E.S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Harvey, MSc",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "A new species of *Urodacus* (Scorpiones: Urodacidae) from Western Australia",
+    "journal": "American Museum Novitates",
+    "volume": "3748",
+    "pages": "1-18",
+    "doi": "https://doi.org/10.1206/3748.2"
   },
   {
     "year": 2012,
@@ -3792,7 +3902,7 @@
     "journal": "American Museum Novitates",
     "volume": "3732",
     "pages": "1-42",
-    "doi": null
+    "doi": "https://doi.org/10.1206/3732.2"
   },
   {
     "year": 2012,
@@ -3814,7 +3924,7 @@
     "journal": "Arthropod Structure & Development",
     "volume": "41",
     "pages": "545-560",
-    "doi": null
+    "doi": "https://doi.org/10.1016/j.asd.2012.06.002"
   },
   {
     "year": 2012,
@@ -3840,7 +3950,7 @@
     "journal": "Zoologica Scripta",
     "volume": "41(2)",
     "pages": "160-176",
-    "doi": null
+    "doi": "https://doi.org/10.1111/j.1463-6409.2011.00508.x"
   },
   {
     "year": 2012,
@@ -3866,7 +3976,7 @@
     "journal": "American Museum Novitates",
     "volume": "3731",
     "pages": "1-43",
-    "doi": null
+    "doi": "https://doi.org/10.1206/3731.2"
   },
   {
     "year": 2012,
@@ -3920,29 +4030,7 @@
     "journal": "American Museum Novitates",
     "volume": "3742",
     "pages": "1-19",
-    "doi": null
-  },
-  {
-    "year": 2012,
-    "authors": [
-      {
-        "name": "Volschenk, E.S.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Harvey, MSc",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "A new species of *Urodacus* (Scorpiones: Urodacidae) from Western Australia",
-    "journal": "American Museum Novitates",
-    "volume": "3748",
-    "pages": "1-18",
-    "doi": null
+    "doi": "https://doi.org/10.1206/3742.2"
   },
   {
     "year": 2011,
@@ -3960,7 +4048,149 @@
     "journal": "Biodiversity and Conservation",
     "volume": "20",
     "pages": "3101-3116",
-    "doi": null
+    "doi": "https://doi.org/10.1007/s10531-011-0115-z"
+  },
+  {
+    "year": 2011,
+    "authors": [
+      {
+        "name": "Pizarro-Araya, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ojanguren-Affilastro, A.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "First report of an arboreal scorpion (Bothriuridae: *Urophonius*) from the temperate forests of southern Chile",
+    "journal": "Gayana",
+    "volume": "75(2)",
+    "pages": "166-170",
+    "doi": "https://doi.org/10.4067/S0717-65382011000200008"
+  },
+  {
+    "year": 2011,
+    "authors": [
+      {
+        "name": "Ojanguren-Affilastro, A.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Pizarro-Araya, J.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "New data on Chilean *Urophonius* Pocock, 1893 (Scorpiones, Bothriuridae), with description of a new species",
+    "journal": "American Museum Novitates",
+    "volume": "3725",
+    "pages": "1-44",
+    "doi": "https://doi.org/10.1206/3725.2"
+  },
+  {
+    "year": 2011,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+    "journal": "Zootaxa",
+    "volume": "3148",
+    "pages": "154",
+    "doi": "https://doi.org/10.11646/zootaxa.3148.1.28"
+  },
+  {
+    "year": 2011,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Order Palpigradi Thorell, 1888. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+    "journal": "Zootaxa",
+    "volume": "3148",
+    "pages": "121",
+    "doi": "https://doi.org/10.11646/zootaxa.3148.1.21"
+  },
+  {
+    "year": 2011,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Order Ricinulei Thorell, 1876. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+    "journal": "Zootaxa",
+    "volume": "3148",
+    "pages": "122",
+    "doi": "https://doi.org/10.11646/zootaxa.3148.1.22"
+  },
+  {
+    "year": 2011,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Order Schizomida Petrunkevitch, 1945. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+    "journal": "Zootaxa",
+    "volume": "3148",
+    "pages": "156",
+    "doi": "https://doi.org/10.11646/zootaxa.3148.1.30"
+  },
+  {
+    "year": 2011,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Order Scorpiones C.L. Koch, 1850. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+    "journal": "Zootaxa",
+    "volume": "3148",
+    "pages": "115-117",
+    "doi": "https://doi.org/10.11646/zootaxa.3148.1.18"
+  },
+  {
+    "year": 2011,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Order Solifugae Sundevall, 1833. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+    "journal": "Zootaxa",
+    "volume": "3148",
+    "pages": "118",
+    "doi": "https://doi.org/10.11646/zootaxa.3148.1.19"
+  },
+  {
+    "year": 2011,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Order Thelyphonida Latreille, 1804. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+    "journal": "Zootaxa",
+    "volume": "3148",
+    "pages": "155",
+    "doi": "https://doi.org/10.11646/zootaxa.3148.1.29"
   },
   {
     "year": 2011,
@@ -3986,175 +4216,25 @@
     "journal": "Bulletin of the American Museum of Natural History",
     "volume": "359",
     "pages": "1-90",
-    "doi": null
-  },
-  {
-    "year": 2011,
-    "authors": [
-      {
-        "name": "Ojanguren-Affilastro, A.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Pizarro-Araya, J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "New data on Chilean *Urophonius* Pocock, 1893 (Scorpiones, Bothriuridae), with description of a new species",
-    "journal": "American Museum Novitates",
-    "volume": "3725",
-    "pages": "1-44",
-    "doi": null
-  },
-  {
-    "year": 2011,
-    "authors": [
-      {
-        "name": "Pizarro-Araya, J.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ojanguren-Affilastro, A.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "First report of an arboreal scorpion (Bothriuridae: *Urophonius*) from the temperate forests of southern Chile",
-    "journal": "Gayana",
-    "volume": "75(2)",
-    "pages": "166-170",
-    "doi": null
-  },
-  {
-    "year": 2011,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Order Scorpiones C.L. Koch, 1850. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
-    "journal": "Zootaxa",
-    "volume": "3148",
-    "pages": "115-117",
-    "doi": null
-  },
-  {
-    "year": 2011,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Order Solifugae Sundevall, 1833. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
-    "journal": "Zootaxa",
-    "volume": "3148",
-    "pages": "118",
-    "doi": null
-  },
-  {
-    "year": 2011,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Order Palpigradi Thorell, 1888. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
-    "journal": "Zootaxa",
-    "volume": "3148",
-    "pages": "121",
-    "doi": null
-  },
-  {
-    "year": 2011,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Order Ricinulei Thorell, 1876. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
-    "journal": "Zootaxa",
-    "volume": "3148",
-    "pages": "122",
-    "doi": null
-  },
-  {
-    "year": 2011,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
-    "journal": "Zootaxa",
-    "volume": "3148",
-    "pages": "154",
-    "doi": null
-  },
-  {
-    "year": 2011,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Order Thelyphonida Latreille, 1804. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
-    "journal": "Zootaxa",
-    "volume": "3148",
-    "pages": "155",
-    "doi": null
-  },
-  {
-    "year": 2011,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Order Schizomida Petrunkevitch, 1945. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
-    "journal": "Zootaxa",
-    "volume": "3148",
-    "pages": "156",
-    "doi": null
+    "doi": "https://doi.org/10.1206/359.1"
   },
   {
     "year": 2010,
     "authors": [
       {
-        "name": "Mattoni, C.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Ochoa, J.",
+        "name": "Prendini, L.",
         "isHighlighted": true
       },
       {
-        "name": "Ojanguren-Affilastro, A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
+        "name": "Esposito, L.A.",
         "isHighlighted": true
       }
     ],
-    "title": "Towards an all-species phylogeny of the scorpion family Bothriuridae",
-    "journal": "Cladistics",
-    "volume": "26",
-    "pages": "216-217",
-    "doi": null
+    "title": "A reanalysis of *Parabuthus* (Scorpiones: Buthidae) phylogeny with a description of two new *Parabuthus* species endemic to the Central Namib gravel plains, Namibia",
+    "journal": "Zoological Journal of the Linnean Society",
+    "volume": "159(3)",
+    "pages": "673-710",
+    "doi": "https://doi.org/10.1111/j.1096-3642.2009.00608.x"
   },
   {
     "year": 2010,
@@ -4168,25 +4248,21 @@
     "journal": "",
     "volume": null,
     "pages": null,
-    "doi": null,
-    "citationHtml": "<b>Ochoa, J.A.</b>, Botero-Trujillo, R., and <b>Prendini, L.</b>. 2010. On the Troglomorphic scorpion <i>Troglotayosicus humiculum</i> (Scorpiones, Troglotayosicidae), with first description of the adults. <b>American Museum Novitates</b> 3691: 1-19. <a href=\"https://research.amnh.org/users/lorenzo/PDF/difficult.pdf\" > PDF </a>"
+    "doi": "https://doi.org/10.1206/707.1",
+    "citationHtml": "<b>Ochoa, J.A.</b>, Botero-Trujillo, R., and <b>Prendini, L.</b>. 2010. On the Troglomorphic scorpion <i>Troglotayosicus humiculum</i> (Scorpiones, Troglotayosicidae), with first description of the adults. <b>American Museum Novitates</b> 3691: 1-19. <a href=\"https://doi.org/10.1206/707.1\" >https://doi.org/10.1206/707.1</a>"
   },
   {
     "year": 2010,
     "authors": [
       {
-        "name": "Ochoa, J.A.",
-        "isHighlighted": true
-      },
-      {
         "name": "Prendini, L.",
         "isHighlighted": true
       }
     ],
-    "title": "The genus *Hadruroides* Pocock, 1893 (Scorpiones: Iuridae) in Peru: New records and descriptions of six new species",
-    "journal": "American Museum Novitates",
-    "volume": "3687",
-    "pages": "1-56",
+    "title": "Order Scorpiones C.L. Koch, 1837. Pp. 321-330 In: Gerlach, J. and Marusik, Y. (Eds.)",
+    "journal": "Arachnida and Myriapoda of the Seychelles Islands",
+    "volume": null,
+    "pages": null,
     "doi": null
   },
   {
@@ -4213,39 +4289,51 @@
     "journal": "American Museum Novitates",
     "volume": "3695",
     "pages": "1-40",
-    "doi": null
+    "doi": "https://doi.org/10.1206/3695.2"
   },
   {
     "year": 2010,
     "authors": [
       {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Order Scorpiones C.L. Koch, 1837. Pp. 321-330 In: Gerlach, J. and Marusik, Y. (Eds.)",
-    "journal": "Arachnida and Myriapoda of the Seychelles Islands",
-    "volume": null,
-    "pages": null,
-    "doi": null
-  },
-  {
-    "year": 2010,
-    "authors": [
-      {
-        "name": "Prendini, L.",
+        "name": "Ochoa, J.A.",
         "isHighlighted": true
       },
       {
-        "name": "Esposito, L.A.",
+        "name": "Prendini, L.",
         "isHighlighted": true
       }
     ],
-    "title": "A reanalysis of *Parabuthus* (Scorpiones: Buthidae) phylogeny with a description of two new *Parabuthus* species endemic to the Central Namib gravel plains, Namibia",
-    "journal": "Zoological Journal of the Linnean Society",
-    "volume": "159(3)",
-    "pages": "673-710",
-    "doi": null
+    "title": "The genus *Hadruroides* Pocock, 1893 (Scorpiones: Iuridae) in Peru: New records and descriptions of six new species",
+    "journal": "American Museum Novitates",
+    "volume": "3687",
+    "pages": "1-56",
+    "doi": "https://doi.org/10.1206/684.1"
+  },
+  {
+    "year": 2010,
+    "authors": [
+      {
+        "name": "Mattoni, C.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Ochoa, J.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Ojanguren-Affilastro, A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Towards an all-species phylogeny of the scorpion family Bothriuridae",
+    "journal": "Cladistics",
+    "volume": "26",
+    "pages": "216-217",
+    "doi": "https://doi.org/10.1111/j.1096-0031.2009.00285.x"
   },
   {
     "year": 2010,
@@ -4267,29 +4355,7 @@
     "journal": "Cladistics",
     "volume": "26",
     "pages": "117-142",
-    "doi": null
-  },
-  {
-    "year": 2009,
-    "authors": [
-      {
-        "name": "Dippenaar-Schoeman, A.S.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Van den Berg, A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Spiders and scorpions (Arachnida: Araneae, Scorpiones) of the Nylsvley Nature Reserve, South Africa",
-    "journal": "Koedoe",
-    "volume": "51(1)",
-    "pages": "1-9. DOI: 10.4102/koedoe.2009.161",
-    "doi": null
+    "doi": "https://doi.org/10.1111/j.1096-0031.2009.00277.x"
   },
   {
     "year": 2009,
@@ -4311,6 +4377,20 @@
     "journal": "American Museum Novitates",
     "volume": "3647",
     "pages": "1-11",
+    "doi": "https://doi.org/10.1206/631.1"
+  },
+  {
+    "year": 2009,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Assembling the Scorpion Tree of Life: ‘High-level systematics and phylogeny of the extant scorpions (Scorpiones: Orthosterni)’ reanalysed. In: Arrivillaga, J., El Souki, M. & Herrera, B. (Eds.)",
+    "journal": "Monografía Digital Sociedad Venezolana de Entomología",
+    "volume": "2",
+    "pages": "1-41. ISBN 978-980-12-3750-1",
     "doi": null
   },
   {
@@ -4329,21 +4409,7 @@
     "journal": "American Museum Novitates",
     "volume": "3658",
     "pages": "1-17",
-    "doi": null
-  },
-  {
-    "year": 2009,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Assembling the Scorpion Tree of Life: ‘High-level systematics and phylogeny of the extant scorpions (Scorpiones: Orthosterni)’ reanalysed. In: Arrivillaga, J., El Souki, M. & Herrera, B. (Eds.)",
-    "journal": "Monografía Digital Sociedad Venezolana de Entomología",
-    "volume": "2",
-    "pages": "1-41. ISBN 978-980-12-3750-1",
-    "doi": null
+    "doi": "https://doi.org/10.1206/674.1"
   },
   {
     "year": 2009,
@@ -4369,7 +4435,29 @@
     "journal": "Journal of Arachnology",
     "volume": "37",
     "pages": "206-244",
-    "doi": null
+    "doi": "https://doi.org/10.1636/H08-55.1"
+  },
+  {
+    "year": 2009,
+    "authors": [
+      {
+        "name": "Dippenaar-Schoeman, A.S.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Van den Berg, A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Spiders and scorpions (Arachnida: Araneae, Scorpiones) of the Nylsvley Nature Reserve, South Africa",
+    "journal": "Koedoe",
+    "volume": "51(1)",
+    "pages": "1-9. DOI: 10.4102/koedoe.2009.161",
+    "doi": "https://doi.org/10.4102/koedoe.v51i1.161"
   },
   {
     "year": 2009,
@@ -4386,8 +4474,84 @@
     "title": "Systematic revision of the troglomorphic scorpion family Typhlochactidae (Scorpiones: Chactoidea)",
     "journal": "Bulletin of the American Museum of Natural History",
     "volume": "326",
-    "pages": "1-94. ** **",
+    "pages": "1-94",
+    "doi": "https://doi.org/10.1206/570.1"
+  },
+  {
+    "year": 2008,
+    "authors": [
+      {
+        "name": "Vignoli, V.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "A new species of *Akentrobuthus* Lamoral, 1976 (Scorpiones: Buthidae) from the Republic of Benin (Western Africa)",
+    "journal": "Journal of Afrotropical Zoology",
+    "volume": "4",
+    "pages": "61-70",
     "doi": null
+  },
+  {
+    "year": 2008,
+    "authors": [
+      {
+        "name": "Kamenz, C.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "An atlas of book lung fine structure in the Order Scorpiones (Arachnida)",
+    "journal": "Bulletin of the American Museum of Natural History",
+    "volume": "316",
+    "pages": "1-259",
+    "doi": "https://doi.org/10.1206/316.1"
+  },
+  {
+    "year": 2008,
+    "authors": [
+      {
+        "name": "Volschenk, E.S.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "*Aops oncodactylus* gen. et sp. nov., the first troglobitic urodacid (Chelicerata: Scorpiones), with a re-assessment of cavernicolous, troglobitic and troglomorphic scorpions",
+    "journal": "Invertebrate Systematics",
+    "volume": "22",
+    "pages": "235-257",
+    "doi": "https://doi.org/10.1071/IS06054"
+  },
+  {
+    "year": 2008,
+    "authors": [
+      {
+        "name": "Volschenk, E.S.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Mattoni, C.I.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Comparative anatomy of the mesosomal organs of scorpions (Chelicerata, Scorpiones), with implications for the phylogeny of the order",
+    "journal": "Zoological Journal of the Linnean Society",
+    "volume": "154",
+    "pages": "651-675",
+    "doi": "https://doi.org/10.1111/j.1096-3642.2008.00426.x"
   },
   {
     "year": 2008,
@@ -4425,29 +4589,8 @@
     "journal": "American Arachnology",
     "volume": "76",
     "pages": "11. [Abstract]",
-    "doi": null
-  },
-  {
-    "year": 2008,
-    "authors": [
-      {
-        "name": "Dunlop, J.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Tetlie, O.E.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Reinterpretation of the Silurian scorpion *Proscorpius osborni* (Whitfield): Integrating data from Palaeozoic and Recent scorpions",
-    "journal": "Palaeontology",
-    "volume": "51(2)",
-    "pages": "303-320",
-    "doi": null
+    "doi": null,
+    "pdf": "https://www.americanarachnology.org/fileadmin/documents/am_arachnol_newsletter/AmerArachnol76.pdf"
   },
   {
     "year": 2008,
@@ -4465,7 +4608,7 @@
     "journal": "Systematics and Biodiversity",
     "volume": "6(2)",
     "pages": "205-223",
-    "doi": null
+    "doi": "https://doi.org/10.1017/S1477200008002697"
   },
   {
     "year": 2008,
@@ -4487,25 +4630,29 @@
     "journal": "American Museum Novitates",
     "volume": "3633",
     "pages": "1-9",
-    "doi": null
+    "doi": "https://doi.org/10.1206/640.1"
   },
   {
     "year": 2008,
     "authors": [
       {
-        "name": "Kamenz, C.",
-        "isHighlighted": true
+        "name": "Dunlop, J.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Tetlie, O.E.",
+        "isHighlighted": false
       },
       {
         "name": "Prendini, L.",
         "isHighlighted": true
       }
     ],
-    "title": "An atlas of book lung fine structure in the Order Scorpiones (Arachnida)",
-    "journal": "Bulletin of the American Museum of Natural History",
-    "volume": "316",
-    "pages": "1-259. **Popular Press Coverage **",
-    "doi": null
+    "title": "Reinterpretation of the Silurian scorpion *Proscorpius osborni* (Whitfield): Integrating data from Palaeozoic and Recent scorpions",
+    "journal": "Palaeontology",
+    "volume": "51(2)",
+    "pages": "303-320",
+    "doi": "https://doi.org/10.1111/j.1475-4983.2007.00749.x"
   },
   {
     "year": 2008,
@@ -4523,131 +4670,25 @@
     "journal": "African Invertebrates",
     "volume": "49(2)",
     "pages": "77-107",
-    "doi": null
-  },
-  {
-    "year": 2008,
-    "authors": [
-      {
-        "name": "Vignoli, V.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "A new species of *Akentrobuthus* Lamoral, 1976 (Scorpiones: Buthidae) from the Republic of Benin (Western Africa)",
-    "journal": "Journal of Afrotropical Zoology",
-    "volume": "4",
-    "pages": "61-70",
-    "doi": null
-  },
-  {
-    "year": 2008,
-    "authors": [
-      {
-        "name": "Volschenk, E.S.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Mattoni, C.I.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Comparative anatomy of the mesosomal organs of scorpions (Chelicerata, Scorpiones), with implications for the phylogeny of the order",
-    "journal": "Zoological Journal of the Linnean Society",
-    "volume": "154",
-    "pages": "651-675",
-    "doi": null
-  },
-  {
-    "year": 2008,
-    "authors": [
-      {
-        "name": "Volschenk, E.S.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "*Aops oncodactylus* gen. et sp. nov., the first troglobitic urodacid (Chelicerata: Scorpiones), with a re-assessment of cavernicolous, troglobitic and troglomorphic scorpions",
-    "journal": "Invertebrate Systematics",
-    "volume": "22",
-    "pages": "235-257",
-    "doi": null
+    "doi": "https://doi.org/10.5733/afin.049.0205"
   },
   {
     "year": 2007,
     "authors": [
       {
-        "name": "Baldo, L.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
+        "name": "Wirkner, C.S.",
         "isHighlighted": true
-      },
-      {
-        "name": "Corthals, A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Werren, J",
-        "isHighlighted": false
-      }
-    ],
-    "title": "*Wolbachia* are present in southern African scorpions and cluster with supergroup F",
-    "journal": "Current Microbiology",
-    "volume": "55",
-    "pages": "367-373",
-    "doi": null
-  },
-  {
-    "year": 2007,
-    "authors": [
-      {
-        "name": "Mattoni, C.I.",
-        "isHighlighted": false
       },
       {
         "name": "Prendini, L.",
         "isHighlighted": true
       }
     ],
-    "title": "Phylogeny and biogeography of the family Bothriuridae (Scorpiones)",
-    "journal": "Darwiniana",
-    "volume": "45(supl.)",
-    "pages": "96-98",
-    "doi": null
-  },
-  {
-    "year": 2007,
-    "authors": [
-      {
-        "name": "Ojanguren Affilastro, A.A.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Mattoni, C.I.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "The genus *Brachistosternus* (Scorpiones: Bothriuridae), in Chile, with descriptions of two new species",
-    "journal": "American Museum Novitates",
-    "volume": "3564",
-    "pages": "1-44",
-    "doi": null
+    "title": "Comparative morphology of the hemolymph vascular system in scorpions - a survey using corrosion casting, MicroCT and 3D-reconstruction",
+    "journal": "Journal of Morphology",
+    "volume": "268",
+    "pages": "401-413",
+    "doi": "https://doi.org/10.1002/jmor.10512"
   },
   {
     "year": 2007,
@@ -4705,54 +4746,73 @@
     "journal": "Systematic Biology",
     "volume": "56(2)",
     "pages": "283-294",
-    "doi": null
+    "doi": "https://doi.org/10.1080/10635150701313848"
   },
   {
     "year": 2007,
     "authors": [
       {
-        "name": "Wirkner, C.S.",
-        "isHighlighted": true
+        "name": "Mattoni, C.I.",
+        "isHighlighted": false
       },
       {
         "name": "Prendini, L.",
         "isHighlighted": true
       }
     ],
-    "title": "Comparative morphology of the hemolymph vascular system in scorpions - a survey using corrosion casting, MicroCT and 3D-reconstruction",
-    "journal": "Journal of Morphology",
-    "volume": "268",
-    "pages": "401-413",
+    "title": "Phylogeny and biogeography of the family Bothriuridae (Scorpiones)",
+    "journal": "Darwiniana",
+    "volume": "45(supl.)",
+    "pages": "96-98",
     "doi": null
   },
   {
-    "year": 2006,
+    "year": 2007,
     "authors": [
+      {
+        "name": "Ojanguren Affilastro, A.A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Mattoni, C.I.",
+        "isHighlighted": false
+      },
       {
         "name": "Prendini, L.",
         "isHighlighted": true
       }
     ],
-    "title": "New South African flat rock scorpions (Liochelidae: *Hadogenes*)",
+    "title": "The genus *Brachistosternus* (Scorpiones: Bothriuridae), in Chile, with descriptions of two new species",
     "journal": "American Museum Novitates",
-    "volume": "3502",
-    "pages": "1-32",
-    "doi": null
+    "volume": "3564",
+    "pages": "1-44",
+    "doi": "https://doi.org/10.1206/0003-0082(2007)517[1:TGBSBI]2.0.CO;2"
   },
   {
-    "year": 2006,
+    "year": 2007,
     "authors": [
+      {
+        "name": "Baldo, L.",
+        "isHighlighted": false
+      },
       {
         "name": "Prendini, L.",
         "isHighlighted": true
+      },
+      {
+        "name": "Corthals, A.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Werren, J",
+        "isHighlighted": false
       }
     ],
-    "title": "Scorpiones",
-    "journal": "",
-    "volume": null,
-    "pages": null,
-    "doi": null,
-    "citationHtml": "<b>Prendini, L.</b> \"Scorpiones\", in AccessScience, McGraw-Hill, https://www.accessscience.com, DOI 10.1036/1097-8542.607800, last modified: April 7, 2006. <a href=\"https://research.amnh.org/users/lorenzo/PDF/Prendini.2006.McHill.Scorpions.pdf\" > PDF </a>"
+    "title": "*Wolbachia* are present in southern African scorpions and cluster with supergroup F",
+    "journal": "Current Microbiology",
+    "volume": "55",
+    "pages": "367-373",
+    "doi": "https://doi.org/10.1007/s00284-007-9009-4"
   },
   {
     "year": 2006,
@@ -4778,7 +4838,37 @@
     "journal": "Zoologischer Anzeiger",
     "volume": "245",
     "pages": "211-248",
-    "doi": null
+    "doi": "https://doi.org/10.1016/j.jcz.2006.07.001"
+  },
+  {
+    "year": 2006,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "New South African flat rock scorpions (Liochelidae: *Hadogenes*)",
+    "journal": "American Museum Novitates",
+    "volume": "3502",
+    "pages": "1-32",
+    "doi": "https://doi.org/10.1206/0003-0082(2006)502[0001:NSAFRS]2.0.CO;2"
+  },
+  {
+    "year": 2006,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Scorpiones",
+    "journal": "",
+    "volume": null,
+    "pages": null,
+    "doi": "https://doi.org/10.1036/1097-8542.607800",
+    "pdf": "https://research.amnh.org/users/lorenzo/PDF/Prendini.2006.McHill.Scorpions.pdf",
+    "citationHtml": "<b>Prendini, L.</b> \"Scorpiones\", in AccessScience, McGraw-Hill, https://www.accessscience.com, DOI 10.1036/1097-8542.607800, last modified: April 7, 2006. <a href=\"https://research.amnh.org/users/lorenzo/PDF/Prendini.2006.McHill.Scorpions.pdf\" > PDF </a>"
   },
   {
     "year": 2005,
@@ -4792,7 +4882,7 @@
     "journal": "Canadian Journal of Zoology",
     "volume": "83(3)",
     "pages": "481-491",
-    "doi": null
+    "doi": "https://doi.org/10.1139/z05-025"
   },
   {
     "year": 2005,
@@ -4806,7 +4896,7 @@
     "journal": "American Museum Novitates",
     "volume": "3487",
     "pages": "1-11",
-    "doi": null
+    "doi": "https://doi.org/10.1206/0003-0082(2005)487[0001:NRAOOT]2.0.CO;2"
   },
   {
     "year": 2005,
@@ -4820,7 +4910,7 @@
     "journal": "Revue Suisse de Zoologie",
     "volume": "112(2)",
     "pages": "1-28",
-    "doi": null
+    "doi": "https://doi.org/10.5962/bhl.part.80304"
   },
   {
     "year": 2005,
@@ -4834,7 +4924,7 @@
     "journal": "African Biodiversity: Molecules, Organisms, Ecosystems",
     "volume": null,
     "pages": null,
-    "doi": null
+    "doi": "https://doi.org/10.1007/0-387-24320-8_2"
   },
   {
     "year": 2005,
@@ -4852,7 +4942,7 @@
     "journal": "Cladistics",
     "volume": "21",
     "pages": "446-494",
-    "doi": null
+    "doi": "https://doi.org/10.1111/j.1096-0031.2005.00073.x"
   },
   {
     "year": 2005,
@@ -4874,7 +4964,7 @@
     "journal": "Organisms, Diversity and Evolution",
     "volume": "5",
     "pages": "203-236",
-    "doi": null
+    "doi": "https://doi.org/10.1016/j.ode.2004.12.004"
   },
   {
     "year": 2004,
@@ -4904,7 +4994,47 @@
     "journal": "Assembling the Tree of Life",
     "volume": null,
     "pages": null,
-    "doi": null
+    "doi": "https://doi.org/10.1093/oso/9780195172348.003.0019"
+  },
+  {
+    "year": 2004,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Wheeler, W.C",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Assembling the Scorpion Tree of Life: Phylogeny of extant scorpions based on molecules, morphology and exemplars",
+    "journal": "Cladistics",
+    "volume": "20",
+    "pages": "602-603",
+    "doi": "https://doi.org/10.1111/j.1096-0031.2004.00035.x"
+  },
+  {
+    "year": 2004,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      },
+      {
+        "name": "Crowe, T.M.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Wheeler, W.C",
+        "isHighlighted": false
+      }
+    ],
+    "title": "Burrowing scorpion phylogeny and the evolution of paleodrainage systems in southern Africa",
+    "journal": "Cladistics",
+    "volume": "20",
+    "pages": "93",
+    "doi": "https://doi.org/10.1111/j.1096-0031.2003.00006.x"
   },
   {
     "year": 2004,
@@ -4944,7 +5074,7 @@
     "journal": "California Academy of Sciences Memoir",
     "volume": "28",
     "pages": "235-267",
-    "doi": null
+    "doi": "https://doi.org/10.5281/zenodo.16167610"
   },
   {
     "year": 2004,
@@ -4958,7 +5088,7 @@
     "journal": "Annals of the Entomological Society of America",
     "volume": "97(1)",
     "pages": "37-63",
-    "doi": null
+    "doi": "https://doi.org/10.1603/0013-8746(2004)097[0037:SOTGPK]2.0.CO;2"
   },
   {
     "year": 2004,
@@ -4972,47 +5102,7 @@
     "journal": "Journal of Arachnology",
     "volume": "32(1)",
     "pages": "109-186",
-    "doi": null
-  },
-  {
-    "year": 2004,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Crowe, T.M.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Wheeler, W.C",
-        "isHighlighted": false
-      }
-    ],
-    "title": "Burrowing scorpion phylogeny and the evolution of paleodrainage systems in southern Africa",
-    "journal": "Cladistics",
-    "volume": "20",
-    "pages": "93",
-    "doi": null
-  },
-  {
-    "year": 2004,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      },
-      {
-        "name": "Wheeler, W.C",
-        "isHighlighted": false
-      }
-    ],
-    "title": "Assembling the Scorpion Tree of Life: Phylogeny of extant scorpions based on molecules, morphology and exemplars",
-    "journal": "Cladistics",
-    "volume": "20",
-    "pages": "602-603",
-    "doi": null
+    "doi": "https://doi.org/10.1636/H03-17"
   },
   {
     "year": 2003,
@@ -5026,7 +5116,7 @@
     "journal": "Systematic Entomology",
     "volume": "28",
     "pages": "1-24",
-    "doi": null
+    "doi": "https://doi.org/10.1046/j.1365-3113.2003.00207.x"
   },
   {
     "year": 2003,
@@ -5040,7 +5130,7 @@
     "journal": "American Museum Novitates",
     "volume": "3408",
     "pages": "1-24",
-    "doi": null
+    "doi": "https://doi.org/10.1206/0003-0082(2003)408<0001:DOTMOP>2.0.CO;2"
   },
   {
     "year": 2003,
@@ -5054,7 +5144,7 @@
     "journal": "Insect Systematics and Evolution",
     "volume": "34",
     "pages": "241-264",
-    "doi": null
+    "doi": "https://doi.org/10.1163/187631203788964764"
   },
   {
     "year": 2003,
@@ -5076,7 +5166,7 @@
     "journal": "Invertebrate Systematics",
     "volume": "17(2)",
     "pages": "185-259",
-    "doi": null
+    "doi": "https://doi.org/10.1071/IS02016"
   },
   {
     "year": 2003,
@@ -5132,7 +5222,7 @@
     "journal": "Rapid Communications in Mass Spectrometry",
     "volume": "16",
     "pages": "768-773",
-    "doi": null
+    "doi": "https://doi.org/10.1002/rcm.637"
   },
   {
     "year": 2002,
@@ -5186,7 +5276,7 @@
     "journal": "Methods and Tools in Biosciences and Medicine. Techniques in Molecular Evolution and Systematics",
     "volume": null,
     "pages": null,
-    "doi": null
+    "doi": "https://doi.org/10.1007/978-3-0348-8125-8_12"
   },
   {
     "year": 2001,
@@ -5200,7 +5290,7 @@
     "journal": "African Entomology",
     "volume": "9(1)",
     "pages": "17-48",
-    "doi": null
+    "doi": "https://hdl.handle.net/10520/EJC29849"
   },
   {
     "year": 2001,
@@ -5214,7 +5304,7 @@
     "journal": "Journal of Arachnology",
     "volume": "29(3)",
     "pages": "234-237",
-    "doi": null
+    "doi": "https://doi.org/10.1636/0161-8202(2001)029[0434:BRNVOT]2.0.CO;2"
   },
   {
     "year": 2001,
@@ -5228,7 +5318,7 @@
     "journal": "Journal of Arachnology",
     "volume": "29(2)",
     "pages": "173-188",
-    "doi": null
+    "doi": "https://doi.org/10.1636/0161-8202(2001)029[0173:FATTSF]2.0.CO;2"
   },
   {
     "year": 2001,
@@ -5242,7 +5332,7 @@
     "journal": "Zoologica Scripta",
     "volume": "30(1)",
     "pages": "13-35",
-    "doi": null
+    "doi": "https://doi.org/10.1046/j.1463-6409.2001.00056.x"
   },
   {
     "year": 2001,
@@ -5256,7 +5346,7 @@
     "journal": "Systematic Biology",
     "volume": "50(2)",
     "pages": "290-300",
-    "doi": null
+    "doi": "https://doi.org/10.1080/10635150118650"
   },
   {
     "year": 2001,
@@ -5284,7 +5374,7 @@
     "journal": "Journal of Arachnology",
     "volume": "29(2)",
     "pages": "146-172",
-    "doi": null
+    "doi": "https://doi.org/10.1636/0161-8202(2001)029[0146:TNSOHS]2.0.CO;2"
   },
   {
     "year": 2000,
@@ -5326,7 +5416,7 @@
     "journal": "Cladistics",
     "volume": "16(1)",
     "pages": "1-78",
-    "doi": null
+    "doi": "https://doi.org/10.1111/j.1096-0031.2000.tb00348.x"
   },
   {
     "year": 1999,
@@ -5352,7 +5442,8 @@
     "journal": "American Arachnology",
     "volume": "60",
     "pages": "6-7",
-    "doi": null
+    "doi": null,
+    "pdf": "https://www.americanarachnology.org/fileadmin/documents/meetings/1999/AAS_1999_Annual_Meeting_Abstracts.pdf"
   },
   {
     "year": 1998,
@@ -5370,39 +5461,7 @@
     "journal": "Entomologica Scandinavica",
     "volume": "29",
     "pages": "11-18",
-    "doi": null
-  },
-  {
-    "year": 1997,
-    "authors": [
-      {
-        "name": "Newlands, G.",
-        "isHighlighted": false
-      },
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Redescription of *Hadogenes zumpti* (Scorpiones: Ischnuridae), an unusual rock scorpion from the Richtersveld, South Africa",
-    "journal": "South African Journal of Zoology",
-    "volume": "32(3)",
-    "pages": "76-81",
-    "doi": null
-  },
-  {
-    "year": 1997,
-    "authors": [
-      {
-        "name": "Prendini, L.",
-        "isHighlighted": true
-      }
-    ],
-    "title": "Two new host-restricted restioid leafhoppers in the genus *Cephalelus* (Cicadellidae: Cephalelini), with descriptions of the females of *C. brevipilus* Davies, *C. daviesi* Davies and *C. rawsonia* Davies",
-    "journal": "African Entomology",
-    "volume": "5(2)",
-    "pages": "273-281",
-    "doi": null
+    "doi": "https://doi.org/10.1163/187631298X00140"
   },
   {
     "year": 1997,
@@ -5424,7 +5483,7 @@
     "journal": "Cladistics",
     "volume": "13",
     "pages": "177-178",
-    "doi": null
+    "doi": "https://doi.org/10.1111/j.1096-0031.1997.tb00250.x"
   },
   {
     "year": 1997,
@@ -5446,7 +5505,39 @@
     "journal": "Cladistics",
     "volume": "13",
     "pages": "178-179",
-    "doi": null
+    "doi": "https://doi.org/10.1111/j.1096-0031.1997.tb00250.x"
+  },
+  {
+    "year": 1997,
+    "authors": [
+      {
+        "name": "Newlands, G.",
+        "isHighlighted": false
+      },
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Redescription of *Hadogenes zumpti* (Scorpiones: Ischnuridae), an unusual rock scorpion from the Richtersveld, South Africa",
+    "journal": "South African Journal of Zoology",
+    "volume": "32(3)",
+    "pages": "76-81",
+    "doi": "https://doi.org/10.1080/02541858.1997.11448434"
+  },
+  {
+    "year": 1997,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Two new host-restricted restioid leafhoppers in the genus *Cephalelus* (Cicadellidae: Cephalelini), with descriptions of the females of *C. brevipilus* Davies, *C. daviesi* Davies and *C. rawsonia* Davies",
+    "journal": "African Entomology",
+    "volume": "5(2)",
+    "pages": "273-281",
+    "doi": "https://hdl.handle.net/10520/AJA10213589_305"
   },
   {
     "year": 1996,
@@ -5468,6 +5559,21 @@
     "journal": "South African Journal of Zoology",
     "volume": "31(3)",
     "pages": "120-130",
-    "doi": null
+    "doi": "https://doi.org/10.1080/02541858.1996.11448403"
+  },
+  {
+    "year": 2026,
+    "authors": [
+      {
+        "name": "Prendini, L.",
+        "isHighlighted": true
+      }
+    ],
+    "title": "Erratum. All genera of the world: Orders Solifugae and Thelyphonida (Animalia: Arthropoda: Arachnida): Corrected authorship and dates",
+    "journal": "MegaTaxa",
+    "volume": "19(1)",
+    "pages": "213-215",
+    "doi": "https://doi.org/10.11646/megataxa.19.1.4",
+    "pdf": null
   }
 ]

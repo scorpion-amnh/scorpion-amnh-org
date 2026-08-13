@@ -163,6 +163,22 @@ figure figcaption {
   line-height: 1.5;
 }
 
+@utility link-underline {
+  text-decoration-line: underline;
+  text-underline-offset: 0.28em;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 1px;
+}
+
+@layer base {
+  a:where(.underline, .link-underline) {
+    text-decoration-line: underline;
+    text-underline-offset: 0.28em;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 1px;
+  }
+}
+
 @layer utilities {
   .section-content [data-tab] .people-card:not(:last-of-type) {
     border-bottom: 1px solid rgb(209 213 219);

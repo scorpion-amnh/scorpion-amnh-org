@@ -92,14 +92,14 @@ export default function Home() {
                 to{" "}
                 <Link
                   href="/people#principal-investigator"
-                  className="text-color-link-on-dark hover:text-color-link-on-dark-hover underline"
+                  className="text-color-link-on-dark hover:text-color-link-on-dark-hover link-underline"
                 >
                   Lorenzo Prendini
                 </Link>
                 , Curator of Arachnida and Myriapoda, and{" "}
                 <Link
                   href="/people#museum-specialists"
-                  className="text-color-link-on-dark hover:text-color-link-on-dark-hover underline"
+                  className="text-color-link-on-dark hover:text-color-link-on-dark-hover link-underline"
                 >
                   Pío Colmenares
                 </Link>

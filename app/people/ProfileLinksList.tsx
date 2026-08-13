@@ -20,7 +20,7 @@ export const ProfileLinksList = ({
     {links.map((link) => (
       <p key={link.href}>
         {link.external === false ? (
-          <a href={link.href} className="text-color-link hover:text-color-link-hover underline">
+          <a href={link.href} className="text-color-link hover:text-color-link-hover link-underline">
             {link.label}
           </a>
         ) : (

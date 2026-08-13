@@ -44,5 +44,5 @@ const renderCitationHtml = (html: string): ReactNode[] => {
 };
 
 export const CitationHtml = ({ html }: CitationHtmlProps) => (
-  <span className="[&_a]:text-color-link [&_a]:hover:text-color-link-hover [&_a]:hover:underline">{renderCitationHtml(html)}</span>
+  <span className="[&_a]:text-color-link [&_a]:hover:text-color-link-hover [&_a]:link-underline">{renderCitationHtml(html)}</span>
 );

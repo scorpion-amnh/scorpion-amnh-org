@@ -136,7 +136,7 @@ export default function DesignSystemPage() {
             >
               <p>
                 Inline{" "}
-                <Link href="/collections" className="text-color-link hover:text-color-link-hover underline">
+                <Link href="/collections" className="text-color-link hover:text-color-link-hover link-underline">
                   link
                 </Link>{" "}
                 in body copy.

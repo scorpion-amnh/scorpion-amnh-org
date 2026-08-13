@@ -191,7 +191,7 @@ export function FacilitiesClient() {
                 <h3 className="font-bold mb-4">Scientific Illustration</h3>
                 <p className="mb-6">
                   The staff of the Division of Invertebrate Zoology includes{" "}
-                  <a href="/people/staff" className="text-color-link hover:text-color-link-hover underline">
+                  <a href="/people/staff" className="text-color-link hover:text-color-link-hover link-underline">
                     Steve Thurston,
                   </a>{" "}
                   a scientific illustrator, proficient in graphical software techniques as well as traditional scientific

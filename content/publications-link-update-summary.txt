@@ -1,0 +1,49 @@
+Publications Link Update Summary
+================================
+
+Source document: publications-with-links-viii-2026.docx
+Date processed: August 13, 2026
+
+Overview
+--------
+- Publications in site data after update: 216
+- Publications with a DOI link: 196
+- Publications with a PDF download link: 5
+- Publications still missing a DOI or PDF link: 16
+
+What was updated
+----------------
+- Applied DOI links from the source document across the publication list (2026 back through 1996).
+- Added PDF download links where the source document provided PDF URLs instead of DOIs (e.g., obituaries, newsletters, encyclopedia entries).
+- Added three new 2026 publications from the source document:
+  - Evolution and biogeography of the widespread dragonfly genus Orthetrum (Systematic Entomology)
+  - All genera of the world: Order Scorpiones (MegaTaxa)
+  - Erratum for All genera of the world: Orders Solifugae and Thelyphonida (MegaTaxa)
+- Updated custom HTML citations where needed so embedded links match the source document.
+
+Publications still needing a DOI or PDF link
+--------------------------------------------
+Please provide a DOI and/or PDF download link for each item below.
+
+- [2024] 2024 Arachnological Expedition to the Central Namib Inselbergs — The Barking Gecko
+- [2023] Scorpion diversity — The Barking Gecko
+- [2020] In Memory of Dr Norman I. Platnick ’68. Curator Emeritus at the American Museum of Natural History — Concord University Magazine
+- [2020] Tribute to a titan: Norman Platnick (30 December 1951 – 8 April 2020) — The Spider Club News
+- [2015] New records of Jordanian scorpions — Jordan Journal of Natural History
+- [2012] Scorpions (Scorpiones). In: Grzimek's Animal Life (N. Simmons, ed.). Gale Cengage. https://animals.galegroup.com Last modified: February 10, 2012.
+- [2012] The Scorpion King. Among the most long-lived terrestrial arthropods — Asian Geographic
+- [2010] Order Scorpiones C.L. Koch, 1837. Pp. 321-330 In: Gerlach, J. and Marusik, Y. (Eds.) — Arachnida and Myriapoda of the Seychelles Islands
+- [2009] Assembling the Scorpion Tree of Life: ‘High-level systematics and phylogeny of the extant scorpions (Scorpiones: Orthosterni)’ reanalysed. In: Arrivillaga, J., El Souki, M. & Herrera, B. (Eds.) — Monografía Digital Sociedad Venezolana de Entomología
+- [2008] A new species of *Akentrobuthus* Lamoral, 1976 (Scorpiones: Buthidae) from the Republic of Benin (Western Africa) — Journal of Afrotropical Zoology
+- [2007] Phylogeny and biogeography of the family Bothriuridae (Scorpiones) — Darwiniana
+- [2004] Checklist of millipedes (Diplopoda), centipedes (Chilopoda) and scorpions (Arachnida: Scorpionida) from a savanna ecosystem, Limpopo Province, South Africa — African Invertebrates
+- [2003] Threats facing southern Africa’s unique scorpion fauna — Colophon
+- [2001] *Substratum specialization and speciation in southern African scorpions: the Effect Hypothesis revisited*. pp. 113-138 In: Fet, V. and Selden, P.A. (Eds.) **Scorpions 2001. *In Memoriam* Gary A. Polis**. British Arachnological Society, Burnham Beeches, Bucks, UK.
+- [2000] A new species of *Parabuthus* Pocock (Scorpiones, Buthidae), and new records of *Parabuthus capensis* (Ehrenberg), from Namibia and South Africa — Cimbebasia
+- [2000] *Chelicerata (Scorpiones)*. In: Kirk-Spriggs, A.H. and Marais, E. (Eds.) — Dâures - Biodiversity of the Brandberg Massif, Namibia. Cimbebasia Memoir
+
+Notes
+-----
+- Some newsletter articles, book chapters, and abstract-only meeting entries in the source document had no link provided.
+- A few source-document entries could not be matched to an existing site listing without risking duplicate entries; those are listed above if they remain unlinked on the site.
+- Publications with complex formatted citations continue to use custom HTML rendering where present.

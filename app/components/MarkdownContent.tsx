@@ -31,7 +31,7 @@ export const MarkdownContent = ({ content, className }: MarkdownContentProps) =>
             }
 
             return (
-              <a href={href} className="text-color-link hover:text-color-link-hover underline">
+              <a href={href} className="text-color-link hover:text-color-link-hover link-underline">
                 {children}
               </a>
             );

@@ -49,6 +49,7 @@ export const publicationSchema = z.object({
   volume: z.string().nullable(),
   pages: z.string().nullable(),
   doi: z.string().nullable(),
+  pdf: z.string().nullable().optional(),
   citationHtml: z.string().min(1).optional(),
 });
 

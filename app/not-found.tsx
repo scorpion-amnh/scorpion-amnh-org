@@ -11,7 +11,7 @@ export default function NotFound() {
         <p className="mb-8">
           The page you requested does not exist or may have moved.
         </p>
-        <Link href="/" className="text-color-link hover:text-color-link-hover underline">
+        <Link href="/" className="text-color-link hover:text-color-link-hover link-underline">
           Return to home
         </Link>
         <nav className="mt-10" aria-label="Site navigation">
@@ -19,7 +19,7 @@ export default function NotFound() {
           <ul className="space-y-2">
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="text-color-link hover:text-color-link-hover underline">
+                <Link href={item.href} className="text-color-link hover:text-color-link-hover link-underline">
                   {item.label}
                 </Link>
               </li>

@@ -6,7 +6,7 @@ type ExternalLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 export const ExternalLink = ({
   children,
-  className = "text-color-link hover:text-color-link-hover underline",
+  className = "text-color-link hover:text-color-link-hover link-underline",
   href,
   ...props
 }: ExternalLinkProps) => (
