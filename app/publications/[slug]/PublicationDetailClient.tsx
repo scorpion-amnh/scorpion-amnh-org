@@ -121,11 +121,12 @@ export function PublicationDetailClient({
               ) : null}
               <dt className="font-semibold text-color-primary">Citation</dt>
               <dd className="leading-relaxed">
-                <div>
-                  {formatCitationDisplay(publication)}
-                  {!citationDoi ? (
-                    <span className="inline whitespace-nowrap">
-                      {"\u00A0"}
+                {formatCitationDisplay(publication)}
+                {citationDoi ? (
+                  <>
+                    {" "}
+                    <span className="whitespace-nowrap">
+                      <CitationDoiLink doi={citationDoi} />
                       <button
                         type="button"
                         onClick={copyCitation}
@@ -136,22 +137,23 @@ export function PublicationDetailClient({
                         <CopyIcon />
                       </button>
                     </span>
-                  ) : null}
-                </div>
-                {citationDoi ? (
-                  <span className="inline whitespace-nowrap">
-                    <CitationDoiLink doi={citationDoi} />
-                    <button
-                      type="button"
-                      onClick={copyCitation}
-                      aria-label={copyCitationLabel}
-                      title={copyCitationLabel}
-                      className="ml-1.5 inline-flex shrink-0 cursor-pointer align-[-0.125em] text-color-link hover:text-color-link-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-color-link"
-                    >
-                      <CopyIcon />
-                    </button>
-                  </span>
-                ) : null}
+                  </>
+                ) : (
+                  <>
+                    {"\u00A0"}
+                    <span className="whitespace-nowrap">
+                      <button
+                        type="button"
+                        onClick={copyCitation}
+                        aria-label={copyCitationLabel}
+                        title={copyCitationLabel}
+                        className="ml-1.5 inline-flex shrink-0 cursor-pointer align-[-0.125em] text-color-link hover:text-color-link-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-color-link"
+                      >
+                        <CopyIcon />
+                      </button>
+                    </span>
+                  </>
+                )}
               </dd>
             </dl>
           </div>
