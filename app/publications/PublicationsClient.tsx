@@ -1,14 +1,17 @@
 'use client';
 
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useMemo } from "react";
 import { CitationTail } from "@/app/publications/CitationTail";
 import { PublicationAccessButtons } from "@/app/publications/PublicationAccessButtons";
+import { PublicationsSearch } from "@/app/publications/PublicationsSearch";
 import { CitationHtml } from "@/app/components/CitationHtml";
 import { BackToTop } from "@/app/components/BackToTop";
 import { formatInlineEmphasis, markdownEmphasisToHtml } from "@/app/components/InlineEmphasis";
 import publicationDetails from "@/content/publication-details.json";
 import type { Publication } from "@/lib/content/schema";
 import { getPublicationDetailPath, sortPublicationsWithinYear } from "@/lib/publications/citation";
+import { usePublicationsSearch, type PublicationIndexItem } from "@/app/publications/usePublicationsSearch";
+import { normalizeSearchText } from "@/lib/search/fuzzyMatch";
 
 const publicationDetailSlugsByDoi = Object.fromEntries(
   publicationDetails
@@ -106,6 +109,21 @@ const getPublicationAccess = (publication: Publication) => {
   };
 };
 
+const buildPublicationSearchText = (publication: Publication) =>
+  normalizeSearchText(
+    [
+      ...publication.authors.map((author) => author.name),
+      publication.title.replace(/\*/g, ""),
+      publication.journal,
+      publication.volume,
+      publication.pages,
+      String(publication.year),
+      publication.doi,
+    ]
+      .filter(Boolean)
+      .join(" ")
+  );
+
 const formatCitation = (publication: Publication) => (
   <>
     {formatAuthors(publication.authors)} {publication.year}. {formatInlineEmphasis(publication.title)}
@@ -130,6 +148,30 @@ export function PublicationsClient({ publications }: PublicationsClientProps) {
   years.forEach((year) => {
     publicationsByYear[year] = sortPublicationsWithinYear(publicationsByYear[year]);
   });
+
+  const publicationIndex = useMemo<PublicationIndexItem[]>(
+    () =>
+      years.flatMap((year) =>
+        publicationsByYear[year].map((publication, index) => ({
+          id: `pub-${year}-${index}`,
+          title: publication.title,
+          journal: publication.journal,
+          year,
+          searchText: buildPublicationSearchText(publication),
+        }))
+      ),
+    [years, publicationsByYear]
+  );
+
+  const {
+    searchContainerRef,
+    searchQuery,
+    isSearchOpen,
+    filteredResults,
+    setSearchQuery,
+    setIsSearchOpen,
+    handlePublicationSelect,
+  } = usePublicationsSearch(publicationIndex);
 
   useLayoutEffect(() => {
     const hash = window.location.hash.slice(1);
@@ -157,7 +199,22 @@ export function PublicationsClient({ publications }: PublicationsClientProps) {
   return (
     <div className="bg-white min-h-screen">
       <div className="container mx-auto max-w-5xl px-6 py-12">
-        <h1 className="font-bold mb-12">Scientific Publications</h1>
+        <h1 className="font-bold mb-8">Scientific Publications</h1>
+
+        <p className="text-lead mb-8">
+          Lorenzo Prendini has led and contributed to decades of peer-reviewed studies on scorpion systematics,
+          phylogenetics, and arachnid biodiversity.
+        </p>
+
+        <PublicationsSearch
+          searchContainerRef={searchContainerRef}
+          searchQuery={searchQuery}
+          isSearchOpen={isSearchOpen}
+          filteredResults={filteredResults}
+          setSearchQuery={setSearchQuery}
+          setIsSearchOpen={setIsSearchOpen}
+          onPublicationSelect={handlePublicationSelect}
+        />
 
         {years.map((year) => (
           <section key={year} className="mb-12">
@@ -169,7 +226,7 @@ export function PublicationsClient({ publications }: PublicationsClientProps) {
                 const access = getPublicationAccess(publication);
 
                 return (
-                  <div key={`${year}-${index}`}>
+                  <div key={`${year}-${index}`} id={`pub-${year}-${index}`} className="publication-anchor">
                     <p>
                       {publication.citationHtml ? (
                         <CitationHtml html={markdownEmphasisToHtml(stripHtmlLinks(publication.citationHtml))} />

@@ -14,6 +14,7 @@ import {
 import { scrollToPersonAnchorWhenReady } from "@/lib/people/scrollToPersonAnchor";
 import { syncPersonAnchorIds } from "@/lib/people/syncPersonAnchorIds";
 import { useScrollToSectionOnSelect } from "@/lib/useScrollToSectionOnSelect";
+import { getFuzzyScore, normalizeSearchText } from "@/lib/search/fuzzyMatch";
 import type { Person } from "@/lib/content/schema";
 import type { PeopleSection } from "./sections";
 
@@ -25,54 +26,6 @@ export type PeopleIndexItem = {
   sectionId: string;
   sectionLabel: string;
   tab?: SectionTab;
-};
-
-const normalizeSearchText = (value: string) =>
-  value
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
-    .toLowerCase();
-
-const getEditDistance = (a: string, b: string) => {
-  const aLen = a.length;
-  const bLen = b.length;
-  if (!aLen) return bLen;
-  if (!bLen) return aLen;
-
-  const dp = Array.from({ length: aLen + 1 }, () => new Array(bLen + 1).fill(0));
-  for (let i = 0; i <= aLen; i += 1) dp[i][0] = i;
-  for (let j = 0; j <= bLen; j += 1) dp[0][j] = j;
-
-  for (let i = 1; i <= aLen; i += 1) {
-    for (let j = 1; j <= bLen; j += 1) {
-      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      dp[i][j] = Math.min(
-        dp[i - 1][j] + 1,
-        dp[i][j - 1] + 1,
-        dp[i - 1][j - 1] + cost
-      );
-    }
-  }
-
-  return dp[aLen][bLen];
-};
-
-const getFuzzyScore = (query: string, name: string) => {
-  if (!query) return null;
-  if (name.includes(query)) return 0;
-
-  const nameTokens = name.split(/\s+/g).filter(Boolean);
-  const tokenDistances = nameTokens.map((token) => getEditDistance(query, token));
-  const bestTokenDistance = tokenDistances.length ? Math.min(...tokenDistances) : getEditDistance(query, name);
-  const nameDistance = getEditDistance(query, name);
-  const bestDistance = Math.min(bestTokenDistance, nameDistance);
-
-  const maxDistance = Math.max(1, Math.floor(query.length * 0.35));
-  if (bestDistance <= maxDistance) {
-    return bestDistance + 1;
-  }
-
-  return null;
 };
 
 export const usePeopleNavigation = (sections: PeopleSection[], people: Person[]) => {
