@@ -42,6 +42,7 @@ export function PublicationDetailClient({
   const volumePages = getVolumePages(publication);
   const pdfUrl = detail.pdf ?? publication.pdf ?? null;
   const citationDoi = detail.doi ?? publication.doi ?? null;
+  const showAbstract = hasPublicationAbstract(detail.abstract);
 
   const copyCitation = () => {
     void copyTextToClipboard(citationText).then((copied) => {
@@ -75,7 +76,7 @@ export function PublicationDetailClient({
           </ol>
         </nav>
 
-        <header className="mb-10">
+        <header className="mb-8">
           <h1 className="text-3xl mb-6 font-bold">{formatInlineEmphasis(publication.title)}</h1>
 
           <div className="space-y-4">
@@ -159,14 +160,14 @@ export function PublicationDetailClient({
           </div>
         </header>
 
-        {hasPublicationAbstract(detail.abstract) ? (
-          <section className="mb-10">
+        {showAbstract ? (
+          <section className="mb-8">
             <h3 className="mb-4 font-bold">Abstract</h3>
             <p className="text-lead">{formatInlineEmphasis(detail.abstract)}</p>
           </section>
         ) : null}
 
-        <section className="mb-10">
+        <section className="mb-8">
           <h3 className="mb-4 font-bold">Keywords and Taxa</h3>
           <ul className="flush-list flex flex-wrap gap-2">
             {detail.keywords.map((keyword) => (
