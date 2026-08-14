@@ -2,22 +2,11 @@ import { readFileSync, writeFileSync } from "fs";
 import path from "path";
 import { pathToFileURL } from "url";
 import { normalizeDoiAbstract, isPublicationAbstractPlaceholder } from "../lib/publications/abstract";
-import type { Publication } from "../lib/content/schema";
+import type { Publication, PublicationDetail } from "../lib/content/schema";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 const PUBLICATIONS_PATH = path.join(CONTENT_DIR, "publications.json");
 const DETAILS_PATH = path.join(CONTENT_DIR, "publication-details.json");
-
-export type PublicationDetailEntry = {
-  slug: string;
-  doi?: string;
-  year?: number;
-  title?: string;
-  datePublished: string;
-  pdf?: string | null;
-  abstract?: string;
-  keywords: string[];
-};
 
 export type SyncPublicationDetailsResult = {
   generated: number;
@@ -185,7 +174,7 @@ const findPdfLink = (message: Record<string, unknown> | null, publication: Publi
 const buildDetailEntry = async (
   publication: Publication,
   usedSlugs: Set<string>
-): Promise<PublicationDetailEntry> => {
+): Promise<PublicationDetail> => {
   const slug = slugify(publication.title, usedSlugs);
   let abstract: string | null = null;
   let datePublished = `${publication.year}-01-01`;
@@ -220,7 +209,7 @@ const buildDetailEntry = async (
     await new Promise((resolve) => setTimeout(resolve, 120));
   }
 
-  const entry: PublicationDetailEntry = {
+  const entry: PublicationDetail = {
     slug,
     datePublished,
     keywords: buildKeywords(publication, subjects),
@@ -239,7 +228,7 @@ const buildDetailEntry = async (
 
 export const getPublicationsMissingDetails = (
   publications: Publication[],
-  existingDetails: PublicationDetailEntry[]
+  existingDetails: PublicationDetail[]
 ): Publication[] => {
   const doiUsageCount = publications.reduce<Map<string, number>>((counts, publication) => {
     if (publication.doi) {
@@ -273,7 +262,7 @@ export const getPublicationsMissingDetails = (
 /** Create detail entries for publications missing from publication-details.json. */
 export const syncPublicationDetails = async (): Promise<SyncPublicationDetailsResult> => {
   const publications = JSON.parse(readFileSync(PUBLICATIONS_PATH, "utf8")) as Publication[];
-  const existingDetails = JSON.parse(readFileSync(DETAILS_PATH, "utf8")) as PublicationDetailEntry[];
+  const existingDetails = JSON.parse(readFileSync(DETAILS_PATH, "utf8")) as PublicationDetail[];
 
   const doiUsageCount = publications.reduce<Map<string, number>>((counts, publication) => {
     if (publication.doi) {
@@ -295,7 +284,7 @@ export const syncPublicationDetails = async (): Promise<SyncPublicationDetailsRe
 
   console.log(`Generating ${targetPublications.length} publication detail entries...`);
 
-  const generated: PublicationDetailEntry[] = [];
+  const generated: PublicationDetail[] = [];
 
   for (const [index, publication] of targetPublications.entries()) {
     const entry = await buildDetailEntry(publication, usedSlugs);
