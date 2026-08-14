@@ -42,8 +42,6 @@ export function PublicationDetailClient({
   const volumePages = getVolumePages(publication);
   const pdfUrl = detail.pdf ?? publication.pdf ?? null;
   const citationDoi = detail.doi ?? publication.doi ?? null;
-  const showAbstract = hasPublicationAbstract(detail.abstract);
-
   const copyCitation = () => {
     void copyTextToClipboard(citationText).then((copied) => {
       setCopyState(copied ? "copied" : "error");
@@ -160,7 +158,7 @@ export function PublicationDetailClient({
           </div>
         </header>
 
-        {showAbstract ? (
+        {hasPublicationAbstract(detail.abstract) ? (
           <section className="mb-8">
             <h3 className="mb-4 font-bold">Abstract</h3>
             <p className="text-lead">{formatInlineEmphasis(detail.abstract)}</p>
