@@ -57,7 +57,7 @@ export const generateMetadata = async ({
       publishedTime: detail.datePublished,
       authors: publication.authors.map((author) => author.name.replace(/^and\s+/i, "")),
     },
-    keywords: detail.keywords,
+    keywords: detail.keywords.map(stripMarkdownEmphasis),
   };
 };
 
@@ -107,7 +107,7 @@ const buildScholarlyArticleJsonLd = (
           },
         }
       : {}),
-    keywords: detail.keywords.join(", "),
+    keywords: detail.keywords.map(stripMarkdownEmphasis).join(", "),
     ...(detail.pdf ? { encoding: { "@type": "MediaObject", contentUrl: detail.pdf } } : {}),
   };
 };

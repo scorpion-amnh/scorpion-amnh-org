@@ -172,7 +172,7 @@ export function PublicationDetailClient({
             {detail.keywords.map((keyword) => (
               <li key={keyword}>
                 <span className="inline-block rounded-full bg-gray-50 px-3 py-1 text-sm text-color-secondary">
-                  {keyword}
+                  {formatInlineEmphasis(keyword)}
                 </span>
               </li>
             ))}
