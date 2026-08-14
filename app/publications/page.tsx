@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { getPublications } from "@/lib/content";
+import { getPeople, getPublications } from "@/lib/content";
 import { createPageMetadata } from "@/lib/metadata";
+import { buildAuthorProfileLookup } from "@/lib/publications/authorProfiles";
 import { PublicationsClient } from "./PublicationsClient";
 
 export const metadata: Metadata = createPageMetadata(
@@ -9,5 +10,10 @@ export const metadata: Metadata = createPageMetadata(
 );
 
 export default function PublicationsPage() {
-  return <PublicationsClient publications={getPublications()} />;
+  return (
+    <PublicationsClient
+      publications={getPublications()}
+      authorProfileLookup={buildAuthorProfileLookup(getPeople())}
+    />
+  );
 }

@@ -8,12 +8,12 @@ import { BackToTop } from "@/app/components/BackToTop";
 import { formatInlineEmphasis } from "@/app/components/InlineEmphasis";
 import type { Publication, PublicationDetail } from "@/lib/content/schema";
 import { copyTextToClipboard } from "@/lib/copyToClipboard";
+import { formatPublicationAuthors } from "@/app/publications/formatPublicationAuthors";
+import type { AuthorProfileLookup } from "@/lib/publications/authorProfiles";
 import {
   formatAuthorNamesPlain,
   formatPlainCitation,
   getVolumePages,
-  isPrendiniAuthor,
-  PRENDINI_BIO_PATH,
   getPublicationsYearHref,
 } from "@/lib/publications/citation";
 import { hasPublicationAbstract } from "@/lib/publications/abstract";
@@ -21,55 +21,20 @@ import { hasPublicationAbstract } from "@/lib/publications/abstract";
 type PublicationDetailClientProps = {
   publication: Publication;
   detail: PublicationDetail;
+  authorProfileLookup: AuthorProfileLookup;
 };
-
-const formatDetailAuthors = (authors: Publication["authors"]) =>
-  authors.map((author, index) => {
-    const name = author.name.replace(/^and\s+/i, "");
-    const formattedName = isPrendiniAuthor(author) ? (
-      <Link
-        key={`${name}-${index}`}
-        href={PRENDINI_BIO_PATH}
-        className="font-bold text-color-link hover:text-color-link-hover link-underline"
-      >
-        {name}
-      </Link>
-    ) : author.isHighlighted ? (
-      <b key={`${name}-${index}`}>{name}</b>
-    ) : (
-      name
-    );
-
-    if (index === 0) {
-      return <span key={`${name}-${index}-wrap`}>{formattedName}</span>;
-    }
-
-    if (index === authors.length - 1) {
-      return (
-        <span key={`${name}-${index}-wrap`}>
-          {authors.length === 2 ? " and " : ", and "}
-          {formattedName}
-        </span>
-      );
-    }
-
-    return (
-      <span key={`${name}-${index}-wrap`}>
-        , {formattedName}
-      </span>
-    );
-  });
 
 const formatCitationDisplay = (publication: Publication): ReactNode => (
   <>
     {formatAuthorNamesPlain(publication.authors)} {publication.year}. {formatInlineEmphasis(publication.title)}
-    <CitationTail publication={publication} />
+    <CitationTail publication={publication} emphasizeJournal={false} />
   </>
 );
 
 export function PublicationDetailClient({
   publication,
   detail,
+  authorProfileLookup,
 }: PublicationDetailClientProps) {
   const [copyState, setCopyState] = useState<"idle" | "copied" | "error">("idle");
 
@@ -111,12 +76,12 @@ export function PublicationDetailClient({
         </nav>
 
         <header className="mb-10">
-          <h1 className="mb-6 font-bold">{formatInlineEmphasis(publication.title)}</h1>
+          <h1 className="text-3xl mb-6 font-bold">{formatInlineEmphasis(publication.title)}</h1>
 
           <div className="space-y-4">
             <p>
               <span className="sr-only">Authors: </span>
-              {formatDetailAuthors(publication.authors)}
+              {formatPublicationAuthors(publication.authors, authorProfileLookup)}
             </p>
 
             <PublicationAccessButtons

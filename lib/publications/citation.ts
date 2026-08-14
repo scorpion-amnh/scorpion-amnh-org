@@ -1,5 +1,6 @@
 import type { Publication, PublicationAuthor } from "@/lib/content/schema";
 
+export const LORENZO_PRENDINI_ID = "lorenzo-prendini";
 export const PRENDINI_BIO_PATH = "/people/lorenzo-prendini";
 
 export const getPublicationDetailPath = (slug: string) => `/publications/${slug}`;

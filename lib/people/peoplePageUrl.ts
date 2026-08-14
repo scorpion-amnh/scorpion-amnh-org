@@ -43,6 +43,9 @@ type PeoplePageUrlOptions = {
   hash?: string | null;
 };
 
+export const buildPersonProfilePath = (person: Pick<Person, "id" | "sectionId" | "tab">) =>
+  `/people?section=${encodeURIComponent(person.sectionId)}&tab=${encodeURIComponent(person.tab)}#${encodeURIComponent(person.id)}`;
+
 export const readUrlSearchParams = () => {
   if (typeof window === "undefined") {
     return new URLSearchParams();

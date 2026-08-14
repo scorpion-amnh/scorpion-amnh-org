@@ -2,8 +2,9 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { LORENZO_PRENDINI_ID } from "@/lib/publications/citation";
 
-const TARGET_PATH = "/people/?section=principal-investigator&tab=current";
+const TARGET_PATH = `/people/?section=principal-investigator&tab=current#${LORENZO_PRENDINI_ID}`;
 
 /**
  * `/people/lorenzo-prendini` renders the same markup as this target URL so

@@ -4,12 +4,17 @@ import { useEffect, useLayoutEffect, useMemo } from "react";
 import { CitationTail } from "@/app/publications/CitationTail";
 import { PublicationAccessButtons } from "@/app/publications/PublicationAccessButtons";
 import { PublicationsSearch } from "@/app/publications/PublicationsSearch";
+import { formatPublicationAuthors } from "@/app/publications/formatPublicationAuthors";
 import { CitationHtml } from "@/app/components/CitationHtml";
 import { BackToTop } from "@/app/components/BackToTop";
 import { formatInlineEmphasis, markdownEmphasisToHtml } from "@/app/components/InlineEmphasis";
 import publicationDetails from "@/content/publication-details.json";
 import type { Publication } from "@/lib/content/schema";
 import { getPublicationDetailPath, sortPublicationsWithinYear } from "@/lib/publications/citation";
+import {
+  linkAuthorsInCitationHtml,
+  type AuthorProfileLookup,
+} from "@/lib/publications/authorProfiles";
 import { usePublicationsSearch, type PublicationIndexItem } from "@/app/publications/usePublicationsSearch";
 import { normalizeSearchText } from "@/lib/search/fuzzyMatch";
 
@@ -39,32 +44,8 @@ const publicationDetailPdfByYearTitle = Object.fromEntries(
 
 type PublicationsClientProps = {
   publications: Publication[];
+  authorProfileLookup: AuthorProfileLookup;
 };
-
-const formatAuthors = (authors: Publication["authors"]) =>
-  authors.map((author, index) => {
-    const name = author.name.replace(/^and\s+/i, "");
-    const formattedName = author.isHighlighted ? <b key={`${name}-${index}`}>{name}</b> : name;
-
-    if (index === 0) {
-      return formattedName;
-    }
-
-    if (index === authors.length - 1) {
-      return (
-        <span key={`${name}-${index}`}>
-          {authors.length === 2 ? " and " : ", and "}
-          {formattedName}
-        </span>
-      );
-    }
-
-    return (
-      <span key={`${name}-${index}`}>
-        , {formattedName}
-      </span>
-    );
-  });
 
 const stripHtmlLinks = (html: string) =>
   html
@@ -124,14 +105,18 @@ const buildPublicationSearchText = (publication: Publication) =>
       .join(" ")
   );
 
-const formatCitation = (publication: Publication) => (
+const formatCitation = (
+  publication: Publication,
+  authorProfileLookup: AuthorProfileLookup
+) => (
   <>
-    {formatAuthors(publication.authors)} {publication.year}. {formatInlineEmphasis(publication.title)}
+    {formatPublicationAuthors(publication.authors, authorProfileLookup)} {publication.year}.{" "}
+    {formatInlineEmphasis(publication.title)}
     <CitationTail publication={publication} />
   </>
 );
 
-export function PublicationsClient({ publications }: PublicationsClientProps) {
+export function PublicationsClient({ publications, authorProfileLookup }: PublicationsClientProps) {
   const publicationsByYear = publications.reduce<Record<number, Publication[]>>(
     (groups, publication) => {
       groups[publication.year] ??= [];
@@ -229,9 +214,14 @@ export function PublicationsClient({ publications }: PublicationsClientProps) {
                   <div key={`${year}-${index}`} id={`pub-${year}-${index}`} className="publication-anchor">
                     <p>
                       {publication.citationHtml ? (
-                        <CitationHtml html={markdownEmphasisToHtml(stripHtmlLinks(publication.citationHtml))} />
+                        <CitationHtml
+                          html={linkAuthorsInCitationHtml(
+                            markdownEmphasisToHtml(stripHtmlLinks(publication.citationHtml)),
+                            authorProfileLookup
+                          )}
+                        />
                       ) : (
-                        formatCitation(publication)
+                        formatCitation(publication, authorProfileLookup)
                       )}
                     </p>
                     <PublicationAccessButtons

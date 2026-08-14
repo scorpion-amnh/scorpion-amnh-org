@@ -226,12 +226,21 @@ export const usePeopleNavigation = (sections: PeopleSection[], people: Person[])
       history.scrollRestoration = "manual";
     }
 
+    const navigationState = readNavigationStateFromUrl(sectionIdSet);
+    const personHashNavigation = resolvePersonHashNavigation(navigationState.hash, sectionIdSet, people);
+    const shouldScrollToPerson = Boolean(
+      personHashNavigation?.shouldScroll && personHashNavigation.personId
+    );
+
     // Restore section/tab from the URL before first paint on refresh.
     // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-only URL hydration
-    applyNavigationFromUrl({ allowPersonScroll: false });
+    applyNavigationFromUrl({ allowPersonScroll: shouldScrollToPerson });
     setIsNavigationReady(true);
-    window.scrollTo(0, 0);
-  }, [applyNavigationFromUrl]);
+
+    if (!shouldScrollToPerson) {
+      window.scrollTo(0, 0);
+    }
+  }, [applyNavigationFromUrl, people, sectionIdSet]);
 
   useLayoutEffect(() => {
     if (!isNavigationReady || !pendingPersonScrollId.current) {

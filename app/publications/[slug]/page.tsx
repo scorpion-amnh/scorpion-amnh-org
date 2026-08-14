@@ -9,6 +9,8 @@ import {
   getPublicationDetailSlugs,
   getPublicationForDetail,
 } from "@/lib/publications/details";
+import { getPeople } from "@/lib/content";
+import { buildAuthorProfileLookup } from "@/lib/publications/authorProfiles";
 import { getPublicationDetailPath } from "@/lib/publications/citation";
 import { PublicationDetailClient } from "./PublicationDetailClient";
 
@@ -124,7 +126,11 @@ export default async function PublicationDetailPage({ params }: PublicationDetai
   return (
     <>
       <JsonLd data={scholarlyArticleSchema} />
-      <PublicationDetailClient publication={publication} detail={detail} />
+      <PublicationDetailClient
+        publication={publication}
+        detail={detail}
+        authorProfileLookup={buildAuthorProfileLookup(getPeople())}
+      />
     </>
   );
 }

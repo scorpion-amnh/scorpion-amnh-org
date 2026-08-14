@@ -3,14 +3,16 @@ import { getVolumePages, formatVolumePagesInline } from "@/lib/publications/cita
 
 type CitationTailProps = {
   publication: Publication;
+  emphasizeJournal?: boolean;
 };
 
 export const VolumePagesDisplay = ({ volumePages }: { volumePages: string }) => (
   <span className="inline">{formatVolumePagesInline(volumePages)}</span>
 );
 
-export const CitationTail = ({ publication }: CitationTailProps) => {
+export const CitationTail = ({ publication, emphasizeJournal = true }: CitationTailProps) => {
   const volumePages = getVolumePages(publication);
+  const journalName = emphasizeJournal ? <b>{publication.journal}</b> : publication.journal;
 
   return (
     <>
@@ -18,14 +20,14 @@ export const CitationTail = ({ publication }: CitationTailProps) => {
       {publication.journal && volumePages ? (
         <>
           {" "}
-          <b>{publication.journal}</b>
+          {journalName}
           {"\u00A0"}
           <VolumePagesDisplay volumePages={volumePages} />.
         </>
       ) : publication.journal ? (
         <>
           {" "}
-          <b>{publication.journal}</b>.
+          {journalName}.
         </>
       ) : volumePages ? (
         <>

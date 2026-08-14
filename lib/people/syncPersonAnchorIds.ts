@@ -1,4 +1,5 @@
 import type { Person } from "@/lib/content/schema";
+import { isTabSectionId } from "@/lib/people/peoplePageUrl";
 
 const normalizeHeadingText = (value: string) => value.replace(/\s+/g, " ").trim();
 
@@ -9,9 +10,10 @@ export const syncPersonAnchorIds = (root: HTMLElement, people: Person[]) => {
       continue;
     }
 
-    const scopedElement = person.tab
-      ? sectionElement.querySelector(`[data-tab="${person.tab}"]`)
-      : sectionElement;
+    const scopedElement =
+      person.tab && isTabSectionId(person.sectionId)
+        ? (sectionElement.querySelector(`[data-tab="${person.tab}"]`) ?? sectionElement)
+        : sectionElement;
     if (!scopedElement) {
       continue;
     }
