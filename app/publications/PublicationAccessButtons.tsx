@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { resolvePublicationPdfUrl } from "@/lib/publications/pdf";
 
 const actionButtonClassName =
   "inline-flex items-center gap-1.5 rounded-sm px-4 py-2 text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-color-link";
@@ -90,7 +91,9 @@ export const PublicationAccessButtons = ({
   pdf,
   className = "mt-2 flex flex-wrap items-center gap-3",
 }: PublicationAccessButtonsProps) => {
-  if (!abstractHref && !doi && !pdf) {
+  const pdfUrl = resolvePublicationPdfUrl(pdf);
+
+  if (!abstractHref && !doi && !pdfUrl) {
     return null;
   }
 
@@ -108,8 +111,8 @@ export const PublicationAccessButtons = ({
           <ExternalLinkIcon />
         </a>
       ) : null}
-      {pdf ? (
-        <a href={pdf} target="_blank" rel="noopener noreferrer" className={outlinePublicationActionClassName}>
+      {pdfUrl ? (
+        <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className={outlinePublicationActionClassName}>
           PDF
           <DownloadIcon />
         </a>

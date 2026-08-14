@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync } from "fs";
 import path from "path";
 import { pathToFileURL } from "url";
 import { normalizeDoiAbstract, isPublicationAbstractPlaceholder } from "../lib/publications/abstract";
+import { isDirectPublicationPdfUrl } from "../lib/publications/pdf";
 import type { Publication, PublicationDetail } from "../lib/content/schema";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
@@ -327,6 +328,8 @@ const fetchOpenAlex = async (doiId: string) => {
   return (await response.json()) as {
     abstract_inverted_index?: Record<string, number[]>;
     keywords?: OpenAlexKeyword[];
+    open_access?: { is_oa?: boolean };
+    best_oa_location?: { pdf_url?: string | null };
   };
 };
 
@@ -424,15 +427,28 @@ export const buildKeywords = (publication: Publication, options: BuildKeywordsOp
   return orderedKeywords.slice(0, MAX_KEYWORDS);
 };
 
-const findPdfLink = (message: Record<string, unknown> | null, publication: Publication) => {
-  if (publication.pdf) {
+const findPdfLink = (
+  crossref: Record<string, unknown> | null,
+  openAlex: Awaited<ReturnType<typeof fetchOpenAlex>>,
+  publication: Publication
+) => {
+  if (publication.pdf && isDirectPublicationPdfUrl(publication.pdf)) {
     return publication.pdf;
   }
 
-  const links = message?.link as Array<{ URL?: string }> | undefined;
+  const openAccessPdf = openAlex?.best_oa_location?.pdf_url;
+  if (openAlex?.open_access?.is_oa && openAccessPdf && isDirectPublicationPdfUrl(openAccessPdf)) {
+    return openAccessPdf;
+  }
+
+  const links = crossref?.link as Array<{ URL?: string }> | undefined;
   const pdfLink = links?.find((link) => /pdf/i.test(link.URL ?? ""))?.URL;
 
-  return pdfLink ?? null;
+  if (pdfLink && isDirectPublicationPdfUrl(pdfLink)) {
+    return pdfLink;
+  }
+
+  return null;
 };
 
 const buildDetailEntry = async (
@@ -459,7 +475,7 @@ const buildDetailEntry = async (
       datePublished = crossrefDate;
     }
 
-    pdf = findPdfLink(crossref, publication);
+    pdf = findPdfLink(crossref, openAlex, publication);
 
     subjects = ((crossref?.subject as string[] | undefined) ?? []).filter(Boolean);
 

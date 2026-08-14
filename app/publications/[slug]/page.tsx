@@ -4,6 +4,7 @@ import { JsonLd } from "@/app/components/JsonLd";
 import { SITE_URL } from "@/lib/metadata";
 import { stripMarkdownEmphasis } from "@/lib/publications/citation";
 import { hasPublicationAbstract } from "@/lib/publications/abstract";
+import { resolvePublicationPdfUrl } from "@/lib/publications/pdf";
 import {
   getPublicationDetailBySlug,
   getPublicationDetailSlugs,
@@ -68,6 +69,7 @@ const buildScholarlyArticleJsonLd = (
 ) => {
   const pageUrl = `${SITE_URL}${getPublicationDetailPath(slug)}`;
   const headline = stripMarkdownEmphasis(publication.title);
+  const pdfUrl = resolvePublicationPdfUrl(detail.pdf);
 
   return {
     "@context": "https://schema.org",
@@ -108,7 +110,7 @@ const buildScholarlyArticleJsonLd = (
         }
       : {}),
     keywords: detail.keywords.map(stripMarkdownEmphasis).join(", "),
-    ...(detail.pdf ? { encoding: { "@type": "MediaObject", contentUrl: detail.pdf } } : {}),
+    ...(pdfUrl ? { encoding: { "@type": "MediaObject", contentUrl: pdfUrl } } : {}),
   };
 };
 
