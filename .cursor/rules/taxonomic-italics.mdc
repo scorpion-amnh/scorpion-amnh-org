@@ -1,0 +1,44 @@
+---
+description: Only italicize genus and species names, not higher taxa (order, family, etc.)
+alwaysApply: true
+---
+
+# Taxonomic Name Italics
+
+Per zoological nomenclature convention, only **genus** and **species** (and subspecies)
+names are italicized. Higher taxa — order, family, superfamily, class, etc. — are
+written in normal (roman) text.
+
+- Italicize: genus alone (`Centruroides`), genus + species (`Centruroides sculpturatus`),
+  or genus abbreviated with species (`C. sculpturatus`).
+- Do NOT italicize: order (`Scorpiones`), family (`Buthidae`, `Scorpionidae`),
+  superfamily, or other ranks above genus.
+- Author citations following a genus/species name (e.g. `Peters, 1861`) are not
+  italicized, even when adjacent to an italicized name.
+
+```text
+✅ the genus *Centruroides* (Buthidae)
+✅ *Hemiscorpius* Peters, 1861 (Hemiscorpiidae Pocock, 1893)
+✅ the order Scorpiones includes the family Scorpionidae
+❌ the genus *Centruroides* (*Buthidae*)
+❌ the order *Scorpiones* includes the family *Scorpionidae*
+```
+
+## In this codebase
+
+- JSON content (`content/**/*.json`, e.g. `people/*.json`, `publications.json`)
+  wraps italic spans in `*asterisks*`, rendered via `InlineEmphasis`/`MarkdownContent`.
+- Inline JSX prose (e.g. `app/**/sections/*.tsx`, `app/arachnids/ArachnidsClient.tsx`)
+  wraps italic spans in `<em>...</em>`.
+- Bibliographic `citationHtml` fields use `<i>...</i>`.
+
+In all three cases, apply the same rule: wrap only the genus/species portion, leave
+order/family/superfamily names outside the emphasis markup.
+
+## Precedence over incoming content
+
+This rule overrides any italics styling present in incoming content — copy pasted
+from authors, migrated from legacy pages, imported from bibliographic databases
+(e.g. Crossref/JATS XML), or otherwise supplied pre-formatted. If incoming text
+italicizes a higher taxon (or fails to italicize a genus/species name), correct the
+markup to match this convention rather than preserving the source formatting as-is.
