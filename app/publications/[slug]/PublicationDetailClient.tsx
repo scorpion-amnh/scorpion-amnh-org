@@ -161,13 +161,13 @@ export function PublicationDetailClient({
 
         {hasPublicationAbstract(detail.abstract) ? (
           <section className="mb-10">
-            <h2 className="mb-6 font-bold">Abstract</h2>
+            <h3 className="mb-4 font-bold">Abstract</h3>
             <p className="text-lead">{formatInlineEmphasis(detail.abstract)}</p>
           </section>
         ) : null}
 
         <section className="mb-10">
-          <h2 className="mb-6 font-bold">Keywords and Taxa</h2>
+          <h3 className="mb-4 font-bold">Keywords and Taxa</h3>
           <ul className="flush-list flex flex-wrap gap-2">
             {detail.keywords.map((keyword) => (
               <li key={keyword}>
