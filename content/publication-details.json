@@ -34,7 +34,8 @@
       "new genus",
       "new combination",
       "synonymy"
-    ]
+    ],
+    "pdf": "/documents/2026--phylogeny-and-revised-generic-classification-of-african-ricinulei-ricinoididae-descriptions-of-five-new-genera-three-new-species-and-comparative-morphology-of-the-male-copulatory-apparatus--botero-trujillo--et-al.pdf"
   },
   {
     "slug": "hemiscorpius-kurdistan-iraq",
@@ -123,7 +124,8 @@
       "synonymy",
       "Buthidae",
       "Scorpion"
-    ]
+    ],
+    "pdf": "/documents/2026--scorpions-described-by-carl-ludwig-koch-in-die-arachniden-1836-1847-correct-publication-dates-volume-citations-and-updated-taxonomy--blasco-arostegui--et-al.pdf"
   },
   {
     "slug": "megataxa-scorpiones-genera",
@@ -212,7 +214,8 @@
       "Guatemala",
       "Mexico",
       "Spider"
-    ]
+    ],
+    "pdf": "/documents/2026--phrynus-abstrusus-a-new-troglophilous-whip-spider-amblypygi-phrynidae-from-southern-texas--cazzaniga--et-al.pdf"
   },
   {
     "slug": "pseudochactidae-asian-phylogeny",
@@ -246,7 +249,8 @@
       "Myanmar",
       "Monophyly",
       "Sister group"
-    ]
+    ],
+    "pdf": "/documents/2026--phylogeny-and-divergence-time-estimation-of-relictual-asian-scorpion-family-suggests-early-cretaceous-connections-between-burma-terrane-and-eurasia-and-corrects-placement-of-chinese-taxon--prendini--et-al.pdf"
   },
   {
     "slug": "a-new-species-of-the-medically-important-scorpion-genus",
@@ -281,7 +285,8 @@
       "phylogeny",
       "Extant taxon"
     ],
-    "doi": "https://doi.org/10.11646/megataxa.18.2.2"
+    "doi": "https://doi.org/10.11646/megataxa.18.2.2",
+    "pdf": "/documents/2025--all-genera-of-the-world-order-amblypygi-animalia-arthropoda-arachnida--prendini.pdf"
   },
   {
     "slug": "all-genera-of-the-world-order-palpigradi-animalia-arthr",
@@ -294,7 +299,8 @@
       "Extant taxon",
       "Subspecies"
     ],
-    "doi": "https://doi.org/10.11646/megataxa.18.2.3"
+    "doi": "https://doi.org/10.11646/megataxa.18.2.3",
+    "pdf": "/documents/2025--all-genera-of-the-world-order-palpigradi-animalia-arthropoda-arachnida--prendini.pdf"
   },
   {
     "slug": "all-genera-of-the-world-order-ricinulei-animalia-arthro",
@@ -307,7 +313,8 @@
       "phylogeny",
       "Extant taxon"
     ],
-    "doi": "https://doi.org/10.11646/megataxa.18.2.4"
+    "doi": "https://doi.org/10.11646/megataxa.18.2.4",
+    "pdf": "/documents/2025--all-genera-of-the-world-order-ricinulei-animalia-arthropoda-arachnida--prendini.pdf"
   },
   {
     "slug": "all-genera-of-the-world-order-schizomida-animalia-arthr",
@@ -321,7 +328,8 @@
       "Australia",
       "Extant taxon"
     ],
-    "doi": "https://doi.org/10.11646/megataxa.18.2.5"
+    "doi": "https://doi.org/10.11646/megataxa.18.2.5",
+    "pdf": "/documents/2025--all-genera-of-the-world-order-schizomida-animalia-arthropoda-arachnida--prendini.pdf"
   },
   {
     "slug": "all-genera-of-the-world-order-solifugae-animalia-arthro",
@@ -336,7 +344,8 @@
       "Subgenus",
       "Subspecies"
     ],
-    "doi": "https://doi.org/10.11646/megataxa.18.2.6"
+    "doi": "https://doi.org/10.11646/megataxa.18.2.6",
+    "pdf": "/documents/2025--all-genera-of-the-world-order-solifugae-animalia-arthropoda-arachnida--prendini.pdf"
   },
   {
     "slug": "all-genera-of-the-world-order-thelyphonida-animalia-art",
@@ -350,7 +359,8 @@
       "Extant taxon",
       "Subspecies"
     ],
-    "doi": "https://doi.org/10.11646/megataxa.18.2.7"
+    "doi": "https://doi.org/10.11646/megataxa.18.2.7",
+    "pdf": "/documents/2025--all-genera-of-the-world-order-thelyphonida-animalia-arthropoda-arachnida--prendini.pdf"
   },
   {
     "slug": "cryptocellus-armasi-a-new-troglomorphic-cave-dwelling-h",
@@ -372,7 +382,8 @@
       "Ecology",
       "Spider"
     ],
-    "doi": "https://doi.org/10.11646/zootaxa.5563.1.10"
+    "doi": "https://doi.org/10.11646/zootaxa.5563.1.10",
+    "pdf": "/documents/2025--cryptocellus-armasi-a-new-troglomorphic-cave-dwelling-hooded-tick-spider-from-venezuela-arachnida-ricinulei--botero-trujillo--et-al.pdf"
   },
   {
     "slug": "molecules-morphometrics-and-modeling-of-the-medically-i",
@@ -434,7 +445,7 @@
       "Zoology"
     ],
     "doi": "https://doi.org/10.1093/zoolinnean/zlae169",
-    "pdf": "https://academic.oup.com/zoolinnean/article-pdf/203/1/zlae169/61411767/zlae169.pdf"
+    "pdf": "/documents/2025--extinct-scorpion-family-chaerilobuthidae-from-mid-cretaceous-kachin-amber-reinterpreted-as-subfamily-of-extant-family-pseudochactidae-chelicerata-scorpiones--xuan--et-al.pdf"
   },
   {
     "slug": "include-scorpions-in-global-conservation-plans",
@@ -444,7 +455,7 @@
       "Arachnida"
     ],
     "doi": "https://doi.org/10.1126/science.adz4176",
-    "pdf": "https://www.science.org/doi/pdf/10.1126/science.adz4176"
+    "pdf": "/documents/2025--include-scorpions-in-global-conservation-plans--blasco-arostegui--et-al.pdf"
   },
   {
     "slug": "advances-in-understanding-the-karyotype-evolution-of-te",
@@ -507,7 +518,7 @@
       "Reproductive isolation"
     ],
     "doi": "https://doi.org/10.1186/s12862-025-02445-0",
-    "pdf": "https://link.springer.com/content/pdf/10.1186/s12862-025-02445-0.pdf"
+    "pdf": "/documents/2025--mito-nuclear-discordance-reveals-introgressive-hybridization-following-vicariance-and-secondary-contact-in-iberian-scorpions-buthidae-buthus--blasco-arostegui--et-al.pdf"
   },
   {
     "slug": "new-genus-and-species-of-short-tailed-whipscorpion-schi",
@@ -527,7 +538,8 @@
       "Amazon rainforest",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.11646/zootaxa.5563.1.9"
+    "doi": "https://doi.org/10.11646/zootaxa.5563.1.9",
+    "pdf": "/documents/2025--new-genus-and-species-of-short-tailed-whipscorpion-schizomida-hubbardiidae-from-the-venezuelan-amazon--colmenares--et-al.pdf"
   },
   {
     "slug": "systematic-revision-of-the-european-species-of-buthus-l",
@@ -554,7 +566,8 @@
       "Scorpion",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1206/0003-0090.476.1.1"
+    "doi": "https://doi.org/10.1206/0003-0090.476.1.1",
+    "pdf": "/documents/2025--systematic-revision-of-the-european-species-of-buthus-leach-1815-scorpiones-buthidae--blasco-arostegui--et-al.pdf"
   },
   {
     "slug": "2024-arachnological-expedition-to-the-central-namib-ins",
@@ -563,7 +576,8 @@
       "Arachnida"
     ],
     "year": 2024,
-    "title": "2024 Arachnological Expedition to the Central Namib Inselbergs"
+    "title": "2024 Arachnological Expedition to the Central Namib Inselbergs",
+    "pdf": "/documents/2024--2024-arachnological-expedition-to-the-central-namib-inselbergs--prendini--et-al.pdf"
   },
   {
     "slug": "gerald-newlands-1941-2022",
@@ -571,7 +585,8 @@
     "keywords": [
       "Arachnida"
     ],
-    "doi": "https://doi.org/10.13156/arac.2024.19.7.1043"
+    "doi": "https://doi.org/10.13156/arac.2024.19.7.1043",
+    "pdf": "/documents/2024--gerald-newlands-1941-2022--prendini.pdf"
   },
   {
     "slug": "integrative-systematics-of-the-widespread-middle-easter",
@@ -662,7 +677,8 @@
       "Buthidae",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1206/4011.1"
+    "doi": "https://doi.org/10.1206/4011.1",
+    "pdf": "/documents/2024--phylogeny-of-the-troglomorphic-scorpion-genus-troglotayosicus-scorpiones-troglotayosicidae-with-description-of-a-new-species-from-colombia--moreno-gonzalez--et-al.pdf"
   },
   {
     "slug": "redescription-of-euscorpius-studentium-based-on-adult-s",
@@ -727,7 +743,8 @@
       "Devonian",
       "Extant taxon"
     ],
-    "doi": "https://doi.org/10.1636/JoA-S-22-024"
+    "doi": "https://doi.org/10.1636/JoA-S-22-024",
+    "pdf": "/documents/2023--a-pectinal-tooth-with-peg-sensilla-from-an-early-devonian-scorpion--dunlop--et-al.pdf"
   },
   {
     "slug": "atlas-of-australasian-hormurid-scorpions-i-the-genus-ho",
@@ -750,7 +767,8 @@
       "New guinea",
       "Ecology"
     ],
-    "doi": "https://doi.org/10.35929/RSZ.0111"
+    "doi": "https://doi.org/10.35929/RSZ.0111",
+    "pdf": "/documents/2023--atlas-of-australasian-hormurid-scorpions-i-the-genus-hormurus-in-papua-new-guinea-exceptional-morphological-diversity-in-male-and-female-copulatory-structures-suggests-genital-coevolution--monod--et-al.pdf"
   },
   {
     "slug": "endemism-of-arachnida-amblypygi-scorpiones-and-solifuga",
@@ -769,7 +787,8 @@
       "Escarpment",
       "Habitat"
     ],
-    "doi": "https://doi.org/10.64640/645zb268"
+    "doi": "https://doi.org/10.64640/645zb268",
+    "pdf": "/documents/2023--endemism-of-arachnida-amblypygi-scorpiones-and-solifugae-in-the-highlands-and-escarpments-of-angola-and-namibia-current-knowledge-and-future-directions-in-mendelsohn-j-huntley-b-j-and-vaz-pinto-p-eds-monograph-on-endemism-in-the--prendini--et-al.pdf"
   },
   {
     "slug": "glacial-relicts-a-new-scorpion-from-mount-olympus-eusco",
@@ -793,7 +812,8 @@
       "Massif",
       "Ecology"
     ],
-    "doi": "https://doi.org/10.1206/4003.1"
+    "doi": "https://doi.org/10.1206/4003.1",
+    "pdf": "/documents/2023--glacial-relicts-a-new-scorpion-from-mount-olympus-euscorpiidae-euscorpius--blasco-arostegui--et-al.pdf"
   },
   {
     "slug": "scorpion-diversity",
@@ -803,7 +823,8 @@
       "Arachnida"
     ],
     "year": 2023,
-    "title": "Scorpion diversity"
+    "title": "Scorpion diversity",
+    "pdf": "/documents/2023--scorpion-diversity--prendini.pdf"
   },
   {
     "slug": "systematic-revision-of-the-whip-spider-family-paracharo",
@@ -828,7 +849,8 @@
       "Zoology",
       "Nomen nudum"
     ],
-    "doi": "https://doi.org/10.1206/4000.1"
+    "doi": "https://doi.org/10.1206/4000.1",
+    "pdf": "/documents/2023--systematic-revision-of-the-whip-spider-family-paracharontidae-arachnida-amblypygi-with-description-of-a-new-troglobitic-genus-and-species-from-colombia--moreno-gonzalez--et-al.pdf"
   },
   {
     "slug": "the-non-acarine-arachnida-of-the-amathole-mountains-sou",
@@ -847,7 +869,8 @@
       "Amathole Mountains",
       "South Africa"
     ],
-    "doi": "https://doi.org/10.38201/btha.abc.v53.i1.13"
+    "doi": "https://doi.org/10.38201/btha.abc.v53.i1.13",
+    "pdf": "/documents/2023--the-non-acarine-arachnida-of-the-amathole-mountains-south-africa--haddad--et-al.pdf"
   },
   {
     "slug": "bundles-of-sperm-structural-diversity-in-sperm-packages",
@@ -863,7 +886,8 @@
       "systematics",
       "Sperm"
     ],
-    "doi": "https://doi.org/10.1206/3993.1"
+    "doi": "https://doi.org/10.1206/3993.1",
+    "pdf": "/documents/2022--bundles-of-sperm-structural-diversity-in-sperm-packages-of-scorpions-illuminates-evolution-of-insemination-in-an-ancient-lineage--vrech--et-al.pdf"
   },
   {
     "slug": "cerotegument-microstructure-of-whip-spiders-amblypygi-e",
@@ -879,7 +903,7 @@
       "Intraspecific competition"
     ],
     "doi": "https://doi.org/10.1002/jmor.21452",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/jmor.21452"
+    "pdf": "/documents/2022--cerotegument-microstructure-of-whip-spiders-amblypygi-euamblypygi-weygoldt-1996-reveals-characters-for-systematics-from-family-to-species-level--seiter--et-al.pdf"
   },
   {
     "slug": "climate-relicts-asian-scorpion-family-pseudochactidae-s",
@@ -925,7 +949,8 @@
       "Burmese",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.11646/palaeoentomology.5.5.11"
+    "doi": "https://doi.org/10.11646/palaeoentomology.5.5.11",
+    "pdf": "/documents/2022--hirsutisoma-grimaldii-sp-nov-a-ca-99-million-year-old-ricinuleid-primoricinulei-hirsutisomidae-from-cretaceous-burmese-amber-with-a-corticolous-scansorial-lifestyle--botero-trujillo--et-al.pdf"
   },
   {
     "slug": "morphometry-of-the-pedipalp-patella-provides-new-charac",
@@ -939,7 +964,8 @@
       "Systematics",
       "Appendage"
     ],
-    "doi": "https://doi.org/10.1016/j.jcz.2022.02.004"
+    "doi": "https://doi.org/10.1016/j.jcz.2022.02.004",
+    "pdf": "/documents/2022--morphometry-of-the-pedipalp-patella-provides-new-characters-for-species-level-taxonomy-in-whip-spiders-arachnida-amblypygi-a-test-case-with-the-description-of-a-new-species-of-phrynus--seiter--et-al.pdf"
   },
   {
     "slug": "world-travelers-parthenogenesis-and-ecological-toleranc",
@@ -988,7 +1014,8 @@
       "Rainforest",
       "Simple eye in invertebrates"
     ],
-    "doi": "https://doi.org/10.1206/3981.1"
+    "doi": "https://doi.org/10.1206/3981.1",
+    "pdf": "/documents/2021--a-new-troglomorphic-leaf-litter-scorpion-from-ecuador-troglotayosicidae-troglotayosicus--botero-trujillo--et-al.pdf"
   },
   {
     "slug": "amateur-venom-extraction-business-may-hasten-extinction",
@@ -1005,7 +1032,8 @@
       "IUCN Red List",
       "Endangered species"
     ],
-    "doi": "https://doi.org/10.30963/aramit6103"
+    "doi": "https://doi.org/10.30963/aramit6103",
+    "pdf": "/documents/2021--amateur-venom-extraction-business-may-hasten-extinction-of-scorpions--zamani--et-al.pdf"
   },
   {
     "slug": "dated-phylogeny-and-ancestral-range-estimation-of-sand",
@@ -1020,7 +1048,8 @@
       "Biological dispersal",
       "Biogeography"
     ],
-    "doi": "https://doi.org/10.1016/j.ympev.2021.107212"
+    "doi": "https://doi.org/10.1016/j.ympev.2021.107212",
+    "pdf": "/documents/2021--dated-phylogeny-and-ancestral-range-estimation-of-sand-scorpions-buthidae-buthacus-reveal-early-miocene-divergence-across-land-bridges-connecting-africa-and-asia--cain--et-al.pdf"
   },
   {
     "slug": "fine-structure-of-the-epicuticular-secretion-coat-and-a",
@@ -1036,7 +1065,7 @@
       "taxonomy"
     ],
     "doi": "https://doi.org/10.1002/jmor.21360",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/jmor.21360"
+    "pdf": "/documents/2021--fine-structure-of-the-epicuticular-secretion-coat-and-associated-glands-of-pedipalpi-and-palpigradi-arachnida--seiter--et-al.pdf"
   },
   {
     "slug": "four-new-species-of-hooded-tick-spiders-ricinulei-ricin",
@@ -1062,7 +1091,8 @@
       "Tick",
       "Ecology"
     ],
-    "doi": "https://doi.org/10.1206/3976.1"
+    "doi": "https://doi.org/10.1206/3976.1",
+    "pdf": "/documents/2021--four-new-species-of-hooded-tick-spiders-ricinulei-ricinoididae-from-south-and-central-america-with-clarification-of-the-identity-of-cryptocellus-leleupi-cooreman-1976--botero-trujillo--et-al.pdf"
   },
   {
     "slug": "integrative-systematics-of-the-tooth-tailed-scorpions-o",
@@ -1092,7 +1122,7 @@
       "Allopatric speciation"
     ],
     "doi": "https://doi.org/10.1093/zoolinnean/zlab030",
-    "pdf": "https://academic.oup.com/zoolinnean/article-pdf/195/2/355/53501765/zlab030.pdf"
+    "pdf": "/documents/2021--integrative-systematics-of-the-tooth-tailed-scorpions-odontobuthus-vachon-1950-buthidae-with-descriptions-of-three-new-species-from-the-iranian-plateau--barahoei--et-al.pdf"
   },
   {
     "slug": "phylogeny-and-biogeography-of-the-pantropical-whip-spid",
@@ -1113,7 +1143,7 @@
       "Zoology"
     ],
     "doi": "https://doi.org/10.1093/zoolinnean/zlaa101",
-    "pdf": "https://academic.oup.com/zoolinnean/article-pdf/194/1/136/49533844/zlaa101.pdf"
+    "pdf": "/documents/2021--phylogeny-and-biogeography-of-the-pantropical-whip-spider-family-charinidae-arachnida-amblypygi--silva-de-miranda--et-al.pdf"
   },
   {
     "slug": "arachnida-araneae-ricinulei-described-by-norman-i-platn",
@@ -1125,7 +1155,8 @@
       "synonymy",
       "Spider"
     ],
-    "doi": "https://doi.org/10.1664/1947-5136-126.1.58"
+    "doi": "https://doi.org/10.1664/1947-5136-126.1.58",
+    "pdf": "/documents/2021--arachnida-araneae-ricinulei-described-by-norman-i-platnick--prendini.pdf"
   },
   {
     "slug": "bibliography-of-norman-i-platnick",
@@ -1139,7 +1170,8 @@
       "systematics",
       "Library science"
     ],
-    "doi": "https://doi.org/10.1664/1947-5136-126.1.22"
+    "doi": "https://doi.org/10.1664/1947-5136-126.1.22",
+    "pdf": "/documents/2021--bibliography-of-norman-i-platnick--prendini.pdf"
   },
   {
     "slug": "biography-of-norman-i-platnick",
@@ -1148,7 +1180,8 @@
       "Arachnida",
       "Biography"
     ],
-    "doi": "https://doi.org/10.1664/1947-5136-126.1.1"
+    "doi": "https://doi.org/10.1664/1947-5136-126.1.1",
+    "pdf": "/documents/2021--biography-of-norman-i-platnick--prendini.pdf"
   },
   {
     "slug": "taxa-dedicated-to-norman-i-platnick",
@@ -1167,7 +1200,8 @@
       "Scorpion",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1664/1947-5136-126.1.101"
+    "doi": "https://doi.org/10.1664/1947-5136-126.1.101",
+    "pdf": "/documents/2021--taxa-dedicated-to-norman-i-platnick--prendini.pdf"
   },
   {
     "slug": "systematic-revision-of-the-arboreal-neotropical-thorell",
@@ -1186,7 +1220,8 @@
       "mitochondrial DNA",
       "Clade"
     ],
-    "doi": "https://doi.org/10.1206/0003-0090.452.1.1"
+    "doi": "https://doi.org/10.1206/0003-0090.452.1.1",
+    "pdf": "/documents/2021--systematic-revision-of-the-arboreal-neotropical-thorellii-clade-of-centruroides-marx-1890-bark-scorpions-buthidae-c-l-koch-1837-with-descriptions-of-six-new-species--goodman--et-al.pdf"
   },
   {
     "slug": "systematic-revision-of-the-pantropical-whip-spider-fami",
@@ -1207,7 +1242,8 @@
       "Mediterranean",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.5852/ejt.2021.772.1505"
+    "doi": "https://doi.org/10.5852/ejt.2021.772.1505",
+    "pdf": "/documents/2021--systematic-revision-of-the-pantropical-whip-spider-family-charinidae-quintero-1986-arachnida-amblypygi--silva-de-miranda--et-al.pdf"
   },
   {
     "slug": "systematic-revision-of-the-relictual-asian-scorpion-fam",
@@ -1235,7 +1271,8 @@
       "Scorpion",
       "Subfamily"
     ],
-    "doi": "https://doi.org/10.1206/0003-0090.453.1.1"
+    "doi": "https://doi.org/10.1206/0003-0090.453.1.1",
+    "pdf": "/documents/2021--systematic-revision-of-the-relictual-asian-scorpion-family-pseudochactidae-gromov-1998-with-a-review-of-cavernicolous-troglobitic-and-troglomorphic-scorpions--prendini--et-al.pdf"
   },
   {
     "slug": "systematic-revision-of-the-sand-scorpions-genus-buthacu",
@@ -1271,7 +1308,8 @@
       "Libya",
       "Sudan"
     ],
-    "doi": "https://doi.org/10.1206/0003-0090.450.1.1"
+    "doi": "https://doi.org/10.1206/0003-0090.450.1.1",
+    "pdf": "/documents/2021--systematic-revision-of-the-sand-scorpions-genus-buthacus-birula-1908-buthidae-c-l-koch-1837-of-the-levant-with-redescription-of-buthacus-arenicola-simon-1885-from-algeria-and-tunisia--cain--et-al.pdf"
   },
   {
     "slug": "systematics-of-the-arboreal-neotropical-thorellii-clade",
@@ -1322,7 +1360,8 @@
       "Monophyly",
       "Synapomorphy"
     ],
-    "doi": "https://doi.org/10.1206/0003-0090.448.1.1"
+    "doi": "https://doi.org/10.1206/0003-0090.448.1.1",
+    "pdf": "/documents/2021--the-giant-ricinulei-ricinoididae-ricinoides-of-west-africa-with-descriptions-of-five-new-species-and-comparative-morphology-of-the-male-copulatory-apparatus--botero-trujillo--et-al.pdf"
   },
   {
     "slug": "the-taxonomic-impediment-a-shortage-of-taxonomists-not",
@@ -1335,7 +1374,7 @@
       "Economic shortage"
     ],
     "doi": "https://doi.org/10.1093/zoolinnean/zlab072",
-    "pdf": "https://academic.oup.com/zoolinnean/article-pdf/193/2/381/49555079/zlab072.pdf"
+    "pdf": "/documents/2021--the-taxonomic-impediment-a-shortage-of-taxonomists-not-lack-of-technical-approaches--engel--et-al.pdf"
   },
   {
     "slug": "volcanism-and-palaeoclimate-change-drive-diversificatio",
@@ -1354,7 +1393,7 @@
       "Biological dispersal"
     ],
     "doi": "https://doi.org/10.1111/mec.15924",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/mec.15924"
+    "pdf": "/documents/2021--volcanism-and-palaeoclimate-change-drive-diversification-of-world-s-largest-whip-spider-amblypygi--schramm--et-al.pdf"
   },
   {
     "slug": "burrowing-into-the-forest-phylogeny-of-the-asian-forest",
@@ -1376,7 +1415,7 @@
       "Monophyly"
     ],
     "doi": "https://doi.org/10.1111/cla.12434",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/cla.12434"
+    "pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cla.12434"
   },
   {
     "slug": "cryptic-diversity-in-the-whip-spider-genus-paraphrynus",
@@ -1400,7 +1439,8 @@
       "Karyotype",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.26049/ASP78-2-2020-04"
+    "doi": "https://doi.org/10.26049/ASP78-2-2020-04",
+    "pdf": "/documents/2020--cryptic-diversity-in-the-whip-spider-genus-paraphrynus-amblypygi-phrynidae-integrating-morphology-karyotype-and-dna--seiter--et-al.pdf"
   },
   {
     "slug": "dr-norman-i-platnick-1951-2020",
@@ -1433,7 +1473,8 @@
       "Mexico",
       "Evolutionary biology"
     ],
-    "doi": "https://doi.org/10.26049/ASP78-2-2020-03"
+    "doi": "https://doi.org/10.26049/ASP78-2-2020-03",
+    "pdf": "/documents/2020--first-species-of-surazomus-schizomida-hubbardiidae-from-north-america-illuminate-diversification-of-short-tailed-whipscorpions-in-the-new-world--monjaraz-ruedas--et-al.pdf"
   },
   {
     "slug": "in-memoriam-dr-norm-platnick",
@@ -1453,7 +1494,8 @@
       "United States"
     ],
     "year": 2020,
-    "title": "In Memory of Dr Norman I. Platnick ’68. Curator Emeritus at the American Museum of Natural History"
+    "title": "In Memory of Dr Norman I. Platnick ’68. Curator Emeritus at the American Museum of Natural History",
+    "pdf": "/documents/2020--in-memory-of-dr-norman-i-platnick-68-curator-emeritus-at-the-american-museum-of-natural-history--prendini.pdf"
   },
   {
     "slug": "integrative-systematics-untangles-evolutionary-history",
@@ -1479,7 +1521,7 @@
       "Zoology"
     ],
     "doi": "https://doi.org/10.1093/biolinnean/blaa039",
-    "pdf": "https://academic.oup.com/biolinnean/article-pdf/130/3/458/49262853/biolinnean_130_3_458.pdf"
+    "pdf": "/documents/2020--integrative-systematics-untangles-evolutionary-history-of-stenochrus-chamberlin-1922-schizomida-hubbardiidae-a-neglected-junkyard-genus-of-north-american-short-tailed-whipscorpions--monjaraz-ruedas--et-al.pdf"
   },
   {
     "slug": "norman-ira-platnick-1951-2020",
@@ -1487,7 +1529,8 @@
     "keywords": [
       "Arachnida"
     ],
-    "doi": "https://doi.org/10.13156/arac.2020.18.5.507"
+    "doi": "https://doi.org/10.13156/arac.2020.18.5.507",
+    "pdf": "/documents/2020--norman-ira-platnick-1951-2020--prendini.pdf"
   },
   {
     "slug": "out-of-india-thrice-origins-and-diversification-of-the",
@@ -1509,7 +1552,7 @@
       "Biological dispersal"
     ],
     "doi": "https://doi.org/10.1038/s41598-020-78183-8",
-    "pdf": "https://www.nature.com/articles/s41598-020-78183-8.pdf"
+    "pdf": "/documents/2020--out-of-india-thrice-origins-and-diversification-of-the-asian-forest-scorpions-heterometrus-scorpionidae--loria--et-al.pdf"
   },
   {
     "slug": "publisher-correction-island-ancestors-and-new-world-bio",
@@ -1543,7 +1586,8 @@
       "Subfamily",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1206/0003-0090.442.1.1"
+    "doi": "https://doi.org/10.1206/0003-0090.442.1.1",
+    "pdf": "/documents/2020--systematic-revision-of-the-asian-forest-scorpions-heterometrinae-simon-1879-revised-suprageneric-classification-of-scorpionidae-latreille-1802-and-revalidation-of-rugodentidae-bastawade-et-al-2005--prendini--et-al.pdf"
   },
   {
     "slug": "tribute-to-a-titan-norman-platnick-30-december-1951-8-a",
@@ -1552,7 +1596,8 @@
       "Arachnida"
     ],
     "year": 2020,
-    "title": "Tribute to a titan: Norman Platnick (30 December 1951 – 8 April 2020)"
+    "title": "Tribute to a titan: Norman Platnick (30 December 1951 – 8 April 2020)",
+    "pdf": "/documents/2020--tribute-to-a-titan-norman-platnick-30-december-1951-8-april-2020--prendini.pdf"
   },
   {
     "slug": "island-ancestors-and-new-world-biogeography-a-case-stud",
@@ -1600,7 +1645,8 @@
       "Claw",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1206/3930.1"
+    "doi": "https://doi.org/10.1206/3930.1",
+    "pdf": "/documents/2019--myrmecultoridae-a-new-family-of-myrmecophilic-spiders-from-the-chihuahuan-desert-araneae-entelegynae--ramirez--et-al.pdf"
   },
   {
     "slug": "systematics-of-the-short-tailed-whipscorpion-genus-sten",
@@ -1626,7 +1672,8 @@
       "Central America",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1206/0003-0090.435.1.1"
+    "doi": "https://doi.org/10.1206/0003-0090.435.1.1",
+    "pdf": "/documents/2019--systematics-of-the-short-tailed-whipscorpion-genus-stenochrus-chamberlin-1922-schizomida-hubbardiidae-with-descriptions-of-six-new-genera-and-five-new-species--monjaraz-ruedas--et-al.pdf"
   },
   {
     "slug": "intraspecific-venom-variation-in-southern-african-scorp",
@@ -3825,7 +3872,8 @@
       "Arachnida"
     ],
     "year": 2003,
-    "title": "Threats facing southern Africa’s unique scorpion fauna"
+    "title": "Threats facing southern Africa’s unique scorpion fauna",
+    "pdf": "/documents/2003--threats-facing-southern-africa-s-unique-scorpion-fauna--prendini.pdf"
   },
   {
     "slug": "determination-of-species-specific-components-in-the-ven",

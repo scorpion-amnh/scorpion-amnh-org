@@ -253,5 +253,5 @@ export const linkAuthorsInCitationHtml = (
       return `<a href="${href}">${displayName}</a>`;
     }
 
-    return displayName;
+    return `<b>${displayName}</b>`;
   });
