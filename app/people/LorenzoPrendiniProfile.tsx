@@ -3,7 +3,7 @@ import { PeopleImage } from "@/app/people/PeopleImage";
 import { ProfileLinksList } from "@/app/people/ProfileLinksList";
 
 const lorenzoProfileLinks = [
-  { href: "/documents/PrendiniCV2020_jyaiq9.pdf", label: "Curriculum Vitae (PDF)" },
+  { href: "/documents/2020--cv--prendini.pdf", label: "Curriculum Vitae (PDF)" },
   { href: "https://www.researchgate.net/profile/Lorenzo-Prendini", label: "Research Gate" },
   {
     href: "https://www.amnh.org/explore/videos/research-and-collections/profile-lorenzo-prendini",
