@@ -2,12 +2,14 @@ import { readFileSync, writeFileSync } from "fs";
 import path from "path";
 import { pathToFileURL } from "url";
 import { normalizeDoiAbstract, isPublicationAbstractPlaceholder } from "../lib/publications/abstract";
+import { buildLocalPublicationPdfIndex, getLocalPublicationPdfPath } from "../lib/publications/localPdf.server";
 import { isDirectPublicationPdfUrl } from "../lib/publications/pdf";
 import type { Publication, PublicationDetail } from "../lib/content/schema";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 const PUBLICATIONS_PATH = path.join(CONTENT_DIR, "publications.json");
 const DETAILS_PATH = path.join(CONTENT_DIR, "publication-details.json");
+const LOCAL_PDF_INDEX_PATH = path.join(CONTENT_DIR, "local-publication-pdfs.json");
 
 export type SyncPublicationDetailsResult = {
   generated: number;
@@ -432,13 +434,32 @@ const findPdfLink = (
   openAlex: Awaited<ReturnType<typeof fetchOpenAlex>>,
   publication: Publication
 ) => {
-  if (publication.pdf && isDirectPublicationPdfUrl(publication.pdf)) {
+  const localPdf = getLocalPublicationPdfPath(publication);
+  if (localPdf) {
+    return localPdf;
+  }
+
+  if (publication.pdf?.startsWith("/documents/")) {
+    return publication.pdf;
+  }
+
+  if (
+    publication.pdf &&
+    isDirectPublicationPdfUrl(publication.pdf) &&
+    openAlex?.open_access?.is_oa !== false
+  ) {
     return publication.pdf;
   }
 
   const openAccessPdf = openAlex?.best_oa_location?.pdf_url;
   if (openAlex?.open_access?.is_oa && openAccessPdf && isDirectPublicationPdfUrl(openAccessPdf)) {
     return openAccessPdf;
+  }
+
+  // Crossref often lists publisher `/content/pdf/` URLs for closed-access articles even
+  // though they redirect to a login/paywall page instead of serving a PDF.
+  if (openAlex?.open_access?.is_oa === false) {
+    return null;
   }
 
   const links = crossref?.link as Array<{ URL?: string }> | undefined;
@@ -458,7 +479,7 @@ const buildDetailEntry = async (
   const slug = slugify(publication.title, usedSlugs);
   let abstract: string | null = null;
   let datePublished = `${publication.year}-01-01`;
-  let pdf = publication.pdf ?? null;
+  let pdf = getLocalPublicationPdfPath(publication) ?? publication.pdf ?? null;
   let subjects: string[] = [];
   let openAlexKeywords: OpenAlexKeyword[] = [];
 
@@ -541,6 +562,19 @@ export const getPublicationsMissingDetails = (
   return publications.filter((publication) => !hasExistingDetail(publication));
 };
 
+/** Map publications to local `/documents/` PDFs for runtime lookup. */
+export const syncLocalPublicationPdfIndex = (): { mapped: number } => {
+  const publications = JSON.parse(readFileSync(PUBLICATIONS_PATH, "utf8")) as Publication[];
+  const index = buildLocalPublicationPdfIndex(publications);
+
+  writeFileSync(LOCAL_PDF_INDEX_PATH, `${JSON.stringify(index, null, 2)}\n`, "utf8");
+  console.log(
+    `Wrote ${Object.keys(index.byYearTitle).length} local PDF mapping(s) to ${LOCAL_PDF_INDEX_PATH}`
+  );
+
+  return { mapped: Object.keys(index.byYearTitle).length };
+};
+
 /** Create detail entries for publications missing from publication-details.json. */
 export const syncPublicationDetails = async (): Promise<SyncPublicationDetailsResult> => {
   const publications = JSON.parse(readFileSync(PUBLICATIONS_PATH, "utf8")) as Publication[];
@@ -595,6 +629,7 @@ export const syncPublicationDetails = async (): Promise<SyncPublicationDetailsRe
 
   writeFileSync(DETAILS_PATH, `${JSON.stringify(merged, null, 2)}\n`, "utf8");
   console.log(`Wrote ${merged.length} total entries to ${DETAILS_PATH}`);
+  syncLocalPublicationPdfIndex();
 
   return {
     generated: generated.length,
@@ -813,11 +848,14 @@ const isMainModule = process.argv[1] && import.meta.url === pathToFileURL(proces
 if (isMainModule) {
   const shouldBackfill = process.argv.includes("--backfill-keywords");
   const shouldPrune = process.argv.includes("--prune-keywords");
-  const task = shouldPrune
-    ? Promise.resolve(pruneBadKeywords())
-    : shouldBackfill
-      ? backfillPublicationKeywords()
-      : syncPublicationDetails();
+  const shouldSyncLocalPdfs = process.argv.includes("--sync-local-pdfs");
+  const task = shouldSyncLocalPdfs
+    ? Promise.resolve(syncLocalPublicationPdfIndex())
+    : shouldPrune
+      ? Promise.resolve(pruneBadKeywords())
+      : shouldBackfill
+        ? backfillPublicationKeywords()
+        : syncPublicationDetails();
 
   task.catch((error) => {
     console.error(error);

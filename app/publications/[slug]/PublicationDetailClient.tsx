@@ -16,6 +16,8 @@ import {
   getVolumePages,
   getPublicationsYearHref,
 } from "@/lib/publications/citation";
+import { resolvePublicationPdf } from "@/lib/publications/pdf";
+import localPublicationPdfs from "@/content/local-publication-pdfs.json";
 import { hasPublicationAbstract } from "@/lib/publications/abstract";
 
 type PublicationDetailClientProps = {
@@ -40,7 +42,11 @@ export function PublicationDetailClient({
 
   const citationText = formatPlainCitation(publication, detail.doi ?? null);
   const volumePages = getVolumePages(publication);
-  const pdfUrl = detail.pdf ?? publication.pdf ?? null;
+  const pdfUrl = resolvePublicationPdf(
+    publication,
+    detail.pdf ?? publication.pdf ?? null,
+    localPublicationPdfs
+  );
   const citationDoi = detail.doi ?? publication.doi ?? null;
   const copyCitation = () => {
     void copyTextToClipboard(citationText).then((copied) => {

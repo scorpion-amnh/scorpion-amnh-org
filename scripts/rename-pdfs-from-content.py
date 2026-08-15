@@ -18,6 +18,7 @@ DOCUMENTS_DIR = ROOT / "public" / "documents"
 DUPLICATES_DIR = DOCUMENTS_DIR / "duplicates"
 DUPLICATES_MANIFEST = ROOT / "content" / "pdf-duplicates.json"
 PUBLICATIONS_PATH = ROOT / "content/publications.json"
+LOCAL_PDF_INDEX_PATH = ROOT / "content/local-publication-pdfs.json"
 SEPARATOR = "--"
 MAX_FILENAME_LENGTH = 255
 PAGE_TIERS = (2, 5, 10)
@@ -535,6 +536,26 @@ def save_duplicates_manifest(manifest: dict) -> None:
     DUPLICATES_MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n")
 
 
+def sync_local_publication_pdf_index(publications: list[dict]) -> int:
+    pdf_filenames = {
+        path.name
+        for path in DOCUMENTS_DIR.glob("*.pdf")
+        if path.is_file()
+    }
+    index = {"byDoi": {}, "byYearTitle": {}}
+    for publication in publications:
+        filename = build_filename(publication)
+        if filename not in pdf_filenames:
+            continue
+        local_path = f"/documents/{filename}"
+        doi = publication_doi(publication)
+        if doi:
+            index["byDoi"][doi] = local_path
+        index["byYearTitle"][f"{publication['year']}::{publication['title']}"] = local_path
+    LOCAL_PDF_INDEX_PATH.write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n")
+    return len(index["byYearTitle"])
+
+
 def move_to_duplicates(path: Path) -> Path:
     DUPLICATES_DIR.mkdir(exist_ok=True)
     dest = DUPLICATES_DIR / path.name
@@ -629,6 +650,9 @@ def main() -> int:
 
     if moved:
         save_duplicates_manifest(manifest)
+
+    mapped = sync_local_publication_pdf_index(publications)
+    print(f"Updated {LOCAL_PDF_INDEX_PATH.relative_to(ROOT)} ({mapped} local PDF mapping(s)).")
 
     print(f"\nDone. {len(renames)} file(s) renamed, {moved} duplicate(s) moved to "
           f"{DUPLICATES_DIR.relative_to(ROOT)}/")

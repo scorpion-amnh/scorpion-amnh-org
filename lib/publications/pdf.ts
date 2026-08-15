@@ -1,10 +1,17 @@
+import type { Publication } from "@/lib/content/schema";
+import { lookupLocalPublicationPdf, type LocalPublicationPdfIndex } from "@/lib/publications/localPdf";
+
 /**
  * Crossref and publisher metadata often label `/doi/pdf/` URLs as PDF links even when
  * they open an HTML landing page or paywall — the same destination as the DOI link.
  * Wiley serves open-access files at `/doi/pdfdirect/` instead.
  */
-const PAYWALL_PDF_LANDING_PATTERN = /\/doi\/pdf\//i;
-const WILEY_DIRECT_PDF_PATTERN = /\/doi\/pdfdirect\//i;
+const PAYWALL_PDF_LANDING_PATTERNS = [
+  /\/doi\/pdf\//i,
+  /research\.amnh\.org/i,
+  /book\/chapter-pdf/i,
+  /academic\.oup\.com\/.+\/article-pdf\//i,
+];
 
 export const isDirectPublicationPdfUrl = (pdf: string): boolean => {
   const url = pdf.trim();
@@ -12,11 +19,7 @@ export const isDirectPublicationPdfUrl = (pdf: string): boolean => {
     return false;
   }
 
-  if (WILEY_DIRECT_PDF_PATTERN.test(url)) {
-    return true;
-  }
-
-  return !PAYWALL_PDF_LANDING_PATTERN.test(url);
+  return !PAYWALL_PDF_LANDING_PATTERNS.some((pattern) => pattern.test(url));
 };
 
 export const resolvePublicationPdfUrl = (pdf: string | null | undefined): string | null => {
@@ -25,4 +28,24 @@ export const resolvePublicationPdfUrl = (pdf: string | null | undefined): string
   }
 
   return isDirectPublicationPdfUrl(pdf) ? pdf.trim() : null;
+};
+
+export const resolvePublicationPdf = (
+  publication: Pick<Publication, "year" | "title" | "doi"> | null | undefined,
+  storedPdf: string | null | undefined,
+  localIndex?: LocalPublicationPdfIndex | null
+): string | null => {
+  if (publication && localIndex) {
+    const localFromIndex = lookupLocalPublicationPdf(publication, localIndex);
+
+    if (localFromIndex) {
+      return localFromIndex;
+    }
+  }
+
+  if (storedPdf?.trim().startsWith("/documents/")) {
+    return storedPdf.trim();
+  }
+
+  return resolvePublicationPdfUrl(storedPdf);
 };

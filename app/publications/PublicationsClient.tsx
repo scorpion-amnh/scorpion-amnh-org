@@ -9,12 +9,14 @@ import { CitationHtml } from "@/app/components/CitationHtml";
 import { BackToTop } from "@/app/components/BackToTop";
 import { formatInlineEmphasis, markdownEmphasisToHtml } from "@/app/components/InlineEmphasis";
 import publicationDetails from "@/content/publication-details.json";
+import localPublicationPdfs from "@/content/local-publication-pdfs.json";
 import type { Publication } from "@/lib/content/schema";
 import { getPublicationDetailPath, sortPublicationsWithinYear } from "@/lib/publications/citation";
 import {
   linkAuthorsInCitationHtml,
   type AuthorProfileLookup,
 } from "@/lib/publications/authorProfiles";
+import { resolvePublicationPdf } from "@/lib/publications/pdf";
 import { usePublicationsSearch, type PublicationIndexItem } from "@/app/publications/usePublicationsSearch";
 import { normalizeSearchText } from "@/lib/search/fuzzyMatch";
 
@@ -82,11 +84,14 @@ const getPublicationAccess = (publication: Publication) => {
   return {
     abstractHref: detailSlug ? getPublicationDetailPath(detailSlug) : null,
     doi,
-    pdf:
+    pdf: resolvePublicationPdf(
+      publication,
       publication.pdf ??
-      (doi ? publicationDetailPdfByDoi[doi] : publicationDetailPdfByYearTitle[yearTitleKey]) ??
-      htmlLinks.pdf ??
-      null,
+        (doi ? publicationDetailPdfByDoi[doi] : publicationDetailPdfByYearTitle[yearTitleKey]) ??
+        htmlLinks.pdf ??
+        null,
+      localPublicationPdfs
+    ),
   };
 };
 

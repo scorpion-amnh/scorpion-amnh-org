@@ -4,7 +4,8 @@ import { JsonLd } from "@/app/components/JsonLd";
 import { SITE_URL } from "@/lib/metadata";
 import { stripMarkdownEmphasis } from "@/lib/publications/citation";
 import { hasPublicationAbstract } from "@/lib/publications/abstract";
-import { resolvePublicationPdfUrl } from "@/lib/publications/pdf";
+import { resolvePublicationPdf } from "@/lib/publications/pdf";
+import localPublicationPdfs from "@/content/local-publication-pdfs.json";
 import {
   getPublicationDetailBySlug,
   getPublicationDetailSlugs,
@@ -69,7 +70,7 @@ const buildScholarlyArticleJsonLd = (
 ) => {
   const pageUrl = `${SITE_URL}${getPublicationDetailPath(slug)}`;
   const headline = stripMarkdownEmphasis(publication.title);
-  const pdfUrl = resolvePublicationPdfUrl(detail.pdf);
+  const pdfUrl = resolvePublicationPdf(publication, detail.pdf, localPublicationPdfs);
 
   return {
     "@context": "https://schema.org",

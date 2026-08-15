@@ -41,6 +41,11 @@ export const publicationAuthorSchema = z.object({
   isHighlighted: z.boolean(),
 });
 
+export const publicationPdfSchema = z.union([
+  z.string().url(),
+  z.string().regex(/^\/documents\/[^/]+\.pdf$/),
+]);
+
 export const publicationSchema = z.object({
   year: z.number().int(),
   authors: z.array(publicationAuthorSchema).min(1),
@@ -49,7 +54,7 @@ export const publicationSchema = z.object({
   volume: z.string().nullable(),
   pages: z.string().nullable(),
   doi: z.string().nullable(),
-  pdf: z.string().nullable().optional(),
+  pdf: publicationPdfSchema.nullable().optional(),
   citationHtml: z.string().min(1).optional(),
 });
 
@@ -60,7 +65,7 @@ export const publicationDetailSchema = z
     year: z.number().int().optional(),
     title: z.string().min(1).optional(),
     datePublished: z.string().min(1),
-    pdf: z.string().url().nullable().optional(),
+    pdf: publicationPdfSchema.nullable().optional(),
     abstract: z.string().min(1).optional(),
     keywords: z.array(z.string().min(1)).min(1),
   })

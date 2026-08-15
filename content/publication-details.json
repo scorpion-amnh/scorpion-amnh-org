@@ -166,7 +166,6 @@
     "slug": "orthetrum-dragonfly-biogeography",
     "doi": "https://doi.org/10.1111/syen.70066",
     "datePublished": "2026-07-01",
-    "pdf": "https://resjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/syen.70066",
     "abstract": "With 67 species, *Orthetrum* Newman is the most speciose genus within the family Libellulidae Leach (Odonata: Anisoptera), distributed across the Afrotropical, Palearctic, Indo-Malayan, Malagasy, Oceania, Wallacea and Australasian regions. Despite its wide distribution, serving as a top predator in freshwater ecosystems, the evolutionary history of *Orthetrum* has remained unresolved, with prior studies limited to morphology and sparse genetic sampling (less than 33% of species). We present here the most comprehensive phylogenetic study of *Orthetrum* to date, sampling 50 of 67 species (~75%) using Anchored Hybrid Enrichment (AHE). Our analyses, integrating concatenated maximum likelihood and coalescent-based approaches, provide a robust, strongly supported phylogeny that confirms the monophyly of *Orthetrum* and reveals four distinct clades. Two clades comprise mostly Afrotropical species, whereas the remaining clades are from the Palearctic, Indo-Malayan, Oceania, Wallacea and Australasian regions. Divergence time estimates indicate that *Orthetrum* originated ~32 million years ago, with major diversification occurring from ~28 Ma onward, well after major continental fragmentation events. Ancestral range reconstruction under the best supported Dispersal–Extinction–Cladogenesis (DEC) framework does not support a single-region origin; instead, early lineages are inferred to have occupied a broadly connected Afro–Eurasian system. Subsequent diversification is characterized by stepwise dispersal across adjacent regions, including repeated expansions into the Indo-Malayan and Palearctic regions, followed by colonization of Australasia, Wallacea and Oceania. The Afrotropical region emerges as a major centre of lineage persistence and diversification, with subsequent range expansion in some lineages during the early Miocene (~23 Ma), whereas Madagascar reflects at least five independent colonization events from Africa resulting in endemic species.",
     "keywords": [
       "*Orthetrum*",
@@ -928,8 +927,7 @@
       "Karst",
       "Paleontology"
     ],
-    "doi": "https://doi.org/10.1093/isd/ixac028",
-    "pdf": "https://academic.oup.com/isd/article-pdf/6/6/3/48359747/ixac028.pdf"
+    "doi": "https://doi.org/10.1093/isd/ixac028"
   },
   {
     "slug": "hirsutisoma-grimaldii-sp-nov-a-ca-99-million-year-old-r",
@@ -991,8 +989,7 @@
       "Monophyly",
       "Evolutionary biology"
     ],
-    "doi": "https://doi.org/10.1093/isd/ixab032",
-    "pdf": "https://academic.oup.com/isd/article-pdf/6/1/7/42308782/ixab032.pdf"
+    "doi": "https://doi.org/10.1093/isd/ixab032"
   },
   {
     "slug": "a-new-troglomorphic-leaf-litter-scorpion-from-ecuador-t",
@@ -1414,8 +1411,7 @@
       "Shrubland",
       "Monophyly"
     ],
-    "doi": "https://doi.org/10.1111/cla.12434",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cla.12434"
+    "doi": "https://doi.org/10.1111/cla.12434"
   },
   {
     "slug": "cryptic-diversity-in-the-whip-spider-genus-paraphrynus",
@@ -1807,8 +1803,7 @@
       "taxonomy",
       "biodiversity"
     ],
-    "doi": "https://doi.org/10.1126/science.aat9844",
-    "pdf": "https://www.science.org/doi/pdf/10.1126/science.aat9844"
+    "doi": "https://doi.org/10.1126/science.aat9844"
   },
   {
     "slug": "exocuticular-hyaline-layer-of-sea-scorpions-and-horsesh",
@@ -1824,8 +1819,7 @@
       "Hyaline",
       "Anatomy"
     ],
-    "doi": "https://doi.org/10.1111/jzo.12493",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/jzo.12493"
+    "doi": "https://doi.org/10.1111/jzo.12493"
   },
   {
     "slug": "images-are-not-and-should-not-ever-be-type-specimens-a",
@@ -1886,8 +1880,7 @@
       "Peru",
       "Ecology"
     ],
-    "doi": "https://doi.org/10.1111/jbi.12760",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/jbi.12760"
+    "doi": "https://doi.org/10.1111/jbi.12760"
   },
   {
     "slug": "new-distribution-records-for-african-whip-spiders-arach",
@@ -1993,8 +1986,7 @@
       "Ecology",
       "Architecture"
     ],
-    "doi": "https://doi.org/10.1007/s00114-016-1374-z",
-    "pdf": "http://link.springer.com/content/pdf/10.1007/s00114-016-1374-z.pdf"
+    "doi": "https://doi.org/10.1007/s00114-016-1374-z"
   },
   {
     "slug": "soil-biota-in-a-megadiverse-country-current-knowledge-a",
@@ -2067,8 +2059,7 @@
       "Palpimanoidea",
       "Oecobioidea"
     ],
-    "doi": "https://doi.org/10.1111/cla.12182",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/cla.12182"
+    "doi": "https://doi.org/10.1111/cla.12182"
   },
   {
     "slug": "timeless-standards-for-species-delimitation",
@@ -2183,8 +2174,7 @@
       "Monophyly",
       "Phylogenetics"
     ],
-    "doi": "https://doi.org/10.1111/cla.12091",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/cla.12091"
+    "doi": "https://doi.org/10.1111/cla.12091"
   },
   {
     "slug": "scorpion-sheds-tail-to-escape-first-report-of-autotomy",
@@ -2304,8 +2294,7 @@
       "Chemoreceptor",
       "Mechanoreceptor"
     ],
-    "doi": "https://doi.org/10.1603/AN13140",
-    "pdf": "http://academic.oup.com/aesa/article-pdf/107/2/510/40333177/aesame0510.pdf"
+    "doi": "https://doi.org/10.1603/AN13140"
   },
   {
     "slug": "cryptic-genetic-diversity-and-complex-phylogeography-of",
@@ -2361,8 +2350,7 @@
       "India",
       "Biological dispersal"
     ],
-    "doi": "https://doi.org/10.1111/cla.12067",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/cla.12067"
+    "doi": "https://doi.org/10.1111/cla.12067"
   },
   {
     "slug": "first-reports-of-razianus-scorpiones-buthidae-from-iraq",
@@ -2495,8 +2483,7 @@
       "Disjunct",
       "Gondwana"
     ],
-    "doi": "https://doi.org/10.1071/IS14035",
-    "pdf": "https://connectsci.au/is/article-pdf/28/6/643/1284828/is14035.pdf"
+    "doi": "https://doi.org/10.1071/IS14035"
   },
   {
     "slug": "as-old-as-the-hills-montane-scorpions-in-southwestern-n",
@@ -2541,8 +2528,7 @@
       "Parapatric speciation",
       "Early Pleistocene"
     ],
-    "doi": "https://doi.org/10.1111/jbi.12134",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/jbi.12134"
+    "doi": "https://doi.org/10.1111/jbi.12134"
   },
   {
     "slug": "forest-refugia-in-western-and-central-africa-as-museums",
@@ -2562,8 +2548,7 @@
       "Mesozoic",
       "Ecology"
     ],
-    "doi": "https://doi.org/10.1098/rsbl.2012.0932",
-    "pdf": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsbl.2012.0932"
+    "doi": "https://doi.org/10.1098/rsbl.2012.0932"
   },
   {
     "slug": "phylogeography-of-beck-s-desert-scorpion-paruroctonus-b",
@@ -2605,8 +2590,7 @@
       "United States",
       "Phylogeography"
     ],
-    "doi": "https://doi.org/10.1111/jbi.12079",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/jbi.12079"
+    "doi": "https://doi.org/10.1111/jbi.12079"
   },
   {
     "slug": "redefinition-and-generic-revision-of-the-north-american",
@@ -2766,8 +2750,7 @@
       "Zoology",
       "Phylogenetic tree"
     ],
-    "doi": "https://doi.org/10.1111/j.1463-6409.2011.00508.x",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1463-6409.2011.00508.x"
+    "doi": "https://doi.org/10.1111/j.1463-6409.2011.00508.x"
   },
   {
     "slug": "rumikiru-n-gen-scorpiones-bothriuridae-a-new-scorpion-g",
@@ -2836,8 +2819,7 @@
       "Taxonomic rank",
       "Biodiversity"
     ],
-    "doi": "https://doi.org/10.1007/s10531-011-0115-z",
-    "pdf": "http://link.springer.com/content/pdf/10.1007/s10531-011-0115-z.pdf"
+    "doi": "https://doi.org/10.1007/s10531-011-0115-z"
   },
   {
     "slug": "first-report-of-an-arboreal-scorpion-bothriuridae-uroph",
@@ -3006,8 +2988,7 @@
       "Monophyly",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1111/j.1096-3642.2009.00608.x",
-    "pdf": "http://academic.oup.com/zoolinnean/article-pdf/159/3/673/16645955/j.1096-3642.2009.00608.x.pdf"
+    "doi": "https://doi.org/10.1111/j.1096-3642.2009.00608.x"
   },
   {
     "slug": "on-the-troglomorphic-scorpion-troglotayosicus-humiculum",
@@ -3095,8 +3076,7 @@
       "United States",
       "Summit"
     ],
-    "doi": "https://doi.org/10.1111/j.1096-0031.2009.00285.x",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1096-0031.2009.00285.x"
+    "doi": "https://doi.org/10.1111/j.1096-0031.2009.00285.x"
   },
   {
     "slug": "troglomorphism-trichobothriotaxy-and-typhlochactid-phyl",
@@ -3114,8 +3094,7 @@
       "Phylogenetics",
       "Evolutionary biology"
     ],
-    "doi": "https://doi.org/10.1111/j.1096-0031.2009.00277.x",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1096-0031.2009.00277.x"
+    "doi": "https://doi.org/10.1111/j.1096-0031.2009.00277.x"
   },
   {
     "slug": "a-new-species-of-typhlochactas-scorpiones-typhlochactin",
@@ -3288,8 +3267,7 @@
       "Zoology",
       "Biogeography"
     ],
-    "doi": "https://doi.org/10.1071/IS06054",
-    "pdf": "https://connectsci.au/is/article-pdf/22/2/235/420345/is06054.pdf"
+    "doi": "https://doi.org/10.1071/IS06054"
   },
   {
     "slug": "comparative-anatomy-of-the-mesosomal-organs-of-scorpion",
@@ -3306,8 +3284,7 @@
       "Anatomy",
       "Phylogenetics"
     ],
-    "doi": "https://doi.org/10.1111/j.1096-3642.2008.00426.x",
-    "pdf": "http://academic.oup.com/zoolinnean/article-pdf/154/4/651/16984706/j.1096-3642.2008.00426.x.pdf"
+    "doi": "https://doi.org/10.1111/j.1096-3642.2008.00426.x"
   },
   {
     "slug": "global-survey-and-inventory-of-solifugae",
@@ -3343,8 +3320,7 @@
       "Paraphyly",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1017/S1477200008002697",
-    "pdf": "http://www.tandfonline.com/doi/pdf/10.1017/S1477200008002697"
+    "doi": "https://doi.org/10.1017/S1477200008002697"
   },
   {
     "slug": "redescription-of-mimoscorpius-pugnator-butler-1872-arac",
@@ -3387,8 +3363,7 @@
       "Paleontology",
       "Paleozoic"
     ],
-    "doi": "https://doi.org/10.1111/j.1475-4983.2007.00749.x",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1475-4983.2007.00749.x"
+    "doi": "https://doi.org/10.1111/j.1475-4983.2007.00749.x"
   },
   {
     "slug": "scorpions-of-the-brandberg-massif-namibia-species-richn",
@@ -3421,8 +3396,7 @@
       "Circulatory system",
       "Scorpion"
     ],
-    "doi": "https://doi.org/10.1002/jmor.10512",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/jmor.10512"
+    "doi": "https://doi.org/10.1002/jmor.10512"
   },
   {
     "slug": "linking-of-digital-images-to-phylogenetic-data-matrices",
@@ -3437,8 +3411,7 @@
       "Computer science",
       "Identifier"
     ],
-    "doi": "https://doi.org/10.1080/10635150701313848",
-    "pdf": "http://academic.oup.com/sysbio/article-pdf/56/2/283/24203489/56-2-283.pdf"
+    "doi": "https://doi.org/10.1080/10635150701313848"
   },
   {
     "slug": "phylogeny-and-biogeography-of-the-family-bothriuridae-s",
@@ -3485,8 +3458,7 @@
       "Zoology",
       "Arthropod"
     ],
-    "doi": "https://doi.org/10.1007/s00284-007-9009-4",
-    "pdf": "http://link.springer.com/content/pdf/10.1007/s00284-007-9009-4.pdf"
+    "doi": "https://doi.org/10.1007/s00284-007-9009-4"
   },
   {
     "slug": "a-living-fossil-from-central-asia-the-morphology-of-pse",
@@ -3533,8 +3505,7 @@
       "Arachnida",
       "Trustworthiness"
     ],
-    "doi": "https://doi.org/10.1036/1097-8542.607800",
-    "pdf": "https://research.amnh.org/users/lorenzo/PDF/Prendini.2006.McHill.Scorpions.pdf"
+    "doi": "https://doi.org/10.1036/1097-8542.607800"
   },
   {
     "slug": "comment-on-identifying-spiders-through-dna-barcodes",
@@ -3549,8 +3520,7 @@
       "Evolutionary biology",
       "Spider"
     ],
-    "doi": "https://doi.org/10.1139/z05-025",
-    "pdf": "http://www.nrcresearchpress.com/doi/pdf/10.1139/z05-025"
+    "doi": "https://doi.org/10.1139/z05-025"
   },
   {
     "slug": "new-records-and-observations-on-the-natural-history-of",
@@ -3605,8 +3575,7 @@
       "Ecology",
       "Georeference"
     ],
-    "doi": "https://doi.org/10.1007/0-387-24320-8_2",
-    "pdf": "http://link.springer.com/content/pdf/10.1007/0-387-24320-8_2.pdf"
+    "doi": "https://doi.org/10.1007/0-387-24320-8_2"
   },
   {
     "slug": "scorpion-higher-phylogeny-and-classification-taxonomic",
@@ -3626,8 +3595,7 @@
       "Zoology",
       "Phylogenetic tree"
     ],
-    "doi": "https://doi.org/10.1111/j.1096-0031.2005.00073.x",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1096-0031.2005.00073.x"
+    "doi": "https://doi.org/10.1111/j.1096-0031.2005.00073.x"
   },
   {
     "slug": "systematics-of-the-damon-variegatus-group-of-african-wh",
@@ -3656,8 +3624,7 @@
       "Acari",
       "taxonomy"
     ],
-    "doi": "https://doi.org/10.1093/oso/9780195172348.003.0019",
-    "pdf": "https://academic.oup.com/book/chapter-pdf/52532851/isbn-9780195172348-book-part-19.pdf"
+    "doi": "https://doi.org/10.1093/oso/9780195172348.003.0019"
   },
   {
     "slug": "assembling-the-scorpion-tree-of-life-phylogeny-of-extan",
@@ -3677,8 +3644,7 @@
       "Phylogenetic tree",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1111/j.1096-0031.2004.00035.x",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1096-0031.2004.00035.x"
+    "doi": "https://doi.org/10.1111/j.1096-0031.2004.00035.x"
   },
   {
     "slug": "burrowing-scorpion-phylogeny-and-the-evolution-of-paleo",
@@ -3692,8 +3658,7 @@
       "*Acilius*",
       "biogeography"
     ],
-    "doi": "https://doi.org/10.1111/j.1096-0031.2003.00006.x",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1096-0031.2003.00006.x"
+    "doi": "https://doi.org/10.1111/j.1096-0031.2003.00006.x"
   },
   {
     "slug": "checklist-of-millipedes-diplopoda-centipedes-chilopoda",
@@ -3743,8 +3708,7 @@
       "Zoology",
       "Sister group"
     ],
-    "doi": "https://doi.org/10.1603/0013-8746(2004)097[0037:SOTGPK]2.0.CO;2",
-    "pdf": "http://academic.oup.com/aesa/article-pdf/97/1/37/19388304/aesa97-0037.pdf"
+    "doi": "https://doi.org/10.1603/0013-8746(2004)097[0037:SOTGPK]2.0.CO;2"
   },
   {
     "slug": "the-systematics-of-southern-african-parabuthus-pocock-s",
@@ -3796,8 +3760,7 @@
       "Phylogenetics",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1046/j.1365-3113.2003.00207.x",
-    "pdf": "https://resjournals.onlinelibrary.wiley.com/doi/pdf/10.1046/j.1365-3113.2003.00207.x"
+    "doi": "https://doi.org/10.1046/j.1365-3113.2003.00207.x"
   },
   {
     "slug": "discovery-of-the-male-of-parabuthus-muelleri-and-implic",
@@ -3839,8 +3802,7 @@
       "Zoology",
       "Scorpion"
     ],
-    "doi": "https://doi.org/10.1163/187631203788964764",
-    "pdf": "https://data.brill.com/files/journals/1876312x_034_03_s001_text.pdf"
+    "doi": "https://doi.org/10.1163/187631203788964764"
   },
   {
     "slug": "systematics-and-biogeography-of-the-family-scorpionidae",
@@ -3861,8 +3823,7 @@
       "Evolutionary biology",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1071/IS02016",
-    "pdf": "https://connectsci.au/is/article-pdf/17/2/185/113092/is02016.pdf"
+    "doi": "https://doi.org/10.1071/IS02016"
   },
   {
     "slug": "threats-facing-southern-africa-s-unique-scorpion-fauna",
@@ -3889,8 +3850,7 @@
       "Mass spectrometry",
       "Mass spectrum"
     ],
-    "doi": "https://doi.org/10.1002/rcm.637",
-    "pdf": "https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/pdf/10.1002/rcm.637"
+    "doi": "https://doi.org/10.1002/rcm.637"
   },
   {
     "slug": "dna-isolation-procedures-pp-249-287-in-desalle-r-giribe",
@@ -3902,8 +3862,7 @@
       "*DNA*",
       "Computer science"
     ],
-    "doi": "https://doi.org/10.1007/978-3-0348-8125-8_12",
-    "pdf": "http://link.springer.com/content/pdf/10.1007/978-3-0348-8125-8_12.pdf"
+    "doi": "https://doi.org/10.1007/978-3-0348-8125-8_12"
   },
   {
     "slug": "a-review-of-synonyms-and-subspecies-in-the-genus-opisto",
@@ -3959,8 +3918,7 @@
       "Cladogram",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1046/j.1463-6409.2001.00056.x",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1046/j.1463-6409.2001.00056.x"
+    "doi": "https://doi.org/10.1046/j.1463-6409.2001.00056.x"
   },
   {
     "slug": "species-or-supraspecific-taxa-as-terminals-in-cladistic",
@@ -3971,8 +3929,7 @@
       "Prendini",
       "systematics"
     ],
-    "doi": "https://doi.org/10.1080/10635150118650",
-    "pdf": "http://academic.oup.com/sysbio/article-pdf/50/2/290/19502542/50-2-290.pdf"
+    "doi": "https://doi.org/10.1080/10635150118650"
   },
   {
     "slug": "substratum-specialization-and-speciation-in-southern-af",
@@ -4067,8 +4024,7 @@
       "Zoology",
       "Evolutionary biology"
     ],
-    "doi": "https://doi.org/10.1111/j.1096-0031.2000.tb00348.x",
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1096-0031.2000.tb00348.x"
+    "doi": "https://doi.org/10.1111/j.1096-0031.2000.tb00348.x"
   },
   {
     "slug": "taking-the-sting-out-of-scorpion-systematics-an-outline",
@@ -4100,8 +4056,7 @@
       "Clade",
       "Zoology"
     ],
-    "doi": "https://doi.org/10.1163/187631298X00140",
-    "pdf": "https://brill.com/downloadpdf/journals/ise/29/1/article-p11_2.xml"
+    "doi": "https://doi.org/10.1163/187631298X00140"
   },
   {
     "slug": "challenges-to-scorpion-cladistics-effects-of-sex-segmen",
@@ -4110,7 +4065,6 @@
       "Scorpiones",
       "Arachnida"
     ],
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1096-0031.1997.tb00250.x",
     "year": 1997,
     "title": "Challenges to scorpion cladistics: Effects of sex, segmentation and psammophily"
   },
@@ -4120,7 +4074,6 @@
     "keywords": [
       "Arachnida"
     ],
-    "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1096-0031.1997.tb00250.x",
     "year": 1997,
     "title": "Parallel cladogenesis, coevolution and sequential evolution in insect-plant associations: A test case"
   },
@@ -4140,8 +4093,7 @@
       "Scorpion",
       "Chela"
     ],
-    "doi": "https://doi.org/10.1080/02541858.1997.11448434",
-    "pdf": "https://www.tandfonline.com/doi/pdf/10.1080/02541858.1997.11448434"
+    "doi": "https://doi.org/10.1080/02541858.1997.11448434"
   },
   {
     "slug": "two-new-host-restricted-restioid-leafhoppers-in-the-gen",
@@ -4174,7 +4126,6 @@
       "Grazing",
       "Ecology"
     ],
-    "doi": "https://doi.org/10.1080/02541858.1996.11448403",
-    "pdf": "http://www.tandfonline.com/doi/pdf/10.1080/02541858.1996.11448403"
+    "doi": "https://doi.org/10.1080/02541858.1996.11448403"
   }
 ]
