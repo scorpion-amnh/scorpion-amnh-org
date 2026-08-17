@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
+  brandPaletteSteps,
   buildPaletteSteps,
-  grayPaletteSteps,
   LinkColorSample,
   LinkOnDarkColorSample,
-  paletteSteps,
   PaletteScale,
   SemanticColorRow,
   SemanticColorTable,
@@ -230,7 +229,7 @@ export default function DesignSystemPage() {
             <code className="text-xs">globals.css</code> and exposed as Tailwind utilities. Brand palettes live in{" "}
             <code className="text-xs">tailwind.config.js</code> and are available as{" "}
             <code className="text-xs">bg-</code>, <code className="text-xs">border-</code>, and related utilities
-            (e.g. <code className="text-xs">bg-gray-90</code>, <code className="text-xs">text-cyan-40</code>).
+            (e.g. <code className="text-xs">bg-gray-90</code>, <code className="text-xs">text-cyan-70</code>).
           </p>
 
           <h3 className="font-bold mb-4">Semantic tokens</h3>
@@ -270,16 +269,18 @@ export default function DesignSystemPage() {
 
           <h3 className="mb-4 mt-10 font-bold">Brand palettes</h3>
           <p className="mb-6 text-sm">
-            Full scales from light (left) to dark (right). Gray includes an extra{" "}
-            <code className="text-xs">00</code> step for near-white surfaces.
+            Full scales from light (left) to dark (right). Each step shares the same
+            lightness as its gray counterpart (e.g. <code className="text-xs">cyan-40</code> is
+            as dark as <code className="text-xs">gray-40</code>). The{" "}
+            <code className="text-xs">00</code> step is a near-white tinted surface.
           </p>
 
           <div className="rounded-sm border border-gray-200 px-4 md:px-6">
-            <PaletteScale name="Gray" steps={buildPaletteSteps("gray", grayPaletteSteps)} />
-            <PaletteScale name="Cyan" steps={buildPaletteSteps("cyan", paletteSteps)} />
-            <PaletteScale name="Rust" steps={buildPaletteSteps("rust", paletteSteps)} />
-            <PaletteScale name="Olive" steps={buildPaletteSteps("olive", paletteSteps)} />
-            <PaletteScale name="Gold" steps={buildPaletteSteps("gold", paletteSteps)} />
+            <PaletteScale name="Gray" steps={buildPaletteSteps("gray", brandPaletteSteps)} />
+            <PaletteScale name="Cyan" steps={buildPaletteSteps("cyan", brandPaletteSteps)} />
+            <PaletteScale name="Rust" steps={buildPaletteSteps("rust", brandPaletteSteps)} />
+            <PaletteScale name="Olive" steps={buildPaletteSteps("olive", brandPaletteSteps)} />
+            <PaletteScale name="Gold" steps={buildPaletteSteps("gold", brandPaletteSteps)} />
           </div>
         </section>
       </div>
