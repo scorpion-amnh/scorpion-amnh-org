@@ -4,6 +4,7 @@ import { pathToFileURL } from "url";
 import { normalizeDoiAbstract, isPublicationAbstractPlaceholder } from "../lib/publications/abstract";
 import { buildLocalPublicationPdfIndex, getLocalPublicationPdfPath } from "../lib/publications/localPdf.server";
 import { isDirectPublicationPdfUrl } from "../lib/publications/pdf";
+import { getDatePublishedYear } from "../lib/publications/resolvePublication";
 import type { Publication, PublicationDetail } from "../lib/content/schema";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
@@ -492,11 +493,13 @@ const buildDetailEntry = async (
     }
 
     const crossrefDate = formatCrossrefDate(crossref ?? {});
-    if (crossrefDate) {
+    if (crossrefDate && getDatePublishedYear(crossrefDate) === publication.year) {
       datePublished = crossrefDate;
     }
 
-    pdf = findPdfLink(crossref, openAlex, publication);
+    if (!pdf) {
+      pdf = findPdfLink(crossref, openAlex, publication);
+    }
 
     subjects = ((crossref?.subject as string[] | undefined) ?? []).filter(Boolean);
 

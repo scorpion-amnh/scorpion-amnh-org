@@ -17,6 +17,7 @@ import {
   getPublicationsYearHref,
 } from "@/lib/publications/citation";
 import { resolvePublicationPdf } from "@/lib/publications/pdf";
+import { resolvePublicationDetailFields } from "@/lib/publications/resolvePublication";
 import localPublicationPdfs from "@/content/local-publication-pdfs.json";
 import { hasPublicationAbstract } from "@/lib/publications/abstract";
 
@@ -40,14 +41,11 @@ export function PublicationDetailClient({
 }: PublicationDetailClientProps) {
   const [copyState, setCopyState] = useState<"idle" | "copied" | "error">("idle");
 
-  const citationText = formatPlainCitation(publication, detail.doi ?? null);
+  const resolved = resolvePublicationDetailFields(publication, detail);
+  const citationText = formatPlainCitation(publication, resolved.doi);
   const volumePages = getVolumePages(publication);
-  const pdfUrl = resolvePublicationPdf(
-    publication,
-    detail.pdf ?? publication.pdf ?? null,
-    localPublicationPdfs
-  );
-  const citationDoi = detail.doi ?? publication.doi ?? null;
+  const pdfUrl = resolvePublicationPdf(publication, resolved.pdf, localPublicationPdfs);
+  const citationDoi = resolved.doi;
   const copyCitation = () => {
     void copyTextToClipboard(citationText).then((copied) => {
       setCopyState(copied ? "copied" : "error");
@@ -90,7 +88,7 @@ export function PublicationDetailClient({
             </p>
 
             <PublicationAccessButtons
-              doi={detail.doi ?? publication.doi ?? null}
+              doi={resolved.doi}
               pdf={pdfUrl}
               className="flex flex-wrap items-center gap-3 py-2"
             />
@@ -112,11 +110,11 @@ export function PublicationDetailClient({
               ) : null}
               <dt className="font-semibold text-color-primary">Year</dt>
               <dd>{publication.year}</dd>
-              {detail.datePublished ? (
+              {resolved.datePublished ? (
                 <>
                   <dt className="font-semibold text-color-primary">Published</dt>
                   <dd>
-                    {new Date(`${detail.datePublished}T00:00:00`).toLocaleDateString("en-US", {
+                    {new Date(`${resolved.datePublished}T00:00:00`).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",
                       day: "numeric",

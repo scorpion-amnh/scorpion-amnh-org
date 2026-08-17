@@ -14,6 +14,7 @@ import {
 import { getPeople } from "@/lib/content";
 import { buildAuthorProfileLookup } from "@/lib/publications/authorProfiles";
 import { getPublicationDetailPath } from "@/lib/publications/citation";
+import { resolvePublicationDetailFields } from "@/lib/publications/resolvePublication";
 import { PublicationDetailClient } from "./PublicationDetailClient";
 
 type PublicationDetailPageProps = {
@@ -34,6 +35,7 @@ export const generateMetadata = async ({
     return { title: "Publication Not Found" };
   }
 
+  const resolved = resolvePublicationDetailFields(publication, detail);
   const title = stripMarkdownEmphasis(publication.title);
   const pageTitle = `${title} | Arachnology at AMNH`;
   const plainAbstract = hasPublicationAbstract(detail.abstract)
@@ -56,7 +58,7 @@ export const generateMetadata = async ({
       url,
       siteName: "Arachnology at AMNH",
       type: "article",
-      publishedTime: detail.datePublished,
+      publishedTime: resolved.datePublishedForMetadata,
       authors: publication.authors.map((author) => author.name.replace(/^and\s+/i, "")),
     },
     keywords: detail.keywords.map(stripMarkdownEmphasis),
@@ -68,9 +70,10 @@ const buildScholarlyArticleJsonLd = (
   detail: NonNullable<ReturnType<typeof getPublicationDetailBySlug>>,
   publication: NonNullable<ReturnType<typeof getPublicationForDetail>>
 ) => {
+  const resolved = resolvePublicationDetailFields(publication, detail);
   const pageUrl = `${SITE_URL}${getPublicationDetailPath(slug)}`;
   const headline = stripMarkdownEmphasis(publication.title);
-  const pdfUrl = resolvePublicationPdf(publication, detail.pdf, localPublicationPdfs);
+  const pdfUrl = resolvePublicationPdf(publication, resolved.pdf, localPublicationPdfs);
 
   return {
     "@context": "https://schema.org",
@@ -80,9 +83,9 @@ const buildScholarlyArticleJsonLd = (
     ...(hasPublicationAbstract(detail.abstract)
       ? { abstract: stripMarkdownEmphasis(detail.abstract) }
       : {}),
-    datePublished: detail.datePublished,
+    datePublished: resolved.datePublishedForMetadata,
     url: pageUrl,
-    ...(detail.doi ? { sameAs: detail.doi } : {}),
+    ...(resolved.doi ? { sameAs: resolved.doi } : {}),
     author: publication.authors.map((author) => {
       const name = author.name.replace(/^and\s+/i, "");
       const isPrendini = /prendini/i.test(name);
@@ -101,12 +104,12 @@ const buildScholarlyArticleJsonLd = (
           name: publication.journal,
         }
       : undefined,
-    ...(detail.doi
+    ...(resolved.doi
       ? {
           identifier: {
             "@type": "PropertyValue",
             propertyID: "DOI",
-            value: detail.doi.replace("https://doi.org/", ""),
+            value: resolved.doi.replace("https://doi.org/", ""),
           },
         }
       : {}),
