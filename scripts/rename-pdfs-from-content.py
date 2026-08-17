@@ -98,6 +98,8 @@ SKIP_FILES = {
 SKIP_PREFIXES = (
     "bulletin of the american museum",
     "american museum novitates",
+    "published by the american museum",
+    "central park west",
     "copyright",
     "issn",
     "abstract",
@@ -166,9 +168,18 @@ def last_name(name: str) -> str:
 
 def build_filename(publication: dict) -> str:
     year = publication["year"]
-    author_slug = slugify(last_name(publication["authors"][0]["name"]))
-    et_al = f"{SEPARATOR}et-al" if len(publication["authors"]) > 1 else ""
-    suffix = f"{SEPARATOR}{author_slug}{et_al}.pdf"
+    authors = publication["authors"]
+    first_author_slug = slugify(last_name(authors[0]["name"]))
+    if len(authors) <= 1:
+        author_part = first_author_slug
+    elif len(authors) == 2:
+        # Exactly two authors: spell out both last names rather than "et al.",
+        # which conventionally implies three or more authors.
+        second_author_slug = slugify(last_name(authors[1]["name"]))
+        author_part = f"{first_author_slug}{SEPARATOR}{second_author_slug}"
+    else:
+        author_part = f"{first_author_slug}{SEPARATOR}et-al"
+    suffix = f"{SEPARATOR}{author_part}.pdf"
     prefix = f"{year}{SEPARATOR}"
     max_title = MAX_FILENAME_LENGTH - len(prefix) - len(suffix)
     title_slug = slugify(publication["title"])
@@ -183,7 +194,14 @@ def read_pages(path: Path, max_pages: int) -> list[str]:
 
 
 def parse_filename_hints(filename: str) -> FilenameHints:
-    year_match = re.search(r"(?:^|[\s.])(?:((?:19|20)\d{2})[a-z]?)(?:\s|&|$|\.|\()", filename, re.I)
+    # Boundaries include "-" as well as whitespace/period/paren so this also
+    # recognizes this project's own canonical "YYYY--slug--author.pdf" naming
+    # convention (hyphen-delimited throughout), not just loosely-typed
+    # space/period-separated citation-style filenames dropped into new-uploads/.
+    # Without it, e.g. "2012--scorpions-scorpiones-in-...-2012--prendini.pdf"
+    # never matches at all (neither "2012" is followed by a recognized boundary
+    # char), silently disabling every filename-year-derived safety check below.
+    year_match = re.search(r"(?:^|[\s.-])(?:((?:19|20)\d{2})[a-z]?)(?:\s|&|$|\.|\(|-)", filename, re.I)
     year = int(year_match.group(1)) if year_match else None
 
     author_part = filename[: year_match.start()] if year_match else filename
@@ -483,6 +501,12 @@ def embedded_title_year(path: Path) -> tuple[str | None, int | None]:
 
 def parse_year(text: str) -> int | None:
     header = text[:4000]
+    # Strip peer-review timeline sentences ("Received 11 November 2019; revised 3
+    # July 2020; accepted for publication 1 August 2020") before pattern-matching -
+    # these always contain submission/revision/acceptance dates, which are commonly
+    # 1-2 years earlier than the actual publication year and would otherwise be
+    # misread as the citation year by the month+year heuristic below.
+    header = re.sub(r"received\b[\s\S]{0,200}?accepted\b[^.\n]{0,80}\.?", " ", header, flags=re.I)
     patterns: list[tuple[int, str]] = [
         (0, r"copyright\s*©?\s*[^0-9\n]{0,60}(20\d{2}|19\d{2})"),
         (0, r"issued\s+(?:[A-Za-z]+\s+\d{1,2},?\s+)?(20\d{2}|19\d{2})"),
@@ -523,6 +547,17 @@ def skip_line(line: str) -> bool:
         return True
     if re.fullmatch(r"[\d\s·…\.]+", line):
         return True
+    # Common journal front-matter boilerplate ("Zoological Journal of the Linnean
+    # Society, 2022, 194, 136-180. With 21 figures.", "All rights reserved. For
+    # permissions, please e-mail: ..."). Without this, these lines fall through to
+    # the title/author heuristics below - "please e-mail" contains a comma (so
+    # author_line() accepts it) but title_parts is still empty at that point, so it
+    # used to get silently discarded either way; explicitly skipping them here is
+    # more robust than relying on that side effect.
+    if "all rights reserved" in lower or "for permissions" in lower:
+        return True
+    if re.search(r"\bwith\s+\d+\s+figures?\b", lower):
+        return True
     return any(prefix in lower for prefix in SKIP_PREFIXES)
 
 
@@ -542,6 +577,12 @@ def author_line(line: str) -> list[str] | None:
     if "(" in cleaned:
         return None
     if '"' in cleaned or "“" in cleaned:
+        return None
+    # A comma immediately followed by a 4-digit year is a taxonomic-authority
+    # citation ("Pseudochactidae Gromov, 1998"), not an author byline - reject it
+    # before the digit-stripping below destroys the year and lets it slip through
+    # as an ordinary name part.
+    if re.search(r",\s*(?:18|19|20)\d{2}\b", cleaned):
         return None
     por_match = re.match(r"^por\s+(.+)$", cleaned, re.I)
     if por_match:
@@ -643,12 +684,17 @@ def extract_signals(text: str, path: Path) -> PdfSignals:
     for index, line in enumerate(lines[:60]):
         if skip_line(line):
             continue
-        names = author_line(line)
+        # Only treat an author_line() match as the actual author list once we've
+        # already captured some title text - a real author line never precedes the
+        # title. Without this guard, a *title* line that happens to contain "and"/
+        # "&"/a comma (e.g. "Phylogeny and biogeography of...") gets misidentified
+        # as author names before any title has been seen, and was previously
+        # silently dropped (via `continue`) instead of falling through to the
+        # title-line handling below - truncating multi-line titles.
+        names = author_line(line) if title_parts else None
         if names:
-            if not authors and title_parts:
-                authors = names
-                break
-            continue
+            authors = names
+            break
         if title_heading(line):
             title_parts.append(line)
             continue
@@ -693,7 +739,18 @@ def title_tokens(title: str) -> set[str]:
     # punctuation immediately touching a word - "(Scorpiones)." vs "(Scorpiones)" - doesn't
     # prevent an otherwise-identical token from matching.
     tokens = re.findall(r"[a-z0-9](?:[a-z0-9'-]*[a-z0-9])?", normalize(title))
-    return {t for t in tokens if len(t) > 3 and t not in stop}
+    return {
+        t
+        for t in tokens
+        if len(t) > 3
+        and t not in stop
+        # A bare 4-digit year is essentially meaningless as a title "word" - titles
+        # in this taxonomic corpus very often embed an authority citation ("Genus
+        # species Author, 1883"), and two otherwise-unrelated titles citing
+        # different authorities from the same year would otherwise register as
+        # sharing a token.
+        and not re.fullmatch(r"(?:17|18|19|20)\d{2}", t)
+    }
 
 
 def newsletter_titles(text: str) -> list[str]:
@@ -705,6 +762,14 @@ def newsletter_titles(text: str) -> list[str]:
             continue
         lower = phrase.lower()
         if any(x in lower for x in ("barking gecko", "editor", "index", "news", "greetings", "vol.")):
+            continue
+        # Journal/institution boilerplate ("BULLETIN OF THE AMERICAN MUSEUM OF
+        # NATURAL HISTORY", "ISSN 0003-0090") is printed in all-caps on essentially
+        # every page of some journals, so it otherwise gets scanned in as a
+        # plausible "newsletter title" candidate and fuzzy-matched against
+        # publications.json - reuse the same boilerplate list skip_line() filters
+        # page text with.
+        if any(prefix in lower for prefix in SKIP_PREFIXES):
             continue
         titles.append(phrase.title())
     return titles
@@ -749,15 +814,44 @@ def score_publication(
 
         pdf_author = last_name(candidate.authors[0]) if candidate.authors else None
         for pub in publications:
-            if pub["year"] not in {candidate.year, candidate.year - 1, candidate.year + 1}:
-                continue
             pub_title = re.sub(r"\s+", " ", strip_markdown(pub["title"])).strip()
             pub_tokens = title_tokens(pub["title"])
             overlap = len(pdf_tokens & pub_tokens)
-            if overlap < 2:
-                continue
+            normalized_pdf_title = normalize(pdf_title)
+            normalized_pub_title = normalize(pub_title)
+            # Treat the pub's exact title appearing as a leading substring of the
+            # extracted candidate as equivalent to an exact match - extract_signals
+            # sometimes glues trailing junk (e.g. the abstract's first sentence)
+            # onto a genuinely complete, correctly-extracted title, which would
+            # otherwise fail a strict equality check despite being unambiguous.
+            exact_title_match = normalized_pdf_title == normalized_pub_title or (
+                len(normalized_pub_title) > 20 and normalized_pdf_title.startswith(normalized_pub_title)
+            )
+            # An exact (or exact-prefix) title match is unambiguous on its own -
+            # titles essentially never coincide by chance - so trust it even when
+            # the extracted year looks wrong. This matters because parse_year()
+            # often has nothing better to go on than an in-text citation ("Davies
+            # (1986, 1988)", "Lawrence 1955: 37") when a paper's own publication
+            # year never appears verbatim in the extracted page text at all, which
+            # would otherwise wrongly exclude the correct (year-mismatched)
+            # publication via the check below.
+            #
+            # NB: a high *token-overlap* count alone (without requiring an exact
+            # string match) is NOT a safe substitute here - this corpus has several
+            # templated title series (e.g. "Order Amblypygi Thorell, 1883. In:
+            # Zhang, Z.-Q. (Ed.) Animal biodiversity: an outline of higher-level
+            # classification and survey of taxonomic richness" recurs near-verbatim
+            # for Order Scorpiones/Solifugae/Palpigradi/etc., and "Systematic
+            # revision of the ... whip spider family ... (Arachnida: Amblypygi)"
+            # recurs for Charinidae/Paracharontidae/etc.) where boilerplate alone
+            # can produce 7-10 shared tokens between two entirely different papers.
+            if not exact_title_match:
+                if pub["year"] not in {candidate.year, candidate.year - 1, candidate.year + 1}:
+                    continue
+                if overlap < 2:
+                    continue
             score = overlap * 10
-            if normalize(pdf_title) == normalize(pub_title):
+            if exact_title_match:
                 score += 50
             if pdf_author and pdf_author == last_name(pub["authors"][0]["name"]):
                 score += 30
@@ -883,11 +977,26 @@ def assert_safe_to_move(source: Path, dest: Path) -> None:
         raise RuntimeError(f"Refusing to overwrite existing file {dest}.")
 
 
-def move_to_duplicates(path: Path) -> Path:
+def build_duplicate_filename(original_name: str, target_name: str | None) -> str:
+    """Prefix a moved-to-duplicates file with the canonical name it duplicates, so
+    it's identifiable in the `duplicates/` folder at a glance, while keeping the
+    original filename fully intact (never truncated) for traceability."""
+    if not target_name:
+        return original_name
+    target_stem = target_name[:-4] if target_name.lower().endswith(".pdf") else target_name
+    budget = MAX_FILENAME_LENGTH - len(SEPARATOR) - len(original_name)
+    if budget < 10:
+        return original_name
+    if len(target_stem) > budget:
+        target_stem = target_stem[:budget].rstrip("-")
+    return f"{target_stem}{SEPARATOR}{original_name}"
+
+
+def move_to_duplicates(path: Path, target_name: str | None = None) -> Path:
     DUPLICATES_DIR.mkdir(exist_ok=True)
-    dest = DUPLICATES_DIR / path.name
+    dest = DUPLICATES_DIR / build_duplicate_filename(path.name, target_name)
     if dest.exists():
-        stem, suffix = path.stem, path.suffix
+        stem, suffix = dest.stem, dest.suffix
         counter = 2
         while dest.exists():
             dest = DUPLICATES_DIR / f"{stem}--{counter}{suffix}"
@@ -1068,23 +1177,33 @@ def main() -> int:
     renames, collisions = classify_resolutions(quick_resolutions + deep_resolutions)
     quick_renames = [r for r in renames if r[3] == "quick"]
     deep_renames = [r for r in renames if r[3] == "deep"]
+    # Original filename -> canonical name it was renamed to, so a hash-duplicate-of-
+    # another-upload can be labeled with what that upload actually became.
+    resolved_targets = {source.name: target.name for source, target, _pub, _stage in renames}
 
     print_resolution_group("Quick pass matches (filename / embedded metadata only)", quick_renames)
     if not quick_only:
         print_resolution_group("Deep pass matches (PDF text extraction)", deep_renames)
 
     if hash_duplicates:
-        print("\nExact-content duplicates (identical bytes, no parsing needed):")
+        print("\nExact-content duplicates (identical bytes, no parsing needed) - moving to duplicates/ as:")
         for dup in hash_duplicates:
+            target_name = (
+                dup.canonical_filename
+                if dup.reason == "exact-duplicate-of-existing"
+                else resolved_targets.get(dup.duplicate_of_upload)
+            )
+            print(f"  {build_duplicate_filename(dup.path.name, target_name)}")
             if dup.reason == "exact-duplicate-of-existing":
-                print(f"  - {dup.path.name}  ==  existing {dup.canonical_filename}")
+                print(f"    ← {dup.path.name}  (identical to existing {dup.canonical_filename})")
             else:
-                print(f"  - {dup.path.name}  ==  new upload {dup.duplicate_of_upload}")
+                print(f"    ← {dup.path.name}  (identical to new upload {dup.duplicate_of_upload})")
 
     if collisions:
-        print("\nFilename-collision duplicates (matched publication already has a file):")
+        print("\nFilename-collision duplicates (matched publication already has a file) - moving to duplicates/ as:")
         for source, target, publication in collisions:
-            print(f"  - {source.name} -> {target.name} ({strip_markdown(publication['title'])[:70]})")
+            print(f"  {build_duplicate_filename(source.name, target.name)}")
+            print(f"    ← {source.name}  ({strip_markdown(publication['title'])[:70]})")
 
     total_duplicates = len(hash_duplicates) + len(collisions)
     deep_resolved_count = 0 if quick_only else len(deep_resolutions)
@@ -1126,7 +1245,12 @@ def main() -> int:
         source.rename(target)
 
     for dup in hash_duplicates:
-        duplicate_dest = move_to_duplicates(dup.path)
+        target_name = (
+            dup.canonical_filename
+            if dup.reason == "exact-duplicate-of-existing"
+            else resolved_targets.get(dup.duplicate_of_upload)
+        )
+        duplicate_dest = move_to_duplicates(dup.path, target_name)
         moved += 1
         record_duplicate(
             manifest,
@@ -1139,7 +1263,7 @@ def main() -> int:
         )
 
     for source, target, publication in collisions:
-        duplicate_dest = move_to_duplicates(source)
+        duplicate_dest = move_to_duplicates(source, target.name)
         moved += 1
         record_duplicate(
             manifest,
