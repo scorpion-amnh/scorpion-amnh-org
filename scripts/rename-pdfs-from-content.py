@@ -1,9 +1,54 @@
 #!/usr/bin/env python3
-"""Rename newly added publication PDFs by reading year/title/authors from page content."""
+"""Rename newly added publication PDFs by matching them to `content/publications.json`.
+
+Two-stage pipeline
+------------------
+Stage 1 - quick pass (cheap, no PDF text extraction):
+  1. Content hashing to catch byte-identical duplicates (of an existing canonical
+     file, or of another file in the same upload batch) instantly.
+  2. Filename parsing: most uploads already carry "Author et al. YEAR Title.pdf"
+     style names, which is enough to identify the publication (and disambiguate
+     between same-author/same-year candidates using title-word overlap) without
+     opening the PDF at all.
+  3. Embedded XMP metadata: a raw byte-pattern scan for a title/date, still far
+     cheaper than extracting page text.
+
+Stage 2 - deep pass (only for files stage 1 couldn't resolve):
+  Opens the PDF and reads increasing tiers of page text (2, 5, 10 pages),
+  extracting title/author/year signals and fuzzy-matching them against
+  publications.json (DOI match, title/author scoring, obituary/newsletter
+  heuristics, embedded-metadata fallback).
+
+Run against `public/documents/new-uploads/` (see NEW_UPLOADS_DIR below). Files
+that match a publication already covered by another file (or whose name flags
+them as a supplementary file, e.g. "S1 Appendix") are moved to
+`public/documents/duplicates/` and recorded in `content/pdf-duplicates.json`
+instead of overwriting the canonical file.
+
+CMS safety model
+-----------------
+This script is meant to sit behind a CMS/upload workflow where content managers
+only have write access to `public/documents/new-uploads/`, never to
+`public/documents/` itself. Every operation below is additive with respect to the
+canonical library:
+  - A file only ever moves *out of* `new-uploads/`, into either `public/documents/`
+    (a brand-new canonical filename that doesn't already exist) or
+    `public/documents/duplicates/` (for manual review).
+  - `public/documents/` itself is never scanned for rename candidates, and a file
+    already sitting there is never renamed, overwritten, or deleted.
+  - `assert_safe_to_move` re-checks both of those invariants immediately before
+    every filesystem mutation and raises loudly instead of silently overwriting a
+    file if either is ever violated.
+  - A non-canonical file that nonetheless ends up directly in `public/documents/`
+    (bypassing new-uploads/, e.g. via a permissions leak) is flagged as a warning,
+    never auto-processed - see `find_stray_canonical_files`.
+"""
 
 from __future__ import annotations
 
+import hashlib
 import json
+import logging
 import re
 import sys
 import unicodedata
@@ -12,6 +57,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from pypdf import PdfReader
+
+# pypdf logs a warning (via the `logging` module, not stdout) for every malformed
+# PDF object it patches around, e.g. "Multiple definitions in dictionary at byte
+# ...". These are noise for our purposes and can bury the actual rename summary.
+logging.getLogger("pypdf").setLevel(logging.ERROR)
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCUMENTS_DIR = ROOT / "public" / "documents"
@@ -24,6 +74,7 @@ SEPARATOR = "--"
 MAX_FILENAME_LENGTH = 255
 PAGE_TIERS = (2, 5, 10)
 DOI_SCAN_LENGTH = 16_000
+HASH_CHUNK_SIZE = 1024 * 1024
 
 CMS_INTEGRATION = {
     "status": "not-configured",
@@ -80,6 +131,13 @@ class PdfSignals:
     authors: list[str]
 
 
+@dataclass
+class FilenameHints:
+    year: int | None
+    authors: set[str]
+    title_guess: str | None
+
+
 def strip_markdown(value: str) -> str:
     value = re.sub(r"\*\*([^*]+)\*\*", r"\1", value)
     value = re.sub(r"\*([^*]+)\*", r"\1", value)
@@ -124,7 +182,7 @@ def read_pages(path: Path, max_pages: int) -> list[str]:
     return [(page.extract_text() or "") for page in reader.pages[:max_pages]]
 
 
-def parse_filename_hints(filename: str) -> tuple[int | None, set[str]]:
+def parse_filename_hints(filename: str) -> FilenameHints:
     year_match = re.search(r"(?:^|[\s.])(?:((?:19|20)\d{2})[a-z]?)(?:\s|&|$|\.|\()", filename, re.I)
     year = int(year_match.group(1)) if year_match else None
 
@@ -147,7 +205,141 @@ def parse_filename_hints(filename: str) -> tuple[int | None, set[str]]:
         if "-" in normalized:
             authors.add(normalized.split("-", 1)[0])
 
-    return year, authors
+    # Some filenames are a full citation pasted verbatim - "Author. \"Title\", in
+    # Journal, ..., last modified: April 7, 2006.pdf" - where the year sits at the very
+    # end (often just a "last modified" date) and everything between the author and it
+    # is journal/DOI/URL noise, not a usable title. A quoted title is a much stronger,
+    # position-independent signal, so prefer it over the year-relative remainder.
+    quoted_match = re.search(r'["\u201c]([^"\u201d]{3,200})[\u201d"]', filename)
+    if quoted_match:
+        title_guess = quoted_match.group(1).strip()
+    elif year_match:
+        remainder = re.sub(r"\.pdf$", "", filename[year_match.end() :], flags=re.I).strip(" .-")
+        title_guess = remainder or None
+    else:
+        title_guess = None
+
+    return FilenameHints(year=year, authors=authors, title_guess=title_guess)
+
+
+def detect_supplement_label(filename: str) -> str | None:
+    """Flag filenames that name a supplementary/appendix file rather than the article itself."""
+    base = re.sub(r"\.pdf$", "", filename, flags=re.I)
+    numbered = re.search(r"\bS(\d+)\s+Appendix\b", base, re.I)
+    if numbered:
+        return f"s{numbered.group(1)}"
+    if re.search(r"\bAppendix\b", base, re.I):
+        return "appendix"
+    if re.search(r"\bSupplementary?\s*(?:Material|Information|Data|File)?\b|\bSupplemental\b", base, re.I):
+        return "supplement"
+    if re.search(r"\bGraphical Abstract\b", base, re.I):
+        return "graphical-abstract"
+    if re.search(r"\bAdditional File\b", base, re.I):
+        return "additional-file"
+    if re.search(r"\bAccessory Publication\b", base, re.I):
+        return "accessory"
+    return None
+
+
+def apply_supplement_suffix(filename: str, label: str) -> str:
+    stem = filename[:-4] if filename.lower().endswith(".pdf") else filename
+    suffix = f"{SEPARATOR}{label}.pdf"
+    if len(stem) + len(suffix) > MAX_FILENAME_LENGTH:
+        stem = stem[: MAX_FILENAME_LENGTH - len(suffix)].rstrip("-")
+    return f"{stem}{suffix}"
+
+
+def iter_pdf_files(directory: Path):
+    """List *.pdf files case-insensitively (Path.glob is case-sensitive even on
+    case-insensitive filesystems, so a plain glob silently misses e.g. `FILE.PDF`)."""
+    if not directory.is_dir():
+        return
+    for path in directory.iterdir():
+        if path.is_file() and path.suffix.lower() == ".pdf":
+            yield path
+
+
+def file_hash(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(HASH_CHUNK_SIZE), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def build_existing_hash_index() -> dict[str, Path]:
+    """Hash every canonical PDF once so new uploads can be checked in O(1)."""
+    index: dict[str, Path] = {}
+    for path in iter_pdf_files(DOCUMENTS_DIR):
+        index[file_hash(path)] = path
+    return index
+
+
+def quick_match_from_filename(path: Path, publications: list[dict]) -> dict | None:
+    """Resolve a publication purely from the filename - no PDF I/O at all."""
+    hints = parse_filename_hints(path.name)
+    if not hints.year or not hints.authors:
+        return None
+
+    candidates = [
+        pub
+        for pub in publications
+        if pub["year"] == hints.year and hints.authors <= publication_author_last_names(pub)
+    ]
+    if not candidates:
+        return None
+    if len(candidates) == 1:
+        return candidates[0]
+
+    if not hints.title_guess:
+        return None
+
+    # Many filenames are literally a (possibly truncated) copy of the real title, e.g.
+    # "Chelicerata (Scorpiones)" for a chapter titled "Chelicerata (Scorpiones). In: ...".
+    # An exact or prefix match against the normalized title is unambiguous even when the
+    # guess is too short/generic for token-overlap scoring below to work (e.g. one word).
+    normalized_guess = normalize(hints.title_guess)
+    prefix_matches = [
+        pub for pub in candidates
+        if normalize(strip_markdown(pub["title"])).startswith(normalized_guess)
+    ]
+    if len(prefix_matches) == 1:
+        return prefix_matches[0]
+    if len(prefix_matches) > 1:
+        candidates = prefix_matches
+
+    pdf_tokens = title_tokens(hints.title_guess)
+    if len(pdf_tokens) < 2:
+        return None
+
+    scored = sorted(
+        ((len(pdf_tokens & title_tokens(pub["title"])), pub) for pub in candidates),
+        key=lambda item: item[0],
+        reverse=True,
+    )
+    top_score = scored[0][0]
+    if top_score < 2:
+        return None
+    if len(scored) > 1 and scored[1][0] == top_score:
+        return None
+    return scored[0][1]
+
+
+def quick_match_from_embedded_metadata(path: Path, publications: list[dict]) -> dict | None:
+    """Resolve via embedded XMP title/date - a raw byte scan, not full text extraction."""
+    title, year = embedded_title_year(path)
+    if not title or not year:
+        return None
+    signals = PdfSignals(year=year, title=title, authors=[])
+    pub, score, _overlap = score_publication(signals, publications, title)
+    return pub if score >= 20 else None
+
+
+def quick_match(path: Path, publications: list[dict]) -> dict | None:
+    """Stage 1: cheap heuristics only. Returns None if the file needs the deep pass."""
+    return quick_match_from_filename(path, publications) or quick_match_from_embedded_metadata(
+        path, publications
+    )
 
 
 def publication_author_last_names(publication: dict) -> set[str]:
@@ -219,7 +411,8 @@ def match_from_pages(
 
 
 def match_from_filename_hints(path: Path, publications: list[dict]) -> dict | None:
-    filename_year, filename_authors = parse_filename_hints(path.name)
+    hints = parse_filename_hints(path.name)
+    filename_year, filename_authors = hints.year, hints.authors
     if not filename_year or not filename_authors:
         return None
 
@@ -258,7 +451,8 @@ def publication_matches_filename_year(publication: dict, filename_year: int | No
 
 
 def find_publication(path: Path, publications: list[dict]) -> dict | None:
-    filename_year, _filename_authors = parse_filename_hints(path.name)
+    """Stage 2 (deep pass): tiered page-text extraction and fuzzy matching."""
+    filename_year = parse_filename_hints(path.name).year
     reader = PdfReader(str(path))
     total_pages = len(reader.pages)
 
@@ -491,8 +685,15 @@ def extract_signals(text: str, path: Path) -> PdfSignals:
 
 
 def title_tokens(title: str) -> set[str]:
-    stop = {"about", "from", "with", "that", "this", "into", "species", "new", "and", "the", "for"}
-    return {t for t in normalize(title).split() if len(t) > 3 and t not in stop}
+    stop = {
+        "about", "from", "with", "that", "this", "into", "species", "new", "and", "the", "for",
+        "scorpiones", "scorpion", "scorpions",
+    }
+    # Extract word-ish runs (letters/digits, internal hyphens/apostrophes allowed) so that
+    # punctuation immediately touching a word - "(Scorpiones)." vs "(Scorpiones)" - doesn't
+    # prevent an otherwise-identical token from matching.
+    tokens = re.findall(r"[a-z0-9](?:[a-z0-9'-]*[a-z0-9])?", normalize(title))
+    return {t for t in tokens if len(t) > 3 and t not in stop}
 
 
 def newsletter_titles(text: str) -> list[str]:
@@ -585,6 +786,22 @@ def is_legacy(path: Path) -> bool:
     return not re.match(r"^\d{4}--", path.name)
 
 
+def find_stray_canonical_files() -> list[Path]:
+    """Files sitting directly in `public/documents/` that aren't canonically named.
+
+    Content managers should only ever be able to write to `new-uploads/`; a
+    non-canonical file appearing directly in `public/documents/` means something
+    bypassed that boundary (a manual copy, a permissions leak, etc.). We deliberately
+    never touch these - only flag them - since guessing at a rename here risks
+    clobbering or misfiling a file a human placed intentionally.
+    """
+    return sorted(
+        path
+        for path in iter_pdf_files(DOCUMENTS_DIR)
+        if path.name not in SKIP_FILES and is_legacy(path)
+    )
+
+
 def load_duplicates_manifest() -> dict:
     if DUPLICATES_MANIFEST.exists():
         manifest = json.loads(DUPLICATES_MANIFEST.read_text())
@@ -597,32 +814,36 @@ def load_duplicates_manifest() -> dict:
 def record_duplicate(
     manifest: dict,
     *,
-    publication: dict,
-    canonical_filename: str,
+    reason: str,
     new_upload_file: str,
     duplicate_path: str,
+    publication: dict | None = None,
+    canonical_filename: str | None = None,
+    duplicate_of_upload: str | None = None,
 ) -> None:
-    manifest["entries"].append(
-        {
-            "detectedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "status": "pending-review",
-            "publicationTitle": strip_markdown(publication["title"]),
-            "publicationYear": publication["year"],
-            "existingPath": f"/documents/{canonical_filename}",
-            "newUploadFile": new_upload_file,
-            "duplicatePath": duplicate_path,
-            "cmsActions": {
-                "keepExisting": (
-                    "No action needed. The existing file at existingPath remains in place."
-                ),
-                "useNewUpload": (
-                    "Manually move the file at duplicatePath to existingPath, then update "
-                    "the pdf field in content/publications.json (and publication-details.json "
-                    "if needed). Remove or resolve this entry."
-                ),
-            },
-        }
-    )
+    entry: dict = {
+        "detectedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "status": "pending-review",
+        "reason": reason,
+        "newUploadFile": new_upload_file,
+        "duplicatePath": duplicate_path,
+    }
+    if publication:
+        entry["publicationTitle"] = strip_markdown(publication["title"])
+        entry["publicationYear"] = publication["year"]
+    if canonical_filename:
+        entry["existingPath"] = f"/documents/{canonical_filename}"
+    if duplicate_of_upload:
+        entry["duplicateOfUpload"] = duplicate_of_upload
+    entry["cmsActions"] = {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": (
+            "Manually move the file at duplicatePath to existingPath, then update "
+            "the pdf field in content/publications.json (and publication-details.json "
+            "if needed). Remove or resolve this entry."
+        ),
+    }
+    manifest["entries"].append(entry)
 
 
 def save_duplicates_manifest(manifest: dict) -> None:
@@ -631,11 +852,7 @@ def save_duplicates_manifest(manifest: dict) -> None:
 
 
 def sync_local_publication_pdf_index(publications: list[dict]) -> int:
-    pdf_filenames = {
-        path.name
-        for path in DOCUMENTS_DIR.glob("*.pdf")
-        if path.is_file()
-    }
+    pdf_filenames = {path.name for path in iter_pdf_files(DOCUMENTS_DIR)}
     index = {"byDoi": {}, "byYearTitle": {}}
     for publication in publications:
         filename = build_filename(publication)
@@ -650,6 +867,22 @@ def sync_local_publication_pdf_index(publications: list[dict]) -> int:
     return len(index["byYearTitle"])
 
 
+def assert_safe_to_move(source: Path, dest: Path) -> None:
+    """Hard safety net: refuse (loudly) rather than silently overwrite/misplace a file.
+
+    This is intentionally paranoid - it re-checks invariants that `classify_resolutions`
+    and `iter_new_uploads` should already guarantee, so a future bug in this script
+    fails fast instead of quietly damaging a canonical file that's in active use.
+    """
+    if not source.is_relative_to(NEW_UPLOADS_DIR):
+        raise RuntimeError(
+            f"Refusing to move {source} - this script only ever moves files out of "
+            f"{NEW_UPLOADS_DIR.relative_to(ROOT)}/."
+        )
+    if dest.exists():
+        raise RuntimeError(f"Refusing to overwrite existing file {dest}.")
+
+
 def move_to_duplicates(path: Path) -> Path:
     DUPLICATES_DIR.mkdir(exist_ok=True)
     dest = DUPLICATES_DIR / path.name
@@ -659,79 +892,227 @@ def move_to_duplicates(path: Path) -> Path:
         while dest.exists():
             dest = DUPLICATES_DIR / f"{stem}--{counter}{suffix}"
             counter += 1
+    assert_safe_to_move(path, dest)
     path.rename(dest)
     return dest
 
 
-def iter_legacy_uploads() -> list[Path]:
-    uploads: list[Path] = []
-    for directory in (DOCUMENTS_DIR, NEW_UPLOADS_DIR):
-        if not directory.is_dir():
-            continue
-        uploads.extend(
-            path
-            for path in directory.glob("*.pdf")
-            if path.is_file() and path.name not in SKIP_FILES and is_legacy(path)
-        )
+def iter_new_uploads() -> list[Path]:
+    """Files this script is allowed to touch: `new-uploads/` only.
+
+    `public/documents/` itself is never scanned for rename candidates - see
+    `find_stray_canonical_files` for how files that end up there anyway are handled
+    (flagged, not renamed). This is the CMS safety boundary: a content-manager role
+    should only ever be granted write access to `new-uploads/`; everything this
+    script does downstream is additive (new file into `public/documents/`, or a
+    new-upload copy into `duplicates/`) and never overwrites or deletes a file
+    that was already in the canonical library.
+    """
+    uploads = [
+        path
+        for path in iter_pdf_files(NEW_UPLOADS_DIR)
+        if path.name not in SKIP_FILES
+    ]
     uploads.sort(key=lambda path: (path.stat().st_mtime, path.name))
     return uploads
 
 
-def main() -> int:
-    apply = "--apply" in sys.argv
-    publications = json.loads(PUBLICATIONS_PATH.read_text())
+@dataclass
+class HashDuplicate:
+    path: Path
+    reason: str  # "exact-duplicate-of-existing" | "exact-duplicate-of-upload"
+    publication: dict | None
+    canonical_filename: str | None
+    duplicate_of_upload: str | None
 
-    new_files = iter_legacy_uploads()
 
-    failed: list[str] = []
-    renames: list[tuple[Path, Path, dict]] = []
-    duplicates: list[tuple[Path, Path, dict]] = []
-    claimed_targets: set[Path] = set()
+@dataclass
+class Resolution:
+    path: Path
+    publication: dict
+    stage: str  # "quick" | "deep"
+
+
+def find_hash_duplicates(
+    new_files: list[Path], publications: list[dict]
+) -> tuple[list[HashDuplicate], list[Path]]:
+    """Stage 1a: catch byte-identical files before doing any content matching."""
+    filename_to_publication = {build_filename(pub): pub for pub in publications}
+    existing_hashes = build_existing_hash_index()
+
+    seen_this_run: dict[str, Path] = {}
+    hash_duplicates: list[HashDuplicate] = []
+    remaining: list[Path] = []
 
     for path in new_files:
+        digest = file_hash(path)
+        if digest in existing_hashes:
+            canonical = existing_hashes[digest]
+            hash_duplicates.append(
+                HashDuplicate(
+                    path=path,
+                    reason="exact-duplicate-of-existing",
+                    publication=filename_to_publication.get(canonical.name),
+                    canonical_filename=canonical.name,
+                    duplicate_of_upload=None,
+                )
+            )
+            continue
+        if digest in seen_this_run:
+            hash_duplicates.append(
+                HashDuplicate(
+                    path=path,
+                    reason="exact-duplicate-of-upload",
+                    publication=None,
+                    canonical_filename=None,
+                    duplicate_of_upload=seen_this_run[digest].name,
+                )
+            )
+            continue
+        seen_this_run[digest] = path
+        remaining.append(path)
+
+    return hash_duplicates, remaining
+
+
+def run_quick_pass(files: list[Path], publications: list[dict]) -> tuple[list[Resolution], list[Path]]:
+    resolved: list[Resolution] = []
+    unresolved: list[Path] = []
+    for path in files:
+        publication = quick_match(path, publications)
+        if publication:
+            resolved.append(Resolution(path=path, publication=publication, stage="quick"))
+        else:
+            unresolved.append(path)
+    return resolved, unresolved
+
+
+def run_deep_pass(files: list[Path], publications: list[dict]) -> tuple[list[Resolution], list[Path]]:
+    resolved: list[Resolution] = []
+    unmatched: list[Path] = []
+    for path in files:
         publication = find_publication(path, publications)
-        if not publication:
-            failed.append(path.name)
-            continue
+        if publication:
+            resolved.append(Resolution(path=path, publication=publication, stage="deep"))
+        else:
+            unmatched.append(path)
+    return resolved, unmatched
 
-        target = build_filename(publication)
-        target_path = DOCUMENTS_DIR / target
-        if path.resolve() == target_path.resolve():
-            continue
 
+def classify_resolutions(
+    resolutions: list[Resolution],
+) -> tuple[list[tuple[Path, Path, dict, str]], list[tuple[Path, Path, dict]]]:
+    """Turn (path, publication) matches into renames vs. filename-collision duplicates."""
+    renames: list[tuple[Path, Path, dict, str]] = []
+    collisions: list[tuple[Path, Path, dict]] = []
+    claimed_targets: set[Path] = set()
+
+    for resolution in resolutions:
+        target_name = build_filename(resolution.publication)
+        label = detect_supplement_label(resolution.path.name)
+        if label:
+            target_name = apply_supplement_suffix(target_name, label)
+        target_path = DOCUMENTS_DIR / target_name
+
+        if resolution.path.resolve() == target_path.resolve():
+            continue
         if target_path.exists() or target_path in claimed_targets:
-            duplicates.append((path, target_path, publication))
-            print(f"{target}")
-            print(f"  {strip_markdown(publication['title'])[:90]}")
-            print(f"  ← {path.name} (duplicate of existing file; will move to duplicates/)")
-            if target_path.exists():
-                print(f"  existing: {target_path.name}")
+            collisions.append((resolution.path, target_path, resolution.publication))
             continue
 
-        renames.append((path, target_path, publication))
         claimed_targets.add(target_path)
-        print(f"{target}")
+        renames.append((resolution.path, target_path, resolution.publication, resolution.stage))
+
+    return renames, collisions
+
+
+def print_resolution_group(title: str, entries: list[tuple[Path, Path, dict, str]]) -> None:
+    if not entries:
+        return
+    print(f"\n{title}:")
+    for source, target, publication, _stage in entries:
+        print(f"{target.name}")
         print(f"  {strip_markdown(publication['title'])[:90]}")
-        print(f"  ← {path.name}")
+        print(f"  ← {source.name}")
 
+
+def main() -> int:
+    apply = "--apply" in sys.argv
+    quick_only = "--quick-only" in sys.argv
+    publications = json.loads(PUBLICATIONS_PATH.read_text())
+
+    stray_files = find_stray_canonical_files()
+    if stray_files:
+        print(
+            f"WARNING: {len(stray_files)} non-canonically-named file(s) found directly in "
+            f"{DOCUMENTS_DIR.relative_to(ROOT)}/ (outside new-uploads/). These are NOT "
+            "touched by this script - only files in new-uploads/ are ever renamed or "
+            "moved. Move them into new-uploads/ yourself if they need processing:"
+        )
+        for path in stray_files:
+            print(f"  - {path.name}")
+        print()
+
+    new_files = iter_new_uploads()
+    hash_duplicates, candidates = find_hash_duplicates(new_files, publications)
+
+    quick_resolutions, deep_candidates = run_quick_pass(candidates, publications)
+
+    deep_resolutions: list[Resolution] = []
+    unmatched: list[Path] = []
+    if quick_only:
+        unmatched = deep_candidates
+    else:
+        deep_resolutions, unmatched = run_deep_pass(deep_candidates, publications)
+
+    renames, collisions = classify_resolutions(quick_resolutions + deep_resolutions)
+    quick_renames = [r for r in renames if r[3] == "quick"]
+    deep_renames = [r for r in renames if r[3] == "deep"]
+
+    print_resolution_group("Quick pass matches (filename / embedded metadata only)", quick_renames)
+    if not quick_only:
+        print_resolution_group("Deep pass matches (PDF text extraction)", deep_renames)
+
+    if hash_duplicates:
+        print("\nExact-content duplicates (identical bytes, no parsing needed):")
+        for dup in hash_duplicates:
+            if dup.reason == "exact-duplicate-of-existing":
+                print(f"  - {dup.path.name}  ==  existing {dup.canonical_filename}")
+            else:
+                print(f"  - {dup.path.name}  ==  new upload {dup.duplicate_of_upload}")
+
+    if collisions:
+        print("\nFilename-collision duplicates (matched publication already has a file):")
+        for source, target, publication in collisions:
+            print(f"  - {source.name} -> {target.name} ({strip_markdown(publication['title'])[:70]})")
+
+    total_duplicates = len(hash_duplicates) + len(collisions)
+    deep_resolved_count = 0 if quick_only else len(deep_resolutions)
     print(
-        f"\n{len(new_files)} new file(s), {len(renames)} rename(s), "
-        f"{len(duplicates)} duplicate(s), {len(failed)} unmatched"
+        f"\n{len(new_files)} new file(s): "
+        f"{len(quick_resolutions)} resolved by quick pass, "
+        f"{deep_resolved_count}/{len(deep_candidates)} "
+        f"resolved by deep pass -> {len(renames)} rename(s) "
+        f"({len(quick_renames)} quick, {len(deep_renames)} deep), "
+        f"{total_duplicates} duplicate(s) "
+        f"({len(hash_duplicates)} exact-hash, {len(collisions)} filename-collision), "
+        f"{len(unmatched)} unmatched"
     )
-    if failed:
-        print("\nUnmatched new files:")
-        for name in failed:
-            print(f"  - {name}")
+    if unmatched:
+        label = "Skipped (quick pass only; rerun without --quick-only)" if quick_only else "Unmatched new files (need manual review)"
+        print(f"\n{label}:")
+        for path in unmatched:
+            print(f"  - {path.name}")
 
-    if not renames and not duplicates:
+    if not renames and not hash_duplicates and not collisions:
         print("\nNothing to do.")
         return 0
 
     if not apply:
         print("\nDry run. Re-run with --apply to execute.")
-        if duplicates:
+        if total_duplicates:
             print(
-                f"On apply, {len(duplicates)} new file(s) will move to "
+                f"On apply, {total_duplicates} new file(s) will move to "
                 f"{DUPLICATES_DIR.relative_to(ROOT)}/ and "
                 f"{DUPLICATES_MANIFEST.relative_to(ROOT)} will be updated."
             )
@@ -740,18 +1121,33 @@ def main() -> int:
     manifest = load_duplicates_manifest()
     moved = 0
 
-    for source, target, publication in renames:
+    for source, target, _publication, _stage in renames:
+        assert_safe_to_move(source, target)
         source.rename(target)
 
-    for source, target, publication in duplicates:
+    for dup in hash_duplicates:
+        duplicate_dest = move_to_duplicates(dup.path)
+        moved += 1
+        record_duplicate(
+            manifest,
+            reason=dup.reason,
+            new_upload_file=dup.path.name,
+            duplicate_path=f"/documents/duplicates/{duplicate_dest.name}",
+            publication=dup.publication,
+            canonical_filename=dup.canonical_filename,
+            duplicate_of_upload=dup.duplicate_of_upload,
+        )
+
+    for source, target, publication in collisions:
         duplicate_dest = move_to_duplicates(source)
         moved += 1
         record_duplicate(
             manifest,
-            publication=publication,
-            canonical_filename=target.name,
+            reason="filename-collision",
             new_upload_file=source.name,
             duplicate_path=f"/documents/duplicates/{duplicate_dest.name}",
+            publication=publication,
+            canonical_filename=target.name,
         )
 
     if moved:

@@ -16,6 +16,858 @@
         "keepExisting": "No action needed. The existing file at existingPath remains in place.",
         "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
       }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Ojanguren-Affilastro et al. 2007 The genus Brachistosternus (Scorpiones Bothriuridae), in Chile, with descriptions of two new species.pdf",
+      "duplicatePath": "/documents/duplicates/Ojanguren-Affilastro et al. 2007 The genus Brachistosternus (Scorpiones Bothriuridae), in Chile, with descriptions of two new species.pdf",
+      "publicationTitle": "Phylogeny and biogeography of the family Bothriuridae (Scorpiones)",
+      "publicationYear": 2007,
+      "existingPath": "/documents/2007--phylogeny-and-biogeography-of-the-family-bothriuridae-scorpiones--mattoni--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
+      "publicationTitle": "Determination of species-specific components in the venom of Parabuthus scorpions from southern Africa using matrix-assisted laser desorption time-of-flight mass spectrometry",
+      "publicationYear": 2002,
+      "existingPath": "/documents/2002--determination-of-species-specific-components-in-the-venom-of-parabuthus-scorpions-from-southern-africa-using-matrix-assisted-laser-desorption-time-of-flight-mass-spectrometry--dyason--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2006a New South African flat rock scorpions (Liochelidae Hadogenes).pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2006a New South African flat rock scorpions (Liochelidae Hadogenes).pdf",
+      "publicationTitle": "New records and observations on the natural history of Lisposoma elegans and Lisposoma josehermana (Scorpiones: Bothriuridae)",
+      "publicationYear": 2005,
+      "existingPath": "/documents/2005--new-records-and-observations-on-the-natural-history-of-lisposoma-elegans-and-lisposoma-josehermana-scorpiones-bothriuridae--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011a Order Scorpiones C.L. Koch, 1850.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011a Order Scorpiones C.L. Koch, 1850.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011b Order Solifugae Sundevall, 1833.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011b Order Solifugae Sundevall, 1833.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011c Order Palpigradi Thorell, 1888.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011c Order Palpigradi Thorell, 1888.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011d Order Ricinulei Thorell, 1876.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011d Order Ricinulei Thorell, 1876.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011e Order Amblypygi Thorell, 1883.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011e Order Amblypygi Thorell, 1883.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011f Order Thelyphonida Latreille, 1804.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011f Order Thelyphonida Latreille, 1804.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011g Order Schizomida Petrunkevitch, 1945.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011g Order Schizomida Petrunkevitch, 1945.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2020d In Memoriam Dr. Norm Platnick.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2020d In Memoriam Dr. Norm Platnick.pdf",
+      "publicationTitle": "Norman Ira Platnick 1951\u20132020",
+      "publicationYear": 2020,
+      "existingPath": "/documents/2020--norman-ira-platnick-1951-2020--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini & Bird 2008 Scorpions of the Brandberg Massif, Namibia Species richness inversely correlated with altitude.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini & Bird 2008 Scorpions of the Brandberg Massif, Namibia Species richness inversely correlated with altitude.pdf",
+      "publicationTitle": "A new genus and species of bothriurid scorpion from the Brandberg Massif, Namibia, with a reanalysis of bothriurid phylogeny and a discussion of the phylogenetic position of Lisposoma Lawrence",
+      "publicationYear": 2003,
+      "existingPath": "/documents/2003--a-new-genus-and-species-of-bothriurid-scorpion-from-the-brandberg-massif-namibia-with-a-reanalysis-of-bothriurid-phylogeny-and-a-discussion-of-the-phylogenetic-position-of-lisposoma-lawrence--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:43:35Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-upload",
+      "newUploadFile": "Prendini et al. 1997b Parallel cladogenesis, coevolution and sequential evolution in insect-plant associations A test case.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini et al. 1997b Parallel cladogenesis, coevolution and sequential evolution in insect-plant associations A test case.pdf",
+      "duplicateOfUpload": "Prendini et al. 1997a Challenges to scorpion cladistics Effects of sex, segmentation and psammophily.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:51:11Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "Prendini 2012a Scorpions (Scorpiones).pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2012a Scorpions (Scorpiones).pdf",
+      "publicationTitle": "The Scorpion King. Among the most long-lived terrestrial arthropods",
+      "publicationYear": 2012,
+      "existingPath": "/documents/2012--the-scorpion-king-among-the-most-long-lived-terrestrial-arthropods--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:51:11Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "907.1.pdf",
+      "duplicatePath": "/documents/duplicates/907.1.pdf",
+      "publicationTitle": "Systematic Revision of the North American Syntropine Vaejovid Scorpion Genera Balsateres, Kuarapu, and Thorellius, With Descriptions of three New Species",
+      "publicationYear": 2018,
+      "existingPath": "/documents/2018--systematic-revision-of-the-north-american-syntropine-vaejovid-scorpion-genera-balsateres-kuarapu-and-thorellius-with-descriptions-of-three-new-species--gonzalez-santillan--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:51:11Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "afin.056.0201.pdf",
+      "duplicatePath": "/documents/duplicates/afin.056.0201.pdf",
+      "publicationTitle": "A remarkably small species of Uroplectes Peters, 1861 (Scorpiones: Buthidae) endemic to the Succulent Karoo of the Northern Cape Province, South Africa",
+      "publicationYear": 2015,
+      "existingPath": "/documents/2015--a-remarkably-small-species-of-uroplectes-peters-1861-scorpiones-buthidae-endemic-to-the-succulent-karoo-of-the-northern-cape-province-south-africa--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:51:11Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "3840.1.pdf",
+      "duplicatePath": "/documents/duplicates/3840.1.pdf",
+      "publicationTitle": "Three new Uroplectes (Scorpiones: Buthidae) with punctate metasomal segments from tropical central Africa",
+      "publicationYear": 2015,
+      "existingPath": "/documents/2015--three-new-uroplectes-scorpiones-buthidae-with-punctate-metasomal-segments-from-tropical-central-africa--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:51:11Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "1-s2.0-S1055790315002389-Andres_A_Ojanguren_Affilastro_Scorpiones_systematics_2015.pdf",
+      "duplicatePath": "/documents/duplicates/1-s2.0-S1055790315002389-Andres_A_Ojanguren_Affilastro_Scorpiones_systematics_2015.pdf",
+      "publicationTitle": "Phylogeny and classification of the superfamily Scorpionoidea Latreille 1802 (Chelicerata, Scorpiones): An exemplar approach",
+      "publicationYear": 2000,
+      "existingPath": "/documents/2000--phylogeny-and-classification-of-the-superfamily-scorpionoidea-latreille-1802-chelicerata-scorpiones-an-exemplar-approach--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:51:11Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "MURIEN~1.PDF",
+      "duplicatePath": "/documents/duplicates/MURIEN~1.PDF",
+      "publicationTitle": "Forest refugia in Western and Central Africa as 'museums' of Mesozoic biodiversity",
+      "publicationYear": 2013,
+      "existingPath": "/documents/2013--forest-refugia-in-western-and-central-africa-as-museums-of-mesozoic-biodiversity--murienne--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:51:11Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "916.1.pdf",
+      "duplicatePath": "/documents/duplicates/916.1.pdf",
+      "publicationTitle": "Cheliceral morphology in Solifugae (Arachnida): Primary homology, terminology, and character survey",
+      "publicationYear": 2015,
+      "existingPath": "/documents/2015--cheliceral-morphology-in-solifugae-arachnida-primary-homology-terminology-and-character-survey--bird--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T18:55:56Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "Prendini, L. 2005. On Hadogenes angolensis Lourenc\u0327o 1999 syn. n. (Scorpiones, Liochelidae), with a redescription of H. taeniurus (Thorell 1876). Revue Suisse de Zoologie 112(2): 1\u201128.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini, L. 2005. On Hadogenes angolensis Lourenc\u0327o 1999 syn. n. (Scorpiones, Liochelidae), with a redescription of H. taeniurus (Thorell 1876). Revue Suisse de Zoologie 112(2): 1\u201128.pdf",
+      "publicationTitle": "On Hadogenes angolensis Louren\u00e7o 1999 syn. n. (Scorpiones, Liochelidae), with a redescription of H. taeniurus (Thorell 1876)",
+      "publicationYear": 2005,
+      "existingPath": "/documents/2005--on-hadogenes-angolensis-lourenco-1999-syn-n-scorpiones-liochelidae-with-a-redescription-of-h-taeniurus-thorell-1876--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Ojanguren-Affilastro et al. 2007 The genus Brachistosternus (Scorpiones Bothriuridae), in Chile, with descriptions of two new species.pdf",
+      "duplicatePath": "/documents/duplicates/Ojanguren-Affilastro et al. 2007 The genus Brachistosternus (Scorpiones Bothriuridae), in Chile, with descriptions of two new species.pdf",
+      "publicationTitle": "Phylogeny and biogeography of the family Bothriuridae (Scorpiones)",
+      "publicationYear": 2007,
+      "existingPath": "/documents/2007--phylogeny-and-biogeography-of-the-family-bothriuridae-scorpiones--mattoni--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
+      "publicationTitle": "Determination of species-specific components in the venom of Parabuthus scorpions from southern Africa using matrix-assisted laser desorption time-of-flight mass spectrometry",
+      "publicationYear": 2002,
+      "existingPath": "/documents/2002--determination-of-species-specific-components-in-the-venom-of-parabuthus-scorpions-from-southern-africa-using-matrix-assisted-laser-desorption-time-of-flight-mass-spectrometry--dyason--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2006a New South African flat rock scorpions (Liochelidae Hadogenes).pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2006a New South African flat rock scorpions (Liochelidae Hadogenes).pdf",
+      "publicationTitle": "New records and observations on the natural history of Lisposoma elegans and Lisposoma josehermana (Scorpiones: Bothriuridae)",
+      "publicationYear": 2005,
+      "existingPath": "/documents/2005--new-records-and-observations-on-the-natural-history-of-lisposoma-elegans-and-lisposoma-josehermana-scorpiones-bothriuridae--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011a Order Scorpiones C.L. Koch, 1850.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011a Order Scorpiones C.L. Koch, 1850.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011b Order Solifugae Sundevall, 1833.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011b Order Solifugae Sundevall, 1833.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011c Order Palpigradi Thorell, 1888.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011c Order Palpigradi Thorell, 1888.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011d Order Ricinulei Thorell, 1876.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011d Order Ricinulei Thorell, 1876.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011e Order Amblypygi Thorell, 1883.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011e Order Amblypygi Thorell, 1883.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011f Order Thelyphonida Latreille, 1804.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011f Order Thelyphonida Latreille, 1804.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011g Order Schizomida Petrunkevitch, 1945.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011g Order Schizomida Petrunkevitch, 1945.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2020d In Memoriam Dr. Norm Platnick.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2020d In Memoriam Dr. Norm Platnick.pdf",
+      "publicationTitle": "Norman Ira Platnick 1951\u20132020",
+      "publicationYear": 2020,
+      "existingPath": "/documents/2020--norman-ira-platnick-1951-2020--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini & Bird 2008 Scorpions of the Brandberg Massif, Namibia Species richness inversely correlated with altitude.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini & Bird 2008 Scorpions of the Brandberg Massif, Namibia Species richness inversely correlated with altitude.pdf",
+      "publicationTitle": "A new genus and species of bothriurid scorpion from the Brandberg Massif, Namibia, with a reanalysis of bothriurid phylogeny and a discussion of the phylogenetic position of Lisposoma Lawrence",
+      "publicationYear": 2003,
+      "existingPath": "/documents/2003--a-new-genus-and-species-of-bothriurid-scorpion-from-the-brandberg-massif-namibia-with-a-reanalysis-of-bothriurid-phylogeny-and-a-discussion-of-the-phylogenetic-position-of-lisposoma-lawrence--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini et al. 1997b Parallel cladogenesis, coevolution and sequential evolution in insect-plant associations A test case.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini et al. 1997b Parallel cladogenesis, coevolution and sequential evolution in insect-plant associations A test case.pdf",
+      "publicationTitle": "Challenges to scorpion cladistics: Effects of sex, segmentation and psammophily",
+      "publicationYear": 1997,
+      "existingPath": "/documents/1997--challenges-to-scorpion-cladistics-effects-of-sex-segmentation-and-psammophily--prendini--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "Prendini, L. 2005. On Hadogenes angolensis Lourenc\u0327o 1999 syn. n. (Scorpiones, Liochelidae), with a redescription of H. taeniurus (Thorell 1876). Revue Suisse de Zoologie 112(2): 1\u201128.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini, L. 2005. On Hadogenes angolensis Lourenc\u0327o 1999 syn. n. (Scorpiones, Liochelidae), with a redescription of H. taeniurus (Thorell 1876). Revue Suisse de Zoologie 112(2): 1\u201128.pdf",
+      "publicationTitle": "On Hadogenes angolensis Louren\u00e7o 1999 syn. n. (Scorpiones, Liochelidae), with a redescription of H. taeniurus (Thorell 1876)",
+      "publicationYear": 2005,
+      "existingPath": "/documents/2005--on-hadogenes-angolensis-lourenco-1999-syn-n-scorpiones-liochelidae-with-a-redescription-of-h-taeniurus-thorell-1876--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "907.1.pdf",
+      "duplicatePath": "/documents/duplicates/907.1.pdf",
+      "publicationTitle": "Systematic Revision of the North American Syntropine Vaejovid Scorpion Genera Balsateres, Kuarapu, and Thorellius, With Descriptions of three New Species",
+      "publicationYear": 2018,
+      "existingPath": "/documents/2018--systematic-revision-of-the-north-american-syntropine-vaejovid-scorpion-genera-balsateres-kuarapu-and-thorellius-with-descriptions-of-three-new-species--gonzalez-santillan--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "afin.056.0201.pdf",
+      "duplicatePath": "/documents/duplicates/afin.056.0201.pdf",
+      "publicationTitle": "A remarkably small species of Uroplectes Peters, 1861 (Scorpiones: Buthidae) endemic to the Succulent Karoo of the Northern Cape Province, South Africa",
+      "publicationYear": 2015,
+      "existingPath": "/documents/2015--a-remarkably-small-species-of-uroplectes-peters-1861-scorpiones-buthidae-endemic-to-the-succulent-karoo-of-the-northern-cape-province-south-africa--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "3840.1.pdf",
+      "duplicatePath": "/documents/duplicates/3840.1.pdf",
+      "publicationTitle": "Three new Uroplectes (Scorpiones: Buthidae) with punctate metasomal segments from tropical central Africa",
+      "publicationYear": 2015,
+      "existingPath": "/documents/2015--three-new-uroplectes-scorpiones-buthidae-with-punctate-metasomal-segments-from-tropical-central-africa--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "1-s2.0-S1055790315002389-Andres_A_Ojanguren_Affilastro_Scorpiones_systematics_2015.pdf",
+      "duplicatePath": "/documents/duplicates/1-s2.0-S1055790315002389-Andres_A_Ojanguren_Affilastro_Scorpiones_systematics_2015.pdf",
+      "publicationTitle": "Phylogeny, species delimitation and convergence in the South American bothriurid scorpion genus Brachistosternus Pocock 1893: Integrating morphology, nuclear and mitochondrial DNA",
+      "publicationYear": 2015,
+      "existingPath": "/documents/2015--phylogeny-species-delimitation-and-convergence-in-the-south-american-bothriurid-scorpion-genus-brachistosternus-pocock-1893-integrating-morphology-nuclear-and-mitochondrial-dna--ojanguren-affilastro--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "MURIEN~1.PDF",
+      "duplicatePath": "/documents/duplicates/MURIEN~1.PDF",
+      "publicationTitle": "Forest refugia in Western and Central Africa as 'museums' of Mesozoic biodiversity",
+      "publicationYear": 2013,
+      "existingPath": "/documents/2013--forest-refugia-in-western-and-central-africa-as-museums-of-mesozoic-biodiversity--murienne--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:13:44Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "916.1.pdf",
+      "duplicatePath": "/documents/duplicates/916.1.pdf",
+      "publicationTitle": "Cheliceral morphology in Solifugae (Arachnida): Primary homology, terminology, and character survey",
+      "publicationYear": 2015,
+      "existingPath": "/documents/2015--cheliceral-morphology-in-solifugae-arachnida-primary-homology-terminology-and-character-survey--bird--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Ojanguren-Affilastro et al. 2007 The genus Brachistosternus (Scorpiones Bothriuridae), in Chile, with descriptions of two new species.pdf",
+      "duplicatePath": "/documents/duplicates/Ojanguren-Affilastro et al. 2007 The genus Brachistosternus (Scorpiones Bothriuridae), in Chile, with descriptions of two new species.pdf",
+      "publicationTitle": "Phylogeny and biogeography of the family Bothriuridae (Scorpiones)",
+      "publicationYear": 2007,
+      "existingPath": "/documents/2007--phylogeny-and-biogeography-of-the-family-bothriuridae-scorpiones--mattoni--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
+      "publicationTitle": "Determination of species-specific components in the venom of Parabuthus scorpions from southern Africa using matrix-assisted laser desorption time-of-flight mass spectrometry",
+      "publicationYear": 2002,
+      "existingPath": "/documents/2002--determination-of-species-specific-components-in-the-venom-of-parabuthus-scorpions-from-southern-africa-using-matrix-assisted-laser-desorption-time-of-flight-mass-spectrometry--dyason--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2006a New South African flat rock scorpions (Liochelidae Hadogenes).pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2006a New South African flat rock scorpions (Liochelidae Hadogenes).pdf",
+      "publicationTitle": "New records and observations on the natural history of Lisposoma elegans and Lisposoma josehermana (Scorpiones: Bothriuridae)",
+      "publicationYear": 2005,
+      "existingPath": "/documents/2005--new-records-and-observations-on-the-natural-history-of-lisposoma-elegans-and-lisposoma-josehermana-scorpiones-bothriuridae--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011a Order Scorpiones C.L. Koch, 1850.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011a Order Scorpiones C.L. Koch, 1850.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011b Order Solifugae Sundevall, 1833.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011b Order Solifugae Sundevall, 1833.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011c Order Palpigradi Thorell, 1888.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011c Order Palpigradi Thorell, 1888.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011d Order Ricinulei Thorell, 1876.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011d Order Ricinulei Thorell, 1876.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011e Order Amblypygi Thorell, 1883.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011e Order Amblypygi Thorell, 1883.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011f Order Thelyphonida Latreille, 1804.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011f Order Thelyphonida Latreille, 1804.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2011g Order Schizomida Petrunkevitch, 1945.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2011g Order Schizomida Petrunkevitch, 1945.pdf",
+      "publicationTitle": "Order Amblypygi Thorell, 1883. In: Zhang, Z.-Q. (Ed.) Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness",
+      "publicationYear": 2011,
+      "existingPath": "/documents/2011--order-amblypygi-thorell-1883-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini 2020d In Memoriam Dr. Norm Platnick.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2020d In Memoriam Dr. Norm Platnick.pdf",
+      "publicationTitle": "Norman Ira Platnick 1951\u20132020",
+      "publicationYear": 2020,
+      "existingPath": "/documents/2020--norman-ira-platnick-1951-2020--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini & Bird 2008 Scorpions of the Brandberg Massif, Namibia Species richness inversely correlated with altitude.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini & Bird 2008 Scorpions of the Brandberg Massif, Namibia Species richness inversely correlated with altitude.pdf",
+      "publicationTitle": "A new genus and species of bothriurid scorpion from the Brandberg Massif, Namibia, with a reanalysis of bothriurid phylogeny and a discussion of the phylogenetic position of Lisposoma Lawrence",
+      "publicationYear": 2003,
+      "existingPath": "/documents/2003--a-new-genus-and-species-of-bothriurid-scorpion-from-the-brandberg-massif-namibia-with-a-reanalysis-of-bothriurid-phylogeny-and-a-discussion-of-the-phylogenetic-position-of-lisposoma-lawrence--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "exact-duplicate-of-existing",
+      "newUploadFile": "Prendini et al. 1997b Parallel cladogenesis, coevolution and sequential evolution in insect-plant associations A test case.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini et al. 1997b Parallel cladogenesis, coevolution and sequential evolution in insect-plant associations A test case.pdf",
+      "publicationTitle": "Challenges to scorpion cladistics: Effects of sex, segmentation and psammophily",
+      "publicationYear": 1997,
+      "existingPath": "/documents/1997--challenges-to-scorpion-cladistics-effects-of-sex-segmentation-and-psammophily--prendini--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "Prendini, L. 2005. On Hadogenes angolensis Lourenc\u0327o 1999 syn. n. (Scorpiones, Liochelidae), with a redescription of H. taeniurus (Thorell 1876). Revue Suisse de Zoologie 112(2): 1\u201128.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini, L. 2005. On Hadogenes angolensis Lourenc\u0327o 1999 syn. n. (Scorpiones, Liochelidae), with a redescription of H. taeniurus (Thorell 1876). Revue Suisse de Zoologie 112(2): 1\u201128.pdf",
+      "publicationTitle": "On Hadogenes angolensis Louren\u00e7o 1999 syn. n. (Scorpiones, Liochelidae), with a redescription of H. taeniurus (Thorell 1876)",
+      "publicationYear": 2005,
+      "existingPath": "/documents/2005--on-hadogenes-angolensis-lourenco-1999-syn-n-scorpiones-liochelidae-with-a-redescription-of-h-taeniurus-thorell-1876--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "907.1.pdf",
+      "duplicatePath": "/documents/duplicates/907.1.pdf",
+      "publicationTitle": "Systematic Revision of the North American Syntropine Vaejovid Scorpion Genera Balsateres, Kuarapu, and Thorellius, With Descriptions of three New Species",
+      "publicationYear": 2018,
+      "existingPath": "/documents/2018--systematic-revision-of-the-north-american-syntropine-vaejovid-scorpion-genera-balsateres-kuarapu-and-thorellius-with-descriptions-of-three-new-species--gonzalez-santillan--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "afin.056.0201.pdf",
+      "duplicatePath": "/documents/duplicates/afin.056.0201.pdf",
+      "publicationTitle": "A remarkably small species of Uroplectes Peters, 1861 (Scorpiones: Buthidae) endemic to the Succulent Karoo of the Northern Cape Province, South Africa",
+      "publicationYear": 2015,
+      "existingPath": "/documents/2015--a-remarkably-small-species-of-uroplectes-peters-1861-scorpiones-buthidae-endemic-to-the-succulent-karoo-of-the-northern-cape-province-south-africa--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "3840.1.pdf",
+      "duplicatePath": "/documents/duplicates/3840.1.pdf",
+      "publicationTitle": "Three new Uroplectes (Scorpiones: Buthidae) with punctate metasomal segments from tropical central Africa",
+      "publicationYear": 2015,
+      "existingPath": "/documents/2015--three-new-uroplectes-scorpiones-buthidae-with-punctate-metasomal-segments-from-tropical-central-africa--prendini.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "1-s2.0-S1055790315002389-Andres_A_Ojanguren_Affilastro_Scorpiones_systematics_2015.pdf",
+      "duplicatePath": "/documents/duplicates/1-s2.0-S1055790315002389-Andres_A_Ojanguren_Affilastro_Scorpiones_systematics_2015.pdf",
+      "publicationTitle": "Phylogeny, species delimitation and convergence in the South American bothriurid scorpion genus Brachistosternus Pocock 1893: Integrating morphology, nuclear and mitochondrial DNA",
+      "publicationYear": 2015,
+      "existingPath": "/documents/2015--phylogeny-species-delimitation-and-convergence-in-the-south-american-bothriurid-scorpion-genus-brachistosternus-pocock-1893-integrating-morphology-nuclear-and-mitochondrial-dna--ojanguren-affilastro--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "MURIEN~1.PDF",
+      "duplicatePath": "/documents/duplicates/MURIEN~1.PDF",
+      "publicationTitle": "Forest refugia in Western and Central Africa as 'museums' of Mesozoic biodiversity",
+      "publicationYear": 2013,
+      "existingPath": "/documents/2013--forest-refugia-in-western-and-central-africa-as-museums-of-mesozoic-biodiversity--murienne--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    },
+    {
+      "detectedAt": "2026-08-17T19:18:30Z",
+      "status": "pending-review",
+      "reason": "filename-collision",
+      "newUploadFile": "916.1.pdf",
+      "duplicatePath": "/documents/duplicates/916.1.pdf",
+      "publicationTitle": "Cheliceral morphology in Solifugae (Arachnida): Primary homology, terminology, and character survey",
+      "publicationYear": 2015,
+      "existingPath": "/documents/2015--cheliceral-morphology-in-solifugae-arachnida-primary-homology-terminology-and-character-survey--bird--et-al.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
     }
   ]
 }

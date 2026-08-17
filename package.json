@@ -10,7 +10,9 @@
     "lint": "eslint",
     "sync-publication-details": "tsx scripts/generate-publication-details.ts",
     "validate-content": "tsx scripts/validate-content.ts",
-    "regenerate-publications": "tsx scripts/regenerate-publications.ts"
+    "regenerate-publications": "tsx scripts/regenerate-publications.ts",
+    "process-new-uploads": "python3 scripts/rename-pdfs-from-content.py --apply",
+    "process-new-uploads:dry-run": "python3 scripts/rename-pdfs-from-content.py"
   },
   "dependencies": {
     "next": "^16.2.10",
