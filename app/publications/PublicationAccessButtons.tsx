@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { CorrectionTag } from "@/app/publications/CorrectionTag";
 import { savePublicationsScrollPosition } from "@/lib/publications/publicationsScrollRestoration";
 import { resolvePublicationPdfUrl } from "@/lib/publications/pdf";
 
@@ -85,6 +86,7 @@ type PublicationAccessButtonsProps = {
   abstractHref?: string | null;
   doi?: string | null;
   pdf?: string | null;
+  pdfCorrection?: boolean;
   className?: string;
 };
 
@@ -92,6 +94,7 @@ export const PublicationAccessButtons = ({
   abstractHref,
   doi,
   pdf,
+  pdfCorrection = false,
   className = "mt-2 flex flex-wrap items-center gap-3",
 }: PublicationAccessButtonsProps) => {
   const pdfUrl = resolvePublicationPdfUrl(pdf);
@@ -119,10 +122,13 @@ export const PublicationAccessButtons = ({
         </a>
       ) : null}
       {pdfUrl ? (
-        <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className={outlinePublicationActionClassName}>
-          PDF
-          <DownloadIcon />
-        </a>
+        <span className="inline-flex items-center gap-2">
+          <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className={outlinePublicationActionClassName}>
+            PDF
+            <DownloadIcon />
+          </a>
+          {pdfCorrection ? <CorrectionTag /> : null}
+        </span>
       ) : null}
     </div>
   );

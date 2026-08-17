@@ -1,4 +1,7 @@
 import type { Publication, PublicationDetail } from "@/lib/content/schema";
+import { stripMarkdownEmphasis } from "@/lib/publications/citation";
+
+export const CORRECTION_TOOLTIP = "Correction differs from DOI record";
 
 export const getDatePublishedYear = (datePublished: string): number =>
   new Date(`${datePublished}T00:00:00`).getFullYear();
@@ -58,3 +61,35 @@ export const resolvePublicationDetailFields = (
   datePublished: resolveDatePublished(publication, detail),
   datePublishedForMetadata: resolveDatePublishedForMetadata(publication, detail),
 });
+
+export type PublicationDetailCorrections = {
+  title: boolean;
+  year: boolean;
+  datePublished: boolean;
+  doi: boolean;
+  pdf: boolean;
+};
+
+const valuesDiffer = (left: string | null | undefined, right: string | null | undefined): boolean =>
+  Boolean(left && right && left !== right);
+
+/** Flags metadata that differs from DOI-sourced detail data but is shown from the bibliography. */
+export const getPublicationDetailCorrections = (
+  publication: Publication,
+  detail: PublicationDetail
+): PublicationDetailCorrections => {
+  const resolved = resolvePublicationDetailFields(publication, detail);
+
+  return {
+    title: Boolean(
+      detail.title &&
+        stripMarkdownEmphasis(publication.title) !== stripMarkdownEmphasis(detail.title)
+    ),
+    year:
+      isDatePublishedYearCorrected(publication, detail) ||
+      (detail.year !== undefined && detail.year !== publication.year),
+    datePublished: resolved.datePublished !== detail.datePublished,
+    doi: valuesDiffer(publication.doi, detail.doi),
+    pdf: valuesDiffer(publication.pdf, detail.pdf),
+  };
+};

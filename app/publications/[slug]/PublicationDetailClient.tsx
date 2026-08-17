@@ -17,7 +17,8 @@ import {
   getPublicationsYearHref,
 } from "@/lib/publications/citation";
 import { resolvePublicationPdf } from "@/lib/publications/pdf";
-import { resolvePublicationDetailFields } from "@/lib/publications/resolvePublication";
+import { CorrectionTag } from "@/app/publications/CorrectionTag";
+import { resolvePublicationDetailFields, getPublicationDetailCorrections } from "@/lib/publications/resolvePublication";
 import localPublicationPdfs from "@/content/local-publication-pdfs.json";
 import { hasPublicationAbstract } from "@/lib/publications/abstract";
 
@@ -42,6 +43,7 @@ export function PublicationDetailClient({
   const [copyState, setCopyState] = useState<"idle" | "copied" | "error">("idle");
 
   const resolved = resolvePublicationDetailFields(publication, detail);
+  const corrections = getPublicationDetailCorrections(publication, detail);
   const citationText = formatPlainCitation(publication, resolved.doi);
   const volumePages = getVolumePages(publication);
   const pdfUrl = resolvePublicationPdf(publication, resolved.pdf, localPublicationPdfs);
@@ -79,7 +81,15 @@ export function PublicationDetailClient({
         </nav>
 
         <header className="mb-8">
-          <h1 className="text-3xl mb-6 font-bold">{formatInlineEmphasis(publication.title)}</h1>
+          <h1 className="text-3xl mb-6 font-bold">
+            {formatInlineEmphasis(publication.title)}
+            {corrections.title ? (
+              <>
+                {" "}
+                <CorrectionTag />
+              </>
+            ) : null}
+          </h1>
 
           <div className="space-y-4">
             <p>
@@ -90,6 +100,7 @@ export function PublicationDetailClient({
             <PublicationAccessButtons
               doi={resolved.doi}
               pdf={pdfUrl}
+              pdfCorrection={corrections.pdf}
               className="flex flex-wrap items-center gap-3 py-2"
             />
 
@@ -109,16 +120,20 @@ export function PublicationDetailClient({
                 </>
               ) : null}
               <dt className="font-semibold text-color-primary">Year</dt>
-              <dd>{publication.year}</dd>
+              <dd className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                {publication.year}
+                {corrections.year ? <CorrectionTag /> : null}
+              </dd>
               {resolved.datePublished ? (
                 <>
                   <dt className="font-semibold text-color-primary">Published</dt>
-                  <dd>
+                  <dd className="flex flex-wrap items-center gap-x-2 gap-y-1">
                     {new Date(`${resolved.datePublished}T00:00:00`).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",
                       day: "numeric",
                     })}
+                    {corrections.datePublished ? <CorrectionTag /> : null}
                   </dd>
                 </>
               ) : null}
@@ -130,6 +145,12 @@ export function PublicationDetailClient({
                     {" "}
                     <span className="whitespace-nowrap">
                       <CitationDoiLink doi={citationDoi} />
+                      {corrections.doi ? (
+                        <>
+                          {" "}
+                          <CorrectionTag />
+                        </>
+                      ) : null}
                       <button
                         type="button"
                         onClick={copyCitation}
