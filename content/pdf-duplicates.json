@@ -3,5 +3,19 @@
     "status": "not-configured",
     "instructions": "When a CMS or editorial workflow is set up, subscribe to changes in this file and alert content managers when `entries` are added. Each entry is a newly uploaded PDF that matched an existing publication but was moved to public/documents/duplicates/ because a canonical file already exists. Show the existing file path (`existingPath`) and duplicate path (`duplicatePath`), and offer manual override actions from `cmsActions`: keep the existing file, or replace it with the new upload."
   },
-  "entries": []
+  "entries": [
+    {
+      "detectedAt": "2026-08-16T23:36:03Z",
+      "status": "pending-review",
+      "publicationTitle": "Threats facing southern Africa\u2019s unique scorpion fauna",
+      "publicationYear": 2003,
+      "existingPath": "/documents/2003--threats-facing-southern-africa-s-unique-scorpion-fauna--prendini.pdf",
+      "newUploadFile": "Prendini 2003d.pdf",
+      "duplicatePath": "/documents/duplicates/Prendini 2003d.pdf",
+      "cmsActions": {
+        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
+        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
+      }
+    }
+  ]
 }

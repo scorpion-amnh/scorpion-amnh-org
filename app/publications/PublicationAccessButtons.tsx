@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { savePublicationsScrollPosition } from "@/lib/publications/publicationsScrollRestoration";
 import { resolvePublicationPdfUrl } from "@/lib/publications/pdf";
 
 const actionButtonClassName =
@@ -100,7 +103,11 @@ export const PublicationAccessButtons = ({
   return (
     <div className={className}>
       {abstractHref ? (
-        <Link href={abstractHref} className={outlinePublicationActionClassName}>
+        <Link
+          href={abstractHref}
+          className={outlinePublicationActionClassName}
+          onClick={savePublicationsScrollPosition}
+        >
           Details
           <FileTextIcon />
         </Link>

@@ -15,6 +15,7 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCUMENTS_DIR = ROOT / "public" / "documents"
+NEW_UPLOADS_DIR = DOCUMENTS_DIR / "new-uploads"
 DUPLICATES_DIR = DOCUMENTS_DIR / "duplicates"
 DUPLICATES_MANIFEST = ROOT / "content" / "pdf-duplicates.json"
 PUBLICATIONS_PATH = ROOT / "content/publications.json"
@@ -123,12 +124,64 @@ def read_pages(path: Path, max_pages: int) -> list[str]:
     return [(page.extract_text() or "") for page in reader.pages[:max_pages]]
 
 
-def match_from_pages(pages: list[str], path: Path, publications: list[dict]) -> dict | None:
+def parse_filename_hints(filename: str) -> tuple[int | None, set[str]]:
+    year_match = re.search(r"(?:^|[\s.])(?:((?:19|20)\d{2})[a-z]?)(?:\s|&|$|\.|\()", filename, re.I)
+    year = int(year_match.group(1)) if year_match else None
+
+    author_part = filename[: year_match.start()] if year_match else filename
+    author_part = re.sub(r"\.pdf$", "", author_part, flags=re.I).strip()
+    author_part = re.sub(
+        r"\s+(?:Appendix|Figure|Table|Additional File|Graphical Abstract|Accessory Publication)\b.*$",
+        "",
+        author_part,
+        flags=re.I,
+    )
+
+    authors: set[str] = set()
+    for part in re.split(r"\s+&\s+|\s+et al\.?", author_part, flags=re.I):
+        part = part.strip(" .,")
+        if not part:
+            continue
+        normalized = last_name(part)
+        authors.add(normalized)
+        if "-" in normalized:
+            authors.add(normalized.split("-", 1)[0])
+
+    return year, authors
+
+
+def publication_author_last_names(publication: dict) -> set[str]:
+    names: set[str] = set()
+    for author in publication["authors"]:
+        normalized = last_name(author["name"])
+        names.add(normalized)
+        if "-" in normalized:
+            names.add(normalized.split("-", 1)[0])
+    return names
+
+
+def apply_filename_year(signals: PdfSignals, filename_year: int | None) -> PdfSignals:
+    if not filename_year:
+        return signals
+    if signals.year is None or abs(signals.year - filename_year) > 2:
+        return PdfSignals(year=filename_year, title=signals.title, authors=signals.authors)
+    return signals
+
+
+def match_from_pages(
+    pages: list[str],
+    path: Path,
+    publications: list[dict],
+    *,
+    filename_year: int | None = None,
+    candidate_publications: list[dict] | None = None,
+) -> dict | None:
     full_text = "\n".join(pages)
+    search_publications = candidate_publications or publications
 
     doi = parse_doi(full_text)
     if doi:
-        for pub in publications:
+        for pub in search_publications:
             pub_doi = publication_doi(pub)
             if pub_doi and pub_doi == doi.split("#")[0]:
                 return pub
@@ -148,8 +201,8 @@ def match_from_pages(pages: list[str], path: Path, publications: list[dict]) -> 
     best_score = 0
     best_overlap = 0
     for text in windows:
-        signals = extract_signals(text, path)
-        pub, score, overlap = score_publication(signals, publications, text)
+        signals = apply_filename_year(extract_signals(text, path), filename_year)
+        pub, score, overlap = score_publication(signals, search_publications, text)
         if score > best_score or (score == best_score and overlap > best_overlap):
             best_pub, best_score, best_overlap = pub, score, overlap
 
@@ -157,24 +210,65 @@ def match_from_pages(pages: list[str], path: Path, publications: list[dict]) -> 
             embedded_title, embedded_year = embedded_title_year(path)
             if embedded_title and embedded_year:
                 embedded = PdfSignals(year=embedded_year, title=embedded_title, authors=[])
-                pub, score, overlap = score_publication(embedded, publications, text)
+                embedded = apply_filename_year(embedded, filename_year)
+                pub, score, overlap = score_publication(embedded, search_publications, text)
                 if score > best_score or (score == best_score and overlap > best_overlap):
                     best_pub, best_score, best_overlap = pub, score, overlap
 
     return best_pub if best_score >= 20 else None
 
 
+def match_from_filename_hints(path: Path, publications: list[dict]) -> dict | None:
+    filename_year, filename_authors = parse_filename_hints(path.name)
+    if not filename_year or not filename_authors:
+        return None
+
+    candidates = [
+        pub
+        for pub in publications
+        if pub["year"] == filename_year
+        and filename_authors <= publication_author_last_names(pub)
+    ]
+    if not candidates:
+        return None
+    if len(candidates) == 1:
+        return candidates[0]
+
+    reader = PdfReader(str(path))
+    total_pages = len(reader.pages)
+    for tier in PAGE_TIERS:
+        pages = read_pages(path, min(tier, total_pages))
+        publication = match_from_pages(
+            pages,
+            path,
+            publications,
+            filename_year=filename_year,
+            candidate_publications=candidates,
+        )
+        if publication:
+            return publication
+
+    return None
+
+
+def publication_matches_filename_year(publication: dict, filename_year: int | None) -> bool:
+    if not filename_year:
+        return True
+    return publication["year"] == filename_year
+
+
 def find_publication(path: Path, publications: list[dict]) -> dict | None:
+    filename_year, _filename_authors = parse_filename_hints(path.name)
     reader = PdfReader(str(path))
     total_pages = len(reader.pages)
 
     for tier in PAGE_TIERS:
         pages = read_pages(path, min(tier, total_pages))
-        publication = match_from_pages(pages, path, publications)
-        if publication:
+        publication = match_from_pages(pages, path, publications, filename_year=filename_year)
+        if publication and publication_matches_filename_year(publication, filename_year):
             return publication
 
-    return None
+    return match_from_filename_hints(path, publications)
 
 
 def embedded_title_year(path: Path) -> tuple[str | None, int | None]:
@@ -569,20 +663,30 @@ def move_to_duplicates(path: Path) -> Path:
     return dest
 
 
+def iter_legacy_uploads() -> list[Path]:
+    uploads: list[Path] = []
+    for directory in (DOCUMENTS_DIR, NEW_UPLOADS_DIR):
+        if not directory.is_dir():
+            continue
+        uploads.extend(
+            path
+            for path in directory.glob("*.pdf")
+            if path.is_file() and path.name not in SKIP_FILES and is_legacy(path)
+        )
+    uploads.sort(key=lambda path: (path.stat().st_mtime, path.name))
+    return uploads
+
+
 def main() -> int:
     apply = "--apply" in sys.argv
     publications = json.loads(PUBLICATIONS_PATH.read_text())
 
-    new_files = [
-        path
-        for path in DOCUMENTS_DIR.glob("*.pdf")
-        if path.name not in SKIP_FILES and is_legacy(path)
-    ]
-    new_files.sort(key=lambda path: (path.stat().st_mtime, path.name))
+    new_files = iter_legacy_uploads()
 
     failed: list[str] = []
     renames: list[tuple[Path, Path, dict]] = []
     duplicates: list[tuple[Path, Path, dict]] = []
+    claimed_targets: set[Path] = set()
 
     for path in new_files:
         publication = find_publication(path, publications)
@@ -595,15 +699,17 @@ def main() -> int:
         if path.resolve() == target_path.resolve():
             continue
 
-        if target_path.exists():
+        if target_path.exists() or target_path in claimed_targets:
             duplicates.append((path, target_path, publication))
             print(f"{target}")
             print(f"  {strip_markdown(publication['title'])[:90]}")
             print(f"  ← {path.name} (duplicate of existing file; will move to duplicates/)")
-            print(f"  existing: {target_path.name}")
+            if target_path.exists():
+                print(f"  existing: {target_path.name}")
             continue
 
         renames.append((path, target_path, publication))
+        claimed_targets.add(target_path)
         print(f"{target}")
         print(f"  {strip_markdown(publication['title'])[:90]}")
         print(f"  ← {path.name}")

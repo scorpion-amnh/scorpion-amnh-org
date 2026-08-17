@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { CitationTail } from "@/app/publications/CitationTail";
 import { PublicationAccessButtons } from "@/app/publications/PublicationAccessButtons";
 import { PublicationsSearch } from "@/app/publications/PublicationsSearch";
@@ -17,6 +17,7 @@ import {
   type AuthorProfileLookup,
 } from "@/lib/publications/authorProfiles";
 import { resolvePublicationPdf } from "@/lib/publications/pdf";
+import { usePublicationsScrollRestoration } from "@/app/publications/usePublicationsScrollRestoration";
 import { usePublicationsSearch, type PublicationIndexItem } from "@/app/publications/usePublicationsSearch";
 import { normalizeSearchText } from "@/lib/search/fuzzyMatch";
 
@@ -163,28 +164,7 @@ export function PublicationsClient({ publications, authorProfileLookup }: Public
     handlePublicationSelect,
   } = usePublicationsSearch(publicationIndex);
 
-  useLayoutEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (!hash) {
-      return;
-    }
-
-    document.getElementById(hash)?.scrollIntoView();
-  }, []);
-
-  useEffect(() => {
-    const scrollToYearHash = () => {
-      const hash = window.location.hash.slice(1);
-      if (!hash) {
-        return;
-      }
-
-      document.getElementById(hash)?.scrollIntoView();
-    };
-
-    window.addEventListener("hashchange", scrollToYearHash);
-    return () => window.removeEventListener("hashchange", scrollToYearHash);
-  }, []);
+  usePublicationsScrollRestoration();
 
   return (
     <div className="bg-white min-h-screen">
