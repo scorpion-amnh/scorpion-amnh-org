@@ -1,4 +1,5 @@
 import type { AnchorHTMLAttributes, ReactNode } from "react";
+import { ExternalLinkIcon } from "@/app/components/icons/ExternalLinkIcon";
 
 type ExternalLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: ReactNode;
@@ -12,20 +13,6 @@ export const ExternalLink = ({
 }: ExternalLinkProps) => (
   <a href={href} target="_blank" rel="noopener noreferrer" className={className} {...props}>
     {children}
-    <svg
-      aria-hidden="true"
-      className="ml-0.5 inline-block h-3.5 w-3.5 shrink-0 align-[-0.125em]"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-      />
-    </svg>
+    <ExternalLinkIcon className="ml-1" />
   </a>
 );

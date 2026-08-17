@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Source_Sans_3 } from "next/font/google";
 import { getSiteSettings } from "@/lib/content";
 import { Header } from "@/app/components/Header";
@@ -73,6 +74,11 @@ export default function RootLayout({
     <html lang="en" className={sourceSans.variable}>
       <head>
         <JsonLd data={jsonLd} />
+        <Script
+          src="https://kit.fontawesome.com/6a8d003523.js"
+          crossOrigin="anonymous"
+          strategy="beforeInteractive"
+        />
       </head>
       <body className="antialiased">
         <Header navItems={navItems} />

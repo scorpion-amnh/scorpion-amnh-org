@@ -60,7 +60,7 @@ export const PublicationsSearch = ({
         onSubmit={(event) => event.preventDefault()}
       >
         <div className="relative">
-          <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-gray-400">
+          <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-base text-gray-400">
             <SearchIcon />
           </span>
           <input

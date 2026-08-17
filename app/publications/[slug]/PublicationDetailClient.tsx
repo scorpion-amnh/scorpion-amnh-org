@@ -3,7 +3,8 @@
 import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import { CitationTail, VolumePagesDisplay } from "@/app/publications/CitationTail";
-import { CitationDoiLink, CopyIcon, PublicationAccessButtons } from "@/app/publications/PublicationAccessButtons";
+import { CopyIcon } from "@/app/components/icons/CopyIcon";
+import { CitationDoiLink, PublicationAccessButtons } from "@/app/publications/PublicationAccessButtons";
 import { BackToTop } from "@/app/components/BackToTop";
 import { formatInlineEmphasis } from "@/app/components/InlineEmphasis";
 import type { Publication, PublicationDetail } from "@/lib/content/schema";

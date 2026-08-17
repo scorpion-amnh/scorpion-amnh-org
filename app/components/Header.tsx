@@ -93,7 +93,7 @@ export function Header({ navItems }: HeaderProps) {
           <HeaderNav items={navItems} isActive={isActive} variant="desktop" />
           <button
             type="button"
-            className="lg:hidden text-gray-300"
+            className="lg:hidden text-2xl text-gray-300"
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-nav"
@@ -126,7 +126,7 @@ export function Header({ navItems }: HeaderProps) {
               <button
                 type="button"
                 aria-label="Close navigation menu"
-                className="text-gray-300 hover:text-white"
+                className="text-2xl text-gray-300 hover:text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <CloseIcon />
