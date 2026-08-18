@@ -35,20 +35,6 @@
       "detectedAt": "2026-08-17T18:43:35Z",
       "status": "pending-review",
       "reason": "exact-duplicate-of-existing",
-      "newUploadFile": "Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
-      "duplicatePath": "/documents/duplicates/Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
-      "publicationTitle": "Determination of species-specific components in the venom of Parabuthus scorpions from southern Africa using matrix-assisted laser desorption time-of-flight mass spectrometry",
-      "publicationYear": 2002,
-      "existingPath": "/documents/2002--determination-of-species-specific-components-in-the-venom-of-parabuthus-scorpions-from-southern-africa-using-matrix-assisted-laser-desorption-time-of-flight-mass-spectrometry--dyason--et-al.pdf",
-      "cmsActions": {
-        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
-        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
-      }
-    },
-    {
-      "detectedAt": "2026-08-17T18:43:35Z",
-      "status": "pending-review",
-      "reason": "exact-duplicate-of-existing",
       "newUploadFile": "Prendini 2006a New South African flat rock scorpions (Liochelidae Hadogenes).pdf",
       "duplicatePath": "/documents/duplicates/Prendini 2006a New South African flat rock scorpions (Liochelidae Hadogenes).pdf",
       "publicationTitle": "New records and observations on the natural history of Lisposoma elegans and Lisposoma josehermana (Scorpiones: Bothriuridae)",
@@ -327,20 +313,6 @@
       "detectedAt": "2026-08-17T19:13:44Z",
       "status": "pending-review",
       "reason": "exact-duplicate-of-existing",
-      "newUploadFile": "Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
-      "duplicatePath": "/documents/duplicates/Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
-      "publicationTitle": "Determination of species-specific components in the venom of Parabuthus scorpions from southern Africa using matrix-assisted laser desorption time-of-flight mass spectrometry",
-      "publicationYear": 2002,
-      "existingPath": "/documents/2002--determination-of-species-specific-components-in-the-venom-of-parabuthus-scorpions-from-southern-africa-using-matrix-assisted-laser-desorption-time-of-flight-mass-spectrometry--dyason--et-al.pdf",
-      "cmsActions": {
-        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
-        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
-      }
-    },
-    {
-      "detectedAt": "2026-08-17T19:13:44Z",
-      "status": "pending-review",
-      "reason": "exact-duplicate-of-existing",
       "newUploadFile": "Prendini 2006a New South African flat rock scorpions (Liochelidae Hadogenes).pdf",
       "duplicatePath": "/documents/duplicates/Prendini 2006a New South African flat rock scorpions (Liochelidae Hadogenes).pdf",
       "publicationTitle": "New records and observations on the natural history of Lisposoma elegans and Lisposoma josehermana (Scorpiones: Bothriuridae)",
@@ -593,20 +565,6 @@
       "detectedAt": "2026-08-17T19:18:30Z",
       "status": "pending-review",
       "reason": "exact-duplicate-of-existing",
-      "newUploadFile": "Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
-      "duplicatePath": "/documents/duplicates/Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
-      "publicationTitle": "Determination of species-specific components in the venom of Parabuthus scorpions from southern Africa using matrix-assisted laser desorption time-of-flight mass spectrometry",
-      "publicationYear": 2002,
-      "existingPath": "/documents/2002--determination-of-species-specific-components-in-the-venom-of-parabuthus-scorpions-from-southern-africa-using-matrix-assisted-laser-desorption-time-of-flight-mass-spectrometry--dyason--et-al.pdf",
-      "cmsActions": {
-        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
-        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
-      }
-    },
-    {
-      "detectedAt": "2026-08-17T19:18:30Z",
-      "status": "pending-review",
-      "reason": "exact-duplicate-of-existing",
       "newUploadFile": "Prendini 2006a New South African flat rock scorpions (Liochelidae Hadogenes).pdf",
       "duplicatePath": "/documents/duplicates/Prendini 2006a New South African flat rock scorpions (Liochelidae Hadogenes).pdf",
       "publicationTitle": "New records and observations on the natural history of Lisposoma elegans and Lisposoma josehermana (Scorpiones: Bothriuridae)",
@@ -850,20 +808,6 @@
       "publicationTitle": "Phylogeny and biogeography of the family Bothriuridae (Scorpiones)",
       "publicationYear": 2007,
       "existingPath": "/documents/2007--phylogeny-and-biogeography-of-the-family-bothriuridae-scorpiones--mattoni--et-al.pdf",
-      "cmsActions": {
-        "keepExisting": "No action needed. The existing file at existingPath remains in place.",
-        "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."
-      }
-    },
-    {
-      "detectedAt": "2026-08-17T19:39:53Z",
-      "status": "pending-review",
-      "reason": "exact-duplicate-of-existing",
-      "newUploadFile": "Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
-      "duplicatePath": "/documents/duplicates/2002--determination-of-species-specific-components-in-the-venom-of-parabuthus-scorpions-from-southern-africa--Prendini 2004a The systematics of southern African Parabuthus Pocock (Scorpiones, Buthidae) Revisions to the taxonomy and key to the species.pdf",
-      "publicationTitle": "Determination of species-specific components in the venom of Parabuthus scorpions from southern Africa using matrix-assisted laser desorption time-of-flight mass spectrometry",
-      "publicationYear": 2002,
-      "existingPath": "/documents/2002--determination-of-species-specific-components-in-the-venom-of-parabuthus-scorpions-from-southern-africa-using-matrix-assisted-laser-desorption-time-of-flight-mass-spectrometry--dyason--et-al.pdf",
       "cmsActions": {
         "keepExisting": "No action needed. The existing file at existingPath remains in place.",
         "useNewUpload": "Manually move the file at duplicatePath to existingPath, then update the pdf field in content/publications.json (and publication-details.json if needed). Remove or resolve this entry."

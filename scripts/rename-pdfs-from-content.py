@@ -194,9 +194,52 @@ def build_filename(publication: dict) -> str:
     return f"{prefix}{title_slug}{suffix}"
 
 
+# A single taxonomic authority citation - e.g. "*Lisposoma* Lawrence 1928" or
+# "*Hadogenes bicolor* (Purcell, 1901)" - is syntactically identical to a single
+# bibliographic in-text citation (zoological nomenclature deliberately borrows the
+# "Name, Year" citation style), and this corpus's own paper titles legitimately
+# contain them. So a lone "Name Year" is never treated as a citation to mask: doing
+# so would risk corrupting a paper's own title. What IS unambiguous is a *citation
+# list* - the same name followed by two or more years (an organism has exactly one
+# authorship year, so this shape only occurs when citing multiple works by one
+# author, e.g. "Newlands 1974a, 1978a") - or several semicolon-joined name+year
+# citations bundled in one parenthetical (a classic literature-review citation
+# cluster, e.g. "(Fet & Lowe 2000; Kovarik 2001, 2002, 2003a)"). Both shapes are
+# extremely common in a taxonomy paper's introduction/abstract and, left alone, can
+# easily out-rank - or masquerade as - the paper's own publication year or title in
+# the signal-extraction and scoring functions below. This is what actually happened
+# to the 2004 Prendini *Parabuthus* paper: its own masthead year ("2004. The
+# Journal of Arachnology 32:109-186") was shadowed by an in-text "Kovarik 2001,
+# 2002, 2003a" citation a few lines later, causing the file to be matched - and
+# silently renamed - to an unrelated 2002 publication.
+_CITATION_NAME = r"[A-Z][A-Za-z\u00C0-\u024F'\u2019.\-]*"
+_CITATION_AUTHOR = rf"{_CITATION_NAME}(?:\s*(?:&|and|et\s*al\.?)\s*{_CITATION_NAME})?"
+_CITATION_YEAR = r"(?:1[5-9]|20)\d{2}[a-z]?"
+_CITATION_GROUP = rf"{_CITATION_AUTHOR}\s*,?\s+{_CITATION_YEAR}(?:\s*,\s*{_CITATION_YEAR})*"
+
+# "(Author YYYY[, YYYY...]; Author YYYY[, YYYY...]; ...)" - checked first so a
+# multi-citation cluster is masked as one unit before the narrower pattern below
+# has a chance to only mask part of it.
+CITATION_CLUSTER_PATTERN = re.compile(rf"\((?:{_CITATION_GROUP}\s*;\s*)+{_CITATION_GROUP}\)")
+# "Author YYYY, YYYY[, YYYY...]" - same author/name cited for 2+ distinct years,
+# with or without surrounding parentheses.
+CITATION_LIST_PATTERN = re.compile(rf"{_CITATION_GROUP}(?:\s*,\s*{_CITATION_YEAR})+")
+
+
+def mask_citations(text: str) -> str:
+    """Blank out in-text citations to other authors' work before any signal
+    extraction sees the text, so a citation list can never be mistaken for the
+    paper's own publication year or title. Replaces matches with spaces (not an
+    empty string) to preserve character offsets, since some callers rely on
+    match positions within the original text."""
+    text = CITATION_CLUSTER_PATTERN.sub(lambda m: " " * len(m.group(0)), text)
+    text = CITATION_LIST_PATTERN.sub(lambda m: " " * len(m.group(0)), text)
+    return text
+
+
 def read_pages(path: Path, max_pages: int) -> list[str]:
     reader = PdfReader(str(path))
-    return [(page.extract_text() or "") for page in reader.pages[:max_pages]]
+    return [mask_citations(page.extract_text() or "") for page in reader.pages[:max_pages]]
 
 
 def parse_filename_hints(filename: str) -> FilenameHints:
@@ -513,6 +556,27 @@ def parse_year(text: str) -> int | None:
     # 1-2 years earlier than the actual publication year and would otherwise be
     # misread as the citation year by the month+year heuristic below.
     header = re.sub(r"received\b[\s\S]{0,200}?accepted\b[^.\n]{0,80}\.?", " ", header, flags=re.I)
+
+    # Highest-confidence signal, checked before the generic patterns below: many
+    # journals in this corpus (e.g. Journal of Arachnology, American Museum
+    # Novitates/Bulletin) print "YEAR. Journal Name Volume:Pages" as the very
+    # first line of text on the article's own first page (right after the running
+    # page number). When that masthead line is this close to the top of the
+    # document, it is the paper's own publication year - full stop - and must
+    # outrank every other pattern, including the generic "YYYY. Capitalized-word"
+    # pattern further down (priority 2), which is deliberately kept low-priority
+    # because *without* this positional anchor it also matches ordinary in-text
+    # citations. Anchoring at the very start of the header (allowing only a
+    # leading page number) is what makes this reliable enough to trust over an
+    # in-text citation list like "Kovarik 2001, 2002, 2003a" that happens to
+    # appear earlier in reading order but refers to *other* authors' papers, not
+    # this one's publication date.
+    masthead_match = re.match(r"^\s*\d{0,6}\s*((?:19|20)\d{2})\.\s+[A-Z]", header)
+    if masthead_match:
+        year = int(masthead_match.group(1))
+        if 1950 <= year <= 2030:
+            return year
+
     patterns: list[tuple[int, str]] = [
         (0, r"copyright\s*©?\s*[^0-9\n]{0,60}(20\d{2}|19\d{2})"),
         (0, r"issued\s+(?:[A-Za-z]+\s+\d{1,2},?\s+)?(20\d{2}|19\d{2})"),

@@ -440,10 +440,6 @@ const findPdfLink = (
     return localPdf;
   }
 
-  if (publication.pdf?.startsWith("/documents/")) {
-    return publication.pdf;
-  }
-
   if (
     publication.pdf &&
     isDirectPublicationPdfUrl(publication.pdf) &&
@@ -480,7 +476,7 @@ const buildDetailEntry = async (
   const slug = slugify(publication.title, usedSlugs);
   let abstract: string | null = null;
   let datePublished = `${publication.year}-01-01`;
-  let pdf = getLocalPublicationPdfPath(publication) ?? publication.pdf ?? null;
+  let pdf = getLocalPublicationPdfPath(publication) ?? null;
   let subjects: string[] = [];
   let openAlexKeywords: OpenAlexKeyword[] = [];
 

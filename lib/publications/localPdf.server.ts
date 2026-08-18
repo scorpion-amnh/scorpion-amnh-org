@@ -45,7 +45,14 @@ export const buildLocalPublicationPdfIndex = (publications: Publication[]): Loca
   const byYearTitle: Record<string, string> = {};
 
   for (const publication of publications) {
-    const localPdf = getLocalPublicationPdfPath(publication, documentFilenames);
+    let localPdf = getLocalPublicationPdfPath(publication, documentFilenames);
+
+    if (!localPdf && publication.pdf?.startsWith("/documents/")) {
+      const filename = publication.pdf.slice("/documents/".length);
+      if (documentFilenames.has(filename)) {
+        localPdf = publication.pdf;
+      }
+    }
 
     if (!localPdf) {
       continue;

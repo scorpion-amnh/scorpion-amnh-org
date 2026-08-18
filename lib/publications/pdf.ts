@@ -44,7 +44,7 @@ export const resolvePublicationPdf = (
   }
 
   if (storedPdf?.trim().startsWith("/documents/")) {
-    return storedPdf.trim();
+    return null;
   }
 
   return resolvePublicationPdfUrl(storedPdf);

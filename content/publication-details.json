@@ -453,8 +453,7 @@
       "Scorpiones",
       "Arachnida"
     ],
-    "doi": "https://doi.org/10.1126/science.adz4176",
-    "pdf": "/documents/2025--include-scorpions-in-global-conservation-plans--blasco-arostegui--et-al.pdf"
+    "doi": "https://doi.org/10.1126/science.adz4176"
   },
   {
     "slug": "advances-in-understanding-the-karyotype-evolution-of-te",
@@ -2882,6 +2881,8 @@
     "doi": "https://doi.org/10.11646/zootaxa.3148.1.21",
     "pdf": "/documents/2011--order-palpigradi-thorell-1888-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf"
   },
+  {
+    "slug": "order-ricinulei-thorell-1876-in-zhang-z-q-ed-animal-bio",
     "datePublished": "2011-12-23",
     "keywords": [
       "Ricinulei",
@@ -2894,6 +2895,8 @@
     "doi": "https://doi.org/10.11646/zootaxa.3148.1.22",
     "pdf": "/documents/2011--order-ricinulei-thorell-1876-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf"
   },
+  {
+    "slug": "order-schizomida-petrunkevitch-1945-in-zhang-z-q-ed-ani",
     "datePublished": "2011-12-23",
     "keywords": [
       "Arachnida",
@@ -2906,6 +2909,8 @@
     "doi": "https://doi.org/10.11646/zootaxa.3148.1.30",
     "pdf": "/documents/2011--order-schizomida-petrunkevitch-1945-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf"
   },
+  {
+    "slug": "order-scorpiones-c-l-koch-1850-in-zhang-z-q-ed-animal-b",
     "datePublished": "2011-12-23",
     "keywords": [
       "Scorpiones",
@@ -2919,6 +2924,8 @@
     "doi": "https://doi.org/10.11646/zootaxa.3148.1.18",
     "pdf": "/documents/2011--order-scorpiones-c-l-koch-1850-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf"
   },
+  {
+    "slug": "order-solifugae-sundevall-1833-in-zhang-z-q-ed-animal-b",
     "datePublished": "2011-12-23",
     "keywords": [
       "Solifugae",
@@ -2931,6 +2938,8 @@
     "doi": "https://doi.org/10.11646/zootaxa.3148.1.19",
     "pdf": "/documents/2011--order-solifugae-sundevall-1833-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf"
   },
+  {
+    "slug": "order-thelyphonida-latreille-1804-in-zhang-z-q-ed-anima",
     "datePublished": "2011-12-23",
     "keywords": [
       "Arachnida",
@@ -2942,6 +2951,8 @@
     "doi": "https://doi.org/10.11646/zootaxa.3148.1.29",
     "pdf": "/documents/2011--order-thelyphonida-latreille-1804-in-zhang-z-q-ed-animal-biodiversity-an-outline-of-higher-level-classification-and-survey-of-taxonomic-richness--prendini.pdf"
   },
+  {
+    "slug": "systematic-revision-of-the-andean-scorpion-genus-orobot",
     "datePublished": "2011-11-01",
     "abstract": "The systematics of the Andean scorpion genus, Orobothriurus Maury, 1976 (Bothriuridae Simon, 1880), is revised. New locality records, obtained during recent field expeditions, distribution maps, and a key to identification of the 15 known species, are provided. Six new species are described: Orobothriurus calchaqui, n. sp., from northwestern Argentina; Orobothriurus compagnuccii, n. sp., from the central Andes of Argentina; Orobothriurus huascaran, n. sp., from central Peru; Orobothriurus quewerukana, n. sp., from southern Peru and northern Chile; Orobothriurus ramirezi, n. sp., from central Chile; and Orobothriurus tamarugal, n. sp., from northern Chile. The known distribution of Orobothriurus and the altitude record for scorpions are discussed. The world's altitude record for a scorpion, previously reported as 5550 m, is demonstrated to be 4910 m.",
     "keywords": [
@@ -4061,7 +4072,9 @@
       "Arachnida"
     ],
     "year": 1997,
-    "title": "Challenges to scorpion cladistics: Effects of sex, segmentation and psammophily"
+    "title": "Challenges to scorpion cladistics: Effects of sex, segmentation and psammophily",
+    "doi": "https://doi.org/10.1111/j.1096-0031.1997.tb00250.x",
+    "pdf": "/documents/1997--a-celebration-of-systematics-abstracts-of-the-15th-meeting-of-the-willi-hennig-society-15-20-december-1996-university-of-cape-town-south-africa--prendini--et-al.pdf"
   },
   {
     "slug": "parallel-cladogenesis-coevolution-and-sequential-evolut",
@@ -4070,7 +4083,9 @@
       "Arachnida"
     ],
     "year": 1997,
-    "title": "Parallel cladogenesis, coevolution and sequential evolution in insect-plant associations: A test case"
+    "title": "Parallel cladogenesis, coevolution and sequential evolution in insect-plant associations: A test case",
+    "doi": "https://doi.org/10.1111/j.1096-0031.1997.tb00250.x",
+    "pdf": "/documents/1997--a-celebration-of-systematics-abstracts-of-the-15th-meeting-of-the-willi-hennig-society-15-20-december-1996-university-of-cape-town-south-africa--prendini--et-al.pdf"
   },
   {
     "slug": "redescription-of-hadogenes-zumpti-scorpiones-ischnurida",
