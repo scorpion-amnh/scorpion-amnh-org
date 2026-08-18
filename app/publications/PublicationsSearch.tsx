@@ -115,9 +115,17 @@ export const PublicationsSearch = ({
                         className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
                       >
                         <span>{formatInlineEmphasis(publication.title)}</span>
-                        {publication.journal ? (
-                          <span className="ml-4 text-meta">{publication.journal}</span>
-                        ) : null}
+                        <span className="ml-4 text-meta">
+                          {publication.year}
+                          {publication.journal ? (
+                            <>
+                              <span aria-hidden className="mx-2 text-gray-400">
+                                •
+                              </span>
+                              {publication.journal}
+                            </>
+                          ) : null}
+                        </span>
                       </button>
                     </li>
                   ))}
