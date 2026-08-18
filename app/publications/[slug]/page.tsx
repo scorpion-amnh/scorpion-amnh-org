@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/app/components/JsonLd";
-import { SITE_URL } from "@/lib/metadata";
+import {
+  SITE_NAME,
+  SITE_PREVIEW_IMAGE,
+  SITE_TWITTER_METADATA,
+  SITE_URL,
+} from "@/lib/metadata";
 import { stripMarkdownEmphasis } from "@/lib/publications/citation";
 import { hasPublicationAbstract } from "@/lib/publications/abstract";
 import { resolvePublicationPdf } from "@/lib/publications/pdf";
@@ -56,10 +61,16 @@ export const generateMetadata = async ({
       title: pageTitle,
       description,
       url,
-      siteName: "Arachnology at AMNH",
+      siteName: SITE_NAME,
       type: "article",
       publishedTime: resolved.datePublishedForMetadata,
       authors: publication.authors.map((author) => author.name.replace(/^and\s+/i, "")),
+      images: [SITE_PREVIEW_IMAGE],
+    },
+    twitter: {
+      ...SITE_TWITTER_METADATA,
+      title: pageTitle,
+      description,
     },
     keywords: detail.keywords.map(stripMarkdownEmphasis),
   };

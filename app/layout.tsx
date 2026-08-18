@@ -4,7 +4,12 @@ import { Source_Sans_3 } from "next/font/google";
 import { getSiteSettings } from "@/lib/content";
 import { Header } from "@/app/components/Header";
 import { JsonLd } from "@/app/components/JsonLd";
-import { SITE_URL } from "@/lib/metadata";
+import {
+  SITE_NAME,
+  SITE_PREVIEW_IMAGE,
+  SITE_TWITTER_METADATA,
+  SITE_URL,
+} from "@/lib/metadata";
 import { Footer } from "./components/Footer";
 import "./globals.css";
 
@@ -25,9 +30,25 @@ const sourceSans = Source_Sans_3({
   ],
 });
 
+const siteSettings = getSiteSettings();
+
 export const metadata: Metadata = {
-  title: getSiteSettings().defaultMetaTitle,
-  description: getSiteSettings().defaultMetaDescription,
+  metadataBase: new URL(SITE_URL),
+  title: siteSettings.defaultMetaTitle,
+  description: siteSettings.defaultMetaDescription,
+  openGraph: {
+    title: siteSettings.defaultMetaTitle,
+    description: siteSettings.defaultMetaDescription,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    type: "website",
+    images: [SITE_PREVIEW_IMAGE],
+  },
+  twitter: {
+    ...SITE_TWITTER_METADATA,
+    title: siteSettings.defaultMetaTitle,
+    description: siteSettings.defaultMetaDescription,
+  },
 };
 
 const jsonLd = {
