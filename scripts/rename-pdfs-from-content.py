@@ -170,9 +170,15 @@ def build_filename(publication: dict) -> str:
     year = publication["year"]
     authors = publication["authors"]
     first_author_slug = slugify(last_name(authors[0]["name"]))
+    # A handful of entries store a group-authorship placeholder as the literal
+    # second "author" (e.g. "et al. [list of authors including Prendini, L.]")
+    # for papers with too many signatories to list individually. That's really
+    # an unspecified-many-authors case, not a genuine two-author paper, so it
+    # must use the "et-al" convention rather than slugifying the placeholder text.
+    is_placeholder = any(re.search(r"\bet\s*al\b", a["name"], re.I) for a in authors)
     if len(authors) <= 1:
         author_part = first_author_slug
-    elif len(authors) == 2:
+    elif len(authors) == 2 and not is_placeholder:
         # Exactly two authors: spell out both last names rather than "et al.",
         # which conventionally implies three or more authors.
         second_author_slug = slugify(last_name(authors[1]["name"]))

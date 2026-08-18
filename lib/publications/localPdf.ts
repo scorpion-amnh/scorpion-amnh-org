@@ -36,9 +36,28 @@ export const getPublicationAuthorSlug = (authorName: string) => {
 
 /** Matches `scripts/rename-pdfs-from-content.py` canonical document filenames. */
 export const buildPublicationPdfFilename = (publication: Publication): string => {
-  const authorSlug = slugifyPublicationText(getPublicationAuthorSlug(publication.authors[0]?.name ?? ""));
-  const etAl = publication.authors.length > 1 ? `${SEPARATOR}et-al` : "";
-  const suffix = `${SEPARATOR}${authorSlug}${etAl}.pdf`;
+  const authors = publication.authors;
+  const firstAuthorSlug = slugifyPublicationText(getPublicationAuthorSlug(authors[0]?.name ?? ""));
+  // A handful of entries store a group-authorship placeholder as the literal
+  // second "author" (e.g. "et al. [list of authors including Prendini, L.]")
+  // for papers with too many signatories to list individually. That's really
+  // an unspecified-many-authors case, not a genuine two-author paper, so it
+  // must use the "et-al" convention rather than slugifying the placeholder text.
+  const isPlaceholder = authors.some((author) => /\bet\s*al\b/i.test(author.name));
+
+  let authorPart: string;
+  if (authors.length <= 1) {
+    authorPart = firstAuthorSlug;
+  } else if (authors.length === 2 && !isPlaceholder) {
+    // Exactly two authors: spell out both last names rather than "et al.",
+    // which conventionally implies three or more authors.
+    const secondAuthorSlug = slugifyPublicationText(getPublicationAuthorSlug(authors[1]?.name ?? ""));
+    authorPart = `${firstAuthorSlug}${SEPARATOR}${secondAuthorSlug}`;
+  } else {
+    authorPart = `${firstAuthorSlug}${SEPARATOR}et-al`;
+  }
+
+  const suffix = `${SEPARATOR}${authorPart}.pdf`;
   const prefix = `${publication.year}${SEPARATOR}`;
   const maxTitleLength = MAX_FILENAME_LENGTH - prefix.length - suffix.length;
   let titleSlug = slugifyPublicationText(publication.title);
